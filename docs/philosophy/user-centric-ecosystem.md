@@ -13,8 +13,8 @@ flowchart TB
         TT[TigerTag chip] --> PH[Any phone]
         TT --> RD[Any NFC reader]
         TT --> PR[Any printer]
-        PH & RD --> TC[(Tiger Cloud — the USER's account)]
-        TC --> ANY[Any app: Studio, Connect, TigerHub, yours]
+        PH & RD --> TC[("Tiger Cloud — the USER'S account")]
+        TC --> ANY["Any app — Studio, Connect, TigerHub, yours"]
     end
 ```
 
