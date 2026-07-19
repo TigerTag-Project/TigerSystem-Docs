@@ -7,6 +7,15 @@ A free, open-source 3D-printable stand holding two USB NFC readers: place a
 spool, it identifies itself in Tiger Studio; place a blank chip, encode it.
 As natural as tapping a phone, but hands-free on the desktop.
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    TAG["🏷 Spool / blank chip"] -- "placed on" --> POD["📡 TigerPOD<br/>2× USB NFC readers"]
+    POD -- "USB" --> ST["🖥 Tiger Studio"]
+    ST -- "spool auto-opens · guided writes" --> YOU["🧑 You"]
+```
+
 ## Features
 
 - 3D-printable shell — **free STL on

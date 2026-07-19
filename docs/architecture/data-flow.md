@@ -32,6 +32,30 @@ sequenceDiagram
 | Printer credentials & telemetry | **Local only** (desktop) | LAN traffic never transits the cloud |
 | Live weight (TigerScale) | Device → Firestore | Appears live in all clients |
 
+## Where your slicer fits
+
+TigerSystem **does not replace your slicer** — it completes the picture around
+it:
+
+```mermaid
+flowchart LR
+    YOU["🧑 You"] -- "3D model" --> SLICER["🔪 Your slicer"]
+    SLICER -- "sliced job" --> PRN["🖨 Printer"]
+    TAG["🏷 TigerTag chip"] -- "scan" --> ST["🖥 Tiger Studio"]
+    ST -- "which filament is in which slot" --> PRN
+    PRN -- "progress · temps · 'ends at' · camera" --> ST
+```
+
+- You slice and launch jobs exactly as before, with any slicer.
+- Tiger Studio tells the printer **which filament sits in which slot**
+  (AMS / CFS / Canvas / ACE / material station), so the machine-side
+  information matches reality.
+- Whatever started the print, the job shows up live in Tiger Studio —
+  progress, temperatures, finish time, camera.
+- The chip carries the filament's recommended print settings; there is **no
+  automatic slicer-profile import today** — you mirror them in your slicer
+  profile yourself.
+
 ## Two planes, deliberately separate
 
 - **Cloud plane** — identity, inventory, sharing. Internet, Firebase,

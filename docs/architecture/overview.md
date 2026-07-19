@@ -32,6 +32,54 @@ flowchart TB
 | **Printer integrations** | Live LAN links to six printer brands | [Compatibility](../compatibility/README.md) |
 | **Third-party APIs** | SDKs + documented Firestore surface for anyone | [Developers](../developers/README.md) |
 
+## The full map — every element and its connections
+
+Accessories, apps, cloud, printers, slicers and third-party integrations, on
+one picture:
+
+```mermaid
+flowchart TB
+    subgraph SP["🧵 The spool"]
+        TAG["🏷 TigerTag chip"]
+    end
+    subgraph ACC["🔌 Accessories"]
+        POD["📡 TigerPOD<br/>dual reader stand"]
+        ACR["📡 ACR122U<br/>USB NFC reader"]
+        SCALE["⚖ TigerScale"]
+        TD1S["🎨 TD1S color sensor"]
+    end
+    subgraph APPS["🖥 Apps"]
+        CO["📱 TigerTag Connect"]
+        ST["🖥 Tiger Studio"]
+        HUB["🌐 TigerHub"]
+    end
+    CLOUD[("☁ Tiger Cloud")]
+    subgraph PRT["🖨 Printing"]
+        SLICER["🔪 Your slicer<br/>(OrcaSlicer, vendor slicers…)"]
+        PRN["🖨 Printers<br/>Anycubic · Bambu Lab · Creality<br/>Elegoo · FlashForge · Snapmaker"]
+    end
+    THIRD["🧩 Third-party<br/>Home Assistant · Spoolman · ESP32 · your app"]
+
+    TAG -- "NFC tap" --> CO
+    TAG -- "scan" --> POD --> ST
+    TAG -- "scan" --> ACR --> ST
+    TD1S -- "measured color" --> ST
+    SCALE -- "live weight" --> CLOUD
+    CO <--> CLOUD
+    ST <--> CLOUD
+    CLOUD -- "public share links" --> HUB
+    CLOUD <--> THIRD
+    ST -- "filament data to slots" --> PRN
+    PRN -- "live telemetry, job, camera" --> ST
+    SLICER -- "print job" --> PRN
+```
+
+Read it left to right: the **chip** identifies the spool; **accessories**
+capture reality (scans, weight, color); the **apps** and **cloud** keep it all
+in sync; the **printer** receives the filament data and reports back live.
+Your **slicer keeps its job** — TigerSystem doesn't slice, it makes sure
+everyone (you, the machine, the apps) knows exactly which filament is where.
+
 ## Design principles
 
 1. **The chip is self-sufficient.** A spool identifies itself with no cloud, no

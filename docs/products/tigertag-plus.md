@@ -7,6 +7,16 @@ superpower: its content is safely backed up in your cloud account. Chip
 damaged or lost? Restore it. Need to prove the spool is really in your hands?
 One scan does it.
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    TAGP["🏷 TigerTag+ chip"] -- "scan" --> APP["📱 Connect / 🖥 Studio"]
+    APP -- "backup (by chip UID)" --> CLOUD[("☁ Your account")]
+    CLOUD -- "restore / re-encode" --> APP -- "write" --> TAGP
+    APP -- "certified scan = proof of possession" --> CLOUD
+```
+
 ## Features
 
 - Everything a standard [TigerTag](./tigertag.md) does — the payload stays open.

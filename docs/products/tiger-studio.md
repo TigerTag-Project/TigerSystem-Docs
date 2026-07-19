@@ -11,6 +11,18 @@ It is deliberately **a laboratory, not the destination** — a demonstration of
 what the open protocol makes possible, readable, forkable and free to copy
 ([philosophy](../philosophy/open-ecosystem.md)).
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    RD["📡 TigerPOD / ACR122U"] --> ST["🖥 Tiger Studio"]
+    TD["🎨 TD1S"] --> ST
+    ST <--> CLOUD[("☁ Tiger Cloud")]
+    SCALE["⚖ TigerScale"] --> CLOUD
+    ST -- "filament to slots" --> PRN["🖨 6 printer brands"]
+    PRN -- "telemetry · cameras" --> ST
+```
+
 ## Features (highlights)
 
 - **Inventory** — real-time Firestore sync, table/grid views, detail panel,

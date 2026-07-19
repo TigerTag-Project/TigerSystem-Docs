@@ -8,6 +8,16 @@ account needed on their side. It is the public web surface of the ecosystem,
 hosted at **[tigersystem.io](https://tigersystem.io)**, and it only ever shows
 what you chose to make public.
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    YOU["🧑 You"] -- "create share link" --> APP["📱 / 🖥 Your app"]
+    APP --> CLOUD[("☁ Tiger Cloud")]
+    CLOUD -- "published data only" --> HUB["🌐 tigersystem.io/list/…"]
+    HUB --> VIS["👀 Anyone with the link<br/>plain browser, no account"]
+```
+
 ## Features
 
 - **Public list links** — a user shares a read-only inventory/wishlist as

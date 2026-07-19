@@ -42,7 +42,11 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
 3. Tiger Studio talks to printers directly over the LAN in each vendor's
    native protocol (MQTT/MQTTS, WebSocket, HTTP) — printer traffic never
    transits Tiger Cloud (exception: Anycubic cloud mode).
-4. Sharing is consent-based and enforced server-side by Firestore security
+4. Slicers are untouched third parties: users slice and launch jobs with any
+   slicer; Tiger Studio pushes per-slot filament data to the machine and
+   monitors the job live, whoever launched it. No automatic slicer-profile
+   import exists today.
+5. Sharing is consent-based and enforced server-side by Firestore security
    rules: owner-only by default; friends via mutual accept; optional public
    flag; TigerHub tokens for web links.
 

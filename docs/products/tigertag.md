@@ -10,6 +10,16 @@ phone and the spool tells you itself.
 Technically, it is the heart of the ecosystem: an open RFID standard, readable
 by any compatible app or reader — no vendor lock, no secret format.
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    TAG["🏷 TigerTag chip<br/>on every spool"] -- "tap" --> CO["📱 Connect"]
+    TAG -- "scan" --> RD["📡 TigerPOD / ACR122U"] --> ST["🖥 Tiger Studio"]
+    CO & ST <--> CLOUD[("☁ Tiger Cloud")]
+    ST -- "filament data" --> PRN["🖨 Printers"]
+```
+
 ## Features
 
 - Standard **NTAG** NFC chip, 144-byte open NDEF payload — no keys, no lock-in.

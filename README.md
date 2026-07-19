@@ -46,6 +46,7 @@ flowchart LR
         POD["📡 TigerPOD reader stand"]
         SCALE["⚖ TigerScale"]
         PRN["🖨 Your printers<br/>6 brands live"]
+        SLICER["🔪 Your slicer<br/>(unchanged)"]
     end
     subgraph Your screens
         CO["📱 TigerTag Connect<br/>mobile"]
@@ -61,6 +62,7 @@ flowchart LR
     ST <--> CLOUD
     CLOUD --> HUB
     ST -- local network --> PRN
+    SLICER -- print jobs, as always --> PRN
 ```
 
 Every piece is optional. Phone only? Works. Desktop only? Works. Just the

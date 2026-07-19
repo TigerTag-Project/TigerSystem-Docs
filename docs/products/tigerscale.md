@@ -6,6 +6,15 @@
 spool on the open-source ESP32 scale and the live weight flows straight into
 your inventory — no manual entry, no shaking the spool next to your ear.
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    SPOOL["🧵 Spool on the scale"] --> SCALE["⚖ TigerScale (ESP32)"]
+    SCALE -- "live weight" --> CLOUD[("☁ Tiger Cloud")]
+    CLOUD --> ST["🖥 Tiger Studio"] & CO["📱 Connect"]
+```
+
 ## Features
 
 - ESP32-based hardware + firmware, fully open source (MIT).

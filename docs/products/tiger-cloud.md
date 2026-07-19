@@ -7,6 +7,18 @@ phone, desktop, web — because it lives in *your* account, not in a printer
 brand's silo. It also carries the shared reference catalogue every app speaks,
 and a documented surface for anyone building their own integration.
 
+## Where it sits
+
+```mermaid
+flowchart TB
+    CO["📱 Connect"] <--> CLOUD[("☁ Tiger Cloud")]
+    ST["🖥 Tiger Studio"] <--> CLOUD
+    SCALE["⚖ TigerScale"] --> CLOUD
+    CLOUD --> HUB["🌐 TigerHub"]
+    CLOUD <--> THIRD["🧩 Third-party apps & devices"]
+    CDN["🗂 cdn.tigertag.io<br/>shared reference catalogue"] --> CO & ST
+```
+
 ## Components
 
 | Component | Role |

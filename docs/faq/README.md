@@ -34,6 +34,19 @@ See [TigerTag+](../products/tigertag-plus.md).
 **Where do I buy chips?**
 **[tigertag.io](https://tigertag.io)**.
 
+**How does a chip get on a spool?**
+It sticks on. One chip per spool, anywhere convenient — once attached, any tap
+or scan identifies that exact spool.
+
+**Do I need internet to read a chip?**
+No. The chip's payload is complete and self-sufficient: phone in airplane
+mode, offline desktop — the spool still introduces itself.
+
+**Can I use TigerSystem with no chips at all?**
+Yes — Tiger Studio's *TigerData* creates fully digital spools that live only
+in your inventory. You can promote one to a real chip later, atomically, when
+you're ready.
+
 ## Tiger Studio (desktop)
 
 **What platforms?**
@@ -48,6 +61,28 @@ and chip encoding.
 **Which printers can it drive?**
 Six brands live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker —
 see the [compatibility matrix](../compatibility/README.md).
+
+## Slicers & the printing workflow
+
+**Do I have to change my slicer?**
+No. Keep OrcaSlicer, your vendor's slicer, whatever you like — TigerSystem
+doesn't slice and doesn't want to. You slice and launch jobs exactly as
+before. See [where the slicer fits](../architecture/data-flow.md).
+
+**Then what does TigerSystem add to printing?**
+Two things. First, the machine-side filament info matches reality: Tiger
+Studio pushes each spool's data to the printer's slots (AMS, CFS, Canvas, ACE,
+material station). Second, live monitoring: whatever launched the print, the
+job shows up in Tiger Studio with progress, temperatures, a wall-clock
+"ends at" time and the camera — across your whole fleet, all brands mixed.
+
+**Can the chip configure my slicer profile automatically?**
+Not today. The chip carries the filament's recommended settings
+(temperatures…); you mirror them in your slicer profile yourself.
+
+**I have printers from three different brands. Problem?**
+The opposite — that's the point. One printers table for the whole fleet, with
+brand / state / tag filters, whatever the mix of the six supported brands.
 
 ## TigerHub (web)
 
@@ -75,6 +110,12 @@ LAN-local and don't need the internet at all (except Anycubic cloud mode).
 **Can other people see my spools?**
 Only if you choose: accepted friends, a public toggle, or a TigerHub share
 link. Everything is private by default and enforced server-side.
+
+**What happens if the TigerTag cloud shuts down one day?**
+The design answer to that fear is openness: the chip format is public, chips
+read fully offline forever, the SDKs and the desktop app are open source, and
+the cloud surface is documented. Your spools cannot be "bricked" by a server —
+that's precisely the difference with a manufacturer's silo.
 
 ## RFID & compatibility
 

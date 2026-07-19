@@ -8,6 +8,16 @@ keeps your whole collection in your pocket. It is the everyday entry point to
 the ecosystem and the embodiment of the
 [smartphone bridge](../philosophy/smartphone-bridge.md).
 
+## Where it sits
+
+```mermaid
+flowchart LR
+    TAG["🏷 TigerTag chip"] -- "NFC tap" --> CO["📱 TigerTag Connect"]
+    CO -- "read / encode" --> TAG
+    CO <--> CLOUD[("☁ Tiger Cloud")]
+    CLOUD <--> ST["🖥 Tiger Studio — same account"]
+```
+
 ## Features
 
 - **NFC scanning on the go** — tap a spool, see its full profile.
