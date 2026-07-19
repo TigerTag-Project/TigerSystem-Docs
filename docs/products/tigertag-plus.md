@@ -46,7 +46,7 @@ chip's reserved 16-byte signature slot supports certification.
 
 ## Links
 
-- 🛒 **[tigertag.io](https://tigertag.io)**
+- 🛒 Buy chips: **[tigertag.io](https://tigertag.io)** (shop)
 
 ---
 

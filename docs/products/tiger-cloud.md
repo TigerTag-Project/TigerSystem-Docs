@@ -27,7 +27,7 @@ flowchart TB
 | **Firestore** | Real-time per-user data: inventory, racks, friends, prefs, chip backups |
 | **Security rules** | Server-side enforcement: owner-only by default, relationship-gated sharing |
 | **`cdn.tigertag.io`** | Reference database (brands, materials, colors…), health endpoint, spool APIs |
-| **`tigertag.io`** | Official website: buy chips, browse the catalogue, manage your account |
+| **`tigertag.io`** | E-commerce shop for TigerTag chips |
 
 ## Openness
 

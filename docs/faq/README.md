@@ -159,7 +159,8 @@ security rules; a client can only touch its own user's data.
 
 **We're a filament brand — how do we ship TigerTag-tagged spools?**
 The format and reference database are open; chips can be factory-encoded.
-Contact the project via **[tigertag.io](https://tigertag.io)**.
+Reach out through the
+**[GitHub organization](https://github.com/TigerTag-Project)**.
 > **TODO:** publish a dedicated manufacturer onboarding guide.
 
 **We're a printer maker — can our firmware read TigerTag?**

@@ -49,7 +49,7 @@ for the canonical byte-level specification.
 
 ## Links
 
-- 🛒 Buy chips & manage your account: **[tigertag.io](https://tigertag.io)**
+- 🛒 Buy chips: **[tigertag.io](https://tigertag.io)** (shop)
 - 📖 Chip format: [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
 
 ---

@@ -110,7 +110,6 @@ piece of it.
 
 ## Quick links
 
-- 🛒 **[tigertag.io](https://tigertag.io)** — get chips, browse the catalogue, manage your account
 - 🌐 **[tigersystem.io](https://tigersystem.io)** — public sharing (TigerHub)
 - ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
 - 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos

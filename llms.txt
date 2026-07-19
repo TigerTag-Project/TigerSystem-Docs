@@ -91,7 +91,8 @@ Klipper/Moonraker generic support is a natural future path.
 
 ## Key URLs
 
-- https://tigertag.io — official site: buy chips, catalogue, account
+- https://tigertag.io — e-commerce shop for TigerTag chips (shop only; the
+  ecosystem is explained here, not there)
 - https://tigersystem.io — TigerHub public sharing
 - https://cdn.tigertag.io/healthz/ — cloud health endpoint
 - https://tigertag-cdn.web.app/__/firebase/init.json — public Firebase config
