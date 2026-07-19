@@ -2,9 +2,11 @@
 
 ## Purpose
 
-**TigerHub** is the public web surface of the ecosystem, hosted at
-**[tigersystem.io](https://tigersystem.io)**. It renders cloud data that a user
-chose to make public — no app install required for the viewer.
+**TigerHub shows your collection to the world with a simple link.** Send
+someone a URL and they see your list in their browser — nothing to install, no
+account needed on their side. It is the public web surface of the ecosystem,
+hosted at **[tigersystem.io](https://tigersystem.io)**, and it only ever shows
+what you chose to make public.
 
 ## Features
 

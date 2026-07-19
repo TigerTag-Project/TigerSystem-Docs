@@ -2,10 +2,11 @@
 
 ## Purpose
 
-**TigerTag RFID Connect** is the iOS/Android mobile app — the everyday entry
-point to the ecosystem and the embodiment of the
-[smartphone bridge](../philosophy/smartphone-bridge.md): every NFC phone is a
-TigerTag reader and writer.
+**Your phone already is a TigerTag reader — Connect switches it on.** The
+iOS/Android app reads any spool with a tap, writes chips just as easily, and
+keeps your whole collection in your pocket. It is the everyday entry point to
+the ecosystem and the embodiment of the
+[smartphone bridge](../philosophy/smartphone-bridge.md).
 
 ## Features
 

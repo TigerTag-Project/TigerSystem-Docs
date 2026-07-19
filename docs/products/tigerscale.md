@@ -2,9 +2,9 @@
 
 ## Purpose
 
-**TigerScale** is the open-source ESP32 filament scale: put a spool on it and
-its live weight flows into the owner's cloud inventory — no manual entry, no
-guessing how much filament is left.
+**TigerScale answers the eternal question: how much filament is left?** Put a
+spool on the open-source ESP32 scale and the live weight flows straight into
+your inventory — no manual entry, no shaking the spool next to your ear.
 
 ## Features
 

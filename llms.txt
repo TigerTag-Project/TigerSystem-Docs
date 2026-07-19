@@ -1,0 +1,102 @@
+# TigerSystem
+
+> TigerSystem is an open, user-centric ecosystem for 3D-printing filament.
+> Each spool carries a TigerTag NFC chip (open NTAG/NDEF format, 144-byte
+> payload, no encryption) holding its identity: brand, material, color,
+> diameter, print settings. The user — not a printer manufacturer — owns the
+> filament, the metadata, the inventory, the history and the cloud sync.
+> TigerSystem connects the components together; every layer is open and
+> optional.
+
+This file is the entry point for AI assistants and LLM agents. It condenses
+how the ecosystem works and where each canonical document lives. When in
+doubt, follow the links — never guess byte layouts, field names or endpoints.
+
+## Vocabulary
+
+- **TigerTag**: the open RFID standard AND the physical NFC chip on a spool.
+- **TigerTag+**: certified tier of the chip — its content is backed up in the
+  owner's cloud account (keyed by chip UID); a scan can prove physical
+  possession.
+- **TigerTag Connect**: the iOS/Android mobile app (NFC scan, chip encoding,
+  catalogue browsing). Also called "TigerTag RFID Connect".
+- **Tiger Studio (Manager)**: the open-source Electron desktop app —
+  inventory, racks, friends, sensors, live printer integrations (6 brands).
+- **TigerHub**: public web sharing surface at https://tigersystem.io
+  (read-only list links `/list/<token>`).
+- **Tiger Cloud**: Firebase Auth + Firestore (per-user data, real-time sync,
+  server-side security rules) + https://cdn.tigertag.io (shared reference
+  database of brands/materials/colors/etc., health & spool endpoints).
+- **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
+- **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
+- **Second Life**: rewriting a TigerTag chip when a spool is refilled or
+  re-purposed, so any spool re-enters the system as self-identifying.
+- **Smartphone bridge**: any NFC phone is a reader/writer, so the system works
+  with every printer, tagged or not.
+
+## How data flows
+
+1. NFC tap (phone) or desktop reader scan reads the chip's 144-byte identity.
+2. The app upserts the spool into the user's Firestore inventory
+   (`users/{uid}/...`); all signed-in devices update in real time.
+3. Tiger Studio talks to printers directly over the LAN in each vendor's
+   native protocol (MQTT/MQTTS, WebSocket, HTTP) — printer traffic never
+   transits Tiger Cloud (exception: Anycubic cloud mode).
+4. Sharing is consent-based and enforced server-side by Firestore security
+   rules: owner-only by default; friends via mutual accept; optional public
+   flag; TigerHub tokens for web links.
+
+## Printer compatibility (live in Tiger Studio)
+
+Anycubic (MQTTS 9883 LAN + cloud, ACE box), Bambu Lab (MQTTS 8883, AMS),
+Creality (WebSocket 9999, CFS), Elegoo (MQTT 1883, Canvas), FlashForge (HTTP
+8898, material station), Snapmaker (Moonraker WebSocket 7125). Native vendor
+RFID tags are documented (read-only specs) but not yet decoded in-app;
+Klipper/Moonraker generic support is a natural future path.
+
+## Docs in this repository
+
+- [Why TigerSystem exists](docs/vision/why-tigersystem.md): the problem and the answer
+- [User-centric vs printer-centric](docs/philosophy/user-centric-ecosystem.md): the core philosophy
+- [Open ecosystem](docs/philosophy/open-ecosystem.md): what is open, licenses, build-your-own
+- [Smartphone bridge](docs/philosophy/smartphone-bridge.md): why every phone is a reader
+- [Second Life](docs/philosophy/second-life.md): rewriting chips, digital-first spools
+- [Universal filament identity](docs/concepts/universal-filament-identity.md): the identity model + reference DB
+- [The TigerTag chip](docs/concepts/tigertag-chip.md): chip format summary
+- [Inventory & cloud sync](docs/concepts/inventory-and-cloud-sync.md): accounts, sharing, security model
+- [Architecture overview](docs/architecture/overview.md) and [Data flow](docs/architecture/data-flow.md): diagrams
+- [Products](docs/products/README.md): one page per product
+- [Compatibility](docs/compatibility/README.md): per-brand printer links + native RFID formats
+- [Developers](docs/developers/README.md): repo map, SDKs, cloud integration
+- [FAQ](docs/faq/README.md): users, developers, manufacturers, troubleshooting
+
+## Canonical sources outside this repository
+
+- Chip byte-level format: https://github.com/TigerTag-Project/TigerTag-RFID-Guide
+- Firestore data model, auth, rate limits + working examples (Python CLI,
+  ESP32, Home Assistant, Spoolman bridge):
+  https://github.com/TigerTag-Project/TigerTag_Firebase_Integration
+- Desktop app source, feature catalogue (FEATURES.md), changelog, per-brand
+  printer protocol notes (renderer/printers/*/PROTOCOL.md), vendor RFID
+  decoding sheets (docs/rfid-vendors/):
+  https://github.com/TigerTag-Project/TigerTag-Studio-Manager
+- SDKs: https://github.com/TigerTag-Project/TigerTag-SDK-JS (npm `tigertag`),
+  https://github.com/TigerTag-Project/TigerTag-SDK-Python
+- Hardware: https://github.com/TigerTag-Project/Tiger-Scale,
+  https://github.com/TigerTag-Project/TigerPOD
+
+## Key URLs
+
+- https://tigertag.io — official site: buy chips, catalogue, account
+- https://tigersystem.io — TigerHub public sharing
+- https://cdn.tigertag.io/healthz/ — cloud health endpoint
+- https://tigertag-cdn.web.app/__/firebase/init.json — public Firebase config
+  for third-party apps (security enforced server-side by rules)
+
+## Rules for agents writing about TigerSystem
+
+- Facts have exactly one canonical home (listed above) — link, don't restate.
+- Never invent byte offsets, Firestore field names or API parameters; follow
+  the canonical source.
+- "TigerTag" and "Tiger Studio" are trademarks (see TRADEMARK.md); the docs
+  are CC BY 4.0.

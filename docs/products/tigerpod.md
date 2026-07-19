@@ -2,10 +2,10 @@
 
 ## Purpose
 
-**TigerPOD** is a free, open-source, 3D-printable **dual NFC reader/writer
-stand** for filament spools: a printed shell holding two USB NFC readers, so a
-desktop setup can read and encode TigerTag chips as naturally as tapping a
-phone.
+**TigerPOD puts a spool scanner on your desk — and you print it yourself.**
+A free, open-source 3D-printable stand holding two USB NFC readers: place a
+spool, it identifies itself in Tiger Studio; place a blank chip, encode it.
+As natural as tapping a phone, but hands-free on the desktop.
 
 ## Features
 

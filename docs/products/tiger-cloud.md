@@ -2,9 +2,10 @@
 
 ## Purpose
 
-**Tiger Cloud** is the backbone that keeps a user's filament world in sync:
-identity reference data, per-user inventory, sharing, and the public API
-surface for third parties.
+**Tiger Cloud is the memory behind everything.** Your inventory follows you —
+phone, desktop, web — because it lives in *your* account, not in a printer
+brand's silo. It also carries the shared reference catalogue every app speaks,
+and a documented surface for anyone building their own integration.
 
 ## Components
 

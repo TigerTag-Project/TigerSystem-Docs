@@ -1,91 +1,123 @@
-# TigerSystem Documentation
+# TigerSystem
 
-> The official documentation of **TigerSystem** — the open, user-centric
-> ecosystem for 3D-printing filament. One spool, one open identity, readable
-> everywhere.
+> **Your filament, finally smart — and finally yours.**
 
-**TigerTag** is an open RFID standard: each filament spool carries an NFC chip
-with its full profile — brand, material, color, print settings — readable by
-any compatible app or reader. Around it, TigerSystem connects a mobile app, a
-desktop workbench, a web sharing surface, an open cloud, and open hardware.
+Every 3D-printing shelf hides the same mystery: twenty spools, half of them
+unlabeled, none of them able to tell you what they are, how much is left, or
+how they like to be printed.
 
-## The ecosystem at a glance
+**TigerSystem fixes that with one small chip.** Stick a **TigerTag** NFC chip
+on a spool and the spool can introduce itself — to your phone, to your
+computer, to your printer: *"I'm matte black PLA from brand X, 1.75 mm, print
+me at 210 °C, and there's 640 g of me left."*
+
+No subscription. No locked format. No printer brand deciding what you're
+allowed to know about **your own filament**.
+
+## What you can actually do with it
+
+- 📱 **Tap a spool with your phone** — its full profile appears instantly.
+- 🖥 **See your whole collection on one screen** — searchable, sorted, with photos.
+- ⚖ **Know how much is really left** — put the spool on the open-source scale, the number updates everywhere.
+- 📦 **Find any spool in seconds** — map your shelves and racks; the app remembers the exact slot.
+- 🖨 **Let your printer know what's loaded** — live link with six printer brands, filament data pushed to the slot.
+- 🤝 **Share with friends** — a simple code or a web link shows your collection, read-only.
+- ♻️ **Give old spools a second life** — refill or re-purpose any spool, rewrite its chip, done.
+
+## The idea in 30 seconds
+
+Printer manufacturers put RFID tags on their spools too — but **locked**, in
+secret formats, working only with their machines, feeding their cloud. Your
+inventory ends up belonging to them.
+
+TigerSystem flips it: the chip is **open and readable by anything**, the data
+belongs to **your** account, and every piece — apps, cloud, scale, reader,
+even the chip spec — is published for anyone to use or build on. It's a
+format, not a walled garden.
+
+→ The full story: **[Why TigerSystem exists](docs/vision/why-tigersystem.md)**
+
+## How it all connects
 
 ```mermaid
 flowchart LR
-    subgraph Physical world
-        TAG["🏷 TigerTag chip<br/>on the spool"]
-        POD["📡 TigerPOD / NFC reader"]
+    subgraph On your desk
+        TAG["🏷 TigerTag chip<br/>on each spool"]
+        POD["📡 TigerPOD reader stand"]
         SCALE["⚖ TigerScale"]
-        PRN["🖨 Printers — 6 brands live"]
+        PRN["🖨 Your printers<br/>6 brands live"]
     end
-    subgraph Apps
-        CO["📱 TigerTag Connect"]
-        ST["🖥 Tiger Studio"]
-        HUB["🌐 TigerHub"]
+    subgraph Your screens
+        CO["📱 TigerTag Connect<br/>mobile"]
+        ST["🖥 Tiger Studio<br/>desktop"]
+        HUB["🌐 TigerHub<br/>web sharing"]
     end
     CLOUD[("☁ Tiger Cloud<br/>your account, your data")]
 
-    TAG -- NFC tap --> CO
+    TAG -- tap --> CO
     TAG --> POD --> ST
     SCALE --> CLOUD
     CO <--> CLOUD
     ST <--> CLOUD
     CLOUD --> HUB
-    ST -- native LAN protocols --> PRN
+    ST -- local network --> PRN
 ```
 
-## Philosophy in one paragraph
+Every piece is optional. Phone only? Works. Desktop only? Works. Just the
+chips, fully offline? Works too.
 
-Printer manufacturers build **printer-centric** ecosystems: locked tags, vendor
-silos, data that dies with the brand. TigerSystem is **user-centric**: you own
-the filament, the metadata, the inventory, the history and the synchronization
-— the system just connects every component together. Every layer is open and
-optional, and nothing requires anyone's permission to build on.
-→ [Why TigerSystem exists](docs/vision/why-tigersystem.md)
+## Meet the family
 
-## Documentation index
-
-| Section | Contents |
+| Product | In plain words |
 |---|---|
-| **[Vision](docs/vision/why-tigersystem.md)** | Why TigerSystem exists |
-| **[Philosophy](docs/philosophy/user-centric-ecosystem.md)** | [User-centric vs printer-centric](docs/philosophy/user-centric-ecosystem.md) · [Open ecosystem](docs/philosophy/open-ecosystem.md) · [Smartphone bridge](docs/philosophy/smartphone-bridge.md) · [Second Life](docs/philosophy/second-life.md) |
-| **[Concepts](docs/concepts/universal-filament-identity.md)** | [Universal filament identity](docs/concepts/universal-filament-identity.md) · [The TigerTag chip](docs/concepts/tigertag-chip.md) · [Inventory & cloud sync](docs/concepts/inventory-and-cloud-sync.md) |
-| **[Architecture](docs/architecture/overview.md)** | [Overview](docs/architecture/overview.md) · [Data flow](docs/architecture/data-flow.md) |
-| **[Products](docs/products/README.md)** | [TigerTag](docs/products/tigertag.md) · [TigerTag+](docs/products/tigertag-plus.md) · [Connect](docs/products/tigertag-connect.md) · [Tiger Studio](docs/products/tiger-studio.md) · [TigerHub](docs/products/tigerhub.md) · [Tiger Cloud](docs/products/tiger-cloud.md) · [TigerPOD](docs/products/tigerpod.md) · [TigerScale](docs/products/tigerscale.md) |
-| **[Compatibility](docs/compatibility/README.md)** | Bambu Lab · Creality · Elegoo · FlashForge · Anycubic · Snapmaker · Klipper · OpenSpool |
-| **[Developers](docs/developers/README.md)** | [Repositories](docs/developers/repositories.md) · [SDKs](docs/developers/sdks.md) · [Cloud API](docs/developers/cloud-api.md) |
-| **[FAQ](docs/faq/README.md)** | General · chips · apps · cloud · RFID · troubleshooting · developers · manufacturers |
-| **[Tutorials](docs/tutorials/README.md)** / **[Guides](docs/guides/README.md)** | Step-by-step walkthroughs *(in progress)* |
-| **[Roadmap](docs/roadmap/README.md)** | Ecosystem direction |
+| 🏷 **[TigerTag](docs/products/tigertag.md)** | The chip — gives any spool a memory of its own |
+| 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — lose it, restore it |
+| 📱 **[TigerTag Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
+| 🖥 **[Tiger Studio](docs/products/tiger-studio.md)** | Mission control on desktop — inventory, racks, printers, sensors |
+| 🌐 **[TigerHub](docs/products/tigerhub.md)** | Share your collection with a simple link |
+| ☁ **[Tiger Cloud](docs/products/tiger-cloud.md)** | The memory behind it all — your data, synced everywhere |
+| 📡 **[TigerPOD](docs/products/tigerpod.md)** | A 3D-printable scanner stand for your desk — free STL |
+| ⚖ **[TigerScale](docs/products/tigerscale.md)** | The open-source scale that answers "how much is left?" |
 
-## Products
+## Everything is open — the public repositories
 
-| Product | One-liner |
+This repo is the **map**: it explains the ecosystem and links every public
+piece of it.
+
+| Repository | What you'll find there |
 |---|---|
-| 🏷 **[TigerTag](docs/products/tigertag.md)** | Open NFC chip + standard — the spool's universal identity |
-| 🏷+ **[TigerTag+](docs/products/tigertag-plus.md)** | Certified chip with cloud backup |
-| 📱 **[TigerTag Connect](docs/products/tigertag-connect.md)** | iOS/Android app — scan & encode by NFC tap |
-| 🖥 **[Tiger Studio](docs/products/tiger-studio.md)** | Open-source desktop workbench — inventory, racks, 6 printer brands live |
-| 🌐 **[TigerHub](docs/products/tigerhub.md)** | Public sharing on [tigersystem.io](https://tigersystem.io) |
-| ☁ **[Tiger Cloud](docs/products/tiger-cloud.md)** | Your account: sync, sharing, reference data, open API surface |
-| 📡 **[TigerPOD](docs/products/tigerpod.md)** | Free 3D-printable dual NFC reader stand |
-| ⚖ **[TigerScale](docs/products/tigerscale.md)** | Open-source ESP32 filament scale |
+| **TigerSystem-Docs** (you are here) | The whole story, explained — for humans and for AI assistants ([llms.txt](llms.txt)) |
+| [TigerTag-Studio-Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager) | The desktop app, full source + downloads (MIT) |
+| [TigerTag-SDK-JS](https://github.com/TigerTag-Project/TigerTag-SDK-JS) | Read & write chips from JavaScript — npm `tigertag` (MIT) |
+| [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) | Same, from Python (MIT) |
+| [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) | The chip format, byte by byte |
+| [TigerTag_Firebase_Integration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration) | Connect your own app/device to the cloud — with working examples (ESP32, Home Assistant, Spoolman) |
+| [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | Build the scale yourself — hardware + firmware (MIT) |
+| [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | Print the reader stand — free STL (CC BY 4.0) |
+
+## Dive deeper
+
+| You are… | Start here |
+|---|---|
+| **Curious** — what is this, why does it exist? | [Vision](docs/vision/why-tigersystem.md) → [Philosophy](docs/philosophy/user-centric-ecosystem.md) |
+| **A user** — what does each product do for me? | [Products](docs/products/README.md) → [FAQ](docs/faq/README.md) |
+| **A printer owner** — does it work with MY printer? | [Compatibility](docs/compatibility/README.md) |
+| **A developer** — how do I build on it? | [Developers](docs/developers/README.md) → [SDKs](docs/developers/sdks.md) → [Cloud API](docs/developers/cloud-api.md) |
+| **An AI assistant** — how does this ecosystem work? | **[llms.txt](llms.txt)** — the condensed, canonical explainer |
+| **In a hurry** | [How it works end-to-end](docs/architecture/data-flow.md) in two diagrams |
 
 ## Quick links
 
-- 🛒 **[tigertag.io](https://tigertag.io)** — chips, catalogue, account
+- 🛒 **[tigertag.io](https://tigertag.io)** — get chips, browse the catalogue, manage your account
 - 🌐 **[tigersystem.io](https://tigersystem.io)** — public sharing (TigerHub)
-- 📦 **[GitHub organization](https://github.com/TigerTag-Project)** — all open repos ([map](docs/developers/repositories.md))
-- ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)**
+- ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
+- 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
 
 ## Contributing
 
-This repository is the **single source of truth for ecosystem-level
-documentation** — product code and code-level docs live in their own repos.
-See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the writing rules (one canonical
-home per fact, cross-reference instead of duplicating, never invent — mark
-gaps with `TODO`).
+Spotted a gap, a typo, a question the FAQ should answer? PRs welcome —
+see [CONTRIBUTING.md](CONTRIBUTING.md). One rule above all: every fact has one
+canonical home; this repo explains and links, it never forks the truth.
 
 ## License
 

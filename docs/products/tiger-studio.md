@@ -2,10 +2,10 @@
 
 ## Purpose
 
-**Tiger Studio Manager** is the open-source desktop workbench (Windows / macOS /
-Linux, Electron): it bridges the physical filament collection with the TigerTag
-cloud, and adds the desktop-class surfaces — multi-account, racks, live printer
-integration, hardware devices, bulk operations.
+**Tiger Studio is mission control for your filament.** Every spool, every
+rack, every printer on one screen — scan a chip and its spool pops open,
+update a weight and it syncs everywhere, glance at a printer and see what it's
+doing right now. Open source, on Windows / macOS / Linux.
 
 It is deliberately **a laboratory, not the destination** — a demonstration of
 what the open protocol makes possible, readable, forkable and free to copy

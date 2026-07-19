@@ -2,9 +2,10 @@
 
 ## Purpose
 
-**TigerTag+** is the certified tier of the TigerTag chip: the same open,
-readable payload, plus a **cloud backup of the chip** bound to the owner's
-account.
+**TigerTag+ is the chip your account never forgets.** Same open chip, one
+superpower: its content is safely backed up in your cloud account. Chip
+damaged or lost? Restore it. Need to prove the spool is really in your hands?
+One scan does it.
 
 ## Features
 

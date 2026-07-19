@@ -2,10 +2,13 @@
 
 ## Purpose
 
-**TigerTag** is the heart of the ecosystem: an open RFID standard for tracking
-3D-printing filament spools. Each spool carries an NFC chip with its full
-profile — brand, material, color, print settings — readable by any compatible
-app or reader.
+**TigerTag gives every spool a memory of its own.** A small NFC chip holds
+everything about the filament — brand, material, color, how it likes to be
+printed — so you never have to guess, label or remember. Tap it with your
+phone and the spool tells you itself.
+
+Technically, it is the heart of the ecosystem: an open RFID standard, readable
+by any compatible app or reader — no vendor lock, no secret format.
 
 ## Features
 
