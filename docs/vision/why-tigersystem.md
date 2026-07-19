@@ -1,0 +1,53 @@
+# Why TigerSystem exists
+
+## The problem
+
+A filament spool is the single most-handled object in 3D printing — and the least
+intelligent. Once the label is gone, a spool cannot tell you:
+
+- what material and color it is,
+- how it should be printed,
+- how much filament is left,
+- where it lives on your shelf,
+- who it belongs to.
+
+Printer manufacturers have started fixing this with RFID tags — **but each one
+fixes it only inside its own walls.** A Bambu Lab tag means nothing to a
+Creality printer; an Anycubic tag means nothing to anyone else. The data
+belongs to the manufacturer's ecosystem, not to the person who bought the
+filament.
+
+## The answer
+
+**TigerSystem** is an open ecosystem built around one idea:
+
+> **The spool's identity belongs to its owner — not to a printer brand.**
+
+Every spool carries a [TigerTag](../products/tigertag.md) NFC chip holding its
+full profile — brand, material, color, diameter, print settings. Any compatible
+reader — a smartphone, a desktop reader, a printer — can read it. The
+[Tiger Cloud](../products/tiger-cloud.md) keeps the owner's inventory, history
+and sharing in sync across every device.
+
+## What "user-centric" means in practice
+
+| Printer-centric ecosystem | TigerSystem |
+|---|---|
+| Tag readable only by one brand's printers | Tag readable by any NFC device |
+| Data format secret or encrypted | Format open and documented |
+| Inventory lives in the vendor's app | Inventory lives in **your** account |
+| Works only with the vendor's filament | Works with **any** filament brand |
+| Dies with the vendor's cloud | Open SDKs, open spec, self-buildable |
+
+## Neutral by design
+
+TigerTag takes no side between filament brands, printer makers or distributors.
+It is not a walled garden with a partner list — it is a **format anyone can read
+and write**. Nothing in the ecosystem is a prerequisite: read the chip spec,
+pick up an SDK, and build the software or the business you actually want.
+
+---
+
+**▲ [Documentation index](../../README.md)** · **Next ▶** [User-centric ecosystem](../philosophy/user-centric-ecosystem.md)
+
+**Related:** [Open ecosystem philosophy](../philosophy/open-ecosystem.md), [Universal filament identity](../concepts/universal-filament-identity.md)
