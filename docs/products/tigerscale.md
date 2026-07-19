@@ -6,6 +6,10 @@
 spool on the open-source ESP32 scale and the live weight flows straight into
 your inventory — no manual entry, no shaking the spool next to your ear.
 
+> **The chip knows what the filament *is*; the scale knows how much is
+> *left*.** Together they make the inventory actually true: identity from
+> [TigerTag](./tigertag.md), live quantity from TigerScale.
+
 ## Where it sits
 
 ```mermaid

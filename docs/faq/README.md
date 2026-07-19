@@ -96,6 +96,35 @@ read-only list link and anyone can view it in a browser, no app needed.
 NFC scanning and chip programming on the go, catalogue browsing, and full
 inventory sync with the same account as the desktop app.
 
+## TigerScale & sensors
+
+**What is TigerScale?**
+An open-source ESP32 scale for filament spools. Put a spool on it and its live
+weight flows straight into your inventory — visible instantly on desktop,
+mobile and shared views. See [TigerScale](../products/tigerscale.md).
+
+**Wait — the chip already knows everything, why a scale?**
+The chip knows what the filament **is**; only a scale knows how much is
+**left**. They're the two halves of a truly useful inventory: identity from
+the chip, live quantity from the scale.
+
+**Do I need a TigerScale to track weight?**
+No. You can set or adjust a spool's weight manually in the apps at any time —
+the scale just makes it automatic, live and effortless.
+
+**Can I build one myself?**
+Yes — that's the point. Hardware design and firmware are fully open (MIT) in
+the [Tiger-Scale repo](https://github.com/TigerTag-Project/Tiger-Scale).
+
+**What about the empty spool's own weight?**
+Tiger Studio's container calibration lets you measure a container's real empty
+weight once; it's then applied to every spool in that container, so the number
+you see is net filament, not plastic reel.
+
+**What is the TD1S?**
+A color sensor used with Tiger Studio: scan a filament and capture its real
+color for the spool's profile — handy for unlabeled or re-spooled filament.
+
 ## Cloud & inventory
 
 **Where is my inventory stored?**
