@@ -2,14 +2,14 @@
 
 ## One account, every device
 
-A user's inventory lives in **their Tiger Cloud account** (Firebase Auth +
+A user's inventory lives in **their TigerHub account** (Firebase Auth +
 Firestore). Every client — mobile, desktop, web — subscribes to the same
 documents in real time:
 
 ```mermaid
 sequenceDiagram
     participant Phone as TigerTag Connect
-    participant Cloud as Tiger Cloud (Firestore)
+    participant Cloud as TigerHub (Firestore)
     participant Desktop as Tiger Studio
     Phone->>Cloud: scan chip → upsert spool
     Cloud-->>Desktop: real-time snapshot (instant)
@@ -53,4 +53,4 @@ The authoritative field-by-field data model is documented in the
 
 **◀ Previous:** [The TigerTag chip](./tigertag-chip.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Architecture overview](../architecture/overview.md)
 
-**Related:** [Tiger Cloud](../products/tiger-cloud.md), [Developers — Cloud API](../developers/cloud-api.md)
+**Related:** [TigerHub](../products/tigerhub.md), [Developers — Cloud API](../developers/cloud-api.md)

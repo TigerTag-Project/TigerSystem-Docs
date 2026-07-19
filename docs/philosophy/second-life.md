@@ -32,7 +32,7 @@ flowchart LR
   (chipless) spool now and **promote it to a real chip later, atomically**.
 
 > **Note:** the catalogue of brands, materials and colors used when encoding is
-> served by the [Tiger Cloud](../products/tiger-cloud.md) reference database, so
+> served by the [TigerHub](../products/tigerhub.md) reference database, so
 > a re-encoded chip is as precise as a factory one.
 
 ---

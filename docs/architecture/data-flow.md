@@ -9,7 +9,7 @@ sequenceDiagram
     actor User
     participant Chip as TigerTag chip
     participant App as Connect / Studio
-    participant Cloud as Tiger Cloud
+    participant Cloud as TigerHub
     participant Printer as Printer (LAN)
 
     User->>Chip: NFC tap (phone) or place on reader (desktop)

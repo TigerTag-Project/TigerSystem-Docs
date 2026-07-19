@@ -22,11 +22,13 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   catalogue browsing). Also called "TigerTag RFID Connect".
 - **Tiger Studio (Manager)**: the open-source Electron desktop app —
   inventory, racks, friends, sensors, live printer integrations (6 brands).
-- **TigerHub**: public web sharing surface at https://tigersystem.io
-  (read-only list links `/list/<token>`).
-- **Tiger Cloud**: Firebase Auth + Firestore (per-user data, real-time sync,
-  server-side security rules) + https://cdn.tigertag.io (shared reference
-  database of brands/materials/colors/etc., health & spool endpoints).
+- **TigerHub**: the Firebase backbone that manages user accounts — Firebase
+  Auth + Firestore (per-user data, real-time sync, server-side security
+  rules), plus the public web sharing surface at https://tigersystem.io
+  (read-only list links `/list/<token>`) and https://cdn.tigertag.io (shared
+  reference database of brands/materials/colors/etc., health & spool
+  endpoints). Note: "Tiger Cloud" is NOT a product name — the cloud IS
+  TigerHub.
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
 - **Second Life**: rewriting a TigerTag chip when a spool is refilled or
@@ -41,7 +43,7 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
    (`users/{uid}/...`); all signed-in devices update in real time.
 3. Tiger Studio talks to printers directly over the LAN in each vendor's
    native protocol (MQTT/MQTTS, WebSocket, HTTP) — printer traffic never
-   transits Tiger Cloud (exception: Anycubic cloud mode).
+   transits TigerHub (exception: Anycubic cloud mode).
 4. Slicers are untouched third parties: users slice and launch jobs with any
    slicer; Tiger Studio pushes per-slot filament data to the machine and
    monitors the job live, whoever launched it. No automatic slicer-profile

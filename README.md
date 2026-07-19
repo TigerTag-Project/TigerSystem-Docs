@@ -51,16 +51,16 @@ flowchart LR
     subgraph Your screens
         CO["📱 TigerTag Connect<br/>mobile"]
         ST["🖥 Tiger Studio<br/>desktop"]
-        HUB["🌐 TigerHub<br/>web sharing"]
+        WEB["🌐 tigersystem.io<br/>public sharing"]
     end
-    CLOUD[("☁ Tiger Cloud<br/>your account, your data")]
+    CLOUD[("☁ TigerHub<br/>your account, your data")]
 
     TAG -- tap --> CO
     TAG --> POD --> ST
     SCALE --> CLOUD
     CO <--> CLOUD
     ST <--> CLOUD
-    CLOUD --> HUB
+    CLOUD --> WEB
     ST -- local network --> PRN
     SLICER -- print jobs, as always --> PRN
 ```
@@ -76,8 +76,7 @@ chips, fully offline? Works too.
 | 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — lose it, restore it |
 | 📱 **[TigerTag Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
 | 🖥 **[Tiger Studio](docs/products/tiger-studio.md)** | Mission control on desktop — inventory, racks, printers, sensors |
-| 🌐 **[TigerHub](docs/products/tigerhub.md)** | Share your collection with a simple link |
-| ☁ **[Tiger Cloud](docs/products/tiger-cloud.md)** | The memory behind it all — your data, synced everywhere |
+| ☁ **[TigerHub](docs/products/tigerhub.md)** | Your account & the memory behind it all — synced everywhere, shareable with a simple link |
 | 📡 **[TigerPOD](docs/products/tigerpod.md)** | A 3D-printable scanner stand for your desk — free STL |
 | ⚖ **[TigerScale](docs/products/tigerscale.md)** | The open-source scale that answers "how much is left?" |
 

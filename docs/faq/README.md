@@ -84,11 +84,17 @@ Not today. The chip carries the filament's recommended settings
 The opposite — that's the point. One printers table for the whole fleet, with
 brand / state / tag filters, whatever the mix of the six supported brands.
 
-## TigerHub (web)
+## TigerHub (your account & sharing)
 
 **What is TigerHub?**
-The public web surface at [tigersystem.io](https://tigersystem.io) — share a
-read-only list link and anyone can view it in a browser, no app needed.
+The backbone of the ecosystem: the Firebase service that manages your user
+account and keeps every device in sync in real time. See
+[TigerHub](../products/tigerhub.md).
+
+**Can I show my collection to someone without an app?**
+Yes — TigerHub's public web surface at
+[tigersystem.io](https://tigersystem.io) serves read-only list links: anyone
+with the link views it in a plain browser, no app, no account.
 
 ## TigerTag Connect (mobile)
 
@@ -128,7 +134,7 @@ color for the spool's profile — handy for unlabeled or re-spooled filament.
 ## Cloud & inventory
 
 **Where is my inventory stored?**
-In your own account on Tiger Cloud (Firebase/Firestore). Every device you sign
+In your own account on TigerHub (Firebase/Firestore). Every device you sign
 into sees the same data in real time. See
 [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md).
 

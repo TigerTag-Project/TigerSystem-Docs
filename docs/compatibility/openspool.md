@@ -12,7 +12,7 @@ a close cousin of TigerTag.
 |---|---|---|
 | Carrier | NTAG, 144-byte NDEF payload | NFC Type 2, NDEF JSON |
 | Data model | Compact IDs resolved against a shared reference DB | Self-describing JSON |
-| Cloud | Optional account, inventory, sharing ([Tiger Cloud](../products/tiger-cloud.md)) | None (tag-only standard) |
+| Cloud | Optional account, inventory, sharing ([TigerHub](../products/tigerhub.md)) | None (tag-only standard) |
 | Certification | Optional [TigerTag+](../products/tigertag-plus.md) backup/signature | None |
 | Openness | Open spec + SDKs | Open spec |
 

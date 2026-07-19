@@ -17,7 +17,7 @@ what the open protocol makes possible, readable, forkable and free to copy
 flowchart LR
     RD["📡 TigerPOD / ACR122U"] --> ST["🖥 Tiger Studio"]
     TD["🎨 TD1S"] --> ST
-    ST <--> CLOUD[("☁ Tiger Cloud")]
+    ST <--> CLOUD[("☁ TigerHub")]
     SCALE["⚖ TigerScale"] --> CLOUD
     ST -- "filament to slots" --> PRN["🖨 6 printer brands"]
     PRN -- "telemetry · cameras" --> ST

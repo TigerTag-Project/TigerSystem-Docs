@@ -6,18 +6,18 @@
 flowchart TB
     TAG["TigerTag chip<br/>(open NDEF payload on the spool)"]
     CONNECT["TigerTag Connect<br/>(mobile — NFC scan & encode)"]
-    CLOUD["Tiger Cloud<br/>(Firebase Auth + Firestore + cdn.tigertag.io)"]
+    CLOUD["TigerHub<br/>(Firebase Auth + Firestore + cdn.tigertag.io)"]
     STUDIO["Tiger Studio<br/>(desktop — inventory, devices, printers)"]
     PRINTERS["Printer integrations<br/>(Bambu Lab · Creality · Elegoo · FlashForge · Snapmaker · Anycubic)"]
     THIRD["Third-party apps & APIs<br/>(SDKs, Home Assistant, Spoolman, ESP32…)"]
-    HUB["TigerHub<br/>(web — public sharing)"]
+    WEB["tigersystem.io<br/>(TigerHub's public web sharing)"]
 
     TAG --> CONNECT
     TAG --> STUDIO
     CONNECT <--> CLOUD
     STUDIO <--> CLOUD
     STUDIO --> PRINTERS
-    CLOUD --> HUB
+    CLOUD --> WEB
     CLOUD <--> THIRD
 ```
 
@@ -27,7 +27,7 @@ flowchart TB
 |---|---|---|
 | **TigerTag chip** | Portable, open identity of the physical spool | [Chip format](../concepts/tigertag-chip.md) |
 | **TigerTag Connect** | The smartphone bridge: scan, encode, browse | [Product page](../products/tigertag-connect.md) |
-| **Tiger Cloud** | Identity + inventory + sharing backbone | [Product page](../products/tiger-cloud.md) |
+| **TigerHub** | Identity + inventory + sharing backbone | [Product page](../products/tigerhub.md) |
 | **Tiger Studio** | Desktop workbench: inventory, racks, sensors, printers | [Product page](../products/tiger-studio.md) |
 | **Printer integrations** | Live LAN links to six printer brands | [Compatibility](../compatibility/README.md) |
 | **Third-party APIs** | SDKs + documented Firestore surface for anyone | [Developers](../developers/README.md) |
@@ -51,9 +51,9 @@ flowchart TB
     subgraph APPS["🖥 Apps"]
         CO["📱 TigerTag Connect"]
         ST["🖥 Tiger Studio"]
-        HUB["🌐 TigerHub"]
+        WEB["🌐 tigersystem.io<br/>public sharing"]
     end
-    CLOUD[("☁ Tiger Cloud")]
+    CLOUD[("☁ TigerHub<br/>your account")]
     subgraph PRT["🖨 Printing"]
         SLICER["🔪 Your slicer<br/>(OrcaSlicer, vendor slicers…)"]
         PRN["🖨 Printers<br/>Anycubic · Bambu Lab · Creality<br/>Elegoo · FlashForge · Snapmaker"]
@@ -67,7 +67,7 @@ flowchart TB
     SCALE -- "live weight" --> CLOUD
     CO <--> CLOUD
     ST <--> CLOUD
-    CLOUD -- "public share links" --> HUB
+    CLOUD -- "public share links" --> WEB
     CLOUD <--> THIRD
     ST -- "filament data to slots" --> PRN
     PRN -- "live telemetry, job, camera" --> ST

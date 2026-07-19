@@ -20,7 +20,7 @@ flowchart LR
 ## Features
 
 - Everything a standard [TigerTag](./tigertag.md) does — the payload stays open.
-- **Chip backup**: the chip's content is stored in the owner's Tiger Cloud
+- **Chip backup**: the chip's content is stored in the owner's TigerHub
   account, keyed by the chip's physical UID; a chip with a backup *is* a
   TigerTag+.
 - **Restore / re-encode** from the backup if a chip is lost or damaged.
@@ -42,7 +42,7 @@ chip's reserved 16-byte signature slot supports certification.
 | With | How |
 |---|---|
 | TigerTag Connect / Tiger Studio | Scanning registers the chip and its backup on the account |
-| Tiger Cloud | Stores per-account chip records (UID, first-seen, payload backup) |
+| TigerHub | Stores per-account chip records (UID, first-seen, payload backup) |
 
 ## Links
 

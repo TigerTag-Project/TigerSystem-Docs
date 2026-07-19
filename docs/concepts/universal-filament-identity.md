@@ -20,7 +20,7 @@ The identity covers (non-exhaustive):
 ## The shared reference database
 
 Identities are not free text: brands, materials, aspects, types, diameters and
-units come from a **shared reference database** served by Tiger Cloud
+units come from a **shared reference database** served by TigerHub
 (`cdn.tigertag.io`). Every app resolves the same IDs to the same meaning, so a
 chip encoded by one tool reads identically in every other.
 
@@ -39,4 +39,4 @@ identity that exists independently.
 
 **◀ Previous:** [Second Life workflow](../philosophy/second-life.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [The TigerTag chip](./tigertag-chip.md)
 
-**Related:** [TigerTag product page](../products/tigertag.md), [Tiger Cloud](../products/tiger-cloud.md)
+**Related:** [TigerTag product page](../products/tigertag.md), [TigerHub](../products/tigerhub.md)

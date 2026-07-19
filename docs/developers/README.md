@@ -18,7 +18,7 @@ hardware and software. Nothing requires permission — the protocol is open.
 ```mermaid
 flowchart LR
     YOU[Your app / device] -->|"NFC (SDK)"| TAG[TigerTag chip]
-    YOU -->|"Firebase (documented surface)"| CLOUD[(Tiger Cloud)]
+    YOU -->|"Firebase (documented surface)"| CLOUD[(TigerHub)]
     YOU -->|"reference data"| CDN[cdn.tigertag.io]
 ```
 

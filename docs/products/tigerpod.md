@@ -44,6 +44,6 @@ flowchart LR
 
 ---
 
-**◀ Previous:** [Tiger Cloud](./tiger-cloud.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerScale](./tigerscale.md)
+**◀ Previous:** [TigerHub](./tigerhub.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerScale](./tigerscale.md)
 
 **Related:** [Second Life workflow](../philosophy/second-life.md)

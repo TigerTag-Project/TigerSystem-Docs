@@ -14,7 +14,7 @@ the ecosystem and the embodiment of the
 flowchart LR
     TAG["🏷 TigerTag chip"] -- "NFC tap" --> CO["📱 TigerTag Connect"]
     CO -- "read / encode" --> TAG
-    CO <--> CLOUD[("☁ Tiger Cloud")]
+    CO <--> CLOUD[("☁ TigerHub")]
     CLOUD <--> ST["🖥 Tiger Studio — same account"]
 ```
 
@@ -31,7 +31,7 @@ flowchart LR
 
 ## Architecture
 
-Flutter app talking to [Tiger Cloud](./tiger-cloud.md) (Firebase Auth +
+Flutter app talking to [TigerHub](./tigerhub.md) (Firebase Auth +
 Firestore). Printer connectivity on mobile is cloud-oriented where vendors
 allow it.
 
@@ -40,7 +40,7 @@ allow it.
 | With | How |
 |---|---|
 | TigerTag chips | Read & write by NFC tap |
-| Tiger Cloud | Real-time inventory / friends / prefs sync |
+| TigerHub | Real-time inventory / friends / prefs sync |
 | Tiger Studio | Desktop companion — same account, complementary features |
 
 ## Screenshots

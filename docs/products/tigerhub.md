@@ -1,48 +1,66 @@
-# TigerHub (web)
+# TigerHub
 
 ## Purpose
 
-**TigerHub shows your collection to the world with a simple link.** Send
-someone a URL and they see your list in their browser — nothing to install, no
-account needed on their side. It is the public web surface of the ecosystem,
-hosted at **[tigersystem.io](https://tigersystem.io)**, and it only ever shows
-what you chose to make public.
+**TigerHub is the memory behind everything.** It is the Firebase backbone that
+manages your user account: your inventory follows you — phone, desktop, web —
+because it lives in *your* account, not in a printer brand's silo. It keeps
+every device in sync in real time, enforces who can see what, and powers the
+public sharing surface at [tigersystem.io](https://tigersystem.io).
 
 ## Where it sits
 
 ```mermaid
-flowchart LR
-    YOU["🧑 You"] -- "create share link" --> APP["📱 / 🖥 Your app"]
-    APP --> CLOUD[("☁ Tiger Cloud")]
-    CLOUD -- "published data only" --> HUB["🌐 tigersystem.io/list/…"]
-    HUB --> VIS["👀 Anyone with the link<br/>plain browser, no account"]
+flowchart TB
+    CO["📱 Connect"] <--> HUB[("☁ TigerHub<br/>your account")]
+    ST["🖥 Tiger Studio"] <--> HUB
+    SCALE["⚖ TigerScale"] -- "live weight" --> HUB
+    HUB -- "public share links" --> WEB["🌐 tigersystem.io<br/>public sharing"]
+    HUB <--> THIRD["🧩 Third-party apps & devices"]
+    CDN["🗂 cdn.tigertag.io<br/>shared reference catalogue"] --> CO & ST
 ```
 
-## Features
+## Components
 
-- **Public list links** — a user shares a read-only inventory/wishlist as
-  `https://tigersystem.io/list/<token>`; anyone with the link can view it in a
-  browser.
-
-> **TODO:** document the full TigerHub feature set (viewing surfaces, buy
-> links, future community features) as they ship. This page intentionally lists
-> only what is live.
-
-## Architecture
-
-Web app (Vercel) reading from [Tiger Cloud](./tiger-cloud.md). Share tokens
-gate read-only access to the published data.
-
-## Interactions
-
-| With | How |
+| Component | Role |
 |---|---|
-| Tiger Studio / Connect | Generate & revoke public share links |
-| Tiger Cloud | Source of the published data |
-| Visitors | Plain browser, no account needed |
+| **Firebase Auth** | Sign-in (Google, passkeys) — one account across all apps |
+| **Firestore** | Real-time per-user data: inventory, racks, friends, prefs, chip backups |
+| **Security rules** | Server-side enforcement: owner-only by default, relationship-gated sharing |
+| **`tigersystem.io`** | Public web sharing — read-only list links (`/list/<token>`), no app or account needed for the viewer |
+| **`cdn.tigertag.io`** | Reference database (brands, materials, colors…), health endpoint, spool APIs |
+| **`tigertag.io`** | E-commerce shop for TigerTag chips |
+
+## Sharing in practice
+
+Send someone a `tigersystem.io/list/<token>` link and they see your published
+list in their browser — nothing to install, no account on their side. TigerHub
+only ever exposes what you chose to make public.
+
+## Openness
+
+The Firebase project config is **intentionally public** — any third-party app
+can connect, authenticate its user, and read/write that user's own data within
+the rules. The integration contract (config URL, auth flows, data model,
+rate limits) is documented in the dedicated public repo:
+
+**[TigerTag_Firebase_Integration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)** —
+with working examples (Python CLI, ESP32/Arduino, Home Assistant, Spoolman
+bridge).
+
+## Security model
+
+- All user data under `users/{uid}/…` is **owner-only by default**.
+- Cross-user access (friend inventories, notifications) always requires a
+  **prior relationship**, enforced by Firestore security rules — never by
+  client code.
+- Sensitive collections are **field-whitelisted** server-side.
+
+See [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md) for the
+model and [Developers — Cloud API](../developers/cloud-api.md) for integration.
 
 ---
 
-**◀ Previous:** [Tiger Studio](./tiger-studio.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Tiger Cloud](./tiger-cloud.md)
+**◀ Previous:** [Tiger Studio](./tiger-studio.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerPOD](./tigerpod.md)
 
-**Related:** [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md)
+**Related:** [Cloud API](../developers/cloud-api.md), [Architecture](../architecture/overview.md)
