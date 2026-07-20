@@ -2,6 +2,11 @@
 
 The TigerSystem ecosystem, one page per product.
 
+> **Note:** every product below — and every future one — is a working **proof
+> of concept**. Their only goal is to show the potential of an open-source,
+> standard, agnostic, cross-platform protocol, and to inspire what others will
+> build with it. See [A sandbox, on purpose](../vision/why-tigersystem.md).
+
 | Product | What it is | Type |
 |---|---|---|
 | [TigerTag](./tigertag.md) | Open RFID/NFC chip + standard for spool identity | Hardware + spec |

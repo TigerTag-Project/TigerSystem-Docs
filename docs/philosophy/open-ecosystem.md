@@ -24,8 +24,10 @@ is a working demonstration of what open, documented technology makes possible
 once a spool can identify itself: live printer telemetry across six brands,
 physical rack mapping, sensors, shared inventories. Some of it will mature,
 some of it exists to prove a point, and all of it is readable, forkable and
-free to copy. The goal is to show that **anyone can develop around the
-open-source TigerTag NFC/RFID protocol** — the products are the proof.
+free to copy. Every product — current and future — is a **proof of concept**
+of an **open-source, standard, agnostic, cross-platform protocol**: its only
+job is to show the potential, so that anyone can take our integration work as
+inspiration and imagine the features of tomorrow.
 
 ## Build your own
 

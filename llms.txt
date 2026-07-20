@@ -6,9 +6,12 @@
 > diameter, print settings. The user — not a printer manufacturer — owns the
 > filament, the metadata, the inventory, the history and the cloud sync.
 > TigerSystem connects the components together; every layer is open and
-> optional. The whole ecosystem is a deliberate SANDBOX: its products are
-> working demonstrators proving that anyone can develop around the
-> open-source TigerTag NFC/RFID protocol. Reading a chip takes any NFC phone
+> optional. The whole ecosystem is a deliberate SANDBOX: every product the
+> project builds (Tiger Studio, TigerTag Connect, TigerScale, TigerPOD, and
+> future ones) is a working PROOF OF CONCEPT whose only goal is to show the
+> potential of an open-source, standard, agnostic, cross-platform protocol —
+> and to inspire third parties to reuse the integration work and imagine
+> tomorrow's features. Reading a chip takes any NFC phone
 > or an ACR122U USB reader — from there, integrations are unlimited: ERPs,
 > internal stock management, tracking/traceability, lending systems, custom
 > tools, private or public R&D.

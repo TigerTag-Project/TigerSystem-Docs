@@ -39,12 +39,14 @@ format, not a walled garden.
 
 ## A sandbox, on purpose
 
-Everything in TigerSystem is a **demonstrator**. The desktop app, the mobile
-app, the scale, the reader stand — they exist to prove, with working products,
-that **anyone can build around the open-source TigerTag NFC/RFID protocol**:
-read it, write it, sync it, ship a business on it. Copy them, fork them, or
-ignore them entirely and build your own — **the protocol is the point, the
-products are the proof.**
+Everything we build — Tiger Studio, TigerTag Connect, TigerScale, TigerPOD,
+and every project still to come — has one single goal: **to show the
+potential.** Each product is a working **proof of concept** of what an
+**open-source, standard, agnostic, cross-platform protocol** makes possible
+once a spool can identify itself. Take our integration work as a starting
+point, get inspired, and **imagine the features of tomorrow** — copy them,
+fork them, or ignore them entirely and build your own. **The protocol is the
+point, the products are the proof.**
 
 And the entry ticket is tiny: **any NFC phone, or an ACR122U USB reader on a
 computer**, reads a TigerTag. From there, anything goes:

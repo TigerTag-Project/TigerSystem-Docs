@@ -41,12 +41,14 @@ history and sharing in sync across every device.
 
 ## A sandbox, on purpose
 
-The TigerSystem ecosystem is deliberately a **sandbox**: a set of working
-demonstrators whose goal is to show what becomes possible — and how easy it is
-— once a spool identifies itself through an open protocol. Tiger Studio, the
-mobile app, TigerScale, TigerPOD: each one is a live proof that **anyone can
-develop around the open-source TigerTag NFC/RFID protocol**, from a weekend
-script to a full product. They are examples to copy, not a platform to join.
+The TigerSystem ecosystem is deliberately a **sandbox**. Everything we create
+— Tiger Studio, TigerTag Connect, TigerScale, TigerPOD, and other projects to
+come — has no other ambition than to **show the potential**: each is a working
+**proof of concept** of what an **open-source, standard, agnostic,
+cross-platform protocol** like TigerTag makes possible, from a weekend script
+to a full product. Anyone can take inspiration from our integration work and
+**imagine the features of tomorrow**. They are examples to copy, not a
+platform to join.
 
 ## Neutral by design
 
