@@ -65,7 +65,7 @@ round is the format the ecosystem's readers and holders are designed around.
 
 **Which filament brands ship TigerTag from the factory?**
 More than 2 million chips have been produced; most are integrated at the
-factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu, Jamg He,
+factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu, Jamg He, Filforme, Nanovia,
 R3D — with more being integrated.
 
 **How does a chip get on a spool?**

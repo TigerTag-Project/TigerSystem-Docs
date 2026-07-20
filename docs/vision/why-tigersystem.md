@@ -45,7 +45,7 @@ device.
 Honestly: building all of this ourselves was never the initial plan. **More
 than 2 million TigerTag NFC chips have been produced** — most of them
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D, with more being integrated), plus a smaller share
+Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, with more being integrated), plus a smaller share
 bought by makers to tag spools at home. We naively assumed the community
 would imagine the uses on its own: an open, documented NFC identity on every
 spool felt like an obvious playground.
