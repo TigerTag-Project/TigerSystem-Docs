@@ -35,7 +35,12 @@ open.
 
 Public posts on the brands' own channels — not our press release
 (sources & full announcements:
-[tigersystem.io/en/manufacturers](https://tigersystem.io/en/manufacturers)):
+[tigersystem.io/en/manufacturers](https://tigersystem.io/en/manufacturers)).
+**Click any image to open the original post:**
+
+| | | |
+|---|---|---|
+| <a href="https://www.instagram.com/p/DVyeOZajZSm/"><img src="../assets/announcement-rosa3d.jpg" alt="Rosa3D's own Instagram announcement of TigerTag integration" /></a> | <a href="https://www.instagram.com/reel/DVoAMqTk5ck/"><img src="../assets/announcement-r3d.jpg" alt="R3D Filament's own Instagram announcement of TigerTag deployment" /></a> | <a href="https://www.instagram.com/p/DUjydNXkc1W/"><img src="../assets/announcement-esun.jpg" alt="eSUN's own Instagram announcement of TigerTag integration" /></a> |
 
 > **ROSA 3D FILAMENTS** — *"officially integrated the open TigerTag RFID
 > protocol across 100 % of our filament production."* More than 250 000
