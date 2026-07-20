@@ -120,6 +120,7 @@ the TigerTag user; every other vision is accepted and encouraged.
 
 | Product | In plain words |
 |---|---|
+| 📄 **[TigerData](docs/concepts/universal-filament-identity.md)** | The virtual chip — the same identity with no chip at all, upgradeable to a real one anytime |
 | 🏷 **[TigerTag](docs/products/tigertag.md)** | The chip — gives any spool a memory of its own |
 | 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — restorable to factory state anytime |
 | 📱 **[Tiger NFC Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
