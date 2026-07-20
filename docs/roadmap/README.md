@@ -13,6 +13,10 @@ High-level, non-dated intentions (details live per product):
   settled.
 - **More printer integrations** — Klipper/Moonraker as the next natural
   transport ([Klipper page](../compatibility/klipper.md)).
+- **A portable TigerData file** *(under consideration)* — today a TigerData
+  lives as JSON inside the apps; a small standalone file with its own
+  extension would let a virtual spool travel on a USB stick, by mail, or
+  between tools.
 - **TigerTag for resins** — extending the protocol to resin containers for
   resin 3D printers, bringing the same open identity to a whole second family
   of machines.

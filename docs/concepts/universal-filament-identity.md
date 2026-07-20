@@ -43,7 +43,10 @@ flowchart LR
 
 - **TigerData** is the protocol *before* the chip: the same identity, stored
   digitally — in an inventory, a database, a file, anywhere. The TigerTag
-  protocol can live entirely outside an RFID chip.
+  protocol can live entirely outside an RFID chip. This notion of a **virtual
+  chip is a TigerSystem innovation — it exists nowhere else**: manage a full
+  inventory with zero NFC chips, send an identity into a chip later or never,
+  and the protocol's interoperability is preserved either way.
 - The moment that data is **written into an NFC chip**, it becomes a
   **TigerTag**: a physical **UID is finally associated** with the identity.
 - Back that chip up in your account and it's a
