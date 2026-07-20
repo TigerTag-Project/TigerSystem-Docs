@@ -5,9 +5,11 @@ hardware and software. Nothing requires permission — the protocol is open.
 
 ## What can you build?
 
-Reading a TigerTag takes **any NFC smartphone** or an **ACR122U USB reader**
-plugged into a computer — commodity hardware, no proprietary gear. From that
-one scan, integrate wherever an identity is useful:
+Reading a TigerTag takes **any NFC smartphone**, an **ACR122U USB reader**
+plugged into a computer, or a **DIY device — a simple ESP32 with a PN532 or
+RC522 reader module** (the approach TigerScale uses). Commodity hardware, no
+proprietary gear. From that one scan, integrate wherever an identity is
+useful:
 
 - **ERP / stock management** — connect spool identity and quantities to your
   company's existing inventory system.

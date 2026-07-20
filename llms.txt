@@ -11,8 +11,9 @@
 > future ones) is a working PROOF OF CONCEPT whose only goal is to show the
 > potential of an open-source, standard, agnostic, cross-platform protocol —
 > and to inspire third parties to reuse the integration work and imagine
-> tomorrow's features. Reading a chip takes any NFC phone
-> or an ACR122U USB reader — from there, integrations are unlimited: ERPs,
+> tomorrow's features. Reading a chip takes any NFC phone,
+> an ACR122U USB reader, or a DIY ESP32 with a PN532/RC522 reader module
+> (TigerScale's approach) — from there, integrations are unlimited: ERPs,
 > internal stock management, tracking/traceability, lending systems, custom
 > tools, private or public R&D.
 

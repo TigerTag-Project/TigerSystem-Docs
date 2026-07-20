@@ -48,8 +48,10 @@ point, get inspired, and **imagine the features of tomorrow** — copy them,
 fork them, or ignore them entirely and build your own. **The protocol is the
 point, the products are the proof.**
 
-And the entry ticket is tiny: **any NFC phone, or an ACR122U USB reader on a
-computer**, reads a TigerTag. From there, anything goes:
+And the entry ticket is tiny: **any NFC phone**, **an ACR122U USB reader on a
+computer**, or even **a DIY build — a simple ESP32 with a PN532 or RC522
+reader module** (that's exactly how TigerScale does it) — reads a TigerTag.
+From there, anything goes:
 
 - 🏭 Feed your **ERP or internal stock-management software** — a scan is an ID.
 - 📋 **Tracking & traceability** — who used which material, when, on which job.

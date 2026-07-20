@@ -21,7 +21,9 @@ flowchart LR
 
 ## Features
 
-- ESP32-based hardware + firmware, fully open source (MIT).
+- ESP32-based hardware + firmware, fully open source (MIT) — commodity parts,
+  the living example that a simple ESP32 and an NFC reader module (PN532 /
+  RC522 class) are enough to build a TigerTag-reading device.
 - **Live weight tracking** — updates appear in real time in Tiger Studio and
   TigerTag Connect via Firestore.
 - Works with Tiger Studio's **container weight calibration** so net filament

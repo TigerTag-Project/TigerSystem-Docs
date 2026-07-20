@@ -201,8 +201,10 @@ it — stock management, job tracking, traceability, reordering, R&D — is your
 call. See [What can you build?](../developers/README.md)
 
 **What hardware do I need to read chips in my own project?**
-Any NFC smartphone, or an ACR122U-class USB reader on a computer. Commodity,
-cheap, no proprietary gear.
+Any NFC smartphone, an ACR122U-class USB reader on a computer — or go full
+DIY: a simple ESP32 with a PN532 or RC522 reader module is enough (that's how
+[TigerScale](../products/tigerscale.md) does it). Commodity, cheap, no
+proprietary gear.
 
 **Is the Firebase config being public a security hole?**
 No — that's the standard Firebase pattern. All enforcement is server-side in

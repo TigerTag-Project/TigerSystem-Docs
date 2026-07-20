@@ -39,7 +39,8 @@ TigerTag is an open **protocol**, not a platform you have to join:
 4. Ship the software, the hardware or the business you actually want.
 
 Your app can be something else entirely — it will still speak the same chips.
-An NFC phone or an ACR122U USB reader is all the hardware it takes: plug spool
+An NFC phone, an ACR122U USB reader — or a DIY ESP32 with a PN532/RC522
+module, TigerScale-style — is all the hardware it takes: plug spool
 identity into an ERP, an internal stock tool, a tracking workflow, a fablab
 lending system, a private or public R&D project — anything.
 
