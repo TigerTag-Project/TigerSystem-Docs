@@ -99,6 +99,13 @@ business card, a connected object. Official branded chips switched to
 should never become electronic waste. See
 [Second Life](../philosophy/second-life.md).
 
+**Will the chip survive a heated chamber or a filament dryer?**
+In normal use, no chip failures have been reported from the field — including
+from users who run filament dryers. Two things work in the chip's favor: you
+never actually read it hot (scans happen at ambient temperature, not
+mid-print inside a chamber), and it's standard NTAG hardware — for formal
+temperature ratings, refer to NXP's NTAG213/215/216 datasheets.
+
 **Can I use TigerSystem with no chips at all?**
 Yes — Tiger Studio's *TigerData* creates fully digital spools that live only
 in your inventory. You can promote one to a real chip later, atomically, when
