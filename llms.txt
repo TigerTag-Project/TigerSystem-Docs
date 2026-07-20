@@ -160,6 +160,8 @@ a natural future path.
 
 ## Key URLs
 
+- https://discord.gg/3Qv5TSqnJH — official community Discord (questions,
+  help, feedback)
 - https://tigertag.io — e-commerce shop for TigerTag chips (shop only; the
   ecosystem is explained here, not there)
 - https://tigersystem.io — TigerHub: ecosystem site, wishlists & sharing

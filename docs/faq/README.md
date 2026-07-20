@@ -327,6 +327,11 @@ Yes — NTAG/NDEF readers are commodity hardware and the payload spec is public
 
 ## Community
 
+**Where do I ask questions or get help?**
+The official **[Discord](https://discord.gg/3Qv5TSqnJH)** — questions, help,
+feedback, show-and-tell. For bugs and technical issues, each repo's GitHub
+issues work too.
+
 **How do I contribute?**
 Docs: [CONTRIBUTING.md](../../CONTRIBUTING.md) here. Code: each repo's own
 guide — see the [repository map](../developers/repositories.md).

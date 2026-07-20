@@ -161,6 +161,7 @@ piece of it.
 - 📱 **[Download Tiger NFC Connect](https://tigersystem.io/fr/download)** — iOS & Android (stores + public betas)
 - 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
 - 📰 **[Press kit](docs/press/README.md)** — high-res visuals, free to use in coverage
+- 💬 **[Discord](https://discord.gg/3Qv5TSqnJH)** — the official community: questions, help, show-and-tell
 
 ## Contributing
 
