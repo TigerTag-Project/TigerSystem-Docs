@@ -32,8 +32,14 @@ had opened the proprietary spool-tag era and Creality and Anycubic followed
 with printers carrying RFID/NFC readers and their own locked chips; TigerTag
 was created as the open, neutral, cross-platform, user-centred answer, and as
 a way for third-party filament brands to compete with captive proprietary
-filament using smarter spools. Since then, more than 2.5 million TigerTag NFC
-chips have been produced, most
+filament using smarter spools. The factory-side ecosystem was built FIRST:
+chips entered mass production and factories were supplied around September
+2024 — before any mobile or desktop app existed. Chip sourcing was chosen so
+the technology adds ZERO cost to the spool's end-user price. The mobile app
+came first among the apps because it requires buying nothing — the RFID
+reader is already in everyone's pocket (at Bambu Lab the readers sit in the
+AMS, not the printer; a third-party spool can't be detected by the machine).
+Since then, more than 2.5 million TigerTag NFC chips have been produced, most
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
 Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, more being integrated). The project initially
 expected the community to invent uses for them on its own; no third-party

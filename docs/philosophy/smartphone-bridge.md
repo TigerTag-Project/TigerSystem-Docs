@@ -2,6 +2,12 @@
 
 ## The insight
 
+> In China we kept asking: *"Where are the RFID readers?"* Everyone answered:
+> *"In the Bambu Labs."* False — Bambu's readers are in the AMS, not in the
+> printer; the machine can't detect a third-party spool at all. **The RFID
+> readers are in your pockets** — in every phone, ready to use, without you
+> even knowing.
+
 Every modern smartphone contains an NFC reader. That means **every 3D-printing
 user already owns TigerTag hardware** — no proprietary reader, no printer
 upgrade, no purchase required to start.

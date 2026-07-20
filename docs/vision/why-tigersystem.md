@@ -56,6 +56,31 @@ handed to third-party filament makers so their spools could do *more* than
 the proprietary ones, and their market share wouldn't erode against captive
 filament.
 
+So we went to work — and to China. We presented the project to printer
+manufacturers (Bambu Lab, Elegoo, Creality, Anycubic, BigTreeTech) and to
+filament makers and equipment suppliers (eSun, R3D, Landu, Sunlu, Jamg He),
+after having already presented it to Rosa3D in Europe. The welcome was warm.
+We designed a protocol that was **more optimized and more versatile** than
+the proprietary ones — user-centric, multi-brand, cross-platform. We studied
+filament factory workflows to understand how to program NFC chips at
+industrial scale, and sourced chip production — custom labels, custom
+carriers, huge volumes — at a cost low enough for one non-negotiable goal:
+**add the technology without adding one cent to the spool's price for the
+end user.**
+
+By **September 2024**, the chips were in mass production and the factories
+were being supplied — the entire factory-side ecosystem came first. At that
+point there was **no mobile app and no desktop app at all**; they came
+after. Mobile first, because it requires buying nothing: the reader is
+already in everyone's pocket.
+
+That choice came from a question we kept asking in China: *"Where are the
+RFID readers?"* Everyone answered: *"In the Bambu Labs."* And we said: false.
+At Bambu Lab the readers are **in the AMS, not in the printer** — a
+third-party spool can't be detected by the machine at all. **The RFID readers
+are in your pockets.** In every phone, ready to use — without you even
+knowing.
+
 Honestly: building all of this ourselves was never the initial plan. **More
 than 2.5 million TigerTag NFC chips have been produced — making TigerTag the
 most deployed third-party RFID protocol in the world** — most of them
