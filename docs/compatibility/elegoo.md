@@ -21,6 +21,12 @@ Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
 TigerTag chips work on any spool; Tiger Studio assigns inventory spools to the
 printer's slots and drives the machine from the control panel.
 
+## Bonus: write Elegoo-format tags
+
+The app's built-in editor can **rewrite a chip in the format Elegoo printers
+expect** — so a TigerTag chip can even become a native Elegoo tag if that's
+what your workflow needs. Your chip, your choice.
+
 ## Limitations
 
 - Native Elegoo tags are not read in-app yet — the spec is documented, and the current work aims at converting vendor tag data into TigerData spools (see [Compatibility](./README.md)).

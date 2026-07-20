@@ -36,6 +36,8 @@ flowchart LR
 
 > **Naming note:** formerly published as *"TigerTag RFID Connect"* — renamed
 > **Tiger NFC Connect** to echo the NFC reader already in every phone.
+> The app is **free to use but proprietary** (not open source) for now —
+> unlike Tiger Studio, the SDKs and the hardware, which are open.
 
 ## Architecture
 

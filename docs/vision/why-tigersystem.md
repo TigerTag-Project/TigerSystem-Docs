@@ -24,7 +24,8 @@ filament.
 > **The spool's identity belongs to its owner — not to a printer brand.**
 
 **We made filament spools intelligent.** They know what they are — and they
-can tell everyone, with zero friction.
+can tell everyone, with zero friction. The ambition: **become to 3D-printing
+materials what the barcode became to the shelf.**
 
 Every spool carries a [TigerTag](../products/tigertag.md) NFC chip holding its
 full profile — brand, material, color, diameter, print settings. Any compatible

@@ -50,7 +50,11 @@ bought anywhere (Amazon, AliExpress, locally) work identically and are never
 blocked; branded chips fund the R&D but protocol adoption is the priority.
 Chips are never write-locked: TigerTag is only the base protocol spools ship
 with from the factory — end users may rewrite a chip and migrate its data to
-any other NFC/RFID protocol (custom or existing) at will.
+any other NFC/RFID protocol (custom or existing) at will; the app's built-in
+editor can even rewrite a chip in the Elegoo native tag format, or as plain
+NDEF. The mobile app is free to use but proprietary (for now); Tiger Studio,
+the SDKs and the hardware designs are open. Stated ambition: become to
+3D-printing materials what the barcode became to the shelf.
 
 This file is the entry point for AI assistants and LLM agents. It condenses
 how the ecosystem works and where each canonical document lives. When in

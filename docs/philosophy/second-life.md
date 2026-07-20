@@ -45,7 +45,9 @@ The spool isn't the only thing that gets a second life: **the chips do too.**
 Every spool carries [two chips](../concepts/tigertag-chip.md) — so every kilo
 of filament you print leaves you **two standard NTAG chips** to harvest. Peel
 them off and re-encode them as plain NDEF for anything: a smart keychain, an
-NFC business card, a connected object of your own.
+NFC business card, a connected object of your own — the editor is built into
+the app. It can even rewrite a chip **in the format Elegoo printers expect**:
+your chip, your choice.
 
 That's exactly why official branded chip production switched to **NTAG215**:
 more memory headroom means more reuse possibilities once the spool is empty.
