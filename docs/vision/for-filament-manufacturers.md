@@ -64,6 +64,13 @@ Public posts on the brands' own channels — not our press release
 
 *Rosa3D, eSun, Sunlu — real boxes, shipping with TigerTag inside.*
 
+| | | | |
+|---|---|---|---|
+| <img src="../assets/spool-rosa3d.png" alt="Rosa3D rainbow filament refill — shipping with TigerTag" /> | <img src="../assets/spool-esun.png" alt="eSUN PLA+ spool — shipping with TigerTag" /> | <img src="../assets/spool-sunlu.png" alt="Sunlu filament spool — shipping with TigerTag" /> | <img src="../assets/spool-r3d.png" alt="R3D filament spool — shipping with TigerTag" /> |
+
+*The filament itself: Rosa3D, eSUN, Sunlu, R3D — every one of these ships
+with TigerTag chips on the spool.*
+
 ## What your customers get on day one
 
 A spool that identifies itself to **any NFC phone**, a full inventory
