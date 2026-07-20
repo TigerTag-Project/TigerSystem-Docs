@@ -14,7 +14,7 @@ carrying its TigerTag NFC chip — one per color.
 
 ## Partner filament boxes — high-resolution photos + cutouts
 
-<img src="../assets/partner-box-rosa3d.jpg" width="300" alt="Rosa3D filament box with TigerTag NFC-RFID" /> <img src="../assets/partner-box-esun.jpg" width="300" alt="eSun filament box with TigerTag NFC-RFID" />
+<img src="../assets/partner-box-rosa3d.jpg" width="300" alt="Rosa3D filament box with TigerTag NFC-RFID" /> <img src="../assets/partner-box-esun.jpg" width="300" alt="eSun filament box with TigerTag NFC-RFID" /> <img src="../assets/partner-box-sunlu.jpg" width="300" alt="Sunlu filament box with TigerTag NFC-RFID" />
 
 Real partner boxes shipping with TigerTag inside — **Rosa3D, eSun, Sunlu** —
 as studio photos and transparent-background cutouts (6 files).
