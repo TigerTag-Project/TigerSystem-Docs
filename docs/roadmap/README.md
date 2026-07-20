@@ -10,8 +10,9 @@ High-level, non-dated intentions (details live per product):
   ([compatibility](../compatibility/README.md)).
 - **More printer integrations** — Klipper/Moonraker as the next natural
   transport ([Klipper page](../compatibility/klipper.md)).
-- **TigerHub growth** — richer public sharing surfaces at
-  [tigersystem.io](https://tigersystem.io).
+- **TigerHub growth** — the ecosystem site at
+  [tigersystem.io](https://tigersystem.io): richer social-sandbox features
+  (wishlists, friends, sharing).
 - **Documentation** — fill the TODO placeholders across this repo (tutorials,
   guides, manufacturer onboarding, RFID payload summary).
 

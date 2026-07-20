@@ -100,17 +100,22 @@ Not today. The chip carries the filament's recommended settings
 The opposite — that's the point. One printers table for the whole fleet, with
 brand / state / tag filters, whatever the mix of the six supported brands.
 
-## TigerHub (your account & sharing)
+## TigerHub (the ecosystem's web home)
 
 **What is TigerHub?**
-The backbone of the ecosystem: the Firebase service that manages your user
-account and keeps every device in sync in real time. See
-[TigerHub](../products/tigerhub.md).
+The web platform at [tigersystem.io](https://tigersystem.io). It presents the
+TigerSystem ecosystem — the showcase of what the open protocol makes possible
+— and hosts the social side of the sandbox: wishlists, friend invitations,
+public sharing. See [TigerHub](../products/tigerhub.md).
 
 **Can I show my collection to someone without an app?**
-Yes — TigerHub's public web surface at
-[tigersystem.io](https://tigersystem.io) serves read-only list links: anyone
-with the link views it in a plain browser, no app, no account.
+Yes — TigerHub serves read-only list links: anyone with the link views it in a
+plain browser, no app, no account.
+
+**Is TigerHub the database behind the apps?**
+No. The accounts and data live in plain **Firebase** — one shared database, in
+one place, so all the sandbox elements interoperate. TigerHub is the web
+surface built on top of it.
 
 ## TigerTag Connect (mobile)
 
@@ -150,7 +155,8 @@ color for the spool's profile — handy for unlabeled or re-spooled filament.
 ## Cloud & inventory
 
 **Where is my inventory stored?**
-In your own account on TigerHub (Firebase/Firestore). Every device you sign
+In your own TigerSystem account — plain Firebase (Firestore), one shared
+database used by all the apps. Every device you sign
 into sees the same data in real time. See
 [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md).
 

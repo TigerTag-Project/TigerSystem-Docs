@@ -26,8 +26,9 @@ filament.
 Every spool carries a [TigerTag](../products/tigertag.md) NFC chip holding its
 full profile — brand, material, color, diameter, print settings. Any compatible
 reader — a smartphone, a desktop reader, a printer — can read it.
-[TigerHub](../products/tigerhub.md) keeps the owner's account, inventory,
-history and sharing in sync across every device.
+A single shared online database ([plain Firebase](../concepts/inventory-and-cloud-sync.md))
+keeps the owner's account, inventory, history and sharing in sync across every
+device.
 
 ## What "user-centric" means in practice
 

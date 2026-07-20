@@ -16,7 +16,7 @@ by any compatible app or reader — no vendor lock, no secret format.
 flowchart LR
     TAG["🏷 TigerTag chip<br/>on every spool"] -- "tap" --> CO["📱 Connect"]
     TAG -- "scan" --> RD["📡 TigerPOD / ACR122U"] --> ST["🖥 Tiger Studio"]
-    CO & ST <--> CLOUD[("☁ TigerHub")]
+    CO & ST <--> CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
     ST -- "filament data" --> PRN["🖨 Printers"]
 ```
 

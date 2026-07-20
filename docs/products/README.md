@@ -13,7 +13,7 @@ The TigerSystem ecosystem, one page per product.
 | [TigerTag+](./tigertag-plus.md) | Certified TigerTag with cloud backup | Hardware + service |
 | [TigerTag Connect](./tigertag-connect.md) | Mobile app (iOS/Android) — scan, encode, browse | App |
 | [Tiger Studio](./tiger-studio.md) | Desktop app — inventory, racks, sensors, printers | App |
-| [TigerHub](./tigerhub.md) | The Firebase backbone — your account, sync, sharing (public web at `tigersystem.io`) | Cloud |
+| [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |
 | [TigerPOD](./tigerpod.md) | 3D-printable dual NFC reader stand | Hardware |
 | [TigerScale](./tigerscale.md) | Open-source ESP32 filament scale | Hardware |
 
@@ -21,10 +21,10 @@ The TigerSystem ecosystem, one page per product.
 flowchart LR
     TT[TigerTag / TigerTag+] --> CO[TigerTag Connect]
     TT --> POD[TigerPOD] --> ST[Tiger Studio]
-    SC[TigerScale] --> HUB[("TigerHub")]
-    CO <--> HUB
-    ST <--> HUB
-    HUB --> WEB["tigersystem.io — public sharing"]
+    SC[TigerScale] --> FB[("Your TigerSystem account — Firebase")]
+    CO <--> FB
+    ST <--> FB
+    FB --> HUB["TigerHub — tigersystem.io"]
 ```
 
 ---

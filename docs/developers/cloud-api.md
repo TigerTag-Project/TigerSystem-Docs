@@ -2,7 +2,8 @@
 
 ## The contract
 
-Third-party apps connect to TigerHub with the **standard Firebase pattern**:
+Third-party apps connect to the TigerSystem backend — plain Firebase — with
+the **standard Firebase pattern**:
 
 1. Fetch the public SDK config:
    `https://tigertag-cdn.web.app/__/firebase/init.json`
@@ -48,4 +49,4 @@ The full integration contract lives in
 
 **◀ Previous:** [SDKs](./sdks.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [FAQ](../faq/README.md)
 
-**Related:** [TigerHub](../products/tigerhub.md), [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md)
+**Related:** [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md), [Architecture](../architecture/overview.md)

@@ -6,11 +6,11 @@
 flowchart TB
     TAG["TigerTag chip<br/>(open NDEF payload on the spool)"]
     CONNECT["TigerTag Connect<br/>(mobile — NFC scan & encode)"]
-    CLOUD["TigerHub<br/>(Firebase Auth + Firestore + cdn.tigertag.io)"]
+    CLOUD["Firebase<br/>(accounts + Firestore — one shared database)"]
     STUDIO["Tiger Studio<br/>(desktop — inventory, devices, printers)"]
     PRINTERS["Printer integrations<br/>(Bambu Lab · Creality · Elegoo · FlashForge · Snapmaker · Anycubic)"]
     THIRD["Third-party apps & APIs<br/>(SDKs, Home Assistant, Spoolman, ESP32…)"]
-    WEB["tigersystem.io<br/>(TigerHub's public web sharing)"]
+    WEB["TigerHub<br/>(tigersystem.io — ecosystem site, wishlists, sharing)"]
 
     TAG --> CONNECT
     TAG --> STUDIO
@@ -27,7 +27,8 @@ flowchart TB
 |---|---|---|
 | **TigerTag chip** | Portable, open identity of the physical spool | [Chip format](../concepts/tigertag-chip.md) |
 | **TigerTag Connect** | The smartphone bridge: scan, encode, browse | [Product page](../products/tigertag-connect.md) |
-| **TigerHub** | Identity + inventory + sharing backbone | [Product page](../products/tigerhub.md) |
+| **Firebase** | One shared database — accounts, inventory, sync; the interoperability point of the sandbox | [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md) |
+| **TigerHub** | The ecosystem's web home: showcase, wishlists, friends, sharing | [Product page](../products/tigerhub.md) |
 | **Tiger Studio** | Desktop workbench: inventory, racks, sensors, printers | [Product page](../products/tiger-studio.md) |
 | **Printer integrations** | Live LAN links to six printer brands | [Compatibility](../compatibility/README.md) |
 | **Third-party APIs** | SDKs + documented Firestore surface for anyone | [Developers](../developers/README.md) |
@@ -51,9 +52,9 @@ flowchart TB
     subgraph APPS["🖥 Apps"]
         CO["📱 TigerTag Connect"]
         ST["🖥 Tiger Studio"]
-        WEB["🌐 tigersystem.io<br/>public sharing"]
+        WEB["🌐 TigerHub<br/>tigersystem.io"]
     end
-    CLOUD[("☁ TigerHub<br/>your account")]
+    CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
     subgraph PRT["🖨 Printing"]
         SLICER["🔪 Your slicer<br/>(OrcaSlicer, vendor slicers…)"]
         PRN["🖨 Printers<br/>Anycubic · Bambu Lab · Creality<br/>Elegoo · FlashForge · Snapmaker"]

@@ -80,9 +80,9 @@ flowchart LR
     subgraph Your screens
         CO["📱 TigerTag Connect<br/>mobile"]
         ST["🖥 Tiger Studio<br/>desktop"]
-        WEB["🌐 tigersystem.io<br/>public sharing"]
+        WEB["🌐 TigerHub<br/>tigersystem.io"]
     end
-    CLOUD[("☁ TigerHub<br/>your account, your data")]
+    CLOUD[("☁ Your TigerSystem account<br/>(Firebase — one shared database)")]
 
     TAG -- tap --> CO
     TAG --> POD --> ST
@@ -105,7 +105,7 @@ chips, fully offline? Works too.
 | 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — lose it, restore it |
 | 📱 **[TigerTag Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
 | 🖥 **[Tiger Studio](docs/products/tiger-studio.md)** | Mission control on desktop — inventory, racks, printers, sensors |
-| ☁ **[TigerHub](docs/products/tigerhub.md)** | Your account & the memory behind it all — synced everywhere, shareable with a simple link |
+| 🌐 **[TigerHub](docs/products/tigerhub.md)** | The ecosystem's web home — showcase, wishlists, friend invites, sharing |
 | 📡 **[TigerPOD](docs/products/tigerpod.md)** | A 3D-printable scanner stand for your desk — free STL |
 | ⚖ **[TigerScale](docs/products/tigerscale.md)** | The open-source scale that answers "how much is left?" |
 
@@ -138,7 +138,7 @@ piece of it.
 
 ## Quick links
 
-- 🌐 **[tigersystem.io](https://tigersystem.io)** — public sharing (TigerHub)
+- 🌐 **[tigersystem.io](https://tigersystem.io)** — TigerHub: the ecosystem site, wishlists & sharing
 - ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
 - 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
 

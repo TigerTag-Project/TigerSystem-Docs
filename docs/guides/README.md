@@ -7,7 +7,7 @@ Task-oriented how-to guides (shorter and more targeted than
 >
 > - How to buy / encode TigerTag chips
 > - How to promote a chipless (digital) spool to a real chip
-> - How to migrate an existing spreadsheet inventory into TigerHub
+> - How to migrate an existing spreadsheet inventory into your TigerSystem account
 > - How to publish a public list link on TigerHub
 
 ---

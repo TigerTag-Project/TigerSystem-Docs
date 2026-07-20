@@ -40,7 +40,7 @@ None of these need our apps or our cloud: the chip + an SDK is enough. Add the
 ```mermaid
 flowchart LR
     YOU[Your app / device] -->|"NFC (SDK)"| TAG[TigerTag chip]
-    YOU -->|"Firebase (documented surface)"| CLOUD[(TigerHub)]
+    YOU -->|"Firebase (documented surface)"| CLOUD[("The shared account database")]
     YOU -->|"reference data"| CDN[cdn.tigertag.io]
 ```
 

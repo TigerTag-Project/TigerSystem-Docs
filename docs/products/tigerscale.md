@@ -15,7 +15,7 @@ your inventory — no manual entry, no shaking the spool next to your ear.
 ```mermaid
 flowchart LR
     SPOOL["🧵 Spool on the scale"] --> SCALE["⚖ TigerScale (ESP32)"]
-    SCALE -- "live weight" --> CLOUD[("☁ TigerHub")]
+    SCALE -- "live weight" --> CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
     CLOUD --> ST["🖥 Tiger Studio"] & CO["📱 Connect"]
 ```
 
@@ -37,7 +37,7 @@ flowchart LR
 
 | With | How |
 |---|---|
-| TigerHub | Writes live weight to the user's account |
+| Firebase (account database) | Writes live weight to the user's account |
 | Tiger Studio / Connect | Display live weight; health monitoring |
 
 ## Links

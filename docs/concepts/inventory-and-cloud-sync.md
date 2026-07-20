@@ -2,14 +2,16 @@
 
 ## One account, every device
 
-A user's inventory lives in **their TigerHub account** (Firebase Auth +
-Firestore). Every client — mobile, desktop, web — subscribes to the same
+A user's inventory lives in **their TigerSystem account**, backed by plain
+**Firebase** (Auth + Firestore) — deliberately unbranded infrastructure whose
+job is simple: **one shared database, in one place**, so every element of the
+sandbox (desktop, mobile, scale, web) interoperates on the same data. Every client — mobile, desktop, web — subscribes to the same
 documents in real time:
 
 ```mermaid
 sequenceDiagram
     participant Phone as TigerTag Connect
-    participant Cloud as TigerHub (Firestore)
+    participant Cloud as Firebase (Firestore)
     participant Desktop as Tiger Studio
     Phone->>Cloud: scan chip → upsert spool
     Cloud-->>Desktop: real-time snapshot (instant)
