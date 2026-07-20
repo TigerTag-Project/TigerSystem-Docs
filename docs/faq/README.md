@@ -107,9 +107,12 @@ mid-print inside a chamber), and it's standard NTAG hardware — for formal
 temperature ratings, refer to NXP's NTAG213/215/216 datasheets.
 
 **Can I use TigerSystem with no chips at all?**
-Yes — Tiger Studio's *TigerData* creates fully digital spools that live only
-in your inventory. You can promote one to a real chip later, atomically, when
-you're ready.
+Yes — that's **TigerData**: the same protocol data in purely digital form, no
+chip, no UID. The identity lives in your inventory (or anywhere digital) and
+behaves like any other spool. Write it into an NFC chip later — atomically,
+when you're ready — and it becomes a TigerTag, with a physical UID finally
+associated. See
+[One identity, three states](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (desktop)
 

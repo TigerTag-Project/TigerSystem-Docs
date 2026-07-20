@@ -58,6 +58,11 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
 
 ## Vocabulary
 
+- **TigerData**: the protocol's data in digital form, OUTSIDE any chip — no
+  UID, lives anywhere (inventory, database, file). The TigerTag protocol can
+  live entirely outside an RFID chip. Once the data is written into an NFC
+  chip, it is considered a TigerTag, because a physical UID is finally
+  associated with it. A TigerData can be promoted to a real chip atomically.
 - **TigerTag**: the open RFID standard AND the physical NFC chip on a spool.
   Every spool carries TWO chips on opposite sides — so one always faces the
   reader (printers often share one reader across two slots; AMS: 2 readers

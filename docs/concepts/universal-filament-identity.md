@@ -28,12 +28,29 @@ chip encoded by one tool reads identically in every other.
 > RFID guide documents it. The reference data ships bundled with Tiger Studio
 > (`assets/db/tigertag/`) and refreshes from the CDN.
 
-## Identity without a chip
+## One identity, three states
 
-The identity is the *record*, not the *chip*. Tiger Studio's **TigerData** can
-create fully digital spools that live only in the cloud inventory — and later
-**promote** them onto a physical chip. The chip is the portable carrier of an
-identity that exists independently.
+The identity is the *record*, not the *chip* — and it moves through three
+states:
+
+```mermaid
+flowchart LR
+    TD["📄 TigerData<br/>the protocol's data in digital form<br/>(no chip, no UID — lives anywhere)"]
+    TT["🏷 TigerTag<br/>the data written into an NFC chip<br/>(a physical UID is now associated)"]
+    TTP["🏷✔ TigerTag+<br/>the chip backed up in your account<br/>(factory state restorable, origin provable)"]
+    TD -- "write to a chip" --> TT -- "scan with Studio + POD" --> TTP
+```
+
+- **TigerData** is the protocol *before* the chip: the same identity, stored
+  digitally — in an inventory, a database, a file, anywhere. The TigerTag
+  protocol can live entirely outside an RFID chip.
+- The moment that data is **written into an NFC chip**, it becomes a
+  **TigerTag**: a physical **UID is finally associated** with the identity.
+- Back that chip up in your account and it's a
+  [**TigerTag+**](../products/tigertag-plus.md).
+
+A TigerData can stay digital forever, or be **promoted to a real chip
+atomically** whenever you're ready (Tiger Studio does this in one step).
 
 ---
 
