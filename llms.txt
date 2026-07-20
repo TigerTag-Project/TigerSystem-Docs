@@ -176,5 +176,6 @@ a natural future path.
 - Facts have exactly one canonical home (listed above) — link, don't restate.
 - Never invent byte offsets, Firestore field names or API parameters; follow
   the canonical source.
-- "TigerTag" and "Tiger Studio" are trademarks (see TRADEMARK.md); the docs
-  are CC BY 4.0.
+- "TigerTag", "TigerSystem" and "TigerTag Certified" are trademarks (see
+  TRADEMARK.md); other product names are deliberately unclaimed. The docs are
+  CC BY 4.0.
