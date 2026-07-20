@@ -42,11 +42,13 @@ device.
 
 ## The story behind the sandbox
 
-Honestly: building all of this ourselves was never the initial plan. When
-TigerTag chips started shipping — **hundreds of thousands of them, deployed
-inside filament spools** — we naively assumed the community would imagine the
-uses on its own. An open, documented NFC identity on every spool felt like an
-obvious playground.
+Honestly: building all of this ourselves was never the initial plan. **More
+than 2 million TigerTag NFC chips have been produced** — most of them
+integrated at the factory by third-party filament brands (Rosa3D, eSun,
+Sunlu, Landu, Jamg He, R3D, with more being integrated), plus a smaller share
+bought by makers to tag spools at home. We naively assumed the community
+would imagine the uses on its own: an open, documented NFC identity on every
+spool felt like an obvious playground.
 
 It didn't happen. Despite the scale of the deployment, no community picked the
 subject up; nobody found it worth building integrations around the protocol.
@@ -71,7 +73,14 @@ platform to join.
 
 TigerTag takes no side between filament brands, printer makers or distributors.
 It is not a walled garden with a partner list — it is a **format anyone can read
-and write**. Nothing in the ecosystem is a prerequisite: read the chip spec,
+and write**.
+
+That neutrality extends to the chips themselves: most end users buy **cheap,
+unbranded NTAG chips** on Amazon, AliExpress or locally — and that is
+deliberately fine. Nothing blocks them; the protocol works identically.
+Official TigerTag-branded chips help support the R&D, but they are not
+required: **the protocol living in users' homes and offices is the first
+reward.** Nothing in the ecosystem is a prerequisite: read the chip spec,
 pick up an SDK, and build the software or the business you actually want.
 
 ---

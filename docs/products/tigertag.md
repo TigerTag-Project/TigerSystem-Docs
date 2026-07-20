@@ -47,9 +47,18 @@ for the canonical byte-level specification.
 
 > **TODO:** add chip/packaging photos (`docs/assets/`).
 
+## Chips without lock-in
+
+More than **2 million TigerTag chips** have been produced — most integrated at
+the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D…).
+But the protocol is deliberately **not tied to official chips**: any cheap,
+blank NTAG chip bought anywhere (Amazon, AliExpress, locally) works
+identically, and nothing blocks it. Branded chips help support the R&D;
+adoption of the protocol is the first reward.
+
 ## Links
 
-- 🛒 Buy chips: **[tigertag.io](https://tigertag.io)** (shop)
+- 🛒 Official chips: **[tigertag.io](https://tigertag.io)** (shop — supports the R&D)
 - 📖 Chip format: [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
 
 ---

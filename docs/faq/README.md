@@ -23,9 +23,9 @@ others to imagine the features of tomorrow. Use them, fork them, or build your
 own instead — see [A sandbox, on purpose](../vision/why-tigersystem.md).
 
 **Why do you build all these demonstrators yourselves?**
-Because nobody else did. Hundreds of thousands of TigerTag chips were already
-deployed in filament spools, and we assumed the community would invent uses
-for an open NFC identity on its own — it didn't happen. Building the
+Because nobody else did. More than 2 million TigerTag chips have been
+produced and ship in filament spools, and we assumed the community would
+invent uses for an open NFC identity on its own — it didn't happen. Building the
 demonstrators was never the initial goal; it became necessary to show what
 the protocol makes possible. The full story:
 [The story behind the sandbox](../vision/why-tigersystem.md).
@@ -48,7 +48,16 @@ and the ability to prove physical possession by scanning.
 See [TigerTag+](../products/tigertag-plus.md).
 
 **Where do I buy chips?**
-**[tigertag.io](https://tigertag.io)**.
+Two equally valid answers. Official TigerTag-branded chips are at
+**[tigertag.io](https://tigertag.io)** — buying them helps support the R&D.
+But **any cheap, blank NTAG chip** from Amazon, AliExpress or your local shop
+works identically, and that's deliberate: nothing is blocked, the protocol is
+the point.
+
+**Which filament brands ship TigerTag from the factory?**
+More than 2 million chips have been produced; most are integrated at the
+factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu, Jamg He,
+R3D — with more being integrated.
 
 **How does a chip get on a spool?**
 It sticks on. One chip per spool, anywhere convenient — once attached, any tap

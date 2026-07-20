@@ -39,10 +39,11 @@ format, not a walled garden.
 
 ## A sandbox, on purpose
 
-Truth be told, building all this ourselves was never the plan. With **hundreds
-of thousands of TigerTag chips already deployed in filament spools**, we
-expected the community to invent its own uses for an open NFC identity — it
-didn't happen. So we picked up the subject ourselves.
+Truth be told, building all this ourselves was never the plan. With **more
+than 2 million TigerTag chips produced** — shipping from the factory in
+filament by brands like Rosa3D, eSun, Sunlu or R3D — we expected the
+community to invent its own uses for an open NFC identity — it didn't happen.
+So we picked up the subject ourselves.
 
 That's why everything we build — Tiger Studio, TigerTag Connect, TigerScale,
 TigerPOD, and every project still to come — has one single goal: **to show the
