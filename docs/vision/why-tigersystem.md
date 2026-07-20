@@ -45,6 +45,17 @@ device.
 
 ## The story behind the sandbox
 
+It started in **2023, right after Formnext**. Bambu Lab had opened the era of
+proprietary spool tags; that year Creality and Anycubic followed, each
+launching printers with RFID/NFC readers — and each with its own locked,
+proprietary chip. We decided this could not be how the industry settles: a
+format had to exist that was **open source, neutral, cross-platform and
+centred on the user**. And it couldn't be a manifesto — it had to be a
+**viable, more capable alternative** to what printer manufacturers offer,
+handed to third-party filament makers so their spools could do *more* than
+the proprietary ones, and their market share wouldn't erode against captive
+filament.
+
 Honestly: building all of this ourselves was never the initial plan. **More
 than 2.5 million TigerTag NFC chips have been produced — making TigerTag the
 most deployed third-party RFID protocol in the world** — most of them

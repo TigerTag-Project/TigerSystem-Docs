@@ -7,7 +7,11 @@
 Printers increasingly expect intelligent filament: AMS-class systems, per-slot
 material detection, automatic settings. Every printer maker answers with a
 **closed tag, locked to their machines, feeding their cloud** — zero
-interoperability, zero value for your brand outside their walls.
+interoperability, zero value for your brand outside their walls. And every
+locked tag serves a second purpose: **steering your customers toward the
+printer maker's own filament.** TigerTag was created in 2023 precisely so
+third-party brands would have a better answer — spools smarter than the
+proprietary ones, without the walled garden.
 
 **TigerTag is the most deployed third-party RFID protocol in the world** —
 and, today, the only viable open smart-spool solution shipping at scale: an

@@ -43,8 +43,10 @@ format, not a walled garden.
 
 ## A sandbox, on purpose
 
-Truth be told, building all this ourselves was never the plan. With **more
-than 2.5 million chips produced** — shipping from the factory in filament by
+Truth be told, building all this ourselves was never the plan. Born in
+**2023** — right after a Formnext where proprietary spool tags were
+multiplying — the protocol has since grown to **more than 2.5 million chips
+produced**, shipping from the factory in filament by
 brands like Rosa3D, eSun, Sunlu or R3D — **TigerTag is the most deployed
 third-party RFID protocol in the world**. We expected the
 community to invent its own uses for an open NFC identity — it didn't happen.
