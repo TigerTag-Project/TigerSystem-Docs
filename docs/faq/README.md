@@ -23,7 +23,7 @@ others to imagine the features of tomorrow. Use them, fork them, or build your
 own instead — see [A sandbox, on purpose](../vision/why-tigersystem.md).
 
 **Why do you build all these demonstrators yourselves?**
-Because nobody else did. More than 2 million TigerTag chips have been
+Because nobody else did. More than 2.5 million TigerTag chips have been
 produced and ship in filament spools, and we assumed the community would
 invent uses for an open NFC identity on its own — it didn't happen. Building the
 demonstrators was never the initial goal; it became necessary to show what
@@ -64,7 +64,7 @@ identically with unused space left over. Other shapes work too, but 25 mm
 round is the format the ecosystem's readers and holders are designed around.
 
 **Which filament brands ship TigerTag from the factory?**
-More than 2 million chips have been produced — making TigerTag **the most
+More than 2.5 million chips have been produced — making TigerTag **the most
 deployed third-party RFID protocol in the world**; most are integrated at the
 factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu, Jamg He, Filforme, Nanovia,
 R3D — with more being integrated.
@@ -295,7 +295,7 @@ security rules; a client can only touch its own user's data.
 **We're a filament brand — how do we ship TigerTag-tagged spools?**
 Quickly: we have the experience and technology to integrate chips into a
 filament factory **in just a few days, at very low cost** — proven with more
-than 2 million chips already shipped by Rosa3D, eSun, Sunlu, Landu, Jamg He
+than 2.5 million chips already shipped by Rosa3D, eSun, Sunlu, Landu, Jamg He
 and R3D. And every brand that joins strengthens the collective case for
 printer manufacturers to read TigerTag natively. Read
 [For filament manufacturers](../vision/for-filament-manufacturers.md), then

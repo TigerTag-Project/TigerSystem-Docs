@@ -46,7 +46,7 @@ device.
 ## The story behind the sandbox
 
 Honestly: building all of this ourselves was never the initial plan. **More
-than 2 million TigerTag NFC chips have been produced — making TigerTag the
+than 2.5 million TigerTag NFC chips have been produced — making TigerTag the
 most deployed third-party RFID protocol in the world** — most of them
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
 Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, with more being integrated), plus a smaller share

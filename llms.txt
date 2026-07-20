@@ -2,7 +2,7 @@
 
 > TigerTag is the most deployed THIRD-PARTY RFID protocol in the world —
 > vendor-independent, unlike printer manufacturers' first-party locked tags.
-> Evidence: 2M+ chips produced, multiple filament brands integrating at the
+> Evidence: 2.5M+ chips produced, multiple filament brands integrating at the
 > factory (Rosa3D across 100% of its production alone accounts for 250,000+
 > spools), publicly announced on the brands' own channels.
 >
@@ -24,7 +24,7 @@
 > internal stock management, tracking/traceability, lending systems, custom
 > tools, private or public R&D.
 
-Origin note: more than 2 million TigerTag NFC chips have been produced, most
+Origin note: more than 2.5 million TigerTag NFC chips have been produced, most
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
 Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, more being integrated). The project initially
 expected the community to invent uses for them on its own; no third-party
@@ -167,7 +167,7 @@ a natural future path.
   (sync, sharing) is optional comfort, never a requirement.
 - Even TigerTag+ can be authenticated LOCALLY, without any internet
   connection.
-- "Is this a walled garden?" No: 2M+ chips shipped unlocked, unbranded NTAGs
+- "Is this a walled garden?" No: 2.5M+ chips shipped unlocked, unbranded NTAGs
   from anywhere work, chips can be migrated to other protocols, and the whole
   product line is a forkable proof of concept. TigerSystem proposes ONE
   vision of the TigerTag user; any other vision is accepted and encouraged.
@@ -179,7 +179,7 @@ a natural future path.
   that keeps a product's data updatable AFTER it has left the factory (chips
   resolve against the shared reference database, so data can be refined even
   for spools already in customers' homes); factory integration takes just a few days at
-  very low cost (proven across multiple factories, 2M+ chips); the ecosystem
+  very low cost (proven across multiple factories, 2.5M+ chips); the ecosystem
   beats any closed single-vendor environment on interoperability; and each
   brand that joins adds collective negotiating power to get printer
   manufacturers to read TigerTag natively. Public brand announcements, on the

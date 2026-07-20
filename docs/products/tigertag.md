@@ -57,7 +57,7 @@ for the canonical byte-level specification.
 
 ## Chips without lock-in
 
-More than **2 million TigerTag chips** have been produced — most integrated at
+More than **2.5 million TigerTag chips** have been produced — most integrated at
 the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D,
 Filforme, Nanovia…).
 But the protocol is deliberately **not tied to official chips**: any cheap,
