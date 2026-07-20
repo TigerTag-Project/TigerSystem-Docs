@@ -5,7 +5,9 @@ Media assets for articles, videos and posts covering **TigerSystem** and
 
 ## TigerTag filament refills — 18 high-resolution renders
 
-<img src="./refill-illustration.png" width="420" alt="A spool-less filament refill on a cardboard core, carrying its TigerTag NFC chip" />
+| | | |
+|---|---|---|
+| <img src="./refill-illustration.png" alt="Black filament refill on a cardboard core, carrying its TigerTag NFC chip" /> | <img src="../assets/refill-with-tigertag-blue.png" alt="Blue filament refill with its TigerTag NFC chip" /> | <img src="../assets/refill-with-tigertag-orange.png" alt="Orange filament refill with its TigerTag NFC chip" /> |
 
 Eighteen renders of spool-less filament refills (cardboard core), each
 carrying its TigerTag NFC chip — one per color.

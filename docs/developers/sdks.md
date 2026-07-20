@@ -17,7 +17,13 @@ npm install tigertag
 ## Python
 
 - Repo: [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) (Apache-2.0)
-- For scripts, tooling and automation.
+- Published on PyPI as **`tigertag`** — for scripts, tooling and automation.
+
+```bash
+pip install tigertag             # core only — stdlib, works fully offline
+pip install tigertag[sync]       # + requests (database auto-update)
+pip install tigertag[verify]     # + cryptography (ECDSA signature check)
+```
 
 > **TODO:** minimal parse/encode code examples for both SDKs — import them from
 > each SDK's README once stabilized, or link directly. Do not restate API
