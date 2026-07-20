@@ -31,6 +31,22 @@ open.
 > **[GitHub organization](https://github.com/TigerTag-Project)** to start the
 > conversation.
 
+## They announced it themselves
+
+Public posts on the brands' own channels — not our press release
+(sources & full announcements:
+[tigersystem.io/en/manufacturers](https://tigersystem.io/en/manufacturers)):
+
+> **ROSA 3D FILAMENTS** — *"officially integrated the open TigerTag RFID
+> protocol across 100 % of our filament production."* More than 250 000
+> spools already produced with TigerTag.
+
+> **R3D Filament** — *"officially begun large-scale deployment of the open
+> TigerTag RFID protocol across its filament production in Europe."*
+
+> **eSUN** — *"officially integrated TigerTag RFID technology!"* — piloting
+> in the French market, expanding across Europe.
+
 ## Already on the shelves
 
 | | | |
