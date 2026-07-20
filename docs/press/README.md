@@ -12,6 +12,15 @@ carrying its TigerTag NFC chip — one per color.
 
 ⬇ **[Download the pack (ZIP, ~22 MB, 18 PNG files)](./tigertag-filament-refills.zip)**
 
+## Partner filament boxes — high-resolution photos + cutouts
+
+<img src="../assets/partner-box-rosa3d.jpg" width="300" alt="Rosa3D filament box with TigerTag NFC-RFID" /> <img src="../assets/partner-box-esun.jpg" width="300" alt="eSun filament box with TigerTag NFC-RFID" />
+
+Real partner boxes shipping with TigerTag inside — **Rosa3D, eSun, Sunlu** —
+as studio photos and transparent-background cutouts (6 files).
+
+⬇ **[Download the pack (ZIP, ~3 MB)](./tigertag-partner-filament-boxes.zip)**
+
 ## More assets
 
 - The visuals used across this documentation live in
