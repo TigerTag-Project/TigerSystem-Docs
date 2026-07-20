@@ -26,13 +26,17 @@ Moonraker and maps inventory spools to slots.
 
 - Native Snapmaker tags are not read in-app yet — the spec is documented, and the current work aims at converting vendor tag data into TigerData spools (see [Compatibility](./README.md)).
 
-## Future plans
+## The first printer to read TigerTag natively
 
-Community extended firmware for the Snapmaker U1 exposes SSH, Fluidd, a WebRTC
-camera and **RFID scan webhooks** — a potential deeper integration path.
-
-> **TODO:** evaluate and document the community-firmware integration once
-> tested on real hardware.
+The community's
+[Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
+(independent, GPL-3.0) adds SSH, camera streaming, metrics — and with it,
+**the Snapmaker U1 reads TigerTags natively, on the machine itself**. That
+makes the U1 the first printer where a TigerTag spool is recognized without
+any app in between — the future the
+[collective play](../vision/for-filament-manufacturers.md) aims at, arrived
+early via the community. See
+[third-party integrations](../developers/integrations.md).
 
 ---
 

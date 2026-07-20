@@ -286,6 +286,16 @@ Ensure the printer is on the same LAN, in LAN mode where relevant, then try
 
 ## Developers
 
+**Has anyone actually built on TigerTag?**
+Yes — and independently of us:
+[OpenRFID](https://github.com/suchmememanyskill/OpenRFID) (community
+multi-vendor RFID toolkit) reads TigerTags;
+[Spooly Tracker](https://spoolytracker.com/) (inventory platform, web +
+mobile) identifies spools with TigerTags; and the
+[Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
+makes the U1 **the first printer that reads TigerTags natively**. See
+[third-party integrations](../developers/integrations.md).
+
 **Can I build my own app on TigerTag?**
 Yes, without permission: open chip spec, [SDKs](../developers/sdks.md) (JS &
 Python), and a [documented cloud surface](../developers/cloud-api.md) with

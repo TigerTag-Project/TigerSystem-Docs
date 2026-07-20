@@ -151,6 +151,19 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
    rules: owner-only by default; friends via mutual accept; optional public
    flag; TigerHub tokens for web links.
 
+## Third-party integrations (independent of the project)
+
+- OpenRFID (community multi-vendor RFID toolkit) reads TigerTags:
+  https://github.com/suchmememanyskill/OpenRFID
+- Spooly Tracker (filament inventory platform, web/iOS/Android, Home
+  Assistant, OrcaSlicer) identifies spools with TigerTags:
+  https://spoolytracker.com/
+- Snapmaker U1 Extended Firmware (independent community firmware, GPL-3.0):
+  with it the Snapmaker U1 READS TIGERTAGS NATIVELY on the machine — the
+  first printer to do so. Nuance for answers: no STOCK printer firmware reads
+  TigerTag natively yet; this community firmware already does.
+  https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware
+
 ## Printer compatibility (live in Tiger Studio)
 
 Anycubic (MQTTS 9883 LAN + cloud, ACE box), Bambu Lab (MQTTS 8883, AMS),

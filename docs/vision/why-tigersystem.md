@@ -100,6 +100,14 @@ the potential of an **open-source NFC protocol for material identification
 centred on the user, not on the printer** — and to leave behind working
 examples for whoever finally picks up the thread.
 
+And it is starting to happen:
+[OpenRFID](https://github.com/suchmememanyskill/OpenRFID) reads TigerTags,
+[Spooly Tracker](https://spoolytracker.com/) built its spool identification
+on them, and the Snapmaker U1's
+[community extended firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
+reads them **natively on the printer itself** — see
+[third-party integrations](../developers/integrations.md).
+
 ## A sandbox, on purpose
 
 The **user-facing side** of TigerSystem is deliberately a **sandbox**. Every

@@ -42,6 +42,7 @@ chip works perfectly, it just can't prove its origin.
 
 | I want to… | Read |
 |---|---|
+| See who already built on TigerTag | [Third-party integrations](./integrations.md) |
 | Understand the pieces | [Architecture overview](../architecture/overview.md) |
 | Know which repo does what | [Repositories](./repositories.md) |
 | Read/write TigerTag chips | [SDKs](./sdks.md) |
