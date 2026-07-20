@@ -38,9 +38,10 @@ flowchart LR
 | TigerTag chips | Read / encode / verify |
 | Tiger Studio | Instant spool identification, chip promotion & update |
 
-## Screenshots
+## In pictures
 
-> **TODO:** add product photos & print orientation guide (`docs/assets/`).
+<img src="../assets/tigerpod-banner.png" width="100%" alt="TigerPOD line-up in rainbow colors" />
+<img src="../assets/tigerpod-in-studio.jpg" width="100%" alt="TigerPOD connected to Tiger Studio" />
 
 ## Links
 

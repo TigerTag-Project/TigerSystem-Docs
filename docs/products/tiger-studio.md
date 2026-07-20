@@ -46,10 +46,11 @@ Electron + vanilla JS, no bundler. Printer links speak each vendor's **native
 LAN protocol** directly (MQTT / WebSocket / HTTP) — per-brand protocol notes are
 maintained in the app repo (`renderer/printers/<brand>/PROTOCOL.md`).
 
-## Screenshots
+## In pictures
 
-> **TODO:** import key screenshots (`docs/assets/`) — sources in the app repo's
-> `assets/img/`.
+<img src="../assets/tiger-studio-inventory.jpg" width="100%" alt="Tiger Studio — the inventory view" />
+<img src="../assets/tiger-studio-printers.jpg" width="100%" alt="Tiger Studio — the printers fleet view with live jobs" />
+<img src="../assets/tiger-studio-rack.jpg" width="480" alt="Tiger Studio — a physical filament rack mapped in the app" />
 
 ## Links
 

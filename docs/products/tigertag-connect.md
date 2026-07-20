@@ -52,9 +52,9 @@ allow it.
 | Firebase (account database) | Real-time inventory / friends / prefs sync |
 | Tiger Studio | Desktop companion — same account, complementary features |
 
-## Screenshots
+## In pictures
 
-> **TODO:** add mobile screenshots (`docs/assets/`).
+<img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio on desktop and TigerTag Connect on mobile, same account, same data" />
 
 ---
 

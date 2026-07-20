@@ -9,6 +9,8 @@ Conventions:
 - Prefer Mermaid blocks inside the Markdown pages for diagrams; only export a
   static image when Mermaid cannot express it.
 
-> **TODO:** import the hero/ecosystem artwork and product screenshots
-> (sources live in the product repositories, e.g. `assets/img/` in
-> [TigerTag-Studio-Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager)).
+Current set (imported and optimized from the product repositories' `assets/`
+folders — masters live there): ecosystem hero, real bench setup, Tiger Studio
+screenshots (inventory, printers, rack), TigerPOD (banner + in-app), TigerScale
+photo, chip material shot, desktop+mobile mockup, partner filament boxes
+(Rosa3D, eSun, Sunlu).

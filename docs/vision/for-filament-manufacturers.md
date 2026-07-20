@@ -27,6 +27,14 @@ days**:
 > **[GitHub organization](https://github.com/TigerTag-Project)** to start the
 > conversation.
 
+## Already on the shelves
+
+| | | |
+|---|---|---|
+| <img src="../assets/partner-box-rosa3d.jpg" alt="Rosa3D filament box with TigerTag NFC-RFID" /> | <img src="../assets/partner-box-esun.jpg" alt="eSun filament box with TigerTag NFC-RFID" /> | <img src="../assets/partner-box-sunlu.jpg" alt="Sunlu filament box with TigerTag NFC-RFID" /> |
+
+*Rosa3D, eSun, Sunlu — real boxes, shipping with TigerTag inside.*
+
 ## What your customers get on day one
 
 A spool that identifies itself to **any NFC phone**, a full inventory

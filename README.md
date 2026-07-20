@@ -14,6 +14,8 @@ me at 210 °C, and there's 640 g of me left."*
 No subscription. No locked format. No printer brand deciding what you're
 allowed to know about **your own filament**.
 
+<img src="docs/assets/hero-tigersystem-ecosystem.png" width="100%" alt="The TigerSystem ecosystem — Tiger Studio on desktop, a TigerPOD reader with a tagged spool, and the mobile app" />
+
 ## What you can actually do with it
 
 - 📱 **Tap a spool with your phone** — its full profile appears instantly.
@@ -53,6 +55,9 @@ once a spool can identify itself. Take our integration work as a starting
 point, get inspired, and **imagine the features of tomorrow** — copy them,
 fork them, or ignore them entirely and build your own. **The protocol is the
 point, the products are the proof.**
+
+<img src="docs/assets/real-bench-setup.jpg" width="100%" alt="A real TigerSystem bench — Tiger Studio Manager, TigerScale, TD1S color sensor, ACR122U reader and TigerPOD" />
+<p align="center"><em>Not a mockup: the sandbox on a real bench — Studio, TigerScale, TD1S and TigerPOD working together.</em></p>
 
 And the entry ticket is tiny: **any NFC phone**, **an ACR122U USB reader on a
 computer**, or even **a DIY build — a simple ESP32 with a PN532 or RC522

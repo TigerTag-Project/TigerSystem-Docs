@@ -10,6 +10,8 @@ your inventory — no manual entry, no shaking the spool next to your ear.
 > *left*.** Together they make the inventory actually true: identity from
 > [TigerTag](./tigertag.md), live quantity from TigerScale.
 
+<img src="../assets/tigerscale-photo.jpg" width="480" alt="TigerScale — the open-source ESP32 filament scale" />
+
 ## Where it sits
 
 ```mermaid

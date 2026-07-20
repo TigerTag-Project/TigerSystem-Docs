@@ -51,9 +51,9 @@ for the canonical byte-level specification.
 | SDKs | Parse / verify / encode from JS or Python |
 | Printers | Indirectly — via the [smartphone bridge](../philosophy/smartphone-bridge.md) and Studio's printer links |
 
-## Screenshots
+## In pictures
 
-> **TODO:** add chip/packaging photos (`docs/assets/`).
+<img src="../assets/tigertag-chip-material.png" width="480" alt="TigerTag NFC chips" />
 
 ## Chips without lock-in
 
