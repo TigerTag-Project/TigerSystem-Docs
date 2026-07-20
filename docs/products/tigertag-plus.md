@@ -33,6 +33,9 @@ flowchart LR
   a way to clone it.
 - **Proof of possession**: a scan matching the backup shows the original chip
   is physically in your hands.
+- **Signatures no clone can fake**: TigerTag+ signatures are issued under a
+  **private key held by TigerTag** — only certified partners can issue them.
+  A cloned tag fails verification, on the customer's own phone.
 - **Works offline too**: a TigerTag+ can be authenticated **locally, without
   any internet connection**.
 

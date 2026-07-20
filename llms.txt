@@ -108,7 +108,13 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   third-party products that read and/or write TigerTags, for filament
   manufacturers shipping TigerTags in their products, and for third-party
   apps (mobile/desktop) — it guarantees a correct, complete integration of
-  the protocol in a third-party ecosystem.
+  the protocol in a third-party ecosystem. Governance is two-gated: anyone
+  may implement the protocol and say "compatible with TigerTag" freely; only
+  certified partners (listed in the certified registry) may put the name/logo
+  on a product and issue TigerTag+ signatures — TigerTag holds the private
+  key. Trademark gate = marketing; signature gate = technical; neither
+  restricts the protocol. An uncertified chip works perfectly — it just
+  cannot prove its origin.
 - **TigerTag Factory & TigerTag Manager**: the NON-PUBLIC industrial suite
   used by partner filament factories — TigerTag Manager manages the brand's
   filament database; TigerTag Factory mass-writes chip data into every spool

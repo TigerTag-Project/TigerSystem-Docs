@@ -9,12 +9,19 @@ The TigerTag Project claims the following trademarks:
   manufacturers shipping TigerTags in their products; and third-party apps
   (mobile or desktop) whose integration of the protocol is verified correct
 
-Usage:
+Usage — the two-gates model:
 
-- ✅ You may reference them factually (*"compatible with TigerTag"*, *"works
-  with the TigerSystem ecosystem"*).
-- ❌ You may not use them as the name of a competing RFID protocol, ecosystem,
-  certification, cloud service or product without written authorization.
+- ✅ **Anyone** may implement the protocol and say *"compatible with
+  TigerTag"* or *"works with the TigerSystem ecosystem"* — no permission
+  needed, ever.
+- ❌ Only a **certified partner** (see *TigerTag Certified*, listed in the
+  certified registry) may put the TigerTag name and logo **on a product** and
+  **issue TigerTag+ signatures** — TigerTag holds the private key.
+- Two gates: the **trademark** (marketing) and the **signature** (technical).
+  **Neither restricts the protocol by one line.**
+- ❌ You may not use these marks as the name of a competing RFID protocol,
+  ecosystem, certification, cloud service or product without written
+  authorization.
 
 Other product names used in this documentation (Tiger Studio, TigerHub,
 TigerScale, TigerPOD, Tiger NFC Connect) are **not claimed as trademarks** —
