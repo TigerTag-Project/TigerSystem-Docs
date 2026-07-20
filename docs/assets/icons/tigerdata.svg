@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- TigerData: the same tag silhouette as icon_tag.svg, dashed — the identity
+       exists as a record, it just isn't burned into silicon yet, and it can be
+       later. Deliberately NOT a cloud: the record may sit in the app, on a
+       disk or on a USB key, so a cloud implied a storage location that was
+       never part of the promise. One inner line = the data itself; a second
+       line was tried and turns to mush at the 20px it actually renders at. -->
+  <path
+    d="M20.59 13.41 13.41 20.6a2 2 0 0 1-2.83 0L3 13V4a1 1 0 0 1 1-1h9l7.59 7.59a2 2 0 0 1 0 2.82Z"
+    stroke-dasharray="4 2.5"
+  />
+  <circle cx="7.4" cy="7.4" r="1.15" />
+  <path d="M9.6 13.6h5" />
+</svg>

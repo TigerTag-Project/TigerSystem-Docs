@@ -11,14 +11,14 @@ The TigerSystem ecosystem, one page per product.
 
 | Product | What it is | Type |
 |---|---|---|
-| [TigerTag](./tigertag.md) | Open RFID/NFC chip + standard for spool identity | Hardware + spec |
-| [TigerTag+](./tigertag-plus.md) | A TigerTag backed up in your account — factory-state restore on the original chip | Hardware + service |
-| [Tiger NFC Connect](./tigertag-connect.md) | Mobile app (iOS/Android) — scan, encode, browse | App |
-| [Tiger Studio](./tiger-studio.md) | Desktop app — inventory, racks, sensors, printers | App |
-| [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |
-| [TigerPOD](./tigerpod.md) | 3D-printable dual NFC reader stand | Hardware |
-| [TigerScale](./tigerscale.md) | Open-source ESP32 filament scale | Hardware |
-| [TigerTag Factory & Manager](./factory-suite.md) | Industrial chip programming & filament-database tools for factories — **not public**, production-grade | Industrial |
+| <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Open RFID/NFC chip + standard for spool identity | Hardware + spec |
+| <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | A TigerTag backed up in your account — factory-state restore on the original chip | Hardware + service |
+| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | Mobile app (iOS/Android) — scan, encode, browse | App |
+| <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | Desktop app — inventory, racks, sensors, printers | App |
+| <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |
+| <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | 3D-printable dual NFC reader stand | Hardware |
+| <img src="../assets/icons/tigerscale.svg" width="18" alt="" /> [TigerScale](./tigerscale.md) | Open-source ESP32 filament scale | Hardware |
+| <img src="../assets/icons/factory.svg" width="18" alt="" /> [TigerTag Factory & Manager](./factory-suite.md) | Industrial chip programming & filament-database tools for factories — **not public**, production-grade | Industrial |
 
 ```mermaid
 flowchart LR
