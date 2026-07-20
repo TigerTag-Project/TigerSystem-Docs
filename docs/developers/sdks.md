@@ -5,7 +5,7 @@ NTAG payload, verifying the TigerTag format, and encoding new chip data.
 
 ## JavaScript — `tigertag` (npm)
 
-- Repo: [TigerTag-SDK-JS](https://github.com/TigerTag-Project/TigerTag-SDK-JS) (MIT)
+- Repo: [TigerTag-SDK-JS](https://github.com/TigerTag-Project/TigerTag-SDK-JS) (Apache-2.0)
 - Published on npm as **`tigertag`**.
 - Used internally by Tiger Studio; usable independently to build custom
   TigerTag-compatible tools.
@@ -16,7 +16,7 @@ npm install tigertag
 
 ## Python
 
-- Repo: [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) (MIT)
+- Repo: [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) (Apache-2.0)
 - For scripts, tooling and automation.
 
 > **TODO:** minimal parse/encode code examples for both SDKs — import them from
