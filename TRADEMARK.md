@@ -4,9 +4,10 @@ The TigerTag Project claims the following trademarks:
 
 - **"TigerTag"** — the RFID/NFC spool-identification protocol and chips
 - **"TigerSystem"** — the ecosystem
-- **"TigerTag Certified"** — the certification mark for third-party products
-  that integrate the ability to read and/or write TigerTags, and for filament
-  manufacturers that ship TigerTags in their products
+- **"TigerTag Certified"** — the certification mark, working as a quality
+  label, for: third-party products that read and/or write TigerTags; filament
+  manufacturers shipping TigerTags in their products; and third-party apps
+  (mobile or desktop) whose integration of the protocol is verified correct
 
 Usage:
 

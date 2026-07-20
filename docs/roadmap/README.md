@@ -13,6 +13,9 @@ High-level, non-dated intentions (details live per product):
   settled.
 - **More printer integrations** — Klipper/Moonraker as the next natural
   transport ([Klipper page](../compatibility/klipper.md)).
+- **TigerTag for resins** — extending the protocol to resin containers for
+  resin 3D printers, bringing the same open identity to a whole second family
+  of machines.
 - **TigerHub growth** — the ecosystem site at
   [tigersystem.io](https://tigersystem.io): richer social-sandbox features
   (wishlists, friends, sharing).

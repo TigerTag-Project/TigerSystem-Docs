@@ -245,6 +245,10 @@ ecosystem. See [compatibility](../compatibility/README.md).
 Locked tags serve vendor lock-in. TigerTag's answer is an openly readable
 format — see [User-centric vs printer-centric](../philosophy/user-centric-ecosystem.md).
 
+**What about resin printers?**
+Coming: TigerTag is being extended to **resins** — the same open identity on
+resin containers for resin 3D printers.
+
 **Does TigerTag work with a printer that has no RFID reader?**
 Yes — that's the [smartphone bridge](../philosophy/smartphone-bridge.md): your
 phone (or a desktop reader) identifies the spool, and the system feeds the data
@@ -298,10 +302,12 @@ reach out through the
 **[GitHub organization](https://github.com/TigerTag-Project)**.
 
 **Can my product become "TigerTag Certified"?**
-Yes — **TigerTag Certified** is the certification mark for third-party
-products that integrate the ability to read and/or write TigerTags (a
-printer, a dryer, an app, a reader…) **and for filament manufacturers that
-ship TigerTags in their products**. Reach out through the
+Yes — **TigerTag Certified** is the certification mark, working as a
+**quality label**, for three cases: third-party products that read and/or
+write TigerTags (a printer, a dryer, a reader…); filament manufacturers that
+ship TigerTags in their products; and third-party **apps** (mobile or
+desktop) — certification guarantees the protocol is perfectly integrated in
+that third-party ecosystem. Reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).
 
 **We're a printer maker — can our firmware read TigerTag?**
