@@ -35,6 +35,17 @@ flowchart LR
 > served by the shared [reference database](../concepts/universal-filament-identity.md), so
 > a re-encoded chip is as precise as a factory one.
 
+## The chip's own second life — zero e-waste
+
+The spool isn't the only thing that gets a second life: **the chip does too.**
+When a spool is truly done, its NFC chip is a standard NTAG — peel it off and
+re-encode it as plain NDEF for anything: a smart keychain, an NFC business
+card, a connected object of your own.
+
+That's exactly why official branded chip production switched to **NTAG215**:
+more memory headroom means more reuse possibilities once the spool is empty.
+The goal is simple — **a spool's chip should never become electronic waste.**
+
 ---
 
 **◀ Previous:** [Smartphone bridge](./smartphone-bridge.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Universal filament identity](../concepts/universal-filament-identity.md)

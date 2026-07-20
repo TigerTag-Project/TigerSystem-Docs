@@ -25,7 +25,10 @@ flowchart LR
 - Standard **NTAG213 / 215 / 216** chip (25 mm round recommended), 144-byte
   open NDEF payload — sized to fit the smallest NTAG213; no keys, no lock-in.
 - Identity resolved against the shared [reference database](../concepts/universal-filament-identity.md).
-- Writable and **rewritable** — enables the [Second Life workflow](../philosophy/second-life.md).
+- Writable and **rewritable** — enables the [Second Life workflow](../philosophy/second-life.md);
+  official branded chips ship as NTAG215 so the chip itself can be reused as a
+  plain NDEF object (keychain, business card…) once the spool is empty —
+  never e-waste.
 - Readable by any NFC smartphone, ACR122U readers and [TigerPOD](./tigerpod.md).
 - Reserved 16-byte signature slot, used by [TigerTag+](./tigertag-plus.md).
 

@@ -73,6 +73,14 @@ or scan identifies that exact spool.
 No. The chip's payload is complete and self-sufficient: phone in airplane
 mode, offline desktop — the spool still introduces itself.
 
+**What happens to the chip when the spool is empty?**
+It gets a second life — never a landfill. Re-encode it for the next spool, or
+convert it to standard NDEF and turn it into anything NFC: a keychain, a
+business card, a connected object. Official branded chips switched to
+**NTAG215** precisely to leave memory headroom for that reuse: a spool's chip
+should never become electronic waste. See
+[Second Life](../philosophy/second-life.md).
+
 **Can I use TigerSystem with no chips at all?**
 Yes — Tiger Studio's *TigerData* creates fully digital spools that live only
 in your inventory. You can promote one to a real chip later, atomically, when

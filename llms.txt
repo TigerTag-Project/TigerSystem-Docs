@@ -58,7 +58,10 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
 - **Second Life**: rewriting a TigerTag chip when a spool is refilled or
-  re-purposed, so any spool re-enters the system as self-identifying.
+  re-purposed, so any spool re-enters the system as self-identifying. Extends
+  to the chip itself: official branded chips are produced as NTAG215 so that,
+  once the spool is empty, the chip can be re-encoded as plain NDEF (keychain,
+  business card, connected object) instead of becoming e-waste.
 - **Smartphone bridge**: any NFC phone is a reader/writer, so the system works
   with every printer, tagged or not.
 
