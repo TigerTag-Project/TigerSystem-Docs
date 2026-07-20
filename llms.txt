@@ -1,8 +1,9 @@
 # TigerSystem
 
 > TigerSystem is an open, user-centric ecosystem for 3D-printing filament.
-> Each spool carries a TigerTag NFC chip (open NTAG/NDEF format, 144-byte
-> payload, no encryption) holding its identity: brand, material, color,
+> Each spool carries a TigerTag NFC chip (NTAG213/215/216, 25 mm round
+> recommended; open NDEF format, 144-byte payload sized to fit NTAG213, no
+> encryption) holding its identity: brand, material, color,
 > diameter, print settings. The user — not a printer manufacturer — owns the
 > filament, the metadata, the inventory, the history and the cloud sync.
 > TigerSystem connects the components together; every layer is open and

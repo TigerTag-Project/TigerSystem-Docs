@@ -4,8 +4,9 @@
 
 | Property | Value |
 |---|---|
-| Chip family | NTAG (NFC Forum Type 2) |
-| Payload | 144-byte NDEF payload |
+| Chip family | NTAG213 / 215 / 216 (NFC Forum Type 2) |
+| Recommended form factor | **25 mm round sticker** (other shapes work) |
+| Payload | 144-byte NDEF payload — sized to fit the small NTAG213; larger chips leave unused space |
 | Authentication | None — openly readable |
 | Crypto | Reserved 16-byte signature slot (used by [TigerTag+](../products/tigertag-plus.md) certification) |
 | Readable by | Any NFC smartphone, ACR122U-class USB readers, [TigerPOD](../products/tigerpod.md) |

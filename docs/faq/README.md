@@ -54,6 +54,12 @@ But **any cheap, blank NTAG chip** from Amazon, AliExpress or your local shop
 works identically, and that's deliberate: nothing is blocked, the protocol is
 the point.
 
+**Which blank chip should I buy exactly?**
+**NTAG213, 215 or 216 — round, 25 mm** is the recommendation. The protocol is
+deliberately optimized to fit the small NTAG213 (144 bytes); 215/216 work
+identically with unused space left over. Other shapes work too, but 25 mm
+round is the format the ecosystem's readers and holders are designed around.
+
 **Which filament brands ship TigerTag from the factory?**
 More than 2 million chips have been produced; most are integrated at the
 factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu, Jamg He,

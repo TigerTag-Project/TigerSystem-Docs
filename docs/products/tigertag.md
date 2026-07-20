@@ -22,7 +22,8 @@ flowchart LR
 
 ## Features
 
-- Standard **NTAG** NFC chip, 144-byte open NDEF payload — no keys, no lock-in.
+- Standard **NTAG213 / 215 / 216** chip (25 mm round recommended), 144-byte
+  open NDEF payload — sized to fit the smallest NTAG213; no keys, no lock-in.
 - Identity resolved against the shared [reference database](../concepts/universal-filament-identity.md).
 - Writable and **rewritable** — enables the [Second Life workflow](../philosophy/second-life.md).
 - Readable by any NFC smartphone, ACR122U readers and [TigerPOD](./tigerpod.md).
