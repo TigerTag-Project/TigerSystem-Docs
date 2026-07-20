@@ -6,7 +6,7 @@
 flowchart TB
     TAG["TigerTag chip<br/>(open NDEF payload on the spool)"]
     CONNECT["TigerTag Connect<br/>(mobile — NFC scan & encode)"]
-    CLOUD["Firebase<br/>(accounts + Firestore — one shared database)"]
+    CLOUD["Firebase<br/>(accounts + Firestore + cdn.tigertag.io)"]
     STUDIO["Tiger Studio<br/>(desktop — inventory, devices, printers)"]
     PRINTERS["Printer integrations<br/>(Bambu Lab · Creality · Elegoo · FlashForge · Snapmaker · Anycubic)"]
     THIRD["Third-party apps & APIs<br/>(SDKs, Home Assistant, Spoolman, ESP32…)"]

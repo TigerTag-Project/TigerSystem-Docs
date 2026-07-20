@@ -26,7 +26,8 @@ sequenceDiagram
 | Data | Lives in | Notes |
 |---|---|---|
 | Spool identity | The chip + the user's cloud inventory | Chip is authoritative for offline use |
-| Reference database (brands, materials…) | `cdn.tigertag.io` | Bundled with apps, refreshed from CDN |
+| Reference database (brands, materials…) | `cdn.tigertag.io` (same Firebase project) | Bundled with apps, refreshed from CDN |
+| Spool images (incl. TigerTag+ product photos) | `cdn.tigertag.io` (same Firebase project) | Served to all apps |
 | Inventory, racks, friends, prefs | Firestore `users/{uid}/…` | Owner-only by default, rules-enforced |
 | Public discovery codes | Firestore `publicKeys/{code}` | O(1) friend lookup |
 | Printer credentials & telemetry | **Local only** (desktop) | LAN traffic never transits the cloud |

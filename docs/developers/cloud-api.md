@@ -37,6 +37,10 @@ The full integration contract lives in
 
 ## HTTP endpoints
 
+`cdn.tigertag.io` lives in the **same Firebase project** as the accounts: it
+hosts the shared reference database, the spool images (including TigerTag+
+product photos), and the HTTP endpoints tied to the TigerSystem database.
+
 | Endpoint | Purpose |
 |---|---|
 | `https://cdn.tigertag.io/healthz/` | Health check |

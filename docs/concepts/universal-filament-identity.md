@@ -20,8 +20,8 @@ The identity covers (non-exhaustive):
 ## The shared reference database
 
 Identities are not free text: brands, materials, aspects, types, diameters and
-units come from a **shared reference database** served by the TigerTag cloud
-services (`cdn.tigertag.io`). Every app resolves the same IDs to the same meaning, so a
+units come from a **shared reference database** served at `cdn.tigertag.io`
+(hosted in the same Firebase project as the accounts). Every app resolves the same IDs to the same meaning, so a
 chip encoded by one tool reads identically in every other.
 
 > **TODO:** link the public database browsing endpoint / dump format once the

@@ -46,8 +46,10 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   app, TigerScale and the TigerSystem user account for interoperability;
   real-time sync, server-side security rules. Neither "Tiger Cloud" nor
   "TigerHub" names this backend — it is plain Firebase.
-- **cdn.tigertag.io**: shared reference database (brands, materials, colors,
-  etc.), health & spool endpoints.
+- **cdn.tigertag.io**: part of the same Firebase project — hosts the shared
+  reference database (brands, materials, colors, etc.), the spool images of
+  TigerTag+ chips, and the endpoints tied to the TigerSystem database
+  (health, spool APIs).
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
 - **Second Life**: rewriting a TigerTag chip when a spool is refilled or
