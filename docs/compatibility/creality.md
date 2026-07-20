@@ -15,10 +15,15 @@ Creality spool tags are **Mifare Classic 1K** with an **AES-128-ECB key for
 sector 1** and optional payload encryption. Read-only decoding spec:
 [`docs/rfid-vendors/creality.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/creality.md).
 
-## Using TigerTag with Creality
+## The workflow
 
-TigerTag chips work on any spool feeding a Creality printer; Tiger Studio maps
-inventory spools to CFS slots and shows live machine state.
+1. **Add the printer** — LAN discovery or Add by IP; Tiger Studio connects
+   over the printer's WebSocket and keeps the link alive.
+2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
+3. **Assign it to a CFS slot** — Tiger Studio maps inventory spools to the
+   CFS boxes so the machine-side filament info matches reality.
+4. **Live** — temperatures, job progress, print preview, "Ends at" time, and
+   the **WebRTC camera** stream in the printers view.
 
 ## Limitations
 

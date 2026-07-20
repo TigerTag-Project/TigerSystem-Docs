@@ -17,10 +17,15 @@ keys** and an **RSA-2048 PKCS#1 v1.5 + SHA-256 signature** — the most heavily
 locked format documented so far. Read-only decoding spec:
 [`docs/rfid-vendors/snapmaker.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/snapmaker.md).
 
-## Using TigerTag with Snapmaker
+## The workflow
 
-TigerTag chips work on any spool; Tiger Studio drives the machine over
-Moonraker and maps inventory spools to slots.
+1. **Add the printer** — HTTP scan on the LAN or Add by IP; Tiger Studio
+   talks Moonraker (JSON-RPC over WebSocket).
+2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
+3. **Assign it to a slot** — per-slot filament edit (Snapmaker's RRGGBBAA
+   color model handled transparently).
+4. **Live & control** — telemetry, job progress, and a **control panel**:
+   axes, temperatures, light, fan, speed mode, load/unload per slot.
 
 ## Limitations
 

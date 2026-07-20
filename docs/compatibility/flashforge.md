@@ -19,12 +19,18 @@ reader already in the user's smartphone.** A brand-new capability, added to
 someone else's printer, **totally free, at zero cost to the user, with zero
 machine modification.**
 
-## Using TigerTag with FlashForge
+## The workflow
 
-Scan the spool with your phone (or a desktop reader), then inform the machine
-**slot by slot — one scan, one click** — from Tiger Studio's material-station
-mapping. The printer ends up knowing its filament as precisely as a machine
-with built-in RFID, without FlashForge having changed anything.
+1. **Add the printer** — automatic LAN discovery (UDP multicast) or Add by
+   IP.
+2. **Scan a spool** — with your phone (or a desktop reader); it lands in
+   your inventory.
+3. **Assign it to a material-station slot** — **one scan, one click** from
+   Tiger Studio's mapping. The printer ends up knowing its filament as
+   precisely as a machine with built-in RFID, without FlashForge having
+   changed anything.
+4. **Live** — temperatures, job progress, and the MJPEG camera stream in the
+   printers view.
 
 ---
 

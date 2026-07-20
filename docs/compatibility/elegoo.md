@@ -16,10 +16,17 @@ Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
 (`EE EE EE EE`) — no real authentication. Read-only decoding spec:
 [`docs/rfid-vendors/elegoo.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/elegoo.md).
 
-## Using TigerTag with Elegoo
+## The workflow
 
-TigerTag chips work on any spool; Tiger Studio assigns inventory spools to the
-printer's slots and drives the machine from the control panel.
+1. **Add the printer** — automatic LAN discovery (UDP broadcast) or Add by
+   IP.
+2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
+3. **Assign it to a slot** — Tiger Studio maps inventory spools to the four
+   Canvas/tray slots.
+4. **Live & control** — beyond telemetry and job progress, Elegoo gets a
+   **full control panel**: home/jog the axes, set nozzle & bed targets,
+   toggle the light, drive the fan, pick the speed mode, load/unload
+   filament per slot.
 
 ## Bonus: write Elegoo-format tags
 

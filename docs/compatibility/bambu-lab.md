@@ -19,11 +19,18 @@ keys** — cryptographically locked to serve the vendor's ecosystem. A read-only
 decoding spec is maintained in
 [`docs/rfid-vendors/bambu.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/bambu.md).
 
-## Using TigerTag with Bambu Lab
+## The workflow
 
-Tag any spool (Bambu or third-party) with a TigerTag chip → scan → the spool is
-in your inventory → assign it to an AMS slot from Tiger Studio, which pushes
-the filament profile to the printer.
+1. **Add the printer** — Tiger Studio finds it on the LAN (SSDP discovery, or
+   Add by IP); pair with the printer's **LAN mode access code** (step-by-step
+   in-app tutorials cover Dev/LAN mode per series: A1, P1, X1, H2).
+2. **Scan a spool** — phone or desktop reader; the spool lands in your
+   inventory.
+3. **Assign it to an AMS slot** — Tiger Studio pushes the filament profile
+   (material, color) to the slot over MQTTS; the machine-side info now
+   matches reality, across up to 16 AMS slots.
+4. **Live** — temperatures, job progress, print preview, wall-clock
+   **"Ends at"** time, and the camera feed, right in the printers view.
 
 ## Limitations
 

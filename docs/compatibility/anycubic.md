@@ -20,10 +20,17 @@ Anycubic spool tags are **Mifare Ultralight** with **no authentication and no
 crypto** — trivially readable (and clonable). Read-only decoding spec:
 [`docs/rfid-vendors/anycubic.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/anycubic.md).
 
-## Using TigerTag with Anycubic
+## The workflow
 
-TigerTag chips work on any spool; Tiger Studio maps inventory spools to ACE
-slots and shows live machine state in LAN or cloud mode.
+1. **Add the printer** — two paths: **LAN mode** (local discovery via the
+   `/info` probe; the connection credentials are imported from the vendor
+   slicer's configuration) or **cloud mode** through the Anycubic account.
+2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
+3. **Assign it to an ACE slot** — Tiger Studio maps inventory spools to the
+   ACE multi-color box.
+4. **Live & control** — telemetry, job progress, the FLV camera stream, and
+   a **control panel**: axes, temperatures, light, fan, load/unload per
+   slot.
 
 ## Limitations
 
