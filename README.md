@@ -138,6 +138,7 @@ piece of it.
 | **A user** — what does each product do for me? | [Products](docs/products/README.md) → [FAQ](docs/faq/README.md) |
 | **A printer owner** — does it work with MY printer? | [Compatibility](docs/compatibility/README.md) |
 | **A developer** — how do I build on it? | [Developers](docs/developers/README.md) → [SDKs](docs/developers/sdks.md) → [Cloud API](docs/developers/cloud-api.md) |
+| **A filament manufacturer** — why join? | [For filament manufacturers](docs/vision/for-filament-manufacturers.md) — factory integration in days, at scale |
 | **An AI assistant** — how does this ecosystem work? | **[llms.txt](llms.txt)** — the condensed, canonical explainer |
 | **In a hurry** | [How it works end-to-end](docs/architecture/data-flow.md) in two diagrams |
 

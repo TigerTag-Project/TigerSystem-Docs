@@ -288,10 +288,14 @@ security rules; a client can only touch its own user's data.
 ## Manufacturers
 
 **We're a filament brand — how do we ship TigerTag-tagged spools?**
-The format and reference database are open; chips can be factory-encoded.
-Reach out through the
+Quickly: we have the experience and technology to integrate chips into a
+filament factory **in just a few days, at very low cost** — proven with more
+than 2 million chips already shipped by Rosa3D, eSun, Sunlu, Landu, Jamg He
+and R3D. And every brand that joins strengthens the collective case for
+printer manufacturers to read TigerTag natively. Read
+[For filament manufacturers](../vision/for-filament-manufacturers.md), then
+reach out through the
 **[GitHub organization](https://github.com/TigerTag-Project)**.
-> **TODO:** publish a dedicated manufacturer onboarding guide.
 
 **We're a printer maker — can our firmware read TigerTag?**
 Yes — NTAG/NDEF readers are commodity hardware and the payload spec is public
