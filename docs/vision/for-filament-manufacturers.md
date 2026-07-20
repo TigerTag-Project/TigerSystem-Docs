@@ -69,6 +69,16 @@ Public posts on the brands' own channels — not our press release
 > in the French market, expanding across Europe.
 > ([original post](https://www.instagram.com/p/DUjydNXkc1W/))
 
+## How the tags get into your spools
+
+| | |
+|---|---|
+| <img src="../assets/carrier-branded.png" alt="The TigerTag carrier as it ships — two branded NFC chips" /> | <img src="../assets/refill-with-tigertag-orange.png" alt="The carrier fitted on a filament refill" /> |
+
+*A carrier, not a retooling: two chips, one per folded end, double-sided tape
+in the middle. Your operator peels and sticks — nothing else on the line
+changes.*
+
 ## Already on the shelves
 
 | | | |

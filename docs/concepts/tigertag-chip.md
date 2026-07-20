@@ -53,6 +53,11 @@ A few implementation details:
   tape — the operator peels and sticks, nothing else changes on the line. The
   carrier design is **public and printable at home**.
 
+<img src="../assets/carrier-bare.png" width="440" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" />
+
+*The carrier, bare: the two independent antennas are plainly visible — one
+per folded end, each with its own UID.*
+
 ## Payload
 
 The 144-byte payload encodes the spool's

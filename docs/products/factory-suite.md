@@ -15,6 +15,19 @@ Two tools cover the two halves of the job:
   at line speed: **about 1 second per chip** — thousands of spools a day,
   one click.
 
+## The carrier — two chips, peel and stick
+
+| | |
+|---|---|
+| <img src="../assets/carrier-bare.png" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" /> | <img src="../assets/carrier-branded.png" alt="The TigerTag carrier as it ships, with the two branded chips" /> |
+
+*The two independent NFC chips are plainly visible — one per end. The ends
+fold over the cardboard core so the spool reads from either side; the middle
+holds with double-sided tape. The operator peels and sticks — nothing else on
+the line changes. The carrier design is public and printable at home.*
+
+<img src="../assets/refill-with-tigertag-orange.png" width="340" alt="The carrier fitted on a filament refill" />
+
 ## Proof of origin
 
 Chips written on the production line carry the **factory signature** — the
