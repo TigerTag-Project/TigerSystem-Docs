@@ -64,14 +64,19 @@ examples for whoever finally picks up the thread.
 
 ## A sandbox, on purpose
 
-The TigerSystem ecosystem is deliberately a **sandbox**. Everything we create
-— Tiger Studio, TigerTag Connect, TigerScale, TigerPOD, and other projects to
-come — has no other ambition than to **show the potential**: each is a working
-**proof of concept** of what an **open-source, standard, agnostic,
-cross-platform protocol** like TigerTag makes possible, from a weekend script
-to a full product. Anyone can take inspiration from our integration work and
-**imagine the features of tomorrow**. They are examples to copy, not a
-platform to join.
+The **user-facing side** of TigerSystem is deliberately a **sandbox**. Every
+app and device we create for end users — Tiger Studio, Tiger NFC Connect,
+TigerScale, TigerPOD, and other projects to come — has no other ambition than
+to **show the potential**: each is a working **proof of concept** of what an
+**open-source, standard, agnostic, cross-platform protocol** like TigerTag
+makes possible, from a weekend script to a full product. Anyone can take
+inspiration from our integration work and **imagine the features of
+tomorrow**. They are examples to copy, not a platform to join.
+
+The **factory side is not a sandbox.** Behind the 2.5 million chips runs an
+industrial-grade toolchain — chip management and line-speed NFC/RFID
+programming software — used **in production** by partner filament factories.
+The sandbox is the showroom; the production line is not an experiment.
 
 ## Neutral by design
 

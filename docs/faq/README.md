@@ -15,12 +15,15 @@ app is open source. Chips themselves are the only consumable.
 No — neutrality is a design rule. Any filament, any printer, no partner list.
 
 **Are these apps THE product?**
-No — the ecosystem is deliberately a **sandbox**. Everything we create (Tiger
-Studio, TigerTag Connect, TigerScale, TigerPOD, and projects to come) is a
-working **proof of concept**: its only goal is to show the potential of an
-open-source, standard, agnostic, cross-platform protocol, and to inspire
-others to imagine the features of tomorrow. Use them, fork them, or build your
-own instead — see [A sandbox, on purpose](../vision/why-tigersystem.md).
+No — the **user-facing** side is deliberately a **sandbox**. Every app and
+device we create for end users (Tiger Studio, Tiger NFC Connect, TigerScale,
+TigerPOD, and projects to come) is a working **proof of concept**: its only
+goal is to show the potential of an open-source, standard, agnostic,
+cross-platform protocol, and to inspire others to imagine the features of
+tomorrow. Use them, fork them, or build your own instead. The **factory
+side**, on the other hand, is production-grade: an industrial toolchain
+programs the chips at line speed in partner factories — that part is no
+experiment. See [A sandbox, on purpose](../vision/why-tigersystem.md).
 
 **Why do you build all these demonstrators yourselves?**
 Because nobody else did. More than 2.5 million TigerTag chips have been
@@ -155,16 +158,16 @@ No. The accounts and data live in plain **Firebase** — one shared database, in
 one place, so all the sandbox elements interoperate. TigerHub is the web
 surface built on top of it.
 
-## TigerTag Connect (mobile)
+## Tiger NFC Connect (mobile)
 
 **What does the mobile app do?**
 NFC scanning and chip programming on the go, catalogue browsing, and full
 inventory sync with the same account as the desktop app.
 
 **Where do I download it?**
-It's released on the **App Store** and **Google Play** (currently under the
-name "TigerTag RFID Connect", soon "TigerTag NFC Connect"), with public betas
-on both platforms. All links:
+It's released on the **App Store** and **Google Play** as **Tiger NFC
+Connect** (formerly "TigerTag RFID Connect"), with public betas on both
+platforms. All links:
 [tigersystem.io/fr/download](https://tigersystem.io/fr/download).
 
 ## TigerScale & sensors

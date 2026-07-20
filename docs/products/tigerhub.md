@@ -36,7 +36,7 @@ flowchart TB
 
 The user accounts and the data behind all the apps live in **plain Firebase**
 (Auth + Firestore) — deliberately unbranded infrastructure: **a single shared
-database, in a single place**, so Tiger Studio, TigerTag Connect, TigerScale
+database, in a single place**, so Tiger Studio, Tiger NFC Connect, TigerScale
 and the TigerSystem account all interoperate on the same data. TigerHub is the
 **web surface** built on top of it. See
 [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md).

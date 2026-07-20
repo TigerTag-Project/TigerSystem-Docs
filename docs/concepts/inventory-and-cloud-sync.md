@@ -10,7 +10,7 @@ documents in real time:
 
 ```mermaid
 sequenceDiagram
-    participant Phone as TigerTag Connect
+    participant Phone as Tiger NFC Connect
     participant Cloud as Firebase (Firestore)
     participant Desktop as Tiger Studio
     Phone->>Cloud: scan chip → upsert spool

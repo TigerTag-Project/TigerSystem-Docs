@@ -1,4 +1,4 @@
-# TigerTag Connect (mobile app)
+# Tiger NFC Connect (mobile app)
 
 ## Purpose
 
@@ -12,7 +12,7 @@ the ecosystem and the embodiment of the
 
 ```mermaid
 flowchart LR
-    TAG["🏷 TigerTag chip"] -- "NFC tap" --> CO["📱 TigerTag Connect"]
+    TAG["🏷 TigerTag chip"] -- "NFC tap" --> CO["📱 Tiger NFC Connect"]
     CO -- "read / encode" --> TAG
     CO <--> CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
     CLOUD <--> ST["🖥 Tiger Studio — same account"]
@@ -34,9 +34,8 @@ flowchart LR
 - All download links: **[tigersystem.io/fr/download](https://tigersystem.io/fr/download)**
   — a QR code is also always available in Tiger Studio's sidebar.
 
-> **Naming note:** the store name is currently **"TigerTag RFID Connect"**; it
-> is being renamed **"TigerTag NFC Connect"** to echo the NFC reader already
-> in every phone.
+> **Naming note:** formerly published as *"TigerTag RFID Connect"* — renamed
+> **Tiger NFC Connect** to echo the NFC reader already in every phone.
 
 ## Architecture
 
@@ -56,9 +55,9 @@ allow it.
 
 | | | |
 |---|---|---|
-| <img src="../assets/connect-scan.jpg" alt="TigerTag Connect — scanning a chip by NFC tap" /> | <img src="../assets/connect-inventory.png" alt="TigerTag Connect — the mobile inventory" /> | <img src="../assets/connect-printer-live.png" alt="TigerTag Connect — live printer view" /> |
+| <img src="../assets/connect-scan.jpg" alt="Tiger NFC Connect — scanning a chip by NFC tap" /> | <img src="../assets/connect-inventory.png" alt="Tiger NFC Connect — the mobile inventory" /> | <img src="../assets/connect-printer-live.png" alt="Tiger NFC Connect — live printer view" /> |
 
-<img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio on desktop and TigerTag Connect on mobile, same account, same data" />
+<img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio on desktop and Tiger NFC Connect on mobile, same account, same data" />
 
 ---
 

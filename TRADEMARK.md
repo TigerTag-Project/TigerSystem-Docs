@@ -17,7 +17,7 @@ Usage:
   certification, cloud service or product without written authorization.
 
 Other product names used in this documentation (Tiger Studio, TigerHub,
-TigerScale, TigerPOD, TigerTag Connect) are **not claimed as trademarks** —
+TigerScale, TigerPOD, Tiger NFC Connect) are **not claimed as trademarks** —
 they are the names of open, forkable proof-of-concept products.
 
 Historical note: the Tiger Studio repository carries its own

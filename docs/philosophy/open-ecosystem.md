@@ -17,7 +17,8 @@ Every layer of TigerSystem is published — hardware, firmware, SDKs, apps, docs
 
 ## A sandbox, not a walled garden
 
-The **whole ecosystem** is deliberately **a laboratory, not the destination**.
+The **whole user-facing ecosystem** is deliberately **a laboratory, not the
+destination**.
 Every product — [Tiger Studio](../products/tiger-studio.md), the mobile app,
 [TigerScale](../products/tigerscale.md), [TigerPOD](../products/tigerpod.md) —
 is a working demonstration of what open, documented technology makes possible

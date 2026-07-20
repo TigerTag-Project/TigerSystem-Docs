@@ -58,7 +58,7 @@ shared reference database.
 
 | Tool | Read | Write |
 |---|---|---|
-| [TigerTag Connect](../products/tigertag-connect.md) (mobile NFC) | ✅ | ✅ |
+| [Tiger NFC Connect](../products/tigertag-connect.md) (mobile NFC) | ✅ | ✅ |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | ✅ auto-opens the spool on scan | ✅ guided, UID-checked write |
 | [JS SDK](../developers/sdks.md) (`tigertag` on npm) | ✅ | ✅ |
 | [Python SDK](../developers/sdks.md) | ✅ | ✅ |

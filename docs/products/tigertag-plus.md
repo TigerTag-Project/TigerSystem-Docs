@@ -44,7 +44,7 @@ flowchart LR
 | With | How |
 |---|---|
 | Tiger Studio + TigerPOD/ACR122U | Scanning creates/refreshes the backup; guided restore |
-| TigerTag Connect | Coming soon |
+| Tiger NFC Connect | Coming soon |
 | Firebase (account database) | Stores per-account chip records (UID, first-seen, payload backup) |
 
 ## Links
@@ -53,6 +53,6 @@ flowchart LR
 
 ---
 
-**◀ Previous:** [TigerTag](./tigertag.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerTag Connect](./tigertag-connect.md)
+**◀ Previous:** [TigerTag](./tigertag.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Tiger NFC Connect](./tigertag-connect.md)
 
 **Related:** [The TigerTag chip](../concepts/tigertag-chip.md), [Second Life](../philosophy/second-life.md)

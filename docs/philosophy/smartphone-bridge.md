@@ -8,7 +8,7 @@ upgrade, no purchase required to start.
 
 ```mermaid
 flowchart LR
-    TAG[TigerTag chip on spool] -- NFC tap --> PHONE[Smartphone + TigerTag Connect]
+    TAG[TigerTag chip on spool] -- NFC tap --> PHONE[Smartphone + Tiger NFC Connect]
     PHONE -- sync --> CLOUD[("Your TigerSystem account (Firebase)")]
     CLOUD --> STUDIO[Tiger Studio — desktop]
     STUDIO --> PRINTER[Connected printer]
@@ -41,4 +41,4 @@ to the machine.
 
 **◀ Previous:** [Open ecosystem](./open-ecosystem.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Second Life workflow](./second-life.md)
 
-**Related:** [TigerTag Connect](../products/tigertag-connect.md), [Architecture overview](../architecture/overview.md)
+**Related:** [Tiger NFC Connect](../products/tigertag-connect.md), [Architecture overview](../architecture/overview.md)

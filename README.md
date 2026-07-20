@@ -50,7 +50,7 @@ third-party RFID protocol in the world**. We expected the
 community to invent its own uses for an open NFC identity — it didn't happen.
 So we picked up the subject ourselves.
 
-That's why everything we build — Tiger Studio, TigerTag Connect, TigerScale,
+That's why everything we build — Tiger Studio, Tiger NFC Connect, TigerScale,
 TigerPOD, and every project still to come — has one single goal: **to show the
 potential.** Each product is a working **proof of concept** of what an
 **open-source, standard, agnostic, cross-platform protocol** makes possible
@@ -58,6 +58,10 @@ once a spool can identify itself. Take our integration work as a starting
 point, get inspired, and **imagine the features of tomorrow** — copy them,
 fork them, or ignore them entirely and build your own. **The protocol is the
 point, the products are the proof.**
+
+(To be precise: the *sandbox* is the user-facing software. The **factory
+side** — the industrial chip-programming toolchain behind those 2.5 million
+chips — runs in production at partner factories, and is no experiment.)
 
 <img src="docs/assets/real-bench-setup.jpg" width="100%" alt="A real TigerSystem bench — Tiger Studio Manager, TigerScale, TD1S color sensor, ACR122U reader and TigerPOD" />
 <p align="center"><em>Not a mockup: the sandbox on a real bench — Studio, TigerScale, TD1S and TigerPOD working together.</em></p>
@@ -87,7 +91,7 @@ flowchart LR
         SLICER["🔪 Your slicer<br/>(unchanged)"]
     end
     subgraph Your screens
-        CO["📱 TigerTag Connect<br/>mobile"]
+        CO["📱 Tiger NFC Connect<br/>mobile"]
         ST["🖥 Tiger Studio<br/>desktop"]
         WEB["🌐 TigerHub<br/>tigersystem.io"]
     end
@@ -116,7 +120,7 @@ the TigerTag user; every other vision is accepted and encouraged.
 |---|---|
 | 🏷 **[TigerTag](docs/products/tigertag.md)** | The chip — gives any spool a memory of its own |
 | 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — restorable to factory state anytime |
-| 📱 **[TigerTag Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
+| 📱 **[Tiger NFC Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
 | 🖥 **[Tiger Studio](docs/products/tiger-studio.md)** | Mission control on desktop — inventory, racks, printers, sensors |
 | 🌐 **[TigerHub](docs/products/tigerhub.md)** | The ecosystem's web home — showcase, wishlists, friend invites, sharing |
 | 📡 **[TigerPOD](docs/products/tigerpod.md)** | A 3D-printable scanner stand for your desk — free STL |
@@ -154,7 +158,7 @@ piece of it.
 
 - 🌐 **[tigersystem.io](https://tigersystem.io)** — TigerHub: the ecosystem site, wishlists & sharing
 - ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
-- 📱 **[Download TigerTag Connect](https://tigersystem.io/fr/download)** — iOS & Android (stores + public betas)
+- 📱 **[Download Tiger NFC Connect](https://tigersystem.io/fr/download)** — iOS & Android (stores + public betas)
 - 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
 - 📰 **[Press kit](docs/press/README.md)** — high-res visuals, free to use in coverage
 

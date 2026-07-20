@@ -5,7 +5,7 @@
 ```mermaid
 flowchart TB
     TAG["TigerTag chip<br/>(open NDEF payload on the spool)"]
-    CONNECT["TigerTag Connect<br/>(mobile — NFC scan & encode)"]
+    CONNECT["Tiger NFC Connect<br/>(mobile — NFC scan & encode)"]
     CLOUD["Firebase<br/>(accounts + Firestore + cdn.tigertag.io)"]
     STUDIO["Tiger Studio<br/>(desktop — inventory, devices, printers)"]
     PRINTERS["Printer integrations<br/>(Bambu Lab · Creality · Elegoo · FlashForge · Snapmaker · Anycubic)"]
@@ -26,7 +26,7 @@ flowchart TB
 | Layer | Role | Canonical docs |
 |---|---|---|
 | **TigerTag chip** | Portable, open identity of the physical spool | [Chip format](../concepts/tigertag-chip.md) |
-| **TigerTag Connect** | The smartphone bridge: scan, encode, browse | [Product page](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | The smartphone bridge: scan, encode, browse | [Product page](../products/tigertag-connect.md) |
 | **Firebase** | One shared database — accounts, inventory, sync; the interoperability point of the sandbox | [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | The ecosystem's web home: showcase, wishlists, friends, sharing | [Product page](../products/tigerhub.md) |
 | **Tiger Studio** | Desktop workbench: inventory, racks, sensors, printers | [Product page](../products/tiger-studio.md) |
@@ -50,7 +50,7 @@ flowchart TB
         TD1S["🎨 TD1S color sensor"]
     end
     subgraph APPS["🖥 Apps"]
-        CO["📱 TigerTag Connect"]
+        CO["📱 Tiger NFC Connect"]
         ST["🖥 Tiger Studio"]
         WEB["🌐 TigerHub<br/>tigersystem.io"]
     end

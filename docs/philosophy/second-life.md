@@ -28,7 +28,7 @@ flowchart LR
 
 ## How encoding happens
 
-- **TigerTag Connect** (mobile) — program chips by NFC tap.
+- **Tiger NFC Connect** (mobile) — program chips by NFC tap.
 - **Tiger Studio** (desktop) — guided chip update with an ACR122U /
   [TigerPOD](../products/tigerpod.md) reader: place the chip, UID-match check,
   verified write.

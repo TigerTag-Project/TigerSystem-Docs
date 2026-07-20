@@ -46,7 +46,7 @@ for the canonical byte-level specification.
 
 | With | How |
 |---|---|
-| TigerTag Connect | NFC tap: read, encode |
+| Tiger NFC Connect | NFC tap: read, encode |
 | Tiger Studio | Reader scan auto-opens the spool; guided chip update |
 | SDKs | Parse / verify / encode from JS or Python |
 | Printers | Indirectly — via the [smartphone bridge](../philosophy/smartphone-bridge.md) and Studio's printer links |

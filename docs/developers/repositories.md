@@ -27,7 +27,7 @@ To avoid documentation drift, each fact has exactly **one** home:
 | Vendor RFID decoding sheets | TigerTag-Studio-Manager (`docs/rfid-vendors/`) |
 | App feature catalogue & changelog | TigerTag-Studio-Manager (`FEATURES.md`, `CHANGELOG.md`) |
 
-> **Note:** mobile app (TigerTag Connect), TigerHub and backend repositories
+> **Note:** mobile app (Tiger NFC Connect), TigerHub and backend repositories
 > are not public at this time.
 
 ---
