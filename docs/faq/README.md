@@ -69,8 +69,13 @@ factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu, Jamg He,
 R3D — with more being integrated.
 
 **How does a chip get on a spool?**
-It sticks on. One chip per spool, anywhere convenient — once attached, any tap
-or scan identifies that exact spool.
+It sticks on — and there are **two per spool, on opposite sides**. That's
+deliberate: printers often share one RFID reader between two slots, so a chip
+must face the reader whatever side the spool sits on; you can hand-scan
+without flipping the spool; you can scan it without pulling it out of its
+slot; and if one chip fails the other still answers. Bonus: every empty spool
+gives you two reusable chips.
+See [why two chips](../concepts/tigertag-chip.md).
 
 **Do I need internet to read a chip?**
 No. The chip's payload is complete and self-sufficient: phone in airplane

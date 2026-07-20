@@ -24,6 +24,9 @@ flowchart LR
 
 - Standard **NTAG213 / 215 / 216** chip (25 mm round recommended), 144-byte
   open NDEF payload — sized to fit the smallest NTAG213; no keys, no lock-in.
+- **Two chips per spool, on opposite sides** — one always faces the reader
+  (printer slot, AMS, phone in hand) and each backs the other up
+  ([why](../concepts/tigertag-chip.md)).
 - Identity resolved against the shared [reference database](../concepts/universal-filament-identity.md).
 - Writable and **rewritable** — enables the [Second Life workflow](../philosophy/second-life.md);
   official branded chips ship as NTAG215 so the chip itself can be reused as a

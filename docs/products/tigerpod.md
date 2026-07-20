@@ -7,6 +7,11 @@ A free, open-source 3D-printable stand holding two USB NFC readers: place a
 spool, it identifies itself in Tiger Studio; place a blank chip, encode it.
 As natural as tapping a phone, but hands-free on the desktop.
 
+Why **two** readers? Because every spool carries
+[**two chips**, on opposite sides](../concepts/tigertag-chip.md) — the POD
+reaches both in one pass: encode both, verify both, or repair one from the
+other, without repositioning the spool.
+
 ## Where it sits
 
 ```mermaid

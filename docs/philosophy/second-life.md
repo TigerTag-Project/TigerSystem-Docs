@@ -37,10 +37,11 @@ flowchart LR
 
 ## The chip's own second life — zero e-waste
 
-The spool isn't the only thing that gets a second life: **the chip does too.**
-When a spool is truly done, its NFC chip is a standard NTAG — peel it off and
-re-encode it as plain NDEF for anything: a smart keychain, an NFC business
-card, a connected object of your own.
+The spool isn't the only thing that gets a second life: **the chips do too.**
+Every spool carries [two chips](../concepts/tigertag-chip.md) — so every kilo
+of filament you print leaves you **two standard NTAG chips** to harvest. Peel
+them off and re-encode them as plain NDEF for anything: a smart keychain, an
+NFC business card, a connected object of your own.
 
 That's exactly why official branded chip production switched to **NTAG215**:
 more memory headroom means more reuse possibilities once the spool is empty.

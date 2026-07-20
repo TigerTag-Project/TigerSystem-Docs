@@ -11,11 +11,34 @@
 | Authentication | None — openly readable |
 | Write lock | **None** — chips ship unlocked; the user can rewrite them, including migrating to another protocol entirely |
 | Crypto | Reserved 16-byte signature slot — carries the factory authentication (preserved by a [TigerTag+](../products/tigertag-plus.md) backup/restore) |
+| Chips per spool | **Two**, placed on opposite sides |
 | Readable by | Any NFC smartphone, ACR122U-class USB readers, [TigerPOD](../products/tigerpod.md) |
 
 This is the deliberate opposite of manufacturer tags (Mifare Classic with
 derived keys, AES sectors, RSA signatures — see
 [compatibility](../compatibility/README.md)): a TigerTag chip hides nothing.
+
+## Why every spool carries TWO chips
+
+Two chips, on opposite sides of the spool — it looks redundant, it's actually
+the smartest detail of the format:
+
+- **Printers share readers.** A machine typically has one RFID reader for two
+  spools (left/right); a Bambu Lab AMS has 2 readers for 4 slots; on a
+  Snapmaker the spool sits either side of the printer. With a chip on each
+  side, **whatever the slot, one chip always faces the reader**.
+- **No flipping when hand-scanning.** However you grab the spool, a chip is
+  facing you — tap and done.
+- **Scan in place.** A spool mounted on an AMS Lite, the side of an Elegoo
+  Centauri Carbon or a FlashForge can be scanned without pulling it out.
+- **Integrator freedom.** A filament-dryer maker just puts the reader wherever
+  fits — left or right for a single-spool dryer, between the two spools for a
+  dual — and it always works.
+- **Redundancy.** If one chip stops answering, the other still identifies the
+  spool — and serves to repair the broken one.
+- **Double the harvest.** At end of life, every kilo of filament printed
+  leaves you **two reusable NTAG chips** for DIY projects
+  ([zero e-waste](../philosophy/second-life.md)).
 
 ## Payload
 
