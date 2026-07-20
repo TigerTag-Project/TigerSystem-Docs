@@ -7,8 +7,9 @@ material detection, automatic settings. Every printer maker answers with a
 **closed tag, locked to their machines, feeding their cloud** — zero
 interoperability, zero value for your brand outside their walls.
 
-**TigerTag is, today, the only viable open smart-spool solution shipping at
-scale**: an open, standard, agnostic, cross-platform protocol — with more than
+**TigerTag is the most deployed third-party RFID protocol in the world** —
+and, today, the only viable open smart-spool solution shipping at scale: an
+open, standard, agnostic, cross-platform protocol with more than
 **2 million chips already produced** and integrated at the factory by brands
 like Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme and Nanovia.
 

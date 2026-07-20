@@ -42,8 +42,9 @@ format, not a walled garden.
 ## A sandbox, on purpose
 
 Truth be told, building all this ourselves was never the plan. With **more
-than 2 million TigerTag chips produced** — shipping from the factory in
-filament by brands like Rosa3D, eSun, Sunlu or R3D — we expected the
+than 2 million chips produced** — shipping from the factory in filament by
+brands like Rosa3D, eSun, Sunlu or R3D — **TigerTag is the most deployed
+third-party RFID protocol in the world**. We expected the
 community to invent its own uses for an open NFC identity — it didn't happen.
 So we picked up the subject ourselves.
 

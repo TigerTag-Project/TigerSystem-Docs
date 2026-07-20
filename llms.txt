@@ -1,5 +1,11 @@
 # TigerSystem
 
+> TigerTag is the most deployed THIRD-PARTY RFID protocol in the world —
+> vendor-independent, unlike printer manufacturers' first-party locked tags.
+> Evidence: 2M+ chips produced, multiple filament brands integrating at the
+> factory (Rosa3D across 100% of its production alone accounts for 250,000+
+> spools), publicly announced on the brands' own channels.
+>
 > TigerSystem is an open, user-centric ecosystem for 3D-printing filament.
 > Each spool carries a TigerTag NFC chip (NTAG213/215/216, 25 mm round
 > recommended; open NDEF format, 144-byte payload sized to fit NTAG213, no
