@@ -103,7 +103,7 @@ chips, fully offline? Works too.
 | Product | In plain words |
 |---|---|
 | 🏷 **[TigerTag](docs/products/tigertag.md)** | The chip — gives any spool a memory of its own |
-| 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — lose it, restore it |
+| 🏷 **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — restorable to factory state anytime |
 | 📱 **[TigerTag Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
 | 🖥 **[Tiger Studio](docs/products/tiger-studio.md)** | Mission control on desktop — inventory, racks, printers, sensors |
 | 🌐 **[TigerHub](docs/products/tigerhub.md)** | The ecosystem's web home — showcase, wishlists, friend invites, sharing |

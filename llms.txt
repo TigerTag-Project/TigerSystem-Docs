@@ -38,9 +38,12 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
 ## Vocabulary
 
 - **TigerTag**: the open RFID standard AND the physical NFC chip on a spool.
-- **TigerTag+**: certified tier of the chip — its content is backed up in the
-  owner's cloud account (keyed by chip UID); a scan can prove physical
-  possession.
+- **TigerTag+**: a TigerTag whose content has been backed up in the owner's
+  account (keyed by chip UID). Backup is created by scanning in Tiger Studio
+  with a TigerPOD/ACR122U reader (mobile support planned). Restore rewrites
+  the ORIGINAL chip (same UID only) back to its factory state, factory
+  authentication included — a safeguard, not a cloning mechanism. Also a
+  sandbox concept demonstrating chip backup/restore.
 - **TigerTag Connect**: the iOS/Android mobile app (NFC scan, chip encoding,
   catalogue browsing). Also called "TigerTag RFID Connect".
 - **Tiger Studio (Manager)**: the open-source Electron desktop app —

@@ -10,7 +10,7 @@
 | Official branded chips | Produced as **NTAG215** — the extra memory maximizes end-of-life reuse (standard NDEF objects) so the chip never becomes e-waste |
 | Authentication | None — openly readable |
 | Write lock | **None** — chips ship unlocked; the user can rewrite them, including migrating to another protocol entirely |
-| Crypto | Reserved 16-byte signature slot (used by [TigerTag+](../products/tigertag-plus.md) certification) |
+| Crypto | Reserved 16-byte signature slot — carries the factory authentication (preserved by a [TigerTag+](../products/tigertag-plus.md) backup/restore) |
 | Readable by | Any NFC smartphone, ACR122U-class USB readers, [TigerPOD](../products/tigerpod.md) |
 
 This is the deliberate opposite of manufacturer tags (Mifare Classic with

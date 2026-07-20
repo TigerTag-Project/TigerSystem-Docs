@@ -43,9 +43,12 @@ Yes — chips are rewritable, which is the point of the
 spool and re-encode its chip.
 
 **What is TigerTag+?**
-The certified tier: same open chip, plus a cloud backup bound to your account
-and the ability to prove physical possession by scanning.
-See [TigerTag+](../products/tigertag-plus.md).
+A TigerTag your account has backed up. Scan the chip in Tiger Studio with a
+TigerPOD/ACR122U reader (mobile support coming) and its exact content —
+factory authentication included — is saved, keyed to that chip's physical
+UID. If the chip is ever rewritten or corrupted, you can reprogram it back to
+its factory state — **on the original chip only** (the UID must match the
+backup). See [TigerTag+](../products/tigertag-plus.md).
 
 **Where do I buy chips?**
 Two equally valid answers. Official TigerTag-branded chips are at

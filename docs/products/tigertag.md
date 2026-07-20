@@ -30,7 +30,8 @@ flowchart LR
   plain NDEF object (keychain, business card…) once the spool is empty —
   never e-waste.
 - Readable by any NFC smartphone, ACR122U readers and [TigerPOD](./tigerpod.md).
-- Reserved 16-byte signature slot, used by [TigerTag+](./tigertag-plus.md).
+- Reserved 16-byte signature slot carrying the factory authentication —
+  preserved by a [TigerTag+](./tigertag-plus.md) backup/restore.
 
 ## Architecture
 

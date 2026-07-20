@@ -2,54 +2,55 @@
 
 ## Purpose
 
-**TigerTag+ is the chip your account never forgets.** Same open chip, one
-superpower: its content is safely backed up in your cloud account. Chip
-damaged or lost? Restore it. Need to prove the spool is really in your hands?
-One scan does it.
+**TigerTag+ is a TigerTag your account remembers.** Scan a chip in
+[Tiger Studio](./tiger-studio.md) with a [TigerPOD](./tigerpod.md) /
+ACR122U reader and its exact content is **backed up in the cloud, keyed by
+the chip's physical UID** — a chip with a backup *is* a TigerTag+. (The same
+technology is coming to the mobile app soon.)
+
+Like everything in the ecosystem, it is also a **sandbox concept**: a working
+proof that a factory-encoded chip can be backed up and later **reprogrammed
+back to its exact factory state — factory authentication included** — as long
+as the data is written back into the **original chip, the one whose UID
+matches the backup**.
 
 ## Where it sits
 
 ```mermaid
 flowchart LR
-    TAGP["🏷 TigerTag+ chip"] -- "scan" --> APP["📱 Connect / 🖥 Studio"]
-    APP -- "backup (by chip UID)" --> CLOUD[("☁ Your account")]
-    CLOUD -- "restore / re-encode" --> APP -- "write" --> TAGP
-    APP -- "certified scan = proof of possession" --> CLOUD
+    TAGP["🏷 TigerTag chip"] -- "scan (Tiger Studio + POD)" --> ST["🖥 Tiger Studio"]
+    ST -- "backup keyed by chip UID" --> FB[("☁ Your TigerSystem account")]
+    FB -- "restore — same UID only" --> ST -- "rewrite to factory state" --> TAGP
 ```
 
-## Features
+## What the backup gives you
 
-- Everything a standard [TigerTag](./tigertag.md) does — the payload stays open.
-- **Chip backup**: the chip's content is stored in the owner's TigerSystem
-  account (Firebase), keyed by the chip's physical UID; a chip with a backup
-  *is* a TigerTag+.
-- **Restore / re-encode** from the backup if a chip is lost or damaged.
-- **Certified scans**: a TigerTag+ scan can prove physical possession of the
-  chip to the cloud — used to unlock account-level capabilities.
+- **Factory-state restore**: if the chip's content is accidentally rewritten
+  or corrupted, reprogram it back exactly as the factory encoded it —
+  **without losing the factory authentication**.
+- **Same chip only**: the restore is valid only on the original chip; the
+  backup is bound to its physical UID. It is a safeguard for *that* chip, not
+  a way to clone it.
+- **Proof of possession**: a scan matching the backup shows the original chip
+  is physically in your hands.
 
-> **TODO:** public commercial description (pricing, where to buy, exact unlock
-> perks). Keep this page aligned with **[tigertag.io](https://tigertag.io)**
-> once published there.
-
-## Architecture
-
-The backup lives in the user's private cloud data (owner-only, rules-enforced —
-see [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md)). The
-chip's reserved 16-byte signature slot supports certification.
+> **Note:** creating the backup currently requires **Tiger Studio + a
+> USB reader (TigerPOD / ACR122U)**; mobile support is planned.
 
 ## Interactions
 
 | With | How |
 |---|---|
-| TigerTag Connect / Tiger Studio | Scanning registers the chip and its backup on the account |
+| Tiger Studio + TigerPOD/ACR122U | Scanning creates/refreshes the backup; guided restore |
+| TigerTag Connect | Coming soon |
 | Firebase (account database) | Stores per-account chip records (UID, first-seen, payload backup) |
 
 ## Links
 
-- 🛒 Buy chips: **[tigertag.io](https://tigertag.io)** (shop)
+- 🛒 Official chips: **[tigertag.io](https://tigertag.io)** (shop)
 
 ---
 
 **◀ Previous:** [TigerTag](./tigertag.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerTag Connect](./tigertag-connect.md)
 
-**Related:** [The TigerTag chip](../concepts/tigertag-chip.md)
+**Related:** [The TigerTag chip](../concepts/tigertag-chip.md), [Second Life](../philosophy/second-life.md)

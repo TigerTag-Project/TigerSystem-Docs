@@ -10,7 +10,7 @@ The TigerSystem ecosystem, one page per product.
 | Product | What it is | Type |
 |---|---|---|
 | [TigerTag](./tigertag.md) | Open RFID/NFC chip + standard for spool identity | Hardware + spec |
-| [TigerTag+](./tigertag-plus.md) | Certified TigerTag with cloud backup | Hardware + service |
+| [TigerTag+](./tigertag-plus.md) | A TigerTag backed up in your account — factory-state restore on the original chip | Hardware + service |
 | [TigerTag Connect](./tigertag-connect.md) | Mobile app (iOS/Android) — scan, encode, browse | App |
 | [Tiger Studio](./tiger-studio.md) | Desktop app — inventory, racks, sensors, printers | App |
 | [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |
