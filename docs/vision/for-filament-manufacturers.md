@@ -23,6 +23,10 @@ days**:
 - The shared reference database gives your products a precise, universal
   identity every compatible app resolves identically.
 
+Brands shipping TigerTags in their products can carry the **TigerTag
+Certified** mark — a visible signal to customers that the spool is smart and
+open.
+
 > Reach out through the
 > **[GitHub organization](https://github.com/TigerTag-Project)** to start the
 > conversation.

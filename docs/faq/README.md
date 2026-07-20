@@ -300,7 +300,8 @@ reach out through the
 **Can my product become "TigerTag Certified"?**
 Yes — **TigerTag Certified** is the certification mark for third-party
 products that integrate the ability to read and/or write TigerTags (a
-printer, a dryer, an app, a reader…). Reach out through the
+printer, a dryer, an app, a reader…) **and for filament manufacturers that
+ship TigerTags in their products**. Reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).
 
 **We're a printer maker — can our firmware read TigerTag?**
