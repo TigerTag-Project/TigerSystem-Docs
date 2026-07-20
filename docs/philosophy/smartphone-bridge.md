@@ -43,6 +43,11 @@ With the bridge, filament data reaches the printer through
 live today) — the spool identifies itself to the *system*, and the system talks
 to the machine.
 
+The proof by example: **FlashForge printers have no RFID reader at all** —
+and through the bridge they now work with NFC-identified filament anyway. An
+entire new capability, added to someone else's machines, **totally free for
+the user** ([the FlashForge case](../compatibility/flashforge.md)).
+
 ---
 
 **◀ Previous:** [Open ecosystem](./open-ecosystem.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Second Life workflow](./second-life.md)

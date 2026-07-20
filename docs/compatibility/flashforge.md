@@ -13,9 +13,11 @@
 ## Native RFID — none: the machines have no reader
 
 FlashForge printers ship **without any RFID reader**. That makes this the
-clearest demonstration of the TigerSystem advantage: **we brought the
-smart-spool experience to a printer that has no reader at all — with zero
-machine modification, at zero cost.**
+clearest demonstration of the TigerSystem advantage: **we gave FlashForge
+machines the ability to work with NFC-identified filament — using the NFC
+reader already in the user's smartphone.** A brand-new capability, added to
+someone else's printer, **totally free, at zero cost to the user, with zero
+machine modification.**
 
 ## Using TigerTag with FlashForge
 
