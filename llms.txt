@@ -69,7 +69,11 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   Every spool carries TWO chips on opposite sides — so one always faces the
   reader (printers often share one reader across two slots; AMS: 2 readers
   for 4 slots), hand-scanning needs no flipping, in-slot scanning works,
-  integrators place readers freely, and one chip backs the other up. End of
+  integrators place readers freely, and one chip backs the other up. The two
+  chips are fully independent (two distinct UIDs, no shared antenna), written
+  together as a pair ("Twin Tag") and kept identical — counted as ONE spool.
+  Factory spools mount them on a public, printable folded carrier (one chip
+  per end) over the cardboard core. End of
   life: two reusable NTAG chips per kilo printed.
 - **TigerTag+**: a TigerTag whose content has been backed up in the owner's
   account (keyed by chip UID). Backup is created by scanning in Tiger Studio

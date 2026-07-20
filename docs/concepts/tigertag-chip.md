@@ -42,6 +42,17 @@ the smartest detail of the format:
   leaves you **two reusable NTAG chips** for DIY projects
   ([zero e-waste](../philosophy/second-life.md)).
 
+A few implementation details:
+
+- The two chips are **fully independent — each has its own UID**; there is no
+  shared antenna. They are **written together as a pair (Twin Tag)** and kept
+  identical for the spool's whole life, down to the grams left — and always
+  counted as **one** spool.
+- On factory spools, the chips ride a **carrier**: a strip whose two ends
+  fold over the cardboard core (one chip per end), held with double-sided
+  tape — the operator peels and sticks, nothing else changes on the line. The
+  carrier design is **public and printable at home**.
+
 ## Payload
 
 The 144-byte payload encodes the spool's
