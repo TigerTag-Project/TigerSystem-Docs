@@ -58,7 +58,7 @@ filament.
 
 So we went to work — and to China. We presented the project to printer
 manufacturers — Bambu Lab (to Dr. Tao, its CEO), Elegoo, Creality, Anycubic,
-BigTreeTech — and to
+and Biqu / BigTreeTech (meeting its CEO as well) — and to
 filament makers and equipment suppliers (eSun, R3D, Landu, Sunlu, Jamg He),
 after having already presented it to Rosa3D in Europe. The welcome was warm.
 We designed a protocol that was **more optimized and more versatile** than
