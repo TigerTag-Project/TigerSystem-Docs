@@ -207,6 +207,21 @@ into sees the same data in real time. See
 Chips are fully readable offline; apps keep a local cache. Printer links are
 LAN-local and don't need the internet at all (except Anycubic cloud mode).
 
+**I don't want ANY cloud. Can I still use TigerTag?**
+Yes, 100 %. The chip's payload is complete and self-sufficient: read it,
+write it, and manage a fully local inventory with no cloud, no account, no
+server — the [JS and Python SDKs](../developers/sdks.md) exist precisely to
+make that easy in your own or DIY projects. Even **TigerTag+ authenticates
+locally, without an internet connection**. The cloud layer is optional
+comfort (multi-device sync, sharing), never a requirement — we propose one
+vision of the TigerTag user, and every other vision is accepted and
+encouraged.
+
+**I know nothing about NFC or RFID — is this for me?**
+Especially for you. The whole experience is designed novice-first: tap a
+spool with your phone, it introduces itself, done. No jargon required — the
+technical layers exist for those who want to dig, not as a prerequisite.
+
 **Can other people see my spools?**
 Only if you choose: accepted friends, a public toggle, or a TigerHub share
 link. Everything is private by default and enforced server-side.

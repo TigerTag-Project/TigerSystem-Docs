@@ -33,6 +33,8 @@ flowchart LR
   a way to clone it.
 - **Proof of possession**: a scan matching the backup shows the original chip
   is physically in your hands.
+- **Works offline too**: a TigerTag+ can be authenticated **locally, without
+  any internet connection**.
 
 > **Note:** creating the backup currently requires **Tiger Studio + a
 > USB reader (TigerPOD / ACR122U)**; mobile support is planned.

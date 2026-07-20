@@ -95,8 +95,12 @@ flowchart LR
     SLICER -- print jobs, as always --> PRN
 ```
 
-Every piece is optional. Phone only? Works. Desktop only? Works. Just the
-chips, fully offline? Works too.
+Every piece is optional. Phone only? Works. Desktop only? Works. **Zero
+cloud, everything local?** Works too: the chips are 100 % offline-readable —
+even TigerTag+ authenticates locally without internet — and with the
+[SDKs](docs/developers/sdks.md) anyone can read, write and manage an
+inventory entirely at home, no account, no server. We propose *one* vision of
+the TigerTag user; every other vision is accepted and encouraged.
 
 ## Meet the family
 
