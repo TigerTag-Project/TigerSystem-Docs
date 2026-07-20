@@ -153,6 +153,7 @@ piece of it.
 - ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
 - 📱 **[Download TigerTag Connect](https://tigersystem.io/fr/download)** — iOS & Android (stores + public betas)
 - 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
+- 📰 **[Press kit](docs/press/README.md)** — high-res visuals, free to use in coverage
 
 ## Contributing
 
