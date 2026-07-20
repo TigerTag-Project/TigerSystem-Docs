@@ -9,9 +9,10 @@ field.
 
 Two tools cover the two halves of the job:
 
-- **TigerTag Manager** and **TigerTag Factory** — one manages the brand's
-  filament database (products, materials, colors, settings); the other
-  **mass-writes the data into every spool produced**, at line speed.
+- **TigerTag Manager** — manages the brand's **filament database**: products,
+  materials, colors, settings.
+- **TigerTag Factory** — **mass-writes the data into every spool produced**,
+  at line speed on the production line.
 
 ## Proof of origin
 

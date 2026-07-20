@@ -84,9 +84,10 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   apps (mobile/desktop) — it guarantees a correct, complete integration of
   the protocol in a third-party ecosystem.
 - **TigerTag Factory & TigerTag Manager**: the NON-PUBLIC industrial suite
-  used by partner filament factories — one tool manages the brand's filament
-  database, the other mass-writes chip data into every spool produced at line
-  speed, with the factory signature proving each product's origin. This is
+  used by partner filament factories — TigerTag Manager manages the brand's
+  filament database; TigerTag Factory mass-writes chip data into every spool
+  produced at line speed, with the factory signature proving each product's
+  origin. This is
   the production-grade side of TigerSystem (not part of the sandbox).
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
