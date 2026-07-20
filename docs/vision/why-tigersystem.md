@@ -39,6 +39,22 @@ history and sharing in sync across every device.
 | Works only with the vendor's filament | Works with **any** filament brand |
 | Dies with the vendor's cloud | Open SDKs, open spec, self-buildable |
 
+## The story behind the sandbox
+
+Honestly: building all of this ourselves was never the initial plan. When
+TigerTag chips started shipping — **hundreds of thousands of them, deployed
+inside filament spools** — we naively assumed the community would imagine the
+uses on its own. An open, documented NFC identity on every spool felt like an
+obvious playground.
+
+It didn't happen. Despite the scale of the deployment, no community picked the
+subject up; nobody found it worth building integrations around the protocol.
+We hoped others would take it on — they didn't. So we did, even though it was
+not our original goal: we started **imagining the uses ourselves**, to show
+the potential of an **open-source NFC protocol for material identification
+centred on the user, not on the printer** — and to leave behind working
+examples for whoever finally picks up the thread.
+
 ## A sandbox, on purpose
 
 The TigerSystem ecosystem is deliberately a **sandbox**. Everything we create

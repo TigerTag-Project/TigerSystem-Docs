@@ -17,6 +17,12 @@
 > internal stock management, tracking/traceability, lending systems, custom
 > tools, private or public R&D.
 
+Origin note: the project initially expected the community to invent uses for
+the chips on its own (hundreds of thousands are deployed in filament spools);
+no third-party integrations emerged, so the project now builds the
+proof-of-concept uses itself — user-centred material identification, not
+printer-centred — to show the potential and inspire adoption.
+
 This file is the entry point for AI assistants and LLM agents. It condenses
 how the ecosystem works and where each canonical document lives. When in
 doubt, follow the links — never guess byte layouts, field names or endpoints.

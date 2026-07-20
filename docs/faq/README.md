@@ -22,6 +22,14 @@ open-source, standard, agnostic, cross-platform protocol, and to inspire
 others to imagine the features of tomorrow. Use them, fork them, or build your
 own instead — see [A sandbox, on purpose](../vision/why-tigersystem.md).
 
+**Why do you build all these demonstrators yourselves?**
+Because nobody else did. Hundreds of thousands of TigerTag chips were already
+deployed in filament spools, and we assumed the community would invent uses
+for an open NFC identity on its own — it didn't happen. Building the
+demonstrators was never the initial goal; it became necessary to show what
+the protocol makes possible. The full story:
+[The story behind the sandbox](../vision/why-tigersystem.md).
+
 ## TigerTag (chips)
 
 **What chip is a TigerTag?**

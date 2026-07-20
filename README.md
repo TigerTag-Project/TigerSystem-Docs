@@ -39,8 +39,13 @@ format, not a walled garden.
 
 ## A sandbox, on purpose
 
-Everything we build — Tiger Studio, TigerTag Connect, TigerScale, TigerPOD,
-and every project still to come — has one single goal: **to show the
+Truth be told, building all this ourselves was never the plan. With **hundreds
+of thousands of TigerTag chips already deployed in filament spools**, we
+expected the community to invent its own uses for an open NFC identity — it
+didn't happen. So we picked up the subject ourselves.
+
+That's why everything we build — Tiger Studio, TigerTag Connect, TigerScale,
+TigerPOD, and every project still to come — has one single goal: **to show the
 potential.** Each product is a working **proof of concept** of what an
 **open-source, standard, agnostic, cross-platform protocol** makes possible
 once a spool can identify itself. Take our integration work as a starting
