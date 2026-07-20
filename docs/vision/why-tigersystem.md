@@ -80,7 +80,12 @@ unbranded NTAG chips** on Amazon, AliExpress or locally — and that is
 deliberately fine. Nothing blocks them; the protocol works identically.
 Official TigerTag-branded chips help support the R&D, but they are not
 required: **the protocol living in users' homes and offices is the first
-reward.** Nothing in the ecosystem is a prerequisite: read the chip spec,
+reward.**
+
+Even the protocol itself is not imposed: chips ship **unlocked**, so a user
+who prefers another NFC/RFID format — existing or custom — can rewrite the
+chip and migrate. TigerTag is the base format spools arrive with, not a
+format you're locked into. Nothing in the ecosystem is a prerequisite: read the chip spec,
 pick up an SDK, and build the software or the business you actually want.
 
 ---

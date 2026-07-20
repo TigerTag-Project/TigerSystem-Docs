@@ -16,6 +16,12 @@ a close cousin of TigerTag.
 | Certification | Optional [TigerTag+](../products/tigertag-plus.md) backup/signature | None |
 | Openness | Open spec + SDKs | Open spec |
 
+## Migrating a chip from TigerTag to OpenSpool
+
+TigerTag chips are **never write-locked** — TigerTag is just the base
+protocol spools ship with. If you prefer OpenSpool (or any custom format),
+you are free to rewrite a factory chip's data into it.
+
 ## Interoperability — 📋 spec documented, read support planned
 
 A read-only decoding sheet for OpenSpool tags is maintained in

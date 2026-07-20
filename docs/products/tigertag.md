@@ -60,6 +60,11 @@ blank NTAG chip bought anywhere (Amazon, AliExpress, locally) works
 identically, and nothing blocks it. Branded chips help support the R&D;
 adoption of the protocol is the first reward.
 
+The freedom runs both ways: **chips are never write-locked**. TigerTag is
+simply the base protocol filament factories ship spools with — if you prefer
+another NFC/RFID protocol (custom or existing), you can rewrite the chip and
+migrate its data to it. Your spool, your chip, your format.
+
 ## Links
 
 - 🛒 Official chips: **[tigertag.io](https://tigertag.io)** (shop — supports the R&D)

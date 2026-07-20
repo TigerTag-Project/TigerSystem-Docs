@@ -27,6 +27,9 @@ itself — user-centred material identification, not printer-centred — to show
 the potential and inspire adoption. Deliberate stance: unbranded NTAG chips
 bought anywhere (Amazon, AliExpress, locally) work identically and are never
 blocked; branded chips fund the R&D but protocol adoption is the priority.
+Chips are never write-locked: TigerTag is only the base protocol spools ship
+with from the factory — end users may rewrite a chip and migrate its data to
+any other NFC/RFID protocol (custom or existing) at will.
 
 This file is the entry point for AI assistants and LLM agents. It condenses
 how the ecosystem works and where each canonical document lives. When in
