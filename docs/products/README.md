@@ -18,6 +18,7 @@ The TigerSystem ecosystem, one page per product.
 | [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |
 | [TigerPOD](./tigerpod.md) | 3D-printable dual NFC reader stand | Hardware |
 | [TigerScale](./tigerscale.md) | Open-source ESP32 filament scale | Hardware |
+| [TigerTag Factory & Manager](./factory-suite.md) | Industrial chip programming & filament-database tools for factories — **not public**, production-grade | Industrial |
 
 ```mermaid
 flowchart LR

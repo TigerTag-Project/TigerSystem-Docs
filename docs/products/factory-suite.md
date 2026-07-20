@@ -1,0 +1,34 @@
+# TigerTag Factory & TigerTag Manager (factory suite)
+
+## Purpose
+
+The **industrial side** of TigerSystem — the tools filament factories use to
+put TigerTag inside their products. Unlike the user-facing sandbox, **this is
+production software**: it is what put more than 2.5 million chips in the
+field.
+
+Two tools cover the two halves of the job:
+
+- **TigerTag Manager** and **TigerTag Factory** — one manages the brand's
+  filament database (products, materials, colors, settings); the other
+  **mass-writes the data into every spool produced**, at line speed.
+
+## Proof of origin
+
+Chips written on the production line carry the **factory signature** — the
+authentication that **proves the product's origin**. It is the layer behind
+[TigerTag+](./tigertag-plus.md) factory-state restores and the trust anchor
+for brands: a signed chip demonstrably came out of the real factory.
+
+## Availability
+
+**Not public.** These tools are reserved for third-party manufacturers
+implementing the TigerTag RFID/NFC technology in their products. Factory
+onboarding takes **days, not months** — see
+[For filament manufacturers](../vision/for-filament-manufacturers.md) and
+reach out through the
+[GitHub organization](https://github.com/TigerTag-Project).
+
+---
+
+**▲ [Documentation index](../../README.md)** · **Related:** [For filament manufacturers](../vision/for-filament-manufacturers.md), [TigerTag+](./tigertag-plus.md), [Products](./README.md)

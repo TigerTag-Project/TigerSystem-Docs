@@ -22,7 +22,11 @@ production line **quickly, easily, and at very low cost — in just a few
 days**:
 
 - Standard NTAG hardware (no proprietary components, no tooling lock-in).
-- A proven integration playbook already deployed in multiple factories.
+- A proven integration playbook already deployed in multiple factories,
+  powered by the [TigerTag Factory & Manager](../products/factory-suite.md)
+  industrial suite: your filament database on one side, line-speed mass
+  writing into every spool on the other — with the **factory signature
+  proving each product's origin**.
 - The shared reference database gives your products a precise, universal
   identity every compatible app resolves identically.
 

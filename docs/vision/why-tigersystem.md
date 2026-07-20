@@ -74,8 +74,10 @@ inspiration from our integration work and **imagine the features of
 tomorrow**. They are examples to copy, not a platform to join.
 
 The **factory side is not a sandbox.** Behind the 2.5 million chips runs an
-industrial-grade toolchain — chip management and line-speed NFC/RFID
-programming software — used **in production** by partner filament factories.
+industrial-grade suite — [TigerTag Factory &
+Manager](../products/factory-suite.md): filament-database management and
+line-speed NFC/RFID mass programming, with a factory signature proving each
+product's origin — used **in production** by partner filament factories.
 The sandbox is the showroom; the production line is not an experiment.
 
 ## Neutral by design
