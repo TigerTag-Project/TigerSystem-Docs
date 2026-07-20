@@ -46,6 +46,17 @@ read it, write it, sync it, ship a business on it. Copy them, fork them, or
 ignore them entirely and build your own — **the protocol is the point, the
 products are the proof.**
 
+And the entry ticket is tiny: **any NFC phone, or an ACR122U USB reader on a
+computer**, reads a TigerTag. From there, anything goes:
+
+- 🏭 Feed your **ERP or internal stock-management software** — a scan is an ID.
+- 📋 **Tracking & traceability** — who used which material, when, on which job.
+- 🖨 **Print-farm inventory** — know what's loaded, what's left, what to reorder.
+- 🏫 **Fablabs & schools** — check spools in and out like library books.
+- 🔬 **R&D, private or public** — a cheap, open, rewritable identity carrier.
+- 🎨 **Your weird idea** — seriously, all of it is possible; the format won't
+  stand in your way.
+
 ## How it all connects
 
 ```mermaid

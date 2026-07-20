@@ -3,6 +3,26 @@
 Build on TigerSystem: read chips, talk to the cloud, or integrate your own
 hardware and software. Nothing requires permission — the protocol is open.
 
+## What can you build?
+
+Reading a TigerTag takes **any NFC smartphone** or an **ACR122U USB reader**
+plugged into a computer — commodity hardware, no proprietary gear. From that
+one scan, integrate wherever an identity is useful:
+
+- **ERP / stock management** — connect spool identity and quantities to your
+  company's existing inventory system.
+- **Usage tracking** — log which material went into which job, machine or
+  customer order.
+- **Custom dashboards & automation** — print-farm monitoring, low-stock
+  alerts, reorder triggers.
+- **Lending systems** — fablabs, schools, makerspaces checking material in
+  and out.
+- **R&D projects, private or public** — an open, rewritable, documented
+  identity carrier to experiment with.
+
+None of these need our apps or our cloud: the chip + an SDK is enough. Add the
+[cloud surface](./cloud-api.md) only if you want accounts and sync.
+
 ## Start here
 
 | I want to… | Read |

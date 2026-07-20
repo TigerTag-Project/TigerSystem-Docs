@@ -192,6 +192,16 @@ Yes, without permission: open chip spec, [SDKs](../developers/sdks.md) (JS &
 Python), and a [documented cloud surface](../developers/cloud-api.md) with
 working ESP32 / Home Assistant / Spoolman examples.
 
+**Can I plug TigerTag into my ERP or internal stock software?**
+Yes — that's exactly the kind of use the open protocol invites. A scan (NFC
+phone or ACR122U USB reader) gives you the spool's identity; what you do with
+it — stock management, job tracking, traceability, reordering, R&D — is your
+call. See [What can you build?](../developers/README.md)
+
+**What hardware do I need to read chips in my own project?**
+Any NFC smartphone, or an ACR122U-class USB reader on a computer. Commodity,
+cheap, no proprietary gear.
+
 **Is the Firebase config being public a security hole?**
 No — that's the standard Firebase pattern. All enforcement is server-side in
 security rules; a client can only touch its own user's data.
