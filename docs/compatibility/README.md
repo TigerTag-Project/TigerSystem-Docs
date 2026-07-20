@@ -4,9 +4,13 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 
 - **Printer link** — Tiger Studio talking to the machine over the LAN
   (telemetry, filament slots, job, camera). **Six brands are live today.**
-- **Native RFID** — reading the vendor's own spool tags. Documented per vendor;
-  in-app decoding is **planned** (the TigerTag chip itself already works with
-  every printer via the [smartphone bridge](../philosophy/smartphone-bridge.md)).
+- **Native RFID** — reading the vendor's own spool tags. Documented per
+  vendor. Direct in-app decoding is **not integrated yet** (the right
+  interoperability model is still an open question); the current work aims at
+  **converting vendor tag data into TigerData digital spools**, so filament
+  from other brands can be scanned and managed in the ecosystem. Meanwhile,
+  the TigerTag chip itself already works with every printer via the
+  [smartphone bridge](../philosophy/smartphone-bridge.md).
 
 ## Matrix
 

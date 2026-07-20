@@ -220,8 +220,11 @@ that's precisely the difference with a manufacturer's silo.
 ## RFID & compatibility
 
 **Can Tiger Studio read Bambu/Creality/… native tags?**
-Not yet — read-only decoding specs are documented for seven vendor formats and
-in-app reading is planned. See [compatibility](../compatibility/README.md).
+Not yet — the right way to handle interoperability is still an open question.
+Read-only decoding specs are documented for seven vendor formats, and the
+work under way aims at **converting vendor tag data into TigerData digital
+spools**, so other brands' filament can be scanned and managed in the
+ecosystem. See [compatibility](../compatibility/README.md).
 
 **Why are manufacturer tags locked and TigerTag isn't?**
 Locked tags serve vendor lock-in. TigerTag's answer is an openly readable

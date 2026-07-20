@@ -100,8 +100,10 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
 Anycubic (MQTTS 9883 LAN + cloud, ACE box), Bambu Lab (MQTTS 8883, AMS),
 Creality (WebSocket 9999, CFS), Elegoo (MQTT 1883, Canvas), FlashForge (HTTP
 8898, material station), Snapmaker (Moonraker WebSocket 7125). Native vendor
-RFID tags are documented (read-only specs) but not yet decoded in-app;
-Klipper/Moonraker generic support is a natural future path.
+RFID tags are documented (read-only specs) but not decoded in-app yet — the
+interoperability model is still open; current work targets converting vendor
+tag data into TigerData digital spools. Klipper/Moonraker generic support is
+a natural future path.
 
 ## Docs in this repository
 

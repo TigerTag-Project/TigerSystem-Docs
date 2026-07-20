@@ -23,7 +23,7 @@ printer's slots and drives the machine from the control panel.
 
 ## Limitations
 
-- Native Elegoo tags are not yet decoded in-app (planned; spec available).
+- Native Elegoo tags are not read in-app yet — the spec is documented, and the current work aims at converting vendor tag data into TigerData spools (see [Compatibility](./README.md)).
 
 ---
 

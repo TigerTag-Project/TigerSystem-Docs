@@ -22,7 +22,7 @@ TigerTag chips are **never write-locked** — TigerTag is just the base
 protocol spools ship with. If you prefer OpenSpool (or any custom format),
 you are free to rewrite a factory chip's data into it.
 
-## Interoperability — 📋 spec documented, read support planned
+## Interoperability — 📋 spec documented, TigerData conversion in the works
 
 A read-only decoding sheet for OpenSpool tags is maintained in
 [`docs/rfid-vendors/openspool.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/openspool.md),

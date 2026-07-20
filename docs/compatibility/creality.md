@@ -22,7 +22,7 @@ inventory spools to CFS slots and shows live machine state.
 
 ## Limitations
 
-- Native Creality tags are not yet decoded in-app (planned; spec available).
+- Native Creality tags are not read in-app yet — the spec is documented, and the current work aims at converting vendor tag data into TigerData spools (see [Compatibility](./README.md)).
 
 ---
 

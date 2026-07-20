@@ -27,7 +27,7 @@ the filament profile to the printer.
 
 ## Limitations
 
-- Native Bambu tags are not yet decoded in-app (planned; spec available).
+- Native Bambu tags are not read in-app yet — the spec is documented, and the current work aims at converting vendor tag data into TigerData spools (see [Compatibility](./README.md)).
 - LAN mode required for the direct link.
 
 ---

@@ -4,10 +4,13 @@
 
 High-level, non-dated intentions (details live per product):
 
-- **Multi-vendor RFID reading** — decode manufacturer tags (Bambu Lab,
-  Creality, Elegoo, Anycubic, Snapmaker, Qidi, OpenSpool) in the apps; the
-  read-only specs are already documented
-  ([compatibility](../compatibility/README.md)).
+- **Multi-vendor RFID → TigerData** — retrieve the data from manufacturer
+  tags (Bambu Lab, Creality, Elegoo, Anycubic, Snapmaker, Qidi, OpenSpool)
+  and convert it into TigerData digital spools, so other brands' filament can
+  be scanned and managed in the ecosystem; the read-only specs are already
+  documented ([compatibility](../compatibility/README.md)). Direct in-app
+  decoding is deliberately not integrated until the interoperability model is
+  settled.
 - **More printer integrations** — Klipper/Moonraker as the next natural
   transport ([Klipper page](../compatibility/klipper.md)).
 - **TigerHub growth** — the ecosystem site at

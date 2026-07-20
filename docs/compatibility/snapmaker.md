@@ -24,7 +24,7 @@ Moonraker and maps inventory spools to slots.
 
 ## Limitations
 
-- Native Snapmaker tags are not yet decoded in-app (planned; spec available).
+- Native Snapmaker tags are not read in-app yet — the spec is documented, and the current work aims at converting vendor tag data into TigerData spools (see [Compatibility](./README.md)).
 
 ## Future plans
 
