@@ -148,6 +148,7 @@ piece of it.
 
 | You are… | Start here |
 |---|---|
+| **Ready to try** — make a spool smart right now | [Your first smart spool in 5 minutes](docs/tutorials/first-smart-spool.md) — free, at home, just your phone |
 | **Curious** — what is this, why does it exist? | [Vision](docs/vision/why-tigersystem.md) → [Philosophy](docs/philosophy/user-centric-ecosystem.md) |
 | **A user** — what does each product do for me? | [Products](docs/products/README.md) → [FAQ](docs/faq/README.md) |
 | **A printer owner** — does it work with MY printer? | [Compatibility](docs/compatibility/README.md) |
