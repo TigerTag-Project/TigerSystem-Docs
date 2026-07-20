@@ -23,6 +23,11 @@ as studio photos and transparent-background cutouts (6 files).
 
 ⬇ **[Download the pack (ZIP, ~3 MB)](./tigertag-partner-filament-boxes.zip)**
 
+## Approved headlines
+
+The validated hero lines and standing claims — factually airtight, ready to
+quote: **[headlines.md](./headlines.md)**.
+
 ## More assets
 
 - The visuals used across this documentation live in
