@@ -19,18 +19,26 @@ flowchart TB
     HUB --> VIS["👀 Anyone with the link<br/>plain browser, no account"]
 ```
 
-## Features
+## Features — all live today
 
-- **Ecosystem showcase** — tigersystem.io presents the sandbox and the
-  potential of the open protocol.
+- **Ecosystem showcase** — the home page tells the whole story: how it works,
+  the six printer brands, the components, and the three tiers (TigerData —
+  software-only tracking · TigerTag — the offline chip · TigerTag+ — verified
+  authenticity).
+- **Your account on the web** (`/account`) — sign in to your TigerSystem
+  account from a browser.
+- **Wishlists** — public ones and friends-only ones, both deployed.
+- **Friend codes & invitations** — add each other as friends from the web.
 - **Public list links** — share a read-only inventory or wishlist as
   `https://tigersystem.io/list/<token>`; the viewer needs no app and no
   account.
-- **Friend invitations** — links that let users add each other as friends.
-- **More social-sandbox features** as they ship.
-
-> **TODO:** keep this feature list in sync with what is live on
-> tigersystem.io.
+- **Material catalogue & reference database** (`/materials`, `/database`) —
+  browse the shared catalogue every app resolves against.
+- **Printers & features** (`/printers`, `/features`) — what works with what.
+- **3D models** (`/models`) — printable models (TigerPOD and friends).
+- **For manufacturers, developers & press** (`/manufacturers`, `/developers`,
+  `/press`) — the B2B story, integration pointers, media assets.
+- **Goodies** (`/goodies`) — the merch corner.
 
 ## TigerHub is not the database
 

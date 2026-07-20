@@ -153,8 +153,10 @@ brand / state / tag filters, whatever the mix of the six supported brands.
 **What is TigerHub?**
 The web platform at [tigersystem.io](https://tigersystem.io). It presents the
 TigerSystem ecosystem — the showcase of what the open protocol makes possible
-— and hosts the social side of the sandbox: wishlists, friend invitations,
-public sharing. See [TigerHub](../products/tigerhub.md).
+— and hosts the social side of the sandbox, all live today: your account on
+the web, wishlists (public and friends-only), friend codes and invitations,
+public list sharing, plus the material catalogue, the reference database
+browser, 3D models and more. See [TigerHub](../products/tigerhub.md).
 
 **Can I show my collection to someone without an app?**
 Yes — TigerHub serves read-only list links: anyone with the link views it in a

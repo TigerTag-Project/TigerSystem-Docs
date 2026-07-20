@@ -77,10 +77,13 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   Connect".
 - **Tiger Studio (Manager)**: the open-source Electron desktop app —
   inventory, racks, friends, sensors, live printer integrations (6 brands).
-- **TigerHub**: the ecosystem's web home at https://tigersystem.io — it
-  presents the sandbox and hosts its social features: wishlists, friend
-  invitations, public read-only list links (`/list/<token>`). TigerHub is NOT
-  the database behind the apps.
+- **TigerHub**: the ecosystem's web home at https://tigersystem.io — all live
+  today: the showcase (with the three tiers TigerData / TigerTag / TigerTag+),
+  web account sign-in (/account), wishlists (public AND friends-only), friend
+  codes & invitations, public read-only list links (`/list/<token>`), the
+  material catalogue & reference database browser (/materials, /database),
+  printers & features pages, 3D models (/models), manufacturers, developers,
+  press kit and goodies pages. TigerHub is NOT the database behind the apps.
 - **Firebase (deliberately unbranded backend)**: user accounts + Firestore —
   one shared database in one place, relied on by Tiger Studio, the mobile
   app, TigerScale and the TigerSystem user account for interoperability;
