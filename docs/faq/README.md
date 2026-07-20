@@ -275,7 +275,9 @@ flat against it. If the chip reads in one app but not another, update the app.
 Ensure the printer is on the same LAN, in LAN mode where relevant, then try
 "Add by IP" — discovery methods vary per brand.
 
-> **TODO:** grow this section from real support cases (Discord / GitHub issues).
+> Real cases welcome — report yours on the
+> [official Discord](https://discord.gg/3Qv5TSqnJH) or GitHub issues; this
+> section grows from them.
 
 ## Developers
 
