@@ -297,6 +297,12 @@ printer manufacturers to read TigerTag natively. Read
 reach out through the
 **[GitHub organization](https://github.com/TigerTag-Project)**.
 
+**Can my product become "TigerTag Certified"?**
+Yes — **TigerTag Certified** is the certification mark for third-party
+products that integrate the ability to read and/or write TigerTags (a
+printer, a dryer, an app, a reader…). Reach out through the
+[GitHub organization](https://github.com/TigerTag-Project).
+
 **We're a printer maker — can our firmware read TigerTag?**
 Yes — NTAG/NDEF readers are commodity hardware and the payload spec is public
 ([TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)).

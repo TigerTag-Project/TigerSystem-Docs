@@ -25,6 +25,11 @@ useful:
 None of these need our apps or our cloud: the chip + an SDK is enough. Add the
 [cloud surface](./cloud-api.md) only if you want accounts and sync.
 
+And when your product reads and/or writes TigerTags, it can carry the
+**TigerTag Certified** mark — the ecosystem's certification for third-party
+integrations (reach out through the
+[GitHub organization](https://github.com/TigerTag-Project)).
+
 ## Start here
 
 | I want to… | Read |

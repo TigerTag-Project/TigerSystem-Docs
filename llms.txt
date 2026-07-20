@@ -69,6 +69,8 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   reference database (brands, materials, colors, etc.), the spool images of
   TigerTag+ chips, and the endpoints tied to the TigerSystem database
   (health, spool APIs).
+- **TigerTag Certified**: the certification mark for third-party products
+  that integrate the ability to read and/or write TigerTags.
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
 - **Second Life**: rewriting a TigerTag chip when a spool is refilled or
