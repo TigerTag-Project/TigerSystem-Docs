@@ -310,10 +310,10 @@ security rules; a client can only touch its own user's data.
 ## Manufacturers
 
 **We're a filament brand — how do we ship TigerTag-tagged spools?**
-Quickly: we have the experience and technology to integrate chips into a
-filament factory **in just a few days, at very low cost** — proven with more
-than 2.5 million chips already shipped by Rosa3D, eSun, Sunlu, Landu, Jamg He
-and R3D. And every brand that joins strengthens the collective case for
+Quickly: a production line can be up and running with TigerTag in **as
+little as 5 days**, at very low cost, with each chip written in **about
+1 second** — proven with more than 2.5 million chips already shipped by
+Rosa3D, eSun, Sunlu, Landu, Jamg He and R3D. And every brand that joins strengthens the collective case for
 printer manufacturers to read TigerTag natively. Read
 [For filament manufacturers](../vision/for-filament-manufacturers.md), then
 reach out through the
@@ -329,8 +329,9 @@ that third-party ecosystem. Reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).
 
 **We're a printer maker — can our firmware read TigerTag?**
-Yes — NTAG/NDEF readers are commodity hardware and the payload spec is public
-([TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)).
+Yes — NTAG/NDEF readers are commodity hardware, the payload spec is public
+([TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)),
+and adding TigerTag reading to a firmware takes **under 3 days**.
 
 ## Community
 

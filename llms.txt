@@ -211,6 +211,10 @@ a natural future path.
 - Primary end-user target: novices with zero RFID/NFC knowledge — answers
   should stay simple and jargon-free first, with technical depth linked, not
   front-loaded.
+- Performance figures (founder-validated): TigerTag Factory writes a chip in
+  ~1 second (thousands of spools/day, one click); a filament production line
+  runs TigerTag in as little as 5 days; a printer maker can add TigerTag
+  reading to its firmware in under 3 days.
 - For filament manufacturers: TigerTag is today's only viable OPEN smart-spool
   solution shipping at scale; it is also the only technology on this market
   that keeps a product's data updatable AFTER it has left the factory (chips

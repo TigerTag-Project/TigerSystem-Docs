@@ -12,7 +12,8 @@ Two tools cover the two halves of the job:
 - **TigerTag Manager** — manages the brand's **filament database**: products,
   materials, colors, settings.
 - **TigerTag Factory** — **mass-writes the data into every spool produced**,
-  at line speed on the production line.
+  at line speed: **about 1 second per chip** — thousands of spools a day,
+  one click.
 
 ## Proof of origin
 
@@ -24,8 +25,9 @@ for brands: a signed chip demonstrably came out of the real factory.
 ## Availability
 
 **Not public.** These tools are reserved for third-party manufacturers
-implementing the TigerTag RFID/NFC technology in their products. Factory
-onboarding takes **days, not months** — see
+implementing the TigerTag RFID/NFC technology in their products. A filament
+production line can be up and running with TigerTag in **as little as
+5 days** — see
 [For filament manufacturers](../vision/for-filament-manufacturers.md) and
 reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).

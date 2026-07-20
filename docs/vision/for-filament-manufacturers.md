@@ -22,8 +22,9 @@ like Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme and Nanovia.
 ## Factory integration: days, not months
 
 We have the experience and the technology to get TigerTag chips into your
-production line **quickly, easily, and at very low cost — in just a few
-days**:
+production line **quickly, easily, and at very low cost — up and running in
+as little as 5 days**, writing **each chip in about 1 second** (thousands of
+spools a day, one click):
 
 - Standard NTAG hardware (no proprietary components, no tooling lock-in),
   sourced at a scale and cost chosen for one non-negotiable goal: **add the
@@ -111,7 +112,8 @@ flowchart LR
 ```
 
 Alone, no filament brand can convince printer manufacturers to read its tags.
-**Together, behind one open protocol, we can.** The more brands ship
+**Together, behind one open protocol, we can.** And the ask is small: a
+printer maker can add TigerTag reading to its firmware in **under 3 days**. The more brands ship
 TigerTag, the stronger the case for native, firmware-level TigerTag support
 in the printers themselves — and every participant benefits from that
 leverage.
