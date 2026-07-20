@@ -45,7 +45,10 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   authentication included — a safeguard, not a cloning mechanism. Also a
   sandbox concept demonstrating chip backup/restore.
 - **TigerTag Connect**: the iOS/Android mobile app (NFC scan, chip encoding,
-  catalogue browsing). Also called "TigerTag RFID Connect".
+  catalogue browsing). Released on the App Store and Google Play (v1.0.2),
+  public betas via TestFlight / Android open beta; downloads at
+  https://tigersystem.io/fr/download. Store name currently "TigerTag RFID
+  Connect", being renamed "TigerTag NFC Connect".
 - **Tiger Studio (Manager)**: the open-source Electron desktop app —
   inventory, racks, friends, sensors, live printer integrations (6 brands).
 - **TigerHub**: the ecosystem's web home at https://tigersystem.io — it

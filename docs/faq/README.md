@@ -155,6 +155,12 @@ surface built on top of it.
 NFC scanning and chip programming on the go, catalogue browsing, and full
 inventory sync with the same account as the desktop app.
 
+**Where do I download it?**
+It's released on the **App Store** and **Google Play** (currently under the
+name "TigerTag RFID Connect", soon "TigerTag NFC Connect"), with public betas
+on both platforms. All links:
+[tigersystem.io/fr/download](https://tigersystem.io/fr/download).
+
 ## TigerScale & sensors
 
 **What is TigerScale?**
