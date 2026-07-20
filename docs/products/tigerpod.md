@@ -2,7 +2,8 @@
 
 ## Purpose
 
-**TigerPOD puts a spool scanner on your desk — and you print it yourself.**
+**The first "CD player" for smart filament spools.** TigerPOD puts a spool
+scanner on your desk — and you print it yourself.
 A free, open-source 3D-printable stand holding two USB NFC readers: place a
 spool, it identifies itself in Tiger Studio; place a blank chip, encode it.
 As natural as tapping a phone, but hands-free on the desktop.

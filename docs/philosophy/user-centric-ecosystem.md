@@ -1,5 +1,7 @@
 # User-centric vs printer-centric
 
+> **Intelligence serving the user — not just the printer.**
+
 ## Two opposite architectures
 
 ```mermaid

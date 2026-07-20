@@ -1,5 +1,7 @@
 # For filament manufacturers
 
+> **Make your spools smart and connected.**
+
 ## The smart spool is happening — the only open way to do it is here
 
 Printers increasingly expect intelligent filament: AMS-class systems, per-slot
@@ -78,6 +80,15 @@ ecosystem (mobile, desktop, web), live integration with six printer brands,
 weight tracking, sharing — an experience **far beyond what any closed
 single-vendor environment offers**, and it works with every printer your
 customers own, not just one brand's.
+
+## Update the data even after it leaves your factory
+
+A printed label is frozen the day it's printed. A TigerTag spool is not:
+because chips resolve their identity against the **shared reference
+database**, you can refine or correct a product's data — settings,
+descriptions, imagery — **even for spools already sold and sitting in your
+customers' homes**. TigerTag is the only technology on this market that keeps
+your product's data updatable after it has left the factory.
 
 ## The collective play
 

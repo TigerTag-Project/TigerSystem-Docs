@@ -37,6 +37,8 @@ belongs to **your** account, and every piece — apps, cloud, scale, reader,
 even the chip spec — is published for anyone to use or build on. It's a
 format, not a walled garden.
 
+**Intelligence serving the user — not just the printer.**
+
 → The full story: **[Why TigerSystem exists](docs/vision/why-tigersystem.md)**
 
 ## A sandbox, on purpose
