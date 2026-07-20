@@ -54,6 +54,10 @@ allow it.
 
 ## In pictures
 
+| | | |
+|---|---|---|
+| <img src="../assets/connect-scan.jpg" alt="TigerTag Connect — scanning a chip by NFC tap" /> | <img src="../assets/connect-inventory.png" alt="TigerTag Connect — the mobile inventory" /> | <img src="../assets/connect-printer-live.png" alt="TigerTag Connect — live printer view" /> |
+
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio on desktop and TigerTag Connect on mobile, same account, same data" />
 
 ---

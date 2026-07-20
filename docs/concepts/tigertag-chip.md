@@ -20,6 +20,8 @@ derived keys, AES sectors, RSA signatures — see
 
 ## Why every spool carries TWO chips
 
+<img src="../assets/refill-with-tigertag-blue.png" width="380" alt="A filament refill coil carrying its round TigerTag chip" />
+
 Two chips, on opposite sides of the spool — it looks redundant, it's actually
 the smartest detail of the format:
 

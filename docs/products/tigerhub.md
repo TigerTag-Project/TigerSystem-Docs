@@ -8,6 +8,8 @@ sandbox and what the open TigerTag protocol makes possible, and it hosts the
 **social side** of the sandbox: share a wishlist, invite someone to become a
 friend, publish a read-only list anyone can open in a browser.
 
+<img src="../assets/tigerhub-site-card.png" width="100%" alt="tigersystem.io — the TigerSystem web home, with the mobile app scanning in front of Tiger Studio" />
+
 ## Where it sits
 
 ```mermaid

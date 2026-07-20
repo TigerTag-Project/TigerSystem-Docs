@@ -22,6 +22,10 @@ flowchart LR
     E -->|emptied again| B
 ```
 
+<img src="../assets/refill-with-tigertag-orange.png" width="380" alt="A cardboard-core filament refill carrying its TigerTag chip — no plastic spool at all" />
+
+*Even a spool-less refill carries its identity — the chip rides the coil itself.*
+
 ## How encoding happens
 
 - **TigerTag Connect** (mobile) — program chips by NFC tap.
