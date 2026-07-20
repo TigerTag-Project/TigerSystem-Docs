@@ -2,9 +2,14 @@
 
 Step-by-step, goal-oriented walkthroughs for end users.
 
-> **TODO:** this section is scaffolding for upcoming tutorials. Planned topics:
+## Available
+
+- **[Your first smart spool in 5 minutes](./first-smart-spool.md)** — a blank
+  NTAG chip, your phone, the free app: program it, stick it, done. Free, at
+  home, 100 % offline.
+
+> **TODO:** more tutorials planned:
 >
-> - Getting started: your first TigerTag spool (scan → inventory → print)
 > - Setting up TigerScale and calibrating container weights
 > - Building and wiring a TigerPOD reader stand
 > - Sharing your inventory with a friend
