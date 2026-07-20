@@ -37,6 +37,15 @@ format, not a walled garden.
 
 → The full story: **[Why TigerSystem exists](docs/vision/why-tigersystem.md)**
 
+## A sandbox, on purpose
+
+Everything in TigerSystem is a **demonstrator**. The desktop app, the mobile
+app, the scale, the reader stand — they exist to prove, with working products,
+that **anyone can build around the open-source TigerTag NFC/RFID protocol**:
+read it, write it, sync it, ship a business on it. Copy them, fork them, or
+ignore them entirely and build your own — **the protocol is the point, the
+products are the proof.**
+
 ## How it all connects
 
 ```mermaid

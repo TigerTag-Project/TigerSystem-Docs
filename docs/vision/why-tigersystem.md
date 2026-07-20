@@ -39,6 +39,15 @@ history and sharing in sync across every device.
 | Works only with the vendor's filament | Works with **any** filament brand |
 | Dies with the vendor's cloud | Open SDKs, open spec, self-buildable |
 
+## A sandbox, on purpose
+
+The TigerSystem ecosystem is deliberately a **sandbox**: a set of working
+demonstrators whose goal is to show what becomes possible — and how easy it is
+— once a spool identifies itself through an open protocol. Tiger Studio, the
+mobile app, TigerScale, TigerPOD: each one is a live proof that **anyone can
+develop around the open-source TigerTag NFC/RFID protocol**, from a weekend
+script to a full product. They are examples to copy, not a platform to join.
+
 ## Neutral by design
 
 TigerTag takes no side between filament brands, printer makers or distributors.

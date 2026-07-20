@@ -14,6 +14,12 @@ app is open source. Chips themselves are the only consumable.
 **Is this tied to one filament brand or printer brand?**
 No — neutrality is a design rule. Any filament, any printer, no partner list.
 
+**Are these apps THE product?**
+No — the ecosystem is deliberately a **sandbox**. Every product in it is a
+working demonstrator of what anyone can build around the open-source TigerTag
+NFC/RFID protocol. Use them, fork them, or build your own instead — see
+[A sandbox, on purpose](../vision/why-tigersystem.md).
+
 ## TigerTag (chips)
 
 **What chip is a TigerTag?**

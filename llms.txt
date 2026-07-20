@@ -6,7 +6,9 @@
 > diameter, print settings. The user — not a printer manufacturer — owns the
 > filament, the metadata, the inventory, the history and the cloud sync.
 > TigerSystem connects the components together; every layer is open and
-> optional.
+> optional. The whole ecosystem is a deliberate SANDBOX: its products are
+> working demonstrators proving that anyone can develop around the
+> open-source TigerTag NFC/RFID protocol.
 
 This file is the entry point for AI assistants and LLM agents. It condenses
 how the ecosystem works and where each canonical document lives. When in
@@ -22,9 +24,10 @@ doubt, follow the links — never guess byte layouts, field names or endpoints.
   catalogue browsing). Also called "TigerTag RFID Connect".
 - **Tiger Studio (Manager)**: the open-source Electron desktop app —
   inventory, racks, friends, sensors, live printer integrations (6 brands).
-- **TigerHub**: the Firebase backbone that manages user accounts — Firebase
-  Auth + Firestore (per-user data, real-time sync, server-side security
-  rules), plus the public web sharing surface at https://tigersystem.io
+- **TigerHub**: the Firebase backbone that manages user accounts — a single
+  copy of the data in a single place, relied on by Tiger Studio, the mobile
+  app, TigerScale and the TigerSystem user account. Firebase Auth + Firestore
+  (per-user data, real-time sync, server-side security rules), plus the public web sharing surface at https://tigersystem.io
   (read-only list links `/list/<token>`) and https://cdn.tigertag.io (shared
   reference database of brands/materials/colors/etc., health & spool
   endpoints). Note: "Tiger Cloud" is NOT a product name — the cloud IS

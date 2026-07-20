@@ -2,11 +2,14 @@
 
 ## Purpose
 
-**TigerHub is the memory behind everything.** It is the Firebase backbone that
-manages your user account: your inventory follows you — phone, desktop, web —
-because it lives in *your* account, not in a printer brand's silo. It keeps
-every device in sync in real time, enforces who can see what, and powers the
-public sharing surface at [tigersystem.io](https://tigersystem.io).
+**TigerHub is the memory behind everything.** It is the Firebase-managed
+backbone of your TigerSystem account, built on one principle: **a single copy
+of the data, in a single place.** Tiger Studio, the TigerTag Connect mobile
+app, TigerScale and your user account all lean on that same data — nobody
+holds a private copy, so there is nothing to reconcile: update a weight on the
+scale and the desktop, the phone and a shared view all show it instantly. It
+keeps every device in sync in real time, enforces who can see what, and powers
+the public sharing surface at [tigersystem.io](https://tigersystem.io).
 
 ## Where it sits
 

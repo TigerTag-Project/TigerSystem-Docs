@@ -17,12 +17,15 @@ Every layer of TigerSystem is published — hardware, firmware, SDKs, apps, docs
 
 ## A sandbox, not a walled garden
 
-[Tiger Studio Manager](../products/tiger-studio.md) — the flagship desktop app —
-is deliberately described as **a laboratory, not the destination**. It
-demonstrates what open, documented technology makes possible once a spool can
-identify itself: live printer telemetry across six brands, physical rack
-mapping, sensors, shared inventories. Some of it will mature, some of it exists
-to prove a point, and all of it is readable, forkable and free to copy.
+The **whole ecosystem** is deliberately **a laboratory, not the destination**.
+Every product — [Tiger Studio](../products/tiger-studio.md), the mobile app,
+[TigerScale](../products/tigerscale.md), [TigerPOD](../products/tigerpod.md) —
+is a working demonstration of what open, documented technology makes possible
+once a spool can identify itself: live printer telemetry across six brands,
+physical rack mapping, sensors, shared inventories. Some of it will mature,
+some of it exists to prove a point, and all of it is readable, forkable and
+free to copy. The goal is to show that **anyone can develop around the
+open-source TigerTag NFC/RFID protocol** — the products are the proof.
 
 ## Build your own
 
