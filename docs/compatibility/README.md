@@ -19,7 +19,7 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 | [Bambu Lab](./bambu-lab.md) | ✅ Live — MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, UID-derived keys | 📋 Spec documented |
 | [Creality](./creality.md) | ✅ Live — WebSocket + CFS | Mifare Classic 1K | AES-128-ECB sector key | 📋 Spec documented |
 | [Elegoo](./elegoo.md) | ✅ Live — MQTT + Canvas | Mifare Ultralight | Magic bytes only | 📋 Spec documented |
-| [FlashForge](./flashforge.md) | ✅ Live — HTTP + matlStation | — | — | ❔ No public sheet yet |
+| [FlashForge](./flashforge.md) | ✅ Live — HTTP + matlStation | — (machines have no RFID reader) | — | ✨ TigerTag adds NFC to it, zero cost |
 | [Anycubic](./anycubic.md) | ✅ Live — MQTTS LAN + cloud, ACE | Mifare Ultralight | None | 📋 Spec documented |
 | [Snapmaker](./snapmaker.md) | ✅ Live — Moonraker WebSocket | Mifare Classic 1K | HKDF + RSA-2048 signature | 📋 Spec documented |
 | [Klipper](./klipper.md) | ⏳ Not yet (groundwork exists) | n/a | n/a | n/a |

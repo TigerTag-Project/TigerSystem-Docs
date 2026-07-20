@@ -10,18 +10,19 @@
 | Camera | MJPEG stream |
 | Telemetry | Temperatures, job progress |
 
-## Native RFID — ❔ unknown
+## Native RFID — none: the machines have no reader
 
-No public decoding sheet exists yet for FlashForge spool tags in the ecosystem
-documentation.
-
-> **TODO:** document whether current FlashForge machines ship RFID-tagged
-> spools and, if so, the tag family and lock scheme.
+FlashForge printers ship **without any RFID reader**. That makes this the
+clearest demonstration of the TigerSystem advantage: **we brought the
+smart-spool experience to a printer that has no reader at all — with zero
+machine modification, at zero cost.**
 
 ## Using TigerTag with FlashForge
 
-TigerTag chips work on any spool feeding a FlashForge printer; Tiger Studio
-maps inventory spools to material-station slots.
+Scan the spool with your phone (or a desktop reader), then inform the machine
+**slot by slot — one scan, one click** — from Tiger Studio's material-station
+mapping. The printer ends up knowing its filament as precisely as a machine
+with built-in RFID, without FlashForge having changed anything.
 
 ---
 
