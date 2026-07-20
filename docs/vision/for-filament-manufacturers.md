@@ -40,12 +40,15 @@ Public posts on the brands' own channels — not our press release
 > **ROSA 3D FILAMENTS** — *"officially integrated the open TigerTag RFID
 > protocol across 100 % of our filament production."* More than 250 000
 > spools already produced with TigerTag.
+> ([original post](https://www.instagram.com/p/DVyeOZajZSm/))
 
 > **R3D Filament** — *"officially begun large-scale deployment of the open
 > TigerTag RFID protocol across its filament production in Europe."*
+> ([original post](https://www.instagram.com/reel/DVoAMqTk5ck/))
 
 > **eSUN** — *"officially integrated TigerTag RFID technology!"* — piloting
 > in the French market, expanding across Europe.
+> ([original post](https://www.instagram.com/p/DUjydNXkc1W/))
 
 ## Already on the shelves
 
