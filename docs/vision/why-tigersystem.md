@@ -145,6 +145,15 @@ chip and migrate. TigerTag is the base format spools arrive with, not a
 format you're locked into. Nothing in the ecosystem is a prerequisite: read the chip spec,
 pick up an SDK, and build the software or the business you actually want.
 
+## The manifesto
+
+> *"Made for Makers. Open to Everyone. Born from the community, TigerTag
+> empowers users with real data and total freedom. 100 % open-source, it
+> connects your material, printers, and brands under one universal language
+> today and tomorrow. Join the movement. Connect your world with TigerTag."*
+>
+> — **The TigerTag Team** · Vision: **Cheap & Reusable**
+
 ---
 
 **▲ [Documentation index](../../README.md)** · **Next ▶** [User-centric ecosystem](../philosophy/user-centric-ecosystem.md)

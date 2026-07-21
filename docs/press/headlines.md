@@ -18,10 +18,23 @@ English, **"Scannez"** in French.
 | 7 | **The protocol is the point, the products are the proof.** | *(open-source positioning)* | Developers page |
 | 8 | **The first "CD player" for smart filament spools.** | Drop a spool in — your computer reads it. | TigerPOD surfaces |
 
+## The manifesto (boilerplate quote — quote verbatim, attribute to the TigerTag Team)
+
+> *"Made for Makers. Open to Everyone. Born from the community, TigerTag
+> empowers users with real data and total freedom. 100 % open-source, it
+> connects your material, printers, and brands under one universal language
+> today and tomorrow. Join the movement. Connect your world with TigerTag."*
+
+Vision, in two words: **Cheap & Reusable.**
+
 ## Standing lines (use anywhere, unchanged)
 
 - **Free. No subscription. Works offline. Nothing locked in.** — the
   reassurance line; the ecosystem's strongest claim, keep it near every hero.
+- **Made for Makers. Open to Everyone.** — the manifesto's opening; works
+  standalone as a banner line.
+- **Cheap & Reusable.** — the vision in two words (the chip philosophy:
+  zero cost added, never e-waste).
 - **The ambition: become to 3D-printing materials what the barcode became to
   the shelf.** — press boilerplate.
 - **TigerTag is the most deployed third-party RFID protocol in the world.** —
