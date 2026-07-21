@@ -23,8 +23,9 @@ Two tools cover the two halves of the job:
 
 *The two independent NFC chips are plainly visible — one per end. The ends
 fold over the cardboard core so the spool reads from either side; the middle
-holds with double-sided tape. The operator peels and sticks — nothing else on
-the line changes. The carrier design is public and printable at home.*
+holds with industrial 3M adhesive (468MP / 200MP). The operator peels and
+sticks — nothing else on the line changes. The carrier design is public and
+printable at home.*
 
 <img src="../assets/refill-with-tigertag-orange.png" width="340" alt="The carrier fitted on a filament refill" />
 

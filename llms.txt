@@ -81,7 +81,10 @@ endpoints.
   chips are fully independent (two distinct UIDs, no shared antenna), written
   together as a pair ("Twin Tag") and kept identical — counted as ONE spool.
   Factory spools mount them on a public, printable folded carrier (one chip
-  per end) over the cardboard core. End of
+  per end, industrial 3M 468MP/200MP adhesive) over the cardboard core. The
+  chip doubles as LONG-TERM COLD STORAGE of the spool's identity: data lives
+  offline on the chip for years, no server needed; the cloud only adds
+  freshness on top. End of
   life: two reusable NTAG chips per kilo printed.
 - Payload detail: a reserved 32-byte area ends the payload — free for
   community add-on functions on a standard TigerTag; carries the origin

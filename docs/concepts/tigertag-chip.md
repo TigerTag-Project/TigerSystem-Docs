@@ -18,6 +18,11 @@ This is the deliberate opposite of manufacturer tags (Mifare Classic with
 derived keys, AES sectors, RSA signatures — see
 [compatibility](../compatibility/README.md)): a TigerTag chip hides nothing.
 
+Think of the chip as **long-term cold storage** for the spool's identity: the
+data lives on the chip itself, offline, for years — no server, no account,
+nothing required to keep it alive. The online layer (reference database,
+cloud sync) only ever *adds* freshness on top.
+
 ## Why every spool carries TWO chips
 
 <img src="../assets/refill-with-tigertag-blue.png" width="380" alt="A filament refill coil carrying its round TigerTag chip" />
@@ -49,9 +54,10 @@ A few implementation details:
   identical for the spool's whole life, down to the grams left — and always
   counted as **one** spool.
 - On factory spools, the chips ride a **carrier**: a strip whose two ends
-  fold over the cardboard core (one chip per end), held with double-sided
-  tape — the operator peels and sticks, nothing else changes on the line. The
-  carrier design is **public and printable at home**.
+  fold over the cardboard core (one chip per end), held with industrial
+  **3M adhesive (468MP / 200MP)** — the operator peels and sticks, nothing
+  else changes on the line. The carrier design is **public and printable at
+  home**.
 
 <img src="../assets/carrier-bare.png" width="440" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" />
 
