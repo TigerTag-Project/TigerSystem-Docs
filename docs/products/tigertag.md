@@ -33,8 +33,9 @@ flowchart LR
   plain NDEF object (keychain, business card…) once the spool is empty —
   never e-waste.
 - Readable by any NFC smartphone, ACR122U readers and [TigerPOD](./tigerpod.md).
-- Reserved 16-byte signature slot carrying the factory authentication —
-  preserved by a [TigerTag+](./tigertag-plus.md) backup/restore.
+- A reserved **32-byte area**: free for **community add-on functions** on a
+  standard TigerTag; carries the origin signature on a
+  [TigerTag+](./tigertag-plus.md).
 
 ## Architecture
 
@@ -54,6 +55,9 @@ for the canonical byte-level specification.
 ## In pictures
 
 <img src="../assets/tigertag-chip-material.png" width="480" alt="TigerTag NFC chips" />
+
+> **Naming note:** standard chips were formerly sold as **"TigerTag Maker"**
+> — the name is now simply **TigerTag**.
 
 ## Chips without lock-in
 

@@ -41,9 +41,9 @@ Brands shipping TigerTags in their products can carry the **TigerTag
 Certified** mark — a visible signal to customers that the spool is smart and
 open.
 
-> Reach out through the
-> **[GitHub organization](https://github.com/TigerTag-Project)** to start the
-> conversation.
+> Reach out at **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)** (or
+> through the [GitHub organization](https://github.com/TigerTag-Project)) to
+> start the conversation.
 
 ## They announced it themselves
 

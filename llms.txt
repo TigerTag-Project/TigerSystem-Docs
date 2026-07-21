@@ -83,6 +83,11 @@ endpoints.
   Factory spools mount them on a public, printable folded carrier (one chip
   per end) over the cardboard core. End of
   life: two reusable NTAG chips per kilo printed.
+- Payload detail: a reserved 32-byte area ends the payload — free for
+  community add-on functions on a standard TigerTag; carries the origin
+  signature on a TigerTag+. Naming history: standard chips were formerly
+  sold as "TigerTag Maker" and signed chips as "TigerTag Pro" — those names
+  are retired; today it is simply TigerTag and TigerTag+.
 - **TigerTag+**: a TigerTag whose content has been backed up in the owner's
   account (keyed by chip UID). Backup is created by scanning in Tiger Studio
   with a TigerPOD/ACR122U reader (mobile support planned). Restore rewrites
@@ -216,6 +221,9 @@ a natural future path.
 
 - https://discord.gg/3Qv5TSqnJH — official community Discord (questions,
   help, feedback)
+- tigertag@tigertag.io — B2B / manufacturer / press contact
+- Official distributor today: https://atome3d.com (more joining; a
+  distributor map is planned)
 - https://tigertag.io — e-commerce shop for TigerTag chips (shop only; the
   ecosystem is explained here, not there)
 - https://tigersystem.io — TigerHub: ecosystem site, wishlists & sharing

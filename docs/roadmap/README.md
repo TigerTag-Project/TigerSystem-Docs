@@ -13,6 +13,9 @@ High-level, non-dated intentions (details live per product):
   settled.
 - **More printer integrations** — Klipper/Moonraker as the next natural
   transport ([Klipper page](../compatibility/klipper.md)).
+- **A distributor map** *(planned)* — official distributors are growing
+  beyond [Atome3D](https://atome3d.com); a map will show where to buy
+  TigerTag chips locally.
 - **A portable TigerData file** *(under consideration)* — today a TigerData
   lives as JSON inside the apps; a small standalone file with its own
   extension would let a virtual spool travel on a USB stick, by mail, or

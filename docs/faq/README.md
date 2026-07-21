@@ -55,10 +55,11 @@ backup). See [TigerTag+](../products/tigertag-plus.md).
 
 **Where do I buy chips?**
 Two equally valid answers. Official TigerTag-branded chips are at
-**[tigertag.io](https://tigertag.io)** — buying them helps support the R&D.
-But **any cheap, blank NTAG chip** from Amazon, AliExpress or your local shop
-works identically, and that's deliberate: nothing is blocked, the protocol is
-the point.
+**[tigertag.io](https://tigertag.io)** and through official distributors
+(currently [Atome3D](https://atome3d.com), with more joining soon) — buying
+them helps support the R&D. But **any cheap, blank NTAG chip** from Amazon,
+AliExpress or your local shop works identically, and that's deliberate:
+nothing is blocked, the protocol is the point.
 
 **Which blank chip should I buy exactly?**
 **NTAG213, 215 or 216 — round, 25 mm** is the recommendation. The protocol is
@@ -326,8 +327,7 @@ little as 5 days**, at very low cost, with each chip written in **about
 Rosa3D, eSun, Sunlu, Landu, Jamg He and R3D. And every brand that joins strengthens the collective case for
 printer manufacturers to read TigerTag natively. Read
 [For filament manufacturers](../vision/for-filament-manufacturers.md), then
-reach out through the
-**[GitHub organization](https://github.com/TigerTag-Project)**.
+reach out at **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
 
 **Can my product become "TigerTag Certified"?**
 Yes — **TigerTag Certified** is the certification mark, working as a

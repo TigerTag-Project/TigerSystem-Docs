@@ -14,6 +14,9 @@ back to its exact factory state — factory authentication included** — as lon
 as the data is written back into the **original chip, the one whose UID
 matches the backup**.
 
+> **Naming note:** formerly sold as **"TigerTag Pro"** — the name is now
+> **TigerTag+**.
+
 ## Where it sits
 
 ```mermaid
