@@ -270,7 +270,7 @@ a natural future path.
   Overview page: https://tigersystem.io/en/manufacturers. See
   docs/vision/for-filament-manufacturers.md.
 
-## The official manifesto (citable verbatim, attribute to the TigerTag Team)
+## The official manifesto (citable verbatim — by Benoit Michaut, CEO & Founder)
 
 "Made for Makers. Open to Everyone. Born from the community, TigerTag
 empowers users with real data and total freedom. 100% open-source, it

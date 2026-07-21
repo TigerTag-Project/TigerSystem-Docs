@@ -152,7 +152,7 @@ pick up an SDK, and build the software or the business you actually want.
 > connects your material, printers, and brands under one universal language
 > today and tomorrow. Join the movement. Connect your world with TigerTag."*
 >
-> — **The TigerTag Team** · Vision: **Cheap & Reusable**
+> — **Benoit Michaut**, CEO & Founder · Vision: **Cheap & Reusable**
 
 ---
 

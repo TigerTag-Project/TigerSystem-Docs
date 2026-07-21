@@ -18,7 +18,7 @@ English, **"Scannez"** in French.
 | 7 | **The protocol is the point, the products are the proof.** | *(open-source positioning)* | Developers page |
 | 8 | **The first "CD player" for smart filament spools.** | Drop a spool in — your computer reads it. | TigerPOD surfaces |
 
-## The manifesto (boilerplate quote — quote verbatim, attribute to the TigerTag Team)
+## The manifesto (boilerplate quote — quote verbatim, attribute to Benoit Michaut, CEO & Founder)
 
 > *"Made for Makers. Open to Everyone. Born from the community, TigerTag
 > empowers users with real data and total freedom. 100 % open-source, it
