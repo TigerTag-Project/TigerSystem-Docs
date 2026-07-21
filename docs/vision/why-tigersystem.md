@@ -156,6 +156,6 @@ pick up an SDK, and build the software or the business you actually want.
 
 ---
 
-**▲ [Documentation index](../../README.md)** · **Next ▶** [User-centric ecosystem](../philosophy/user-centric-ecosystem.md)
+**▲ [Documentation index](../../README.md)** · **Next ▶** [User-centric ecosystem](../philosophy/user-centric-ecosystem.md) · **The people behind it:** [The team](./team.md)
 
 **Related:** [Open ecosystem philosophy](../philosophy/open-ecosystem.md), [Universal filament identity](../concepts/universal-filament-identity.md)
