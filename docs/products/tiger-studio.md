@@ -33,12 +33,11 @@ flowchart LR
   [compatibility](../compatibility/README.md).
 - **Racks** — drag-and-drop physical storage mapping.
 - **Friends & sharing** — discovery codes, read-only friend inventories.
-- **Devices** — ACR122U NFC reader, [TigerPOD](./tigerpod.md),
-  [TigerScale](./tigerscale.md), **USB HID scales** (DYMO M series and any
-  HID-Scale-compliant scale — [details](./tigerscale.md)), and the
-  **AJAX-3D TD-1 / TD1s** (third-party color & transmission-distance
-  analyzer, integrated natively — measured TD and color go straight into the
-  spool's profile).
+- **Devices** — first-party: [TigerPOD](./tigerpod.md) and
+  [TigerScale](./tigerscale.md); third-party: the ACR122U NFC reader, the
+  **AJAX-3D TD-1 & TD1s** analyzers (TD + color straight into the spool's
+  profile) and **USB HID scales** (DYMO M series and any compliant scale) —
+  full list: [compatible third-party hardware](../compatibility/third-party-hardware.md).
 - **9 locales** — EN · FR · DE · ES · IT · PL · PT-BR · PT-PT · 中文.
 
 The complete, always-current catalogue lives in the app repo's

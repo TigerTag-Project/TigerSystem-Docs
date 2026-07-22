@@ -34,6 +34,13 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 > [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors)
 > — they are linked, not duplicated, here.
 
+## Beyond printers
+
+Compatibility isn't only about printers: see the growing list of
+**[compatible third-party hardware](./third-party-hardware.md)** — NFC
+readers, filament analyzers, USB scales — and the
+**[software built on TigerTag](../developers/integrations.md)**.
+
 ## The universal answer
 
 Whatever the printer: stick a [TigerTag](../products/tigertag.md) chip on the

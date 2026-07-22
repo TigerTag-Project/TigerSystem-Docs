@@ -222,6 +222,7 @@ a natural future path.
 - [Architecture overview](docs/architecture/overview.md) and [Data flow](docs/architecture/data-flow.md): diagrams
 - [Products](docs/products/README.md): one page per product
 - [Compatibility](docs/compatibility/README.md): per-brand printer links + native RFID formats
+- [Compatible third-party hardware](docs/compatibility/third-party-hardware.md): the growing list — ACR122U, AJAX-3D TD-1/TD1s, DYMO/HID USB scales, blank NTAG chips
 - [Developers](docs/developers/README.md): repo map, SDKs, cloud integration
 - [FAQ](docs/faq/README.md): users, developers, manufacturers, troubleshooting
 

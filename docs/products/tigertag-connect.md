@@ -27,7 +27,8 @@ flowchart LR
   friends and racks stay in sync in real time across devices.
 - **USB-C accessories** — supports the AJAX-3D **TD-1 / TD1s** filament
   analyzer over USB-C: measure a filament's Transmission Distance (and
-  color) right from the phone.
+  color) right from the phone
+  ([compatible third-party hardware](../compatibility/third-party-hardware.md)).
 
 ## Get it
 
