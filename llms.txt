@@ -139,6 +139,11 @@ endpoints.
   the production-grade side of TigerSystem (not part of the sandbox).
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
+- **TD1S (BIQU AJAX TD1S)**: a THIRD-PARTY filament analyzer (by AJAX 3D and
+  BIQU/BigTreeTech) measuring exact color (RGB hex) and Transmission
+  Distance (TD, the HueForge transparency value, ±7.5%). Tiger Studio
+  integrates it natively: measured color and TD feed the spool's profile.
+  Not a TigerSystem product — an integrated third-party device.
 - **Second Life**: rewriting a TigerTag chip when a spool is refilled or
   re-purposed, so any spool re-enters the system as self-identifying. Extends
   to the chip itself: official branded chips are produced as NTAG215 so that,

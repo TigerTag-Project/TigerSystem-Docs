@@ -209,8 +209,13 @@ weight once; it's then applied to every spool in that container, so the number
 you see is net filament, not plastic reel.
 
 **What is the TD1S?**
-A color sensor used with Tiger Studio: scan a filament and capture its real
-color for the spool's profile — handy for unlabeled or re-spooled filament.
+The **BIQU AJAX TD1S** — a third-party filament analyzer designed by AJAX 3D
+with BIQU (BigTreeTech). It measures a filament's exact **color** (RGB hex)
+and its **Transmission Distance** ("TD" — how much light the material lets
+through, the key value for HueForge-style multicolor prints, ±7.5 %
+accuracy). Tiger Studio integrates it natively: scan a filament and its real
+color and TD land straight in the spool's profile — a third-party device and
+the open ecosystem working together, as intended.
 
 ## Cloud & inventory
 

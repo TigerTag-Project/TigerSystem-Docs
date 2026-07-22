@@ -34,7 +34,10 @@ flowchart LR
 - **Racks** — drag-and-drop physical storage mapping.
 - **Friends & sharing** — discovery codes, read-only friend inventories.
 - **Devices** — ACR122U NFC reader, [TigerPOD](./tigerpod.md),
-  [TigerScale](./tigerscale.md), TD1S color sensor.
+  [TigerScale](./tigerscale.md), and the **BIQU AJAX TD1S** (third-party
+  color & transmission-distance analyzer by AJAX 3D and BigTreeTech,
+  integrated natively — measured color and TD go straight into the spool's
+  profile).
 - **9 locales** — EN · FR · DE · ES · IT · PL · PT-BR · PT-PT · 中文.
 
 The complete, always-current catalogue lives in the app repo's
