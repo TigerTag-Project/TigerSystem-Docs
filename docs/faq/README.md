@@ -197,7 +197,10 @@ the chip, live quantity from the scale.
 
 **Do I need a TigerScale to track weight?**
 No. You can set or adjust a spool's weight manually in the apps at any time —
-the scale just makes it automatic, live and effortless.
+the scale just makes it automatic, live and effortless. Tiger Studio also
+reads standard **USB "HID Scale" devices** — the DYMO M series (M5, M10,
+M25…) and any compliant scale — as a third-party option
+([details](../products/tigerscale.md)).
 
 **Can I build one myself?**
 Yes — that's the point. Hardware design and firmware are fully open (MIT) in
@@ -208,14 +211,18 @@ Tiger Studio's container calibration lets you measure a container's real empty
 weight once; it's then applied to every spool in that container, so the number
 you see is net filament, not plastic reel.
 
-**What is the TD1S?**
-The **BIQU AJAX TD1S** — a third-party filament analyzer designed by AJAX 3D
-with BIQU (BigTreeTech). It measures a filament's exact **color** (RGB hex)
-and its **Transmission Distance** ("TD" — how much light the material lets
-through, the key value for HueForge-style multicolor prints, ±7.5 %
-accuracy). Tiger Studio integrates it natively: scan a filament and its real
-color and TD land straight in the spool's profile — a third-party device and
-the open ecosystem working together, as intended.
+**What is the TD-1 / TD1s?**
+A third-party filament analyzer by **[AJAX-3D](https://ajax-3d.com)**, in two
+variants that both work with the ecosystem: **TD-1** (the DIY version — build
+it yourself) and **TD1s** (pre-assembled, ready to use out of the box). Its
+primary job is measuring a filament's **Transmission Distance** ("TD" — how
+much light the material lets through), the value HueForge / Full Spectrum
+printing users can't live without; it also reads the **color** (RGB, 1–3
+slots) — slightly less precise, but a good indication. Tiger Studio
+integrates it natively over USB, and **Tiger NFC Connect supports it over
+USB-C** on mobile. The measured TD can be **stored in the TigerTag protocol
+itself** — on the NFC chip, or in the `.ttag` file format. A third-party
+accessory and the open ecosystem working together, as intended.
 
 ## Cloud & inventory
 

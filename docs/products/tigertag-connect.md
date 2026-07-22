@@ -25,6 +25,9 @@ flowchart LR
 - **Catalogue browsing** — the shared brand/material/color reference database.
 - **Shared account** — same Firebase backend as Tiger Studio: inventory,
   friends and racks stay in sync in real time across devices.
+- **USB-C accessories** — supports the AJAX-3D **TD-1 / TD1s** filament
+  analyzer over USB-C: measure a filament's Transmission Distance (and
+  color) right from the phone.
 
 ## Get it
 

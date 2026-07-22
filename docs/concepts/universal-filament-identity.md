@@ -53,7 +53,9 @@ flowchart LR
   [**TigerTag+**](../products/tigertag-plus.md).
 
 A TigerData can stay digital forever, or be **promoted to a real chip
-atomically** whenever you're ready (Tiger Studio does this in one step).
+atomically** whenever you're ready (Tiger Studio does this in one step). As a
+standalone file, a TigerData travels in the **`.ttag`** format — the same
+identity on a USB stick, in a mail, between tools.
 
 ---
 

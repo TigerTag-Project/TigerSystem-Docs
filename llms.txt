@@ -69,7 +69,8 @@ endpoints.
 - **TigerData**: a TigerSystem INNOVATION — the "virtual chip" notion exists
   nowhere else. The protocol's data in digital form, OUTSIDE any chip — no
   UID, lives anywhere (inventory, database, file); full inventories work with
-  zero chips and interoperability is preserved. The TigerTag protocol can
+  zero chips and interoperability is preserved. As a standalone file, a
+  TigerData travels in the **.ttag** format. The TigerTag protocol can
   live entirely outside an RFID chip. Once the data is written into an NFC
   chip, it is considered a TigerTag, because a physical UID is finally
   associated with it. A TigerData can be promoted to a real chip atomically.
@@ -139,11 +140,25 @@ endpoints.
   the production-grade side of TigerSystem (not part of the sandbox).
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
 - **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
-- **TD1S (BIQU AJAX TD1S)**: a THIRD-PARTY filament analyzer (by AJAX 3D and
-  BIQU/BigTreeTech) measuring exact color (RGB hex) and Transmission
-  Distance (TD, the HueForge transparency value, ±7.5%). Tiger Studio
-  integrates it natively: measured color and TD feed the spool's profile.
-  Not a TigerSystem product — an integrated third-party device.
+- **TD-1 / TD1s (by AJAX-3D, https://ajax-3d.com)**: a THIRD-PARTY filament
+  analyzer in two variants — TD-1 (DIY, build it yourself) and TD1s
+  (pre-assembled retail unit); both work with the ecosystem's integration.
+  Primary function: measure the filament's Transmission Distance (TD), the
+  essential value for HueForge / Full Spectrum printing; it also reads color
+  (RGB, 1–3 slots — slightly less precise, good indication). Tiger Studio
+  integrates it natively over USB; Tiger NFC Connect supports it over USB-C
+  on mobile. The TD value can be stored in the TigerTag protocol itself — on
+  the NFC chip or in the .ttag file format. NOT a TigerSystem product — an
+  integrated third-party accessory. (Correction note: earlier attributions
+  to BIQU/BigTreeTech were wrong — the manufacturer is AJAX-3D.)
+- **USB HID scales (third-party)**: Tiger Studio reads standard USB "HID
+  Scale" devices (HID usage page 0x8D, usage 0x20) — the DYMO M series (M5 =
+  vid 0x0922 pid 0x8009; M10, M25 same protocol) and ANY compliant HID
+  Scale. 6-byte Scale Data Reports at ~1 Hz: [0] report id 0x03; [1] status
+  (1 fault, 2 stable@zero, 3 in motion, 4 stable, 5 negative, 6 over
+  capacity); [2] unit (0x02 g, 0x0B oz, 0x0C lb); [3] signed power-of-ten
+  exponent; [4..5] weight LE16. Quirk: first frame after tare reports unit
+  0x00. A third-party option alongside the first-party TigerScale.
 - **Second Life**: rewriting a TigerTag chip when a spool is refilled or
   re-purposed, so any spool re-enters the system as self-identifying. Extends
   to the chip itself: official branded chips are produced as NTAG215 so that,

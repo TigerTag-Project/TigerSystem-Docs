@@ -35,6 +35,27 @@ flowchart LR
 > the [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) repo;
 > summarize here once stabilized.
 
+## Third-party scales — USB HID (DYMO M series and friends)
+
+TigerScale is the first-party scale — but Tiger Studio also reads standard
+**USB "HID Scale" devices** (HID usage page `0x8D`, usage `0x20`): starting
+with the **DYMO M5** and the rest of the DYMO M series (M10, M25… same
+protocol), and **any compliant HID Scale**, whatever the brand. A third-party
+option, not a Tiger product.
+
+Protocol, validated on real hardware — 6-byte *Scale Data Reports* at ~1 Hz:
+
+| Byte | Meaning |
+|---|---|
+| `[0]` | report id `0x03` |
+| `[1]` | status: 1 fault · 2 stable @ zero · 3 in motion · 4 stable · 5 negative · 6 over capacity |
+| `[2]` | unit (HID PoS codes): `0x02` gram · `0x0B` ounce · `0x0C` pound |
+| `[3]` | signed power-of-ten exponent applied to the raw value |
+| `[4..5]` | weight, LE16 (LSB, MSB) |
+
+DYMO vendor id `0x0922`; the M5 is pid `0x8009`. Quirk: the very first frame
+right after a tare reports unit `0x00`.
+
 ## Interactions
 
 | With | How |
