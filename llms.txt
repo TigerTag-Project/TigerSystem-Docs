@@ -77,7 +77,9 @@ endpoints.
   (export single/multi-selection + import with validate → sanitise → preview
   → Restore-or-Import modes). records[] are the Firestore inventory docs
   VERBATIM (field dictionary: the TigerTag_Firebase_Integration data model;
-  Timestamps normalised to epoch-ms; fields sparse). Canonical media type:
+  fields sparse). Two timestamp conventions BY DESIGN: root exportedAt = ISO
+  8601 string; timestamps inside records (updatedAt and legacy variants) =
+  epoch-ms numbers. Canonical media type:
   application/vnd.tigertag.ttag+json (application/json accepted; importers
   validate by content, never by MIME/extension). Studio is the reference
   implementation today. Files are untrusted input: sanitised on import

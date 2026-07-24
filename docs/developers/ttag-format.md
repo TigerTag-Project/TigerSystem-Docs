@@ -19,7 +19,7 @@ A `.ttag` file is a single **UTF-8 JSON** document:
   "format": "tigertag",
   "kind": "ttag",
   "version": 1,
-  "exportedAt": 1752969600000,
+  "exportedAt": "2026-07-24T00:00:00.000Z",
   "exportedBy": "<owner uid>",
   "records": [ /* inventory documents, verbatim */ ],
   "rfidBackups": { "<chipUid>": { /* signed factory dump */ } }
@@ -30,7 +30,7 @@ A `.ttag` file is a single **UTF-8 JSON** document:
 |---|---|
 | `format` / `kind` | Always `"tigertag"` / `"ttag"` — the identification pair checked on import |
 | `version` | Format version; currently `1` |
-| `exportedAt` | Export time, epoch-ms |
+| `exportedAt` | Export time, **ISO 8601 string** (e.g. `"2026-07-24T00:00:00.000Z"`) |
 | `exportedBy` | Exporting owner's uid — **a UX hint for choosing the import mode ONLY, never a security boundary** |
 | `records[]` | Inventory documents, carried **verbatim** |
 | `rfidBackups` | *Optional.* Keyed by chip UID; present only for TigerTag+ (certified) spools — the signed factory dump used to restore the chip |
@@ -52,8 +52,12 @@ A `.ttag` file is a single **UTF-8 JSON** document:
 
 Rules baked into the format:
 
-- **Timestamps are normalised.** Firestore Timestamps become epoch-ms so the
-  file serialises cleanly.
+- **Two timestamp conventions, by design.** The root `exportedAt` is an
+  **ISO 8601 string**. Timestamps *inside* `records[]` (`updatedAt`, and the
+  legacy variants `updated_at` / `last_update`) are **epoch-ms numbers** —
+  Firestore Timestamps are converted by the serialiser so the file
+  serialises cleanly. Don't "fix" one to match the other: files in the wild
+  already carry this shape.
 - **Twins are atomic.** A twinned material always exports **both** sides —
   one material → two records, linked by `twin_tag_uid`. A half-twin is never
   produced.
@@ -62,9 +66,11 @@ Rules baked into the format:
 
 ## Media type
 
-The canonical media type is **`application/vnd.tigertag.ttag+json`** — use
-it when serving `.ttag` files over http(s) (the web playground, brand
-collections, download links). `application/json` is also accepted, and
+The canonical media type is **`application/vnd.tigertag.ttag+json`** — it
+matters where a `.ttag` is **served over http(s)** (the `Content-Type` a web
+playground, a CDN or a brand-collection host should send).
+`application/json` is also accepted. A file on disk carries no MIME — it is
+identified by its `.ttag` extension and, authoritatively, by its content:
 importers **validate by content** (`format`/`kind`/`version`), never by MIME
 header or file extension alone.
 
@@ -126,7 +132,7 @@ A faithful, anonymized multi-selection export — one TigerData, one twin pair
   "format": "tigertag",
   "kind": "ttag",
   "version": 1,
-  "exportedAt": 1769212800000,
+  "exportedAt": "2026-07-24T00:00:00.000Z",
   "exportedBy": "AbCdEf0123456789GhIjKlMnOpQr",
   "records": [
     {
