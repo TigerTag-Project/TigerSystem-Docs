@@ -35,6 +35,21 @@ A `.ttag` file is a single **UTF-8 JSON** document:
 | `records[]` | Inventory documents, carried **verbatim** |
 | `rfidBackups` | *Optional.* Keyed by chip UID; present only for TigerTag+ (certified) spools — the signed factory dump used to restore the chip |
 
+**`records[]` are the Firestore inventory documents, verbatim** — exactly
+`users/{uid}/inventory/{spoolId}` as documented in the
+[canonical data model](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/blob/main/docs/03-data-model.md)
+(use it as the field dictionary). Three nuances:
+
+- **Fields are sparse** — a field is only written when present on the doc:
+  `twin_tag_uid` only on twins, `rfidBackup: true` only on TigerTag+,
+  `id_product` only when known, and so on.
+- **URL fields are attacker-controlled** — `LinkTDS`, `LinkMSDS`,
+  `LinkYoutube`, `LinkREACH`, `LinkROHS`, `LinkFOOD` and `url_img*` are
+  sanitised on import: any non-http(s) scheme is dropped.
+- **Rack placement travels but doesn't apply** — `rack`, `rack_id`, `level`,
+  `position` may appear in the file but are not meaningful on import (an
+  imported spool does not inherit the exporter's rack).
+
 Rules baked into the format:
 
 - **Timestamps are normalised.** Firestore Timestamps become epoch-ms so the
@@ -44,6 +59,20 @@ Rules baked into the format:
   produced.
 - **Id discipline.** Only chipless `TigerData_<id>` ids may appear; a legacy
   `CLOUD_<id>` id is refused at export time.
+
+## Media type
+
+The canonical media type is **`application/vnd.tigertag.ttag+json`** — use
+it when serving `.ttag` files over http(s) (the web playground, brand
+collections, download links). `application/json` is also accepted, and
+importers **validate by content** (`format`/`kind`/`version`), never by MIME
+header or file extension alone.
+
+## Availability
+
+Export and import ship in **Tiger Studio v2.14.0+**. The format is designed
+to be portable; other surfaces may adopt it over time — today, Studio is the
+reference implementation.
 
 ## What a `.ttag` can carry
 
@@ -86,6 +115,84 @@ http(s) link, or drag-and-drop anywhere on the window.
 | TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — fresh `id_tigertag` nonce (NOT TigerTag+), `id_product` unset, `rfidBackup:false`; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
 | Weight | As recorded | Reset to full capacity |
 | Twins | As recorded | `twin_tag_uid` remapped through the new ids |
+
+## Complete example
+
+A faithful, anonymized multi-selection export — one TigerData, one twin pair
+(reciprocal `twin_tag_uid`), one TigerTag+ with its signed backup:
+
+```json
+{
+  "format": "tigertag",
+  "kind": "ttag",
+  "version": 1,
+  "exportedAt": 1769212800000,
+  "exportedBy": "AbCdEf0123456789GhIjKlMnOpQr",
+  "records": [
+    {
+      "uid": "TigerData_9F3A2B1C",
+      "id_brand": 12, "id_material": 3, "id_type": 1,
+      "id_aspect1": 2, "id_aspect2": 0, "id_tigertag": 74213,
+      "material": "PLA Basic", "color_name": "Sky Blue",
+      "color_r": 88, "color_g": 170, "color_b": 220,
+      "online_color_list": "58AADC", "online_color_type": 1,
+      "measure_gr": 1000, "weight_available": 640,
+      "container_id": 3, "container_weight": 215,
+      "TD": 0, "tags": ["desk", "prototyping"],
+      "rfidBackup": false, "updatedAt": 1769212800000
+    },
+    {
+      "uid": "04A1B2C3D4E5F6",
+      "id_brand": 5, "id_material": 3, "id_type": 1,
+      "id_aspect1": 4, "id_tigertag": 55010,
+      "material": "PLA Silk", "color_name": "Gold",
+      "color_r": 212, "color_g": 175, "color_b": 55,
+      "online_color_list": "D4AF37",
+      "measure_gr": 1000, "weight_available": 500,
+      "container_id": 3, "container_weight": 215,
+      "twin_tag_uid": "04F6E5D4C3B2A1",
+      "rfidBackup": false, "updatedAt": 1769212800000
+    },
+    {
+      "uid": "04F6E5D4C3B2A1",
+      "id_brand": 5, "id_material": 3, "id_type": 1,
+      "id_aspect1": 4, "id_tigertag": 55011,
+      "material": "PLA Silk", "color_name": "Emerald",
+      "color_r": 0, "color_g": 130, "color_b": 90,
+      "online_color_list": "00825A",
+      "measure_gr": 1000, "weight_available": 500,
+      "container_id": 3, "container_weight": 215,
+      "twin_tag_uid": "04A1B2C3D4E5F6",
+      "rfidBackup": false, "updatedAt": 1769212800000
+    },
+    {
+      "uid": "04112233445566",
+      "id_brand": 5, "id_material": 8, "id_type": 1,
+      "id_aspect1": 2, "id_tigertag": 90887, "id_product": 4412,
+      "material": "PETG HF Basic", "series": "Hyper PETG",
+      "color_name": "Green",
+      "color_r": 0, "color_g": 160, "color_b": 70,
+      "online_color_list": "00A046",
+      "measure_gr": 1000, "weight_available": 480,
+      "container_id": 3, "container_weight": 215, "TD": 6,
+      "LinkTDS": "https://example-brand.example/tds/petg-hf-basic.pdf",
+      "sku": "RFHPPETG175GN1",
+      "rfidBackup": true, "updatedAt": 1769212800000
+    }
+  ],
+  "rfidBackups": {
+    "04112233445566": {
+      "firstSeen": 1767139200000,
+      "backup": "0411223344556680048000000000E110122F0300FE0000A5A5C0FFEE112233445566778899…"
+    }
+  }
+}
+```
+
+Reading the example: the first record is chipless (a `TigerData_` id); the
+next two are a twin pair — same material, reciprocal `twin_tag_uid`, always
+exported together; the last is a TigerTag+ (`rfidBackup: true`) whose signed
+factory dump sits in `rfidBackups` under its chip UID.
 
 ## Security / trust model
 

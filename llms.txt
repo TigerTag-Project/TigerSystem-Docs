@@ -75,10 +75,15 @@ endpoints.
   more inventory materials, all three tiers (TigerData / TigerTag /
   TigerTag+ with its signed rfidBackups). Shipped in Tiger Studio v2.14.0
   (export single/multi-selection + import with validate → sanitise → preview
-  → Restore-or-Import modes). Files are untrusted input: sanitised on
-  import; exportedBy is a UX hint, never a security boundary (Firestore
-  rules are). Canonical spec: docs/developers/ttag-format.md in
-  TigerSystem-Docs. The TigerTag protocol can
+  → Restore-or-Import modes). records[] are the Firestore inventory docs
+  VERBATIM (field dictionary: the TigerTag_Firebase_Integration data model;
+  Timestamps normalised to epoch-ms; fields sparse). Canonical media type:
+  application/vnd.tigertag.ttag+json (application/json accepted; importers
+  validate by content, never by MIME/extension). Studio is the reference
+  implementation today. Files are untrusted input: sanitised on import
+  (non-http(s) URL fields dropped, values clamped); exportedBy is a UX hint,
+  never a security boundary (Firestore rules are). Canonical spec:
+  docs/developers/ttag-format.md in TigerSystem-Docs. The TigerTag protocol can
   live entirely outside an RFID chip. Once the data is written into an NFC
   chip, it is considered a TigerTag, because a physical UID is finally
   associated with it. A TigerData can be promoted to a real chip atomically.
