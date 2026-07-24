@@ -14,13 +14,13 @@ their gear in.
 | **Any HID Scale-compliant USB scale** | any | Same standard protocol as the DYMO M series (HID usage page `0x8D`) — brand doesn't matter | [Tiger Studio](../products/tiger-studio.md) |
 | **Any blank NTAG213/215/216 chip** | any | The consumable itself — bought anywhere, works identically ([which chip?](../../docs/faq/README.md)) | Everything |
 
-| | | |
-|---|---|---|
-| <img src="../assets/td1s-front.jpg" alt="The AJAX-3D TD1s filament analyzer" /> | <img src="../assets/dymo-usb-scale.png" alt="A DYMO M-series USB HID scale" /> | <img src="../assets/tigertag-chip-material.png" alt="Blank TigerTag NTAG chips" /> |
+| | | | |
+|---|---|---|---|
+| <img src="../assets/acr122u.jpg" alt="The ACR122U USB NFC reader" /> | <img src="../assets/td1s-front.jpg" alt="The AJAX-3D TD1s filament analyzer" /> | <img src="../assets/dymo-usb-scale.png" alt="A DYMO M-series USB HID scale" /> | <img src="../assets/ntag-chip.png" alt="A bare NTAG NFC chip — the antenna coil visible" /> |
 
-*The AJAX-3D TD1s · a DYMO M-series USB scale · the chips themselves. (The
-ACR122U is the reader inside every [TigerPOD](../products/tigerpod.md) — and
-on [the bench photo](../../README.md).)*
+*The ACR122U reader (two of them live inside every
+[TigerPOD](../products/tigerpod.md)) · the AJAX-3D TD1s · a DYMO M-series USB
+scale · the chip itself, antenna bared.*
 
 <img src="../assets/td1s-in-studio.jpg" width="100%" alt="The TD1s integrated in Tiger Studio — measured color and TD flowing into the spool's profile" />
 
