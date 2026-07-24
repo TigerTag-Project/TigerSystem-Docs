@@ -16,9 +16,9 @@ High-level, non-dated intentions (details live per product):
 - **A distributor map** *(planned)* — official distributors are growing
   beyond [Atome3D](https://atome3d.com); a map will show where to buy
   TigerTag chips locally.
-- **The `.ttag` portable file** — the TigerData standalone file format
-  (JSON-based): a virtual spool that travels on a USB stick, by mail, or
-  between tools — and can carry measured values like the TD.
+- ~~The `.ttag` portable file~~ — **shipped** in Tiger Studio v2.14.0:
+  [the `.ttag` format](../developers/ttag-format.md) (export + import, all
+  three spool tiers).
 - **TigerTag for resins** — extending the protocol to resin containers for
   resin 3D printers, bringing the same open identity to a whole second family
   of machines.

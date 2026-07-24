@@ -46,6 +46,7 @@ chip works perfectly, it just can't prove its origin.
 | Understand the pieces | [Architecture overview](../architecture/overview.md) |
 | Know which repo does what | [Repositories](./repositories.md) |
 | Read/write TigerTag chips | [SDKs](./sdks.md) |
+| Exchange inventories as files | [The `.ttag` format](./ttag-format.md) |
 | Sync with the user's cloud inventory | [Cloud API & integration](./cloud-api.md) |
 | Understand the chip payload | [The TigerTag chip](../concepts/tigertag-chip.md) |
 

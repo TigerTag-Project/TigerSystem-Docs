@@ -21,6 +21,7 @@ To avoid documentation drift, each fact has exactly **one** home:
 | Topic | Canonical location |
 |---|---|
 | Ecosystem overview, philosophy, product pages, FAQ | **This repo** |
+| The `.ttag` interchange file format | **This repo** ([spec](./ttag-format.md)) |
 | Chip byte-level format | TigerTag-RFID-Guide |
 | Firestore data model & auth flows | TigerTag_Firebase_Integration (`docs/`) |
 | Printer LAN protocols (per brand) | TigerTag-Studio-Manager (`renderer/printers/<brand>/PROTOCOL.md`) |

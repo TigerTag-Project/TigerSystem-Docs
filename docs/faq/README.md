@@ -107,6 +107,13 @@ never actually read it hot (scans happen at ambient temperature, not
 mid-print inside a chamber), and it's standard NTAG hardware — for formal
 temperature ratings, refer to NXP's NTAG213/215/216 datasheets.
 
+**What is a `.ttag` file?**
+A portable, offline snapshot of one or more of your spools — the unit for
+backing up, carrying on a USB stick, and sharing your filaments. Export one
+spool or a whole selection from Tiger Studio; import with a full preview and
+a choice between *Restore* (same account) and *Import* (adopt as fresh
+spools). Full spec: [the `.ttag` format](../developers/ttag-format.md).
+
 **Can I use TigerSystem with no chips at all?**
 Yes — that's **TigerData**: the same protocol data in purely digital form, no
 chip, no UID. The identity lives in your inventory (or anywhere digital) and
