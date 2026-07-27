@@ -119,7 +119,7 @@ http(s) link, or drag-and-drop anywhere on the window.
 |---|---|---|
 | Intent | Same account / a genuine restore | Adopting someone else's materials |
 | Record ids | Kept — written **verbatim** under the original ids | **New** ids — each record becomes a fresh chipless `TigerData_` spool owned by the importer |
-| TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — fresh `id_tigertag` nonce (NOT TigerTag+), `id_product` unset, `rfidBackup:false`; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
+| TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless, so `id_tigertag` is **removed** (which is what makes it not a TigerTag+), `id_product` unset, `rfidBackup:false`; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
 | Weight | As recorded | Reset to full capacity |
 | Twins | As recorded | `twin_tag_uid` remapped through the new ids |
 
@@ -136,11 +136,19 @@ each present and finite (`null` and `""` do **not** count as present — beware,
 
 | Group | Fields |
 |---|---|
-| Identity ids | `id_brand`, `id_material`, `id_type`, `id_aspect1`, `id_aspect2`, `id_diameter`, `id_measure_unit`, `id_version`, `id_tigertag`, `id_product` |
+| Identity ids | `id_brand`, `id_material`, `id_type`, `id_aspect1`, `id_aspect2`, `id_diameter`, `id_measure_unit`, `id_version`, `id_product` |
 | Quantity | `measure` |
 | Colour | `color_r`, `color_g`, `color_b`, `color_a` |
 | Per-type payload | `data1` … `data7` |
 | Stamp | `timestamp` |
+
+Plus **`id_tigertag`, but only if the record has a chip.** That field names the
+chip's version in `id_version.json`, where exactly four values are legal — `0`
+RFID Empty, `1542820452` TigerTag, `1816240865` TigerTag Init, `3155151767`
+TigerTag+. A chipless record (`uid` starting `TigerData_` or the legacy `CLOUD_`)
+has no chip and therefore no version, so it **must not carry the field at all**;
+it is written for the first time when a real chip is programmed. Never invent a
+value for it, and never resolve one without checking the record has a chip.
 
 Everything else in a record — names, images, price, notes, rack position — is
 **enrichment**: nice to carry, never required.
