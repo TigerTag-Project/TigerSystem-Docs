@@ -106,7 +106,8 @@ http(s) link, or drag-and-drop anywhere on the window.
 
 1. **Validate.** Each file must carry the `format`/`kind` pair and
    `version ≤ 1`. A non-`.ttag` file, a newer version, or an empty file is
-   rejected.
+   rejected. Each **record** must then carry the full chip payload — see
+   *Required fields* below.
 2. **Sanitise.** File contents are untrusted input: non-http(s) URL fields
    are dropped; colour, weight and TD values are clamped to valid ranges.
 3. **Preview.** Every material is shown in a preview table with a
@@ -121,6 +122,37 @@ http(s) link, or drag-and-drop anywhere on the window.
 | TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — fresh `id_tigertag` nonce (NOT TigerTag+), `id_product` unset, `rfidBackup:false`; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
 | Weight | As recorded | Reset to full capacity |
 | Twins | As recorded | `twin_tag_uid` remapped through the new ids |
+
+### Required fields — a record must be able to make a chip
+
+A `.ttag` exists to **create TigerTag / TigerTag+ chips**. A record that cannot
+produce one is not a partial record, it is an unusable one — so since Tiger
+Studio **2.15.0** the importer refuses it outright rather than importing a spool
+that looks fine and is silently wrong.
+
+A record is accepted only if it carries **`uid` plus these 24 numeric fields**,
+each present and finite (`null` and `""` do **not** count as present — beware,
+`Number(null)` is `0`):
+
+| Group | Fields |
+|---|---|
+| Identity ids | `id_brand`, `id_material`, `id_type`, `id_aspect1`, `id_aspect2`, `id_diameter`, `id_measure_unit`, `id_version`, `id_tigertag`, `id_product` |
+| Quantity | `measure` |
+| Colour | `color_r`, `color_g`, `color_b`, `color_a` |
+| Per-type payload | `data1` … `data7` |
+| Stamp | `timestamp` |
+
+Everything else in a record — names, images, price, notes, rack position — is
+**enrichment**: nice to carry, never required.
+
+**A material is atomic.** A twin pair passes only if *both* of its records do; a
+half-valid twin is refused whole, because importing one side of a pair would
+create a spool whose partner can never be written.
+
+**Refusals are counted and shown, never silent.** The preview reports how many
+materials were turned away, so a bad export is visible instead of quietly losing
+half its content. Writers of `.ttag` files should validate against this list
+before shipping a file to users.
 
 ## Complete example
 
