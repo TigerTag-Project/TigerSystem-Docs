@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>TigerSystem — colour rendering, reference renderer</title>
+<title>TigerSystem — the material swatch, reference renderer</title>
 <!--
-  The reference renderer for the TigerSystem colour convention.
-  Spec: ./color-rendering.md — that document is normative, this page shows it.
+  The reference renderer for the TigerSystem material-swatch convention.
+  Spec: ./material-swatch.md — that document is normative, this page shows it.
 
   Self-contained on purpose: no build, no server, no network. Open the file.
   The implementation below is the convention expressed as code — port it, or
@@ -74,9 +74,9 @@
 </head>
 <body>
 
-<h1>Colour rendering — reference renderer</h1>
+<h1>The material swatch — reference renderer</h1>
 <p class="intro">
-  The <a href="./color-rendering.md">TigerSystem colour convention</a>, running.
+  The <a href="./material-swatch.md">TigerSystem material-swatch convention</a>, running.
   Every case of the decision ladder, on every box shape a real interface uses —
   because the rule has to survive a circle, a square, a banner and a clipped
   fill bar alike. <b>Pick a colour and watch all five follow.</b> The green line
@@ -88,8 +88,8 @@
 
 <script>
 /* ═══════════════════════════════════════════════════════════════════════════
-   THE CONVENTION, AS CODE. This is the normative behaviour of
-   ./color-rendering.md — keep the two in step.
+   THE SWATCH CONVENTION, AS CODE. This is the normative behaviour of
+   ./material-swatch.md — keep the two in step.
    ═══════════════════════════════════════════════════════════════════════════ */
 
 // N colours, hard edges → N equal conic sectors, first colour at 12 o'clock,

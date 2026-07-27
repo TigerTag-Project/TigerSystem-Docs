@@ -1,9 +1,17 @@
-# Colour rendering — the official convention
+# The material swatch — the official convention
 
-A spool's colour is stored as data, not as a picture. This page is the
-**official TigerSystem convention** for turning that data into what a user
-actually sees, so the same spool looks the same everywhere: in Tiger Studio, in
-the mobile app, on the web, in your own integration.
+A material's colour is stored as data, not as a picture. The **swatch** is that
+data drawn: the coloured shape that stands for the material in a list, on a
+card, in a rack slot, next to its name. This page is the **official TigerSystem
+convention** for producing it, so the same material shows the same swatch
+everywhere — in Tiger Studio, in the mobile app, on the web, in your own
+integration.
+
+**"Material", not "spool", is deliberate.** A TigerTag identifies a filament
+spool, but also an accessory, a spare part, a resin — and the product types the
+protocol has yet to gain. The convention is written against `id_type` in
+general: nothing below reads the product type, so a swatch is produced the same
+way whatever the material is.
 
 It is normative. A bicolor filament that shows a vertical split in one app and a
 left-to-right ramp in another is a bug in whichever one departed from this page
@@ -13,7 +21,7 @@ with no conic gradient, say), implement the closest equivalent described in
 picture.
 
 - **Convention version:** 1.0
-- **Reference renderer:** [`color-playground.html`](./color-playground.html) —
+- **Reference renderer:** [`material-swatch-playground.html`](./material-swatch-playground.html) —
   open it in any browser, no server, no dependency. Every case, every box shape,
   live colour pickers, and the exact CSS it produces.
 
@@ -23,14 +31,14 @@ picture.
 
 | Shape | When | Geometry |
 |---|---|---|
-| **Camembert** (pie) | Every hard-edged spool — bicolor, tricolor, any list of N colours | N equal conic sectors, first colour starting at **12 o'clock**, sweeping **clockwise** |
+| **Camembert** (pie) | Every hard-edged material — bicolor, tricolor, any list of N colours | N equal conic sectors, first colour starting at **12 o'clock**, sweeping **clockwise** |
 | **Ramp** | Rainbow, and the catalogue's declared `gradient` type | A smooth linear ramp at **135°** — pointing to the bottom-right, so the first colour sits top-left |
 
 Said plainly: **everything is a camembert except a ramp**, and there is exactly
 one ramp angle in the whole system.
 
 **Bicolor is the guaranteed vertical split — and it is not a special case.** Two
-equal sectors put their boundary on the vertical axis, so a bicolor spool shows
+equal sectors put their boundary on the vertical axis, so a bicolor material shows
 a straight vertical edge on *any* box: a round swatch, a square tile, a wide
 thumbnail, a partially-filled bar. You get that for free by implementing the
 pie; you do not need a separate code path, and you must not introduce one that
@@ -58,7 +66,7 @@ no gradient type on the chip, and there never was.
 | `color_r` / `color_g` / `color_b` | `int 0-255` | Slot 1 |
 | `color_r2` / `color_g2` / `color_b2` | `int 0-255` | Slot 2 |
 | `color_r3` / `color_g3` / `color_b3` | `int 0-255` | Slot 3 |
-| `color_a` | `int 0-255` | Alpha — **ignored for rendering**; never blend a spool colour |
+| `color_a` | `int 0-255` | Alpha — **ignored for rendering**; never blend a material colour |
 | `id_aspect1` / `id_aspect2` | `int` | Either slot may carry the colouring aspect |
 
 Three aspect ids change the shape (their reference table also carries an
@@ -76,7 +84,7 @@ strings and may be translated.
 
 > ⚠️ **Never count the slots to guess how many colours there are.** A chip
 > document always carries all three slots: absent components are stored as `0`,
-> so slots 2 and 3 read as pure black on a mono spool. **The number of colours
+> so slots 2 and 3 read as pure black on a mono material. **The number of colours
 > comes from the aspect, never from the slots.**
 
 ### The catalogue — a richer, cloud-only description
@@ -189,7 +197,7 @@ Any implementation must reproduce these exactly.
 
 ## The TigerTag watermark
 
-Any surface that paints a spool colour **without** a product photo carries the
+Any surface that paints a material colour **without** a product photo carries the
 TigerTag logo on top, as a watermark.
 
 | Rule | Value |
