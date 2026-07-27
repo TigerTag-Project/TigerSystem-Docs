@@ -47,6 +47,7 @@ chip works perfectly, it just can't prove its origin.
 | Know which repo does what | [Repositories](./repositories.md) |
 | Read/write TigerTag chips | [SDKs](./sdks.md) |
 | Exchange inventories as files | [The `.ttag` format](./ttag-format.md) |
+| Show a spool's colour the way every other app does | [Colour rendering](./color-rendering.md) — and its [live reference renderer](./color-playground.html) |
 | Sync with the user's cloud inventory | [Cloud API & integration](./cloud-api.md) |
 | Understand the chip payload | [The TigerTag chip](../concepts/tigertag-chip.md) |
 
@@ -73,6 +74,11 @@ flowchart LR
   own format version for backward compatibility.
 - **Naming** — self-describing names over encoded/clever ones; no
   multi-state magic values.
+- **Colour** — a spool's colour is stored as data, not as a picture, so every
+  surface must turn that data into the same picture:
+  [the colour rendering convention](./color-rendering.md) is normative, and
+  ships with a [reference renderer](./color-playground.html) you can check your
+  own implementation against.
 - **Contributions** — each repo has its own guide; docs contributions follow
   [CONTRIBUTING.md](../../CONTRIBUTING.md) here.
 
