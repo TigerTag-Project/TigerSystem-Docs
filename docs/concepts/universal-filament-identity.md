@@ -56,10 +56,11 @@ flowchart LR
   material, temperatures, diameter, SKU and EAN, straight from the source. It is
   what you get by picking a product rather than describing one.
   > It is **not** a TigerTag+, and never claims to be: no chip, no UID. The `+`
-  > means *identified*, not *certified*. For developers: it is **derived, never
-  > stored** — a spool is a TigerData+ when it is chipless **and** carries a real
-  > product id. There is no field, no id prefix and no protocol value of its own.
-  > See the [Firestore data structure](https://github.com/TigerTag-Project/TigerTag_Firebase_Backend#-firestore-data-structure).
+  > means *identified*, not *certified*. For developers: a spool is a TigerData+
+  > when it is chipless **and** carries a real product id — that pair is the
+  > definition, and it is mirrored onto the record as `protocol: "TigerData+"` so
+  > you can read it directly. See the
+  > [Firestore data structure](https://github.com/TigerTag-Project/TigerTag_Firebase_Backend#-firestore-data-structure).
 - The moment that data is **written into an NFC chip**, it becomes a
   **TigerTag**: a physical **UID is finally associated** with the identity.
 - Back that chip up in your account and it's a
