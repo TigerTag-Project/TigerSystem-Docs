@@ -74,7 +74,7 @@ produced, a high level of integration, and an **official public
 commitment**. One step from the summit: make the signed chips standard
 across the whole line, and join Platinum.
 
-<a href="https://r3dprint.com"><img src="../assets/partners/r3d.svg" height="34" alt="R3D" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="32" alt="eSun" /></a>
+<a href="https://r3dprint.com"><img src="../assets/partners/r3d.svg" height="34" alt="R3D" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="32" alt="eSun" /></a>
 
 **[R3D](https://r3dprint.com)** · **[eSun](https://www.esun3d.com)**
 
@@ -84,7 +84,7 @@ across the whole line, and join Platinum.
 one: their customers can buy TigerTag-equipped spools today. The next rung
 is Gold: scale the volumes and make the commitment public.
 
-<a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
+<a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
 **[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
 
