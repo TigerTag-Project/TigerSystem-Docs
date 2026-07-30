@@ -8,7 +8,7 @@ ready to publish.
 
 || | | |
 |---|---|---|---|
-| <img src="../assets/logos/preview-tigertag-badge-square.svg" width="120" alt="TigerTag RFID badge — square" /> | <img src="../assets/logos/preview-tigertag-badge-contained.svg" width="120" alt="TigerTag RFID badge — contained" /> | <img src="../assets/logos/preview-tigertag-head.svg" width="150" alt="TigerTag tiger head mark" /> | <img src="../assets/logos/tigersystem-app-icon.svg" width="110" alt="TigerSystem app icon" /> |
+| <img src="../assets/logos/tigertag-badge-square.svg" width="120" alt="TigerTag RFID badge — square" /> | <img src="../assets/logos/tigertag-badge-contained.svg" width="120" alt="TigerTag RFID badge — contained" /> | <img src="../assets/logos/preview-tigertag-head.svg" width="150" alt="TigerTag tiger head mark" /> | <img src="../assets/logos/tigersystem-app-icon.svg" width="110" alt="TigerSystem app icon" /> |
 
 || |
 |---|---|
@@ -16,8 +16,9 @@ ready to publish.
 
 The official marks as vector SVG — the square **TigerTag RFID** badge (the one
 printed on partner boxes and chips), the contained variant, the tiger head, the
-full logo and its contour variant, plus the **TigerSystem** app icon.
-Monochrome files are single-color vectors: recolor them freely to fit your
+full logo and its contour variant, plus the **TigerSystem** app icon. The two
+badges are the exact artwork printed on partner boxes; the head, logo and
+contour marks are single-color vectors — recolor them freely to fit your
 layout.
 
 **[Download the logo pack (ZIP, ~120 KB, 6 SVG files)](./tigertag-logos.zip)**
