@@ -25,24 +25,29 @@ background, exactly as printed on partner boxes and chips).
 </tr>
 <tr>
 <td align="center"><img src="../assets/logos/tigertag-logo-on-black.svg" width="140" alt="TigerTag full logo, white" /><br/><strong>tigertag-logo.svg</strong><br/><em>for dark backgrounds</em></td>
-<td align="center"><img src="../assets/logos/tigertag-head-on-black.svg" width="150" alt="TigerTag head mark, white" /><br/><strong>tigertag-head.svg</strong><br/><em>for dark backgrounds</em></td>
 <td align="center"><img src="../assets/logos/tigertag-logo-contour-on-white.svg" width="140" alt="TigerTag contour logo, black" /><br/><strong>tigertag-logo-contour.svg</strong><br/><em>for light backgrounds</em></td>
+<td align="center"><img src="../assets/logos/tigertag-contour-square-on-white.svg" width="140" alt="TigerTag contour square composition, black" /><br/><strong>tigertag-contour-square.svg</strong><br/><em>for light backgrounds</em></td>
 </tr>
 <tr>
-<td align="center"><img src="../assets/logos/tigertag-contour-square-on-white.svg" width="140" alt="TigerTag contour square composition, black" /><br/><strong>tigertag-contour-square.svg</strong><br/><em>for light backgrounds</em></td>
+<td align="center"><img src="../assets/logos/tiger-head-on-black.svg" width="150" alt="Tiger head mark, white" /><br/><strong>tiger-head.svg</strong><br/><em>for dark backgrounds</em></td>
+<td align="center"><img src="../assets/logos/tiger-head-contour-on-white.svg" width="150" alt="Tiger head contour mark, black" /><br/><strong>tiger-head-contour.svg</strong><br/><em>for light backgrounds</em></td>
+<td></td>
+</tr>
+<tr>
 <td align="center"><img src="../assets/logos/tigersystem-app-icon.svg" width="110" alt="TigerSystem app icon" /><br/><strong>tigersystem-app-icon.svg</strong><br/><em>any background</em></td>
 <td align="center"><img src="../assets/logos/tigersystem-app-icon-rounded.svg" width="110" alt="TigerSystem app icon, rounded" /><br/><strong>tigersystem-app-icon-rounded.svg</strong><br/><em>any background</em></td>
+<td></td>
 </tr>
 </table>
 
-The **TigerTag badges** (with the TIGER TAG RFID lettering) and the **tiger
-head badges** (head only) each come in three crops — square, contained,
-overflow — and are the exact artwork printed on partner boxes. The white
-**logo** and **head** marks are single-color vectors for dark surfaces; the
-black **contour** marks are their light-background counterparts. The
-**TigerSystem app icons** carry their own dark background.
+Naming: **TigerTag** marks carry the TIGER TAG lettering; head-only marks are
+**Tiger** assets. Each badge family comes in three crops — square, contained,
+overflow — and is the exact artwork printed on partner boxes. White marks are
+single-color vectors for dark surfaces; the black **contour** marks are always
+for light backgrounds. The **TigerSystem app icons** carry their own dark
+background.
 
-**[Download the logo pack (ZIP, ~680 KB, 12 SVG files)](./tigertag-logos.zip)**
+**[Download the logo pack (ZIP, ~680 KB, 13 SVG files)](./tigertag-logos.zip)**
 
 ## The ecosystem, in one image
 
