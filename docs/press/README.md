@@ -8,11 +8,11 @@ ready to publish.
 
 || | | |
 |---|---|---|---|
-| <img src="../assets/logos/tigertag-badge-square.svg" width="120" alt="TigerTag RFID badge — square" /> | <img src="../assets/logos/tigertag-badge-contained.svg" width="120" alt="TigerTag RFID badge — contained" /> | <img src="../assets/logos/preview-tigertag-head.svg" width="150" alt="TigerTag tiger head mark" /> | <img src="../assets/logos/tigersystem-app-icon.svg" width="110" alt="TigerSystem app icon" /> |
+| <img src="../assets/logos/tigertag-badge-square.svg" width="120" alt="TigerTag RFID badge — square" /> | <img src="../assets/logos/tigertag-badge-contained.svg" width="120" alt="TigerTag RFID badge — contained" /> | <img src="../assets/logos/tigertag-head-on-black.svg" width="150" alt="TigerTag tiger head mark" /> | <img src="../assets/logos/tigersystem-app-icon.svg" width="110" alt="TigerSystem app icon" /> |
 
 || |
 |---|---|
-| <img src="../assets/logos/preview-tigertag-logo.svg" width="150" alt="TigerTag logo — full" /> | <img src="../assets/logos/preview-tigertag-logo-contour.svg" width="170" alt="TigerTag logo — contour variant" /> |
+| <img src="../assets/logos/tigertag-logo-on-black.svg" width="150" alt="TigerTag logo — full" /> | <img src="../assets/logos/preview-tigertag-logo-contour.svg" width="170" alt="TigerTag logo — contour variant" /> |
 
 The official marks as vector SVG — the square **TigerTag RFID** badge (the one
 printed on partner boxes and chips), the contained variant, the tiger head, the
