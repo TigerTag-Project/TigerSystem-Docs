@@ -67,7 +67,7 @@ At **record level**:
 |---|---|
 | **Required** | `uid` (`TigerData_<id>` or chip UID) · **`id_brand`** |
 | Core identity (present on every well-formed record) | `id_material`, `id_type`, `id_aspect1`, `id_tigertag` — resolved against the shared reference database |
-| Capacity | `measure_gr` is the **normalized capacity in grams**, derived from `measure` + `id_unit` (e.g. `measure: 1` with the kg unit → `measure_gr: 1000`). Generators may provide `measure` + `id_unit`; `measure_gr` is the canonical stored value |
+| Capacity | Normalized from `measure` + `id_unit`: **`measure_gr` in grams for solids** (e.g. `measure: 1` + kg → `measure_gr: 1000`) and **`measure_ml` in milliliters for liquids** (resins). Generators may provide `measure` + `id_unit`; the normalized value is the canonical stored one |
 | Common optional | color fields (`color_r/g/b`, `online_color_list`…), `weight_available`, `container_id` / `container_weight`, display strings (`material`, `series`, `color_name`), `TD`, `tags`, `sku` / `barcode`, `Link*`, `url_img*` |
 | Conditional | `twin_tag_uid` (twins only — reciprocal within the file) · `rfidBackup: true` **plus** a matching `rfidBackups` entry (TigerTag+ only) · `id_product` (known catalogue products only) |
 | Carried but ignored on import | `rack`, `rack_id`, `level`, `position` |

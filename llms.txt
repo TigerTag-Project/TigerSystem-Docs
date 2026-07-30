@@ -41,7 +41,12 @@ reader is already in everyone's pocket (at Bambu Lab the readers sit in the
 AMS, not the printer; a third-party spool can't be detected by the machine).
 Since then, more than 2.5 million TigerTag NFC chips have been produced, most
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, more being integrated). The project initially
+Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, more being integrated).
+Integrator tiers (founder-defined): PLATINUM = Rosa3D (TigerTag across the
+entire production, chips standard on every spool); GOLD = R3D, eSun
+(on-demand integration at production, large quantities produced, high
+integration level, official public commitment); SILVER = Sunlu, Landu,
+Jamg He (technology integrated on demand). The project initially
 expected the community to invent uses for them on its own; no third-party
 integrations emerged, so the project now builds the proof-of-concept uses
 itself — user-centred material identification, not printer-centred — to show
@@ -79,9 +84,9 @@ endpoints.
   VERBATIM (field dictionary: the TigerTag_Firebase_Integration data model;
   fields sparse). Two timestamp conventions BY DESIGN: root exportedAt = ISO
   8601 string; timestamps inside records (updatedAt and legacy variants) =
-  epoch-ms numbers. Required at record level: uid and id_brand; capacity:
-  measure_gr is the normalized grams value derived from measure + id_unit
-  (1 + kg -> 1000). A file may carry 1..n materials; a twinned material is
+  epoch-ms numbers. Required at record level: uid and id_brand; capacity is
+  normalized from measure + id_unit — measure_gr in grams for solids
+  (1 + kg -> 1000) and measure_ml in milliliters for liquids (resins). A file may carry 1..n materials; a twinned material is
   always TWO reciprocal records. Canonical media type:
   application/vnd.tigertag.ttag+json (application/json accepted; importers
   validate by content, never by MIME/extension). Studio is the reference

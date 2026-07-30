@@ -45,6 +45,19 @@ open.
 > through the [GitHub organization](https://github.com/TigerTag-Project)) to
 > start the conversation.
 
+## Thank you, integrators
+
+The brands below made the open spool real — each at its own level of
+commitment, and every one of them deserves the credit:
+
+| Tier | What it means | Brands |
+|---|---|---|
+| 🏆 **Platinum** | TigerTag across the **entire production** — every spool ships with its NFC chips, as standard | **Rosa3D** |
+| 🥇 **Gold** | Integration **on demand** at production time, with large quantities already produced, a high level of integration and an **official public commitment** | **R3D**, **eSun** |
+| 🥈 **Silver** | The technology integrated **on demand** | **Sunlu**, **Landu**, **Jamg He** |
+
+…and more being integrated (Filforme, Nanovia, and others on the way).
+
 ## They announced it themselves
 
 Public posts on the brands' own channels — not our press release
