@@ -79,7 +79,10 @@ endpoints.
   VERBATIM (field dictionary: the TigerTag_Firebase_Integration data model;
   fields sparse). Two timestamp conventions BY DESIGN: root exportedAt = ISO
   8601 string; timestamps inside records (updatedAt and legacy variants) =
-  epoch-ms numbers. Canonical media type:
+  epoch-ms numbers. Required at record level: uid and id_brand; capacity:
+  measure_gr is the normalized grams value derived from measure + id_unit
+  (1 + kg -> 1000). A file may carry 1..n materials; a twinned material is
+  always TWO reciprocal records. Canonical media type:
   application/vnd.tigertag.ttag+json (application/json accepted; importers
   validate by content, never by MIME/extension). Studio is the reference
   implementation today. Files are untrusted input: sanitised on import

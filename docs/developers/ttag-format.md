@@ -50,6 +50,32 @@ A `.ttag` file is a single **UTF-8 JSON** document:
   `position` may appear in the file but are not meaningful on import (an
   imported spool does not inherit the exporter's rack).
 
+### Required vs optional fields
+
+At **file level**:
+
+| Field | Status |
+|---|---|
+| `format` = `"tigertag"`, `kind` = `"ttag"`, `version` ≤ 1 | **Required** — missing or mismatched = the file is rejected |
+| `records[]`, non-empty | **Required** — an empty file is rejected |
+| `exportedAt`, `exportedBy` | Informative (`exportedBy` is a UX hint only) |
+| `rfidBackups` | Optional — present only when TigerTag+ spools are included |
+
+At **record level**:
+
+| Category | Fields |
+|---|---|
+| **Required** | `uid` (`TigerData_<id>` or chip UID) · **`id_brand`** |
+| Core identity (present on every well-formed record) | `id_material`, `id_type`, `id_aspect1`, `id_tigertag` — resolved against the shared reference database |
+| Capacity | `measure_gr` is the **normalized capacity in grams**, derived from `measure` + `id_unit` (e.g. `measure: 1` with the kg unit → `measure_gr: 1000`). Generators may provide `measure` + `id_unit`; `measure_gr` is the canonical stored value |
+| Common optional | color fields (`color_r/g/b`, `online_color_list`…), `weight_available`, `container_id` / `container_weight`, display strings (`material`, `series`, `color_name`), `TD`, `tags`, `sku` / `barcode`, `Link*`, `url_img*` |
+| Conditional | `twin_tag_uid` (twins only — reciprocal within the file) · `rfidBackup: true` **plus** a matching `rfidBackups` entry (TigerTag+ only) · `id_product` (known catalogue products only) |
+| Carried but ignored on import | `rack`, `rack_id`, `level`, `position` |
+
+For any edge case not covered here, the **Tiger Studio importer is the
+reference implementation** — third-party generators should aim at records a
+stock Studio accepts.
+
 Rules baked into the format:
 
 - **Two timestamp conventions, by design.** The root `exportedAt` is an
