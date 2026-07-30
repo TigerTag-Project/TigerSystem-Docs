@@ -43,7 +43,7 @@ Since then, more than 2.5 million TigerTag NFC chips have been produced, most
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
 Sunlu, Landu, Jamg He, R3D — with Filforme, Nanovia and more being
 integrated).
-Integrator tiers (founder-defined): PLATINUM = Rosa3D — the WORLD'S FIRST
+Integrator tiers — a LADDER designed to motivate manufacturers upward (more commitment = more prominence across every ecosystem surface; the best stand tallest): PLATINUM = Rosa3D — the WORLD'S FIRST
 integrator to put TigerTag+ across its ENTIRE production, every spool format,
 signed chips standard (rosa3d.pl); GOLD = R3D (r3dprint.com), eSun
 (esun3d.com)
