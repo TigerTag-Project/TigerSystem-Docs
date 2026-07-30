@@ -49,30 +49,40 @@ open.
 ## Thank you, integrators
 
 The brands below made the open spool real — each at its own level of
-commitment, and every one of them deserves the credit:
+commitment, and every one of them deserves the credit. The tiers are a
+**ladder**: the further a brand commits, the more prominently it appears —
+here and across every surface of the ecosystem. The best stand tallest.
 
-### Platinum
+### Platinum — the summit
 
-**TigerTag+ across the entire production** — every spool format, signed
-chips as standard on every single spool leaving the factory.
+**TigerTag+ across the entire production**: every spool format, signed chips
+as standard on every single spool leaving the factory. Nothing optional,
+nothing partial — the full open-spool experience, for every customer, by
+default. Platinum integrators get **top billing everywhere**: first named,
+biggest logo, their story told.
 
 <a href="https://rosa3d.pl"><img src="../assets/partners/rosa3d.svg" height="52" alt="Rosa3D" /></a>
 
-**[Rosa3D](https://rosa3d.pl)** — the world's first integrator to put
-**TigerTag+** across its entire production.
+**[Rosa3D](https://rosa3d.pl)** — the **world's first** integrator to put
+TigerTag+ across its entire production. The reference everyone else is
+chasing.
 
-### Gold
+### Gold — committed, at scale
 
-**Integration on demand at production time** — large quantities already
-produced, a high level of integration, and an official public commitment.
+**Integration on demand at production time**, with large quantities already
+produced, a high level of integration, and an **official public
+commitment**. One step from the summit: make the signed chips standard
+across the whole line, and join Platinum.
 
 <a href="https://r3dprint.com"><img src="../assets/partners/r3d.svg" height="34" alt="R3D" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="32" alt="eSun" /></a>
 
 **[R3D](https://r3dprint.com)** · **[eSun](https://www.esun3d.com)**
 
-### Silver
+### Silver — on board
 
-**The technology integrated on demand.**
+**The technology integrated on demand** — the first step, already a real
+one: their customers can buy TigerTag-equipped spools today. The next rung
+is Gold: scale the volumes and make the commitment public.
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
@@ -81,6 +91,10 @@ produced, a high level of integration, and an official public commitment.
 …and more being integrated —
 [Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), and
 others on the way.
+
+**Want your logo on this ladder — and bigger?** A production line runs
+TigerTag in as little as 5 days:
+[tigertag@tigertag.io](mailto:tigertag@tigertag.io).
 
 ## They announced it themselves
 
