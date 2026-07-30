@@ -149,7 +149,8 @@ piece of it.
 | [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) | Read & write chips from Python — `pip install tigertag` (Apache-2.0) |
 | [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) | The chip format, byte by byte |
 | [TigerTag_Firebase_Integration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration) | Connect your own app/device to the cloud — with working examples (ESP32, Home Assistant, Spoolman) |
-| [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | Build the scale yourself — hardware + firmware (MIT) |
+| [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) | Build the current scale — ESP32-S3, touchscreen, dual NFC, battery (MIT) |
+| [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | The V2 scale — previous generation, different hardware (MIT) |
 | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | Print the reader stand — free STL (CC BY 4.0) |
 
 ## Dive deeper

@@ -9,7 +9,8 @@ Every layer of TigerSystem is published — hardware, firmware, SDKs, apps, docs
 | Desktop app | [Tiger Studio Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager) | MIT |
 | JS SDK (npm `tigertag`) | [TigerTag-SDK-JS](https://github.com/TigerTag-Project/TigerTag-SDK-JS) | Apache-2.0 |
 | Python SDK | [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) | Apache-2.0 |
-| Scale hardware + firmware | [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | MIT |
+| Scale hardware + firmware (V3, current) | [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) | MIT |
+| Scale hardware + firmware (V2) | [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | MIT |
 | Reader stand (STL + docs) | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | CC BY 4.0 |
 | Chip format guide | [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) | CC BY 4.0 |
 | Cloud integration docs | [TigerTag_Firebase_Integration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration) | CC BY 4.0 |

@@ -11,7 +11,8 @@ All public repositories live under the
 | [TigerTag-SDK-Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python) | Python SDK | Apache-2.0 |
 | [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) | Canonical chip format specification | CC BY 4.0 |
 | [TigerTag_Firebase_Integration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration) | Cloud integration contract + working examples | CC BY 4.0 |
-| [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | TigerScale ESP32 hardware + firmware | MIT |
+| [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) | TigerScale **V3** (current) — ESP32-S3, touchscreen, dual PN532, battery | MIT |
+| [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | TigerScale V2 (previous generation — different hardware) | MIT |
 | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | 3D-printable dual reader stand | CC BY 4.0 |
 
 ## Which repo is canonical for what

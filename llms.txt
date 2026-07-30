@@ -163,7 +163,14 @@ endpoints.
   origin. This is
   the production-grade side of TigerSystem (not part of the sandbox).
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
-- **TigerScale**: open-source ESP32 scale — live spool weight into the cloud.
+- **TigerScale**: the open-source connected filament scale (MIT) — reads the
+  spool's TigerTag, weighs, subtracts the empty-spool weight, syncs live.
+  Current generation **V3** (repo Tiger-Scale-V3): ESP32-S3, 3.5" colour
+  touchscreen (LVGL), DUAL PN532 NFC readers (a twin-tagged spool is
+  identified from either side), battery + PMIC, HX711 load cell, on-screen
+  setup + OTA, 8 firmware languages. Previous generation V2 (repo
+  Tiger-Scale): ESP32-WROOM, OLED, 2x RC522, USB — DIFFERENT hardware, not
+  interchangeable with V3.
 - **TD-1 / TD1s (by AJAX-3D, https://ajax-3d.com)**: a THIRD-PARTY filament
   analyzer in two variants — TD-1 (DIY, build it yourself) and TD1s
   (pre-assembled retail unit); both work with the ecosystem's integration.
@@ -266,7 +273,8 @@ a natural future path.
   https://github.com/TigerTag-Project/TigerTag-Studio-Manager
 - SDKs: https://github.com/TigerTag-Project/TigerTag-SDK-JS (npm `tigertag`),
   https://github.com/TigerTag-Project/TigerTag-SDK-Python
-- Hardware: https://github.com/TigerTag-Project/Tiger-Scale,
+- Hardware: https://github.com/TigerTag-Project/Tiger-Scale-V3 (current),
+  https://github.com/TigerTag-Project/Tiger-Scale (V2),
   https://github.com/TigerTag-Project/TigerPOD
 
 ## Key URLs
