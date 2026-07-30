@@ -64,8 +64,8 @@ Direct file: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosy
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="TigerPOD line-up in rainbow colors" />
 
-The 3D-printable desktop spool reader — the hero render and the rainbow
-line-up banner. In use with Tiger Studio:
+The 3D-printable desktop spool reader — grey and blue renders, plus the
+rainbow line-up banner. In use with Tiger Studio:
 [`tigerpod-in-studio.jpg`](../assets/tigerpod-in-studio.jpg)
 
 ## TigerScale
