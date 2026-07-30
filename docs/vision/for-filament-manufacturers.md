@@ -53,11 +53,13 @@ commitment, and every one of them deserves the credit:
 
 | Tier | What it means | Brands |
 |---|---|---|
-| **Platinum** | TigerTag across the **entire production** — every spool ships with its NFC chips, as standard | **Rosa3D** |
-| **Gold** | Integration **on demand** at production time, with large quantities already produced, a high level of integration and an **official public commitment** | **R3D**, **eSun** |
-| **Silver** | The technology integrated **on demand** | **Sunlu**, **Landu**, **Jamg He** |
+| **Platinum** | **The world's first integrator to put TigerTag+ across its entire production** — every spool format, signed chips as standard on every spool | <a href="https://rosa3d.pl"><img src="../assets/partners/rosa3d.png" height="26" alt="Rosa3D" /></a> |
+| **Gold** | Integration **on demand** at production time, with large quantities already produced, a high level of integration and an **official public commitment** | <a href="https://r3dprint.com"><img src="../assets/partners/r3d.svg" height="30" alt="R3D" /></a>  <a href="https://www.esun3d.com"><img src="../assets/partners/esun.png" height="24" alt="eSun" /></a> |
+| **Silver** | The technology integrated **on demand** | <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.png" height="20" alt="Sunlu" /></a>  <a href="https://www.landustore.com"><img src="../assets/partners/landu.png" height="18" alt="Landu" /></a>  <a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.png" height="20" alt="Jamg He" /></a> |
 
-…and more being integrated (Filforme, Nanovia, and others on the way).
+…and more being integrated —
+[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), and
+others on the way.
 
 ## They announced it themselves
 
