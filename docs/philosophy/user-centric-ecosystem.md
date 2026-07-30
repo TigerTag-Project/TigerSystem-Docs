@@ -6,18 +6,18 @@
 
 ```mermaid
 flowchart TB
-    subgraph M["Printer-centric (manufacturer)"]
-        MP[Printer] --> MC[(Vendor cloud)]
-        MT[Proprietary tag] --> MP
-        MC --> MA[Vendor app]
-    end
-    subgraph T["User-centric (TigerSystem)"]
-        TT[TigerTag chip] --> PH[Any phone]
-        TT --> RD[Any NFC reader]
-        TT --> PR[Any printer]
-        PH & RD --> TC[("Your TigerSystem account — YOURS")]
-        TC --> ANY["Any app — Studio, Connect, TigerHub, yours"]
-    end
+  subgraph M["Printer-centric (manufacturer)"]
+    MP[Printer] --> MC[(Vendor cloud)]
+    MT[Proprietary tag] --> MP
+    MC --> MA[Vendor app]
+  end
+  subgraph T["User-centric (TigerSystem)"]
+    TT[TigerTag chip] --> PH[Any phone]
+    TT --> RD[Any NFC reader]
+    TT --> PR[Any printer]
+    PH & RD --> TC[("Your TigerSystem account — YOURS")]
+    TC --> ANY["Any app — Studio, Connect, TigerHub, yours"]
+  end
 ```
 
 In a printer-centric world the **printer** is the center: the tag exists to serve

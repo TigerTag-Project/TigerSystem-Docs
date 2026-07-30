@@ -30,24 +30,24 @@ Vision, in two words: **Cheap & Reusable.**
 ## Standing lines (use anywhere, unchanged)
 
 - **Free. No subscription. Works offline. Nothing locked in.** — the
-  reassurance line; the ecosystem's strongest claim, keep it near every hero.
+ reassurance line; the ecosystem's strongest claim, keep it near every hero.
 - **Made for Makers. Open to Everyone.** — the manifesto's opening; works
-  standalone as a banner line.
+ standalone as a banner line.
 - **Cheap & Reusable.** — the vision in two words (the chip philosophy:
-  zero cost added, never e-waste).
+ zero cost added, never e-waste).
 - **The ambition: become to 3D-printing materials what the barcode became to
-  the shelf.** — press boilerplate.
+ the shelf.** — press boilerplate.
 - **TigerTag is the most deployed third-party RFID protocol in the world.** —
-  THE canonical flagship sentence (always with its evidence: 2.5M+ chips,
-  factory brands, their public announcements).
+ THE canonical flagship sentence (always with its evidence: 2.5M+ chips,
+ factory brands, their public announcements).
 
 ## Retired
 
 - ~~"Tap a spool. Your printer just knows."~~ — retired as a hero: the
-  app-mediated chain (tap → app → printer slot) is invisible in it, and
-  skeptics can read it as claiming printers read the tag natively. The
-  printer benefit belongs one section below the hero, phrased *"…and your
-  printer gets the right settings — through the app."*
+ app-mediated chain (tap → app → printer slot) is invisible in it, and
+ skeptics can read it as claiming printers read the tag natively. The
+ printer benefit belongs one section below the hero, phrased *"…and your
+ printer gets the right settings — through the app."*
 
 ---
 

@@ -15,29 +15,29 @@ what the open protocol makes possible, readable, forkable and free to copy
 
 ```mermaid
 flowchart LR
-    RD["📡 TigerPOD / ACR122U"] --> ST["🖥 Tiger Studio"]
-    TD["🎨 TD1S"] --> ST
-    ST <--> CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
-    SCALE["⚖ TigerScale"] --> CLOUD
-    ST -- "filament to slots" --> PRN["🖨 6 printer brands"]
-    PRN -- "telemetry · cameras" --> ST
+  RD["TigerPOD / ACR122U"] --> ST["Tiger Studio"]
+  TD["TD1S"] --> ST
+  ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
+  SCALE["TigerScale"] --> CLOUD
+  ST -- "filament to slots" --> PRN["6 printer brands"]
+  PRN -- "telemetry · cameras" --> ST
 ```
 
 ## Features (highlights)
 
 - **Inventory** — real-time Firestore sync, table/grid views, detail panel,
-  weight tracking, container calibration, digital spools (TigerData) with
-  atomic chip promotion.
+ weight tracking, container calibration, digital spools (TigerData) with
+ atomic chip promotion.
 - **Printers** — live integrations for **6 brands** (telemetry, filament per
-  slot, job progress, cameras, and for some brands full control panels). See
-  [compatibility](../compatibility/README.md).
+ slot, job progress, cameras, and for some brands full control panels). See
+ [compatibility](../compatibility/README.md).
 - **Racks** — drag-and-drop physical storage mapping.
 - **Friends & sharing** — discovery codes, read-only friend inventories.
 - **Devices** — first-party: [TigerPOD](./tigerpod.md) and
-  [TigerScale](./tigerscale.md); third-party: the ACR122U NFC reader, the
-  **AJAX-3D TD-1 & TD1s** analyzers (TD + color straight into the spool's
-  profile) and **USB HID scales** (DYMO M series and any compliant scale) —
-  full list: [compatible third-party hardware](../compatibility/third-party-hardware.md).
+ [TigerScale](./tigerscale.md); third-party: the ACR122U NFC reader, the
+ **AJAX-3D TD-1 & TD1s** analyzers (TD + color straight into the spool's
+ profile) and **USB HID scales** (DYMO M series and any compliant scale) —
+ full list: [compatible third-party hardware](../compatibility/third-party-hardware.md).
 - **9 locales** — EN · FR · DE · ES · IT · PL · PT-BR · PT-PT · 中文.
 
 The complete, always-current catalogue lives in the app repo's
@@ -57,8 +57,8 @@ maintained in the app repo (`renderer/printers/<brand>/PROTOCOL.md`).
 
 ## Links
 
-- 📦 Repo + downloads: [TigerTag-Studio-Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager) (MIT)
-- 📖 Full feature catalogue: [FEATURES.md](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/FEATURES.md)
+- Repo + downloads: [TigerTag-Studio-Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager) (MIT)
+- Full feature catalogue: [FEATURES.md](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/FEATURES.md)
 
 ---
 

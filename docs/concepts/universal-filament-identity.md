@@ -35,36 +35,36 @@ states:
 
 ```mermaid
 flowchart LR
-    TD["📄 TigerData<br/>the protocol's data in digital form<br/>(no chip, no UID — lives anywhere)"]
-    TDP["📄✔ TigerData+<br/>digital, and tied to a real catalogue product<br/>(still no chip, but nothing typed by hand)"]
-    TT["🏷 TigerTag<br/>the data written into an NFC chip<br/>(a physical UID is now associated)"]
-    TTP["🏷✔ TigerTag+<br/>the chip backed up in your account<br/>(factory state restorable, origin provable)"]
-    TD -- "pick it from the catalogue" --> TDP
-    TD -- "write to a chip" --> TT -- "scan with Studio + POD" --> TTP
-    TDP -- "write to a chip" --> TT
+  TD["TigerData<br/>the protocol's data in digital form<br/>(no chip, no UID — lives anywhere)"]
+  TDP["TigerData+<br/>digital, and tied to a real catalogue product<br/>(still no chip, but nothing typed by hand)"]
+  TT["TigerTag<br/>the data written into an NFC chip<br/>(a physical UID is now associated)"]
+  TTP["TigerTag+<br/>the chip backed up in your account<br/>(factory state restorable, origin provable)"]
+  TD -- "pick it from the catalogue" --> TDP
+  TD -- "write to a chip" --> TT -- "scan with Studio + POD" --> TTP
+  TDP -- "write to a chip" --> TT
 ```
 
 - **TigerData** is the protocol *before* the chip: the same identity, stored
-  digitally — in an inventory, a database, a file, anywhere. The TigerTag
-  protocol can live entirely outside an RFID chip. This notion of a **virtual
-  chip is a TigerSystem innovation — it exists nowhere else**: manage a full
-  inventory with zero NFC chips, send an identity into a chip later or never,
-  and the protocol's interoperability is preserved either way.
+ digitally — in an inventory, a database, a file, anywhere. The TigerTag
+ protocol can live entirely outside an RFID chip. This notion of a **virtual
+ chip is a TigerSystem innovation — it exists nowhere else**: manage a full
+ inventory with zero NFC chips, send an identity into a chip later or never,
+ and the protocol's interoperability is preserved either way.
 - **TigerData+** is a TigerData that knows *exactly which product it is*. Still
-  no chip, still nothing to buy — but instead of whatever its owner typed, it
-  carries a real product from the official catalogue: the exact brand, colour,
-  material, temperatures, diameter, SKU and EAN, straight from the source. It is
-  what you get by picking a product rather than describing one.
-  > It is **not** a TigerTag+, and never claims to be: no chip, no UID. The `+`
-  > means *identified*, not *certified*. For developers: a spool is a TigerData+
-  > when it is chipless **and** carries a real product id — that pair is the
-  > definition, and it is mirrored onto the record as `protocol: "TigerData+"` so
-  > you can read it directly. See the
-  > [Firestore data structure](https://github.com/TigerTag-Project/TigerTag_Firebase_Backend#-firestore-data-structure).
+ no chip, still nothing to buy — but instead of whatever its owner typed, it
+ carries a real product from the official catalogue: the exact brand, colour,
+ material, temperatures, diameter, SKU and EAN, straight from the source. It is
+ what you get by picking a product rather than describing one.
+ >It is **not** a TigerTag+, and never claims to be: no chip, no UID. The `+`
+ >means *identified*, not *certified*. For developers: a spool is a TigerData+
+ >when it is chipless **and** carries a real product id — that pair is the
+ >definition, and it is mirrored onto the record as `protocol: "TigerData+"` so
+ >you can read it directly. See the
+ >[Firestore data structure](https://github.com/TigerTag-Project/TigerTag_Firebase_Backend#-firestore-data-structure).
 - The moment that data is **written into an NFC chip**, it becomes a
-  **TigerTag**: a physical **UID is finally associated** with the identity.
+ **TigerTag**: a physical **UID is finally associated** with the identity.
 - Back that chip up in your account and it's a
-  [**TigerTag+**](../products/tigertag-plus.md).
+ [**TigerTag+**](../products/tigertag-plus.md).
 
 A TigerData can stay digital forever, or be **promoted to a real chip
 atomically** whenever you're ready (Tiger Studio does this in one step). And

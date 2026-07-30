@@ -14,28 +14,28 @@ by any compatible app or reader — no vendor lock, no secret format.
 
 ```mermaid
 flowchart LR
-    TAG["🏷 TigerTag chip<br/>on every spool"] -- "tap" --> CO["📱 Connect"]
-    TAG -- "scan" --> RD["📡 TigerPOD / ACR122U"] --> ST["🖥 Tiger Studio"]
-    CO & ST <--> CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
-    ST -- "filament data" --> PRN["🖨 Printers"]
+  TAG["TigerTag chip<br/>on every spool"] -- "tap" --> CO["Connect"]
+  TAG -- "scan" --> RD["TigerPOD / ACR122U"] --> ST["Tiger Studio"]
+  CO & ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
+  ST -- "filament data" --> PRN["Printers"]
 ```
 
 ## Features
 
 - Standard **NTAG213 / 215 / 216** chip (25 mm round recommended), 144-byte
-  open NDEF payload — sized to fit the smallest NTAG213; no keys, no lock-in.
+ open NDEF payload — sized to fit the smallest NTAG213; no keys, no lock-in.
 - **Two chips per spool, on opposite sides** — one always faces the reader
-  (printer slot, AMS, phone in hand) and each backs the other up
-  ([why](../concepts/tigertag-chip.md)).
+ (printer slot, AMS, phone in hand) and each backs the other up
+ ([why](../concepts/tigertag-chip.md)).
 - Identity resolved against the shared [reference database](../concepts/universal-filament-identity.md).
 - Writable and **rewritable** — enables the [Second Life workflow](../philosophy/second-life.md);
-  official branded chips ship as NTAG215 so the chip itself can be reused as a
-  plain NDEF object (keychain, business card…) once the spool is empty —
-  never e-waste.
+ official branded chips ship as NTAG215 so the chip itself can be reused as a
+ plain NDEF object (keychain, business card…) once the spool is empty —
+ never e-waste.
 - Readable by any NFC smartphone, ACR122U readers and [TigerPOD](./tigerpod.md).
 - A reserved **32-byte area**: free for **community add-on functions** on a
-  standard TigerTag; carries the origin signature on a
-  [TigerTag+](./tigertag-plus.md).
+ standard TigerTag; carries the origin signature on a
+ [TigerTag+](./tigertag-plus.md).
 
 ## Architecture
 
@@ -76,8 +76,8 @@ migrate its data to it. Your spool, your chip, your format.
 
 ## Links
 
-- 🛒 Official chips: **[tigertag.io](https://tigertag.io)** (shop — supports the R&D)
-- 📖 Chip format: [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
+- Official chips: **[tigertag.io](https://tigertag.io)** (shop — supports the R&D)
+- Chip format: [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
 
 ---
 

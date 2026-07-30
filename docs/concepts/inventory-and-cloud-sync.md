@@ -10,13 +10,13 @@ documents in real time:
 
 ```mermaid
 sequenceDiagram
-    participant Phone as Tiger NFC Connect
-    participant Cloud as Firebase (Firestore)
-    participant Desktop as Tiger Studio
-    Phone->>Cloud: scan chip → upsert spool
-    Cloud-->>Desktop: real-time snapshot (instant)
-    Desktop->>Cloud: update weight from TigerScale
-    Cloud-->>Phone: real-time snapshot (instant)
+  participant Phone as Tiger NFC Connect
+  participant Cloud as Firebase (Firestore)
+  participant Desktop as Tiger Studio
+  Phone->>Cloud: scan chip → upsert spool
+  Cloud-->>Desktop: real-time snapshot (instant)
+  Desktop->>Cloud: update weight from TigerScale
+  Cloud-->>Phone: real-time snapshot (instant)
 ```
 
 There is no "sync button": changes propagate through Firestore's live
@@ -38,18 +38,18 @@ The authoritative field-by-field data model is documented in the
 
 - Each user has a public **discovery code** (`XXX-XXX`) for O(1) friend lookup.
 - Friendship is **bidirectional and consent-based**: request → accept; either
-  side can remove it. Read access to a friend's inventory is enforced
-  server-side by Firestore security rules — never by the client.
+ side can remove it. Read access to a friend's inventory is enforced
+ server-side by Firestore security rules — never by the client.
 - An inventory can also be flagged **public**, or shared as a read-only web
-  list via [TigerHub](../products/tigerhub.md) links.
+ list via [TigerHub](../products/tigerhub.md) links.
 
 ## Security model (summary)
 
 - All per-user data is owner-only by default; cross-user access always requires
-  a prior relationship (friendship, request), enforced by server-side rules.
+ a prior relationship (friendship, request), enforced by server-side rules.
 - The Firebase project config is intentionally public (standard pattern);
-  **security lives in the rules, not in secrecy**. See
-  [Cloud API & integration](../developers/cloud-api.md).
+ **security lives in the rules, not in secrecy**. See
+ [Cloud API & integration](../developers/cloud-api.md).
 
 ---
 

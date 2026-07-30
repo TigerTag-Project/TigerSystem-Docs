@@ -4,21 +4,21 @@
 
 ```mermaid
 flowchart TB
-    TAG["TigerTag chip<br/>(open NDEF payload on the spool)"]
-    CONNECT["Tiger NFC Connect<br/>(mobile — NFC scan & encode)"]
-    CLOUD["Firebase<br/>(accounts + Firestore + cdn.tigertag.io)"]
-    STUDIO["Tiger Studio<br/>(desktop — inventory, devices, printers)"]
-    PRINTERS["Printer integrations<br/>(Bambu Lab · Creality · Elegoo · FlashForge · Snapmaker · Anycubic)"]
-    THIRD["Third-party apps & APIs<br/>(SDKs, Home Assistant, Spoolman, ESP32…)"]
-    WEB["TigerHub<br/>(tigersystem.io — ecosystem site, wishlists, sharing)"]
+  TAG["TigerTag chip<br/>(open NDEF payload on the spool)"]
+  CONNECT["Tiger NFC Connect<br/>(mobile — NFC scan & encode)"]
+  CLOUD["Firebase<br/>(accounts + Firestore + cdn.tigertag.io)"]
+  STUDIO["Tiger Studio<br/>(desktop — inventory, devices, printers)"]
+  PRINTERS["Printer integrations<br/>(Bambu Lab · Creality · Elegoo · FlashForge · Snapmaker · Anycubic)"]
+  THIRD["Third-party apps & APIs<br/>(SDKs, Home Assistant, Spoolman, ESP32…)"]
+  WEB["TigerHub<br/>(tigersystem.io — ecosystem site, wishlists, sharing)"]
 
-    TAG --> CONNECT
-    TAG --> STUDIO
-    CONNECT <--> CLOUD
-    STUDIO <--> CLOUD
-    STUDIO --> PRINTERS
-    CLOUD --> WEB
-    CLOUD <--> THIRD
+  TAG --> CONNECT
+  TAG --> STUDIO
+  CONNECT <--> CLOUD
+  STUDIO <--> CLOUD
+  STUDIO --> PRINTERS
+  CLOUD --> WEB
+  CLOUD <--> THIRD
 ```
 
 ## Layers
@@ -40,39 +40,39 @@ one picture:
 
 ```mermaid
 flowchart TB
-    subgraph SP["🧵 The spool"]
-        TAG["🏷 TigerTag chip"]
-    end
-    subgraph ACC["🔌 Accessories"]
-        POD["📡 TigerPOD<br/>dual reader stand"]
-        ACR["📡 ACR122U<br/>USB NFC reader"]
-        SCALE["⚖ TigerScale"]
-        TD1S["🎨 TD1S color sensor"]
-    end
-    subgraph APPS["🖥 Apps"]
-        CO["📱 Tiger NFC Connect"]
-        ST["🖥 Tiger Studio"]
-        WEB["🌐 TigerHub<br/>tigersystem.io"]
-    end
-    CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
-    subgraph PRT["🖨 Printing"]
-        SLICER["🔪 Your slicer<br/>(OrcaSlicer, vendor slicers…)"]
-        PRN["🖨 Printers<br/>Anycubic · Bambu Lab · Creality<br/>Elegoo · FlashForge · Snapmaker"]
-    end
-    THIRD["🧩 Third-party<br/>Home Assistant · Spoolman · ESP32 · your app"]
+  subgraph SP["The spool"]
+    TAG["TigerTag chip"]
+  end
+  subgraph ACC["Accessories"]
+    POD["TigerPOD<br/>dual reader stand"]
+    ACR["ACR122U<br/>USB NFC reader"]
+    SCALE["TigerScale"]
+    TD1S["TD1S color sensor"]
+  end
+  subgraph APPS["Apps"]
+    CO["Tiger NFC Connect"]
+    ST["Tiger Studio"]
+    WEB["TigerHub<br/>tigersystem.io"]
+  end
+  CLOUD[("Your TigerSystem account<br/>(Firebase)")]
+  subgraph PRT["Printing"]
+    SLICER["Your slicer<br/>(OrcaSlicer, vendor slicers…)"]
+    PRN["Printers<br/>Anycubic · Bambu Lab · Creality<br/>Elegoo · FlashForge · Snapmaker"]
+  end
+  THIRD["Third-party<br/>Home Assistant · Spoolman · ESP32 · your app"]
 
-    TAG -- "NFC tap" --> CO
-    TAG -- "scan" --> POD --> ST
-    TAG -- "scan" --> ACR --> ST
-    TD1S -- "measured color" --> ST
-    SCALE -- "live weight" --> CLOUD
-    CO <--> CLOUD
-    ST <--> CLOUD
-    CLOUD -- "public share links" --> WEB
-    CLOUD <--> THIRD
-    ST -- "filament data to slots" --> PRN
-    PRN -- "live telemetry, job, camera" --> ST
-    SLICER -- "print job" --> PRN
+  TAG -- "NFC tap" --> CO
+  TAG -- "scan" --> POD --> ST
+  TAG -- "scan" --> ACR --> ST
+  TD1S -- "measured color" --> ST
+  SCALE -- "live weight" --> CLOUD
+  CO <--> CLOUD
+  ST <--> CLOUD
+  CLOUD -- "public share links" --> WEB
+  CLOUD <--> THIRD
+  ST -- "filament data to slots" --> PRN
+  PRN -- "live telemetry, job, camera" --> ST
+  SLICER -- "print job" --> PRN
 ```
 
 Read it left to right: the **chip** identifies the spool; **accessories**
@@ -84,15 +84,15 @@ everyone (you, the machine, the apps) knows exactly which filament is where.
 ## Design principles
 
 1. **The chip is self-sufficient.** A spool identifies itself with no cloud, no
-   account, no network — the payload is complete and open.
+ account, no network — the payload is complete and open.
 2. **The cloud is the user's, not the system's.** All state lives under the
-   user's account; server-side security rules — not client code — enforce
-   access.
+ user's account; server-side security rules — not client code — enforce
+ access.
 3. **Every layer is optional.** Phone-only, desktop-only, chip-only, or
-   API-only usage all work; components add value but never gate each other.
+ API-only usage all work; components add value but never gate each other.
 4. **Integrations speak the printer's native protocol.** No firmware mods, no
-   cloud detours: Tiger Studio talks MQTT/WebSocket/HTTP directly on the LAN
-   (see [data flow](./data-flow.md)).
+ cloud detours: Tiger Studio talks MQTT/WebSocket/HTTP directly on the LAN
+ (see [data flow](./data-flow.md)).
 
 ---
 

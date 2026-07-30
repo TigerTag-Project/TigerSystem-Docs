@@ -1,6 +1,6 @@
-# FlashForge
+# <img src="../assets/brands/flashforge.svg" width="26" alt="" /> FlashForge
 
-## Printer link — ✅ Live
+## Printer link — **Live**
 
 | Aspect | Detail |
 |---|---|
@@ -22,15 +22,15 @@ machine modification.**
 ## The workflow
 
 1. **Add the printer** — automatic LAN discovery (UDP multicast) or Add by
-   IP.
+ IP.
 2. **Scan a spool** — with your phone (or a desktop reader); it lands in
-   your inventory.
+ your inventory.
 3. **Assign it to a material-station slot** — **one scan, one click** from
-   Tiger Studio's mapping. The printer ends up knowing its filament as
-   precisely as a machine with built-in RFID, without FlashForge having
-   changed anything.
+ Tiger Studio's mapping. The printer ends up knowing its filament as
+ precisely as a machine with built-in RFID, without FlashForge having
+ changed anything.
 4. **Live** — temperatures, job progress, and the MJPEG camera stream in the
-   printers view.
+ printers view.
 
 ---
 

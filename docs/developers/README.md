@@ -12,15 +12,15 @@ proprietary gear. From that one scan, integrate wherever an identity is
 useful:
 
 - **ERP / stock management** — connect spool identity and quantities to your
-  company's existing inventory system.
+ company's existing inventory system.
 - **Usage tracking** — log which material went into which job, machine or
-  customer order.
+ customer order.
 - **Custom dashboards & automation** — print-farm monitoring, low-stock
-  alerts, reorder triggers.
+ alerts, reorder triggers.
 - **Lending systems** — fablabs, schools, makerspaces checking material in
-  and out.
+ and out.
 - **R&D projects, private or public** — an open, rewritable, documented
-  identity carrier to experiment with.
+ identity carrier to experiment with.
 
 None of these need our apps or our cloud: the chip + an SDK is enough. Add the
 [cloud surface](./cloud-api.md) only if you want accounts and sync.
@@ -55,32 +55,32 @@ chip works perfectly, it just can't prove its origin.
 
 ```mermaid
 flowchart LR
-    YOU[Your app / device] -->|"NFC (SDK)"| TAG[TigerTag chip]
-    YOU -->|"Firebase (documented surface)"| CLOUD[("The shared account database")]
-    YOU -->|"reference data"| CDN[cdn.tigertag.io]
+  YOU[Your app / device] -->|"NFC (SDK)"| TAG[TigerTag chip]
+  YOU -->|"Firebase (documented surface)"| CLOUD[("The shared account database")]
+  YOU -->|"reference data"| CDN[cdn.tigertag.io]
 ```
 
 1. **Chip-only** — parse and encode chips with an SDK. No account, no network.
 2. **Cloud-connected** — authenticate the *user's own account* and read/write
-   their data within server-side security rules
-   ([integration contract](./cloud-api.md)).
+ their data within server-side security rules
+ ([integration contract](./cloud-api.md)).
 3. **Hardware** — working examples exist for ESP32/Arduino, Home Assistant and
-   a Spoolman bridge (see the
-   [integration repo's examples](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/tree/main/examples)).
+ a Spoolman bridge (see the
+ [integration repo's examples](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/tree/main/examples)).
 
 ## Conventions
 
 - **Versioning** — product releases use SemVer; the chip payload carries its
-  own format version for backward compatibility.
+ own format version for backward compatibility.
 - **Naming** — self-describing names over encoded/clever ones; no
-  multi-state magic values.
+ multi-state magic values.
 - **Colour** — a spool's colour is stored as data, not as a picture, so every
-  surface must turn that data into the same picture:
-  [the material swatch convention](./material-swatch.md) is normative, and
-  ships with a [reference renderer](./material-swatch-playground.html) you can check your
-  own implementation against.
+ surface must turn that data into the same picture:
+ [the material swatch convention](./material-swatch.md) is normative, and
+ ships with a [reference renderer](./material-swatch-playground.html) you can check your
+ own implementation against.
 - **Contributions** — each repo has its own guide; docs contributions follow
-  [CONTRIBUTING.md](../../CONTRIBUTING.md) here.
+ [CONTRIBUTING.md](../../CONTRIBUTING.md) here.
 
 ---
 

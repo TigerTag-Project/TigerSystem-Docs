@@ -22,8 +22,8 @@ picture.
 
 - **Convention version:** 1.0
 - **Reference renderer:** [`material-swatch-playground.html`](./material-swatch-playground.html) —
-  open it in any browser, no server, no dependency. Every case, every box shape,
-  live colour pickers, and the exact CSS it produces.
+ open it in any browser, no server, no dependency. Every case, every box shape,
+ live colour pickers, and the exact CSS it produces.
 
 ---
 
@@ -82,7 +82,7 @@ Every other aspect (`Silk`, `Matt`, `Glitter`, …) has `color_count` ≤ 1 and 
 not affect the shape. **Match on the id, not on the label** — labels are display
 strings and may be translated.
 
-> ⚠️ **Never count the slots to guess how many colours there are.** A chip
+> **Never count the slots to guess how many colours there are.** A chip
 > document always carries all three slots: absent components are stored as `0`,
 > so slots 2 and 3 read as pure black on a mono material. **The number of colours
 > comes from the aspect, never from the slots.**
@@ -144,9 +144,9 @@ Applied to every entry of `online_color_list` before the ladder is evaluated:
 
 1. Trim, strip a leading `#`.
 2. If 8 characters (`RRGGBBAA`), **keep the first 6** — alpha is dropped, never
-   blended.
+ blended.
 3. Accept only `^[0-9a-fA-F]{6}$`. **Anything else is dropped from the list**,
-   not defaulted — a malformed entry must never silently become black.
+ not defaulted — a malformed entry must never silently become black.
 4. Re-add `#` for output.
 
 Dropping happens *before* the ladder runs, so `["ff0000", "oops"]` is a
@@ -175,7 +175,7 @@ linear-gradient(135deg, c1, c2, …)
 conic-gradient(from 0deg, c1, c2, …, c1)
 
 /* Mono — rules 4, 10 */
-#RRGGBB
+# RRGGBB
 ```
 
 ### Test vectors
@@ -216,7 +216,7 @@ contoured artwork is a different drawing, not the white one inverted.
 the produced expression:
 
 ```
-luminance = (0.299·R + 0.587·G + 0.114·B) / 255      // dark when < 0.5
+luminance = (0.299·R + 0.587·G + 0.114·B) / 255   // dark when < 0.5
 ```
 
 If you extract that colour by matching the first `#` hex in a CSS string, match
@@ -234,15 +234,15 @@ Angles are always measured the CSS way: **0° points up, angles increase
 clockwise.**
 
 - **Camembert** — a sweep gradient centred on the tile, starting at 12 o'clock,
-  clockwise, with hard stops at each `k · 360/N` degrees. Flutter:
-  `SweepGradient` with `transform: GradientRotation(-pi/2)`. Do not approximate
-  it with pie slices drawn as paths unless the tile is square — the sector
-  boundaries must follow the box.
+ clockwise, with hard stops at each `k · 360/N` degrees. Flutter:
+ `SweepGradient` with `transform: GradientRotation(-pi/2)`. Do not approximate
+ it with pie slices drawn as paths unless the tile is square — the sector
+ boundaries must follow the box.
 - **Ramp** — a linear gradient from the **top-left** corner to the
-  **bottom-right**. Flutter: `Alignment.topLeft → Alignment.bottomRight`.
+ **bottom-right**. Flutter: `Alignment.topLeft → Alignment.bottomRight`.
 - **Hard stops** — repeat each colour at both ends of its band
-  (`c1@0, c1@0.5, c2@0.5, c2@1`), which is how a platform without CSS's
-  two-position syntax gets an edge instead of a blend.
+ (`c1@0, c1@0.5, c2@0.5, c2@1`), which is how a platform without CSS's
+ two-position syntax gets an edge instead of a blend.
 
 ---
 

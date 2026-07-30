@@ -24,13 +24,13 @@ allowed to know about **your own filament**.
 
 ## What you can actually do with it
 
-- 📱 **Tap a spool with your phone** — its full profile appears instantly.
-- 🖥 **See your whole collection on one screen** — searchable, sorted, with photos.
-- ⚖ **Know how much is really left** — put the spool on the open-source scale, the number updates everywhere.
-- 📦 **Find any spool in seconds** — map your shelves and racks; the app remembers the exact slot.
-- 🖨 **Let your printer know what's loaded** — live link with six printer brands, filament data pushed to the slot.
-- 🤝 **Share with friends** — a simple code or a web link shows your collection, read-only.
-- ♻️ **Give old spools a second life** — refill or re-purpose any spool, rewrite its chip, done.
+- **Tap a spool with your phone** — its full profile appears instantly.
+- **See your whole collection on one screen** — searchable, sorted, with photos.
+- **Know how much is really left** — put the spool on the open-source scale, the number updates everywhere.
+- **Find any spool in seconds** — map your shelves and racks; the app remembers the exact slot.
+- **Let your printer know what's loaded** — live link with six printer brands, filament data pushed to the slot.
+- **Share with friends** — a simple code or a web link shows your collection, read-only.
+- **Give old spools a second life** — refill or re-purpose any spool, rewrite its chip, done.
 
 ## The idea in 30 seconds
 
@@ -79,40 +79,40 @@ computer**, or even **a DIY build — a simple ESP32 with a PN532 or RC522
 reader module** (that's exactly how TigerScale does it) — reads a TigerTag.
 From there, anything goes:
 
-- 🏭 Feed your **ERP or internal stock-management software** — a scan is an ID.
-- 📋 **Tracking & traceability** — who used which material, when, on which job.
-- 🖨 **Print-farm inventory** — know what's loaded, what's left, what to reorder.
-- 🏫 **Fablabs & schools** — check spools in and out like library books.
-- 🔬 **R&D, private or public** — a cheap, open, rewritable identity carrier.
-- 🎨 **Your weird idea** — seriously, all of it is possible; the format won't
-  stand in your way.
+- Feed your **ERP or internal stock-management software** — a scan is an ID.
+- **Tracking & traceability** — who used which material, when, on which job.
+- **Print-farm inventory** — know what's loaded, what's left, what to reorder.
+- **Fablabs & schools** — check spools in and out like library books.
+- **R&D, private or public** — a cheap, open, rewritable identity carrier.
+- **Your weird idea** — seriously, all of it is possible; the format won't
+ stand in your way.
 
 ## How it all connects
 
 ```mermaid
 flowchart LR
-    subgraph On your desk
-        TAG["🏷 TigerTag chip<br/>on each spool"]
-        POD["📡 TigerPOD reader stand"]
-        SCALE["⚖ TigerScale"]
-        PRN["🖨 Your printers<br/>6 brands live"]
-        SLICER["🔪 Your slicer<br/>(unchanged)"]
-    end
-    subgraph Your screens
-        CO["📱 Tiger NFC Connect<br/>mobile"]
-        ST["🖥 Tiger Studio<br/>desktop"]
-        WEB["🌐 TigerHub<br/>tigersystem.io"]
-    end
-    CLOUD[("☁ Your TigerSystem account<br/>(Firebase — one shared database)")]
+  subgraph On your desk
+    TAG["TigerTag chip<br/>on each spool"]
+    POD["TigerPOD reader stand"]
+    SCALE["TigerScale"]
+    PRN["Your printers<br/>6 brands live"]
+    SLICER["Your slicer<br/>(unchanged)"]
+  end
+  subgraph Your screens
+    CO["Tiger NFC Connect<br/>mobile"]
+    ST["Tiger Studio<br/>desktop"]
+    WEB["TigerHub<br/>tigersystem.io"]
+  end
+  CLOUD[("Your TigerSystem account<br/>(Firebase — one shared database)")]
 
-    TAG -- tap --> CO
-    TAG --> POD --> ST
-    SCALE --> CLOUD
-    CO <--> CLOUD
-    ST <--> CLOUD
-    CLOUD --> WEB
-    ST -- local network --> PRN
-    SLICER -- print jobs, as always --> PRN
+  TAG -- tap --> CO
+  TAG --> POD --> ST
+  SCALE --> CLOUD
+  CO <--> CLOUD
+  ST <--> CLOUD
+  CLOUD --> WEB
+  ST -- local network --> PRN
+  SLICER -- print jobs, as always --> PRN
 ```
 
 Every piece is optional. Phone only? Works. Desktop only? Works. **Zero
@@ -168,12 +168,12 @@ piece of it.
 
 ## Quick links
 
-- 🌐 **[tigersystem.io](https://tigersystem.io)** — TigerHub: the ecosystem site, wishlists & sharing
-- ⬇ **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
-- 📱 **[Download Tiger NFC Connect](https://tigersystem.io/fr/download)** — iOS & Android (stores + public betas)
-- 📦 **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
-- 📰 **[Press kit](docs/press/README.md)** — high-res visuals, free to use in coverage
-- 💬 **[Discord](https://discord.gg/3Qv5TSqnJH)** — the official community: questions, help, show-and-tell
+- <img src="docs/assets/icons/tigerhub.svg" width="16" alt="" /> **[tigersystem.io](https://tigersystem.io)** — TigerHub: the ecosystem site, wishlists & sharing
+- <img src="docs/assets/icons/download.svg" width="16" alt="" /> **[Download Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases)** — Windows · macOS · Linux
+- <img src="docs/assets/icons/connect.svg" width="16" alt="" /> **[Download Tiger NFC Connect](https://tigersystem.io/fr/download)** — iOS & Android (stores + public betas)
+- <img src="docs/assets/icons/github.svg" width="16" alt="" /> **[github.com/TigerTag-Project](https://github.com/TigerTag-Project)** — all the open repos
+- <img src="docs/assets/icons/press.svg" width="16" alt="" /> **[Press kit](docs/press/README.md)** — high-res visuals, free to use in coverage
+- <img src="docs/assets/icons/discord.svg" width="16" alt="" /> **[Discord](https://discord.gg/3Qv5TSqnJH)** — the official community: questions, help, show-and-tell
 
 ## Contributing
 

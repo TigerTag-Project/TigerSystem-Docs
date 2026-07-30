@@ -1,6 +1,6 @@
-# Elegoo
+# <img src="../assets/brands/elegoo.svg" width="26" alt="" /> Elegoo
 
-## Printer link — ✅ Live
+## Printer link — **Live**
 
 | Aspect | Detail |
 |---|---|
@@ -10,7 +10,7 @@
 | Control | Live control panel: home/jog, temperatures, light, fan, speed mode, load/unload |
 | Telemetry | Temperatures, job progress |
 
-## Native RFID — 📋 spec documented, in-app read planned
+## Native RFID — spec documented, in-app read planned
 
 Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
 (`EE EE EE EE`) — no real authentication. Read-only decoding spec:
@@ -19,14 +19,14 @@ Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
 ## The workflow
 
 1. **Add the printer** — automatic LAN discovery (UDP broadcast) or Add by
-   IP.
+ IP.
 2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
 3. **Assign it to a slot** — Tiger Studio maps inventory spools to the four
-   Canvas/tray slots.
+ Canvas/tray slots.
 4. **Live & control** — beyond telemetry and job progress, Elegoo gets a
-   **full control panel**: home/jog the axes, set nozzle & bed targets,
-   toggle the light, drive the fan, pick the speed mode, load/unload
-   filament per slot.
+ **full control panel**: home/jog the axes, set nozzle & bed targets,
+ toggle the light, drive the fan, pick the speed mode, load/unload
+ filament per slot.
 
 ## Bonus: write Elegoo-format tags
 

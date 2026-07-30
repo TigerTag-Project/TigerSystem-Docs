@@ -16,9 +16,9 @@ your inventory — no manual entry, no shaking the spool next to your ear.
 
 ```mermaid
 flowchart LR
-    SPOOL["🧵 Spool on the scale"] --> SCALE["⚖ TigerScale (ESP32)"]
-    SCALE -- "live weight" --> CLOUD[("☁ Your TigerSystem account<br/>(Firebase)")]
-    CLOUD --> ST["🖥 Tiger Studio"] & CO["📱 Connect"]
+  SPOOL["Spool on the scale"] --> SCALE["TigerScale (ESP32)"]
+  SCALE -- "live weight" --> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
+  CLOUD --> ST["Tiger Studio"] & CO["Connect"]
 ```
 
 ## Two generations
@@ -27,15 +27,15 @@ flowchart LR
 ([Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT):
 
 - **It knows which spool is on it**: **dual PN532 NFC readers**, one per
-  side — a [twin-tagged spool](../concepts/tigertag-chip.md) is identified
-  whichever way you put it down. Read the tag, weigh, subtract the empty
-  spool's weight, sync — no typing, no guessing.
+ side — a [twin-tagged spool](../concepts/tigertag-chip.md) is identified
+ whichever way you put it down. Read the tag, weigh, subtract the empty
+ spool's weight, sync — no typing, no guessing.
 - **ESP32-S3** (16 MB flash, PSRAM), **3.5″ 480×320 colour touchscreen**
-  (LVGL) with full on-screen setup: WiFi picker + keyboard, calibration
-  wizard, hardware self-test, OTA updates.
+ (LVGL) with full on-screen setup: WiFi picker + keyboard, calibration
+ wizard, hardware self-test, OTA updates.
 - **Battery powered** (AXP2101 PMIC, charge state on screen), audio codec.
 - Precision weighing: HX711 + load cell, median + adaptive EMA filtering —
-  tuned for a kitchen-scale feel.
+ tuned for a kitchen-scale feel.
 - **8 firmware languages**, 9-language web UI.
 
 **TigerScale V2** — the previous generation
@@ -53,12 +53,12 @@ builders keep using the V2 repository.
 ## Features (both generations)
 
 - Fully open source (MIT) — commodity parts, the living proof that an ESP32
-  and an NFC reader module (PN532 / RC522 class) are enough to build a
-  TigerTag-reading device.
+ and an NFC reader module (PN532 / RC522 class) are enough to build a
+ TigerTag-reading device.
 - **Live weight tracking** — updates appear in real time in Tiger Studio and
-  Tiger NFC Connect via Firestore.
+ Tiger NFC Connect via Firestore.
 - Works with Tiger Studio's **container weight calibration** so net filament
-  weight stays accurate per container type.
+ weight stays accurate per container type.
 
 ## Third-party scales — USB HID (DYMO M series and friends)
 
@@ -90,8 +90,8 @@ right after a tare reports unit `0x00`.
 
 ## Links
 
-- 📦 **V3 (current)**: [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)
-- 📦 V2: [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
+- **V3 (current)**: [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)
+- V2: [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
 
 ---
 

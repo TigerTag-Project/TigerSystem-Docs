@@ -14,11 +14,11 @@ upgrade, no purchase required to start.
 
 ```mermaid
 flowchart LR
-    TAG[TigerTag chip on spool] -- NFC tap --> PHONE[Smartphone + Tiger NFC Connect]
-    PHONE -- sync --> CLOUD[("Your TigerSystem account (Firebase)")]
-    CLOUD --> STUDIO[Tiger Studio — desktop]
-    STUDIO --> PRINTER[Connected printer]
-    CLOUD --> WEB["tigersystem.io — public sharing"]
+  TAG[TigerTag chip on spool] -- NFC tap --> PHONE[Smartphone + Tiger NFC Connect]
+  PHONE -- sync --> CLOUD[("Your TigerSystem account (Firebase)")]
+  CLOUD --> STUDIO[Tiger Studio — desktop]
+  STUDIO --> PRINTER[Connected printer]
+  CLOUD --> WEB["tigersystem.io — public sharing"]
 ```
 
 The phone acts as the **bridge** between the physical spool and the digital

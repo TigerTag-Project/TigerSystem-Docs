@@ -17,19 +17,19 @@ other, without repositioning the spool.
 
 ```mermaid
 flowchart LR
-    TAG["🏷 Spool / blank chip"] -- "placed on" --> POD["📡 TigerPOD<br/>2× USB NFC readers"]
-    POD -- "USB" --> ST["🖥 Tiger Studio"]
-    ST -- "spool auto-opens · guided writes" --> YOU["🧑 You"]
+  TAG["Spool / blank chip"] -- "placed on" --> POD["TigerPOD<br/>2× USB NFC readers"]
+  POD -- "USB" --> ST["Tiger Studio"]
+  ST -- "spool auto-opens · guided writes" --> YOU["You"]
 ```
 
 ## Features
 
 - 3D-printable shell — **free STL on
-  [MakerWorld](https://makerworld.com/en/models/1289152)**.
+ [MakerWorld](https://makerworld.com/en/models/1289152)**.
 - Houses two ACR122U-class USB readers (read + write stations).
 - Plug-and-play with [Tiger Studio](./tiger-studio.md): scanning a chip
-  auto-opens the matching spool; the guided chip-update flow uses it for
-  UID-checked writes.
+ auto-opens the matching spool; the guided chip-update flow uses it for
+ UID-checked writes.
 - Licensed **CC BY 4.0** — remix and adapt freely.
 
 ## Interactions
@@ -46,8 +46,8 @@ flowchart LR
 
 ## Links
 
-- 📦 Repo: [TigerPOD](https://github.com/TigerTag-Project/TigerPOD)
-- 🖨 STL: [MakerWorld model 1289152](https://makerworld.com/en/models/1289152)
+- Repo: [TigerPOD](https://github.com/TigerTag-Project/TigerPOD)
+- STL: [MakerWorld model 1289152](https://makerworld.com/en/models/1289152)
 
 ---
 

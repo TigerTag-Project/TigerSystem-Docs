@@ -21,26 +21,26 @@ matches the backup**.
 
 ```mermaid
 flowchart LR
-    TAGP["🏷 TigerTag chip"] -- "scan (Tiger Studio + POD)" --> ST["🖥 Tiger Studio"]
-    ST -- "backup keyed by chip UID" --> FB[("☁ Your TigerSystem account")]
-    FB -- "restore — same UID only" --> ST -- "rewrite to factory state" --> TAGP
+  TAGP["TigerTag chip"] -- "scan (Tiger Studio + POD)" --> ST["Tiger Studio"]
+  ST -- "backup keyed by chip UID" --> FB[("Your TigerSystem account")]
+  FB -- "restore — same UID only" --> ST -- "rewrite to factory state" --> TAGP
 ```
 
 ## What the backup gives you
 
 - **Factory-state restore**: if the chip's content is accidentally rewritten
-  or corrupted, reprogram it back exactly as the factory encoded it —
-  **without losing the factory authentication**.
+ or corrupted, reprogram it back exactly as the factory encoded it —
+ **without losing the factory authentication**.
 - **Same chip only**: the restore is valid only on the original chip; the
-  backup is bound to its physical UID. It is a safeguard for *that* chip, not
-  a way to clone it.
+ backup is bound to its physical UID. It is a safeguard for *that* chip, not
+ a way to clone it.
 - **Proof of possession**: a scan matching the backup shows the original chip
-  is physically in your hands.
+ is physically in your hands.
 - **Signatures no clone can fake**: TigerTag+ signatures are issued under a
-  **private key held by TigerTag** — only certified partners can issue them.
-  A cloned tag fails verification, on the customer's own phone.
+ **private key held by TigerTag** — only certified partners can issue them.
+ A cloned tag fails verification, on the customer's own phone.
 - **Works offline too**: a TigerTag+ can be authenticated **locally, without
-  any internet connection**.
+ any internet connection**.
 
 > **Note:** creating the backup currently requires **Tiger Studio + a
 > USB reader (TigerPOD / ACR122U)**; mobile support is planned.
@@ -55,7 +55,7 @@ flowchart LR
 
 ## Links
 
-- 🛒 Official chips: **[tigertag.io](https://tigertag.io)** (shop)
+- Official chips: **[tigertag.io](https://tigertag.io)** (shop)
 
 ---
 

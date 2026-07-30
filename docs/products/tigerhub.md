@@ -14,30 +14,30 @@ friend, publish a read-only list anyone can open in a browser.
 
 ```mermaid
 flowchart TB
-    ST["🖥 Tiger Studio"] & CO["📱 Connect"] <--> FB[("☁ Your TigerSystem account<br/>(Firebase — one shared database)")]
-    FB -- "published lists · invites" --> HUB["🌐 TigerHub<br/>tigersystem.io"]
-    HUB --> VIS["👀 Anyone with the link<br/>plain browser, no account"]
+  ST["Tiger Studio"] & CO["Connect"] <--> FB[("Your TigerSystem account<br/>(Firebase — one shared database)")]
+  FB -- "published lists · invites" --> HUB["TigerHub<br/>tigersystem.io"]
+  HUB --> VIS["Anyone with the link<br/>plain browser, no account"]
 ```
 
 ## Features — all live today
 
 - **Ecosystem showcase** — the home page tells the whole story: how it works,
-  the six printer brands, the components, and the three tiers (TigerData —
-  software-only tracking · TigerTag — the offline chip · TigerTag+ — verified
-  authenticity).
+ the six printer brands, the components, and the three tiers (TigerData —
+ software-only tracking · TigerTag — the offline chip · TigerTag+ — verified
+ authenticity).
 - **Your account on the web** (`/account`) — sign in to your TigerSystem
-  account from a browser.
+ account from a browser.
 - **Wishlists** — public ones and friends-only ones, both deployed.
 - **Friend codes & invitations** — add each other as friends from the web.
 - **Public list links** — share a read-only inventory or wishlist as
-  `https://tigersystem.io/list/<token>`; the viewer needs no app and no
-  account.
+ `https://tigersystem.io/list/<token>`; the viewer needs no app and no
+ account.
 - **Material catalogue & reference database** (`/materials`, `/database`) —
-  browse the shared catalogue every app resolves against.
+ browse the shared catalogue every app resolves against.
 - **Printers & features** (`/printers`, `/features`) — what works with what.
 - **3D models** (`/models`) — printable models (TigerPOD and friends).
 - **For manufacturers, developers & press** (`/manufacturers`, `/developers`,
-  `/press`) — the B2B story, integration pointers, media assets.
+ `/press`) — the B2B story, integration pointers, media assets.
 - **Goodies** (`/goodies`) — the merch corner.
 
 ## TigerHub is not the database

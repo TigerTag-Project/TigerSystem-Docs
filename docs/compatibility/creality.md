@@ -1,6 +1,6 @@
-# Creality
+# <img src="../assets/brands/creality.svg" width="26" alt="" /> Creality
 
-## Printer link — ✅ Live
+## Printer link — **Live**
 
 | Aspect | Detail |
 |---|---|
@@ -9,7 +9,7 @@
 | Camera | WebRTC video (port 8000) |
 | Telemetry | Temperatures, job progress, print preview |
 
-## Native RFID — 📋 spec documented, in-app read planned
+## Native RFID — spec documented, in-app read planned
 
 Creality spool tags are **Mifare Classic 1K** with an **AES-128-ECB key for
 sector 1** and optional payload encryption. Read-only decoding spec:
@@ -18,12 +18,12 @@ sector 1** and optional payload encryption. Read-only decoding spec:
 ## The workflow
 
 1. **Add the printer** — LAN discovery or Add by IP; Tiger Studio connects
-   over the printer's WebSocket and keeps the link alive.
+ over the printer's WebSocket and keeps the link alive.
 2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
 3. **Assign it to a CFS slot** — Tiger Studio maps inventory spools to the
-   CFS boxes so the machine-side filament info matches reality.
+ CFS boxes so the machine-side filament info matches reality.
 4. **Live** — temperatures, job progress, print preview, "Ends at" time, and
-   the **WebRTC camera** stream in the printers view.
+ the **WebRTC camera** stream in the printers view.
 
 ## Limitations
 

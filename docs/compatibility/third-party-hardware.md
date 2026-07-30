@@ -14,7 +14,7 @@ their gear in.
 | **Any HID Scale-compliant USB scale** | any | Same standard protocol as the DYMO M series (HID usage page `0x8D`) — brand doesn't matter | [Tiger Studio](../products/tiger-studio.md) |
 | **Any blank NTAG213/215/216 chip** | any | The consumable itself — bought anywhere, works identically ([which chip?](../../docs/faq/README.md)) | Everything |
 
-| | | | |
+|| | | |
 |---|---|---|---|
 | <img src="../assets/acr122u.jpg" alt="The ACR122U USB NFC reader" /> | <img src="../assets/td1s-front.jpg" alt="The AJAX-3D TD1s filament analyzer" /> | <img src="../assets/dymo-usb-scale.png" alt="A DYMO M-series USB HID scale" /> | <img src="../assets/ntag-chip.png" alt="A bare NTAG NFC chip — the antenna coil visible" /> |
 

@@ -5,28 +5,28 @@
 High-level, non-dated intentions (details live per product):
 
 - **Multi-vendor RFID → TigerData** — retrieve the data from manufacturer
-  tags (Bambu Lab, Creality, Elegoo, Anycubic, Snapmaker, Qidi, OpenSpool)
-  and convert it into TigerData digital spools, so other brands' filament can
-  be scanned and managed in the ecosystem; the read-only specs are already
-  documented ([compatibility](../compatibility/README.md)). Direct in-app
-  decoding is deliberately not integrated until the interoperability model is
-  settled.
+ tags (Bambu Lab, Creality, Elegoo, Anycubic, Snapmaker, Qidi, OpenSpool)
+ and convert it into TigerData digital spools, so other brands' filament can
+ be scanned and managed in the ecosystem; the read-only specs are already
+ documented ([compatibility](../compatibility/README.md)). Direct in-app
+ decoding is deliberately not integrated until the interoperability model is
+ settled.
 - **More printer integrations** — Klipper/Moonraker as the next natural
-  transport ([Klipper page](../compatibility/klipper.md)).
+ transport ([Klipper page](../compatibility/klipper.md)).
 - **A distributor map** *(planned)* — official distributors are growing
-  beyond [Atome3D](https://atome3d.com); a map will show where to buy
-  TigerTag chips locally.
+ beyond [Atome3D](https://atome3d.com); a map will show where to buy
+ TigerTag chips locally.
 - ~~The `.ttag` portable file~~ — **shipped** in Tiger Studio v2.14.0:
-  [the `.ttag` format](../developers/ttag-format.md) (export + import, all
-  three spool tiers).
+ [the `.ttag` format](../developers/ttag-format.md) (export + import, all
+ three spool tiers).
 - **TigerTag for resins** — extending the protocol to resin containers for
-  resin 3D printers, bringing the same open identity to a whole second family
-  of machines.
+ resin 3D printers, bringing the same open identity to a whole second family
+ of machines.
 - **TigerHub growth** — the ecosystem site at
-  [tigersystem.io](https://tigersystem.io): richer social-sandbox features
-  (wishlists, friends, sharing).
+ [tigersystem.io](https://tigersystem.io): richer social-sandbox features
+ (wishlists, friends, sharing).
 - **Documentation** — fill the TODO placeholders across this repo (tutorials,
-  guides, manufacturer onboarding, RFID payload summary).
+ guides, manufacturer onboarding, RFID payload summary).
 
 ## Detailed roadmaps
 

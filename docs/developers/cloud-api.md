@@ -6,10 +6,10 @@ Third-party apps connect to the TigerSystem backend — plain Firebase — with
 the **standard Firebase pattern**:
 
 1. Fetch the public SDK config:
-   `https://tigertag-cdn.web.app/__/firebase/init.json`
+ `https://tigertag-cdn.web.app/__/firebase/init.json`
 2. `firebase.initializeApp(config)`
 3. Authenticate the **user's own TigerTag account** (the config being public is
-   intentional — security is enforced server-side by Firestore rules).
+ intentional — security is enforced server-side by Firestore rules).
 4. Read/write that user's data within the documented surface.
 
 ## Canonical documentation
@@ -30,9 +30,9 @@ The full integration contract lives in
 
 - `users/{uid}/**` is owner-only by default.
 - Cross-user writes always require a **prior relationship** (e.g. an accepted
-  friendship) — there are no open write paths.
+ friendship) — there are no open write paths.
 - Some collections are **field-whitelisted**: writes carrying unlisted fields
-  are rejected.
+ are rejected.
 - Admin-only fields (roles, debug flags) are never client-writable.
 
 ## HTTP endpoints

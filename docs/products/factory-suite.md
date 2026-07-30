@@ -10,14 +10,14 @@ field.
 Two tools cover the two halves of the job:
 
 - **TigerTag Manager** — manages the brand's **filament database**: products,
-  materials, colors, settings.
+ materials, colors, settings.
 - **TigerTag Factory** — **mass-writes the data into every spool produced**,
-  at line speed: **about 1 second per chip** — thousands of spools a day,
-  one click.
+ at line speed: **about 1 second per chip** — thousands of spools a day,
+ one click.
 
 ## The carrier — two chips, peel and stick
 
-| | |
+|| |
 |---|---|
 | <img src="../assets/carrier-bare.png" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" /> | <img src="../assets/carrier-branded.png" alt="The TigerTag carrier as it ships, with the two branded chips" /> |
 

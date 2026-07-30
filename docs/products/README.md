@@ -23,12 +23,12 @@ The TigerSystem ecosystem, one page per product.
 
 ```mermaid
 flowchart LR
-    TT[TigerTag / TigerTag+] --> CO[Tiger NFC Connect]
-    TT --> POD[TigerPOD] --> ST[Tiger Studio]
-    SC[TigerScale] --> FB[("Your TigerSystem account — Firebase")]
-    CO <--> FB
-    ST <--> FB
-    FB --> HUB["TigerHub — tigersystem.io"]
+  TT[TigerTag / TigerTag+] --> CO[Tiger NFC Connect]
+  TT --> POD[TigerPOD] --> ST[Tiger Studio]
+  SC[TigerScale] --> FB[("Your TigerSystem account — Firebase")]
+  CO <--> FB
+  ST <--> FB
+  FB --> HUB["TigerHub — tigersystem.io"]
 ```
 
 ---

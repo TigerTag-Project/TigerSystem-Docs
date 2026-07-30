@@ -24,22 +24,22 @@ carried by **3D France**.
 ## And everyone fighting alongside
 
 - **The factory partners** who chose the open chip over a walled garden —
-  Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — with Filforme, Nanovia and
-  more being integrated.
+ Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — with Filforme, Nanovia and
+ more being integrated.
 - **The independent builders** who picked up the protocol on their own —
-  OpenRFID, Spooly Tracker, the Snapmaker U1 community firmware
-  ([third-party integrations](../developers/integrations.md)).
+ OpenRFID, Spooly Tracker, the Snapmaker U1 community firmware
+ ([third-party integrations](../developers/integrations.md)).
 - **The community** — the makers who tag, weigh, share, report, translate
-  and push the whole thing forward, one spool at a time.
+ and push the whole thing forward, one spool at a time.
 
 > **TODO:** add further team members (name, role, one-liner) as they wish to
 > appear publicly.
 
 ## Join the fight
 
-- 💬 [Discord](https://discord.gg/3Qv5TSqnJH) — the daily conversation
-- 📦 [github.com/TigerTag-Project](https://github.com/TigerTag-Project) — the open code
-- ✉️ [tigertag@tigertag.io](mailto:tigertag@tigertag.io) — direct line
+- <img src="../assets/icons/discord.svg" width="16" alt="" /> [Discord](https://discord.gg/3Qv5TSqnJH) — the daily conversation
+- <img src="../assets/icons/github.svg" width="16" alt="" /> [github.com/TigerTag-Project](https://github.com/TigerTag-Project) — the open code
+- <img src="../assets/icons/mail.svg" width="16" alt="" /> [tigertag@tigertag.io](mailto:tigertag@tigertag.io) — direct line
 
 ---
 

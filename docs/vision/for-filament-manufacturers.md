@@ -28,15 +28,15 @@ as little as 5 days**, writing **each chip in about 1 second** (thousands of
 spools a day, one click):
 
 - Standard NTAG hardware (no proprietary components, no tooling lock-in),
-  sourced at a scale and cost chosen for one non-negotiable goal: **add the
-  technology without adding one cent to the spool's end-user price.**
+ sourced at a scale and cost chosen for one non-negotiable goal: **add the
+ technology without adding one cent to the spool's end-user price.**
 - A proven integration playbook already deployed in multiple factories,
-  powered by the [TigerTag Factory & Manager](../products/factory-suite.md)
-  industrial suite: your filament database on one side, line-speed mass
-  writing into every spool on the other — with the **factory signature
-  proving each product's origin**.
+ powered by the [TigerTag Factory & Manager](../products/factory-suite.md)
+ industrial suite: your filament database on one side, line-speed mass
+ writing into every spool on the other — with the **factory signature
+ proving each product's origin**.
 - The shared reference database gives your products a precise, universal
-  identity every compatible app resolves identically.
+ identity every compatible app resolves identically.
 
 Brands shipping TigerTags in their products can carry the **TigerTag
 Certified** mark — a visible signal to customers that the spool is smart and
@@ -53,9 +53,9 @@ commitment, and every one of them deserves the credit:
 
 | Tier | What it means | Brands |
 |---|---|---|
-| 🏆 **Platinum** | TigerTag across the **entire production** — every spool ships with its NFC chips, as standard | **Rosa3D** |
-| 🥇 **Gold** | Integration **on demand** at production time, with large quantities already produced, a high level of integration and an **official public commitment** | **R3D**, **eSun** |
-| 🥈 **Silver** | The technology integrated **on demand** | **Sunlu**, **Landu**, **Jamg He** |
+| **Platinum** | TigerTag across the **entire production** — every spool ships with its NFC chips, as standard | **Rosa3D** |
+| **Gold** | Integration **on demand** at production time, with large quantities already produced, a high level of integration and an **official public commitment** | **R3D**, **eSun** |
+| **Silver** | The technology integrated **on demand** | **Sunlu**, **Landu**, **Jamg He** |
 
 …and more being integrated (Filforme, Nanovia, and others on the way).
 
@@ -66,7 +66,7 @@ Public posts on the brands' own channels — not our press release
 [tigersystem.io/en/manufacturers](https://tigersystem.io/en/manufacturers)).
 **Click any image to open the original post:**
 
-| | | |
+|| | |
 |---|---|---|
 | <a href="https://www.instagram.com/p/DVyeOZajZSm/"><img src="../assets/announcement-rosa3d.jpg" alt="Rosa3D's own Instagram announcement of TigerTag integration" /></a> | <a href="https://www.instagram.com/reel/DVoAMqTk5ck/"><img src="../assets/announcement-r3d.jpg" alt="R3D Filament's own Instagram announcement of TigerTag deployment" /></a> | <a href="https://www.instagram.com/p/DUjydNXkc1W/"><img src="../assets/announcement-esun.jpg" alt="eSUN's own Instagram announcement of TigerTag integration" /></a> |
 
@@ -85,7 +85,7 @@ Public posts on the brands' own channels — not our press release
 
 ## How the tags get into your spools
 
-| | |
+|| |
 |---|---|
 | <img src="../assets/carrier-branded.png" alt="The TigerTag carrier as it ships — two branded NFC chips" /> | <img src="../assets/refill-with-tigertag-orange.png" alt="The carrier fitted on a filament refill" /> |
 
@@ -95,13 +95,13 @@ nothing else on the line changes.*
 
 ## Already on the shelves
 
-| | | |
+|| | |
 |---|---|---|
 | <img src="../assets/partner-box-rosa3d.jpg" alt="Rosa3D filament box with TigerTag NFC-RFID" /> | <img src="../assets/partner-box-esun.jpg" alt="eSun filament box with TigerTag NFC-RFID" /> | <img src="../assets/partner-box-sunlu.jpg" alt="Sunlu filament box with TigerTag NFC-RFID" /> |
 
 *Rosa3D, eSun, Sunlu — real boxes, shipping with TigerTag inside.*
 
-| | | | |
+|| | | |
 |---|---|---|---|
 | <img src="../assets/spool-rosa3d.png" alt="Rosa3D rainbow filament refill — shipping with TigerTag" /> | <img src="../assets/spool-esun.png" alt="eSUN PLA+ spool — shipping with TigerTag" /> | <img src="../assets/spool-sunlu.png" alt="Sunlu filament spool — shipping with TigerTag" /> | <img src="../assets/spool-r3d.png" alt="R3D filament spool — shipping with TigerTag" /> |
 
@@ -131,8 +131,8 @@ Every filament brand that joins TigerSystem strengthens all the others:
 
 ```mermaid
 flowchart LR
-    B1["Filament brand A"] & B2["Filament brand B"] & B3["Filament brand C…"] --> TS["TigerSystem<br/>one open protocol, at scale"]
-    TS -- "critical mass = negotiating power" --> PM["Printer manufacturers<br/>read TigerTag natively"]
+  B1["Filament brand A"] & B2["Filament brand B"] & B3["Filament brand C…"] --> TS["TigerSystem<br/>one open protocol, at scale"]
+  TS -- "critical mass = negotiating power" --> PM["Printer manufacturers<br/>read TigerTag natively"]
 ```
 
 Alone, no filament brand can convince printer manufacturers to read its tags.

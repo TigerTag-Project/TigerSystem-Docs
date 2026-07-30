@@ -18,18 +18,18 @@ Thank you for helping document the TigerSystem ecosystem! This repository is
 1. **English only.** All documentation is written in English.
 2. **One topic per page.** If a page grows two unrelated subjects, split it.
 3. **Never duplicate — cross-reference.** Every fact has exactly one canonical
-   location. If it already lives in another repo (e.g. the Firestore data model,
-   a printer protocol), **link to it** instead of copying it.
+ location. If it already lives in another repo (e.g. the Firestore data model,
+ a printer protocol), **link to it** instead of copying it.
 4. **Never invent.** If information is missing, mark it explicitly:
 
-   > **TODO:** exact NTAG payload offsets — see the RFID guide once published.
+  >**TODO:** exact NTAG payload offsets — see the RFID guide once published.
 
 5. **Markdown + Mermaid only.** Diagrams are written as ` ```mermaid ` blocks so
-   they render on GitHub and stay diffable.
+ they render on GitHub and stay diffable.
 6. **Navigation footer.** Every page in `docs/` ends with a *Previous / Index /
-   Next* footer and a *Related* line — keep them working when you move pages.
+ Next* footer and a *Related* line — keep them working when you move pages.
 7. **Tables over walls of text.** Prefer short sections, tables, and callouts
-   (`> **Note:**`, `> **Warning:**`).
+ (`> **Note:**`, `> **Warning:**`).
 
 ## Workflow
 

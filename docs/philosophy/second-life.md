@@ -15,11 +15,11 @@ The spool gets a *second life* as a first-class, self-identifying object:
 
 ```mermaid
 flowchart LR
-    A[Spool empty / untagged] --> B[Refill or re-purpose]
-    B --> C[Encode TigerTag chip<br/>brand · material · color · settings]
-    C --> D[Spool re-enters inventory]
-    D --> E[Weight tracked, rack-mapped,<br/>shared, printable]
-    E -->|emptied again| B
+  A[Spool empty / untagged] --> B[Refill or re-purpose]
+  B --> C[Encode TigerTag chip<br/>brand · material · color · settings]
+  C --> D[Spool re-enters inventory]
+  D --> E[Weight tracked, rack-mapped,<br/>shared, printable]
+  E -->|emptied again| B
 ```
 
 <img src="../assets/refill-with-tigertag-orange.png" width="380" alt="A cardboard-core filament refill carrying its TigerTag chip — no plastic spool at all" />
@@ -30,10 +30,10 @@ flowchart LR
 
 - **Tiger NFC Connect** (mobile) — program chips by NFC tap.
 - **Tiger Studio** (desktop) — guided chip update with an ACR122U /
-  [TigerPOD](../products/tigerpod.md) reader: place the chip, UID-match check,
-  verified write.
+ [TigerPOD](../products/tigerpod.md) reader: place the chip, UID-match check,
+ verified write.
 - **Digital-first** — Tiger Studio's *TigerData* lets you create a fully digital
-  (chipless) spool now and **promote it to a real chip later, atomically**.
+ (chipless) spool now and **promote it to a real chip later, atomically**.
 
 > **Note:** the catalogue of brands, materials and colors used when encoding is
 > served by the shared [reference database](../concepts/universal-filament-identity.md), so
