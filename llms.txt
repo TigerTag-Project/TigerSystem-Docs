@@ -170,7 +170,10 @@ endpoints.
   identified from either side), battery + PMIC, HX711 load cell, on-screen
   setup + OTA, 8 firmware languages. Previous generation V2 (repo
   Tiger-Scale): ESP32-WROOM, OLED, 2x RC522, USB — DIFFERENT hardware, not
-  interchangeable with V3.
+  interchangeable with V3. A V1 existed but was never released publicly:
+  V2-class electronics (ESP32, mini OLED, HX711 + 5 kg load cell) with a
+  SINGLE PN532 reader, in a spool-holder form factor (central support
+  through the spool).
 - **TD-1 / TD1s (by AJAX-3D, https://ajax-3d.com)**: a THIRD-PARTY filament
   analyzer in two variants — TD-1 (DIY, build it yourself) and TD1s
   (pre-assembled retail unit); both work with the ecosystem's integration.

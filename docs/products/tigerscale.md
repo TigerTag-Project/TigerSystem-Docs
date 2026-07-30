@@ -44,6 +44,12 @@ ESP32-WROOM, 0.96″ OLED, 2× RC522 readers, USB-powered. **V3 is different
 hardware, not a firmware update** — the two are not interchangeable; V2
 builders keep using the V2 repository.
 
+> **Heritage — the V1.** A first generation existed but was never released
+> as a public repository. It carried essentially the V2's electronics —
+> ESP32, mini OLED, an HX711 board with a 5 kg load cell — but a **single**
+> PN532 reader, in a completely different form factor: a **spool-holder
+> design**, with a central support passing through the middle of the spool.
+
 ## Features (both generations)
 
 - Fully open source (MIT) — commodity parts, the living proof that an ESP32
