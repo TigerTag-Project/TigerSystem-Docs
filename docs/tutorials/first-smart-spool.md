@@ -27,6 +27,10 @@ already own or can get for a few cents.
  opposite sides — that's how factory spools ship
  ([why two?](../concepts/tigertag-chip.md)).
 
+<img src="../assets/nfc-scan.gif" width="420" alt="The NFC tap, animated — phone meets chip, spool identified" />
+
+*The whole gesture, in motion.*
+
 That's it. Re-scan the spool any time, with whichever reader is closest: a
 tap of **any NFC phone**, or place it on a reader connected to
 [Tiger Studio Manager](../products/tiger-studio.md) (ACR122U /

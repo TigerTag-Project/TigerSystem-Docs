@@ -24,6 +24,11 @@ the better path ([the full story](./why-tigersystem.md)).
 ecological vision from the very beginning — and pushed filament
 manufacturers to integrate TigerTag into their spools.
 
+<img src="../assets/maker-bench.jpg" width="100%" alt="A real maker bench running the whole TigerSystem — where the fight happens" />
+
+*A real maker bench, the whole system in use — this is what the fight is
+for.*
+
 ## And everyone fighting alongside
 
 - **The factory partners** who chose the open chip over a walled garden —

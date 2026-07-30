@@ -122,18 +122,15 @@ Public posts on the brands' own channels — not our press release
 
 ## How the tags get into your spools
 
-<img src="../assets/carrier-front.jpg" width="100%" alt="The TigerTag carrier, front face — the two branded chips and the 3M 468MP/200MP adhesive strip" />
-
-*Front — the two branded chips, and the industrial 3M adhesive
-(468MP / 200MP) in the middle.*
-
-<img src="../assets/carrier-back.jpg" width="100%" alt="The TigerTag carrier, back face — the two bare NFC antennas" />
-
-*Back — the two independent NFC antennas, one per end.*
-
-|| |
+| Front | Back |
 |---|---|
-| <img src="../assets/carrier-branded.png" alt="The TigerTag carrier as it ships — two branded NFC chips" /> | <img src="../assets/refill-with-tigertag-orange.png" alt="The carrier fitted on a filament refill" /> |
+| <img src="../assets/carrier-front.png" alt="The TigerTag carrier, front face — the two branded chips and the 3M 468MP/200MP adhesive strip" /> | <img src="../assets/carrier-back.png" alt="The TigerTag carrier, back face — the two bare NFC antennas" /> |
+
+*Front — the two branded chips, with the industrial 3M adhesive
+(468MP / 200MP) in the middle. Back — the two independent NFC antennas, one
+per end.*
+
+<img src="../assets/refill-with-tigertag-orange.png" width="360" alt="The carrier fitted on a filament refill" />
 
 *A carrier, not a retooling: two chips, one per folded end. Your operator
 peels and sticks — nothing else on the line changes.*

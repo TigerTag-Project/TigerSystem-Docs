@@ -59,9 +59,9 @@ allow it.
 
 ## In pictures
 
-|| | |
-|---|---|---|
-| <img src="../assets/connect-scan.jpg" alt="Tiger NFC Connect — scanning a chip by NFC tap" /> | <img src="../assets/connect-inventory.png" alt="Tiger NFC Connect — the mobile inventory" /> | <img src="../assets/connect-printer-live.png" alt="Tiger NFC Connect — live printer view" /> |
+|| | | |
+|---|---|---|---|
+| <img src="../assets/connect-home.jpg" alt="Tiger NFC Connect — the home screen: one Scan button, an Add-to-inventory toggle, the TD1s a tap away" /> | <img src="../assets/connect-scan.jpg" alt="Tiger NFC Connect — scanning a chip by NFC tap" /> | <img src="../assets/connect-inventory.png" alt="Tiger NFC Connect — the mobile inventory" /> | <img src="../assets/connect-printer-live.png" alt="Tiger NFC Connect — live printer view" /> |
 
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio on desktop and Tiger NFC Connect on mobile, same account, same data" />
 
