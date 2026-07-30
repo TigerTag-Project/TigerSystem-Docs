@@ -41,7 +41,7 @@ flowchart LR
 
 ## In pictures
 
-<img src="../assets/tigerpod-render.jpg" width="420" alt="TigerPOD — product render" />
+<img src="../assets/tigerpod-with-spool.png" width="420" alt="A blue TigerPOD holding a red filament spool" />
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="TigerPOD line-up in rainbow colors" />
 <img src="../assets/tigerpod-in-studio.jpg" width="100%" alt="TigerPOD connected to Tiger Studio" />
