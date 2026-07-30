@@ -58,7 +58,9 @@ Direct file: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosy
 
 ## TigerPOD
 
-<img src="../assets/tigerpod-with-spool.png" width="420" alt="A blue TigerPOD holding a red filament spool" />
+|| |
+|---|---|
+| <img src="../assets/tigerpod-grey.png" width="380" alt="A grey TigerPOD holding a red filament spool" /> | <img src="../assets/tigerpod-with-spool.png" width="380" alt="A blue TigerPOD holding a red filament spool" /> |
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="TigerPOD line-up in rainbow colors" />
 
