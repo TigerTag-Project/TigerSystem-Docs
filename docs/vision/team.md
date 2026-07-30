@@ -24,8 +24,8 @@ carried by **3D France**.
 ## And everyone fighting alongside
 
 - **The factory partners** who chose the open chip over a walled garden —
-  Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, and more
-  being integrated.
+  Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — with Filforme, Nanovia and
+  more being integrated.
 - **The independent builders** who picked up the protocol on their own —
   OpenRFID, Spooly Tracker, the Snapmaker U1 community firmware
   ([third-party integrations](../developers/integrations.md)).

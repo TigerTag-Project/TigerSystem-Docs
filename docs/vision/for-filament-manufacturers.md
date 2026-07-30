@@ -17,7 +17,8 @@ proprietary ones, without the walled garden.
 and, today, the only viable open smart-spool solution shipping at scale: an
 open, standard, agnostic, cross-platform protocol with more than
 **2.5 million chips already produced** and integrated at the factory by brands
-like Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme and Nanovia.
+like Rosa3D, eSun, Sunlu, Landu, Jamg He and R3D — with Filforme and
+Nanovia being integrated.
 
 ## Factory integration: days, not months
 

@@ -41,7 +41,8 @@ reader is already in everyone's pocket (at Bambu Lab the readers sit in the
 AMS, not the printer; a third-party spool can't be detected by the machine).
 Since then, more than 2.5 million TigerTag NFC chips have been produced, most
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D, Filforme, Nanovia, more being integrated).
+Sunlu, Landu, Jamg He, R3D — with Filforme, Nanovia and more being
+integrated).
 Integrator tiers (founder-defined): PLATINUM = Rosa3D (TigerTag across the
 entire production, chips standard on every spool); GOLD = R3D, eSun
 (on-demand integration at production, large quantities produced, high
