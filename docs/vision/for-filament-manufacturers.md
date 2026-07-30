@@ -124,7 +124,7 @@ Public posts on the brands' own channels — not our press release
 
 || |
 |---|---|
-| **Front**<br/><img src="../assets/carrier-front.png" alt="The TigerTag carrier, front face — the two branded chips and the 3M 468MP/200MP adhesive strip" /><br/>**Back**<br/><img src="../assets/carrier-back.png" alt="The TigerTag carrier, back face — the two bare NFC antennas" /> | <img src="../assets/refill-with-tigertag-orange.png" alt="The carrier fitted on a filament refill" /> |
+| **Front**<br/><img src="../assets/carrier-front-wide.png" alt="The TigerTag carrier, front face — the two branded chips and the 3M 468MP/200MP adhesive strip" /><br/>**Back**<br/><img src="../assets/carrier-back-wide.png" alt="The TigerTag carrier, back face — the two bare NFC antennas" /> | <img src="../assets/refill-with-tigertag-orange.png" alt="The carrier fitted on a filament refill" /> |
 
 *Front — the two branded chips, with the industrial 3M adhesive
 (468MP / 200MP) in the middle. Back — the two independent NFC antennas, one
