@@ -51,19 +51,32 @@ open.
 The brands below made the open spool real — each at its own level of
 commitment, and every one of them deserves the credit:
 
-**Platinum** — TigerTag+ across the entire production, every spool format,
-signed chips as standard · **Gold** — on-demand integration at production
-time, large quantities produced, official public commitment · **Silver** —
-the technology integrated on demand.
+### Platinum
 
-| Tier | Logo | Manufacturer |
-|---|---|---|
-| **Platinum** | <a href="https://rosa3d.pl"><img src="../assets/partners/rosa3d.svg" height="30" alt="Rosa3D" /></a> | **[Rosa3D](https://rosa3d.pl)** — the world's first integrator to put **TigerTag+** across its entire production |
-| **Gold** | <a href="https://r3dprint.com"><img src="../assets/partners/r3d.svg" height="26" alt="R3D" /></a> | **[R3D](https://r3dprint.com)** |
-| **Gold** | <a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="24" alt="eSun" /></a> | **[eSun](https://www.esun3d.com)** |
-| **Silver** | <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="20" alt="Sunlu" /></a> | **[Sunlu](https://www.sunlu.com)** |
-| **Silver** | <a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="18" alt="Landu" /></a> | **[Landu](https://www.landustore.com)** |
-| **Silver** | <a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="22" alt="Jamg He" /></a> | **[Jamg He](https://www.jamghe.com)** |
+**TigerTag+ across the entire production** — every spool format, signed
+chips as standard on every single spool leaving the factory.
+
+<a href="https://rosa3d.pl"><img src="../assets/partners/rosa3d.svg" height="52" alt="Rosa3D" /></a>
+
+**[Rosa3D](https://rosa3d.pl)** — the world's first integrator to put
+**TigerTag+** across its entire production.
+
+### Gold
+
+**Integration on demand at production time** — large quantities already
+produced, a high level of integration, and an official public commitment.
+
+<a href="https://r3dprint.com"><img src="../assets/partners/r3d.svg" height="34" alt="R3D" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="32" alt="eSun" /></a>
+
+**[R3D](https://r3dprint.com)** · **[eSun](https://www.esun3d.com)**
+
+### Silver
+
+**The technology integrated on demand.**
+
+<a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
+
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
 
 …and more being integrated —
 [Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), and
