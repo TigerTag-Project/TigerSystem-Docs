@@ -145,7 +145,7 @@ sticks — nothing else on the line changes.*
 
 || | |
 |---|---|---|
-| <img src="../assets/partner-box-rosa3d.jpg" alt="Rosa3D filament box with TigerTag NFC-RFID" /> | <img src="../assets/partner-box-esun.jpg" alt="eSun filament box with TigerTag NFC-RFID" /> | <img src="../assets/partner-box-sunlu.jpg" alt="Sunlu filament box with TigerTag NFC-RFID" /> |
+| <img src="../assets/box-rosa3d-cutout.png" alt="Rosa3D filament box with TigerTag NFC-RFID" /> | <img src="../assets/box-esun-cutout.png" alt="eSun filament box with TigerTag NFC-RFID" /> | <img src="../assets/box-sunlu-cutout.png" alt="Sunlu filament box with TigerTag NFC-RFID" /> |
 
 *Rosa3D, eSun, Sunlu — real boxes, shipping with TigerTag inside.*
 
