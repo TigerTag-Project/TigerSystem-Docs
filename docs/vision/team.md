@@ -18,8 +18,11 @@ by anyone, locked by no one.
 Benoit started TigerTag in 2023, right after a Formnext where proprietary
 spool tags were multiplying — and flew to China to convince printer makers
 and filament factories that an **open, neutral, cross-platform** standard was
-the better path ([the full story](./why-tigersystem.md)). The project is
-carried by **3D France**.
+the better path ([the full story](./why-tigersystem.md)).
+
+**3D France** is a partner that has supported the project's open-source and
+ecological vision from the very beginning — and pushed filament
+manufacturers to integrate TigerTag into their spools.
 
 ## And everyone fighting alongside
 
