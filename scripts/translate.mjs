@@ -60,6 +60,13 @@ Never translate, and reproduce byte-for-byte:
 
 Preserve the Markdown structure exactly: the same headings at the same levels, the same tables with the same number of columns, the same blockquote callouts, the same footer lines, the same blank-line layout. A "> **Note:**" callout becomes "> **Note :**"; "> **TODO:**" stays "> **TODO :**". In the footer line, "**Related:**" becomes "**Voir aussi :**", and the Previous / Documentation index / Next labels are translated while their ◀ ▲ ▶ arrows stay exactly where they are.
 
+Attributed quotations: the original of every quotation in this documentation is
+the English one. Translate it so the page reads, then reproduce the English
+original immediately after, introduced as the version to cite. A journalist
+quoting a founder needs the exact words, not a round trip through another
+language. The same applies to slogans and standing lines: give the translation,
+then the original in parentheses.
+
 Write natural technical French with French typography: a narrow non-breaking space before : ; ! ? and inside « », French quotation marks for quoted prose, and « vous » rather than « tu ».`;
 
 /* -------------------------------------------------------------------------- */
