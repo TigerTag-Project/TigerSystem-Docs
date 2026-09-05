@@ -10,7 +10,7 @@
 | Official branded chips | Produced as **NTAG215** — the extra memory maximizes end-of-life reuse (standard NDEF objects) so the chip never becomes e-waste |
 | Authentication | None — openly readable |
 | Write lock | **None** — chips ship unlocked; the user can rewrite them, including migrating to another protocol entirely |
-| Reserved area | **32 bytes** at the end of the payload — on a standard TigerTag they are **free for community add-on functions**; on a [TigerTag+](../products/tigertag-plus.md) they carry the **origin signature** (byte-level layout: [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)) |
+| Reserved area | **64 bytes** at the end of the payload — pages `0x18`–`0x27`, leaving 80 bytes of data. On a standard TigerTag they are **free for community add-on functions**; on a [TigerTag+](../products/tigertag-plus.md) they carry the **origin signature**, 32 bytes of `R` and 32 of `S` (byte-level layout: [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)) |
 | Chips per spool | **Two**, placed on opposite sides |
 | Readable by | Any NFC smartphone, ACR122U-class USB readers, [TigerPOD](../products/tigerpod.md) |
 
@@ -57,12 +57,30 @@ A few implementation details:
  fold over the cardboard core (one chip per end), held with industrial
  **3M adhesive (468MP / 200MP)** — the operator peels and sticks, nothing
  else changes on the line. The carrier design is **public and printable at
- home**.
+ home**, and the same form is sold on its own for
+ [refills](../philosophy/second-life.md): glue it inside the cardboard core
+ before mounting the refill on a reusable masterspool, and the chip travels
+ with the filament instead of with the reel.
 
 <img src="../assets/carrier-bare.png" width="440" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" />
 
 *The carrier, bare: the two independent antennas are plainly visible — one
 per folded end, each with its own UID.*
+
+## Encoded at the factory, or blank in your hand
+
+The same chip reaches you two ways, and the difference matters more than
+anything else on this page:
+
+| | Where it comes from | What is on it |
+|---|---|---|
+| **Pre-encoded** | integrated on the production line, inside filament from a partner brand | the spool's full identity, ready to read |
+| **Blank** | bought on its own — TigerTag-branded, or any NTAG chip from anywhere | nothing yet; you write it once, in about a minute |
+
+Chips sold separately ship **blank**, logo or no logo. That is not a
+limitation: an unwritten chip is what makes
+[second life](../philosophy/second-life.md) possible, and it is why the
+protocol never depends on buying anything.
 
 ## Payload
 

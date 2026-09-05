@@ -1,0 +1,40 @@
+name: Documentation site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: Build and check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Fails on a broken internal link, a page missing from the curated
+      # navigation, or a navigation entry pointing at a page that is gone.
+      - name: Check the derived content tree
+        run: pnpm check:docs
+
+      # Translations must mirror the shape of their source — same links, same code
+      # blocks, same headings, same tables. A locale marked complete in
+      # scripts/lib/docs-config.mjs must also have every page, up to date.
+      - name: Check translations
+        run: pnpm check:i18n
+
+      - name: Build
+        run: pnpm build
+
+      # Stale French pages are a signal, not a broken build — reported, never fatal.
+      - name: Report translation staleness
+        run: pnpm translate:check

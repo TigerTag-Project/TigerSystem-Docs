@@ -25,18 +25,39 @@ useful:
 None of these need our apps or our cloud: the chip + an SDK is enough. Add the
 [cloud surface](./cloud-api.md) only if you want accounts and sync.
 
-And when your product or app reads and/or writes TigerTags, it can carry the
-**TigerTag Certified** mark — a quality label guaranteeing the protocol is
-perfectly integrated in your ecosystem (reach out through the
+Build it and it is **TigerTag Compatible**: free, self-declared, no audit and
+no permission. Put it through the audit and it can become **TigerTag
+Certified** — open to anything a third party builds, hardware or software, in
+two scopes (**TigerTag** and **TigerTag+**). The line between the tiers is not
+what your product is; it is whether anyone checked. Compatible says *"it
+works"* on your word, Certified says *"we tested it"* on ours
+([criteria](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md), reach out through the
 [GitHub organization](https://github.com/TigerTag-Project)).
 
 The governance is deliberately two-gated: **anyone** may implement the
-protocol and say "compatible with TigerTag" — no permission, ever. Only
-**certified partners** (listed in the certified registry) may put the
-TigerTag name/logo on a product and issue **TigerTag+ signatures** (TigerTag
+protocol and say "compatible with TigerTag" — no permission, ever — and show
+the TigerTag logo, unmodified, to say so: in your app, your documentation, your
+store listing. That referential use is free. Only **certified partners**
+(listed in the certified registry) may apply the mark **on a chip, carrier,
+spool or packaging**, where it stops describing compatibility and starts
+asserting origin, and only they may issue **TigerTag+ signatures** (TigerTag
 holds the private key). The trademark gate is marketing; the signature gate
 is technical; **neither restricts the protocol by one line** — an uncertified
 chip works perfectly, it just can't prove its origin.
+
+Two details worth having exactly right. The compatibility claim covers the
+**`+` tier too**: verifying a TigerTag+ signature is free, offline and
+unrestricted — the public keys are published — so a reader that checks them may
+say *"compatible with TigerTag+"*. What it may not do is call **a tag** a
+TigerTag+ unless that tag really carries a signature issued by TigerTag. And
+the word **"certified" is never self-applied**: TigerSystem grants it, nobody
+claims it.
+
+This is deliberately the model Zigbee and Matter use — a free *Compatible*
+tier that anyone may enter, and a granted *Certified* tier that means something
+to a buyer precisely because it is granted. Full policy, certification tiers
+and brand assets: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/TRADEMARK.md) and
+[CERTIFICATION.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md).
 
 ## Start here
 

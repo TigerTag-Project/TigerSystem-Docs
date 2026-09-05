@@ -1,0 +1,36 @@
+{
+  "name": "tigersystem-docs-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.20.0",
+  "description": "Static documentation site for the TigerSystem ecosystem \u2014 derived from docs/, never duplicating it.",
+  "scripts": {
+    "sync:docs": "node scripts/sync-docs.mjs",
+    "check:docs": "node scripts/sync-docs.mjs --check",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "check": "pnpm check:docs && pnpm check:i18n",
+    "predev": "node scripts/sync-docs.mjs",
+    "dev": "astro dev",
+    "prebuild": "node scripts/sync-docs.mjs",
+    "build": "astro build",
+    "prepreview": "node scripts/sync-docs.mjs",
+    "preview": "astro preview",
+    "astro": "astro",
+    "translate": "node scripts/translate.mjs",
+    "translate:check": "node scripts/translate.mjs --check",
+    "prepare": "git rev-parse --git-dir >/dev/null 2>&1 && git config core.hooksPath .githooks || true"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.0",
+    "@astrojs/starlight": "^0.42.0",
+    "astro": "^7.3.1",
+    "mermaid": "^11.12.0",
+    "sharp": "^0.34.4"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.123.0",
+    "playwright": "^1.62.1",
+    "starlight-links-validator": "^0.26.0"
+  }
+}

@@ -1,0 +1,102 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+---
+
+<Default><slot /></Default>
+
+<script>
+  /**
+   * Mermaid diagrams.
+   *
+   * `rehype-mermaid` leaves each diagram as <pre class="mermaid">source</pre>.
+   * Mermaid itself is a large dependency, so it is imported dynamically and only
+   * on pages that actually contain a diagram. The source is kept aside so the
+   * diagram can be redrawn when the reader flips the light/dark switch.
+   */
+  const SOURCE = new WeakMap<HTMLElement, string>();
+
+  function isDark() {
+    return document.documentElement.dataset.theme === 'dark';
+  }
+
+  /**
+   * Mermaid's stock themes are lavender; these follow the site's own neutrals so a
+   * diagram reads as part of the page in either theme. `base` + variables is the
+   * only mermaid theme that takes a full override.
+   */
+  const PALETTE = {
+    dark: {
+      background: 'transparent',
+      primaryColor: '#16222c',
+      primaryTextColor: '#e7eaef',
+      primaryBorderColor: '#3c4c59',
+      secondaryColor: '#1d2c37',
+      tertiaryColor: '#111b22',
+      lineColor: '#7d8996',
+      textColor: '#c3c7d1',
+      clusterBkg: '#0f1920',
+      clusterBorder: '#2a3742',
+      edgeLabelBackground: '#0b1319',
+      nodeBorder: '#3c4c59',
+    },
+    light: {
+      background: 'transparent',
+      primaryColor: '#f3f6f8',
+      primaryTextColor: '#16202a',
+      primaryBorderColor: '#c2ccd6',
+      secondaryColor: '#e9eef2',
+      tertiaryColor: '#fbfcfd',
+      lineColor: '#78848f',
+      textColor: '#3c4650',
+      clusterBkg: '#f7f9fa',
+      clusterBorder: '#dde3e9',
+      edgeLabelBackground: '#ffffff',
+      nodeBorder: '#c2ccd6',
+    },
+  };
+
+  async function render() {
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>('pre.mermaid'));
+    if (nodes.length === 0) return;
+
+    const { default: mermaid } = await import('mermaid');
+
+    for (const node of nodes) {
+      if (!SOURCE.has(node)) SOURCE.set(node, node.textContent ?? '');
+      node.textContent = SOURCE.get(node)!;
+      node.removeAttribute('data-processed');
+    }
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'base',
+      securityLevel: 'strict',
+      fontFamily: 'var(--sl-font)',
+      themeVariables: { fontSize: '15px', ...(isDark() ? PALETTE.dark : PALETTE.light) },
+      // Wide maps stay readable and scroll inside their <pre> rather than being
+      // shrunk to an illegible thumbnail.
+      flowchart: { curve: 'basis', useMaxWidth: false },
+      sequence: { useMaxWidth: false },
+    });
+
+    try {
+      await mermaid.run({ nodes });
+    } catch (error) {
+      // A malformed diagram must never take the page down with it.
+      console.error('[mermaid] could not render a diagram', error);
+    }
+  }
+
+  function watchTheme() {
+    let dark = isDark();
+    new MutationObserver(() => {
+      if (isDark() === dark) return;
+      dark = isDark();
+      void render();
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+
+  void render();
+  watchTheme();
+  document.addEventListener('astro:after-swap', () => void render());
+</script>

@@ -2,6 +2,19 @@
 
 The TigerSystem ecosystem, one page per product.
 
+**These are the official products** — designed and published by TigerSystem.
+"Official" here means *we made it*, not *you need it*: every one of them is
+open source and forkable, and their names (Tiger Studio, TigerHub, TigerScale,
+TigerPOD, Tiger NFC Connect) are deliberately **not claimed as trademarks**.
+Only the **TigerTag** mark itself is reserved, and only for the chip.
+
+Anyone may build and sell an alternative — a reader, an app, a scale, a whole
+inventory system. See [third-party hardware](../compatibility/third-party-hardware.md)
+and [software built on TigerTag](../developers/integrations.md) for what
+already exists. A third-party product is **TigerTag Compatible** by simply
+working; it becomes **TigerTag Certified** only when TigerSystem grants it
+([trademark policy](../../TRADEMARK.md)).
+
 > **Note:** every **user-facing** product below — and every future one — is a
 > working **proof of concept**. Their only goal is to show the potential of an
 > open-source, standard, agnostic, cross-platform protocol, and to inspire
@@ -13,7 +26,7 @@ The TigerSystem ecosystem, one page per product.
 |---|---|---|
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | The virtual chip — the identity in digital form, no chip needed, upgradeable anytime | Concept |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Open RFID/NFC chip + standard for spool identity | Hardware + spec |
-| <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | A TigerTag backed up in your account — factory-state restore on the original chip | Hardware + service |
+| <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | A TigerTag carrying a catalogue product ID and optional enrichment — still 100% offline; signed, it is TigerTag+ Certified | Hardware + spec |
 | <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | Mobile app (iOS/Android) — scan, encode, browse | App |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | Desktop app — inventory, racks, sensors, printers | App |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |

@@ -129,7 +129,7 @@ the TigerTag user; every other vision is accepted and encouraged.
 | <img src="docs/assets/icons/tigerdata.svg" width="20" alt="" /> **[TigerData](docs/concepts/universal-filament-identity.md)** | The virtual chip — the same identity with no chip at all, upgradeable to a real one anytime |
 | <img src="docs/assets/icons/tigerdata.svg" width="20" alt="" /> **[TigerData+](docs/concepts/universal-filament-identity.md)** | The virtual chip that knows exactly which product it is — picked from the official catalogue, nothing typed by hand |
 | <img src="docs/assets/icons/tigertag.svg" width="20" alt="" /> **[TigerTag](docs/products/tigertag.md)** | The chip — gives any spool a memory of its own |
-| <img src="docs/assets/icons/tigertag-plus.svg" width="20" alt="" /> **[TigerTag+](docs/products/tigertag-plus.md)** | The chip your account backs up — restorable to factory state anytime |
+| <img src="docs/assets/icons/tigertag-plus.svg" width="20" alt="" /> **[TigerTag+](docs/products/tigertag-plus.md)** | The chip that knows exactly which catalogue product it is — still 100 % offline; signed by a certified maker, it is a TigerTag+ Certified |
 | <img src="docs/assets/icons/connect.svg" width="20" alt="" /> **[Tiger NFC Connect](docs/products/tigertag-connect.md)** | The phone app — tap to read, tap to write |
 | <img src="docs/assets/icons/studio.svg" width="20" alt="" /> **[Tiger Studio](docs/products/tiger-studio.md)** | Mission control on desktop — inventory, racks, printers, sensors |
 | <img src="docs/assets/icons/tigerhub.svg" width="20" alt="" /> **[TigerHub](docs/products/tigerhub.md)** | The ecosystem's web home — showcase, wishlists, friend invites, sharing |

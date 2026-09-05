@@ -46,12 +46,25 @@ Yes — chips are rewritable, which is the point of the
 spool and re-encode its chip.
 
 **What is TigerTag+?**
-A TigerTag your account has backed up. Scan the chip in Tiger Studio with a
-TigerPOD/ACR122U reader (mobile support coming) and its exact content —
-factory authentication included — is saved, keyed to that chip's physical
-UID. If the chip is ever rewritten or corrupted, you can reprogram it back to
-its factory state — **on the original chip only** (the UID must match the
-backup). See [TigerTag+](../products/tigertag-plus.md).
+A TigerTag that knows exactly *which product* it is. Instead of values someone
+typed, it carries a **product ID from the official catalogue** — brand, colour,
+material, temperatures, diameter, SKU, EAN — plus optional enrichment metadata
+that can improve after the chip is written. The chip stays **100 % offline**:
+everything needed to print is still on it. The `+` means *identified*, not
+*certified*.
+
+**And TigerTag+ Certified?**
+A TigerTag+ that also carries a cryptographic **signature**, written by a
+manufacturer who holds the certification and its signing tools. Anyone can
+**verify** a signature — free, offline, on their own phone — but only a
+certified manufacturer can **issue** one, so a cloned tag fails the check. See
+[TigerTag+](../products/tigertag-plus.md).
+
+**Can I back up a chip in my account?**
+Yes, and it is a separate feature from the `+`. Tiger Studio can save a chip's
+exact content, keyed to its physical UID, and reprogram it back later — useful
+if a chip is rewritten or corrupted, and valid **on the original chip only**.
+Having a backup does not make a chip a TigerTag+.
 
 **Where do I buy chips?**
 Two equally valid answers. Official TigerTag-branded chips are at
@@ -60,6 +73,23 @@ Two equally valid answers. Official TigerTag-branded chips are at
 them helps support the R&D. But **any cheap, blank NTAG chip** from Amazon,
 AliExpress or your local shop works identically, and that's deliberate:
 nothing is blocked, the protocol is the point.
+
+**Do the chips I buy arrive with data on them?**
+No — **chips sold on their own ship blank**, whether they carry the TigerTag
+logo or not. You write the filament's identity yourself, in
+[Tiger NFC Connect](../products/tigertag-connect.md) or
+[Tiger Studio](../products/tiger-studio.md); that takes about a minute the
+first time. The chips that arrive **already encoded** are the ones integrated
+at the factory, inside filament from the partner brands. Buying a chip and
+buying tagged filament are two different things.
+
+**Which shape should I buy — sticker or refill carrier?**
+Two form factors, for two situations. The **individual sticker** goes on any
+spool you already own. The **refill version** is built for spool-less
+[refills](../philosophy/second-life.md): it glues inside the **cardboard
+core** before you mount the refill on a reusable masterspool, so the chip
+travels with the filament rather than with the reel — the same place the
+factory puts it.
 
 **Which blank chip should I buy exactly?**
 **NTAG213, 215 or 216 — round, 25 mm** is the recommendation. The protocol is
@@ -349,12 +379,29 @@ printer manufacturers to read TigerTag natively. Read
 reach out at **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
 
 **Can my product become "TigerTag Certified"?**
-Yes — **TigerTag Certified** is the certification mark, working as a
-**quality label**, for three cases: third-party products that read and/or
-write TigerTags (a printer, a dryer, a reader…); filament manufacturers that
-ship TigerTags in their products; and third-party **apps** (mobile or
-desktop) — certification guarantees the protocol is perfectly integrated in
-that third-party ecosystem. Reach out through the
+It depends which side of one line it sits on — and most products are on the
+free side.
+
+If your product **talks to** TigerTag chips — a reader, an app, a printer, a
+slicer, a dryer, a tool — it is **TigerTag Compatible**. That tier is free,
+self-declared and needs no audit and no permission: build it, say *"compatible
+with TigerTag"* (or *"with TigerTag+"* if you verify signatures), and show the
+logo in your interface, your documentation and your store listing. Most
+third-party products belong here, and nothing about the protocol is withheld
+from them.
+
+**TigerTag Certified** is the other tier, and it is open to **anything a third
+party builds** — a device, an application, filament, an inlay, a carrier — that
+**passes an audit** against the requirements. It is granted, not claimed:
+written authorization, a listing in the certified registry, and the right to
+put the mark **on the product, the chip and the packaging**. It comes in two
+scopes, **TigerTag Certified** and **TigerTag+ Certified**, the second covering
+products whose handling of signed tags has been verified.
+
+The difference between the tiers is not what your product *is* — it is whether
+anyone checked. Compatible says *"it works"*, on your word. Certified says
+*"we tested it"*, on ours, and it can be withdrawn. Full criteria:
+[CERTIFICATION.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). Reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).
 
 **We're a printer maker — can our firmware read TigerTag?**

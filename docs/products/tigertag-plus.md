@@ -2,56 +2,92 @@
 
 ## Purpose
 
-**TigerTag+ is a TigerTag your account remembers.** Scan a chip in
-[Tiger Studio](./tiger-studio.md) with a [TigerPOD](./tigerpod.md) /
-ACR122U reader and its exact content is **backed up in the cloud, keyed by
-the chip's physical UID** — a chip with a backup *is* a TigerTag+. (The same
-technology is coming to the mobile app soon.)
+**The `+` means identified.** A TigerTag+ is a TigerTag whose identity carries a
+**product ID from the official catalogue** — not values someone typed, but the
+exact product: brand, colour, material, temperatures, diameter, SKU, EAN,
+straight from the source. On top of that it can carry **optional enrichment
+metadata**, held cloud-side and improvable after the chip is written.
 
-Like everything in the ecosystem, it is also a **sandbox concept**: a working
-proof that a factory-encoded chip can be backed up and later **reprogrammed
-back to its exact factory state — factory authentication included** — as long
-as the data is written back into the **original chip, the one whose UID
-matches the backup**.
+The chip itself stays **100 % offline**. Everything needed to print is on it,
+exactly as on a standard TigerTag — the catalogue ID adds the ability to look
+up richer, fresher data *when you happen to be online*, and takes nothing away
+when you are not. A TigerTag+ read in airplane mode behaves like any other
+TigerTag.
+
+This is the same `+` as in [TigerData+](../concepts/universal-filament-identity.md):
+in both cases it means *this identity is a real catalogue product*, and in
+neither case does it mean *certified*.
 
 > **Naming note:** formerly sold as **"TigerTag Pro"** — the name is now
 > **TigerTag+**.
+
+## TigerTag+ Certified — the signed variant
+
+A TigerTag+ that additionally carries a **cryptographic signature** is a
+**TigerTag+ Certified**. The signature is written by a manufacturer holding
+[TigerTag+ certification](../developers/README.md), who is given the signing
+tools as part of it; TigerTag holds the private key.
+
+| | TigerTag | TigerTag+ | TigerTag+ Certified |
+|---|---|---|---|
+| Print data, **on the chip** | yes | yes | yes |
+| Works fully offline | yes | yes | yes |
+| Catalogue product ID, **on the chip** | — | **yes** | yes |
+| Enrichment metadata, **cloud-side, optional** | — | **yes** | yes |
+| Origin signature, **on the chip** | — | — | **yes** |
+| Who can produce one | anyone | anyone writing a catalogue product | **a certified manufacturer only** |
+
+Read the left column carefully: the enrichment metadata is the one row that
+does **not** live on the chip. It is looked up from the catalogue when you
+happen to be online, and it can improve after the chip is written — which is
+precisely why it can never be something the chip needs. Everything the printer
+requires is in the rows marked *on the chip*, which is what keeps all three
+tiers 100 % offline.
+
+**Verifying** a signature is free, offline and unrestricted — the public keys
+are published, and any reader can check one without an account or a network.
+**Issuing** one is what certification grants. A cloned tag fails verification,
+on the customer's own phone.
+
+The byte-level layout — chip type ids, the 64-byte signature area at pages
+`0x18`–`0x27` — is specified in
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide).
 
 ## Where it sits
 
 ```mermaid
 flowchart LR
-  TAGP["TigerTag chip"] -- "scan (Tiger Studio + POD)" --> ST["Tiger Studio"]
-  ST -- "backup keyed by chip UID" --> FB[("Your TigerSystem account")]
-  FB -- "restore — same UID only" --> ST -- "rewrite to factory state" --> TAGP
+  CAT[("Official catalogue")] -- "product id + metadata" --> TTP["TigerTag+"]
+  TTP -- "signed by a certified manufacturer" --> CERT["TigerTag+ Certified"]
+  CERT -- "verify offline, public key" --> ANY["Any reader, any phone"]
+  TTP -- "read offline" --> ANY
 ```
 
-## What the backup gives you
+## Backing up a chip — a separate feature
 
-- **Factory-state restore**: if the chip's content is accidentally rewritten
- or corrupted, reprogram it back exactly as the factory encoded it —
- **without losing the factory authentication**.
-- **Same chip only**: the restore is valid only on the original chip; the
- backup is bound to its physical UID. It is a safeguard for *that* chip, not
- a way to clone it.
+Tiger Studio can **back up a chip's exact content** in your account, keyed to
+its physical UID, and later reprogram it back to that state. This is useful and
+unrelated to the `+`: it applies to any chip you can scan, and having a backup
+does not make a chip a TigerTag+.
+
+- **Factory-state restore**: if a chip is accidentally rewritten or corrupted,
+ put it back exactly as it was — signature included, if it had one.
+- **Same chip only**: the restore is valid on the original chip, because the
+ backup is bound to its UID. A safeguard for *that* chip, never a way to clone.
 - **Proof of possession**: a scan matching the backup shows the original chip
  is physically in your hands.
-- **Signatures no clone can fake**: TigerTag+ signatures are issued under a
- **private key held by TigerTag** — only certified partners can issue them.
- A cloned tag fails verification, on the customer's own phone.
-- **Works offline too**: a TigerTag+ can be authenticated **locally, without
- any internet connection**.
 
-> **Note:** creating the backup currently requires **Tiger Studio + a
-> USB reader (TigerPOD / ACR122U)**; mobile support is planned.
+> **Note:** creating a backup currently requires **Tiger Studio + a USB reader
+> (TigerPOD / ACR122U)**; mobile support is planned.
 
 ## Interactions
 
 | With | How |
 |---|---|
-| Tiger Studio + TigerPOD/ACR122U | Scanning creates/refreshes the backup; guided restore |
-| Tiger NFC Connect | Coming soon |
-| Firebase (account database) | Stores per-account chip records (UID, first-seen, payload backup) |
+| Tiger Studio + TigerPOD/ACR122U | Reads and verifies signatures; creates and restores chip backups |
+| Tiger NFC Connect | Reads and verifies; backup support coming |
+| SDKs | `tigertag[verify]` checks a signature offline, in Python or JS |
+| Firebase (account database) | Holds the catalogue, the enrichment metadata, and per-account chip backups |
 
 ## Links
 
@@ -61,4 +97,4 @@ flowchart LR
 
 **◀ Previous:** [TigerTag](./tigertag.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Tiger NFC Connect](./tigertag-connect.md)
 
-**Related:** [The TigerTag chip](../concepts/tigertag-chip.md), [Second Life](../philosophy/second-life.md)
+**Related:** [Universal filament identity](../concepts/universal-filament-identity.md), [The TigerTag chip](../concepts/tigertag-chip.md), [Developer documentation](../developers/README.md)
