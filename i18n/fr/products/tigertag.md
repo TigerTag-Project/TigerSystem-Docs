@@ -1,5 +1,5 @@
 ---
-sourceHash: 517f902e8e9843c532564cab6bd635eb1e0ef1e0a124f447f6b71b9da5b7579a
+sourceHash: cddb559c5d66b96ed84af12c30e712447d59a576b87267f8e74afb3188929d43
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -78,7 +78,7 @@ Elles existent en deux formats, et les deux sont livrées **vierges** :
 | Format | Pour |
 |---|---|
 | **Sticker** | une bobine que vous possédez déjà — une sur chaque face ([pourquoi deux](../concepts/tigertag-chip.md)) |
-| **Carrier refill** | les [refills](../philosophy/second-life.md) sans bobine : collé à l'intérieur du carton central avant montage sur une masterspool réutilisable, la puce voyage donc avec le filament et non avec la bobine |
+| **Support refill** | les [recharges](../philosophy/second-life.md) de filament à noyau carton : un support porte déjà **les deux puces**, il se place à l'intérieur du noyau avant le montage sur une masterspool réutilisable, la puce voyage donc avec le filament et non avec la bobine |
 
 Qui a le droit de dire quoi, lorsqu'une puce est mise en vente :
 
@@ -111,6 +111,23 @@ La liberté vaut dans les deux sens : **les puces ne sont jamais verrouillées e
 de filament livrent leurs bobines — si vous préférez un autre protocole
 NFC/RFID (propre ou existant), vous pouvez réécrire la puce et y migrer ses
 données. Votre bobine, votre puce, votre format.
+
+## Où les acheter
+
+Les deux formats sont vendus **vierges**, par TigerSystem et par ses
+revendeurs :
+
+| | **Autocollant** | **Support refill** |
+|---|---|---|
+| Ce que vous recevez | des pastilles adhésives rondes de 25 mm — **deux par bobine**, une sur chaque face | un support = **deux puces déjà appairées**, une par extrémité repliée, pour le noyau carton |
+| Pour | toute bobine à flasques | les recharges de filament montées sur masterspool |
+| Boutique officielle | [tigertag.io](https://shop.tigertag.io/collections/tigertag-rfid-maker) | [tigertag.io](https://shop.tigertag.io/collections/tigertag-rfid-maker) |
+| Revendeur (FR) | [TigerTag Officiel, Atome3D](https://www.atome3d.com/products/tigertag) | [TigerTag Refill Officiel, Atome3D](https://www.atome3d.com/products/tigertag-pro-for-refill-1000-pcs) |
+
+Les deux existent en plusieurs conditionnements, jusqu'aux quantités
+professionnelles. Et rien de tout cela n'est obligatoire : **n'importe quelle
+puce NTAG vierge achetée n'importe où fonctionne à l'identique** — acheter des
+puces officielles finance le protocole, rien de plus.
 
 ## Liens
 

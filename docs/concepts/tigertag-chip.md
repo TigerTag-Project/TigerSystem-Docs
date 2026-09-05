@@ -63,14 +63,31 @@ A few implementation details:
  **3M adhesive (468MP / 200MP)** — the operator peels and sticks, nothing
  else changes on the line. The carrier design is **public and printable at
  home**, and the same form is sold on its own for
- [refills](../philosophy/second-life.md): glue it inside the cardboard core
- before mounting the refill on a reusable masterspool, and the chip travels
- with the filament instead of with the reel.
+ [refills](../philosophy/second-life.md), so the chip travels with the
+ filament instead of with the reel.
 
 <img src="../assets/carrier-bare.png" width="440" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" />
 
 *The carrier, bare: the two independent antennas are plainly visible — one
 per folded end, each with its own UID.*
+
+### The refill carrier, in practice
+
+Two details that surprise people:
+
+- **Gluing it is optional.** The 3M adhesive is there to hold the carrier
+ while you handle and store the refill. Once the refill is mounted on the
+ masterspool, the carrier is **wedged between the masterspool and the
+ cardboard core** and cannot move — the glue has nothing left to do.
+- **It comes back out, and it is reusable.** When the refill is finished,
+ recover the carrier with its two chips, erase them from
+ [Tiger NFC Connect](../products/tigertag-connect.md) or
+ [Tiger Studio](../products/tiger-studio.md), and use it again — on another
+ spool, or for any other NDEF project. Filament sold with a TigerTag Refill
+ leaves you the carrier, not waste
+ ([second life](../philosophy/second-life.md)).
+
+Where to get one: see [buying the chips](../products/tigertag.md).
 
 ## Encoded at the factory, or blank in your hand
 

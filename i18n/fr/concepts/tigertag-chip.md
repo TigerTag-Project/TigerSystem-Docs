@@ -1,5 +1,5 @@
 ---
-sourceHash: f7cffb615051d1852b4578fe4535d55d7a93481eaf870b03e31b560aa4e3262e
+sourceHash: f1cccdd7b6054afec64688c411c996df5c7aee97def95479a4be1151c62e4029
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -73,14 +73,32 @@ Quelques détails de mise en œuvre :
  (468MP / 200MP)** — l'opérateur décolle et colle, rien d'autre ne change sur
  la ligne. Le dessin du support est **public et imprimable chez soi**, et la
  même forme est vendue seule pour les
- [recharges](../philosophy/second-life.md) : collez-la à l'intérieur du
- mandrin en carton avant de monter la recharge sur une masterspool
- réutilisable, et la puce voyage avec le filament plutôt qu'avec la bobine.
+ [recharges](../philosophy/second-life.md), de sorte que la puce voyage avec
+ le filament plutôt qu'avec la bobine.
 
 <img src="../assets/carrier-bare.png" width="440" alt="Le support TigerTag nu — deux antennes NFC indépendantes, une à chaque extrémité" />
 
 *Le support, nu : les deux antennes indépendantes sont bien visibles — une par
 extrémité repliée, chacune avec son propre UID.*
+
+### Le support refill, en pratique
+
+Deux détails qui surprennent :
+
+- **Le collage est facultatif.** L'adhésif 3M est là pour tenir le support
+ pendant que vous manipulez et stockez la recharge. Une fois la recharge
+ montée sur la masterspool, le support est **coincé entre la masterspool et
+ le noyau en carton** et ne peut plus bouger — la colle n'a plus rien à
+ faire.
+- **Il ressort, et il se réutilise.** Quand la recharge est terminée,
+ récupérez le support avec ses deux puces, effacez-les depuis
+ [Tiger NFC Connect](../products/tigertag-connect.md) ou
+ [Tiger Studio](../products/tiger-studio.md), et resservez-vous-en — sur une
+ autre bobine, ou pour tout autre projet NDEF. Un filament vendu avec un
+ TigerTag Refill vous laisse le support, pas un déchet
+ ([seconde vie](../philosophy/second-life.md)).
+
+Où s'en procurer : voir [acheter les puces](../products/tigertag.md).
 
 ## Encodée à l'usine, ou vierge entre vos mains
 

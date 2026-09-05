@@ -68,7 +68,7 @@ them. They come in two form factors, and both ship **blank**:
 | Form factor | For |
 |---|---|
 | **Sticker** | any spool you already own — one on each side ([why two](../concepts/tigertag-chip.md)) |
-| **Refill carrier** | spool-less [refills](../philosophy/second-life.md): glued inside the cardboard core before the refill goes on a reusable masterspool, so the chip travels with the filament, not the reel |
+| **Refill carrier** | filament [refills](../philosophy/second-life.md) with a cardboard core: one carrier already carries **both chips**, it sits inside the core before the refill goes on a reusable masterspool, so the chip travels with the filament, not the reel |
 
 Who may say what, when a chip is for sale:
 
@@ -98,6 +98,22 @@ The freedom runs both ways: **chips are never write-locked**. TigerTag is
 simply the base protocol filament factories ship spools with — if you prefer
 another NFC/RFID protocol (custom or existing), you can rewrite the chip and
 migrate its data to it. Your spool, your chip, your format.
+
+## Where to buy them
+
+Both form factors ship **blank**, and both are sold by TigerSystem and by its
+resellers:
+
+| | **Sticker** | **Refill carrier** |
+|---|---|---|
+| What you get | round 25 mm adhesive chips — **two per spool**, one on each side | one carrier = **two chips already paired**, one per folded end, for the cardboard core |
+| For | any spool with flanges | filament refills mounted on a masterspool |
+| Official shop | [tigertag.io](https://shop.tigertag.io/collections/tigertag-rfid-maker) | [tigertag.io](https://shop.tigertag.io/collections/tigertag-rfid-maker) |
+| Reseller (FR) | [TigerTag Officiel, Atome3D](https://www.atome3d.com/products/tigertag) | [TigerTag Refill Officiel, Atome3D](https://www.atome3d.com/products/tigertag-pro-for-refill-1000-pcs) |
+
+Both come in several pack sizes, up to professional quantities. And none of it
+is required: **any blank NTAG chip bought anywhere works identically** — buying
+official ones funds the protocol, nothing more.
 
 ## Links
 
