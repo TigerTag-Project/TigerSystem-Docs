@@ -8,6 +8,9 @@ Task-oriented how-to guides (shorter and more targeted than
 - **[Buying pitfalls](./buying-pitfalls.md)** — the handful of wrong purchases
   that only reveal themselves after delivery: chips, readers, PN532 modules,
   the TigerScale screen, screws, filament for printed parts.
+- **[Troubleshooting: symptom → cause](./troubleshooting.md)** — chip reading,
+  writing and verification problems, most frequent first, collected from real
+  cases.
 
 > **TODO:** more guides planned:
 >
