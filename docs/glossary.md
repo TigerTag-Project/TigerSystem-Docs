@@ -15,7 +15,8 @@ owns the full story.
 |---|---|
 | **TigerSystem** | The whole open ecosystem: the chip format, the reference data, the apps, the hardware and the cloud surface. See [Why TigerSystem exists](./vision/why-tigersystem.md). |
 | **TigerTag** | A standard NTAG NFC chip carrying the open 144-byte TigerTag payload — a spool's identity, readable by anything. See [TigerTag](./products/tigertag.md). |
-| **TigerTag+** | A TigerTag whose exact content, factory authentication included, is backed up in your account and keyed to that chip's UID — restorable on the original chip only. See [TigerTag+](./products/tigertag-plus.md). |
+| **TigerTag+** | A TigerTag whose identity carries a **product ID from the official catalogue**, plus optional cloud-side enrichment metadata. The chip stays 100% offline-readable. The `+` means *identified*, not *certified*. See [TigerTag+](./products/tigertag-plus.md). |
+| **TigerTag+ Certified** | A TigerTag+ that also carries a cryptographic **signature**, written by a manufacturer holding the certification and its signing tools. Verifying one is free and offline; issuing one is what certification grants. |
 | **TigerData** | The same identity with no chip at all: the protocol's data in purely digital form, no UID, promotable to a real chip at any time. See [One identity, three states](./concepts/universal-filament-identity.md). |
 | **TigerData+** | A chipless spool that carries a real product from the official catalogue — exact brand, colour, material, temperatures, diameter, SKU and EAN — rather than hand-typed values. The `+` means *identified*, not *certified*. |
 | **Official** | Made by TigerSystem itself — the chips in both form factors, and the apps and hardware in [Products](./products/README.md). A statement of origin, not a mark that is granted: TigerSystem does not certify itself. |
@@ -47,7 +48,7 @@ owns the full story.
 | **RFID** | Radio-Frequency Identification, the broader family NFC belongs to. Used here for the vendors' own locked spool tags as well as for TigerTag. |
 | **NTAG213 / 215 / 216** | The NXP chip family a TigerTag uses (NFC Forum Type 2). The payload is sized to fit the smallest, NTAG213; official branded chips are NTAG215 to leave memory headroom for reuse. See [The TigerTag chip](./concepts/tigertag-chip.md). |
 | **NDEF** | NFC Data Exchange Format — the standard container the TigerTag payload is stored in, which is why any NFC tool can read it, and why an empty spool's chip can be turned into a plain NFC object. |
-| **UID** | The chip's unique hardware identifier, set at manufacture and not rewritable. A TigerTag+ backup is bound to it. |
+| **UID** | The chip's unique hardware identifier, set at manufacture and not rewritable. A chip backup is bound to it, and so is a TigerTag+ Certified signature. |
 | **Mifare Classic / Mifare Ultralight** | The chip families printer vendors use for their own spool tags — documented per vendor in the [compatibility matrix](./compatibility/README.md). |
 | **ACR122U** | The commodity USB NFC reader class used to read and write chips from a computer; a [TigerPOD](./products/tigerpod.md) is a stand built around one. |
 | **PN532 / RC522** | Cheap NFC reader modules, typically paired with an ESP32, for DIY readers — the approach [TigerScale](./products/tigerscale.md) uses. |

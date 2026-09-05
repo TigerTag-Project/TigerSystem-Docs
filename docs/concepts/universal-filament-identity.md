@@ -38,9 +38,9 @@ flowchart LR
   TD["TigerData<br/>the protocol's data in digital form<br/>(no chip, no UID — lives anywhere)"]
   TDP["TigerData+<br/>digital, and tied to a real catalogue product<br/>(still no chip, but nothing typed by hand)"]
   TT["TigerTag<br/>the data written into an NFC chip<br/>(a physical UID is now associated)"]
-  TTP["TigerTag+<br/>the chip backed up in your account<br/>(factory state restorable, origin provable)"]
+  TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
-  TD -- "write to a chip" --> TT -- "scan with Studio + POD" --> TTP
+  TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
   TDP -- "write to a chip" --> TT
 ```
 
@@ -63,8 +63,11 @@ flowchart LR
  >[Firestore data structure](https://github.com/TigerTag-Project/TigerTag_Firebase_Backend#-firestore-data-structure).
 - The moment that data is **written into an NFC chip**, it becomes a
  **TigerTag**: a physical **UID is finally associated** with the identity.
-- Back that chip up in your account and it's a
- [**TigerTag+**](../products/tigertag-plus.md).
+- Write a **catalogue product** into that chip rather than hand-typed values
+ and it is a [**TigerTag+**](../products/tigertag-plus.md) — same `+` as
+ TigerData+, same meaning: *identified*. Signed by a certified manufacturer,
+ it becomes a **TigerTag+ Certified**. Either way the chip stays 100 %
+ offline-readable.
 
 A TigerData can stay digital forever, or be **promoted to a real chip
 atomically** whenever you're ready (Tiger Studio does this in one step). And

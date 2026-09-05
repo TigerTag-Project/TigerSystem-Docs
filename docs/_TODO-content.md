@@ -7,6 +7,17 @@
 
 ## Fixed on this branch
 
+- **TigerTag+ was defined three different ways.** Settled: the `+` means the
+  identity carries a **product ID from the official catalogue** plus optional
+  enrichment metadata, and the chip stays 100% offline. A `+` that also carries
+  a **signature**, written by a manufacturer holding the certification and its
+  signing tools, is a **TigerTag+ Certified**. The account backup is a separate
+  Tiger Studio feature and never defined the `+`. The repository already
+  contained the rule — `universal-filament-identity.md` says *"the `+` means
+  identified, not certified"* — and only `tigertag-plus.md` disagreed.
+  Propagated to the root README, the products index, the glossary, the FAQ, the
+  four-states page and the French mirrors.
+
 - **Reserved area was documented as 32 bytes; it is 64.** Pages `0x18`–`0x1F`
   hold 32 bytes of *Signature R* and `0x20`–`0x27` 32 bytes of *Signature S*,
   which is also 16 NTAG pages × 4 bytes, leaving 80 bytes of data out of the
@@ -48,7 +59,8 @@ understatement in four places. All corrected:
 | `README.md`, [`faq/README.md`](./faq/README.md), [`products/tigertag-connect.md`](./products/tigertag-connect.md), [`tutorials/first-smart-spool.md`](./tutorials/first-smart-spool.md), `llms.txt` | The Tiger NFC Connect download link is **`tigersystem.io/fr/download`** — an English-language page sending readers to a French URL, in five places. | Use a locale-neutral URL, or `…/en/download`. |
 | [`compatibility/third-party-hardware.md`](./compatibility/third-party-hardware.md) line 15 | Links to `../../docs/faq/README.md` — it climbs out of `docs/` and back in. It resolves, but every other page writes `../faq/README.md`. | Normalise the path. |
 | [`products/tigertag-connect.md`](./products/tigertag-connect.md) | The product is now **Tiger NFC Connect**, but the file is still `tigertag-connect.md`, so its URL reads `/products/tigertag-connect/`. | Renaming is a breaking change for existing links — decide deliberately, and add a redirect in `astro.config.mjs` if it happens. |
-| [`products/tigertag-plus.md`](./products/tigertag-plus.md) | **The two repositories define TigerTag+ differently, and only one can be canonical.** This page says a TigerTag+ is a chip **the owner backed up** in their account — "a chip with a backup *is* a TigerTag+". The [RFID guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) defines it as a distinct chip type id (`0xBC0FCB97`) carrying an **ECDSA-P256 signature and a cloud product id**, written by **partner brands only**. Under the guide's model, backing up a standard TigerTag (`0x5BF59264`) does not change what the chip is. | Not a wording fix — a product decision. Decide which definition is canonical, then align the other repository. |
+| [`developers/ttag-format.md`](./developers/ttag-format.md) | Uses **"TigerTag+"** where the ruling now says **"TigerTag+ Certified"** — it ties `rfidBackup` / `rfidBackups` and the signed factory dump to "TigerTag+ (certified)" spools. The meaning is right, the term is now one word short. **Not changed here**, because this page describes what Tiger Studio actually writes: whoever owns the format should confirm whether the software distinguishes a signed `+` from an unsigned one before the wording moves. | Needs the format owner, not an editor. |
+| ~~[`products/tigertag-plus.md`](./products/tigertag-plus.md)~~ — **settled** | ~~**The two repositories define TigerTag+ differently, and only one can be canonical.**~~ This page says a TigerTag+ is a chip **the owner backed up** in their account — "a chip with a backup *is* a TigerTag+". The [RFID guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) defines it as a distinct chip type id (`0xBC0FCB97`) carrying an **ECDSA-P256 signature and a cloud product id**, written by **partner brands only**. Under the guide's model, backing up a standard TigerTag (`0x5BF59264`) does not change what the chip is. | Not a wording fix — a product decision. Decide which definition is canonical, then align the other repository. |
 | [`concepts/universal-filament-identity.md`](./concepts/universal-filament-identity.md) and the RFID guide | **Two different state models.** This repo describes four states (TigerData → TigerData+ → TigerTag → TigerTag+). The guide knows three chip type ids — TigerTag, TigerTag+ and **TigerTag Init** (`0x6C41A2E1`, the factory blank marker) — and never mentions TigerData at all. Neither is wrong: one describes the record's lifecycle, the other what is written on silicon. But nothing says so, so readers reconcile them by guessing. | Say explicitly that the four states are states of the *identity* and the type ids are states of the *chip*, and document TigerTag Init somewhere. |
 | [`compatibility/README.md`](./compatibility/README.md) and [`compatibility/klipper.md`](./compatibility/klipper.md) | The matrix lists Snapmaker as **Live — Moonraker WebSocket** and Klipper as **not yet**. Readers infer transitively that any Moonraker machine works. At least one person has written a public page based on that inference. | One sentence saying the Snapmaker link happens to use Moonraker but generic Klipper machines are not supported. |
 

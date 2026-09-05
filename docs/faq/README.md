@@ -46,12 +46,25 @@ Yes — chips are rewritable, which is the point of the
 spool and re-encode its chip.
 
 **What is TigerTag+?**
-A TigerTag your account has backed up. Scan the chip in Tiger Studio with a
-TigerPOD/ACR122U reader (mobile support coming) and its exact content —
-factory authentication included — is saved, keyed to that chip's physical
-UID. If the chip is ever rewritten or corrupted, you can reprogram it back to
-its factory state — **on the original chip only** (the UID must match the
-backup). See [TigerTag+](../products/tigertag-plus.md).
+A TigerTag that knows exactly *which product* it is. Instead of values someone
+typed, it carries a **product ID from the official catalogue** — brand, colour,
+material, temperatures, diameter, SKU, EAN — plus optional enrichment metadata
+that can improve after the chip is written. The chip stays **100 % offline**:
+everything needed to print is still on it. The `+` means *identified*, not
+*certified*.
+
+**And TigerTag+ Certified?**
+A TigerTag+ that also carries a cryptographic **signature**, written by a
+manufacturer who holds the certification and its signing tools. Anyone can
+**verify** a signature — free, offline, on their own phone — but only a
+certified manufacturer can **issue** one, so a cloned tag fails the check. See
+[TigerTag+](../products/tigertag-plus.md).
+
+**Can I back up a chip in my account?**
+Yes, and it is a separate feature from the `+`. Tiger Studio can save a chip's
+exact content, keyed to its physical UID, and reprogram it back later — useful
+if a chip is rewritten or corrupted, and valid **on the original chip only**.
+Having a backup does not make a chip a TigerTag+.
 
 **Where do I buy chips?**
 Two equally valid answers. Official TigerTag-branded chips are at

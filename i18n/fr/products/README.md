@@ -1,5 +1,5 @@
 ---
-sourceHash: 14ef670faa1b8f4c915fb09a0664c6c58e82521e5a45f5c45b311261bab7edcf
+sourceHash: 33e5e5bbf84e9ffe53054b55cd7418d3faa6e8a83ea2b0b80ee84cf0d17b16b3
 sourcePath: docs/products/README.md
 ---
 
@@ -34,7 +34,7 @@ accorde ([politique de marque](../../TRADEMARK.md)).
 |---|---|---|
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | La puce virtuelle — l'identité sous forme numérique, sans puce, évolutive à tout moment | Concept |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Puce RFID/NFC ouverte + standard d'identité de bobine | Matériel + spécification |
-| <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | Un TigerTag sauvegardé dans votre compte — restauration de l'état d'usine sur la puce d'origine | Matériel + service |
+| <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | Un TigerTag portant un identifiant produit du catalogue et un enrichissement optionnel — toujours 100% hors ligne ; signé, c'est un TigerTag+ Certified | Matériel + spécification |
 | <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | Application mobile (iOS/Android) — scanner, encoder, parcourir | Application |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | Application de bureau — inventaire, racks, capteurs, imprimantes | Application |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | La maison web de l'écosystème — vitrine, listes d'envies, amis et partage sur `tigersystem.io` | Web |
