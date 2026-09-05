@@ -1,0 +1,20 @@
+---
+/**
+ * Header brand: the tiger head mark plus the wordmark.
+ *
+ * The two mark files are the ones the press kit designates — `tiger-head.svg`
+ * is drawn in white for dark backgrounds, `tiger-head-contour.svg` in black for
+ * light ones — so the header follows the brand rather than recolouring a logo.
+ */
+const locale = Astro.currentLocale;
+const href = locale && locale !== 'en' ? `/${locale}/` : '/';
+---
+
+<a class="site-title" href={href}>
+  <img class="site-title__mark site-title__mark--light" src="/assets/logos/tiger-head-contour.svg" alt="" width="34" height="19" />
+  <img class="site-title__mark site-title__mark--dark" src="/assets/logos/tiger-head.svg" alt="" width="34" height="19" />
+  <span class="site-title__text">
+    <span class="site-title__name">TigerSystem</span>
+    <span class="site-title__kind">Wiki</span>
+  </span>
+</a>

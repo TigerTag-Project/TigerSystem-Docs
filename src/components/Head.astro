@@ -1,0 +1,63 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+---
+
+<Default><slot /></Default>
+
+<script>
+  /**
+   * Mermaid diagrams.
+   *
+   * `rehype-mermaid` leaves each diagram as <pre class="mermaid">source</pre>.
+   * Mermaid itself is a large dependency, so it is imported dynamically and only
+   * on pages that actually contain a diagram. The source is kept aside so the
+   * diagram can be redrawn when the reader flips the light/dark switch.
+   */
+  const SOURCE = new WeakMap<HTMLElement, string>();
+
+  function currentTheme(): 'dark' | 'default' {
+    return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default';
+  }
+
+  async function render() {
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>('pre.mermaid'));
+    if (nodes.length === 0) return;
+
+    const { default: mermaid } = await import('mermaid');
+
+    for (const node of nodes) {
+      if (!SOURCE.has(node)) SOURCE.set(node, node.textContent ?? '');
+      node.textContent = SOURCE.get(node)!;
+      node.removeAttribute('data-processed');
+    }
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: currentTheme(),
+      securityLevel: 'strict',
+      fontFamily: 'var(--sl-font)',
+      themeVariables: { fontSize: '15px' },
+      flowchart: { curve: 'basis', useMaxWidth: true },
+    });
+
+    try {
+      await mermaid.run({ nodes });
+    } catch (error) {
+      // A malformed diagram must never take the page down with it.
+      console.error('[mermaid] could not render a diagram', error);
+    }
+  }
+
+  function watchTheme() {
+    let theme = currentTheme();
+    new MutationObserver(() => {
+      if (currentTheme() === theme) return;
+      theme = currentTheme();
+      void render();
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+
+  void render();
+  watchTheme();
+  document.addEventListener('astro:after-swap', () => void render());
+</script>

@@ -1,0 +1,330 @@
+/*
+ * TigerSystem documentation — brand layer over Starlight.
+ *
+ * The palette is taken from the shipped brand assets, not invented:
+ *   #FF7A18  the orange every product icon in docs/assets/icons/ is drawn in
+ *   #000C0F  the near-black plate of docs/assets/logos/tigersystem-app-icon.svg
+ *   #D0D4DA  the neutral grey used in the same marks
+ *
+ * #FF7A18 on white is a 2.6:1 contrast — fine for a mark, not for text — so the
+ * light theme links use a darkened cousin and keep the brand orange for surfaces
+ * and accents. Starlight defines its dark palette on :root and overrides it
+ * under :root[data-theme='light'].
+ */
+
+:root {
+  --ts-orange: #ff7a18;
+  --ts-orange-soft: #ffa15c;
+  --ts-orange-deep: #a8480a;
+  --ts-ink: #000c0f;
+  --ts-steel: #d0d4da;
+
+  --sl-font:
+    'Inter var', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+
+  /* Dark theme (Starlight's default). */
+  --sl-color-accent-low: #43200a;
+  --sl-color-accent: #d85f0c;
+  --sl-color-accent-high: #ffbe8c;
+
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #eceef2;
+  --sl-color-gray-2: #c3c7d1;
+  --sl-color-gray-3: #8d93a1;
+  --sl-color-gray-4: #545c6b;
+  --sl-color-gray-5: #353c48;
+  --sl-color-gray-6: #232a34;
+  --sl-color-black: #0b1116;
+
+  --sl-color-bg: #060d11;
+  --sl-color-bg-nav: rgb(9 17 22 / 88%);
+  --sl-color-bg-sidebar: #080f14;
+  --sl-color-hairline-light: #202834;
+
+  --ts-card-bg: #0d151b;
+  --ts-card-bg-hover: #121d25;
+  --ts-card-border: #1e2831;
+  --ts-mermaid-bg: #0b1319;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #ffe6d2;
+  --sl-color-accent: var(--ts-orange-deep);
+  --sl-color-accent-high: #6b2d05;
+
+  --sl-color-white: #10181d;
+  --sl-color-gray-1: #1c252c;
+  --sl-color-gray-2: #3c4650;
+  --sl-color-gray-3: #626c78;
+  --sl-color-gray-4: #939ba6;
+  --sl-color-gray-5: #ccd2d9;
+  --sl-color-gray-6: #e8ebef;
+  --sl-color-gray-7: #f3f5f7;
+  --sl-color-black: #ffffff;
+
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: rgb(255 255 255 / 90%);
+  --sl-color-bg-sidebar: #fbfbfc;
+  --sl-color-hairline-light: #e3e7eb;
+
+  --ts-card-bg: #ffffff;
+  --ts-card-bg-hover: #fff7f1;
+  --ts-card-border: #e3e7eb;
+  --ts-mermaid-bg: #fbfbfc;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Header brand                                                                */
+/* -------------------------------------------------------------------------- */
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--sl-color-white);
+  text-decoration: none;
+  font-size: var(--sl-text-h4);
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.site-title__mark {
+  width: auto;
+  height: 1.55rem;
+  flex-shrink: 0;
+}
+
+:root .site-title__mark--light,
+:root[data-theme='light'] .site-title__mark--dark {
+  display: none;
+}
+
+:root[data-theme='light'] .site-title__mark--light {
+  display: block;
+}
+
+.site-title__text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.site-title__name {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.site-title__kind {
+  font-size: 0.68em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ts-orange);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Card grids on the section index pages                                       */
+/* -------------------------------------------------------------------------- */
+
+.ts-cardgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.ts-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--ts-card-border);
+  border-radius: 0.6rem;
+  background: var(--ts-card-bg);
+  color: var(--sl-color-gray-2);
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.ts-card:hover,
+.ts-card:focus-visible {
+  border-color: var(--ts-orange);
+  background: var(--ts-card-bg-hover);
+  transform: translateY(-1px);
+}
+
+.ts-card__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--ts-orange) 12%, transparent);
+}
+
+.ts-card__icon img {
+  width: 1.3rem;
+  height: 1.3rem;
+  object-fit: contain;
+}
+
+.ts-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.ts-card__title {
+  font-size: var(--sl-text-base);
+  font-weight: 600;
+  color: var(--sl-color-white);
+  line-height: 1.3;
+}
+
+.ts-card__badge {
+  align-self: flex-start;
+  margin: 0.15rem 0;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ts-orange) 14%, transparent);
+  color: var(--sl-color-accent-high);
+  font-size: var(--sl-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ts-card__text {
+  font-size: var(--sl-text-sm);
+  line-height: 1.5;
+  color: var(--sl-color-gray-3);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Home page                                                                   */
+/* -------------------------------------------------------------------------- */
+
+.ts-home-lead {
+  font-size: var(--sl-text-lg);
+  line-height: 1.6;
+  color: var(--sl-color-gray-2);
+}
+
+.ts-figure {
+  margin: 2rem 0;
+}
+
+.ts-figure img {
+  width: 100%;
+  border-radius: 0.7rem;
+  border: 1px solid var(--ts-card-border);
+}
+
+.ts-figure figcaption {
+  margin-top: 0.55rem;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Content polish                                                              */
+/* -------------------------------------------------------------------------- */
+
+.sl-markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+}
+
+/* The docs use inline <img> for small inline icons — those must not be boxed. */
+.sl-markdown-content td img[width],
+.sl-markdown-content th img[width],
+.sl-markdown-content p > a > img[height] {
+  border-radius: 0;
+  vertical-align: middle;
+}
+
+.sl-markdown-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.sl-markdown-content :is(h2, h3) {
+  scroll-margin-top: 5rem;
+}
+
+/* The "Related:" line each source page ends with, turned into a quiet footer. */
+.sl-markdown-content > p:last-child > strong:first-child:only-child {
+  color: var(--sl-color-gray-3);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mermaid                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.sl-markdown-content pre.mermaid {
+  display: block;
+  overflow-x: auto;
+  padding: 1.1rem;
+  border: 1px solid var(--ts-card-border);
+  border-radius: 0.6rem;
+  background: var(--ts-mermaid-bg);
+  text-align: center;
+  /* Before mermaid runs, the raw diagram source would otherwise flash. */
+  color: transparent;
+  min-height: 4rem;
+}
+
+.sl-markdown-content pre.mermaid[data-processed='true'] {
+  color: inherit;
+}
+
+.sl-markdown-content pre.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Machine-translation banner                                                  */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --sl-color-banner-bg: color-mix(in srgb, var(--ts-orange) 18%, var(--sl-color-bg));
+}
+
+.sl-banner {
+  font-size: var(--sl-text-sm);
+  border-bottom: 1px solid color-mix(in srgb, var(--ts-orange) 35%, transparent);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Comments                                                                    */
+/* -------------------------------------------------------------------------- */
+
+.ts-comments {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--sl-color-hairline-light);
+}
+
+.ts-comments h2 {
+  font-size: var(--sl-text-h4);
+  margin-bottom: 0.35rem;
+}
+
+.ts-comments__intro {
+  margin: 0 0 1.25rem;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+}

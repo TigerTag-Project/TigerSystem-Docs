@@ -1,0 +1,99 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+/**
+ * Giscus — comments backed by GitHub Discussions, no server of our own.
+ *
+ * It stays inert until the repository is configured, so the site builds and
+ * deploys before Discussions are switched on. To enable it:
+ *   1. GitHub → repository Settings → Features → tick "Discussions".
+ *   2. Create a Discussions category (giscus suggests an announcement-only one).
+ *   3. Install the giscus app on the repo, then read the category id from
+ *      https://giscus.app and set PUBLIC_GISCUS_CATEGORY_ID in the Vercel
+ *      project (and in .env for local work).
+ * The repository id below is the repo's stable GitHub node id.
+ */
+const categoryId = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID;
+const category = import.meta.env.PUBLIC_GISCUS_CATEGORY ?? 'Docs';
+const repo = import.meta.env.PUBLIC_GISCUS_REPO ?? 'TigerTag-Project/TigerSystem-Docs';
+const repoId = import.meta.env.PUBLIC_GISCUS_REPO_ID ?? 'R_kgDOTdiZjQ';
+
+const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
+const heading = locale === 'fr' ? 'Questions & retours' : 'Questions & feedback';
+const intro =
+  locale === 'fr'
+    ? 'Les commentaires vivent dans les Discussions GitHub du dépôt — un compte GitHub suffit.'
+    : 'Comments live in the repository’s GitHub Discussions — a GitHub account is all you need.';
+---
+
+<Default><slot /></Default>
+
+{
+  categoryId && (
+    <section class="ts-comments" aria-labelledby="ts-comments-heading">
+      <h2 id="ts-comments-heading">{heading}</h2>
+      <p class="ts-comments__intro">{intro}</p>
+      <div
+        class="ts-giscus"
+        data-repo={repo}
+        data-repo-id={repoId}
+        data-category={category}
+        data-category-id={categoryId}
+        data-lang={locale}
+      />
+    </section>
+  )
+}
+
+<script>
+  /**
+   * Giscus is loaded from a placeholder rather than a hard-coded <script> tag so
+   * the widget can follow the reader's light/dark choice and survive Starlight's
+   * client-side page swaps.
+   */
+  const GISCUS = 'https://giscus.app/client.js';
+
+  function themeName() {
+    return document.documentElement.dataset.theme === 'dark' ? 'dark_dimmed' : 'light';
+  }
+
+  function mount() {
+    const host = document.querySelector<HTMLElement>('.ts-giscus');
+    if (!host || host.dataset.mounted === 'true') return;
+    host.dataset.mounted = 'true';
+
+    const script = document.createElement('script');
+    script.src = GISCUS;
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    Object.assign(script.dataset, {
+      repo: host.dataset.repo!,
+      repoId: host.dataset.repoId!,
+      category: host.dataset.category!,
+      categoryId: host.dataset.categoryId!,
+      mapping: 'pathname',
+      strict: '1',
+      reactionsEnabled: '1',
+      emitMetadata: '0',
+      inputPosition: 'top',
+      theme: themeName(),
+      lang: host.dataset.lang!,
+      loading: 'lazy',
+    });
+    host.append(script);
+  }
+
+  function watchTheme() {
+    let theme = themeName();
+    new MutationObserver(() => {
+      if (themeName() === theme) return;
+      theme = themeName();
+      const frame = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+      frame?.contentWindow?.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+
+  mount();
+  watchTheme();
+  document.addEventListener('astro:after-swap', mount);
+</script>
