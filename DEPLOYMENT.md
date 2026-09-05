@@ -9,6 +9,29 @@ the deployment, it does not perform it.
 
 ## 1. Create the Vercel project
 
+The team is **Tiger-Project (Pro)**, which already hosts `tiger-tag-hub`
+(tigersystem.io) and `tiger-tag-manager`. The wiki is a third project on it, so
+there is no plan question to settle.
+
+> **Before anything else — the Git scope.** On `vercel.com/new`, the "Import Git
+> Repository" scope selector offers **Atome3D only**, and searching for
+> `TigerSystem` there returns nothing: the repository belongs to the
+> **TigerTag-Project** GitHub account, which this Vercel login cannot see. The
+> Vercel GitHub App *is* installed on TigerTag-Project with access to all
+> repositories — the missing link is on the Vercel side, not GitHub's.
+>
+> Fix it with **Add GitHub Scope** in that same selector, and pick
+> **TigerTag-Project** in the GitHub window it opens. It has to be started from
+> Vercel: the flow carries a state token, so opening
+> `github.com/apps/vercel/installations/new` directly just lands on the existing
+> installation's settings page and changes nothing.
+>
+> **Do not** paste the repository URL into the "enter a Git repository URL" box
+> at the top of the page as a workaround. That is the *clone* flow: it creates a
+> **new private copy** of the repository under Atome3D and deploys that. It
+> would split the source of truth in two, which is the one thing this whole
+> setup exists to prevent.
+
 1. Vercel → **Add New… → Project** → import `TigerTag-Project/TigerSystem-Docs`.
 2. Vercel detects Astro. Confirm the settings; nothing needs overriding:
 
@@ -24,7 +47,17 @@ the deployment, it does not perform it.
    generates `src/content/docs/` and `public/` from `docs/` and `i18n/`. Both
    are gitignored, so a clean clone is the only supported build input.
 
-3. Deploy the branch once to check it, then set **Production Branch** to `main`.
+   The framework is detected from `package.json`, which only exists on
+   `feat/docs-site` — importing while `main` is still the old tree shows
+   **Other**, so set the preset to **Astro** by hand. Leave the build, output
+   and install commands empty; the Astro defaults (`pnpm build` → `dist`) are
+   correct, and pnpm is picked up from `pnpm-lock.yaml`.
+
+3. **`main` has no site until `feat/docs-site` is merged.** A production build
+   of `main` fails with "no package.json" — expected, not a misconfiguration.
+   Either merge first, or set **Production Branch** to `feat/docs-site` in
+   Settings → Git to see the site now and switch it back to `main` after the
+   merge.
 
 ## 2. Point the domain
 
