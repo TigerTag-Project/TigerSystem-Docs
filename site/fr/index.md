@@ -64,11 +64,29 @@ le protocole RFID tiers le plus déployé au monde.
 ## Où vit la vérité
 
 Ce wiki est généré depuis le
-[dépôt TigerSystem-Docs](https://github.com/TigerTag-Project/TigerSystem-Docs),
-qui est la **source de vérité** de l'écosystème. Chaque page porte un lien
-« Modifier la page » qui mène droit au fichier Markdown correspondant : les
-corrections voyagent en pull requests, et lorsqu'une autre surface contredit le
-dépôt, c'est le dépôt qui a raison.
+[dépôt TigerSystem-Docs](https://github.com/TigerTag-Project/TigerSystem-Docs), qui est la **source de vérité** de
+l'écosystème. Lorsqu'une autre surface contredit le dépôt, c'est le dépôt qui a
+raison.
+
+**Et le dépôt appartient à tout le monde.** Vous n'avez besoin d'aucune
+autorisation, d'aucune invitation, ni d'aucun lien avec le projet pour le
+corriger :
+
+- Quelque chose est faux, confus ou manquant, et vous préférez simplement le
+  signaler ? → [ouvrez une issue](https://github.com/TigerTag-Project/TigerSystem-Docs/issues/new)
+- Vous savez ce qu'il faudrait écrire ? → chaque page porte un lien
+  **« Modifier la page »** qui mène droit au Markdown correspondant. Vous
+  modifiez, vous ouvrez une pull request, c'est fait — GitHub s'occupe du fork,
+  et ça marche depuis un téléphone.
+
+Fautes de frappe, tournure plus claire, étape oubliée, page qui vous a fait
+prendre une mauvaise direction : tout est bienvenu, et ce sont les petites
+corrections qui s'accumulent le mieux. Le contenu est en
+[CC BY 4.0](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/LICENSE) ; les règles de rédaction tiennent sur un
+écran, dans [CONTRIBUTING](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/CONTRIBUTING.md).
+
+La politique de marque concerne la *marque* — le logo sur une puce physique.
+Elle n'a rien à voir avec cette documentation, ouverte à tous.
 
 Les pages anglaises sont l'original ; **le français en est dérivé**, traduit
 automatiquement puis relu. Si une page vous paraît fautive, le bandeau en haut

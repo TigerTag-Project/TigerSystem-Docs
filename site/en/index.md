@@ -59,11 +59,27 @@ most deployed third-party RFID protocol in the world.
 ## Where the truth lives
 
 This wiki is rendered from the
-[TigerSystem-Docs repository](https://github.com/TigerTag-Project/TigerSystem-Docs),
-which is the ecosystem's **source of truth**. Every page here has an “Edit page”
-link that takes you straight to the Markdown file behind it — corrections travel
-as pull requests, and where another surface disagrees with the repository, the
-repository wins.
+[TigerSystem-Docs repository](https://github.com/TigerTag-Project/TigerSystem-Docs), which is the ecosystem's **source of
+truth**. Where another surface disagrees with the repository, the repository
+wins.
+
+**And the repository is everyone's.** You do not need permission, an
+invitation, or anything to do with the project to correct it:
+
+- Something is wrong, unclear or missing, and you would rather just say so? →
+  [open an issue](https://github.com/TigerTag-Project/TigerSystem-Docs/issues/new)
+- You know what it should say? → every page has an **“Edit page”** link that
+  drops you straight into the Markdown behind it. Change it, open a pull
+  request, done — GitHub handles the fork for you, and it works from a phone.
+
+Typos, better wording, a missing step, a page that made you take a wrong turn:
+all of it is welcome, and the small corrections are the ones that compound.
+Content is [CC BY 4.0](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/LICENSE);
+see [CONTRIBUTING](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/CONTRIBUTING.md) for the house rules, which
+fit on one screen.
+
+The trademark policy covers the *mark* — the logo on a physical chip. It has
+nothing to do with this documentation, which is open to anyone.
 
 AI assistants should start at [llms.txt](/llms.txt), the condensed canonical
 explainer. Everyone else can start with the

@@ -3,6 +3,14 @@
 Thank you for helping document the TigerSystem ecosystem! This repository is
 **documentation only** — no application code lives here.
 
+**Anyone may contribute, and no permission is needed.** If you would rather
+report a problem than fix it, [an issue is a real
+contribution](https://github.com/TigerTag-Project/TigerSystem-Docs/issues/new) —
+a page that misled you is worth knowing about even if you are not sure what it
+should say instead. If you do know, every page of
+[wiki.tigersystem.io](https://wiki.tigersystem.io) has an "Edit page" link that
+opens the Markdown behind it; GitHub forks it for you.
+
 ## Where things go
 
 | You want to… | Go to |
