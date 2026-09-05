@@ -59,10 +59,6 @@ export const NOT_PUBLISHED = new Map([
     'assets/README.md',
     'Naming conventions for the docs/assets folder — meaningful to repo contributors, noise for readers.',
   ],
-  [
-    '_TODO-content.md',
-    'Working file tracking content gaps; removed before the docs-site branch is merged.',
-  ],
 ]);
 
 /**
