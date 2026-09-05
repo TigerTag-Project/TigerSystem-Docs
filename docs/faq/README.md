@@ -366,12 +366,24 @@ printer manufacturers to read TigerTag natively. Read
 reach out at **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
 
 **Can my product become "TigerTag Certified"?**
-Yes — **TigerTag Certified** is the certification mark, working as a
-**quality label**, for three cases: third-party products that read and/or
-write TigerTags (a printer, a dryer, a reader…); filament manufacturers that
-ship TigerTags in their products; and third-party **apps** (mobile or
-desktop) — certification guarantees the protocol is perfectly integrated in
-that third-party ecosystem. Reach out through the
+It depends which side of one line it sits on — and most products are on the
+free side.
+
+If your product **talks to** TigerTag chips — a reader, an app, a printer, a
+slicer, a dryer, a tool — it is **TigerTag Compatible**. That tier is free,
+self-declared and needs no audit and no permission: build it, say *"compatible
+with TigerTag"* (or *"with TigerTag+"* if you verify signatures), and show the
+logo in your interface, your documentation and your store listing. Most
+third-party products belong here, and nothing about the protocol is withheld
+from them.
+
+**TigerTag Certified** is the other tier, and it is for things that **are** a
+TigerTag rather than things that read one: filament and resin manufacturers,
+inlay and carrier producers, and machine makers whose product **writes**
+TigerTag identities. It is granted, not claimed — written authorization, an
+audit, a listing in the certified registry, and the right to put the mark **on
+the product, the chip and the packaging**. Full criteria:
+[CERTIFICATION.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). Reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).
 
 **We're a printer maker — can our firmware read TigerTag?**

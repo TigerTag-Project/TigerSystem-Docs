@@ -25,9 +25,12 @@ useful:
 None of these need our apps or our cloud: the chip + an SDK is enough. Add the
 [cloud surface](./cloud-api.md) only if you want accounts and sync.
 
-And when your product or app reads and/or writes TigerTags, it can carry the
-**TigerTag Certified** mark — a quality label guaranteeing the protocol is
-perfectly integrated in your ecosystem (reach out through the
+A product that **reads** TigerTags — a reader, an app, a printer, a slicer, a
+tool — is **TigerTag Compatible**: free, self-declared, no audit, no
+permission. **TigerTag Certified** is the other tier, for things that *are* a
+TigerTag rather than things that read one — filament and resin manufacturers,
+inlay and carrier producers, machines that **write** identities — and it is
+granted rather than claimed ([criteria](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md), reach out through the
 [GitHub organization](https://github.com/TigerTag-Project)).
 
 The governance is deliberately two-gated: **anyone** may implement the
