@@ -91,14 +91,54 @@ function withoutCode(body) {
 const MD_LINK = /(!?)\[(?:[^\][]|\[[^\]]*\])*\]\(\s*<?([^)<>\s]+)>?(?:\s+"[^"]*")?\s*\)/g;
 const HTML_ATTR = /\b(?:src|href)="([^"]*)"/g;
 
-/** Every link and asset target on the page — these must be byte-identical across locales. */
+/**
+ * Every link and asset target on the page — these must be byte-identical across
+ * locales, with one exception: a link to a heading on the same page. Translating
+ * the heading changes its anchor, so there the identical target is the broken
+ * one. Those are pulled out here and checked against the page's own headings.
+ */
 function targets(lines) {
   const found = [];
   for (const line of lines) {
     for (const match of line.matchAll(MD_LINK)) found.push(match[2]);
     for (const match of line.matchAll(HTML_ATTR)) found.push(match[1]);
   }
-  return found.sort();
+  return found.filter((target) => !target.startsWith('#')).sort();
+}
+
+/** Same-page anchors, which must resolve inside the file that carries them. */
+function fragments(lines) {
+  const found = [];
+  for (const line of lines) {
+    for (const match of line.matchAll(MD_LINK)) {
+      if (match[2].startsWith('#')) found.push(match[2].slice(1));
+    }
+  }
+  return found;
+}
+
+/** GitHub's heading slug, closely enough for the anchors this documentation uses. */
+function slug(heading) {
+  return heading
+    .replace(/`([^`]*)`/g, '$1')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/[*_]/g, '')
+    .trim()
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
+
+function headingSlugs(lines) {
+  return new Set(
+    lines
+      .map((line) => /^#{1,6}\s+(.+?)\s*$/.exec(line))
+      .filter(Boolean)
+      .map((match) => slug(match[1])),
+  );
 }
 
 /** Heading levels, in order. The text is translated; the shape is not. */
@@ -206,6 +246,26 @@ async function checkLocale(locale) {
     const frLines = withoutCode(body);
 
     compare('link and asset targets', fileRel, locale, targets(enLines), targets(frLines));
+
+    // Same-page anchors follow the translated heading rather than the English one,
+    // so they are checked for resolving rather than for matching.
+    const slugs = headingSlugs(frLines);
+    const dead = fragments(frLines).filter((fragment) => !slugs.has(fragment));
+    if (dead.length) {
+      errors.push(
+        `${locale}/${fileRel}: ${dead.length} same-page link(s) point at a heading that does not exist ` +
+          `— translating a heading changes its anchor:\n` +
+          dead.map((fragment) => `      #${fragment}`).join('\n'),
+      );
+    }
+
+    const enDead = fragments(enLines).filter((fragment) => !headingSlugs(enLines).has(fragment));
+    if (enDead.length) {
+      errors.push(
+        `docs/${fileRel}: ${enDead.length} same-page link(s) point at a heading that does not exist:\n` +
+          enDead.map((fragment) => `      #${fragment}`).join('\n'),
+      );
+    }
     compare('heading structure', fileRel, locale, headingShape(enLines), headingShape(frLines));
     compare('table shape (columns x rows)', fileRel, locale, tableShape(enLines), tableShape(frLines));
     compare(
