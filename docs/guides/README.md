@@ -11,10 +11,12 @@ Task-oriented how-to guides (shorter and more targeted than
 - **[Troubleshooting: symptom → cause](./troubleshooting.md)** — chip reading,
   writing and verification problems, most frequent first, collected from real
   cases.
+- **[Buy and encode TigerTag chips](./buy-and-encode-chips.md)** — start to
+  finish: which chips, which reader, encoding from phone or desktop, Twin Tag
+  pairs, and encoding in series.
 
 > **TODO:** more guides planned:
 >
-> - How to buy / encode TigerTag chips
 > - How to promote a chipless (digital) spool to a real chip
 > - How to migrate an existing spreadsheet inventory into your TigerSystem account
 > - How to publish a public list link on TigerHub
