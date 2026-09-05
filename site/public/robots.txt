@@ -1,0 +1,6 @@
+# The TigerSystem documentation is public and meant to be read — by people and
+# by machines. llms.txt is the condensed canonical explainer for AI assistants.
+User-agent: *
+Allow: /
+
+Sitemap: https://wiki.tigersystem.io/sitemap-index.xml
