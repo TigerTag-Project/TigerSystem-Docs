@@ -39,8 +39,21 @@ spool or packaging**, where it stops describing compatibility and starts
 asserting origin, and only they may issue **TigerTag+ signatures** (TigerTag
 holds the private key). The trademark gate is marketing; the signature gate
 is technical; **neither restricts the protocol by one line** — an uncertified
-chip works perfectly, it just can't prove its origin. Full policy and brand
-assets: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/TRADEMARK.md).
+chip works perfectly, it just can't prove its origin.
+
+Two details worth having exactly right. The compatibility claim covers the
+**`+` tier too**: verifying a TigerTag+ signature is free, offline and
+unrestricted — the public keys are published — so a reader that checks them may
+say *"compatible with TigerTag+"*. What it may not do is call **a tag** a
+TigerTag+ unless that tag really carries a signature issued by TigerTag. And
+the word **"certified" is never self-applied**: TigerSystem grants it, nobody
+claims it.
+
+This is deliberately the model Zigbee and Matter use — a free *Compatible*
+tier that anyone may enter, and a granted *Certified* tier that means something
+to a buyer precisely because it is granted. Full policy, certification tiers
+and brand assets: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/TRADEMARK.md) and
+[CERTIFICATION.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md).
 
 ## Start here
 

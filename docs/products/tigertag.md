@@ -76,7 +76,7 @@ Who may say what, when a chip is for sale:
 |---|---|---|---|
 | **TigerSystem** | the chips it manufactures | official product | yes — it applies the mark |
 | **Any reseller or distributor** | those same genuine chips | **official product** | yes — the mark is already on the goods |
-| **Anyone making their own chip** | their own compatible chip | *"compatible with TigerTag"* | in their app, docs and store listing — **never on the chip, carrier, spool or packaging** |
+| **Anyone making their own chip** | their own compatible chip | *"compatible with TigerTag"* — and with **TigerTag+** if it verifies signatures. Never *"certified"*, which only TigerSystem grants | in their app, docs and store listing — **never on the chip, carrier, spool or packaging** |
 
 That last distinction is the whole trademark policy, and it is narrower than it
 looks. Saying your product *talks to* TigerTag is a fact about your product,

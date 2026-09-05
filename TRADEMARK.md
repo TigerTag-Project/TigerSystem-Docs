@@ -30,6 +30,15 @@ Usage — the two-gates model:
  TigerSystem and already carry the mark. Any distributor or reseller of
  genuine chips may describe and list them as official TigerTag product; they
  are not applying the mark, they are selling goods that bear it.
+- **"Certified" is never self-applied.** TigerSystem grants it. Anyone may say
+ *"compatible with TigerTag"* — and *"compatible with TigerTag+"*, since
+ verifying a signature is free, offline and unrestricted, the public keys
+ being published. Nobody may describe their own product as *"TigerTag
+ Certified"* or *"TigerTag+ Certified"*, and no tag may be called a
+ **TigerTag+** unless it actually carries a signature issued by TigerTag.
+- The model is deliberately the one Zigbee and Matter use: a free
+ *Compatible* tier anyone may enter, and a granted *Certified* tier that
+ means something to a buyer precisely because it is granted.
 - Two gates: the **trademark** (marketing) and the **signature** (technical).
  **Neither restricts the protocol by one line.**
 - You may not use these marks as the name of a competing RFID protocol,
