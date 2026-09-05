@@ -60,15 +60,36 @@ for the canonical byte-level specification.
 > **Naming note:** standard chips were formerly sold as **"TigerTag Maker"**
 > — the name is now simply **TigerTag**.
 
-## Chips without lock-in
+## The official chips, and everyone else's
 
-More than **2.5 million TigerTag chips** have been produced — most integrated at
-the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —
-with Filforme, Nanovia and more being integrated).
-But the protocol is deliberately **not tied to official chips**: any cheap,
-blank NTAG chip bought anywhere (Amazon, AliExpress, locally) works
-identically, and nothing blocks it. Branded chips help support the R&D;
-adoption of the protocol is the first reward.
+**TigerSystem manufactures the official chips** and puts the TigerTag logo on
+them. They come in two form factors, and both ship **blank**:
+
+| Form factor | For |
+|---|---|
+| **Sticker** | any spool you already own — one on each side ([why two](../concepts/tigertag-chip.md)) |
+| **Refill carrier** | spool-less [refills](../philosophy/second-life.md): glued inside the cardboard core before the refill goes on a reusable masterspool, so the chip travels with the filament, not the reel |
+
+Who may say what, when a chip is for sale:
+
+| Who | What they are selling | May call it | Logo |
+|---|---|---|---|
+| **TigerSystem** | the chips it manufactures | official product | yes — it applies the mark |
+| **Any reseller or distributor** | those same genuine chips | **official product** | yes — the mark is already on the goods |
+| **Anyone making their own chip** | their own compatible chip | *"compatible with TigerTag"*, and nothing beyond that | **no** |
+
+The third row is not a restriction on the protocol — it is the only thing the
+trademark reserves. Implementing TigerTag needs no permission, ever; putting
+the TigerTag logo on a chip you made yourself does. See
+[TRADEMARK.md](../../TRADEMARK.md).
+
+More than **2.5 million TigerTag chips** have been produced — most integrated
+at the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —
+with Filforme, Nanovia and more being integrated). But the protocol is
+deliberately **not tied to official chips**: any cheap, blank NTAG chip bought
+anywhere (Amazon, AliExpress, locally) works identically, and nothing blocks
+it. Branded chips help support the R&D; adoption of the protocol is the first
+reward.
 
 The freedom runs both ways: **chips are never write-locked**. TigerTag is
 simply the base protocol filament factories ship spools with — if you prefer

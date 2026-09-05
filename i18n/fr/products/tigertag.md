@@ -1,5 +1,5 @@
 ---
-sourceHash: de5af1087537d83d19cf0b0e95722dcaba07ef1688956b461938667b202fed8a
+sourceHash: 15aca6ca265faa7aa0a2b4bc52fed0c6bf364aa7760b50e582b57957d350773c
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -70,7 +70,28 @@ pour la spécification canonique au niveau de l'octet.
 > **Note sur le nom :** les puces standard étaient autrefois vendues sous le nom
 > de **« TigerTag Maker »** — le nom est désormais simplement **TigerTag**.
 
-## Des puces sans enfermement
+## Les puces officielles, et celles de tout le monde
+
+**TigerSystem fabrique les puces officielles** et y appose le logo TigerTag.
+Elles existent en deux formats, et les deux sont livrées **vierges** :
+
+| Format | Pour |
+|---|---|
+| **Sticker** | une bobine que vous possédez déjà — une sur chaque face ([pourquoi deux](../concepts/tigertag-chip.md)) |
+| **Carrier refill** | les [refills](../philosophy/second-life.md) sans bobine : collé à l'intérieur du carton central avant montage sur une masterspool réutilisable, la puce voyage donc avec le filament et non avec la bobine |
+
+Qui a le droit de dire quoi, lorsqu'une puce est mise en vente :
+
+| Qui | Ce qu'il vend | Peut l'appeler | Logo |
+|---|---|---|---|
+| **TigerSystem** | les puces qu'il fabrique | produit officiel | oui — c'est lui qui appose la marque |
+| **Tout revendeur ou distributeur** | ces mêmes puces authentiques | **produit officiel** | oui — la marque est déjà sur la marchandise |
+| **Quiconque fabrique sa propre puce** | sa propre puce compatible | *« compatible with TigerTag »*, et rien de plus | **non** |
+
+La troisième ligne n'est pas une restriction du protocole — c'est la seule
+chose que la marque réserve. Implémenter TigerTag ne demande aucune
+autorisation, jamais ; apposer le logo TigerTag sur une puce que vous avez
+fabriquée, si. Voir [TRADEMARK.md](../../TRADEMARK.md).
 
 Plus de **2,5 millions de puces TigerTag** ont été produites — la plupart
 intégrées en usine par des marques de filament (Rosa3D, eSun, Sunlu, Landu,
