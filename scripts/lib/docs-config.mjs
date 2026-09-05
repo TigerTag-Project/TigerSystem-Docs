@@ -18,6 +18,25 @@ export const LOCALES = /** @type {const} */ (['en', 'fr']);
 export const DEFAULT_LOCALE = 'en';
 
 /**
+ * How complete each locale claims to be. This is the switch that decides whether
+ * a missing or stale translation is a warning or a build failure.
+ *
+ *   'source'      the language everything is written in; nothing to check
+ *   'in-progress' being filled in — gaps are reported, never fatal
+ *   'complete'    announced as fully translated. From here on, an English page
+ *                 merged without its translation, or a translation left behind
+ *                 by an edit to its source, FAILS the check.
+ *
+ * Promote a locale to 'complete' the day it reaches full coverage — that is the
+ * moment the guarantee starts being enforced, and the only thing standing
+ * between "we translate as we go" and "this language is trustworthy".
+ */
+export const LOCALE_STATUS = {
+  en: 'source',
+  fr: 'in-progress',
+};
+
+/**
  * Repository-root files that `docs/**` links to with `../../`.
  * Anything not listed here is a broken link and fails the sync.
  */

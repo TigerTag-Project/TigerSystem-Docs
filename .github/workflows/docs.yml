@@ -26,6 +26,12 @@ jobs:
       - name: Check the derived content tree
         run: pnpm check:docs
 
+      # Translations must mirror the shape of their source — same links, same code
+      # blocks, same headings, same tables. A locale marked complete in
+      # scripts/lib/docs-config.mjs must also have every page, up to date.
+      - name: Check translations
+        run: pnpm check:i18n
+
       - name: Build
         run: pnpm build
 

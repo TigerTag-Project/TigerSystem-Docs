@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# Runs before every commit that touches the documentation or the site.
+#
+#   sync-docs --check   every internal link resolves, every page is reachable
+#                       from the curated navigation, no navigation entry dangles
+#   check-i18n          translations mirror the shape of their English source,
+#                       and any locale declared complete really is
+#
+# Both read the working tree, not the staged content — so commit what you tested.
+#
+# This hook is convenience, not enforcement: `--no-verify` skips it, and someone
+# editing on github.com never runs it at all. CI runs the same two commands on
+# every pull request, and that is the gate that actually holds.
+#
+# Installed by `pnpm install` (the `prepare` script sets core.hooksPath).
+
+set -e
+
+changed=$(git diff --cached --name-only --diff-filter=ACMR)
+
+# Nothing that can affect links, navigation or translations — let it through.
+if ! printf '%s\n' "$changed" | grep -qE '^(docs/|i18n/|site/|src/|scripts/|astro\.config\.mjs)'; then
+  exit 0
+fi
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "pre-commit: node not found — skipping the documentation checks." >&2
+  exit 0
+fi
+
+root=$(git rev-parse --show-toplevel)
+
+echo "pre-commit: checking links and navigation…"
+node "$root/scripts/sync-docs.mjs" --check --quiet
+
+echo "pre-commit: checking translations…"
+node "$root/scripts/check-i18n.mjs" --quiet
+
+echo "pre-commit: ok"

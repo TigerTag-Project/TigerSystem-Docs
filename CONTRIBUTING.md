@@ -73,8 +73,15 @@ docs/** (non-.md), llms.txt             ──►  public/**             (genera
 pnpm install
 pnpm dev          # http://localhost:4321
 pnpm build        # what Vercel runs
-pnpm check:docs   # broken links + navigation coverage; also runs in CI
+pnpm check        # everything the pre-commit hook and CI run
 ```
+
+`pnpm install` also points git at `.githooks/`, so a **pre-commit hook** runs
+those checks on any commit touching `docs/`, `i18n/`, `site/`, `src/` or
+`scripts/`. It is there to catch mistakes in a second rather than in a review;
+it is not the gate. `--no-verify` skips it, and nobody editing on github.com
+runs it at all — **CI runs the same commands on every pull request**, and that
+is what actually holds.
 
 `pnpm dev` and `pnpm build` both run `scripts/sync-docs.mjs` first. If you edit
 `docs/` while the dev server is running, re-run `pnpm sync:docs` to refresh the
@@ -93,7 +100,28 @@ ANTHROPIC_API_KEY=… pnpm translate -- --only products/tigertag.md
 ```
 
 The key is read from the environment and must never be committed — see
-[`.env.example`](.env.example). Translations are committed and reviewable like
+[`.env.example`](.env.example).
+
+**What guards a translation.** `pnpm check:i18n` holds every translated page to
+the *shape* of its English source: identical link and image targets, identical
+fenced code blocks (Mermaid diagrams included), the same headings at the same
+levels, the same table dimensions. Only the prose may differ. Those are the ways
+machine translation actually breaks — a translated URL is a dead URL — and they
+are all mechanical, so they are errors, not opinions.
+
+Coverage is governed per locale by `LOCALE_STATUS` in
+[`scripts/lib/docs-config.mjs`](scripts/lib/docs-config.mjs):
+
+| Status | A missing or stale page is… |
+|---|---|
+| `in-progress` | reported, never fatal — the locale is still being filled in |
+| `complete` | **a build failure** — the locale is announced as fully translated |
+
+`fr` is `in-progress` today. Promote it to `complete` the day it reaches full
+coverage: from then on, an English page cannot be merged without its French
+translation, and editing an English page fails the build until the translation
+catches up. That switch is the whole difference between "we translate as we go"
+and "this language can be trusted". Translations are committed and reviewable like
 any other change; correcting French prose by hand is welcome, and the site
 carries a banner on every French page inviting readers to report an error.
 A page with no translation yet is still served under `/fr/`, showing the English

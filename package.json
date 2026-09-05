@@ -4,10 +4,12 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.20.0",
-  "description": "Static documentation site for the TigerSystem ecosystem — derived from docs/, never duplicating it.",
+  "description": "Static documentation site for the TigerSystem ecosystem \u2014 derived from docs/, never duplicating it.",
   "scripts": {
     "sync:docs": "node scripts/sync-docs.mjs",
     "check:docs": "node scripts/sync-docs.mjs --check",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "check": "pnpm check:docs && pnpm check:i18n",
     "predev": "node scripts/sync-docs.mjs",
     "dev": "astro dev",
     "prebuild": "node scripts/sync-docs.mjs",
@@ -16,7 +18,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "translate": "node scripts/translate.mjs",
-    "translate:check": "node scripts/translate.mjs --check"
+    "translate:check": "node scripts/translate.mjs --check",
+    "prepare": "git rev-parse --git-dir >/dev/null 2>&1 && git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.0",
