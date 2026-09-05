@@ -1,5 +1,5 @@
 ---
-sourceHash: 88365d89ab2c01894a79031f3a1b9acf4a2d3951fab50ad44bfc5ed9e5f2b418
+sourceHash: de5af1087537d83d19cf0b0e95722dcaba07ef1688956b461938667b202fed8a
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -43,9 +43,10 @@ flowchart LR
  de visite…) une fois la bobine vide — jamais de déchet électronique.
 - Lisible par n'importe quel smartphone NFC, les lecteurs ACR122U et
  [TigerPOD](./tigerpod.md).
-- Une **zone réservée de 32 octets** : libre pour les **fonctions
- additionnelles de la communauté** sur un TigerTag standard ; elle porte la
- signature d'origine sur un [TigerTag+](./tigertag-plus.md).
+- Une **zone réservée de 64 octets** (pages `0x18`–`0x27`, laissant 80 octets de
+ données) : libre pour les **fonctions additionnelles de la communauté** sur un
+ TigerTag standard ; elle porte la signature d'origine — 32 octets de `R`, 32 de
+ `S` — sur un [TigerTag+](./tigertag-plus.md).
 
 ## Architecture
 

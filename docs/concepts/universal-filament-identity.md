@@ -30,7 +30,7 @@ chip encoded by one tool reads identically in every other.
 
 ## One identity, four states
 
-The identity is the *record*, not the *chip* — and it moves through three
+The identity is the *record*, not the *chip* — and it moves through four
 states:
 
 ```mermaid

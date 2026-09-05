@@ -33,8 +33,9 @@ flowchart LR
  plain NDEF object (keychain, business card…) once the spool is empty —
  never e-waste.
 - Readable by any NFC smartphone, ACR122U readers and [TigerPOD](./tigerpod.md).
-- A reserved **32-byte area**: free for **community add-on functions** on a
- standard TigerTag; carries the origin signature on a
+- A reserved **64-byte area** (pages `0x18`–`0x27`, leaving 80 bytes of data):
+ free for **community add-on functions** on a standard TigerTag; carries the
+ origin signature — 32 bytes of `R`, 32 of `S` — on a
  [TigerTag+](./tigertag-plus.md).
 
 ## Architecture
