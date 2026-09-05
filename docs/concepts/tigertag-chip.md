@@ -57,12 +57,30 @@ A few implementation details:
  fold over the cardboard core (one chip per end), held with industrial
  **3M adhesive (468MP / 200MP)** — the operator peels and sticks, nothing
  else changes on the line. The carrier design is **public and printable at
- home**.
+ home**, and the same form is sold on its own for
+ [refills](../philosophy/second-life.md): glue it inside the cardboard core
+ before mounting the refill on a reusable masterspool, and the chip travels
+ with the filament instead of with the reel.
 
 <img src="../assets/carrier-bare.png" width="440" alt="The bare TigerTag carrier — two independent NFC antennas, one at each end" />
 
 *The carrier, bare: the two independent antennas are plainly visible — one
 per folded end, each with its own UID.*
+
+## Encoded at the factory, or blank in your hand
+
+The same chip reaches you two ways, and the difference matters more than
+anything else on this page:
+
+| | Where it comes from | What is on it |
+|---|---|---|
+| **Pre-encoded** | integrated on the production line, inside filament from a partner brand | the spool's full identity, ready to read |
+| **Blank** | bought on its own — TigerTag-branded, or any NTAG chip from anywhere | nothing yet; you write it once, in about a minute |
+
+Chips sold separately ship **blank**, logo or no logo. That is not a
+limitation: an unwritten chip is what makes
+[second life](../philosophy/second-life.md) possible, and it is why the
+protocol never depends on buying anything.
 
 ## Payload
 

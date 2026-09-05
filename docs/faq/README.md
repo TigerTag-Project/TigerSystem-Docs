@@ -61,6 +61,23 @@ them helps support the R&D. But **any cheap, blank NTAG chip** from Amazon,
 AliExpress or your local shop works identically, and that's deliberate:
 nothing is blocked, the protocol is the point.
 
+**Do the chips I buy arrive with data on them?**
+No — **chips sold on their own ship blank**, whether they carry the TigerTag
+logo or not. You write the filament's identity yourself, in
+[Tiger NFC Connect](../products/tigertag-connect.md) or
+[Tiger Studio](../products/tiger-studio.md); that takes about a minute the
+first time. The chips that arrive **already encoded** are the ones integrated
+at the factory, inside filament from the partner brands. Buying a chip and
+buying tagged filament are two different things.
+
+**Which shape should I buy — sticker or refill carrier?**
+Two form factors, for two situations. The **individual sticker** goes on any
+spool you already own. The **refill version** is built for spool-less
+[refills](../philosophy/second-life.md): it glues inside the **cardboard
+core** before you mount the refill on a reusable masterspool, so the chip
+travels with the filament rather than with the reel — the same place the
+factory puts it.
+
 **Which blank chip should I buy exactly?**
 **NTAG213, 215 or 216 — round, 25 mm** is the recommendation. The protocol is
 deliberately optimized to fit the small NTAG213 (144 bytes); 215/216 work

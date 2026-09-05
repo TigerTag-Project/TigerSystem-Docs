@@ -25,7 +25,8 @@ owns the full story.
 | **TigerPOD** | The 3D-printable dual NFC reader stand — free STL. See [TigerPOD](./products/tigerpod.md). |
 | **TigerScale** | The open-source ESP32 filament scale that answers "how much is left?". See [TigerScale](./products/tigerscale.md). |
 | **TigerTag Factory / Manager** | The industrial, production-grade toolchain that programs chips on filament production lines, and the tools that curate the filament database. Not public. See [Factory suite](./products/factory-suite.md). |
-| **Carrier** | The strip that carries a spool's two chips — one at each folded end, stuck to the cardboard core with industrial 3M adhesive. Public and printable at home. See [The TigerTag chip](./concepts/tigertag-chip.md). |
+| **Carrier** | The strip that carries a spool's two chips — one at each folded end, stuck to the cardboard core with industrial 3M adhesive. Used on the factory line, sold on its own for refills, and public and printable at home. See [The TigerTag chip](./concepts/tigertag-chip.md). |
+| **Masterspool** | A reusable reel a spool-less refill is mounted on. A refill's chip goes inside the cardboard core, so it stays with the filament rather than with the reel. |
 | **Twin Tag** | The two chips of one spool, written together as a pair and kept identical for the spool's whole life — always counted as **one** spool. |
 | **Reference database** | The shared ID tables (brands, materials, aspects, types, diameters, units) served from `cdn.tigertag.io`, so a chip encoded by one tool reads identically in every other. See [Universal filament identity](./concepts/universal-filament-identity.md). |
 | **Aspect** | The reference-database field describing a filament's colour and finish; the [material swatch](./developers/material-swatch.md) is painted from it. |

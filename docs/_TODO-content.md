@@ -34,7 +34,7 @@
 
 | Where | What | Priority |
 |---|---|---|
-| The shop, `tigertag.io/collections/tigertag-rfid-maker` | Still sells under **"TigerTag Maker"** (21 occurrences on the collection page) while the docs say the name is now simply **TigerTag**. The old **"TigerTag Pro"** name is documented as retired in favour of **TigerTag+**. | **Highest.** It is the first thing a buyer sees, and it makes the documentation look wrong rather than the shop. |
+| The shop, and [`products/tigertag.md`](./products/tigertag.md) | **A naming decision, not a rename.** The shop sells under **"TigerTag Maker"** (21 occurrences on the collection page); `products/tigertag.md` states that name is retired in favour of plain **TigerTag**. But the shop sells **blank chips carrying the TigerTag logo** — no data on them — so calling them "TigerTag" would imply they arrive encoded, which is worse than the name it replaces. Whatever is chosen has to distinguish *the protocol tier* from *the blank product*, on both surfaces. | **Highest**, and it needs a decision before anyone edits either surface. |
 | The shop | Reported to advertise a **36-byte** personalised message; the RFID guide specifies **28 bytes** UTF-8 (pages `0x10`–`0x16`). Not verified on the shop side. | Check, then align on the guide. |
 
 ## Pages that are scaffolding
