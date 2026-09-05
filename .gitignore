@@ -17,3 +17,6 @@ dist/
 
 # Visual QA output (scripts/screenshots.mjs)
 .screenshots/
+
+# The working brief for this branch — kept locally, not repository content
+prompt-claude-code-tigersystem-wiki.md
