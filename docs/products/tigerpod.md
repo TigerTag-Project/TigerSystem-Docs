@@ -8,6 +8,10 @@ A free, open-source 3D-printable stand holding **two** USB NFC readers **facing
 each other**: place a spool, it identifies itself in Tiger Studio; place a blank
 chip, encode it. As natural as tapping a phone, but hands-free on the desktop.
 
+<img src="../assets/tigerpod-grey.png" width="480" alt="A TigerPOD on a desk, a red filament spool resting on it" />
+
+*Put the spool down; it introduces itself.*
+
 ## Why two readers, facing each other
 
 This is the whole point of the shell, and the one thing to get right. **We
@@ -40,7 +44,7 @@ flowchart LR
 
 | | **TigerPOD Mini** — *recommended* | **TigerPOD (original)** |
 |---|---|---|
-| | <a href="https://makerworld.com/fr/models/3190348-tigerpod-mini-for-openspool-tigertag-rfid-filament#profileId-3609236"><img src="../assets/tigerpod-mini.jpg" width="260" alt="The compact TigerPOD Mini, one upright reader on each side" /></a> | <a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958"><img src="../assets/tigerpod-grey.png" width="260" alt="A grey TigerPOD holding a red filament spool" /></a> |
+| | <a href="https://makerworld.com/fr/models/3190348-tigerpod-mini-for-openspool-tigertag-rfid-filament#profileId-3609236"><img src="../assets/tigerpod-mini.jpg" width="260" alt="The compact TigerPOD Mini, one upright reader on each side" /></a> | <a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958"><img src="../assets/tigerpod-with-spool.png" width="260" alt="The original TigerPOD, its two readers facing each other" /></a> |
 | Prints | Faster, less filament | Longer, more filament |
 | Desk space | Less | More |
 | Cables | Routed **inside** the shell | External |

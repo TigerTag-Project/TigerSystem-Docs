@@ -1,5 +1,5 @@
 ---
-sourceHash: 984ec7dc1eb9cc9befe3d722f54f018d3416cb600ffc1d41e2e6579092e2549b
+sourceHash: 1f7df77329d34fc990a686272f7f40991145da331a23da2e4e8b833381735552
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -13,6 +13,10 @@ Un support imprimable en 3D, gratuit et open source, qui accueille **deux**
 lecteurs NFC USB **face à face** : posez une bobine, elle se présente dans Tiger
 Studio ; posez une puce vierge, encodez-la. Aussi naturel que d'approcher un
 téléphone, mais mains libres sur le bureau.
+
+<img src="../assets/tigerpod-grey.png" width="480" alt="Un TigerPOD sur un bureau, une bobine de filament rouge posée dessus" />
+
+*On pose la bobine ; elle se présente d'elle-même.*
 
 ## Pourquoi deux lecteurs, face à face
 
@@ -47,7 +51,7 @@ flowchart LR
 
 | | **TigerPOD Mini** — *recommandé* | **TigerPOD (original)** |
 |---|---|---|
-| | <a href="https://makerworld.com/fr/models/3190348-tigerpod-mini-for-openspool-tigertag-rfid-filament#profileId-3609236"><img src="../assets/tigerpod-mini.jpg" width="260" alt="Le TigerPOD Mini compact, un lecteur debout de chaque côté" /></a> | <a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958"><img src="../assets/tigerpod-grey.png" width="260" alt="Un TigerPOD gris portant une bobine de filament rouge" /></a> |
+| | <a href="https://makerworld.com/fr/models/3190348-tigerpod-mini-for-openspool-tigertag-rfid-filament#profileId-3609236"><img src="../assets/tigerpod-mini.jpg" width="260" alt="Le TigerPOD Mini compact, un lecteur debout de chaque côté" /></a> | <a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958"><img src="../assets/tigerpod-with-spool.png" width="260" alt="Le TigerPOD original, ses deux lecteurs face à face" /></a> |
 | Impression | Plus rapide, moins de filament | Plus longue, plus de filament |
 | Place sur le bureau | Moins | Plus |
 | Câbles | Passés **à l'intérieur** de la coque | À l'extérieur |
