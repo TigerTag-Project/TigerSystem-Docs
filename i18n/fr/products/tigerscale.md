@@ -1,5 +1,5 @@
 ---
-sourceHash: 342d08a205f44936692066f8d3410b81f74aac45d9cdd4dd99a400663d0b98d5
+sourceHash: b1285803ebbd496b0e46df78100d223db9c8637a0ed689e4f6f2c95b4aaaa484
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -8,15 +8,42 @@ sourcePath: docs/products/tigerscale.md
 ## Objectif
 
 **TigerScale répond à l'éternelle question : combien reste-t-il de filament ?**
-Posez une bobine sur la balance ESP32 open source et le poids en direct part
-droit dans votre inventaire — pas de saisie manuelle, pas besoin de secouer la
-bobine près de votre oreille.
+Posez une bobine sur cette balance ESP32 open source et le poids en direct
+part droit dans votre inventaire — aucune saisie manuelle, plus besoin de
+secouer la bobine près de son oreille.
 
-> **La puce sait ce qu'*est* le filament ; la balance sait combien il en
-> *reste*.** Ensemble, elles rendent l'inventaire réellement juste : l'identité
+> **La puce sait ce que le filament *est* ; la balance sait ce qu'il en
+> *reste*.** Ensemble, ils rendent l'inventaire réellement juste : l'identité
 > vient de [TigerTag](./tigertag.md), la quantité en direct de TigerScale.
 
-<img src="../assets/tigerscale-photo.jpg" width="480" alt="TigerScale — la balance à filament ESP32 open source" />
+<img src="../assets/tigerscale-v3.png" width="420" alt="TigerScale V3 — la balance à filament connectée open source, écran tactile couleur et double lecteur NFC" />
+
+## TigerScale V3 — la génération actuelle
+
+[Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT.
+C'est celle qu'il faut construire.
+
+- **Elle sait quelle bobine est posée dessus** : **double lecteur NFC
+ PN532**, un par face — une [bobine à deux puces](../concepts/tigertag-chip.md)
+ est identifiée quel que soit le sens dans lequel vous la posez. Lire la
+ puce, peser, soustraire le poids de la bobine vide, synchroniser — rien à
+ taper, rien à deviner.
+- **ESP32-S3** (16 Mo de flash, PSRAM), **écran tactile couleur 3,5″
+ 480×320** (LVGL) avec toute la configuration à l'écran : sélecteur WiFi et
+ clavier, assistant de calibration, autotest matériel, mises à jour OTA.
+- **Alimentée par batterie** (PMIC AXP2101, état de charge à l'écran), codec
+ audio.
+- Pesée de précision : HX711 + cellule de charge, filtrage médian et EMA
+ adaptatif — réglé pour donner la sensation d'une balance de cuisine.
+- **8 langues dans le firmware**, interface web en 9 langues.
+- **Suivi du poids en direct** — les mises à jour apparaissent en temps réel
+ dans Tiger Studio et Tiger NFC Connect via Firestore.
+- Fonctionne avec la **calibration du poids des contenants** de Tiger Studio,
+ pour que le poids net de filament reste juste selon le type de contenant.
+
+<img src="../assets/tigerscale-at-home.jpg" width="100%" alt="Une TigerScale V3 en usage sur un établi, une bobine posée dessus" />
+
+*Sur l'établi : on pose la bobine, elle s'identifie et se pèse.*
 
 ## Où cela se situe
 
@@ -27,59 +54,39 @@ flowchart LR
   CLOUD --> ST["Tiger Studio"] & CO["Connect"]
 ```
 
-## Deux générations
+## L'histoire jusqu'ici
 
-**TigerScale V3** — la génération actuelle
-([Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT) :
+Trois générations, et la forme de l'objet a changé à chaque fois :
 
-- **Elle sait quelle bobine est posée dessus** : **deux lecteurs NFC PN532**,
- un par côté — une [bobine à double puce](../concepts/tigertag-chip.md) est
- identifiée quel que soit le sens dans lequel vous la posez. Lecture du tag,
- pesée, soustraction du poids de la bobine vide, synchronisation — sans rien
- taper, sans rien deviner.
-- **ESP32-S3** (16 Mo de flash, PSRAM), **écran tactile couleur 3,5″ 480×320**
- (LVGL) avec configuration intégralement à l'écran : sélecteur WiFi + clavier,
- assistant de calibration, autotest matériel, mises à jour OTA.
-- **Alimentation par batterie** (PMIC AXP2101, état de charge à l'écran), codec
- audio.
-- Pesée de précision : HX711 + cellule de charge, filtrage médian + EMA
- adaptatif — réglé pour donner la sensation d'une balance de cuisine.
-- **8 langues dans le firmware**, interface web en 9 langues.
+| | Lecture | Écran | Carte | Forme |
+|---|---|---|---|---|
+| **V1** — jamais publiée | **un seul** PN532 | mini OLED | ESP32 | un **porte-bobine** : un support central qui traverse le milieu de la bobine |
+| **V2** — [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale), MIT | 2× RC522 | OLED 0,96″ | ESP32-WROOM, alimentée en USB | une balance plate |
+| **V3** — [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT | 2× PN532 | écran tactile couleur 3,5″ | ESP32-S3, batterie | une balance plate, autonome |
 
-**TigerScale V2** — la génération précédente
-([Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale), MIT) :
-ESP32-WROOM, OLED 0,96″, 2 lecteurs RC522, alimentation USB. **La V3 est un
-matériel différent, pas une mise à jour du firmware** — les deux ne sont pas
-interchangeables ; ceux qui construisent une V2 continuent d'utiliser le dépôt
-V2.
+La V1 embarquait déjà pour l'essentiel l'électronique de la V2 — ESP32, mini
+OLED, une carte HX711 avec une cellule de charge de 5 kg — mais **un seul**
+lecteur, et un corps complètement différent.
 
-> **Héritage — la V1.** Une première génération a existé, mais n'a jamais été
-> publiée sous forme de dépôt public. Elle embarquait pour l'essentiel
-> l'électronique de la V2 — ESP32, mini OLED, une carte HX711 avec une cellule
-> de charge de 5 kg — mais un **seul** lecteur PN532, dans un format totalement
-> différent : une conception **porte-bobine**, avec un support central passant
-> au milieu de la bobine.
+> **La V3, c'est un matériel différent, pas une mise à jour de firmware.**
+> Les deux ne sont pas interchangeables : une V2 déjà construite garde son
+> propre dépôt et continue de fonctionner. Elle n'est simplement plus
+> développée.
 
-## Fonctionnalités (les deux générations)
-
-- Entièrement open source (MIT) — composants courants, la preuve vivante qu'un
- ESP32 et un module lecteur NFC (de la classe PN532 / RC522) suffisent à
- construire un appareil capable de lire un TigerTag.
-- **Suivi du poids en direct** — les mises à jour apparaissent en temps réel
- dans Tiger Studio et Tiger NFC Connect via Firestore.
-- Fonctionne avec la **calibration du poids des contenants** de Tiger Studio,
- pour que le poids net de filament reste juste par type de contenant.
+Les trois sont entièrement open source (MIT) et faites de composants
+courants — la preuve vivante qu'un ESP32 et un module de lecture NFC (classe
+PN532 / RC522) suffisent à construire un appareil qui lit les TigerTag.
 
 ## Balances tierces — USB HID (série DYMO M et compagnie)
 
-TigerScale est la balance maison — mais Tiger Studio lit aussi les appareils
-**USB « HID Scale » standard** (page d'usage HID `0x8D`, usage `0x20`) : à
-commencer par la **DYMO M5** et le reste de la série DYMO M (M10, M25… même
-protocole), et **n'importe quelle HID Scale conforme**, quelle que soit la
-marque. Une option tierce, pas un produit Tiger.
+TigerScale est la balance maison — mais Tiger Studio lit aussi les
+**périphériques USB « HID Scale »** standards (page d'usage HID `0x8D`, usage
+`0x20`) : à commencer par la **DYMO M5** et le reste de la série M de DYMO
+(M10, M25… même protocole), et **toute HID Scale conforme**, quelle que soit
+la marque. Une option tierce, pas un produit Tiger.
 
-Protocole, validé sur du matériel réel — *Scale Data Reports* de 6 octets à
-~1 Hz :
+Protocole, validé sur du matériel réel — des *Scale Data Reports* de 6 octets
+à environ 1 Hz :
 
 | Octet | Signification |
 |---|---|
@@ -89,20 +96,21 @@ Protocole, validé sur du matériel réel — *Scale Data Reports* de 6 octets �
 | `[3]` | exposant signé de puissance de dix appliqué à la valeur brute |
 | `[4..5]` | poids, LE16 (LSB, MSB) |
 
-Identifiant fabricant DYMO `0x0922` ; la M5 porte le pid `0x8009`. Particularité :
-la toute première trame juste après une tare annonce l'unité `0x00`.
+Identifiant fabricant DYMO `0x0922` ; la M5 porte le pid `0x8009`.
+Particularité : la toute première trame juste après une tare annonce
+l'unité `0x00`.
 
 ## Interactions
 
 | Avec | Comment |
 |---|---|
-| Firebase (base de données des comptes) | Écrit le poids en direct dans le compte de l'utilisateur |
-| Tiger Studio / Connect | Affichent le poids en direct ; suivi de l'état de santé |
+| Firebase (base de données du compte) | Écrit le poids en direct dans le compte de l'utilisateur |
+| Tiger Studio / Connect | Affichent le poids en direct ; supervision de l'état |
 
 ## Liens
 
 - **V3 (actuelle)** : [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)
-- V2 : [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
+- V2, qui n’est plus développée : [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
 
 ---
 

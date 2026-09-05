@@ -10,21 +10,12 @@ your inventory — no manual entry, no shaking the spool next to your ear.
 > *left*.** Together they make the inventory actually true: identity from
 > [TigerTag](./tigertag.md), live quantity from TigerScale.
 
-<img src="../assets/tigerscale-photo.jpg" width="480" alt="TigerScale — the open-source ESP32 filament scale" />
+<img src="../assets/tigerscale-v3.png" width="420" alt="TigerScale V3 — the open-source connected filament scale, colour touchscreen and dual NFC readers" />
 
-## Where it sits
+## TigerScale V3 — the current generation
 
-```mermaid
-flowchart LR
-  SPOOL["Spool on the scale"] --> SCALE["TigerScale (ESP32)"]
-  SCALE -- "live weight" --> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
-  CLOUD --> ST["Tiger Studio"] & CO["Connect"]
-```
-
-## Two generations
-
-**TigerScale V3** — the current generation
-([Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT):
+[Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT.
+This is the one to build.
 
 - **It knows which spool is on it**: **dual PN532 NFC readers**, one per
  side — a [twin-tagged spool](../concepts/tigertag-chip.md) is identified
@@ -37,28 +28,45 @@ flowchart LR
 - Precision weighing: HX711 + load cell, median + adaptive EMA filtering —
  tuned for a kitchen-scale feel.
 - **8 firmware languages**, 9-language web UI.
-
-**TigerScale V2** — the previous generation
-([Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale), MIT):
-ESP32-WROOM, 0.96″ OLED, 2× RC522 readers, USB-powered. **V3 is different
-hardware, not a firmware update** — the two are not interchangeable; V2
-builders keep using the V2 repository.
-
-> **Heritage — the V1.** A first generation existed but was never released
-> as a public repository. It carried essentially the V2's electronics —
-> ESP32, mini OLED, an HX711 board with a 5 kg load cell — but a **single**
-> PN532 reader, in a completely different form factor: a **spool-holder
-> design**, with a central support passing through the middle of the spool.
-
-## Features (both generations)
-
-- Fully open source (MIT) — commodity parts, the living proof that an ESP32
- and an NFC reader module (PN532 / RC522 class) are enough to build a
- TigerTag-reading device.
 - **Live weight tracking** — updates appear in real time in Tiger Studio and
  Tiger NFC Connect via Firestore.
 - Works with Tiger Studio's **container weight calibration** so net filament
  weight stays accurate per container type.
+
+<img src="../assets/tigerscale-at-home.jpg" width="100%" alt="A TigerScale V3 in use on a workbench, a spool resting on it" />
+
+*On the bench: put the spool down, it identifies itself and weighs itself.*
+
+## Where it sits
+
+```mermaid
+flowchart LR
+  SPOOL["Spool on the scale"] --> SCALE["TigerScale (ESP32)"]
+  SCALE -- "live weight" --> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
+  CLOUD --> ST["Tiger Studio"] & CO["Connect"]
+```
+
+## The story so far
+
+Three generations, and the shape of the thing changed at each one:
+
+| | Reading | Screen | Board | Form factor |
+|---|---|---|---|---|
+| **V1** — never released publicly | **one** PN532 | mini OLED | ESP32 | a **spool holder**: a central support passing through the middle of the spool |
+| **V2** — [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale), MIT | 2× RC522 | 0.96″ OLED | ESP32-WROOM, USB-powered | a flat scale |
+| **V3** — [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3), MIT | 2× PN532 | 3.5″ colour touchscreen | ESP32-S3, battery | a flat scale, self-contained |
+
+The V1 already carried essentially the V2's electronics — ESP32, mini OLED,
+an HX711 board with a 5 kg load cell — but a **single** reader, and a
+completely different body.
+
+> **V3 is different hardware, not a firmware update.** The two are not
+> interchangeable: a V2 you already built keeps its own repository and keeps
+> working. It is simply no longer developed.
+
+All three are fully open source (MIT) on commodity parts — the living proof
+that an ESP32 and an NFC reader module (PN532 / RC522 class) are enough to
+build a TigerTag-reading device.
 
 ## Third-party scales — USB HID (DYMO M series and friends)
 
@@ -91,7 +99,7 @@ right after a tare reports unit `0x00`.
 ## Links
 
 - **V3 (current)**: [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)
-- V2: [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
+- V2, no longer developed: [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
 
 ---
 
