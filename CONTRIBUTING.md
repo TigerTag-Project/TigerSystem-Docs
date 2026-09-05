@@ -125,11 +125,14 @@ Coverage is governed per locale by `LOCALE_STATUS` in
 | `in-progress` | reported, never fatal — the locale is still being filled in |
 | `complete` | **a build failure** — the locale is announced as fully translated |
 
-`fr` is `in-progress` today. Promote it to `complete` the day it reaches full
-coverage: from then on, an English page cannot be merged without its French
+**`fr` is `complete`.** An English page cannot be merged without its French
 translation, and editing an English page fails the build until the translation
-catches up. That switch is the whole difference between "we translate as we go"
-and "this language can be trusted". Translations are committed and reviewable like
+catches up. That is the whole difference between "we translate as we go" and
+"this language can be trusted" — and it is why touching `docs/` now means
+touching `i18n/fr/` in the same change.
+
+If that blocks you, say so in the pull request rather than working around it:
+lowering `fr` back to `in-progress` is a deliberate decision, not a workaround. Translations are committed and reviewable like
 any other change; correcting French prose by hand is welcome, and the site
 carries a banner on every French page inviting readers to report an error.
 A page with no translation yet is still served under `/fr/`, showing the English

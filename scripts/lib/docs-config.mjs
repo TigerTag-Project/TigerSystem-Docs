@@ -33,7 +33,7 @@ export const DEFAULT_LOCALE = 'en';
  */
 export const LOCALE_STATUS = {
   en: 'source',
-  fr: 'in-progress',
+  fr: 'complete',
 };
 
 /**
