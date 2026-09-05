@@ -3,7 +3,13 @@
 Task-oriented how-to guides (shorter and more targeted than
 [tutorials](../tutorials/README.md)).
 
-> **TODO:** this section is scaffolding. Planned topics:
+## Available
+
+- **[Buying pitfalls](./buying-pitfalls.md)** — the handful of wrong purchases
+  that only reveal themselves after delivery: chips, readers, PN532 modules,
+  the TigerScale screen, screws, filament for printed parts.
+
+> **TODO:** more guides planned:
 >
 > - How to buy / encode TigerTag chips
 > - How to promote a chipless (digital) spool to a real chip
