@@ -12,24 +12,42 @@ already own or can get for a few cents.
  [download for iOS & Android](https://tigersystem.io/fr/download)
 
 > Already bought filament from Rosa3D, eSun, Sunlu, R3D…? Your spool may
-> **already carry TigerTag chips** — skip straight to step 4 and just scan it.
+> **already carry TigerTag chips** — skip the form and just tap "Scan".
 
 ## Steps
 
+**You tap the chip twice:** once to start, once to write.
+
 1. **Install Tiger NFC Connect** and open it.
-2. **Tap the "Scan" button.** This is where you program your spool.
+2. **Tap "Scan"** and hold the phone against your blank chip. The app reads
+ it, sees that it is empty, and offers to create a filament for it.
 3. **Describe your filament** — pick the material, the color, the aspect, the
  weight, and so on. The choices come from the shared catalogue, so your
- spool will be understood identically by every compatible app.
-4. **Tap "Make"** and hold the phone against the chip. A second later, the
- data is saved **on the chip itself** — your spool now knows what it is.
-5. **Stick the chip on the spool.** For the full experience, use two chips on
- opposite sides — that's how factory spools ship
- ([why two?](../concepts/tigertag-chip.md)).
+ spool will be understood identically by every compatible app. It is a quick
+ form; nothing to type from memory.
+4. **Tap "Make", then hold the phone against the chip again.** That second
+ tap is the write. A second later the data is **on the chip itself** — your
+ spool now knows what it is.
+5. **Stick the chip on the spool.**
 
 <img src="../assets/nfc-scan.gif" width="420" alt="The NFC tap, animated — phone meets chip, spool identified" />
 
 *The whole gesture, in motion.*
+
+### Two chips on one spool — "Dual NFC"
+
+Factory spools carry **two chips, on opposite sides**, so that a chip is
+always facing the reader ([why two?](../concepts/tigertag-chip.md)). You can
+do the same, in one session:
+
+1. Scan the first blank chip and fill the form as above.
+2. Before writing, **tap the "Dual NFC" button**.
+3. **Tap "Make"** as usual — but now the app asks for the chips one after the
+ other: **Make 1/2**, then **Make 2/2**. Both chips end up carrying the same
+ identity.
+
+> **Always start with the chip you scanned.** The chip that opened the
+> creation is the one the app expects as 1/2; the other chip follows as 2/2.
 
 That's it. Re-scan the spool any time, with whichever reader is closest: a
 tap of **any NFC phone**, or place it on a reader connected to

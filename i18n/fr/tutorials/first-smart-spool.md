@@ -1,5 +1,5 @@
 ---
-sourceHash: 531511c5fe0c264e9d848a4052ab812f9aadd40212a19edef0d7562171a8ae4d
+sourceHash: a71c001c3bc862286fbaaf46bc9c8de8af3b7251d660573b6c4747ad2c55bfae
 sourcePath: docs/tutorials/first-smart-spool.md
 ---
 
@@ -20,27 +20,48 @@ centimes.
  [téléchargement iOS et Android](https://tigersystem.io/fr/download)
 
 > Vous avez déjà acheté du filament chez Rosa3D, eSun, Sunlu, R3D… ? Votre
-> bobine porte peut-être **déjà des puces TigerTag** — passez directement à
-> l'étape 4 et scannez-la.
+> bobine porte peut-être **déjà des puces TigerTag** — sautez le formulaire et
+> appuyez simplement sur « Scan ».
 
 ## Les étapes
 
+**Vous approchez la puce deux fois :** une fois pour démarrer, une fois pour
+écrire.
+
 1. **Installez Tiger NFC Connect** et ouvrez l'application.
-2. **Appuyez sur le bouton « Scan ».** C'est là que vous programmez votre
- bobine.
+2. **Appuyez sur « Scan »** et approchez le téléphone de votre puce vierge.
+ L'application la lit, constate qu'elle est vide, et vous propose de créer
+ son filament.
 3. **Décrivez votre filament** — choisissez la matière, la couleur, l'aspect,
  le poids, etc. Les choix proviennent du catalogue partagé : votre bobine
  sera donc comprise à l'identique par toutes les applications compatibles.
-4. **Appuyez sur « Make »** et approchez le téléphone de la puce. Une seconde
- plus tard, les données sont enregistrées **sur la puce elle-même** — votre
- bobine sait désormais ce qu'elle est.
-5. **Collez la puce sur la bobine.** Pour l'expérience complète, utilisez deux
- puces sur les faces opposées — c'est ainsi que sortent les bobines d'usine
- ([pourquoi deux ?](../concepts/tigertag-chip.md)).
+ C'est un formulaire rapide ; rien à taper de mémoire.
+4. **Appuyez sur « Make », puis approchez à nouveau le téléphone de la
+ puce.** Ce deuxième contact, c'est l'écriture. Une seconde plus tard, les
+ données sont **sur la puce elle-même** — votre bobine sait désormais ce
+ qu'elle est.
+5. **Collez la puce sur la bobine.**
 
 <img src="../assets/nfc-scan.gif" width="420" alt="Le geste NFC, animé — le téléphone rencontre la puce, la bobine est identifiée" />
 
 *Tout le geste, en mouvement.*
+
+### Deux puces sur une bobine — « Dual NFC »
+
+Les bobines d'usine portent **deux puces, sur les faces opposées**, pour
+qu'une puce soit toujours face au lecteur
+([pourquoi deux ?](../concepts/tigertag-chip.md)). Vous pouvez faire pareil,
+en une seule session :
+
+1. Scannez la première puce vierge et remplissez le formulaire comme ci-dessus.
+2. Avant d'écrire, **appuyez sur le bouton « Dual NFC »**.
+3. **Appuyez sur « Make »** comme d'habitude — mais l'application vous demande
+ maintenant les puces l'une après l'autre : **Make 1/2**, puis **Make 2/2**.
+ Les deux puces portent au final la même identité.
+
+> **Commencez toujours par la puce que vous avez scannée.** Celle qui a ouvert
+> la création est celle que l'application attend en 1/2 ; l'autre puce suit en
+> 2/2.
 
 C'est tout. Rescannez la bobine quand vous voulez, avec le lecteur le plus
 proche : un simple contact avec **n'importe quel téléphone NFC**, ou posez-la
