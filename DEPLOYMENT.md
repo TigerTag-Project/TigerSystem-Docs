@@ -143,9 +143,12 @@ hand-converted link lands on the right page instead of a 404:
 | `/products/tigertag.md` | `/products/tigertag/` |
 | `/products/README.md` | `/products/` |
 
-**Check these on the first preview deploy** — redirect patterns are the one part
-of this setup that cannot be tested locally. Three commands, replacing the host
-with the preview URL:
+These were verified on the first deployment. Note that Vercel applies its
+`trailingSlash` normalisation *before* the redirect rules, so a rule written as
+`/docs/:path*` never matches `/docs/faq/` — hence `/docs/:path(.*)`, where the
+capture swallows the trailing slash too.
+
+To re-check them after any change to `vercel.json`, replacing the host:
 
 ```bash
 curl -sI https://<preview>/docs/products/tigertag.md | grep -i '^location'
