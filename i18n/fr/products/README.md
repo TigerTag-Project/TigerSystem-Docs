@@ -1,11 +1,26 @@
 ---
-sourceHash: 5c1388688f7b5f6c20520c4c5eeecd55f2040eab9531a25d0768dfec468da997
+sourceHash: 14ef670faa1b8f4c915fb09a0664c6c58e82521e5a45f5c45b311261bab7edcf
 sourcePath: docs/products/README.md
 ---
 
 # Produits
 
 L'écosystème TigerSystem, une page par produit.
+
+**Voici les produits officiels** — conçus et publiés par TigerSystem.
+« Officiel » signifie ici *c'est nous qui l'avons fait*, pas *il vous le faut* :
+chacun est open source et forkable, et leurs noms (Tiger Studio, TigerHub,
+TigerScale, TigerPOD, Tiger NFC Connect) ne sont **délibérément pas revendiqués
+comme marques**. Seule la marque **TigerTag** est réservée, et uniquement pour
+la puce.
+
+N'importe qui peut construire et vendre une alternative — un lecteur, une
+application, une balance, un système d'inventaire complet. Voir
+[matériel tiers](../compatibility/third-party-hardware.md) et
+[logiciels bâtis sur TigerTag](../developers/integrations.md) pour ce qui
+existe déjà. Un produit tiers est **TigerTag Compatible** du simple fait qu'il
+fonctionne ; il ne devient **TigerTag Certified** que si TigerSystem le lui
+accorde ([politique de marque](../../TRADEMARK.md)).
 
 > **Note :** chaque produit **destiné aux utilisateurs** ci-dessous — et tous
 > ceux à venir — est une **preuve de concept** fonctionnelle. Leur seul but est

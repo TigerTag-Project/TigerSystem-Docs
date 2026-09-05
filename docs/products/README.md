@@ -2,6 +2,19 @@
 
 The TigerSystem ecosystem, one page per product.
 
+**These are the official products** — designed and published by TigerSystem.
+"Official" here means *we made it*, not *you need it*: every one of them is
+open source and forkable, and their names (Tiger Studio, TigerHub, TigerScale,
+TigerPOD, Tiger NFC Connect) are deliberately **not claimed as trademarks**.
+Only the **TigerTag** mark itself is reserved, and only for the chip.
+
+Anyone may build and sell an alternative — a reader, an app, a scale, a whole
+inventory system. See [third-party hardware](../compatibility/third-party-hardware.md)
+and [software built on TigerTag](../developers/integrations.md) for what
+already exists. A third-party product is **TigerTag Compatible** by simply
+working; it becomes **TigerTag Certified** only when TigerSystem grants it
+([trademark policy](../../TRADEMARK.md)).
+
 > **Note:** every **user-facing** product below — and every future one — is a
 > working **proof of concept**. Their only goal is to show the potential of an
 > open-source, standard, agnostic, cross-platform protocol, and to inspire
