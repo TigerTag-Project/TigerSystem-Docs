@@ -71,8 +71,8 @@ category exists.
 
 ## 5. Redirects already configured
 
-`vercel.json` handles the URL shapes that circulate today, so links people
-already have keep working:
+`vercel.json` catches the URL shapes people might paste from GitHub, so a
+hand-converted link lands on the right page instead of a 404:
 
 | From | To |
 |---|---|
@@ -80,8 +80,40 @@ already have keep working:
 | `/products/tigertag.md` | `/products/tigertag/` |
 | `/products/README.md` | `/products/` |
 
+**Check these on the first preview deploy** — redirect patterns are the one part
+of this setup that cannot be tested locally. Three commands, replacing the host
+with the preview URL:
+
+```bash
+curl -sI https://<preview>/docs/products/tigertag.md | grep -i '^location'
+curl -sI https://<preview>/products/tigertag.md      | grep -i '^location'
+curl -sI https://<preview>/products/README.md        | grep -i '^location'
+```
+
+Each should end at `/products/tigertag/` or `/products/`, in at most two hops.
+If a pattern does not match, the fix is in `vercel.json` — these are the only
+rules there, and the site works without them.
+
 If the GitHub `blob` URLs turn out to be what people actually share, add a
 rewrite for `/blob/main/docs/:path*` in the same file.
+
+## 6. Multilingual signals
+
+Already correct in the build, whatever the URL shape — worth knowing so nobody
+tries to "fix" it later:
+
+- every page carries `hreflang` alternates for `en` and `fr`, plus `x-default`
+  pointing at the English page;
+- every page carries a self-referencing `canonical`;
+- `sitemap-index.xml` lists both locales with their alternates.
+
+English is served from the root (`/products/tigertag/`) and French from `/fr/`.
+This is a neutral choice for ranking — Google treats a root default and an
+`/en/` prefix identically — so it comes down to taste: the root has no redirect
+hop on the most-linked URLs, an `/en/` prefix matches what `tigersystem.io`
+does. Switching is `defaultLocale` in `astro.config.mjs` plus a redirect from
+`/`; it is not worth doing for SEO reasons alone, and it is definitely not worth
+migrating a live site for.
 
 ## What CI already guarantees
 

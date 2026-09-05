@@ -3,18 +3,18 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/:path(.*)/README.md",
+      "destination": "/:path/",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*).md",
+      "destination": "/:path/",
+      "permanent": true
+    },
+    {
       "source": "/docs/:path*",
       "destination": "/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/(?<path>.*)/README.md",
-      "destination": "/$path/",
-      "permanent": true
-    },
-    {
-      "source": "/(?<path>.*).md",
-      "destination": "/$path/",
       "permanent": true
     }
   ],
