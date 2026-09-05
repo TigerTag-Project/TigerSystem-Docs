@@ -1,5 +1,5 @@
 ---
-sourceHash: 5a5fd4a9d3629c038b2a2c283b9b58e7557961b369da20961c3f950cc94543c0
+sourceHash: a05c4e52f6cae3704b4e16e2b3d1b6d55653145391a9bdd6f31630c6821c91ab
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -34,6 +34,40 @@ série M · la puce elle-même, antenne à nu.*
 Les valeurs mesurées ne restent pas dans l'appareil : un TD ou un poids atterrit
 dans le profil de la bobine et peut vivre **dans le protocole TigerTag
 lui-même** — sur la puce, ou dans un fichier `.ttag`.
+
+## Des lecteurs construits par d'autres
+
+Certains makers construisent leurs propres lecteurs, qui parlent TigerTag
+directement, sans aucun de nos logiciels dans la boucle. **BambuTagger**
+([bambutagger.de](https://www.bambutagger.de/en/)) est un projet open source
+allemand qui publie des lecteurs de bobines à base d'ESP32 — sources sur
+GitHub, boîtiers imprimables, fichiers de PCB et firmware, le tout
+gratuitement. Deux de ses appareils annoncent la prise en charge de TigerTag :
+
+| Appareil | Ce que c'est | Ce qu'il fait avec TigerTag |
+|---|---|---|
+| **[BT-Touch](https://www.bambutagger.de/en/bt-touch)** | Un appareil sur batterie avec un écran tactile 5″ 800×480 — ESP32-S3 et un lecteur RC522 — qui stocke plus de 2000 puces en local | **Lit, clone et écrit** les TigerTag, aux côtés des puces Bambu Lab, Spoolease, OpenSpool et OpenTag3D |
+| **[BT-AMS-C](https://www.bambutagger.de/en/bt-ams)** | Un lecteur à quatre emplacements qui se monte sur un AMS Bambu Lab — ESP32 avec 4× RC522, écrans OLED et TFT, LED adressables. Il affiche l'état des slots de l'AMS en direct et **envoie les données des puces à l'imprimante / au BMCU** | Lit les cinq mêmes familles de puces, une par emplacement |
+
+Deux points sur lesquels il faut être précis.
+
+**Ce sont des produits compatibles, pas certifiés.** Un tiers peut dire
+*« compatible with TigerTag »* librement, sans demander l'autorisation à
+personne — c'est exactement de cela qu'il s'agit, et c'est tout l'intérêt d'un
+format ouvert. Ce n'est pas *certifié* : la certification est un audit que
+TigerSystem accorde, et aucun de ces deux appareils n'y est passé. La
+différence est expliquée dans
+[la politique de marque](../../TRADEMARK.md).
+
+**Cloner une puce n'est pas une faille du format.** Une TigerTag standard ne
+porte aucune authentification et n'est jamais verrouillée en écriture : la
+copier est attendu — c'est la même propriété qui vous permet de réécrire vos
+propres puces. Ce qu'une copie ne peut pas porter, c'est une signature
+[TigerTag+](../products/tigertag-plus.md) valide : une puce clonée échoue à la
+vérification, sur le téléphone du client, hors ligne.
+
+Que de tels appareils existent sans nous est la mesure du format : rien ne
+nous a été demandé, aucune clé n'a été nécessaire, aucun accord n'a été signé.
 
 ## Votre matériel ici
 

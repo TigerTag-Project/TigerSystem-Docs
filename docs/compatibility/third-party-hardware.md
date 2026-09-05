@@ -30,6 +30,38 @@ Measured values don't stay in the device: a TD or a weight lands in the
 spool's profile and can live **in the TigerTag protocol itself** — on the
 chip, or in a `.ttag` file.
 
+## Readers built by other people
+
+Some makers build their own readers that speak TigerTag directly, without any
+of our software in the loop. **BambuTagger**
+([bambutagger.de](https://www.bambutagger.de/en/)) is a German open-source
+project publishing ESP32-based spool readers — sources on GitHub, printable
+cases, PCB files and firmware, all free. Two of its devices declare TigerTag
+support:
+
+| Device | What it is | What it does with TigerTag |
+|---|---|---|
+| **[BT-Touch](https://www.bambutagger.de/en/bt-touch)** | A battery-powered unit with a 5″ 800×480 touchscreen — ESP32-S3 and one RC522 reader — storing over 2000 tags locally | **Reads, clones and writes** TigerTag, alongside Bambu Lab, Spoolease, OpenSpool and OpenTag3D tags |
+| **[BT-AMS-C](https://www.bambutagger.de/en/bt-ams)** | A four-slot reader that mounts on a Bambu Lab AMS — ESP32 with 4× RC522, OLED and TFT displays, addressable LEDs. Shows live AMS slot data and **sends tag data to the printer / BMCU** | Reads the same five tag families, one per slot |
+
+Two things worth being precise about.
+
+**These are compatible, not certified.** A third party may say *"compatible
+with TigerTag"* freely and without asking anyone — that is exactly what this
+is, and it is the whole point of an open format. It is not *certified*:
+certification is an audit that TigerSystem grants, and neither device has been
+through one. The difference is explained in
+[the trademark policy](../../TRADEMARK.md).
+
+**Cloning a chip is not a hole in the format.** A standard TigerTag carries no
+authentication and is never write-locked, so copying one is expected — it is
+the same property that lets you rewrite your own chips. What a copy cannot
+carry is a valid [TigerTag+](../products/tigertag-plus.md) signature: a cloned
+tag fails verification on the customer's own phone, offline.
+
+That devices like these exist without us is the measure of the format: nothing
+was asked of us, no key was needed, no agreement was signed.
+
 ## Your hardware here
 
 Building or connecting a device? The protocol is open, the
