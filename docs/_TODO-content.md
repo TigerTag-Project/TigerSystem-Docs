@@ -17,6 +17,28 @@
   under a heading, a diagram and a bullet list that all say four. Corrected to
   four. This exact sentence made an outside reader publish the wrong model.
 
+## Also fixed: the trademark was documented as more closed than it is
+
+Reading the RFID guide's `TRADEMARK.md` and `CERTIFICATION.md` — which are far
+more precise than this repository's summary was — turned up a systematic
+understatement in four places. All corrected:
+
+- **Referential logo use is free** and was documented nowhere. Anyone may show
+  the TigerTag logo, unmodified, in an app, documentation or store listing to
+  say their product works with TigerTag. What needs a licence is applying the
+  mark **on** a chip, carrier, spool or packaging, where it asserts origin
+  rather than compatibility. `TRADEMARK.md`, `developers/README.md`,
+  `products/tigertag.md` and `glossary.md` all said only the restrictive half.
+- **`TigerTag Compatible` is a named tier** in the guide's certification model
+  and appeared nowhere here; only `TigerTag Certified` was documented. Added to
+  the glossary as the free tier beside the licensed one.
+- **Reselling** was undocumented. Official chips are made by TigerSystem and
+  already carry the mark; a distributor listing them as official product is not
+  applying the mark.
+- The root `TRADEMARK.md` now defers to the guide for the detailed policy
+  rather than paraphrasing it — two full trademark notices in two repositories
+  had already drifted apart, which is exactly what rule 3 exists to prevent.
+
 ## Broken or misleading content
 
 | Where | What | Suggested fix |

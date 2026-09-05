@@ -76,12 +76,14 @@ Who may say what, when a chip is for sale:
 |---|---|---|---|
 | **TigerSystem** | the chips it manufactures | official product | yes — it applies the mark |
 | **Any reseller or distributor** | those same genuine chips | **official product** | yes — the mark is already on the goods |
-| **Anyone making their own chip** | their own compatible chip | *"compatible with TigerTag"*, and nothing beyond that | **no** |
+| **Anyone making their own chip** | their own compatible chip | *"compatible with TigerTag"* | in their app, docs and store listing — **never on the chip, carrier, spool or packaging** |
 
-The third row is not a restriction on the protocol — it is the only thing the
-trademark reserves. Implementing TigerTag needs no permission, ever; putting
-the TigerTag logo on a chip you made yourself does. See
-[TRADEMARK.md](../../TRADEMARK.md).
+That last distinction is the whole trademark policy, and it is narrower than it
+looks. Saying your product *talks to* TigerTag is a fact about your product,
+and showing the logo to say so is free. Putting the mark **on** a chip is a
+statement about **who made it** — it stops meaning "this works with TigerTag"
+and starts meaning "this *is* a TigerTag". Only that second use needs written
+authorization. See [TRADEMARK.md](../../TRADEMARK.md).
 
 More than **2.5 million TigerTag chips** have been produced — most integrated
 at the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —

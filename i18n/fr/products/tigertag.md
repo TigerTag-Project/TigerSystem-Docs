@@ -1,5 +1,5 @@
 ---
-sourceHash: 15aca6ca265faa7aa0a2b4bc52fed0c6bf364aa7760b50e582b57957d350773c
+sourceHash: 7425ebd4472b105cc5b30e95e2e781894c4674b265933ed7d6043fde51a49fb6
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -86,12 +86,15 @@ Qui a le droit de dire quoi, lorsqu'une puce est mise en vente :
 |---|---|---|---|
 | **TigerSystem** | les puces qu'il fabrique | produit officiel | oui — c'est lui qui appose la marque |
 | **Tout revendeur ou distributeur** | ces mêmes puces authentiques | **produit officiel** | oui — la marque est déjà sur la marchandise |
-| **Quiconque fabrique sa propre puce** | sa propre puce compatible | *« compatible with TigerTag »*, et rien de plus | **non** |
+| **Quiconque fabrique sa propre puce** | sa propre puce compatible | *« compatible with TigerTag »* | dans son application, sa documentation et sa fiche produit — **jamais sur la puce, le carrier, la bobine ou l'emballage** |
 
-La troisième ligne n'est pas une restriction du protocole — c'est la seule
-chose que la marque réserve. Implémenter TigerTag ne demande aucune
-autorisation, jamais ; apposer le logo TigerTag sur une puce que vous avez
-fabriquée, si. Voir [TRADEMARK.md](../../TRADEMARK.md).
+Cette dernière distinction constitue toute la politique de marque, et elle est
+plus étroite qu'il n'y paraît. Dire que votre produit *dialogue avec* TigerTag
+est un fait sur votre produit, et montrer le logo pour le dire est libre.
+Apposer la marque **sur** une puce est une affirmation sur **qui l'a
+fabriquée** : elle cesse de signifier « ceci fonctionne avec TigerTag » pour
+signifier « ceci *est* un TigerTag ». Seul ce second usage demande une
+autorisation écrite. Voir [TRADEMARK.md](../../TRADEMARK.md).
 
 Plus de **2,5 millions de puces TigerTag** ont été produites — la plupart
 intégrées en usine par des marques de filament (Rosa3D, eSun, Sunlu, Landu,
