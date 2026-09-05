@@ -89,17 +89,26 @@ there is no plan question to settle.
    project existed*. A branch pushed beforehand shows "No deployments found" —
    the fix is one new commit on it, not a settings change.
 
-## 2. Point the domain
+## 2. Point the domain — done
 
-In the Vercel project → **Settings → Domains**, add `wiki.tigersystem.io`, then
-create the record Vercel shows at the DNS provider for `tigersystem.io`:
+`wiki.tigersystem.io` is live on the project, with a Let's Encrypt certificate
+issued automatically once the record resolved.
+
+The DNS zone for `tigersystem.io` is hosted at **OVH** (nameservers
+`dns200.anycast.me` / `ns200.anycast.me`). One record was added, and nothing
+else in the zone was touched — the apex, `www`, `ftp`, MX, SPF and the Google
+verification TXT are all as they were:
 
 ```
-wiki   CNAME   cname.vercel-dns.com.
+wiki   IN CNAME   5608b18e15dc6bb6.vercel-dns-016.com.
 ```
 
-Vercel issues the certificate once the record resolves. Leave the apex and `www`
-alone — they belong to TigerHub.
+That target is the per-project name Vercel now generates; the legacy
+`cname.vercel-dns.com` still works but is no longer what the dashboard hands
+out. If the domain is ever re-added, read the value from Vercel again rather
+than copying the one above.
+
+The apex and `www` belong to TigerHub and were deliberately left alone.
 
 ## 3. Environment variables
 
