@@ -14,3 +14,6 @@ public/
 # Local secrets (ANTHROPIC_API_KEY for scripts/translate.mjs, giscus ids)
 .env
 .env.local
+
+# Visual QA output (scripts/screenshots.mjs)
+.screenshots/
