@@ -9,6 +9,21 @@ The TigerTag Project claims the following trademarks:
  manufacturers shipping TigerTags in their products; and third-party apps
  (mobile or desktop) whose integration of the protocol is verified correct
 
+Three words, and they are not interchangeable. They answer one question —
+**who made this, and did we check it?**
+
+| | Who made it | Verified by TigerSystem | Example |
+|---|---|---|---|
+| **Official** | **TigerSystem itself** | n/a — it is ours | the TigerTag chips, in both form factors; Tiger Studio; TigerPOD |
+| **Certified** | a **third party**, **validated** by TigerSystem | **yes** — audit, written authorization, listed in the certified registry | a filament brand shipping TigerTags; an inlay or carrier producer |
+| **Compatible** | a **third party**, **unverified** | **no** — self-declared, no test, no permission asked or given | a reader, an app, a slicer, anyone's own NTAG chip |
+
+*Official* is a statement of origin, not a mark we grant — we do not certify
+ourselves. *Certified* is granted and can be withdrawn. *Compatible* is free
+and always will be: it is the tier the protocol is designed to be entered
+through, and nothing technical is withheld from it. Criteria for the middle
+row: [CERTIFICATION.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md).
+
 Usage — the two-gates model:
 
 - **Anyone** may implement the protocol and say *"compatible with
