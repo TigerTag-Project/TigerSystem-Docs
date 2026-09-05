@@ -1,5 +1,5 @@
 ---
-sourceHash: 22a9657601cc1f393f5b42b40e801a4b748c08264ecec60575793047ce028136
+sourceHash: e06d887e6bc2f9aa8b9d93a89accadfc3384db4aaa31fb306ad3e4a4a67291c3
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -28,10 +28,27 @@ flowchart LR
   ST -- "spool auto-opens · guided writes" --> YOU["You"]
 ```
 
+## De quoi il est fait
+
+Le STL, c'est la coque ; voici les pièces qui vont dedans. Rien n'est exclusif —
+n'importe quel lecteur de la classe ACR122U et n'importe quel séparateur USB-C
+conviennent — mais c'est la combinaison autour de laquelle la coque est dessinée :
+
+| Pièce | Quantité | Ce que c'est |
+|---|---|---|
+| **TigerTag Player** | **2** | Le lecteur NFC USB — un appareil de la classe ACR122U. Un par face, pour atteindre les deux puces de la bobine en un seul passage. |
+| **TigerTag Spliter** | 1 | USB-C vers 2× USB-A, pour que les deux lecteurs rejoignent l'ordinateur sur un seul port et puissent être programmés en parallèle. |
+| **La coque imprimée** | 1 | Standard ou **Mini**, selon la place que vous voulez lui donner sur le bureau. |
+
+> **Note :** les lecteurs et le séparateur sont vendus séparément ; la coque est
+> un téléchargement gratuit. En assembler un soi-même ou en acheter un
+> pré-assemblé donne exactement le même appareil.
+
 ## Caractéristiques
 
 - Coque imprimable en 3D — **STL gratuit sur
- [MakerWorld](https://makerworld.com/en/models/1289152)**.
+ [MakerWorld](https://makerworld.com/en/models/1289152)**, en taille
+ **Standard** et **Mini**.
 - Accueille deux lecteurs USB de la classe ACR122U (stations de lecture et
  d'écriture).
 - Prêt à l'emploi avec [Tiger Studio](./tiger-studio.md) : scanner une puce
