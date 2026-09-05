@@ -1,0 +1,15 @@
+# Makes this repository its own pnpm workspace root, so an install here never
+# reaches up into a parent workspace on a contributor's machine.
+packages:
+  - '.'
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+
+# Astro's prerenderer imports `cookie` from the generated bundle in dist/, which
+# Node resolves by walking up the filesystem. Hoisting it into the top-level
+# node_modules pins that lookup to the version this project installed, instead of
+# whatever a parent directory happens to expose.
+publicHoistPattern:
+  - cookie
