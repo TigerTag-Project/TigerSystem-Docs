@@ -1,5 +1,5 @@
 ---
-sourceHash: e1e19c76c01171257de40caec0342d9a0307461c5357076a31eff8b83da6ee68
+sourceHash: 517f902e8e9843c532564cab6bd635eb1e0ef1e0a124f447f6b71b9da5b7579a
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -86,7 +86,7 @@ Qui a le droit de dire quoi, lorsqu'une puce est mise en vente :
 |---|---|---|---|
 | **TigerSystem** | les puces qu'il fabrique | **officiel** — c'est nous | oui — c'est lui qui appose la marque |
 | **Tout revendeur ou distributeur** | ces mêmes puces authentiques | **officiel** — la marchandise l'est | oui — la marque est déjà dessus |
-| **Un tiers validé par TigerSystem** | ses propres puces, inlays ou carriers | **certifié** — accordé, audité, référencé | oui, sur le produit |
+| **Un tiers audité par TigerSystem** | tout ce qu'il a fabriqué — puces, inlays, carriers, un appareil, une application | **certifié** — accordé, audité, référencé, retirable | oui, sur le produit |
 | **Quiconque fabrique sa propre puce** | sa propre puce compatible | *« compatible with TigerTag »* — et avec **TigerTag+** s'il vérifie les signatures. Jamais *« certified »*, que seul TigerSystem accorde | dans son application, sa documentation et sa fiche produit — **jamais sur la puce, le carrier, la bobine ou l'emballage** |
 
 Cette dernière distinction constitue toute la politique de marque, et elle est

@@ -377,12 +377,17 @@ logo in your interface, your documentation and your store listing. Most
 third-party products belong here, and nothing about the protocol is withheld
 from them.
 
-**TigerTag Certified** is the other tier, and it is for things that **are** a
-TigerTag rather than things that read one: filament and resin manufacturers,
-inlay and carrier producers, and machine makers whose product **writes**
-TigerTag identities. It is granted, not claimed — written authorization, an
-audit, a listing in the certified registry, and the right to put the mark **on
-the product, the chip and the packaging**. Full criteria:
+**TigerTag Certified** is the other tier, and it is open to **anything a third
+party builds** — a device, an application, filament, an inlay, a carrier — that
+**passes an audit** against the requirements. It is granted, not claimed:
+written authorization, a listing in the certified registry, and the right to
+put the mark **on the product, the chip and the packaging**. It comes in two
+scopes, **TigerTag Certified** and **TigerTag+ Certified**, the second covering
+products whose handling of signed tags has been verified.
+
+The difference between the tiers is not what your product *is* — it is whether
+anyone checked. Compatible says *"it works"*, on your word. Certified says
+*"we tested it"*, on ours, and it can be withdrawn. Full criteria:
 [CERTIFICATION.md](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). Reach out through the
 [GitHub organization](https://github.com/TigerTag-Project).
 
