@@ -1,13 +1,14 @@
 ---
-title: TigerSystem
+title: The open filament identity
 description: The open NFC identity for 3D-printing filament — what TigerTag is, what runs on it, and how to build your own thing with it.
 template: splash
 editUrl: false
 hero:
+  title: TigerSystem
   tagline: Your filament, finally smart — and finally yours. One small open NFC chip, and a spool can finally introduce itself.
   image:
     html: |
-      <img src="/assets/logos/tigertag-badge-contained.svg" alt="" width="220" height="220" />
+      <img src="/assets/hero-tigersystem-ecosystem.png" alt="Tiger Studio on a desktop, a TigerPOD reader holding a tagged spool, and the mobile app" width="720" height="480" />
   actions:
     - text: Your first smart spool
       link: /tutorials/first-smart-spool/

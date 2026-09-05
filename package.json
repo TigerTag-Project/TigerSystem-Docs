@@ -26,6 +26,8 @@
     "sharp": "^0.34.4"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.123.0",
+    "playwright": "^1.62.1",
     "starlight-links-validator": "^0.26.0"
   }
 }

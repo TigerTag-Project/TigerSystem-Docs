@@ -1,11 +1,9 @@
 // @ts-check
-import { unified } from '@astrojs/markdown-remark';
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 import starlightLinksValidator from 'starlight-links-validator';
 
 import { REPO_URL, SITE_URL } from './scripts/lib/docs-config.mjs';
-import { remarkMermaidPre } from './scripts/lib/remark-mermaid-pre.mjs';
 import { sidebar } from './src/sidebar.mjs';
 
 // https://astro.build/config
@@ -13,10 +11,6 @@ export default defineConfig({
   site: SITE_URL,
   trailingSlash: 'always',
   build: { format: 'directory' },
-
-  // Mermaid blocks are handed to the browser as <pre class="mermaid"> and drawn
-  // client-side — see the plugin for why this is not `rehype-mermaid`.
-  markdown: unified({ remarkPlugins: [remarkMermaidPre] }),
 
   integrations: [
     starlight({
@@ -59,6 +53,9 @@ export default defineConfig({
       plugins: [
         starlightLinksValidator({
           errorOnRelativeLinks: false,
+          // A page with no translation yet is still served in that locale:
+          // Starlight falls back to the English content and labels it as such.
+          errorOnFallbackPages: false,
           // Files served straight out of public/ (assets, press archives, the
           // swatch playground) are not pages; sync-docs --check validates them.
           exclude: ['/assets/**', '/press/*.zip', '/developers/*.html', '/llms.txt'],

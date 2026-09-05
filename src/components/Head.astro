@@ -15,9 +15,45 @@ import Default from '@astrojs/starlight/components/Head.astro';
    */
   const SOURCE = new WeakMap<HTMLElement, string>();
 
-  function currentTheme(): 'dark' | 'default' {
-    return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default';
+  function isDark() {
+    return document.documentElement.dataset.theme === 'dark';
   }
+
+  /**
+   * Mermaid's stock themes are lavender; these follow the site's own neutrals so a
+   * diagram reads as part of the page in either theme. `base` + variables is the
+   * only mermaid theme that takes a full override.
+   */
+  const PALETTE = {
+    dark: {
+      background: 'transparent',
+      primaryColor: '#16222c',
+      primaryTextColor: '#e7eaef',
+      primaryBorderColor: '#3c4c59',
+      secondaryColor: '#1d2c37',
+      tertiaryColor: '#111b22',
+      lineColor: '#7d8996',
+      textColor: '#c3c7d1',
+      clusterBkg: '#0f1920',
+      clusterBorder: '#2a3742',
+      edgeLabelBackground: '#0b1319',
+      nodeBorder: '#3c4c59',
+    },
+    light: {
+      background: 'transparent',
+      primaryColor: '#f3f6f8',
+      primaryTextColor: '#16202a',
+      primaryBorderColor: '#c2ccd6',
+      secondaryColor: '#e9eef2',
+      tertiaryColor: '#fbfcfd',
+      lineColor: '#78848f',
+      textColor: '#3c4650',
+      clusterBkg: '#f7f9fa',
+      clusterBorder: '#dde3e9',
+      edgeLabelBackground: '#ffffff',
+      nodeBorder: '#c2ccd6',
+    },
+  };
 
   async function render() {
     const nodes = Array.from(document.querySelectorAll<HTMLElement>('pre.mermaid'));
@@ -33,11 +69,14 @@ import Default from '@astrojs/starlight/components/Head.astro';
 
     mermaid.initialize({
       startOnLoad: false,
-      theme: currentTheme(),
+      theme: 'base',
       securityLevel: 'strict',
       fontFamily: 'var(--sl-font)',
-      themeVariables: { fontSize: '15px' },
-      flowchart: { curve: 'basis', useMaxWidth: true },
+      themeVariables: { fontSize: '15px', ...(isDark() ? PALETTE.dark : PALETTE.light) },
+      // Wide maps stay readable and scroll inside their <pre> rather than being
+      // shrunk to an illegible thumbnail.
+      flowchart: { curve: 'basis', useMaxWidth: false },
+      sequence: { useMaxWidth: false },
     });
 
     try {
@@ -49,10 +88,10 @@ import Default from '@astrojs/starlight/components/Head.astro';
   }
 
   function watchTheme() {
-    let theme = currentTheme();
+    let dark = isDark();
     new MutationObserver(() => {
-      if (currentTheme() === theme) return;
-      theme = currentTheme();
+      if (isDark() === dark) return;
+      dark = isDark();
       void render();
     }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   }

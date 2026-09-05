@@ -170,6 +170,10 @@
   background: color-mix(in srgb, var(--ts-orange) 12%, transparent);
 }
 
+.ts-card__icon--neutral {
+  background: color-mix(in srgb, var(--sl-color-gray-4) 16%, transparent);
+}
+
 .ts-card__icon img {
   width: 1.3rem;
   height: 1.3rem;
@@ -290,8 +294,9 @@
   color: inherit;
 }
 
+/* Diagrams keep their natural size; the container scrolls when they are wider
+   than the column, which beats shrinking a dense map into a thumbnail. */
 .sl-markdown-content pre.mermaid svg {
-  max-width: 100%;
   height: auto;
 }
 
@@ -300,12 +305,26 @@
 /* -------------------------------------------------------------------------- */
 
 :root {
-  --sl-color-banner-bg: color-mix(in srgb, var(--ts-orange) 18%, var(--sl-color-bg));
+  --sl-color-banner-bg: color-mix(in srgb, var(--ts-orange) 16%, var(--sl-color-bg));
 }
 
+/* Starlight paints banner text with its inverted colour, which disappears against
+   a tinted background — the notice has to be legible in both themes. */
 .sl-banner {
   font-size: var(--sl-text-sm);
-  border-bottom: 1px solid color-mix(in srgb, var(--ts-orange) 35%, transparent);
+  color: var(--sl-color-white);
+  border-bottom: 1px solid color-mix(in srgb, var(--ts-orange) 40%, transparent);
+  text-shadow: none;
+}
+
+.sl-banner a {
+  color: inherit;
+  text-decoration-color: var(--ts-orange);
+  text-underline-offset: 0.2em;
+}
+
+.sl-banner a:hover {
+  text-decoration-color: currentColor;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -327,4 +346,10 @@
   margin: 0 0 1.25rem;
   font-size: var(--sl-text-sm);
   color: var(--sl-color-gray-3);
+}
+
+/* Dense comparison matrices read better when the row label stays on one line and
+   the table scrolls instead of squeezing every cell. */
+.sl-markdown-content table :is(td, th):first-child {
+  white-space: nowrap;
 }

@@ -184,7 +184,14 @@ function findTable(lines, fenced) {
 
 function cardHtml({ icon, title, href, description, badge }) {
   const parts = ['<a class="ts-card" href="', escapeAttr(href), '">'];
-  if (icon) parts.push(`<span class="ts-card__icon"><img src="${escapeAttr(icon)}" alt="" loading="lazy" /></span>`);
+  if (icon) {
+    // Product icons are drawn in the brand orange and sit well on a tinted tile;
+    // printer-maker marks are neutral grey and should not be tinted.
+    const kind = icon.includes('/brands/') ? ' ts-card__icon--neutral' : '';
+    parts.push(
+      `<span class="ts-card__icon${kind}"><img src="${escapeAttr(icon)}" alt="" loading="lazy" /></span>`,
+    );
+  }
   parts.push('<span class="ts-card__body">');
   parts.push(`<span class="ts-card__title">${escapeText(title)}</span>`);
   if (badge) parts.push(`<span class="ts-card__badge">${escapeText(badge)}</span>`);
@@ -250,6 +257,44 @@ export function applyCardGrid(lines, fenced, fileRel, problems) {
   return config.mode === 'replace-table'
     ? [...before, ...grid, '', ...after]
     : [...before, ...grid, '', ...original, ...after];
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mermaid                                                                     */
+/* -------------------------------------------------------------------------- */
+
+const MERMAID_OPEN = /^\s{0,3}(`{3,}|~{3,})\s*mermaid\s*$/;
+const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;' };
+
+/**
+ * Turn ```mermaid fences into <pre class="mermaid"> blocks the browser draws.
+ *
+ * Done here rather than as a remark plugin because Starlight's Expressive Code
+ * claims code fences first and would render the diagram as highlighted source.
+ * A <pre> is a CommonMark HTML block that runs to its closing tag, so the
+ * diagram source survives verbatim, blank lines included.
+ */
+function inlineMermaid(lines, fenced) {
+  const out = [];
+  for (let i = 0; i < lines.length; i += 1) {
+    const open = MERMAID_OPEN.exec(lines[i]);
+    if (!open || !fenced[i]) {
+      out.push(lines[i]);
+      continue;
+    }
+    const marker = open[1];
+    const close = new RegExp(`^\\s{0,3}${marker[0]}{${marker.length},}\\s*$`);
+    let end = i + 1;
+    while (end < lines.length && !close.test(lines[end])) end += 1;
+
+    out.push('<pre class="mermaid">');
+    for (const line of lines.slice(i + 1, end)) {
+      out.push(line.replace(/[&<>]/g, (char) => HTML_ESCAPES[char]));
+    }
+    out.push('</pre>');
+    i = end;
+  }
+  return out;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -368,6 +413,11 @@ export function transformDoc({ source, fileRel, locale }) {
   lines = lines.map((line, index) =>
     fenced[index] ? line : rewriteLinks(line, fileRel, locale, problems, links),
   );
+
+  // 6. Hand the mermaid diagrams to the browser. Last, so link rewriting never
+  //    looked at diagram source in the first place.
+  lines = inlineMermaid(lines, fenced);
+  fenced = markFences(lines);
 
   // Collapse the blank runs left behind by the removed headings and footers,
   // taking care not to reflow anything inside a code block.
