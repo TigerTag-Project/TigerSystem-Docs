@@ -13,24 +13,46 @@ The team is **Tiger-Project (Pro)**, which already hosts `tiger-tag-hub`
 (tigersystem.io) and `tiger-tag-manager`. The wiki is a third project on it, so
 there is no plan question to settle.
 
-> **Before anything else — the Git scope.** On `vercel.com/new`, the "Import Git
-> Repository" scope selector offers **Atome3D only**, and searching for
-> `TigerSystem` there returns nothing: the repository belongs to the
-> **TigerTag-Project** GitHub account, which this Vercel login cannot see. The
-> Vercel GitHub App *is* installed on TigerTag-Project with access to all
-> repositories — the missing link is on the Vercel side, not GitHub's.
+> **Before anything else — import from the right Vercel account.**
 >
-> Fix it with **Add GitHub Scope** in that same selector, and pick
-> **TigerTag-Project** in the GitHub window it opens. It has to be started from
-> Vercel: the flow carries a state token, so opening
-> `github.com/apps/vercel/installations/new` directly just lands on the existing
-> installation's settings page and changes nothing.
+> Vercel builds the importable repository list from the GitHub identity linked
+> to *your Vercel login*, not from whichever GitHub account the browser happens
+> to be signed into. Those are two different things here:
+>
+> | | |
+> |---|---|
+> | `TigerSystem-Docs` is owned by | the GitHub **user** account `TigerTag-Project` |
+> | `benoit@atome3d.com`'s Vercel login is linked to | the GitHub account **Atome3D** |
+> | The Vercel GitHub App on `TigerTag-Project` | installed, access to **all repositories** |
+>
+> So on `vercel.com/new` the scope selector offers Atome3D only, searching for
+> `TigerSystem` returns nothing, and **Add GitHub Scope → TigerTag-Project
+> appears to do nothing**: it confirms an installation that already exists for
+> the *browser's* GitHub user, then Vercel looks the repository up under
+> Atome3D and still cannot see it. It is not a bug and retrying will not help.
+>
+> **Import from the team Owner account instead** — `tigertagdb-6014`
+> (tigertagdb@gmail.com). That is the account the two existing projects,
+> `tiger-tag-hub` and `tiger-tag-manager`, were created from, and both are
+> connected to `TigerTag-Project` repositories. Sign in to Vercel as that
+> account, import into the same **Tiger-Project** team, and the rest of this
+> runbook applies unchanged.
+>
+> The alternative — relinking `benoit@atome3d.com`'s GitHub sign-in from
+> Atome3D to TigerTag-Project, under Account → Authentication — also works, but
+> it changes the identity that account signs in with and can disturb its other
+> projects. Not worth it for one import.
 >
 > **Do not** paste the repository URL into the "enter a Git repository URL" box
 > at the top of the page as a workaround. That is the *clone* flow: it creates a
 > **new private copy** of the repository under Atome3D and deploys that. It
 > would split the source of truth in two, which is the one thing this whole
 > setup exists to prevent.
+>
+> Worth separating from today's task: the ecosystem's source of truth lives in a
+> **personal GitHub user account**, not an Organization. Moving it to an org
+> would retire this whole class of access problem, along with the transfer and
+> bus-factor questions that come with a personal account.
 
 1. Vercel → **Add New… → Project** → import `TigerTag-Project/TigerSystem-Docs`.
 2. Vercel detects Astro. Confirm the settings; nothing needs overriding:
