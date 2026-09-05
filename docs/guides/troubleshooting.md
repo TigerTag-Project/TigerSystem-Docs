@@ -40,12 +40,12 @@ Snapmaker U1 running the community firmware — see
 six integrated brands **through Tiger Studio**. Check where your machine
 stands in the [compatibility matrix](../compatibility/README.md).
 
-## TigerTag+ verification fails
+## TigerTag+ Certified verification fails
 
 | Cause | What to do |
 |---|---|
 | Stale reference data | Verification resolves against the shared reference database. Update the app / let it sync, then re-scan. |
-| Data was rewritten after signing | **Expected behaviour.** Rewriting the signed area invalidates the signature; the chip keeps working as a standard TigerTag ([TigerTag+](../products/tigertag-plus.md)). |
+| Data was rewritten after signing | **Expected behaviour.** Rewriting the signed area invalidates the signature; the chip stays fully readable — it is simply no longer certified ([TigerTag+](../products/tigertag-plus.md)). |
 | Data was copied onto another chip | **By design.** The chip's factory-locked UID is part of what's signed — a clone can never verify. |
 
 Only the first row is fixable; the other two are the trust model doing its
