@@ -77,9 +77,17 @@ there is no plan question to settle.
 
 3. **`main` has no site until `feat/docs-site` is merged.** A production build
    of `main` fails with "no package.json" — expected, not a misconfiguration.
-   Either merge first, or set **Production Branch** to `feat/docs-site` in
-   Settings → Git to see the site now and switch it back to `main` after the
-   merge.
+
+   > **Current state of the project:** branch tracking is temporarily set to
+   > **`feat/docs-site`** (Settings → Environments → Production → Branch
+   > Tracking) so the site is visible before the merge.
+   >
+   > **After merging, set it back to `main`.** Leaving it on a feature branch
+   > means production follows a branch that will eventually be deleted.
+
+   Note that Vercel only builds a branch it has seen a push on *since the
+   project existed*. A branch pushed beforehand shows "No deployments found" —
+   the fix is one new commit on it, not a settings change.
 
 ## 2. Point the domain
 
