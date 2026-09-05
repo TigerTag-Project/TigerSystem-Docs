@@ -27,6 +27,14 @@ High-level, non-dated intentions (details live per product):
  (wishlists, friends, sharing).
 - **Documentation** — fill the TODO placeholders across this repo (tutorials,
  guides, manufacturer onboarding, RFID payload summary).
+- **Documentation languages** — the wiki at
+ [wiki.tigersystem.io](https://wiki.tigersystem.io) ships in **English and
+ French** first: English is the source of truth, French is derived from it and
+ reviewed. Once both are complete and the pages have stopped moving, the
+ remaining [tigersystem.io](https://tigersystem.io) locales follow —
+ **German, Spanish, Italian, Polish, Portuguese and Chinese** — so the
+ documentation lines up with the rest of the ecosystem. Adding them earlier
+ would mean maintaining nine copies of pages that are still being written.
 
 ## Detailed roadmaps
 
