@@ -106,6 +106,15 @@ function frenchBanner(docRelPath) {
   );
 }
 
+/** Bookkeeping keys the translator writes are for the repository, not for Starlight. */
+const TRANSLATION_KEYS = /^(?:sourceHash|sourcePath):/;
+
+function passthroughFrontmatter(frontmatter) {
+  if (!frontmatter) return null;
+  const kept = frontmatter.split('\n').filter((line) => !TRANSLATION_KEYS.test(line.trim()));
+  return kept.join('\n').trim() || null;
+}
+
 async function syncLocale(locale) {
   const sourceRoot = locale === DEFAULT_LOCALE ? DOCS : path.join(I18N, locale);
   const outRoot = locale === DEFAULT_LOCALE ? CONTENT : path.join(CONTENT, locale);
@@ -144,7 +153,7 @@ async function syncLocale(locale) {
       locale === DEFAULT_LOCALE
         ? null
         : ['banner:', `  content: ${yamlString(frenchBanner(fileRel))}`].join('\n'),
-      result.frontmatter || null,
+      passthroughFrontmatter(result.frontmatter),
       '---',
     ]
       .filter(Boolean)
@@ -212,12 +221,21 @@ function normalizeSlug(value) {
 }
 
 async function runChecks() {
-  // 1. Every internal link resolves to something the site serves.
+  // 1. Every internal link resolves to something the site serves. A page that has
+  //    no translation yet is still served in that locale: Starlight falls back to
+  //    the default-locale content and says so on the page.
+  const isServed = (url) => {
+    if (served.has(url) || served.has(url.replace(/\/$/, ''))) return true;
+    const locale = LOCALES.find((code) => code !== DEFAULT_LOCALE && url.startsWith(`/${code}/`));
+    if (!locale) return false;
+    const source = url.slice(locale.length + 1) || '/';
+    return served.has(source) || served.has(source.replace(/\/$/, ''));
+  };
+
   const broken = [];
   for (const link of internalLinks) {
     const url = link.url.split('#')[0].split('?')[0];
-    if (served.has(url)) continue;
-    if (served.has(url.replace(/\/$/, ''))) continue;
+    if (isServed(url)) continue;
     broken.push(`${link.locale}:${link.from} → ${link.url}`);
   }
   if (broken.length) {

@@ -65,6 +65,9 @@ export const CARD_GRIDS = {
   },
 };
 
-/** Line prefixes of the hand-maintained "Previous / Index / Next" footers. */
-export const NAV_FOOTER_SEGMENT =
-  /^\*\*(?:◀\s*Previous:?|▲\s*\[Documentation index|Next\s*▶)/;
+/**
+ * The hand-maintained "Previous / Index / Next" footer segments, matched by their
+ * arrows rather than their wording so the French pages are recognised too.
+ * The "Related:" line carries real information and is deliberately not matched.
+ */
+export const NAV_FOOTER_SEGMENT = /^\*\*(?:◀|▲\s*\[|[^*]*▶\*\*)/;
