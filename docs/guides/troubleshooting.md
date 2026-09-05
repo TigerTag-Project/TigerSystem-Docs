@@ -51,6 +51,19 @@ stands in the [compatibility matrix](../compatibility/README.md).
 Only the first row is fixable; the other two are the trust model doing its
 job.
 
+## The write fails on a chip that already holds other data
+
+A blank chip writes first try; a chip that already carries **non-TigerTag
+data** sometimes doesn't — reported on the Discord since August 2025.
+
+The app is designed to detect a non-TigerTag chip and offer to **convert** it.
+If you get an error instead:
+
+1. wipe the chip back to blank with a generic NFC app (the community
+   workaround is "NFC Tools", iOS/Android),
+2. re-scan — it now behaves like a factory-blank chip and the write goes
+   through.
+
 ## A write fails midway
 
 - **Hold still.** Moving the phone or the chip during a write can interrupt it
