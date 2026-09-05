@@ -32,9 +32,11 @@ High-level, non-dated intentions (details live per product):
  French** first: English is the source of truth, French is derived from it and
  reviewed. Once both are complete and the pages have stopped moving, the
  remaining [tigersystem.io](https://tigersystem.io) locales follow —
- **German, Spanish, Italian, Polish, Portuguese and Chinese** — so the
- documentation lines up with the rest of the ecosystem. Adding them earlier
- would mean maintaining nine copies of pages that are still being written.
+ **German, Spanish, Italian, Polish, Chinese, and Portuguese in both its
+ Brazilian and European variants**, which the ecosystem treats as two separate
+ locales — so the documentation lines up with the rest of the ecosystem.
+ Adding them earlier would mean maintaining nine copies of pages that are still
+ being written.
 
 ## Detailed roadmaps
 
