@@ -17,11 +17,13 @@ Task-oriented how-to guides (shorter and more targeted than
 - **[Promote a chipless spool to a real chip](./promote-chipless-spool.md)** —
   writing a TigerData / TigerData+ record onto a physical NTAG chip (desktop +
   reader).
+- **[Publish a public list link on TigerHub](./publish-list-on-tigerhub.md)** —
+  share a read-only inventory or wishlist as a `/list/<token>` link; no app, no
+  account for the viewer.
 
 > **TODO:** more guides planned:
 >
 > - How to migrate an existing spreadsheet inventory into your TigerSystem account
-> - How to publish a public list link on TigerHub
 
 ---
 
