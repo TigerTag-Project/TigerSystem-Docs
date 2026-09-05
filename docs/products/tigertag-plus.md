@@ -30,12 +30,19 @@ tools as part of it; TigerTag holds the private key.
 
 | | TigerTag | TigerTag+ | TigerTag+ Certified |
 |---|---|---|---|
-| Print data on the chip | yes | yes | yes |
+| Print data, **on the chip** | yes | yes | yes |
 | Works fully offline | yes | yes | yes |
-| Catalogue product ID | — | **yes** | yes |
-| Optional enrichment metadata | — | **yes** | yes |
-| Origin signature | — | — | **yes** |
+| Catalogue product ID, **on the chip** | — | **yes** | yes |
+| Enrichment metadata, **cloud-side, optional** | — | **yes** | yes |
+| Origin signature, **on the chip** | — | — | **yes** |
 | Who can produce one | anyone | anyone writing a catalogue product | **a certified manufacturer only** |
+
+Read the left column carefully: the enrichment metadata is the one row that
+does **not** live on the chip. It is looked up from the catalogue when you
+happen to be online, and it can improve after the chip is written — which is
+precisely why it can never be something the chip needs. Everything the printer
+requires is in the rows marked *on the chip*, which is what keeps all three
+tiers 100 % offline.
 
 **Verifying** a signature is free, offline and unrestricted — the public keys
 are published, and any reader can check one without an account or a network.
