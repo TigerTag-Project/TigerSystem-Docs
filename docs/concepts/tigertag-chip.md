@@ -30,12 +30,17 @@ cloud sync) only ever *adds* freshness on top.
 Two chips, on opposite sides of the spool — it looks redundant, it's actually
 the smartest detail of the format:
 
-- **Printers share readers.** A machine typically has one RFID reader for two
- spools (left/right); a Bambu Lab AMS has 2 readers for 4 slots; on a
- Snapmaker the spool sits either side of the printer. With a chip on each
- side, **whatever the slot, one chip always faces the reader**.
-- **No flipping when hand-scanning.** However you grab the spool, a chip is
- facing you — tap and done.
+- **Printers share readers.** A machine typically has **one RFID reader for
+ two spool slots**, mounted **between the two** — or on the side of the
+ printer, where it reads the left or the right face depending on which slot
+ your spool is in. A Bambu Lab AMS has 2 readers for 4 slots; on a Snapmaker
+ the spool sits either side of the printer. With a chip on each side,
+ **whatever the slot, one chip always faces the reader** — and you never have
+ to load the spool a particular way round.
+- **No hunting for the chip when you scan by hand.** On a
+ [TigerPOD](../products/tigerpod.md) or with your phone, you never have to
+ work out which face carries the chip: whichever way you pick the spool up,
+ one is already on the right side for what you are doing.
 - **Scan in place.** A spool mounted on an AMS Lite, the side of an Elegoo
  Centauri Carbon or a FlashForge can be scanned without pulling it out.
 - **Integrator freedom.** A filament-dryer maker just puts the reader wherever

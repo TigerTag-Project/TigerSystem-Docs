@@ -1,5 +1,5 @@
 ---
-sourceHash: 6993072281b2570de11fb2a167891b3a1ccdadc13bf85c8826ecd440b2e72fb9
+sourceHash: f7cffb615051d1852b4578fe4535d55d7a93481eaf870b03e31b560aa4e3262e
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -36,14 +36,19 @@ jamais qu'*ajouter* de la fraîcheur par-dessus.
 Deux puces, sur les faces opposées de la bobine — cela paraît redondant, c'est
 en réalité le détail le plus astucieux du format :
 
-- **Les imprimantes partagent leurs lecteurs.** Une machine a en général un
- lecteur RFID pour deux bobines (gauche/droite) ; un AMS Bambu Lab a
+- **Les imprimantes partagent leurs lecteurs.** Une machine a en général **un
+ lecteur RFID pour deux emplacements de bobine**, placé **entre les deux** —
+ ou bien sur le flanc de l'imprimante, où il lit la face gauche ou la face
+ droite selon l'emplacement occupé par votre bobine. Un AMS Bambu Lab a
  2 lecteurs pour 4 emplacements ; sur une Snapmaker, la bobine se place d'un
  côté ou de l'autre de l'imprimante. Avec une puce de chaque côté, **quel que
- soit l'emplacement, une puce fait toujours face au lecteur**.
-- **Aucun retournement lors d'une lecture à la main.** Quelle que soit la
- façon dont vous saisissez la bobine, une puce vous fait face — vous
- approchez, c'est fait.
+ soit l'emplacement, une puce fait toujours face au lecteur** — et vous
+ n'avez jamais à charger la bobine dans un sens particulier.
+- **Rien à chercher lors d'une lecture à la main.** Sur un
+ [TigerPOD](../products/tigerpod.md) ou avec votre téléphone, vous n'avez
+ jamais à deviner de quel côté est la puce : quel que soit le sens dans
+ lequel vous saisissez la bobine, il y en a déjà une du bon côté pour ce que
+ vous faites.
 - **Lecture en place.** Une bobine montée sur un AMS Lite, sur le flanc d'une
  Elegoo Centauri Carbon ou d'une FlashForge se lit sans la démonter.
 - **Liberté pour les intégrateurs.** Un fabricant de sécheur à filament place
