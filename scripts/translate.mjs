@@ -51,9 +51,9 @@ Never translate, and reproduce byte-for-byte:
 - the contents of fenced code blocks, including Mermaid diagram source (node labels included — they are diagram identifiers, not prose);
 - inline code spans;
 - URLs, link targets, file paths, and file names — with one exception: a link to
-  a heading on the *same* page (`](#some-heading)`) must follow the translated
-  heading, because translating the heading changes its anchor. Keeping the
-  English anchor there produces a dead link;
+  a heading on the *same* page, written as a bare fragment, must follow the
+  translated heading, because translating the heading changes its anchor.
+  Keeping the English anchor there produces a dead link;
 - HTML attributes and their values;
 - product, brand and organisation names: TigerSystem, TigerTag, TigerTag+, TigerData, TigerData+, TigerHub, TigerPOD, TigerScale, Tiger Studio, Tiger NFC Connect, TigerTag Certified, TigerTag Factory, TigerTag Manager, Bambu Lab, Creality, Elegoo, Anycubic, FlashForge, Snapmaker, Klipper, Moonraker, OpenSpool, OpenRFID, Spoolman, Home Assistant, Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Atome3D, AJAX-3D;
 - technical identifiers and units: NTAG213/215/216, NDEF, NFC, RFID, UID, ECDSA, AMS, CFS, ACE, Canvas, matlStation, MMU, ESP32, PN532, RC522, ACR122U, TD-1, TD1s, .ttag, Firebase, Firestore, PLA, PETG, ABS, TPU, MQTT, MQTTS, HTTP, WebSocket, SDK, API, mm, °C, g, kg.

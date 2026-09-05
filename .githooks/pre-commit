@@ -31,6 +31,13 @@ fi
 
 root=$(git rev-parse --show-toplevel)
 
+# A script that no longer parses is a broken build nobody sees until CI says so —
+# and the two checks below never load translate.mjs, so nothing else would.
+echo "pre-commit: parsing the scripts…"
+for script in "$root"/scripts/*.mjs "$root"/scripts/lib/*.mjs; do
+  node --check "$script"
+done
+
 echo "pre-commit: checking links and navigation…"
 node "$root/scripts/sync-docs.mjs" --check --quiet
 
