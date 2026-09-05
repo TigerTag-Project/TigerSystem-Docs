@@ -14,10 +14,12 @@ Task-oriented how-to guides (shorter and more targeted than
 - **[Buy and encode TigerTag chips](./buy-and-encode-chips.md)** — start to
   finish: which chips, which reader, encoding from phone or desktop, Twin Tag
   pairs, and encoding in series.
+- **[Promote a chipless spool to a real chip](./promote-chipless-spool.md)** —
+  writing a TigerData / TigerData+ record onto a physical NTAG chip (desktop +
+  reader).
 
 > **TODO:** more guides planned:
 >
-> - How to promote a chipless (digital) spool to a real chip
 > - How to migrate an existing spreadsheet inventory into your TigerSystem account
 > - How to publish a public list link on TigerHub
 
