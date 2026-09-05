@@ -37,6 +37,21 @@ High-level, non-dated intentions (details live per product):
  locales — so the documentation lines up with the rest of the ecosystem.
  Adding them earlier would mean maintaining nine copies of pages that are still
  being written.
+- **Beyond the current locales** — the list is not capped at what
+ [tigersystem.io](https://tigersystem.io) serves today. **Japanese, Korean and
+ Russian** are the strongest candidates after it: all three have active maker
+ communities, and all three are places where English-only technical
+ documentation is a genuine barrier rather than a mild inconvenience. Russian
+ also reaches well beyond Russia. Note that a language can be worth documenting
+ even where the shop cannot ship — the protocol is open, any blank NTAG chip
+ works, and nothing in the ecosystem requires buying anything.
+
+ Which languages are actually added should be settled from the wiki's own
+ traffic once it has some, not from guesswork. It also need not be
+ all-or-nothing per language: the user-facing sections (tutorials, FAQ,
+ products, compatibility) earn a translation long before
+ [`developers/`](../developers/README.md) does, whose readers already work in
+ English.
 
 ## Detailed roadmaps
 
