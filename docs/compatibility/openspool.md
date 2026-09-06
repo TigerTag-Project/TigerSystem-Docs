@@ -13,7 +13,7 @@ a close cousin of TigerTag.
 | Carrier | NTAG, 144-byte NDEF payload | NFC Type 2, NDEF JSON |
 | Data model | Compact IDs resolved against a shared reference DB | Self-describing JSON |
 | Cloud | Optional account, inventory, sharing ([TigerSystem account](../concepts/inventory-and-cloud-sync.md)) | None (tag-only standard) |
-| Certification | Optional [TigerTag+](../products/tigertag-plus.md) backup/signature | None |
+| Authenticity | Optional — a [TigerTag+](../products/tigertag-plus.md) signed by a certified manufacturer is a **TigerTag+ Certified**, verifiable offline | None |
 | Openness | Open spec + SDKs | Open spec |
 
 ## Migrating a chip from TigerTag to OpenSpool

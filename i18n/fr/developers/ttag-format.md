@@ -1,5 +1,5 @@
 ---
-sourceHash: 548e63498681f1f44bd1933cf377ecb3dedf0755085ae50a9bb515b672f28146
+sourceHash: 087d1aab4c52325f1acfa066df4feadc030b9ef1f7c6df6d20e99557542517da
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -157,7 +157,7 @@ la fenêtre.
 |---|---|---|
 | Intention | Même compte / une véritable restauration | Adoption des matériaux de quelqu'un d'autre |
 | Identifiants d'enregistrement | Conservés — écrits **tels quels** sous les identifiants d'origine | **Nouveaux** identifiants — chaque enregistrement devient une bobine `TigerData_` neuve et sans puce, appartenant à celui qui importe |
-| Statut TigerTag+ | Conservé — chaque sauvegarde `rfidList` est restaurée | Perdu — la copie est sans puce, donc `id_tigertag` est **retiré** (c'est ce qui fait qu'elle n'est pas un TigerTag+), `id_product` est vidé, `rfidBackup:false` ; les sauvegardes sont écartées (un dump signé est lié à une puce que celui qui importe ne possède pas) |
+| Statut TigerTag+ | Conservé — chaque sauvegarde `rfidList` est restaurée | Perdu — la copie est sans puce, donc `id_product` est **vidé**, et c'est cela qui fait qu'elle n'est pas un TigerTag+ ; `id_tigertag` retiré et `rfidBackup:false` découlent de l'absence de puce ; les sauvegardes sont écartées (un dump signé est lié à une puce que celui qui importe ne possède pas) |
 | Poids | Tel qu'enregistré | Remis à la capacité pleine |
 | Jumeaux | Tels qu'enregistrés | `twin_tag_uid` réaffecté aux nouveaux identifiants |
 
@@ -209,7 +209,7 @@ fichier à des utilisateurs.
 ## Exemple complet
 
 Un export multi-sélection fidèle et anonymisé — un TigerData, une paire de
-jumeaux (`twin_tag_uid` réciproque), un TigerTag+ avec sa sauvegarde signée :
+jumeaux (`twin_tag_uid` réciproque), un TigerTag+ dont le contenu de puce est sauvegardé :
 
 ```json
 {

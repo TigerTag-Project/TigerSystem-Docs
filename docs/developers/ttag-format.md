@@ -145,7 +145,7 @@ http(s) link, or drag-and-drop anywhere on the window.
 |---|---|---|
 | Intent | Same account / a genuine restore | Adopting someone else's materials |
 | Record ids | Kept — written **verbatim** under the original ids | **New** ids — each record becomes a fresh chipless `TigerData_` spool owned by the importer |
-| TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless, so `id_tigertag` is **removed** (which is what makes it not a TigerTag+), `id_product` unset, `rfidBackup:false`; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
+| TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless, so `id_product` is **unset**, which is what makes it not a TigerTag+; `id_tigertag` removed and `rfidBackup:false` follow from having no chip; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
 | Weight | As recorded | Reset to full capacity |
 | Twins | As recorded | `twin_tag_uid` remapped through the new ids |
 
@@ -191,7 +191,7 @@ before shipping a file to users.
 ## Complete example
 
 A faithful, anonymized multi-selection export — one TigerData, one twin pair
-(reciprocal `twin_tag_uid`), one TigerTag+ with its signed backup:
+(reciprocal `twin_tag_uid`), one TigerTag+ whose chip content is backed up:
 
 ```json
 {

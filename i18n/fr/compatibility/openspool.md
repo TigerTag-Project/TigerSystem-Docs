@@ -1,5 +1,5 @@
 ---
-sourceHash: fbd7f751b4b6ce5231046f759b3b7923533ab0f0ae0d8f701d1b8096d3f46fa5
+sourceHash: 81ee1b494fc9fc36fd8d7ec7337fb8d13ee657814c5dfe3b99cb3ed353fd2d7a
 sourcePath: docs/compatibility/openspool.md
 ---
 
@@ -19,7 +19,7 @@ un proche cousin de TigerTag.
 | Support | NTAG, charge utile NDEF de 144 octets | NFC de type 2, JSON NDEF |
 | Modèle de données | Identifiants compacts résolus dans une base de référence partagée | JSON autodescriptif |
 | Cloud | Compte, inventaire et partage optionnels ([compte TigerSystem](../concepts/inventory-and-cloud-sync.md)) | Aucun (standard limité au tag) |
-| Certification | Sauvegarde/signature [TigerTag+](../products/tigertag-plus.md) optionnelle | Aucune |
+| Authenticité | Optionnelle — un [TigerTag+](../products/tigertag-plus.md) signé par un fabricant certifié est un **TigerTag+ Certified**, vérifiable hors ligne | Aucune |
 | Ouverture | Spécification ouverte + SDK | Spécification ouverte |
 
 ## Migrer une puce de TigerTag vers OpenSpool
