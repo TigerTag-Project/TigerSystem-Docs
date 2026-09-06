@@ -1,5 +1,5 @@
 ---
-sourceHash: 08f3262662899658c759e1f2dccb24dd90ad0ad97c7212ab3b99b59e56d99732
+sourceHash: 898f0df68cf91fc8bdbe269da137454aae93a4d5956aa115befcf36acddf4579
 sourcePath: docs/press/README.md
 ---
 
@@ -77,9 +77,20 @@ bannière de la gamme arc-en-ciel. En usage avec Tiger Studio :
 
 ## TigerScale
 
-<img src="../assets/tigerscale-photo.jpg" width="420" alt="TigerScale — la balance à filament connectée" />
+|| |
+|---|---|
+| <img src="../assets/tigerscale-v3.png" alt="TigerScale V3 — écran tactile couleur, double lecteur NFC PN532" /> | <img src="../assets/tigerscale-at-home.jpg" alt="Une TigerScale V3 sur l'établi d'un maker, une bobine posée dessus" /> |
 
-La balance connectée en matériel ouvert, photo réelle.
+**TigerScale V3**, la génération actuelle : photo produit et la même balance
+sur un établi, en usage. ESP32-S3, écran tactile couleur 3,5″, double lecteur
+PN532 pour qu'une [bobine à deux puces](../concepts/tigertag-chip.md) soit
+identifiée quel que soit le sens où on la pose. Matériel ouvert, licence MIT.
+
+Les générations précédentes sont documentées sur
+[la page produit](../products/tigerscale.md) ; l'ancienne photo,
+[`tigerscale-photo.jpg`](../assets/tigerscale-photo.jpg), n'est conservée que
+pour archive — merci de ne plus l'utiliser pour illustrer le produit
+aujourd'hui.
 
 ## La puce et le support
 
