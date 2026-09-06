@@ -3,7 +3,13 @@
 Task-oriented how-to guides (shorter and more targeted than
 [tutorials](../tutorials/README.md)).
 
-> **TODO:** this section is scaffolding. Planned topics:
+## Available
+
+- **[Encode a spool's two chips as a pair](./twin-tag-pair.md)** — Dual NFC on
+  the phone, two readers on a TigerPOD, and how to check that the pair reads
+  as one spool.
+
+> **TODO:** more guides planned:
 >
 > - How to buy / encode TigerTag chips
 > - How to promote a chipless (digital) spool to a real chip

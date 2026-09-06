@@ -71,6 +71,7 @@ export const sidebar = [
     { slug: 'tutorials' },
     { slug: 'tutorials/first-smart-spool' },
     { slug: 'guides' },
+    { slug: 'guides/twin-tag-pair' },
   ]),
 
   group('Philosophy & vision', 'Philosophie et vision', [

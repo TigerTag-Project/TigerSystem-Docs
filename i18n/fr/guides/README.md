@@ -1,5 +1,5 @@
 ---
-sourceHash: 184e2733e03e2639fe7882cca233404f8bfb1146c2670e8646ca90e5531ce2b0
+sourceHash: 4081ee2a2c73ac4ef84f05e3af9c9a0c46b05d38aa30ed9c4a6eb0212a8f54e5
 sourcePath: docs/guides/README.md
 ---
 
@@ -8,7 +8,13 @@ sourcePath: docs/guides/README.md
 Guides pratiques orientés tâche (plus courts et plus ciblés que les
 [tutoriels](../tutorials/README.md)).
 
-> **TODO :** cette section est une ébauche. Sujets prévus :
+## Disponibles
+
+- **[Encoder les deux puces d'une bobine en paire](./twin-tag-pair.md)** — Dual
+  NFC sur le téléphone, deux lecteurs sur un TigerPOD, et comment vérifier que
+  la paire se lit comme une seule bobine.
+
+> **TODO :** d'autres guides prévus :
 >
 > - Comment acheter / encoder des puces TigerTag
 > - Comment promouvoir une bobine sans puce (numérique) en puce réelle
