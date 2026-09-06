@@ -335,10 +335,16 @@
   color: inherit;
 }
 
-/* Diagrams keep their natural size; the container scrolls when they are wider
-   than the column, which beats shrinking a dense map into a thumbnail. */
+/*
+ * Diagrams keep their natural size; the container scrolls when they are wider
+ * than the column, which beats shrinking a dense map into a thumbnail. The
+ * SVG is display:block, so the text-align:center above only ever centered
+ * content narrower than the frame — margin-inline does the same for one
+ * that's narrower than the column, like a tall top-to-bottom flowchart.
+ */
 .sl-markdown-content pre.mermaid svg {
   height: auto;
+  margin-inline: auto;
 }
 
 /* -------------------------------------------------------------------------- */
