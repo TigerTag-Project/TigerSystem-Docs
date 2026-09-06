@@ -240,6 +240,89 @@
 }
 
 /* -------------------------------------------------------------------------- */
+/* Bambu Lab LAN-mode tutorial                                                 */
+/* -------------------------------------------------------------------------- */
+
+.ts-model-picker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+@media (max-width: 40rem) {
+  .ts-model-picker {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ts-model-picker a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 0.75rem;
+  border-radius: 0.6rem;
+  background: var(--ts-card-bg);
+  border: 1px solid var(--ts-card-border);
+  color: var(--sl-color-white);
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.ts-model-picker a:hover,
+.ts-model-picker a:focus-visible {
+  border-color: var(--ts-orange);
+  background: var(--ts-card-bg-hover);
+  transform: translateY(-1px);
+}
+
+.ts-model-picker a img {
+  width: 100%;
+  max-width: 110px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.ts-model-picker span {
+  font-weight: 600;
+  font-size: var(--sl-text-sm);
+}
+
+.ts-tuto-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.ts-tuto-step img {
+  width: 260px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--ts-card-border);
+  flex-shrink: 0;
+}
+
+.ts-tuto-step p {
+  margin: 0;
+}
+
+@media (max-width: 40rem) {
+  .ts-tuto-step {
+    flex-direction: column;
+  }
+
+  .ts-tuto-step img {
+    max-width: 100%;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /* Home page                                                                   */
 /* -------------------------------------------------------------------------- */
 
