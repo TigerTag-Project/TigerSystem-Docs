@@ -14,7 +14,7 @@ contribution, not a complaint.
 
 | Who | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 19 | 22 | — |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 19 | 23 | — |
 | **[@ennisj](https://github.com/ennisj)** | 21 | 7 | — |
 | **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | — | 5 | 7 |
 | **[@physicsG](https://github.com/physicsG)** | — | — | 2 |
