@@ -32,10 +32,50 @@ This is the one to build.
  Tiger NFC Connect via Firestore.
 - Works with Tiger Studio's **container weight calibration** so net filament
  weight stays accurate per container type.
+- **It works offline.** Brand and material identification comes from a database
+ held in the device's own flash, refreshed at most once a day — a tag lookup
+ never waits on the network.
+- **Cloud sync is optional.** The scale is fully usable without an account.
+- **Its own web UI**, served from the device, mobile-friendly, live over
+ WebSocket at 10 Hz — no app to install to drive it from a phone.
+- **No binary blobs**: everything compiles from source.
 
 <img src="../assets/tigerscale-at-home.jpg" width="100%" alt="A TigerScale V3 in use on a workbench, a spool resting on it" />
 
 *On the bench: put the spool down, it identifies itself and weighs itself.*
+
+## Building one
+
+The scale is a DIY build, and the two steps people expect to be hard are not:
+
+1. **Print the enclosure.** One `.3mf` Bambu Studio project with the plates
+ already laid out — [on MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543).
+ Open it in Bambu Studio or Orca and press Slice: nothing to orient, no
+ supports to place.
+2. **Flash from your browser.** The
+ [web installer](https://tigertag-project.github.io/Tiger-Scale-V3/) always
+ serves the current release; after that the scale updates itself over the air.
+
+The parts are commodity: a Waveshare ESP32-S3-Touch-LCD-3.5 board, two PN532 V3
+modules, a 5 kg load cell with an HX711, a USB-C cable, and screws. The full
+costed bill of materials lives in the
+[repository](https://github.com/TigerTag-Project/Tiger-Scale-V3).
+
+> **One trap worth knowing.** The board exists as **-3.5B** and **-3.5**, and
+> the firmware picks its NFC transport at compile time. Flash the wrong build
+> and you get a scale that starts up perfectly and never sees a tag, with
+> nothing on screen to say why. The web installer asks which variant you have
+> — read the silkscreen before answering.
+
+## Yours to make and to sell
+
+**Anyone can manufacture and sell TigerScale hardware. No licence fee, no
+royalty, no registration.** Build it, flash the official firmware, ship it.
+
+The single condition for calling your product a **TigerScale** is running that
+official firmware **unmodified**, so every unit behaves identically inside the
+ecosystem. Fork it if you want to change it — and give the fork a different
+name. That is the whole of the deal.
 
 ## Where it sits
 
@@ -99,6 +139,8 @@ right after a tare reports unit `0x00`.
 ## Links
 
 - **V3 (current)**: [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)
+- Flash it from your browser: [web installer](https://tigertag-project.github.io/Tiger-Scale-V3/)
+- Print the enclosure: [MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543)
 - V2, no longer developed: [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
 
 ---

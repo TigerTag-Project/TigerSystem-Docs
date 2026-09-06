@@ -1,5 +1,5 @@
 ---
-sourceHash: 1f7df77329d34fc990a686272f7f40991145da331a23da2e4e8b833381735552
+sourceHash: 22bdcc01ba4cc7698022ea77e3f52368aa8424dcfe0b4fd94b04678414aa3f59
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -90,6 +90,41 @@ moins cher d'avoir la bonne paire :
 > ACR122U conviennent — le pack vous évite simplement de les chercher
 > séparément.
 
+## En construire un
+
+1. **Imprimez une coque** — le Mini ou l'originale, ci-dessus.
+2. **Procurez-vous deux lecteurs compatibles ACR122U**, dans la boutique de
+ votre choix, et un lot de puces NTAG 213 / 215 / 216 vierges à écrire.
+3. **Glissez un lecteur dans chaque emplacement** — sans vis, sans colle, sans
+ câblage.
+4. **Branchez les deux sur votre ordinateur.** Un répartiteur n'en fait qu'un
+ seul câble ; deux ports USB font tout aussi bien l'affaire.
+5. **Installez [Tiger Studio](./tiger-studio.md)** — il détecte les lecteurs
+ tout seul.
+
+Budget indicatif, en achetant séparément — les prix varient selon la boutique
+et la région :
+
+| Pièce | Qté | Env. |
+|---|---|---|
+| Lecteur NFC compatible ACR122U | 2 | 15–25 € pièce |
+| Puces NTAG 213 / 215 / 216 vierges | 1 lot | 10–20 € — deux puces par bobine, un lot en équipe beaucoup |
+| La coque imprimée | 1 | le filament seulement |
+| Répartiteur USB (2× USB-A femelle → 1× USB-A mâle) | 1 | 5–10 €, facultatif |
+
+Acheter le [kit](https://shop.tigertag.io/collections/tigertag-rfid-maker)
+revient moins cher que de sourcer les mêmes pièces une à une, les lecteurs
+arrivent avec le logo officiel du projet, et cela finance le standard. Mais en
+construire un avec des pièces génériques **n'est pas une voie inférieure —
+c'est le même Pod**. C'est ça, un protocole ouvert.
+
+### Compatibilité des lecteurs
+
+L'ACR122U parle **PC/SC**, la norme carte à puce au niveau du système que tous
+les lecteurs de cette classe implémentent. Comme le Pod s'appuie sur PC/SC et
+non sur un pilote propriétaire, le même montage fonctionne sous **Windows,
+macOS et Linux**, et n'importe quelle bibliothèque PC/SC peut le piloter.
+
 ## Caractéristiques
 
 - Coque imprimable en 3D — **STL gratuits sur MakerWorld**, en taille **Mini**
@@ -101,6 +136,33 @@ moins cher d'avoir la bonne paire :
  des puces s'en sert pour des écritures vérifiées par UID.
 - Pas verrouillé sur TigerTag : les mêmes deux lecteurs gèrent aussi les puces
  **OpenSpool** (NDEF).
+
+## Plus que TigerTag — une station NFC universelle
+
+Le Pod n'est **pas verrouillé sur le protocole TigerTag**. Ce sont, très
+littéralement, deux lecteurs PC/SC standard dans un support en forme de
+bobine : **tout ce que sait faire un ACR122U, le Pod le fait.**
+
+Vous contrôlez la puce entièrement — lire ce qu'elle contient, y écrire autre
+chose, modifier ce qui s'y trouve, l'effacer pour la remettre à vierge. Les
+quatre, et dans les deux sens. Pas d'écriture unique, pas de sens interdit, pas
+de verrou constructeur. Et pour le filament, cela se passe en **Dual NFC**, les
+deux puces d'une bobine traitées ensemble, sur les bobines de n'importe quelle
+marque.
+
+L'ACR122U gère bien plus que le NTAG : **ISO 14443 types A et B**, **MIFARE**
+(Classic 1K/4K, Ultralight, DESFire), **FeliCa**, **Topaz/Jewel**, et les
+**types de tags NFC Forum 1 à 4**. Tout ce que vous pouvez lire ou écrire avec
+un ACR122U, vous pouvez le lire ou l'écrire dans le Pod — y compris les puces
+[OpenSpool](../compatibility/openspool.md).
+
+C'est aussi ce qui rend la [seconde vie](../philosophy/second-life.md) réelle.
+Une TigerTag n'est jamais verrouillée en écriture : quand une bobine est
+terminée, vous pouvez effacer ses puces et les réécrire en TigerTag neuves — ou
+en faire tout autre chose : un simple tag **NDEF** pour la domotique, un
+partage de Wi-Fi, une URL, une carte de visite. Et les retransformer en
+TigerTag quand vous voulez. La puce est un actif réutilisable, pas un emballage
+à usage unique.
 
 ## Interactions
 

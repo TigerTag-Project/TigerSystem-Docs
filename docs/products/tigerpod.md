@@ -82,6 +82,39 @@ right pair:
 > exactly the same device. Any two ACR122U-class readers will do — the bundle
 > just saves you sourcing them separately.
 
+## Build one
+
+1. **Print a shell** — the Mini or the original, above.
+2. **Get two ACR122U-compatible readers**, from any shop you like, and a pack of
+ blank NTAG 213 / 215 / 216 chips to write on.
+3. **Slide one reader into each slot** — no screws, no glue, no wiring.
+4. **Plug both into your computer.** A splitter makes it one cable; two USB
+ ports work just as well.
+5. **Install [Tiger Studio](./tiger-studio.md)** — it picks the readers up on
+ its own.
+
+Rough budget, sourced separately — prices vary by shop and region:
+
+| Part | Qty | Approx. |
+|---|---|---|
+| ACR122U-compatible NFC reader | 2 | €15–25 each |
+| Blank NTAG 213 / 215 / 216 chips | 1 pack | €10–20 — two chips per spool, so a pack tags many |
+| The printed shell | 1 | filament only |
+| USB splitter (2× USB-A female → 1× USB-A male) | 1 | €5–10, optional |
+
+Buying the [kit](https://shop.tigertag.io/collections/tigertag-rfid-maker)
+instead costs less than sourcing the same parts one by one, the readers arrive
+carrying the project's official logo, and it funds the standard. But building
+one from generic parts is **not a lesser path — it is the same Pod**. That is
+what an open protocol means.
+
+### Reader compatibility
+
+The ACR122U speaks **PC/SC**, the OS-level smart-card standard every reader of
+this class implements. Because the Pod builds on PC/SC rather than on a vendor
+driver, the same setup runs on **Windows, macOS and Linux**, and any PC/SC
+library can drive it.
+
 ## Features
 
 - 3D-printable shell — **free STLs on MakerWorld**, in a **Mini** and an
@@ -92,6 +125,30 @@ right pair:
  UID-checked writes.
 - Not locked to TigerTag: the same two readers handle **OpenSpool** (NDEF) tags
  as well.
+
+## More than TigerTag — a universal NFC station
+
+The Pod is **not locked to the TigerTag protocol**. It is, quite literally, two
+standard PC/SC readers in a spool-shaped holder: **anything an ACR122U can do,
+the Pod can do.**
+
+You control the chip completely — read what is on it, write something new,
+change what is there, erase it back to blank. All four, in both directions. No
+write-once, no one-way street, no vendor lock. And for filament that happens in
+**Dual NFC**, both chips of a spool handled together, on any brand's spools.
+
+The ACR122U handles far more than NTAG: **ISO 14443 Type A and B**, **MIFARE**
+(Classic 1K/4K, Ultralight, DESFire), **FeliCa**, **Topaz/Jewel**, and **NFC
+Forum tag types 1–4**. Whatever you can read or write with an ACR122U, you can
+read or write in the Pod — including [OpenSpool](../compatibility/openspool.md)
+tags.
+
+That is also what makes the [second life](../philosophy/second-life.md) real. A
+TigerTag is never write-locked, so when a spool is finished you can erase its
+chips and rewrite them as fresh TigerTags — or turn them into something else
+entirely: a plain **NDEF** tag for home automation, a Wi-Fi hand-off, a URL, a
+business card. And back into a TigerTag whenever you want. The chip is a
+reusable asset, not single-use packaging.
 
 ## Interactions
 

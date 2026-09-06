@@ -1,5 +1,5 @@
 ---
-sourceHash: b1285803ebbd496b0e46df78100d223db9c8637a0ed689e4f6f2c95b4aaaa484
+sourceHash: ed55e87e1009b8c558ba7c51b3f6c3200d595134b673006e221a0deb6612174b
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -40,10 +40,55 @@ C'est celle qu'il faut construire.
  dans Tiger Studio et Tiger NFC Connect via Firestore.
 - Fonctionne avec la **calibration du poids des contenants** de Tiger Studio,
  pour que le poids net de filament reste juste selon le type de contenant.
+- **Elle fonctionne hors ligne.** L'identification des marques et des matières
+ vient d'une base embarquée dans la mémoire flash de l'appareil, rafraîchie au
+ plus une fois par jour — la lecture d'une puce n'attend jamais le réseau.
+- **La synchronisation cloud est facultative.** La balance est pleinement
+ utilisable sans compte.
+- **Sa propre interface web**, servie par l'appareil, adaptée au mobile, en
+ direct via WebSocket à 10 Hz — aucune application à installer pour la piloter
+ depuis un téléphone.
+- **Aucun blob binaire** : tout se compile depuis les sources.
 
 <img src="../assets/tigerscale-at-home.jpg" width="100%" alt="Une TigerScale V3 en usage sur un établi, une bobine posée dessus" />
 
 *Sur l'établi : on pose la bobine, elle s'identifie et se pèse.*
+
+## En construire une
+
+La balance est un montage DIY, et les deux étapes qu'on redoute ne sont pas
+difficiles :
+
+1. **Imprimez le boîtier.** Un seul projet Bambu Studio `.3mf` avec les
+ plateaux déjà disposés — [sur MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543).
+ Ouvrez-le dans Bambu Studio ou Orca et lancez le découpage : rien à orienter,
+ aucun support à placer.
+2. **Flashez depuis votre navigateur.** L'
+ [installateur web](https://tigertag-project.github.io/Tiger-Scale-V3/) sert
+ toujours la version courante ; ensuite la balance se met à jour toute seule,
+ par OTA.
+
+Les pièces sont courantes : une carte Waveshare ESP32-S3-Touch-LCD-3.5, deux
+modules PN532 V3, une cellule de charge de 5 kg avec un HX711, un câble USB-C
+et de la visserie. La nomenclature complète et chiffrée est dans le
+[dépôt](https://github.com/TigerTag-Project/Tiger-Scale-V3).
+
+> **Un piège à connaître.** La carte existe en **-3.5B** et en **-3.5**, et le
+> firmware choisit son transport NFC à la compilation. Flashez la mauvaise
+> version et vous obtenez une balance qui démarre parfaitement et ne voit
+> jamais aucune puce, sans rien à l'écran pour l'expliquer. L'installateur web
+> demande quelle variante vous avez — lisez la sérigraphie avant de répondre.
+
+## À vous de la fabriquer, et de la vendre
+
+**N'importe qui peut fabriquer et vendre du matériel TigerScale. Aucune
+redevance, aucun droit de licence, aucun enregistrement.** Construisez-la,
+flashez le firmware officiel, vendez-la.
+
+La seule condition pour appeler votre produit une **TigerScale** est de faire
+tourner ce firmware officiel **non modifié**, afin que chaque exemplaire se
+comporte à l'identique dans l'écosystème. Vous voulez le changer ? Forkez — et
+donnez un autre nom au fork. C'est tout le contrat.
 
 ## Où cela se situe
 
@@ -110,6 +155,8 @@ l'unité `0x00`.
 ## Liens
 
 - **V3 (actuelle)** : [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)
+- La flasher depuis le navigateur : [installateur web](https://tigertag-project.github.io/Tiger-Scale-V3/)
+- Imprimer le boîtier : [MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543)
 - V2, qui n’est plus développée : [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) (MIT)
 
 ---
