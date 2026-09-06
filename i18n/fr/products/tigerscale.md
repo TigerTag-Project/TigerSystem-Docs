@@ -1,5 +1,5 @@
 ---
-sourceHash: ed55e87e1009b8c558ba7c51b3f6c3200d595134b673006e221a0deb6612174b
+sourceHash: 1c3d437658d6040cf22cea54e44cdf367975cf2d99082b2cc63e0c220613b3d0
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -68,9 +68,26 @@ difficiles :
  toujours la version courante ; ensuite la balance se met à jour toute seule,
  par OTA.
 
-Les pièces sont courantes : une carte Waveshare ESP32-S3-Touch-LCD-3.5, deux
-modules PN532 V3, une cellule de charge de 5 kg avec un HX711, un câble USB-C
-et de la visserie. La nomenclature complète et chiffrée est dans le
+Les pièces sont courantes :
+
+| Qté | Composant | Où |
+|---|---|---|
+| 1 | Carte Waveshare **ESP32-S3-Touch-LCD-3.5B** — tactile IPS 480×320 (la **-3.5** sans le B convient aussi) | [-3.5B](https://link.amazon/B0gaANfF5) · [-3.5](https://link.amazon/B0dpgOlOQ) |
+| 2 | Module NFC **PN532 V3** — rangée de broches **et** interrupteur de mode indispensables | [Amazon](https://link.amazon/B0iTXrhjd) |
+| 1 | Cellule de charge 5 kg + HX711 — doit avoir 2 trous taraudés M4 et 2 M5 | [Amazon](https://link.amazon/B09LOUuI1) |
+| 1 | Câble USB-C 4 broches + connecteur | [câble](https://link.amazon/B0aoW8qQx) · [connecteur](https://link.amazon/B0aiEyjLx) |
+| 1 | Batterie Li-ion — **facultative**, la balance fonctionne sur USB | [Amazon](https://link.amazon/B0etKlE1i) |
+| — | Fils Dupont, vis autotaraudeuses M3 | [fils](https://link.amazon/B0bl6jvMs) · [vis](https://link.amazon/B0ekzxx1E) |
+| — | 2× M4×30 et 2× M5×30 (cellule de charge), 4× M2×6 (écran) | n'importe quelle quincaillerie |
+| 1 | Un petit haut-parleur | fourni avec la carte ESP32-S3 |
+
+> Certains liens de ce tableau sont des **liens affiliés Amazon** : en tant que
+> Partenaire Amazon, TigerTag est rémunéré sur les achats remplissant les
+> conditions requises, **sans aucun surcoût pour vous**. Cela finance le
+> protocole ouvert. Acheter les mêmes pièces ailleurs fonctionne exactement
+> aussi bien.
+
+La nomenclature complète et chiffrée est dans le
 [dépôt](https://github.com/TigerTag-Project/Tiger-Scale-V3).
 
 > **Un piège à connaître.** La carte existe en **-3.5B** et en **-3.5**, et le

@@ -56,9 +56,25 @@ The scale is a DIY build, and the two steps people expect to be hard are not:
  [web installer](https://tigertag-project.github.io/Tiger-Scale-V3/) always
  serves the current release; after that the scale updates itself over the air.
 
-The parts are commodity: a Waveshare ESP32-S3-Touch-LCD-3.5 board, two PN532 V3
-modules, a 5 kg load cell with an HX711, a USB-C cable, and screws. The full
-costed bill of materials lives in the
+The parts are commodity:
+
+| Qty | Component | Where |
+|---|---|---|
+| 1 | Waveshare **ESP32-S3-Touch-LCD-3.5B** — 480×320 IPS touch (the **-3.5** without the B works too) | [-3.5B](https://link.amazon/B0gaANfF5) · [-3.5](https://link.amazon/B0dpgOlOQ) |
+| 2 | **PN532 V3** NFC module — pin header **and** mode switch required | [Amazon](https://link.amazon/B0iTXrhjd) |
+| 1 | 5 kg load cell + HX711 — must have 2× M4 and 2× M5 tapped holes | [Amazon](https://link.amazon/B09LOUuI1) |
+| 1 | USB-C 4-pin cable + connector | [cable](https://link.amazon/B0aoW8qQx) · [connector](https://link.amazon/B0aiEyjLx) |
+| 1 | Li-ion battery — **optional**, the scale runs on USB | [Amazon](https://link.amazon/B0etKlE1i) |
+| — | Dupont wires, M3 self-tapping screws | [wires](https://link.amazon/B0bl6jvMs) · [screws](https://link.amazon/B0ekzxx1E) |
+| — | 2× M4×30 and 2× M5×30 (load cell), 4× M2×6 (display) | any hardware shop |
+| 1 | A small speaker | ships with the ESP32-S3 board |
+
+> Some links in this table are **Amazon affiliate links**: as an Amazon
+> Associate, TigerTag earns from qualifying purchases, **at no extra cost to
+> you**. It helps fund the open protocol. Buying the same parts anywhere else
+> works exactly as well.
+
+The full costed bill of materials lives in the
 [repository](https://github.com/TigerTag-Project/Tiger-Scale-V3).
 
 > **One trap worth knowing.** The board exists as **-3.5B** and **-3.5**, and

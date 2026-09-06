@@ -1,5 +1,5 @@
 ---
-sourceHash: 22bdcc01ba4cc7698022ea77e3f52368aa8424dcfe0b4fd94b04678414aa3f59
+sourceHash: 46f0ee097705599ddecc7629c638d56026de450059ecabf6fcb7d7f12e27b674
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -105,12 +105,18 @@ moins cher d'avoir la bonne paire :
 Budget indicatif, en achetant séparément — les prix varient selon la boutique
 et la région :
 
-| Pièce | Qté | Env. |
-|---|---|---|
-| Lecteur NFC compatible ACR122U | 2 | 15–25 € pièce |
-| Puces NTAG 213 / 215 / 216 vierges | 1 lot | 10–20 € — deux puces par bobine, un lot en équipe beaucoup |
-| La coque imprimée | 1 | le filament seulement |
-| Répartiteur USB (2× USB-A femelle → 1× USB-A mâle) | 1 | 5–10 €, facultatif |
+| Pièce | Qté | Env. | Où |
+|---|---|---|---|
+| Lecteur NFC compatible ACR122U | 2 | 15–25 € pièce | [Amazon](https://amzn.to/4vok3d7) · ou n'importe quelle boutique |
+| Puces NTAG 213 / 215 / 216 vierges | 1 lot | 10–20 € — deux puces par bobine, un lot en équipe beaucoup | [Amazon](https://amzn.to/3TzxGc7) · [puces officielles](./tigertag.md) |
+| La coque imprimée | 1 | le filament seulement | MakerWorld, ci-dessus |
+| Répartiteur USB (2× USB-A femelle → 1× USB-A mâle) | 1 | 5–10 €, facultatif | [Amazon](https://amzn.to/4plgsv8) |
+
+> Certains liens de ce tableau sont des **liens affiliés Amazon** : en tant que
+> Partenaire Amazon, TigerTag est rémunéré sur les achats remplissant les
+> conditions requises, **sans aucun surcoût pour vous**. Cela finance le
+> protocole ouvert. Acheter les mêmes pièces ailleurs fonctionne exactement
+> aussi bien.
 
 Acheter le [kit](https://shop.tigertag.io/collections/tigertag-rfid-maker)
 revient moins cher que de sourcer les mêmes pièces une à une, les lecteurs

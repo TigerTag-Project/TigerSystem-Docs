@@ -95,12 +95,17 @@ right pair:
 
 Rough budget, sourced separately — prices vary by shop and region:
 
-| Part | Qty | Approx. |
-|---|---|---|
-| ACR122U-compatible NFC reader | 2 | €15–25 each |
-| Blank NTAG 213 / 215 / 216 chips | 1 pack | €10–20 — two chips per spool, so a pack tags many |
-| The printed shell | 1 | filament only |
-| USB splitter (2× USB-A female → 1× USB-A male) | 1 | €5–10, optional |
+| Part | Qty | Approx. | Where |
+|---|---|---|---|
+| ACR122U-compatible NFC reader | 2 | €15–25 each | [Amazon](https://amzn.to/4vok3d7) · or any shop |
+| Blank NTAG 213 / 215 / 216 chips | 1 pack | €10–20 — two chips per spool, so a pack tags many | [Amazon](https://amzn.to/3TzxGc7) · [official chips](./tigertag.md) |
+| The printed shell | 1 | filament only | MakerWorld, above |
+| USB splitter (2× USB-A female → 1× USB-A male) | 1 | €5–10, optional | [Amazon](https://amzn.to/4plgsv8) |
+
+> Some links in this table are **Amazon affiliate links**: as an Amazon
+> Associate, TigerTag earns from qualifying purchases, **at no extra cost to
+> you**. It helps fund the open protocol. Buying the same parts anywhere else
+> works exactly as well.
 
 Buying the [kit](https://shop.tigertag.io/collections/tigertag-rfid-maker)
 instead costs less than sourcing the same parts one by one, the readers arrive
