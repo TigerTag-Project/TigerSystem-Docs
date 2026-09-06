@@ -1,5 +1,5 @@
 ---
-sourceHash: e5d6942a24beeb96c1dd174b3cd7cdec927f8ec611ad28a7db5f36a1d72da34e
+sourceHash: 0385bc691b491c9aa299dc0700b7612d018007cbb08b8c60f65cc704793600f1
 sourcePath: docs/hall-of-fame.md
 ---
 

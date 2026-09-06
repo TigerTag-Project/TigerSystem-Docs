@@ -1,5 +1,5 @@
 ---
-sourceHash: 1c3d437658d6040cf22cea54e44cdf367975cf2d99082b2cc63e0c220613b3d0
+sourceHash: 56e746850cbc5eafc858668b8c24f2c2a86a848d6d4a2749353b58bba34e333e
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -141,7 +141,7 @@ PN532 / RC522) suffisent à construire un appareil qui lit les TigerTag.
 
 ## Balances tierces — USB HID (série DYMO M et compagnie)
 
-<img src="../assets/dymo-m5.png" width="420" alt="La DYMO M5 — une balance postale USB HID, boutons marche/tare/hold et petit écran LCD" />
+<img src="../assets/dymo-m5.jpg" width="420" alt="La DYMO M5 — une balance postale USB HID, boutons marche/tare/hold et petit écran LCD" />
 
 TigerScale est la balance maison — mais Tiger Studio lit aussi les
 **périphériques USB « HID Scale »** standards (page d'usage HID `0x8D`, usage
@@ -164,7 +164,9 @@ Identifiant fabricant DYMO `0x0922` ; la M5 porte le pid `0x8009`.
 Particularité : la toute première trame juste après une tare annonce
 l'unité `0x00`.
 
-> **La DYMO M2 n'est pas prise en charge.** Elle ne parle pas ce protocole.
+> **La DYMO M2 n'est pas prise en charge** — elle n'a aucun port USB, il n'y a
+> donc rien à brancher sur un ordinateur. La question du protocole ne se pose
+> même pas.
 
 ## Interactions
 
