@@ -1,5 +1,5 @@
 ---
-sourceHash: 4437cc36709200a58da820139ffc729e1d3a22786c301a0136991f5404c83f00
+sourceHash: 63d9c24cac41728ff2566bcdb57c4c4e94b6a49c8512cc7d60b63d77bc36d181
 sourcePath: docs/press/README.md
 ---
 
@@ -116,6 +116,29 @@ Dix-huit rendus de recharges de filament sans bobine (mandrin en carton),
 chacune portant sa puce NFC TigerTag — une par couleur.
 
 **[Télécharger le pack (ZIP, ~22 Mo, 18 fichiers PNG)](./tigertag-filament-refills.zip)**
+
+## Intégrateurs certifiés — logos des fabricants de filament
+
+Les marques de filament qui expédient du TigerTag depuis l'usine, en logos
+vectoriels. Les six sont des **partenaires certifiés** — le palier audité, seul
+autorisé à porter la marque sur un produit. Le registre complet, avec ce que
+chacune a réellement déployé, est sur
+[Partenaires certifiés](../certified-partners.md).
+
+**Intégré sur toute la ligne de production**
+
+<a href="https://rosa3d.pl"><img src="../assets/partners/rosa3d.svg" height="52" alt="Rosa3D" /></a>
+
+**Production à grande échelle**
+
+<a href="https://r3d-europe.com"><img src="../assets/partners/r3d.svg" height="34" alt="R3D" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="32" alt="eSun" /></a>
+
+**Intégré à la demande**
+
+<a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landu3d.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
+
+Le logo de chaque marque reste sa propriété — reproduisez-les sans les modifier,
+et uniquement pour identifier ce fabricant.
 
 ## Boîtes de filament partenaires — photos haute résolution + détourages
 

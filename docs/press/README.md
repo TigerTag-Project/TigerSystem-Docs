@@ -109,6 +109,28 @@ carrying its TigerTag NFC chip — one per color.
 
 **[Download the pack (ZIP, ~22 MB, 18 PNG files)](./tigertag-filament-refills.zip)**
 
+## Certified integrators — filament manufacturer logos
+
+The filament brands that ship TigerTag from the factory, as vector logos. All
+six are **certified partners** — the audited tier that may carry the mark on a
+product. The full registry, with what each has actually deployed, is on
+[Certified partners](../certified-partners.md).
+
+**Integrated across the whole production line**
+
+<a href="https://rosa3d.pl"><img src="../assets/partners/rosa3d.svg" height="52" alt="Rosa3D" /></a>
+
+**Large-scale production**
+
+<a href="https://r3d-europe.com"><img src="../assets/partners/r3d.svg" height="34" alt="R3D" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.esun3d.com"><img src="../assets/partners/esun.svg" height="32" alt="eSun" /></a>
+
+**Integrated on request**
+
+<a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landu3d.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
+
+Each brand's own logo remains its property — reproduce them unaltered, and only
+to identify that manufacturer.
+
 ## Partner filament boxes — high-resolution photos + cutouts
 
 <img src="../assets/box-rosa3d-cutout.png" width="300" alt="Rosa3D filament box with TigerTag NFC-RFID" /> <img src="../assets/box-esun-cutout.png" width="300" alt="eSun filament box with TigerTag NFC-RFID" /> <img src="../assets/box-sunlu-cutout.png" width="300" alt="Sunlu filament box with TigerTag NFC-RFID" />
