@@ -90,19 +90,19 @@
   white-space: nowrap;
 }
 
+/* The app icon: a square that carries its own dark ground, so one file works
+   on both themes. Rounded here rather than in a second SVG, and given a hairline
+   ring so its near-black edge stays visible against a dark header. */
 .site-title__mark {
-  width: auto;
-  height: 1.55rem;
+  width: 1.7rem;
+  height: 1.7rem;
   flex-shrink: 0;
+  border-radius: 23%;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 14%);
 }
 
-:root .site-title__mark--light,
-:root[data-theme='light'] .site-title__mark--dark {
-  display: none;
-}
-
-:root[data-theme='light'] .site-title__mark--light {
-  display: block;
+:root[data-theme='light'] .site-title__mark {
+  box-shadow: none;
 }
 
 .site-title__text {
