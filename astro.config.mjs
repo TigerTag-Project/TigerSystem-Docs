@@ -17,7 +17,10 @@ export default defineConfig({
       title: 'TigerSystem',
       description:
         'The open NFC identity for 3D-printing filament — the TigerTag protocol, the apps built on it, and how to build your own.',
-      favicon: '/assets/logos/tigersystem-app-icon-rounded.svg',
+      // The same icon set tigersystem.io serves, so the wiki shows the mark
+      // people already have in their tab bar. Copied from that site rather
+      // than re-exported, to keep the two identical.
+      favicon: '/favicon.ico',
 
       defaultLocale: 'root',
       locales: {
@@ -48,6 +51,14 @@ export default defineConfig({
         {
           tag: 'meta',
           attrs: { property: 'og:image', content: `${SITE_URL}/assets/hero-tigersystem-ecosystem.png` },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'icon', href: '/icon.png', type: 'image/png', sizes: '512x512' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'apple-touch-icon', href: '/apple-icon.png', type: 'image/png', sizes: '180x180' },
         },
       ],
 
