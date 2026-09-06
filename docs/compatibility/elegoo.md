@@ -19,7 +19,8 @@ Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
 ## The workflow
 
 1. **Add the printer** — automatic LAN discovery (UDP broadcast) or Add by
- IP.
+ IP. Needs **LAN Only mode** turned on once on the printer's touch screen —
+ [step-by-step](#switch-to-lan-mode).
 2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
 3. **Assign it to a slot** — Tiger Studio maps inventory spools to the four
  Canvas/tray slots.
@@ -27,6 +28,15 @@ Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
  **full control panel**: home/jog the axes, set nozzle & bed targets,
  toggle the light, drive the fan, pick the speed mode, load/unload
  filament per slot.
+
+## Switch to LAN mode
+
+Tiger Studio's direct link needs **LAN Only mode** enabled on the printer itself — a one-time,
+on-screen setup.
+
+<div class="ts-model-picker">
+<a href="../tutorials/elegoo-cc2-lan-mode.md"><img src="../assets/elegoo-lan-mode/models/cc2.png" alt="Centauri Carbon 2" /><span>Centauri Carbon 2</span></a>
+</div>
 
 ## Bonus: write Elegoo-format tags
 

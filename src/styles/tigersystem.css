@@ -240,7 +240,7 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/* Bambu Lab LAN-mode tutorial                                                 */
+/* LAN-mode tutorials — model picker + step-by-step layout                     */
 /* -------------------------------------------------------------------------- */
 
 .ts-model-picker {
@@ -278,6 +278,13 @@
   border-color: var(--ts-orange);
   background: var(--ts-card-bg-hover);
   transform: translateY(-1px);
+}
+
+/* A lone card (a brand with one model so far) sits centered instead of
+   stretching to fill the row like it's the start of a grid. */
+.ts-model-picker a:only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 .ts-model-picker a img {
