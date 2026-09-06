@@ -1,0 +1,13 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+
+import { REPO_URL } from '../../scripts/lib/docs-config.mjs';
+
+const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
+const label = locale === 'fr' ? 'Signaler un problème' : 'Report issue';
+---
+
+<Default><slot /></Default>
+<a class="report-issue-link" href={`${REPO_URL}/issues/new`} rel="me">
+  {label}
+</a>

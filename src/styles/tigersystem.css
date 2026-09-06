@@ -125,6 +125,23 @@
   color: var(--ts-orange);
 }
 
+/*
+ * Same accent-high/black pairing the hero's primary action button uses, so
+ * this reads as the site's one call-to-action color rather than a second one.
+ */
+.report-issue-link {
+  display: inline-flex;
+  align-items: center;
+  background: var(--sl-color-accent-high);
+  color: var(--sl-color-black);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.35em 0.75em;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 /* -------------------------------------------------------------------------- */
 /* Card grids on the section index pages                                       */
 /* -------------------------------------------------------------------------- */
