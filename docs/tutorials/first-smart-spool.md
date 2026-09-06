@@ -9,7 +9,7 @@ already own or can get for a few cents.
 - **A blank NTAG chip** — NTAG213, 215 or 216, **25 mm round** recommended
  (a few cents on Amazon, AliExpress or locally; nothing official required)
 - **Tiger NFC Connect**, the free app —
- [download for iOS & Android](https://tigersystem.io/fr/download)
+ [download for iOS & Android](https://tigersystem.io/download)
 
 > Already bought filament from Rosa3D, eSun, Sunlu, R3D…? Your spool may
 > **already carry TigerTag chips** — skip the form and just tap "Scan".

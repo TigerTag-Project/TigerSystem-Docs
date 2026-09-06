@@ -35,7 +35,7 @@ flowchart LR
 - **Released** on the **App Store (iOS)** and **Google Play (Android)** —
  version 1.0.2 today.
 - **Public betas** also available (TestFlight on iOS, open beta on Android).
-- All download links: **[tigersystem.io/fr/download](https://tigersystem.io/fr/download)**
+- All download links: **[tigersystem.io/download](https://tigersystem.io/download)**
  — a QR code is also always available in Tiger Studio's sidebar.
 
 > **Naming note:** formerly published as *"TigerTag RFID Connect"* — renamed

@@ -218,7 +218,7 @@ inventory sync with the same account as the desktop app.
 It's released on the **App Store** and **Google Play** as **Tiger NFC
 Connect** (formerly "TigerTag RFID Connect"), with public betas on both
 platforms. All links:
-[tigersystem.io/fr/download](https://tigersystem.io/fr/download).
+[tigersystem.io/download](https://tigersystem.io/download).
 
 ## TigerScale & sensors
 

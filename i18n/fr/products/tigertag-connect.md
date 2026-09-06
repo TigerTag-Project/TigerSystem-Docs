@@ -1,5 +1,5 @@
 ---
-sourceHash: 2e15717d30e80decc08c30b970358e39d6ef8a54012f1f65bb85929b8792698d
+sourceHash: 21ad428de59e39de825b505e5e7ddd8959d5131ae755294e54baf98dd631990a
 sourcePath: docs/products/tigertag-connect.md
 ---
 
@@ -45,7 +45,7 @@ flowchart LR
  version 1.0.2 aujourd'hui.
 - Des **bêtas publiques** sont également disponibles (TestFlight sur iOS,
  bêta ouverte sur Android).
-- Tous les liens de téléchargement : **[tigersystem.io/fr/download](https://tigersystem.io/fr/download)**
+- Tous les liens de téléchargement : **[tigersystem.io/download](https://tigersystem.io/download)**
  — un QR code est également toujours disponible dans la barre latérale de
  Tiger Studio.
 

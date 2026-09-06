@@ -1,5 +1,5 @@
 ---
-sourceHash: 074d3af9ccc9f5bfc0ccad2932bd671b6b1fcbdff2f8e8869ec9382b4ce02266
+sourceHash: 428a9b3757aaf661e60840dfe6e009e4ab553a958cb9151cececb37d98a8e865
 sourcePath: docs/faq/README.md
 ---
 
@@ -252,7 +252,7 @@ que l'application de bureau.
 Elle est publiée sur l'**App Store** et sur **Google Play** sous le nom
 **Tiger NFC Connect** (anciennement « TigerTag RFID Connect »), avec des bêtas
 publiques sur les deux plateformes. Tous les liens :
-[tigersystem.io/fr/download](https://tigersystem.io/fr/download).
+[tigersystem.io/download](https://tigersystem.io/download).
 
 ## TigerScale et capteurs
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: f1cccdd7b6054afec64688c411c996df5c7aee97def95479a4be1151c62e4029
+sourceHash: 97f0903db07610af8024d02f8fc5059d626c27bbe000fb15cc6b0de5b3c5be61
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -131,10 +131,13 @@ référence partagée.
 
 | Outil | Lecture | Écriture |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (NFC mobile) | | |
+| [Tiger NFC Connect](../products/tigertag-connect.md) (NFC mobile) | approchez la puce — la bobine s'ouvre sur le téléphone | appuyez sur **Make** puis approchez à nouveau ; **Dual NFC** écrit les deux puces d'une bobine en une session |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | ouvre automatiquement la bobine au scan | écriture guidée, avec vérification de l'UID |
-| [SDK JS](../developers/sdks.md) (`tigertag` sur npm) | | |
-| [SDK Python](../developers/sdks.md) | | |
+| [SDK JS](../developers/sdks.md) (`tigertag` sur npm) | décode la charge utile de 144 octets | encode une nouvelle charge utile |
+| [SDK Python](../developers/sdks.md) | décode la charge utile ; `tigertag[verify]` vérifie aussi la signature | encode une nouvelle charge utile |
+
+Les deux applications parlent au lecteur ; les SDK, non. Un SDK décode et
+encode la **charge utile** — le matériel NFC, c'est vous qui l'apportez.
 
 ## Versionnage
 

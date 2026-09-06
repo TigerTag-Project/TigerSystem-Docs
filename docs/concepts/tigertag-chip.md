@@ -120,10 +120,13 @@ shared reference database.
 
 | Tool | Read | Write |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (mobile NFC) | | |
+| [Tiger NFC Connect](../products/tigertag-connect.md) (mobile NFC) | tap the chip — the spool opens on the phone | tap **Make** and tap again to write; **Dual NFC** writes a spool's two chips in one session |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | auto-opens the spool on scan | guided, UID-checked write |
-| [JS SDK](../developers/sdks.md) (`tigertag` on npm) | | |
-| [Python SDK](../developers/sdks.md) | | |
+| [JS SDK](../developers/sdks.md) (`tigertag` on npm) | decodes the 144-byte payload | encodes a new payload |
+| [Python SDK](../developers/sdks.md) | decodes the payload; `tigertag[verify]` also checks the signature | encodes a new payload |
+
+The two apps talk to the reader; the SDKs do not. An SDK decodes and encodes
+the **payload** — bring your own NFC hardware.
 
 ## Versioning
 

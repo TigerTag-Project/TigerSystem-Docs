@@ -1,5 +1,5 @@
 ---
-sourceHash: a71c001c3bc862286fbaaf46bc9c8de8af3b7251d660573b6c4747ad2c55bfae
+sourceHash: 5ce83667345f3682bb55b7ce2166291343335f200cf8ee676349ec58427b734c
 sourcePath: docs/tutorials/first-smart-spool.md
 ---
 
@@ -17,7 +17,7 @@ centimes.
  recommandée (quelques centimes sur Amazon, AliExpress ou en boutique ; rien
  d'officiel n'est nécessaire)
 - **Tiger NFC Connect**, l'application gratuite —
- [téléchargement iOS et Android](https://tigersystem.io/fr/download)
+ [téléchargement iOS et Android](https://tigersystem.io/download)
 
 > Vous avez déjà acheté du filament chez Rosa3D, eSun, Sunlu, R3D… ? Votre
 > bobine porte peut-être **déjà des puces TigerTag** — sautez le formulaire et
