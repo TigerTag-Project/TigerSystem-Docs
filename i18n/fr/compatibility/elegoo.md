@@ -1,5 +1,5 @@
 ---
-sourceHash: cb9f87ff0205e161b9924df169bbf797efbd9536e5af6d2b7aa6dc3164482ff1
+sourceHash: 93596d78a4523e76333ac18799353fbf0935304382a1f5dbb44fbe567ec84947
 sourcePath: docs/compatibility/elegoo.md
 ---
 
@@ -25,7 +25,9 @@ Spécification de décodage en lecture seule :
 ## Le déroulé
 
 1. **Ajoutez l'imprimante** — découverte automatique sur le réseau local
- (diffusion UDP) ou ajout par IP.
+ (diffusion UDP) ou ajout par IP. Nécessite d'activer une fois **le mode
+ LAN Only** sur l'écran tactile de l'imprimante —
+ [marche à suivre](#passer-en-mode-lan).
 2. **Scannez une bobine** — téléphone ou lecteur de bureau ; elle atterrit dans
  votre inventaire.
 3. **Affectez-la à un emplacement** — Tiger Studio associe les bobines de
@@ -35,6 +37,15 @@ Spécification de décodage en lecture seule :
  d'origine et déplacement manuel des axes, consignes de buse et de plateau,
  allumage de la lumière, pilotage du ventilateur, choix du mode de vitesse,
  chargement/déchargement du filament emplacement par emplacement.
+
+## Passer en mode LAN
+
+Le lien direct de Tiger Studio nécessite d'activer **le mode LAN Only** sur l'imprimante
+elle-même — une configuration ponctuelle, à l'écran.
+
+<div class="ts-model-picker">
+<a href="../tutorials/elegoo-cc2-lan-mode.md"><img src="../assets/elegoo-lan-mode/models/cc2.png" alt="Centauri Carbon 2" /><span>Centauri Carbon 2</span></a>
+</div>
 
 ## Bonus : écrire des tags au format Elegoo
 
