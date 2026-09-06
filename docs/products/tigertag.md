@@ -88,7 +88,9 @@ authorization. See [TRADEMARK.md](../../TRADEMARK.md).
 
 More than **2.5 million TigerTag chips** have been produced — most integrated
 at the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —
-with Filforme, Nanovia and more being integrated).
+with Filforme, Nanovia and more being integrated). All of them are
+[certified partners](../certified-partners.md); that page is the registry, and
+the only authoritative way to check that a mark on a box is legitimate.
 
 || | |
 |---|---|---|

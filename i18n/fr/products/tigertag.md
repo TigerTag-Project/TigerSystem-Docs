@@ -1,5 +1,5 @@
 ---
-sourceHash: d230268771c802700892d9559af611d8915b55075f7c4512e26e6ff2a34f58a7
+sourceHash: b2aa2f3cc323778b65f69b4ab0a7ab1299954c84f8def1e634662a4107dc9264
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -100,6 +100,9 @@ autorisation écrite. Voir [TRADEMARK.md](../../TRADEMARK.md).
 Plus de **2,5 millions de puces TigerTag** ont été produites — la plupart
 intégrées en usine par des marques de filament (Rosa3D, eSun, Sunlu, Landu,
 Jamg He, R3D — Filforme, Nanovia et d'autres étant en cours d'intégration).
+Toutes sont [partenaires certifiés](../certified-partners.md) ; cette page est
+le registre, et le seul moyen faisant autorité de vérifier qu'une marque sur
+une boîte est légitime.
 
 || | |
 |---|---|---|

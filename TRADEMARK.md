@@ -40,8 +40,9 @@ Usage — the two-gates model:
  *referential* use is free: it is a factual statement that your product talks
  to TigerTag chips. It must never be presented as a seal, a badge of quality,
  or an implication of affiliation.
-- Only a **certified partner** (see *TigerTag Certified*, listed in the
- certified registry) may apply the mark **on a chip, an inlay, a carrier, a
+- Only a **certified partner** (see *TigerTag Certified*, listed in
+ [the certified-partner registry](https://wiki.tigersystem.io/certified-partners/))
+ may apply the mark **on a chip, an inlay, a carrier, a
  label, a spool, a resin bottle or its packaging**, use the TigerTag name
  **commercially as a product designation**, or **issue TigerTag+ signatures**
  — TigerTag holds the private key. Applied to a product, the mark no longer
