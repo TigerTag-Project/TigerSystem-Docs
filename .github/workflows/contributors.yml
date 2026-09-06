@@ -1,0 +1,43 @@
+name: Hall of Fame
+
+# Refreshes the contributor table on a schedule instead of gating pull
+# requests on it. Deliberate: the list changes the moment a stranger opens an
+# issue, so making it a check would fail unrelated PRs and, worse, would make
+# a newcomer's first act break the build. A thank-you list should never do
+# that. It refreshes itself weekly, and on demand.
+
+on:
+  schedule:
+    - cron: '17 6 * * 1' # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh the contributor table
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate from the GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/contributors.mjs
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- docs/hall-of-fame.md i18n/fr/hall-of-fame.md; then
+            echo "No new contributors since the last run."
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/hall-of-fame.md i18n/fr/hall-of-fame.md
+          git commit -m 'Refresh the Hall of Fame'
+          git push
