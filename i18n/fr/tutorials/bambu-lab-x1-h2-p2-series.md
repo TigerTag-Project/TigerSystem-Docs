@@ -1,3 +1,8 @@
+---
+sourceHash: dc3146c76ac643ff9a46c6eba3c3abb465fe447e6873d678d5ab26f51ec0a113
+sourcePath: docs/tutorials/bambu-lab-x1-h2-p2-series.md
+---
+
 # Bambu Lab série X1 / X1E / H2 / P2 : passer en mode LAN
 
 Pour les P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro et H2C — activez **le mode LAN Only** et **le mode

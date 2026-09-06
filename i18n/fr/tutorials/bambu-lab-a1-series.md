@@ -1,3 +1,8 @@
+---
+sourceHash: b3da9c974ae8097cededa2a44b70e24a13dc56c2f7c3a370263452c0ac9a1b27
+sourcePath: docs/tutorials/bambu-lab-a1-series.md
+---
+
 # Bambu Lab série A1 : passer en mode LAN
 
 Pour les A1 mini, A1 et A2L — activez **le mode LAN Only** et **le mode Développeur** sur

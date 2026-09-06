@@ -1,3 +1,8 @@
+---
+sourceHash: a58c617971c259cbf0d44467852272c49c3acd9ae8017b3fda6550ee125776ad
+sourcePath: docs/tutorials/bambu-lab-p1-series.md
+---
+
 # Bambu Lab série P1 : passer en mode LAN
 
 Pour les P1P et P1S — activez **le mode LAN Only** et **le mode Développeur** sur l'imprimante

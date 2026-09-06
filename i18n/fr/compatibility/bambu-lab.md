@@ -1,5 +1,5 @@
 ---
-sourceHash: b2ec3670df173ff1a8fed15d5f7a985bbf742ee0f9f0e5b9656372ee35d13ff0
+sourceHash: 1f215ef9fa88b615fd32f9fc231a4eacc80883ea4e0baa3c44e97b83286d8f44
 sourcePath: docs/compatibility/bambu-lab.md
 ---
 
