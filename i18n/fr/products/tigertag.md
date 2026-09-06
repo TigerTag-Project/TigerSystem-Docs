@@ -1,5 +1,5 @@
 ---
-sourceHash: cddb559c5d66b96ed84af12c30e712447d59a576b87267f8e74afb3188929d43
+sourceHash: d230268771c802700892d9559af611d8915b55075f7c4512e26e6ff2a34f58a7
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -100,6 +100,18 @@ autorisation écrite. Voir [TRADEMARK.md](../../TRADEMARK.md).
 Plus de **2,5 millions de puces TigerTag** ont été produites — la plupart
 intégrées en usine par des marques de filament (Rosa3D, eSun, Sunlu, Landu,
 Jamg He, R3D — Filforme, Nanovia et d'autres étant en cours d'intégration).
+
+|| | |
+|---|---|---|
+| <img src="../assets/box-rosa3d-cutout.png" alt="Boîte de filament Rosa3D avec TigerTag NFC-RFID" /> | <img src="../assets/box-esun-cutout.png" alt="Boîte de filament eSun avec TigerTag NFC-RFID" /> | <img src="../assets/box-sunlu-cutout.png" alt="Boîte de filament Sunlu avec TigerTag NFC-RFID" /> |
+
+|| | | |
+|---|---|---|---|
+| <img src="../assets/spool-rosa3d.png" alt="Recharge de filament arc-en-ciel Rosa3D livrée avec un TigerTag" /> | <img src="../assets/spool-esun.png" alt="Bobine eSUN PLA+ livrée avec un TigerTag" /> | <img src="../assets/spool-sunlu.png" alt="Bobine de filament Sunlu livrée avec un TigerTag" /> | <img src="../assets/spool-r3d.png" alt="Bobine de filament R3D livrée avec un TigerTag" /> |
+
+*Les boîtes, et les bobines qu'il y a dedans — achetées en boutique, pas mises
+en scène pour la photo. C'est à ça que ressemble « le plus déployé ».*
+
 Mais le protocole n'est délibérément **pas lié aux puces officielles** :
 n'importe quelle puce NTAG vierge et bon marché achetée n'importe où (Amazon,
 AliExpress, en boutique) fonctionne à l'identique, et rien ne l'en empêche.

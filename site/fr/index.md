@@ -47,6 +47,15 @@ Plus de **2,5 millions de puces** ont été produites et sortent d'usine dans le
 filament de marques comme Rosa3D, eSun, Sunlu et R3D, ce qui fait de TigerTag
 le protocole RFID tiers le plus déployé au monde.
 
+<div class="ts-boxes">
+<img src="/assets/box-rosa3d-cutout.png" alt="Boîte de filament Rosa3D avec TigerTag NFC-RFID" />
+<img src="/assets/box-esun-cutout.png" alt="Boîte de filament eSun avec TigerTag NFC-RFID" />
+<img src="/assets/box-sunlu-cutout.png" alt="Boîte de filament Sunlu avec TigerTag NFC-RFID" />
+</div>
+
+<p class="ts-boxes__caption"><em>Ce ne sont pas des maquettes : de vraies boîtes, en rayon, qui sortent d'usine avec un TigerTag dedans.</em></p>
+
+
 <div class="ts-cardgrid">
 <a class="ts-card" href="/fr/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Prêt à essayer</span><span class="ts-card__text">Rendez une bobine intelligente en cinq minutes — une puce NTAG vierge, votre téléphone, l'application gratuite. Sans compte, entièrement hors ligne.</span></span></a>
 <a class="ts-card" href="/fr/products/"><span class="ts-card__body"><span class="ts-card__title">Utilisateur</span><span class="ts-card__text">Ce que chaque produit fait concrètement pour vous — puces, applications, balance, support de lecteur.</span></span></a>

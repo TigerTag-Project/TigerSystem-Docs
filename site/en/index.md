@@ -42,6 +42,15 @@ More than **2.5 million chips** have been produced and ship from the factory in
 filament by brands like Rosa3D, eSun, Sunlu and R3D, which makes TigerTag the
 most deployed third-party RFID protocol in the world.
 
+<div class="ts-boxes">
+<img src="/assets/box-rosa3d-cutout.png" alt="Rosa3D filament box with TigerTag NFC-RFID" />
+<img src="/assets/box-esun-cutout.png" alt="eSun filament box with TigerTag NFC-RFID" />
+<img src="/assets/box-sunlu-cutout.png" alt="Sunlu filament box with TigerTag NFC-RFID" />
+</div>
+
+<p class="ts-boxes__caption"><em>Not a mock-up: real boxes on real shelves, shipping with TigerTag inside.</em></p>
+
+
 <div class="ts-cardgrid">
 <a class="ts-card" href="/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Ready to try</span><span class="ts-card__text">Make a spool smart in five minutes — a blank NTAG chip, your phone, the free app. No account, fully offline.</span></span></a>
 <a class="ts-card" href="/products/"><span class="ts-card__body"><span class="ts-card__title">A user</span><span class="ts-card__text">What each product actually does for you — chips, apps, the scale, the reader stand.</span></span></a>

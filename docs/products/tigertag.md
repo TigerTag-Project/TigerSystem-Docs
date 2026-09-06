@@ -88,7 +88,18 @@ authorization. See [TRADEMARK.md](../../TRADEMARK.md).
 
 More than **2.5 million TigerTag chips** have been produced — most integrated
 at the factory by filament brands (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —
-with Filforme, Nanovia and more being integrated). But the protocol is
+with Filforme, Nanovia and more being integrated).
+
+|| | |
+|---|---|---|
+| <img src="../assets/box-rosa3d-cutout.png" alt="Rosa3D filament box with TigerTag NFC-RFID" /> | <img src="../assets/box-esun-cutout.png" alt="eSun filament box with TigerTag NFC-RFID" /> | <img src="../assets/box-sunlu-cutout.png" alt="Sunlu filament box with TigerTag NFC-RFID" /> |
+
+|| | | |
+|---|---|---|---|
+| <img src="../assets/spool-rosa3d.png" alt="Rosa3D rainbow filament refill shipping with TigerTag" /> | <img src="../assets/spool-esun.png" alt="eSUN PLA+ spool shipping with TigerTag" /> | <img src="../assets/spool-sunlu.png" alt="Sunlu filament spool shipping with TigerTag" /> | <img src="../assets/spool-r3d.png" alt="R3D filament spool shipping with TigerTag" /> |
+
+*The boxes and the spools inside them — bought in a shop, not staged for a
+photo. This is what "most deployed" looks like.* But the protocol is
 deliberately **not tied to official chips**: any cheap, blank NTAG chip bought
 anywhere (Amazon, AliExpress, locally) works identically, and nothing blocks
 it. Branded chips help support the R&D; adoption of the protocol is the first

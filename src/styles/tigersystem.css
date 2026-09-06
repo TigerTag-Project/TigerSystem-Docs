@@ -353,3 +353,25 @@
 .sl-markdown-content table :is(td, th):first-child {
   white-space: nowrap;
 }
+
+/* Partner filament boxes — proof of adoption on the landing pages. */
+.ts-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: end;
+  margin: 1.5rem 0 0.5rem;
+}
+.ts-boxes img {
+  width: 100%;
+  height: auto;
+}
+.ts-boxes__caption {
+  margin-top: 0;
+  text-align: center;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+}
+@media (max-width: 30rem) {
+  .ts-boxes { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+}

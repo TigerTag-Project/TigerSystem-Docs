@@ -58,6 +58,12 @@ third-party RFID protocol in the world**. We expected the
 community to invent its own uses for an open NFC identity — it didn't happen.
 So we picked up the subject ourselves.
 
+|| | |
+|---|---|---|
+| <img src="docs/assets/box-rosa3d-cutout.png" alt="Rosa3D filament box with TigerTag NFC-RFID" /> | <img src="docs/assets/box-esun-cutout.png" alt="eSun filament box with TigerTag NFC-RFID" /> | <img src="docs/assets/box-sunlu-cutout.png" alt="Sunlu filament box with TigerTag NFC-RFID" /> |
+
+*Not a mock-up: real boxes on real shelves, shipping with TigerTag inside.*
+
 That's why everything we build — Tiger Studio, Tiger NFC Connect, TigerScale,
 TigerPOD, and every project still to come — has one single goal: **to show the
 potential.** Each product is a working **proof of concept** of what an
