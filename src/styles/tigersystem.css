@@ -284,6 +284,21 @@
   vertical-align: middle;
 }
 
+/*
+ * A screenshot or product photo on its own line — raw HTML, so it lands as a
+ * direct child rather than paragraph-wrapped, unlike the inline icons above —
+ * centers like the home page's .ts-figure. So does its caption, a paragraph
+ * that is nothing but italic text, right below it.
+ */
+.sl-markdown-content > img[width] {
+  display: block;
+  margin-inline: auto;
+}
+
+.sl-markdown-content > img[width] + p:has(> em:only-child) {
+  text-align: center;
+}
+
 .sl-markdown-content table {
   display: block;
   overflow-x: auto;
