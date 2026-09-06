@@ -1,13 +1,28 @@
 ---
+/**
+ * Starlight's social icons, plus a "Report issue" link.
+ *
+ * The link carries the page it was clicked from, so a report arrives already
+ * saying where the problem is instead of costing a round-trip to ask.
+ */
 import Default from '@astrojs/starlight/components/SocialIcons.astro';
 
 import { REPO_URL } from '../../scripts/lib/docs-config.mjs';
 
 const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
 const label = locale === 'fr' ? 'Signaler un problème' : 'Report issue';
+
+const page = Astro.url.pathname;
+const title = locale === 'fr' ? `Problème sur ${page}` : `Issue on ${page}`;
+const body =
+  locale === 'fr'
+    ? `Page : ${page}\n\nCe qui ne va pas :\n`
+    : `Page: ${page}\n\nWhat is wrong:\n`;
+
+const href = `${REPO_URL}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 ---
 
 <Default><slot /></Default>
-<a class="report-issue-link" href={`${REPO_URL}/issues/new`} rel="me">
+<a class="report-issue-link" href={href}>
   {label}
 </a>

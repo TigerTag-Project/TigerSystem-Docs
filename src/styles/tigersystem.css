@@ -142,6 +142,15 @@
   white-space: nowrap;
 }
 
+/* Starlight collapses its social-icons row below this width, which left the
+   link at 0x0 — invisible, yet still announced by a screen reader. Take it out
+   of the accessibility tree too, rather than leaving a link nobody can reach. */
+@media (max-width: 50rem) {
+  .report-issue-link {
+    display: none;
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /* Card grids on the section index pages                                       */
 /* -------------------------------------------------------------------------- */
