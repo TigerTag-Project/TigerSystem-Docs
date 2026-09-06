@@ -126,6 +126,8 @@ build a TigerTag-reading device.
 
 ## Third-party scales — USB HID (DYMO M series and friends)
 
+<img src="../assets/dymo-m5.png" width="420" alt="The DYMO M5 — a USB HID postal scale, power/tare/hold buttons and a small LCD" />
+
 TigerScale is the first-party scale — but Tiger Studio also reads standard
 **USB "HID Scale" devices** (HID usage page `0x8D`, usage `0x20`): starting
 with the **DYMO M5** and the rest of the DYMO M series (M10, M25… same
@@ -144,6 +146,8 @@ Protocol, validated on real hardware — 6-byte *Scale Data Reports* at ~1 Hz:
 
 DYMO vendor id `0x0922`; the M5 is pid `0x8009`. Quirk: the very first frame
 right after a tare reports unit `0x00`.
+
+> **The DYMO M2 is not supported.** It doesn't speak this protocol.
 
 ## Interactions
 
