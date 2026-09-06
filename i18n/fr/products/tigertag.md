@@ -1,5 +1,5 @@
 ---
-sourceHash: b2aa2f3cc323778b65f69b4ab0a7ab1299954c84f8def1e634662a4107dc9264
+sourceHash: 6fc60a5a1f699829f3b9d1d55a2e10e27be4a8bbaa32a30400b02908ec2e4248
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -118,6 +118,8 @@ en scène pour la photo. C'est à ça que ressemble « le plus déployé ».*
 Mais le protocole n'est délibérément **pas lié aux puces officielles** :
 n'importe quelle puce NTAG vierge et bon marché achetée n'importe où (Amazon,
 AliExpress, en boutique) fonctionne à l'identique, et rien ne l'en empêche.
+Les autres façons d'aider — y compris celles qui ne coûtent rien — sont sur
+[Soutenir le projet](../support.md).
 Les puces de marque aident à financer la R&D ; l'adoption du protocole est la
 première récompense.
 

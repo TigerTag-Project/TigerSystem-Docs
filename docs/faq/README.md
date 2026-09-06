@@ -420,6 +420,14 @@ issues work too.
 Docs: [CONTRIBUTING.md](../../CONTRIBUTING.md) here. Code: each repo's own
 guide — see the [repository map](../developers/repositories.md).
 
+**Everything is free — how do I support the project?**
+Buy the official chips or the TigerPOD kit when you were buying anyway; wear
+the [cap or the polo](https://tigersystem.io/goodies); fix a page, translate
+one, build something compatible; and ask your filament brand why their spools
+are not tagged — that last one has done more than all the rest. The full list,
+including what you can safely ignore, is on
+[Support the project](../support.md).
+
 **Can I fork it all and build something else?**
 Yes. MIT/CC-licensed, deliberately forkable — just respect the
 [trademark policy](../../TRADEMARK.md).

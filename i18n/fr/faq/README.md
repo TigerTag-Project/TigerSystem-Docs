@@ -1,5 +1,5 @@
 ---
-sourceHash: 428a9b3757aaf661e60840dfe6e009e4ab553a958cb9151cececb37d98a8e865
+sourceHash: 8ce5007e9aedd4fbad6b58968142755651ba9ed216cea56130ecd324a71f5203
 sourcePath: docs/faq/README.md
 ---
 
@@ -479,6 +479,15 @@ les issues GitHub de chaque dépôt fonctionnent aussi.
 Documentation : [CONTRIBUTING.md](../../CONTRIBUTING.md) ici. Code : le guide
 propre à chaque dépôt — voir la
 [carte des dépôts](../developers/repositories.md).
+
+**Tout est gratuit — comment soutenir le projet ?**
+Achetez les puces officielles ou le kit TigerPOD quand vous achetiez de toute
+façon ; portez la [casquette ou le polo](https://tigersystem.io/goodies) ;
+corrigez une page, traduisez-en une, construisez quelque chose de compatible ;
+et demandez à votre marque de filament pourquoi ses bobines ne sont pas
+taguées — ce dernier point a plus servi que tous les autres. La liste complète,
+y compris ce que vous pouvez ignorer sans scrupule, est sur
+[Soutenir le projet](../support.md).
 
 **Puis-je tout forker et construire autre chose ?**
 Oui. Sous licence MIT/CC, délibérément forkable — respectez simplement la

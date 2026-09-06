@@ -87,6 +87,8 @@ export const sidebar = [
     { slug: 'faq' },
     { slug: 'glossary' },
     { slug: 'certified-partners' },
+    { slug: 'support' },
+    { slug: 'hall-of-fame' },
     { slug: 'roadmap' },
     { slug: 'press' },
     { slug: 'press/headlines' },

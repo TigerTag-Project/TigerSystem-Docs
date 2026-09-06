@@ -1,5 +1,5 @@
 ---
-sourceHash: 10c33a405224207d5623529b4dda1578c1e197b469909330b5f9553d0a6607f1
+sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -48,7 +48,8 @@ flowchart TB
 - **Pour les fabricants, les développeurs et la presse** (`/manufacturers`,
  `/developers`, `/press`) — le discours B2B, les points d'entrée pour
  l'intégration, les ressources média.
-- **Goodies** (`/goodies`) — le coin boutique.
+- **Goodies** (`/goodies`) — la casquette et le polo officiels. En acheter est
+ l'une des façons de [soutenir le projet](../support.md).
 
 ## TigerHub n'est pas la base de données
 

@@ -105,7 +105,8 @@ photo. This is what "most deployed" looks like.* But the protocol is
 deliberately **not tied to official chips**: any cheap, blank NTAG chip bought
 anywhere (Amazon, AliExpress, locally) works identically, and nothing blocks
 it. Branded chips help support the R&D; adoption of the protocol is the first
-reward.
+reward. Other ways to help — including the ones that cost nothing — are on
+[Support the project](../support.md).
 
 The freedom runs both ways: **chips are never write-locked**. TigerTag is
 simply the base protocol filament factories ship spools with — if you prefer

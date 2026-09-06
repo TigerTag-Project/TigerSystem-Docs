@@ -38,7 +38,8 @@ flowchart TB
 - **3D models** (`/models`) — printable models (TigerPOD and friends).
 - **For manufacturers, developers & press** (`/manufacturers`, `/developers`,
  `/press`) — the B2B story, integration pointers, media assets.
-- **Goodies** (`/goodies`) — the merch corner.
+- **Goodies** (`/goodies`) — the official cap and polo. Buying one is one of
+ the ways to [support the project](../support.md).
 
 ## TigerHub is not the database
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 46f0ee097705599ddecc7629c638d56026de450059ecabf6fcb7d7f12e27b674
+sourceHash: 3bcfffa96365c1a0a24abe39c027904aba4c864c3e15cb02920ce1d64c949247
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -120,9 +120,10 @@ et la région :
 
 Acheter le [kit](https://shop.tigertag.io/collections/tigertag-rfid-maker)
 revient moins cher que de sourcer les mêmes pièces une à une, les lecteurs
-arrivent avec le logo officiel du projet, et cela finance le standard. Mais en
-construire un avec des pièces génériques **n'est pas une voie inférieure —
-c'est le même Pod**. C'est ça, un protocole ouvert.
+arrivent avec le logo officiel du projet, et cela finance le standard — l'une
+des façons de [soutenir le projet](../support.md). Mais en construire un avec
+des pièces génériques **n'est pas une voie inférieure — c'est le même Pod**.
+C'est ça, un protocole ouvert.
 
 ### Compatibilité des lecteurs
 

@@ -109,9 +109,10 @@ Rough budget, sourced separately — prices vary by shop and region:
 
 Buying the [kit](https://shop.tigertag.io/collections/tigertag-rfid-maker)
 instead costs less than sourcing the same parts one by one, the readers arrive
-carrying the project's official logo, and it funds the standard. But building
-one from generic parts is **not a lesser path — it is the same Pod**. That is
-what an open protocol means.
+carrying the project's official logo, and it funds the standard — one of
+several ways to [support the project](../support.md). But building one from
+generic parts is **not a lesser path — it is the same Pod**. That is what an
+open protocol means.
 
 ### Reader compatibility
 
