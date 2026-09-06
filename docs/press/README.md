@@ -74,8 +74,10 @@ rainbow line-up banner. In use with Tiger Studio:
 |---|---|
 | <img src="../assets/tigerscale-v3.png" alt="TigerScale V3 — colour touchscreen, dual PN532 NFC readers" /> | <img src="../assets/tigerscale-at-home.jpg" alt="A TigerScale V3 on a maker's bench, a spool resting on it" /> |
 
-**TigerScale V3**, the current generation: product shot and the same scale on a
-bench, in use. ESP32-S3, 3.5″ colour touchscreen, dual PN532 readers so a
+**TigerScale V3**, the current generation: the product shot, and an
+**illustration** of the same scale on a maker's bench — the second one is a
+render, not a photograph, so please label it as such if you publish it.
+ESP32-S3, 3.5″ colour touchscreen, dual PN532 readers so a
 [twin-tagged spool](../concepts/tigertag-chip.md) is identified whichever way
 it is put down. Open hardware, MIT.
 

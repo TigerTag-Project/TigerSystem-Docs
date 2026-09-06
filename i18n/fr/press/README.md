@@ -1,5 +1,5 @@
 ---
-sourceHash: 898f0df68cf91fc8bdbe269da137454aae93a4d5956aa115befcf36acddf4579
+sourceHash: 4437cc36709200a58da820139ffc729e1d3a22786c301a0136991f5404c83f00
 sourcePath: docs/press/README.md
 ---
 
@@ -81,8 +81,10 @@ bannière de la gamme arc-en-ciel. En usage avec Tiger Studio :
 |---|---|
 | <img src="../assets/tigerscale-v3.png" alt="TigerScale V3 — écran tactile couleur, double lecteur NFC PN532" /> | <img src="../assets/tigerscale-at-home.jpg" alt="Une TigerScale V3 sur l'établi d'un maker, une bobine posée dessus" /> |
 
-**TigerScale V3**, la génération actuelle : photo produit et la même balance
-sur un établi, en usage. ESP32-S3, écran tactile couleur 3,5″, double lecteur
+**TigerScale V3**, la génération actuelle : la photo produit, et une
+**illustration** de la même balance sur l'établi d'un maker — la seconde est un
+rendu, pas une photographie, merci de la créditer comme telle si vous la
+publiez. ESP32-S3, écran tactile couleur 3,5″, double lecteur
 PN532 pour qu'une [bobine à deux puces](../concepts/tigertag-chip.md) soit
 identifiée quel que soit le sens où on la pose. Matériel ouvert, licence MIT.
 
