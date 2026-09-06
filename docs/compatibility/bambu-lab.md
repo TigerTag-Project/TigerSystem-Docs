@@ -13,8 +13,9 @@ Tiger Studio connects to a Bambu Lab printer two ways:
 | Camera | JPEG stream (TCP 6000) / RTSP — same feed either way, needs **LAN Mode Liveview** enabled on the printer |
 | Telemetry | Temperatures, job progress, print preview |
 
-> **Cloud connections are read-only today.** You get live telemetry — temperatures, progress,
-> camera — but not machine control (pause, resume, stop, lights…). Control needs the LAN path.
+> **Cloud connections are read-only today**, with one exception. You get live telemetry —
+> temperatures, progress, camera — and the printer's **light**, which does toggle over cloud.
+> Everything else that acts on the machine (pause, resume, stop) needs the LAN path.
 
 ## Native RFID — spec documented, in-app read planned
 

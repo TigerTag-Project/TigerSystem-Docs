@@ -1,5 +1,5 @@
 ---
-sourceHash: 1f215ef9fa88b615fd32f9fc231a4eacc80883ea4e0baa3c44e97b83286d8f44
+sourceHash: 5d2504ca693bf2a4da2b772ca4ce24bf4b24a5760d0bcf0a7672fb10983a5456
 sourcePath: docs/compatibility/bambu-lab.md
 ---
 
@@ -18,9 +18,10 @@ Tiger Studio se connecte à une imprimante Bambu Lab de deux façons :
 | Caméra | Flux JPEG (TCP 6000) / RTSP — même flux dans les deux cas, nécessite d'activer **LAN Mode Liveview** sur l'imprimante |
 | Télémétrie | Températures, avancement du travail, aperçu d'impression |
 
-> **Les connexions cloud sont en lecture seule pour l'instant.** Vous avez la télémétrie en direct
-> — températures, avancement, caméra — mais pas le contrôle de la machine (pause, reprise, arrêt,
-> éclairage…). Le contrôle nécessite la voie LAN.
+> **Les connexions cloud sont en lecture seule pour l'instant**, à une exception près. Vous avez
+> la télémétrie en direct — températures, avancement, caméra — et l'**éclairage** de l'imprimante,
+> qui s'allume bien depuis le cloud. Tout le reste qui agit sur la machine (pause, reprise, arrêt)
+> nécessite la voie LAN.
 
 ## RFID natif — spécification documentée, lecture dans l'application prévue
 
