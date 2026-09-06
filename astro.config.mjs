@@ -38,6 +38,7 @@ export default defineConfig({
         SiteTitle: './src/components/SiteTitle.astro',
         Head: './src/components/Head.astro',
         Footer: './src/components/Footer.astro',
+        SocialIcons: './src/components/SocialIcons.astro',
       },
 
       editLink: { baseUrl: `${REPO_URL}/edit/main/` },
