@@ -34,6 +34,50 @@ The authoritative field-by-field data model is documented in the
 [Firebase integration repo](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)
 (`docs/03-data-model.md`) — the reference for third-party integrators.
 
+## What leaves your bench, and what stays
+
+The ecosystem says everywhere that the cloud is optional. Here is what that
+actually means, and what it costs when you say no.
+
+**Identification is local by design.** A device does not ask a server what a tag
+is. The brand and material tables live in its own storage and are refreshed from
+the **public** [reference repository](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
+at most once a day. So a lookup never waits on the network, and it works with
+the internet down.
+
+**Without an account you lose exactly one thing: sync between devices.** A
+[TigerScale](../products/tigerscale.md) still weighs, still reads tags, still
+identifies brand and material, still serves its own web UI on your LAN. Nothing
+about the chip itself needs us — that is the whole point of writing the data
+[on the chip](./tigertag-chip.md).
+
+**With an account, here is what a device actually sends.** Taking the scale as
+the worked example, on each completed weighing and on a heartbeat it writes,
+under your own user document: the spool's tag UIDs, net/gross/container weight,
+firmware version, WiFi signal and IP, calibration factor, last-heartbeat time,
+battery state, and screen state. Diagnostics and measurements — no more. Every
+field is documented in
+[the scale's own reference](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TELEMETRY.md).
+
+**And here is what it stores locally, which matters more.** A signed-in device
+holds a refresh token, your user id and your WiFi credentials. It never stores
+your password — sign-in exchanges it for tokens. But treat a provisioned device
+as **holding a credential**: before you lend, sell or give one away, sign out
+*and* forget the WiFi. A plain reflash does not clear either — that storage is
+preserved on purpose so a firmware update does not cost you your setup.
+
+**Two deliberate choices worth knowing.** A device's LAN API is
+**unauthenticated**: anyone already on your network can read its state and
+trigger a tare. That is a simplification for a home network — put it on a guest
+VLAN if you do not trust yours. And the Firebase key visible in the source is a
+**public project identifier**, not a secret; every Firebase client ships it, and
+access control is enforced by server-side rules against the signed-in user, not
+by hiding a string.
+
+For the scale, all of this is documented in full in
+[`docs/CLOUD.md`](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/CLOUD.md),
+which is canonical.
+
 ## Sharing model (summary)
 
 - Each user has a public **discovery code** (`XXX-XXX`) for O(1) friend lookup.
