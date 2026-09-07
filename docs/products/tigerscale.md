@@ -203,6 +203,20 @@ right after a tare reports unit `0x00`.
 | Firebase (account database) | Writes live weight to the user's account |
 | Tiger Studio / Connect | Display live weight; health monitoring |
 
+## Recommended setup
+
+<img src="../assets/tigerscale-dymo-tigerpod.jpg" width="100%" alt="A TigerPOD sitting on a DYMO scale, weighing a tagged spool" />
+
+1. **Plug your DYMO scale into your computer over USB.**
+2. **Set the TigerPOD Mini or the original on top of the scale.**
+3. **Tare the DYMO scale.**
+4. **Open Tiger Studio Manager.**
+5. **Put a spool on the TigerPOD.**
+6. **The TigerPOD reads the spool's NTAG chips and opens its card in Tiger
+ Studio Manager.**
+7. **The DYMO scale weighs the spool — Tiger Studio Manager updates its
+ weight automatically.**
+
 ## Links
 
 - **V3 (current)**: [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) (MIT)

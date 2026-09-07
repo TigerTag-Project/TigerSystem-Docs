@@ -1,5 +1,5 @@
 ---
-sourceHash: 30ae07c59256042a0623d517a0f4bc64a24f4d49c7486cf7a4bda094429f113a
+sourceHash: eeea9a5db85c9602b051873febcd4a1efdd89d1db00775d1af4e69f3a56f770b
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -221,6 +221,20 @@ l'unité `0x00`.
 |---|---|
 | Firebase (base de données du compte) | Écrit le poids en direct dans le compte de l'utilisateur |
 | Tiger Studio / Connect | Affichent le poids en direct ; supervision de l'état |
+
+## Exemple d'utilisation recommandé
+
+<img src="../assets/tigerscale-dymo-tigerpod.jpg" width="100%" alt="Un TigerPOD posé sur une balance DYMO, en train de peser une bobine identifiée" />
+
+1. **Branchez votre balance DYMO à votre ordinateur en USB.**
+2. **Posez le TigerPOD Mini ou l'original sur la balance.**
+3. **Effectuez une tare de la balance DYMO.**
+4. **Ouvrez Tiger Studio Manager.**
+5. **Posez une bobine sur le TigerPOD.**
+6. **Le TigerPOD lit les puces NTAG de la bobine et ouvre sa fiche dans Tiger
+ Studio Manager.**
+7. **La balance DYMO pèse la bobine — Tiger Studio Manager met à jour son
+ poids automatiquement.**
 
 ## Liens
 
