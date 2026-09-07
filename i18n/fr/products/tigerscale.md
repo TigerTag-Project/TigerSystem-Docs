@@ -1,5 +1,5 @@
 ---
-sourceHash: c2046cd0797dd63464813946684a9b1bd17feaf4892013c966bcb174ef841a12
+sourceHash: 30ae07c59256042a0623d517a0f4bc64a24f4d49c7486cf7a4bda094429f113a
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -56,14 +56,18 @@ C'est celle qu'il faut construire.
 
 ## En construire une
 
-La balance est un montage DIY, et les deux étapes qu'on redoute ne sont pas
+La balance est un montage DIY, et les étapes qu'on redoute ne sont pas
 difficiles :
 
 1. **Imprimez le boîtier.** Un seul projet Bambu Studio `.3mf` avec les
  plateaux déjà disposés — [sur MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543).
  Ouvrez-le dans Bambu Studio ou Orca et lancez le découpage : rien à orienter,
  aucun support à placer.
-2. **Flashez depuis votre navigateur.** L'
+2. **Câblez les composants.** Reliez la cellule de charge, le HX711, le
+ haut-parleur et les deux lecteurs PN532 à la carte en suivant le
+ [schéma de câblage](#schéma-de-câblage) ci-dessous — le même câblage pour
+ les deux variantes de carte.
+3. **Flashez depuis votre navigateur.** L'
  [installateur web](https://tigertag-project.github.io/Tiger-Scale-V3/) sert
  toujours la version courante ; ensuite la balance se met à jour toute seule,
  par OTA.
@@ -74,7 +78,7 @@ Les pièces sont courantes :
 |---|---|---|
 | 1 | Carte Waveshare **ESP32-S3-Touch-LCD-3.5B** — tactile IPS 480×320 (la **-3.5** sans le B convient aussi) | [-3.5B](https://link.amazon/B0gaANfF5) · [-3.5](https://link.amazon/B0dpgOlOQ) |
 | 2 | Module NFC **PN532 V3** — rangée de broches **et** interrupteur de mode indispensables | [Amazon](https://link.amazon/B0iTXrhjd) |
-| 1 | Cellule de charge 5 kg + HX711 — doit avoir 2 trous taraudés M4 et 2 M5 | [Amazon](https://link.amazon/B09LOUuI1) |
+| 1 | Cellule de charge 5 kg + HX711 | [Amazon](https://link.amazon/B09LOUuI1) |
 | 1 | Câble USB-C 4 broches + connecteur | [câble](https://link.amazon/B0aoW8qQx) · [connecteur](https://link.amazon/B0aiEyjLx) |
 | 1 | Batterie Li-ion — **facultative**, la balance fonctionne sur USB | [Amazon](https://link.amazon/B0etKlE1i) |
 | — | Fils Dupont, vis autotaraudeuses M3 | [fils](https://link.amazon/B0bl6jvMs) · [vis](https://link.amazon/B0ekzxx1E) |
@@ -101,11 +105,43 @@ Les pièces sont courantes :
 La nomenclature complète et chiffrée est dans le
 [dépôt](https://github.com/TigerTag-Project/Tiger-Scale-V3).
 
-> **Un piège à connaître.** La carte existe en **-3.5B** et en **-3.5**, et le
-> firmware choisit son transport NFC à la compilation. Flashez la mauvaise
-> version et vous obtenez une balance qui démarre parfaitement et ne voit
-> jamais aucune puce, sans rien à l'écran pour l'expliquer. L'installateur web
-> demande quelle variante vous avez — lisez la sérigraphie avant de répondre.
+### Assemblage
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-assembly-front-quarter.png" alt="Boîtier TigerScale V3, vue de trois-quarts avant" />
+<figcaption>Trois-quarts avant</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-rear-quarter.png" alt="Boîtier TigerScale V3, vue de trois-quarts arrière" />
+<figcaption>Trois-quarts arrière</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-rear-quarter-close.png" alt="Boîtier TigerScale V3, gros plan trois-quarts arrière" />
+<figcaption>Trois-quarts arrière, gros plan</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-side-elevation.png" alt="Boîtier TigerScale V3, vue de côté" />
+<figcaption>Vue de côté</figcaption>
+</figure>
+</div>
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-rear-orientation.jpg" alt="TigerScale V3 assemblée, orientation arrière correcte" />
+<figcaption>Position et orientation de la balance</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-pn532-mounting.jpg" alt="Lecteur PN532 monté dans son emplacement du boîtier" />
+<figcaption>PN532 en place dans son emplacement</figcaption>
+</figure>
+</div>
+
+### Schéma de câblage
+
+<img src="../assets/tigerscale-wiring-hsu.jpg" width="100%" alt="Schéma de câblage de la TigerScale V3" />
+
+*[Schéma interactif sur Cirkit Designer](https://app.cirkitdesigner.com/project/c6aa6c0a-9462-498f-8923-9ad4454e0e69)*
 
 ## À vous de la fabriquer, et de la vendre
 
