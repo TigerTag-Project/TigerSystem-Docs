@@ -1,5 +1,5 @@
 ---
-sourceHash: 4081ee2a2c73ac4ef84f05e3af9c9a0c46b05d38aa30ed9c4a6eb0212a8f54e5
+sourceHash: 6fd59e174bdd4c0776641bca602b350ff8bd0e98eab6f20e9407552d170ef360
 sourcePath: docs/guides/README.md
 ---
 
@@ -10,9 +10,9 @@ Guides pratiques orientés tâche (plus courts et plus ciblés que les
 
 ## Disponibles
 
-- **[Encoder les deux puces d'une bobine en paire](./twin-tag-pair.md)** — Dual
-  NFC sur le téléphone, deux lecteurs sur un TigerPOD, et comment vérifier que
-  la paire se lit comme une seule bobine.
+- **[Quand les deux puces d'une bobine se lisent comme deux bobines](./twin-tag-pair.md)** — le
+  seul test qui tranche, pourquoi deux passes d'écriture séparées ne peuvent
+  jamais faire une paire, et comment réécrire les deux puces en une seule.
 
 > **TODO :** d'autres guides prévus :
 >

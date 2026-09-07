@@ -5,9 +5,9 @@ Task-oriented how-to guides (shorter and more targeted than
 
 ## Available
 
-- **[Encode a spool's two chips as a pair](./twin-tag-pair.md)** — Dual NFC on
-  the phone, two readers on a TigerPOD, and how to check that the pair reads
-  as one spool.
+- **[When a spool's two chips read as two spools](./twin-tag-pair.md)** — the
+  one test that settles it, why two separate write passes can never make a
+  pair, and how to rewrite the two chips as one.
 
 > **TODO:** more guides planned:
 >

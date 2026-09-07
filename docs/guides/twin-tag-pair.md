@@ -1,65 +1,59 @@
-# Encode a spool's two chips as a pair
+# When a spool's two chips read as two spools
 
-A factory spool carries two chips, one on each face, written together so that
-a reader always finds one whichever way the spool is loaded
-([why two chips](../concepts/tigertag-chip.md)). When you tag a spool yourself
-you can do the same. This guide is about getting the **pair** right: two chips
-that the whole ecosystem counts as **one** spool.
+You tagged a spool with a chip on each face, and your inventory now shows
+**two** entries instead of one. Each chip works; each opens its own spool. The
+weight you correct on one never appears on the other.
 
-## What a pair is
+Nothing is broken. The two chips were almost certainly never a pair.
 
-Two chips, two UIDs, one identity. Written together they are a
-[Twin Tag](../glossary.md): every app reads either chip and lands on the same
-spool, and the weight, the print settings and the inventory entry stay one
-record for the spool's whole life. A spool with a single chip works too — two
-is what the [first smart spool tutorial](../tutorials/first-smart-spool.md)
-calls the full experience.
+## The test that settles it
 
-## Pick your tool
+Two chips are a pair because they carry the **same Twin Tag ID** — a value
+written at the moment of writing, shared only by chips written in the same
+session. Read both chips and compare that value: it is the whole diagnosis.
+Tiger Studio shows it; so does any reader that decodes the payload.
 
-| | Writes the pair | Checks it against itself | Best for |
-|---|---|---|---|
-| **Phone** — [Tiger NFC Connect](../products/tigertag-connect.md), *Dual NFC* | in one session, chip 1/2 then 2/2 | — | one spool, no hardware |
-| **Desktop with a [TigerPOD](../products/tigerpod.md)** — two readers facing each other | in one go, both chips at once | yes — [Tiger Studio](../products/tiger-studio.md) verifies the two against each other | tagging a shelf, a batch |
-| **Desktop with a single reader** | in two passes | no | it works — read the note below |
+The full rule, including what else has to match and why the timestamp alone is
+not proof, is on
+[the TigerTag chip](../concepts/tigertag-chip.md).
 
-## On the phone: Dual NFC
+## Different values: they were never a pair
 
-Tiger NFC Connect writes both chips in a single session: fill the form once,
-tap **Dual NFC** before writing, and the app asks for the chips one after the
-other. The [first smart spool tutorial](../tutorials/first-smart-spool.md)
-walks through it, including the one rule that matters — **the chip you
-scanned first is the one the app expects as 1/2**.
+This is the ordinary cause, and it has one origin: **the two chips were
+written in two separate passes**. A second pass happens a second later or a day
+later, so it stamps a different Twin Tag ID, and nothing binds the two chips
+from that moment on. Every tool downstream is right to count two spools.
 
-## On the desktop: two readers, one pass
+There is no repair short of rewriting. A pair is made at write time or not at
+all.
 
-Place the spool — a blank chip on each face — in a TigerPOD, so that one chip
-faces each reader. Tiger Studio writes both sides in one go and verifies them
-against each other. This is what the two-reader geometry exists for; the
-[TigerPOD page](../products/tigerpod.md) explains the trade-off with a single
-reader.
+## Rewriting them as one pair
 
-> **Note:** with **one** reader you write the chips in two separate passes, and
-> there is no second chip for Tiger Studio to verify the pair against — *two
-> chances to mismatch them*, in the TigerPOD page's words. It works; it is
-> simply the path on which a pair most easily ends up as two spools.
+Erase both chips, then write them together in a single session:
 
-## Check the pair
+| | How the pair is written | Best for |
+|---|---|---|
+| **Phone** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: one form, then chip 1/2 and 2/2 in the same session | one spool, no hardware |
+| **Desktop, two readers** — [TigerPOD](../products/tigerpod.md) | both chips at once, in one pass | a shelf, a batch |
+| **Desktop, one reader** | not possible in one pass — this is how the problem was created | — |
 
-Both chips must open the **same** spool: scan one face, then the other, and
-confirm the app lands on one entry, not two. In a `.ttag` export the pair
-shows as two records that reference each other through `twin_tag_uid` — a
-twin is exported and imported as a whole, never one side alone
-([the .ttag format](../developers/ttag-format.md)).
+The phone procedure, including the rule that the chip you scanned first is the
+one the app expects as 1/2, is in
+[your first smart spool](../tutorials/first-smart-spool.md).
 
-## When a chip stops answering
+The single-reader case is the reason the [TigerPOD](../products/tigerpod.md)
+holds two readers facing each other: one pass, one timestamp, one pair.
 
-The surviving chip still identifies the spool, and serves to repair the other
-([the TigerTag chip](../concepts/tigertag-chip.md)).
+## Same value, still two entries
 
-> **TODO:** the exact steps in Tiger Studio for pairing a replacement chip to a
-> surviving one are not documented yet.
+Rarer, and worth reporting. The Twin Tag ID is necessary but not sufficient —
+the two chips must also describe the same spool, field for field: brand,
+material, the three colours, both aspects. Compare those next.
+
+If every field matches and your inventory still splits the spool in two, that
+is a bug rather than a mis-write. Say so on the
+[Discord](https://discord.gg/3Qv5TSqnJH) with both chip readouts.
 
 ---
 
-**▲ [Documentation index](../../README.md)** · **Related:** [The TigerTag chip](../concepts/tigertag-chip.md), [Your first smart spool](../tutorials/first-smart-spool.md), [TigerPOD](../products/tigerpod.md), [The .ttag format](../developers/ttag-format.md)
+**▲ [Documentation index](../../README.md)** · **Related:** [The TigerTag chip](../concepts/tigertag-chip.md), [Your first smart spool](../tutorials/first-smart-spool.md), [TigerPOD](../products/tigerpod.md)
