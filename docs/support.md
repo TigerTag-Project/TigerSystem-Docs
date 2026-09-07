@@ -6,7 +6,8 @@ chips work whether you buy ours or the cheapest NTAG on a marketplace.
 
 None of that pays for itself. Here is what actually does — and, since the whole
 point of an open standard is that you owe it nothing, what you can safely
-ignore.
+ignore. If you have not started yet, start free:
+[run the whole thing for nothing](./guides/start-for-free.md).
 
 ## Buy the official parts, if you were buying anyway
 

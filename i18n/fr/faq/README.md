@@ -1,5 +1,5 @@
 ---
-sourceHash: 8ce5007e9aedd4fbad6b58968142755651ba9ed216cea56130ecd324a71f5203
+sourceHash: 46c7fc4b90a41259e960b05c977defe48adc962754ad14f9c46b851c9b868cac
 sourcePath: docs/faq/README.md
 ---
 
@@ -14,9 +14,11 @@ d'imprimante. Voir
 [Pourquoi TigerSystem existe](../vision/why-tigersystem.md).
 
 **Dois-je acheter quelque chose pour commencer ?**
-Non. N'importe quel smartphone NFC lit les puces TigerTag, les applications
-sont gratuites et l'application de bureau est open source. Les puces sont le
-seul consommable.
+Non — pas même une puce. Les applications sont gratuites, n'importe quel
+smartphone NFC fait office de lecteur, et une bobine **TigerData** porte
+l'identité complète sans rien de collé nulle part. La puce est le confort,
+jamais le prérequis :
+[faire tourner l'ensemble pour rien](../guides/start-for-free.md).
 
 **Est-ce lié à une marque de filament ou d'imprimante ?**
 Non — la neutralité est une règle de conception. N'importe quel filament,

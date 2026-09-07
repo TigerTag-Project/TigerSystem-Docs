@@ -1,5 +1,5 @@
 ---
-sourceHash: 17c3723b972e7d52db52310591a9a18bc34a8433b2f9babad058bd1cb79788ab
+sourceHash: bf2e991553453ba9ada4733910e1983d0fa90030e4e1c83597037a48e03e9959
 sourcePath: docs/support.md
 ---
 
@@ -12,7 +12,9 @@ achetiez les nôtres ou la NTAG la moins chère d'une place de marché.
 
 Rien de tout cela ne se finance tout seul. Voici ce qui le finance réellement —
 et, puisque l'intérêt même d'un standard ouvert est que vous ne lui devez rien,
-ce que vous pouvez ignorer sans scrupule.
+ce que vous pouvez ignorer sans scrupule. Si vous n'avez pas encore commencé,
+commencez gratuitement :
+[faire tourner l'ensemble pour rien](./guides/start-for-free.md).
 
 ## Achetez les pièces officielles, si vous achetiez de toute façon
 
