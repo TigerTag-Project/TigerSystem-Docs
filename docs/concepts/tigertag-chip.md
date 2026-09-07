@@ -71,6 +71,56 @@ A few implementation details:
 *The carrier, bare: the two independent antennas are plainly visible — one
 per folded end, each with its own UID.*
 
+### How the two chips are bound
+
+Nothing central records the pair. It is **inferred from what the two chips
+carry**, and the field that makes it deliberate rather than coincidental is
+the **timestamp**.
+
+The 4 bytes at page `0x0C` (offset `+32`) serve a double purpose: seconds
+since 2000-01-01 GMT, *and* the **Twin Tag ID**. Two chips written in the same
+session receive the exact same value — that shared second is the pairing key.
+
+Resolution is one second, so the timestamp alone is not proof: two spools
+tagged within the same second would carry it too. What confirms the pair is
+that the **descriptive identity matches as well** — the two chips describe one
+spool, so every field describing that spool must be identical on both:
+
+| Field | Page | Offset |
+|---|---|---|
+| Twin Tag ID / timestamp | `0x0C` | `+32` |
+| ID Brand | `0x07` | `+14` |
+| ID Material | `0x06` | `+8` |
+| ID Aspect 1 · ID Aspect 2 | `0x06` | `+10` · `+11` |
+| Color 1 · Color 2 · Color 3 | `0x08` · `0x0D` · `0x0E` | `+16` · `+36` · `+40` |
+| ID Product | `0x05` | `+4` |
+
+What actually discriminates depends on the variant:
+
+- On a **[TigerTag+](../products/tigertag-plus.md)**, `ID Product` is a real
+ catalogue id. Same timestamp **and** same product id is enough to call it a
+ pair with near certainty.
+- On a **standard TigerTag**, `ID Product` is the constant `0xFFFFFFFF` on
+ every chip in existence, so it carries no discrimination at all. The brand,
+ the material, the three colors and both aspects do that work instead —
+ together with the timestamp.
+
+Two consequences worth stating plainly:
+
+- **Writing the chips in two separate passes does not produce a pair.** They
+ receive two different timestamps, so nothing binds them and the ecosystem
+ counts two spools. This is why the phone app writes both in a single
+ *Dual NFC* session, and why the [TigerPOD](../products/tigerpod.md) holds two
+ readers facing each other.
+- **The signature is the one thing that legitimately differs.** On a TigerTag+
+ it signs `SHA-256(uid ‖ id_tigertag ‖ id_product)`, and each chip has its own
+ UID — so the two chips of a pair carry two *different* signatures, by
+ construction. Identical signatures would mean a copy, not a twin.
+
+Offsets above are quoted from the canonical
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
+(§2.9), which remains the specification.
+
 ### The refill carrier, in practice
 
 Two details that surprise people:
