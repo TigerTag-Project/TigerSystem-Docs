@@ -1,5 +1,5 @@
 ---
-sourceHash: da850b391a45673fa46971a3e53c25a5aca86c957e7faa3146b2987def2c88c2
+sourceHash: 7e1e09221474393b579f61e7cbbe031c66bc291ce96ceed4e841fbe387bb24aa
 sourcePath: docs/compatibility/flashforge.md
 ---
 
@@ -36,6 +36,20 @@ pour l'utilisateur et sans aucune modification de la machine.**
  que ce soit.
 4. **En direct** — températures, avancement de la tâche et flux de la caméra MJPEG dans
  la vue des imprimantes.
+
+## Se connecter par adresse IP
+
+FlashForge n'a pas d'option cloud, et la découverte automatique sur le réseau local ne trouve pas
+toujours chaque imprimante. Dans ce cas, ajoutez-la par IP — il faudra relever son numéro de série,
+son adresse IP et son Printer ID sur l'écran tactile au préalable. Choisissez votre modèle ci-dessous
+pour la marche à suivre exacte.
+
+<div class="ts-model-picker">
+<a href="../tutorials/flashforge-connection-tutorial.md"><img src="../assets/flashforge-connection-tutorial/models/ad5x.png" alt="Adventurer 5X" /><span>Adventurer 5X</span></a>
+<a href="../tutorials/flashforge-connection-tutorial.md"><img src="../assets/flashforge-connection-tutorial/models/5m.png" alt="Adventurer 5M" /><span>Adventurer 5M</span></a>
+<a href="../tutorials/flashforge-connection-tutorial.md"><img src="../assets/flashforge-connection-tutorial/models/5mpro.png" alt="Adventurer 5M Pro" /><span>Adventurer 5M Pro</span></a>
+<a href="../tutorials/flashforge-connection-tutorial.md"><img src="../assets/flashforge-connection-tutorial/models/a5.png" alt="Adventurer A5" /><span>Adventurer A5</span></a>
+</div>
 
 ---
 
