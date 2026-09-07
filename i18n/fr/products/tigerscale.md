@@ -1,5 +1,5 @@
 ---
-sourceHash: 56e746850cbc5eafc858668b8c24f2c2a86a848d6d4a2749353b58bba34e333e
+sourceHash: c2046cd0797dd63464813946684a9b1bd17feaf4892013c966bcb174ef841a12
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -80,6 +80,17 @@ Les pièces sont courantes :
 | — | Fils Dupont, vis autotaraudeuses M3 | [fils](https://link.amazon/B0bl6jvMs) · [vis](https://link.amazon/B0ekzxx1E) |
 | — | 2× M4×30 et 2× M5×30 (cellule de charge), 4× M2×6 (écran) | n'importe quelle quincaillerie |
 | 1 | Un petit haut-parleur | fourni avec la carte ESP32-S3 |
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-board-esp32-s3-touch-lcd.jpg" alt="Carte Waveshare ESP32-S3-Touch-LCD-3.5B" />
+<figcaption><strong>Les deux variantes fonctionnent, mais avec un firmware différent.</strong> Lisez la sérigraphie : <strong>-3.5B</strong> ou <strong>-3.5</strong>. L'installateur web demande laquelle vous avez ; le câblage et le boîtier sont identiques dans les deux cas.</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-load-cell-hx711.jpg" alt="Cellule de charge 5 kg et carte amplificatrice HX711" />
+<figcaption><strong>Attention :</strong> la cellule de charge doit avoir 2 trous taraudés M4 et 2 M5, et la carte HX711 doit être identique à celle montrée — sinon elle ne rentrera pas dans son emplacement dédié.</figcaption>
+</figure>
+</div>
 
 > Certains liens de ce tableau sont des **liens affiliés Amazon** : en tant que
 > Partenaire Amazon, TigerTag est rémunéré sur les achats remplissant les

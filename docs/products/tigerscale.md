@@ -69,6 +69,17 @@ The parts are commodity:
 | — | 2× M4×30 and 2× M5×30 (load cell), 4× M2×6 (display) | any hardware shop |
 | 1 | A small speaker | ships with the ESP32-S3 board |
 
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-board-esp32-s3-touch-lcd.jpg" alt="Waveshare ESP32-S3-Touch-LCD-3.5B board" />
+<figcaption><strong>Both variants work, but they need different firmware.</strong> Read the silkscreen: <strong>-3.5B</strong> or <strong>-3.5</strong>. The web installer asks which one you have; the wiring and the case are the same either way.</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-load-cell-hx711.jpg" alt="5 kg load cell and HX711 amplifier board" />
+<figcaption><strong>Warning:</strong> the load cell must have 2× M4 and 2× M5 tapped holes, and the HX711 board must be identical to the one shown — otherwise it will not fit in its designated slot.</figcaption>
+</figure>
+</div>
+
 > Some links in this table are **Amazon affiliate links**: as an Amazon
 > Associate, TigerTag earns from qualifying purchases, **at no extra cost to
 > you**. It helps fund the open protocol. Buying the same parts anywhere else
