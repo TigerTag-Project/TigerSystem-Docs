@@ -30,6 +30,7 @@ export const sidebar = [
     { slug: 'products/tigerhub' },
     { slug: 'products/tigerpod' },
     { slug: 'products/tigerscale' },
+    { slug: 'products/tigerspool' },
     { slug: 'products/factory-suite' },
   ]),
 

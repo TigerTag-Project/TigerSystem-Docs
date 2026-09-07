@@ -1,9 +1,9 @@
 ---
-sourceHash: 4e9fe69ba496e2339209297ddaaaf0edd027a7b7b65b9d34242731c8c61d1b33
+sourceHash: 8c5b4fcdbce004114a8e1e147e96abbd0014bb63b773145542ff69b29456ce98
 sourcePath: docs/guides/start-for-free.md
 ---
 
-# Faire tourner l'ensemble pour rien
+# Démarrer pour 0 €
 
 Vous n'avez rien à acheter. Ni puce, ni lecteur, ni balance, ni Pod. Un
 téléphone que vous possédez déjà, plus des logiciels gratuits, constituent
@@ -62,9 +62,11 @@ lecteur dédié sur le bureau.
 
 ## Le poids, à la main
 
-Saisissez les grammes. C'est tout ce qu'une balance fait pour vous. Pesez la
-bobine sur la balance de cuisine que vous avez déjà, entrez le nombre, et
-l'inventaire se met à jour exactement comme il l'aurait fait autrement.
+Posez la bobine sur la balance de cuisine que vous avez déjà et saisissez le
+poids **total**, mandrin compris. Tiger Studio retire automatiquement le poids
+de la bobine en carton ou en plastique et ne retient que le filament réellement
+disponible — aucun calcul à faire, et pas besoin de tarer avec une bobine vide
+avant de peser une bobine entamée.
 
 La **[TigerScale](../products/tigerscale.md)** supprime la saisie — vous posez
 la bobine, elle pèse, identifie et synchronise toute seule. Elle automatise le

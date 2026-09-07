@@ -1,4 +1,4 @@
-# Run the whole thing for nothing
+# Start for $0
 
 You do not have to buy anything. Not a chip, not a reader, not a scale, not a
 Pod. A phone you already own plus free software is the complete ecosystem —
@@ -54,9 +54,10 @@ reader on the desk.
 
 ## The weight, by hand
 
-Type the grams in. That is all a scale does for you. Weigh the spool on the
-kitchen scale you already have, enter the number, and the inventory updates
-exactly as it would otherwise.
+Put the spool on the kitchen scale you already have and type in the **total**
+weight, reel included. Tiger Studio subtracts the weight of the cardboard or
+plastic reel itself and keeps only the filament actually left — nothing to
+calculate, and no taring with an empty spool before you weigh a used one.
 
 The **[TigerScale](../products/tigerscale.md)** removes the typing — set the
 spool down, it weighs, identifies and syncs on its own. It automates the

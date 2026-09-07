@@ -1,5 +1,5 @@
 ---
-sourceHash: bf2e991553453ba9ada4733910e1983d0fa90030e4e1c83597037a48e03e9959
+sourceHash: f9ef3b6687546cfc6d858b587b95cc16fad754b0b296ec602dc950bfa74d559c
 sourcePath: docs/support.md
 ---
 
@@ -14,7 +14,7 @@ Rien de tout cela ne se finance tout seul. Voici ce qui le finance réellement �
 et, puisque l'intérêt même d'un standard ouvert est que vous ne lui devez rien,
 ce que vous pouvez ignorer sans scrupule. Si vous n'avez pas encore commencé,
 commencez gratuitement :
-[faire tourner l'ensemble pour rien](./guides/start-for-free.md).
+[démarrer pour 0 €](./guides/start-for-free.md).
 
 ## Achetez les pièces officielles, si vous achetiez de toute façon
 

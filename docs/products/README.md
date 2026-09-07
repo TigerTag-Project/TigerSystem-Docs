@@ -32,6 +32,7 @@ working; it becomes **TigerTag Certified** only when TigerSystem grants it
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | The ecosystem's web home — showcase, wishlists, friends & sharing at `tigersystem.io` | Web |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | 3D-printable dual NFC reader stand | Hardware |
 | <img src="../assets/icons/tigerscale.svg" width="18" alt="" /> [TigerScale](./tigerscale.md) | Open-source ESP32 filament scale | Hardware |
+| <img src="../assets/icons/printer.svg" width="18" alt="" /> [TigerSpool](./tigerspool.md) | Open-source ESP32 box beside the printer — tap a spool, pick a slot, any brand | Hardware |
 | <img src="../assets/icons/factory.svg" width="18" alt="" /> [TigerTag Factory & Manager](./factory-suite.md) | Industrial chip programming & filament-database tools for factories — **not public**, production-grade | Industrial |
 
 ```mermaid
@@ -39,6 +40,8 @@ flowchart LR
   TT[TigerTag / TigerTag+] --> CO[Tiger NFC Connect]
   TT --> POD[TigerPOD] --> ST[Tiger Studio]
   SC[TigerScale] --> FB[("Your TigerSystem account — Firebase")]
+  TT --> SPL[TigerSpool] --> PRN["Your printer's slot"]
+  FB --> SPL
   CO <--> FB
   ST <--> FB
   FB --> HUB["TigerHub — tigersystem.io"]

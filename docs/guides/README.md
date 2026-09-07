@@ -5,7 +5,7 @@ Task-oriented how-to guides (shorter and more targeted than
 
 ## Available
 
-- **[Run the whole thing for nothing](./start-for-free.md)** — why the visible
+- **[Start for $0](./start-for-free.md)** — why the visible
   parts are the smallest part, and what you already own that replaces
   everything that looks mandatory.
 - **[When a spool's two chips read as two spools](./twin-tag-pair.md)** — the

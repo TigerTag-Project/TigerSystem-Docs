@@ -1,5 +1,5 @@
 ---
-sourceHash: 33e5e5bbf84e9ffe53054b55cd7418d3faa6e8a83ea2b0b80ee84cf0d17b16b3
+sourceHash: bc97fd4006e07a864c0f84a03d7853d6eeff6e57f8b02dde78765b31f72c45da
 sourcePath: docs/products/README.md
 ---
 
@@ -40,6 +40,7 @@ accorde ([politique de marque](../../TRADEMARK.md)).
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | La maison web de l'écosystème — vitrine, listes d'envies, amis et partage sur `tigersystem.io` | Web |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | Support de lecteur NFC double, imprimable en 3D | Matériel |
 | <img src="../assets/icons/tigerscale.svg" width="18" alt="" /> [TigerScale](./tigerscale.md) | Balance à filament open source à base d'ESP32 | Matériel |
+| <img src="../assets/icons/printer.svg" width="18" alt="" /> [TigerSpool](./tigerspool.md) | Boîtier ESP32 open source à côté de l'imprimante — présentez une bobine, choisissez un emplacement, toutes marques | Matériel |
 | <img src="../assets/icons/factory.svg" width="18" alt="" /> [TigerTag Factory & Manager](./factory-suite.md) | Outils industriels de programmation de puces et de base de données filaments pour les usines — **non publics**, de qualité production | Industriel |
 
 ```mermaid
@@ -47,6 +48,8 @@ flowchart LR
   TT[TigerTag / TigerTag+] --> CO[Tiger NFC Connect]
   TT --> POD[TigerPOD] --> ST[Tiger Studio]
   SC[TigerScale] --> FB[("Your TigerSystem account — Firebase")]
+  TT --> SPL[TigerSpool] --> PRN["Your printer's slot"]
+  FB --> SPL
   CO <--> FB
   ST <--> FB
   FB --> HUB["TigerHub — tigersystem.io"]

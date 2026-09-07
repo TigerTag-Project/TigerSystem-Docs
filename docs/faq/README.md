@@ -11,7 +11,7 @@ identity belongs to its owner, not to a printer brand. See
 No — not even a chip. The apps are free, any NFC smartphone is the reader, and
 a **TigerData** spool carries the full identity with nothing stuck to anything.
 Chips are the comfort, never the prerequisite:
-[run the whole thing for nothing](../guides/start-for-free.md).
+[start for $0](../guides/start-for-free.md).
 
 **Is this tied to one filament brand or printer brand?**
 No — neutrality is a design rule. Any filament, any printer, no partner list.

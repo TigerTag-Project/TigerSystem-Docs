@@ -1,5 +1,5 @@
 ---
-sourceHash: 0bb43289019885876819ea9ae903ccfa35ff7e461d2f966048fc087d5048d4da
+sourceHash: a99c0750adf8a6d7d2849cc06cdc883982f7fc088249431dde605011a952e761
 sourcePath: docs/guides/README.md
 ---
 
@@ -10,7 +10,7 @@ Guides pratiques orientés tâche (plus courts et plus ciblés que les
 
 ## Disponibles
 
-- **[Faire tourner l'ensemble pour rien](./start-for-free.md)** — pourquoi les
+- **[Démarrer pour 0 €](./start-for-free.md)** — pourquoi les
   éléments visibles en sont la plus petite partie, et ce que vous possédez déjà
   qui remplace tout ce qui semble obligatoire.
 - **[Quand les deux puces d'une bobine se lisent comme deux bobines](./twin-tag-pair.md)** — le
