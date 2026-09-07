@@ -1,5 +1,5 @@
 ---
-sourceHash: 56e746850cbc5eafc858668b8c24f2c2a86a848d6d4a2749353b58bba34e333e
+sourceHash: eeea9a5db85c9602b051873febcd4a1efdd89d1db00775d1af4e69f3a56f770b
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -56,14 +56,18 @@ C'est celle qu'il faut construire.
 
 ## En construire une
 
-La balance est un montage DIY, et les deux étapes qu'on redoute ne sont pas
+La balance est un montage DIY, et les étapes qu'on redoute ne sont pas
 difficiles :
 
 1. **Imprimez le boîtier.** Un seul projet Bambu Studio `.3mf` avec les
  plateaux déjà disposés — [sur MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543).
  Ouvrez-le dans Bambu Studio ou Orca et lancez le découpage : rien à orienter,
  aucun support à placer.
-2. **Flashez depuis votre navigateur.** L'
+2. **Câblez les composants.** Reliez la cellule de charge, le HX711, le
+ haut-parleur et les deux lecteurs PN532 à la carte en suivant le
+ [schéma de câblage](#schéma-de-câblage) ci-dessous — le même câblage pour
+ les deux variantes de carte.
+3. **Flashez depuis votre navigateur.** L'
  [installateur web](https://tigertag-project.github.io/Tiger-Scale-V3/) sert
  toujours la version courante ; ensuite la balance se met à jour toute seule,
  par OTA.
@@ -74,12 +78,23 @@ Les pièces sont courantes :
 |---|---|---|
 | 1 | Carte Waveshare **ESP32-S3-Touch-LCD-3.5B** — tactile IPS 480×320 (la **-3.5** sans le B convient aussi) | [-3.5B](https://link.amazon/B0gaANfF5) · [-3.5](https://link.amazon/B0dpgOlOQ) |
 | 2 | Module NFC **PN532 V3** — rangée de broches **et** interrupteur de mode indispensables | [Amazon](https://link.amazon/B0iTXrhjd) |
-| 1 | Cellule de charge 5 kg + HX711 — doit avoir 2 trous taraudés M4 et 2 M5 | [Amazon](https://link.amazon/B09LOUuI1) |
+| 1 | Cellule de charge 5 kg + HX711 | [Amazon](https://link.amazon/B09LOUuI1) |
 | 1 | Câble USB-C 4 broches + connecteur | [câble](https://link.amazon/B0aoW8qQx) · [connecteur](https://link.amazon/B0aiEyjLx) |
 | 1 | Batterie Li-ion — **facultative**, la balance fonctionne sur USB | [Amazon](https://link.amazon/B0etKlE1i) |
 | — | Fils Dupont, vis autotaraudeuses M3 | [fils](https://link.amazon/B0bl6jvMs) · [vis](https://link.amazon/B0ekzxx1E) |
 | — | 2× M4×30 et 2× M5×30 (cellule de charge), 4× M2×6 (écran) | n'importe quelle quincaillerie |
 | 1 | Un petit haut-parleur | fourni avec la carte ESP32-S3 |
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-board-esp32-s3-touch-lcd.jpg" alt="Carte Waveshare ESP32-S3-Touch-LCD-3.5B" />
+<figcaption><strong>Les deux variantes fonctionnent, mais avec un firmware différent.</strong> Lisez la sérigraphie : <strong>-3.5B</strong> ou <strong>-3.5</strong>. L'installateur web demande laquelle vous avez ; le câblage et le boîtier sont identiques dans les deux cas.</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-load-cell-hx711.jpg" alt="Cellule de charge 5 kg et carte amplificatrice HX711" />
+<figcaption><strong>Attention :</strong> la cellule de charge doit avoir 2 trous taraudés M4 et 2 M5, et la carte HX711 doit être identique à celle montrée — sinon elle ne rentrera pas dans son emplacement dédié.</figcaption>
+</figure>
+</div>
 
 > Certains liens de ce tableau sont des **liens affiliés Amazon** : en tant que
 > Partenaire Amazon, TigerTag est rémunéré sur les achats remplissant les
@@ -90,11 +105,43 @@ Les pièces sont courantes :
 La nomenclature complète et chiffrée est dans le
 [dépôt](https://github.com/TigerTag-Project/Tiger-Scale-V3).
 
-> **Un piège à connaître.** La carte existe en **-3.5B** et en **-3.5**, et le
-> firmware choisit son transport NFC à la compilation. Flashez la mauvaise
-> version et vous obtenez une balance qui démarre parfaitement et ne voit
-> jamais aucune puce, sans rien à l'écran pour l'expliquer. L'installateur web
-> demande quelle variante vous avez — lisez la sérigraphie avant de répondre.
+### Assemblage
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-assembly-front-quarter.png" alt="Boîtier TigerScale V3, vue de trois-quarts avant" />
+<figcaption>Trois-quarts avant</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-rear-quarter.png" alt="Boîtier TigerScale V3, vue de trois-quarts arrière" />
+<figcaption>Trois-quarts arrière</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-rear-quarter-close.png" alt="Boîtier TigerScale V3, gros plan trois-quarts arrière" />
+<figcaption>Trois-quarts arrière, gros plan</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-side-elevation.png" alt="Boîtier TigerScale V3, vue de côté" />
+<figcaption>Vue de côté</figcaption>
+</figure>
+</div>
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-rear-orientation.jpg" alt="TigerScale V3 assemblée, orientation arrière correcte" />
+<figcaption>Position et orientation de la balance</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-pn532-mounting.jpg" alt="Lecteur PN532 monté dans son emplacement du boîtier" />
+<figcaption>PN532 en place dans son emplacement</figcaption>
+</figure>
+</div>
+
+### Schéma de câblage
+
+<img src="../assets/tigerscale-wiring-hsu.jpg" width="100%" alt="Schéma de câblage de la TigerScale V3" />
+
+*[Schéma interactif sur Cirkit Designer](https://app.cirkitdesigner.com/project/c6aa6c0a-9462-498f-8923-9ad4454e0e69)*
 
 ## À vous de la fabriquer, et de la vendre
 
@@ -174,6 +221,20 @@ l'unité `0x00`.
 |---|---|
 | Firebase (base de données du compte) | Écrit le poids en direct dans le compte de l'utilisateur |
 | Tiger Studio / Connect | Affichent le poids en direct ; supervision de l'état |
+
+## Exemple d'utilisation recommandé
+
+<img src="../assets/tigerscale-dymo-tigerpod.jpg" width="100%" alt="Un TigerPOD posé sur une balance DYMO, en train de peser une bobine identifiée" />
+
+1. **Branchez votre balance DYMO à votre ordinateur en USB.**
+2. **Posez le TigerPOD Mini ou l'original sur la balance.**
+3. **Effectuez une tare de la balance DYMO.**
+4. **Ouvrez Tiger Studio Manager.**
+5. **Posez une bobine sur le TigerPOD.**
+6. **Le TigerPOD lit les puces NTAG de la bobine et ouvre sa fiche dans Tiger
+ Studio Manager.**
+7. **La balance DYMO pèse la bobine — Tiger Studio Manager met à jour son
+ poids automatiquement.**
 
 ## Liens
 

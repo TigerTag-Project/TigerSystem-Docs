@@ -46,13 +46,16 @@ This is the one to build.
 
 ## Building one
 
-The scale is a DIY build, and the two steps people expect to be hard are not:
+The scale is a DIY build, and the steps people expect to be hard are not:
 
 1. **Print the enclosure.** One `.3mf` Bambu Studio project with the plates
  already laid out — [on MakerWorld](https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543).
  Open it in Bambu Studio or Orca and press Slice: nothing to orient, no
  supports to place.
-2. **Flash from your browser.** The
+2. **Wire the components.** Connect the load cell, HX711, speaker and both
+ PN532 readers to the board following the [wiring diagram](#wiring-diagram)
+ below — the same pinout for either board variant.
+3. **Flash from your browser.** The
  [web installer](https://tigertag-project.github.io/Tiger-Scale-V3/) always
  serves the current release; after that the scale updates itself over the air.
 
@@ -62,12 +65,23 @@ The parts are commodity:
 |---|---|---|
 | 1 | Waveshare **ESP32-S3-Touch-LCD-3.5B** — 480×320 IPS touch (the **-3.5** without the B works too) | [-3.5B](https://link.amazon/B0gaANfF5) · [-3.5](https://link.amazon/B0dpgOlOQ) |
 | 2 | **PN532 V3** NFC module — pin header **and** mode switch required | [Amazon](https://link.amazon/B0iTXrhjd) |
-| 1 | 5 kg load cell + HX711 — must have 2× M4 and 2× M5 tapped holes | [Amazon](https://link.amazon/B09LOUuI1) |
+| 1 | 5 kg load cell + HX711 | [Amazon](https://link.amazon/B09LOUuI1) |
 | 1 | USB-C 4-pin cable + connector | [cable](https://link.amazon/B0aoW8qQx) · [connector](https://link.amazon/B0aiEyjLx) |
 | 1 | Li-ion battery — **optional**, the scale runs on USB | [Amazon](https://link.amazon/B0etKlE1i) |
 | — | Dupont wires, M3 self-tapping screws | [wires](https://link.amazon/B0bl6jvMs) · [screws](https://link.amazon/B0ekzxx1E) |
 | — | 2× M4×30 and 2× M5×30 (load cell), 4× M2×6 (display) | any hardware shop |
 | 1 | A small speaker | ships with the ESP32-S3 board |
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-board-esp32-s3-touch-lcd.jpg" alt="Waveshare ESP32-S3-Touch-LCD-3.5B board" />
+<figcaption><strong>Both variants work, but they need different firmware.</strong> Read the silkscreen: <strong>-3.5B</strong> or <strong>-3.5</strong>. The web installer asks which one you have; the wiring and the case are the same either way.</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-load-cell-hx711.jpg" alt="5 kg load cell and HX711 amplifier board" />
+<figcaption><strong>Warning:</strong> the load cell must have 2× M4 and 2× M5 tapped holes, and the HX711 board must be identical to the one shown — otherwise it will not fit in its designated slot.</figcaption>
+</figure>
+</div>
 
 > Some links in this table are **Amazon affiliate links**: as an Amazon
 > Associate, TigerTag earns from qualifying purchases, **at no extra cost to
@@ -77,11 +91,43 @@ The parts are commodity:
 The full costed bill of materials lives in the
 [repository](https://github.com/TigerTag-Project/Tiger-Scale-V3).
 
-> **One trap worth knowing.** The board exists as **-3.5B** and **-3.5**, and
-> the firmware picks its NFC transport at compile time. Flash the wrong build
-> and you get a scale that starts up perfectly and never sees a tag, with
-> nothing on screen to say why. The web installer asks which variant you have
-> — read the silkscreen before answering.
+### Assembly
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-assembly-front-quarter.png" alt="TigerScale V3 enclosure, front three-quarter view" />
+<figcaption>Front three-quarter</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-rear-quarter.png" alt="TigerScale V3 enclosure, rear three-quarter view" />
+<figcaption>Rear three-quarter</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-rear-quarter-close.png" alt="TigerScale V3 enclosure, rear three-quarter close-up" />
+<figcaption>Rear three-quarter, close</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-assembly-side-elevation.png" alt="TigerScale V3 enclosure, side elevation view" />
+<figcaption>Side elevation</figcaption>
+</figure>
+</div>
+
+<div class="ts-photo-pair">
+<figure>
+<img src="../assets/tigerscale-rear-orientation.jpg" alt="TigerScale V3 assembled, correct rear orientation" />
+<figcaption>Scale position and orientation</figcaption>
+</figure>
+<figure>
+<img src="../assets/tigerscale-pn532-mounting.jpg" alt="PN532 reader mounted in its enclosure slot" />
+<figcaption>PN532 seated in its slot</figcaption>
+</figure>
+</div>
+
+### Wiring diagram
+
+<img src="../assets/tigerscale-wiring-hsu.jpg" width="100%" alt="TigerScale V3 wiring diagram" />
+
+*[Interactive schematic in Cirkit Designer](https://app.cirkitdesigner.com/project/c6aa6c0a-9462-498f-8923-9ad4454e0e69)*
 
 ## Yours to make and to sell
 
@@ -156,6 +202,20 @@ right after a tare reports unit `0x00`.
 |---|---|
 | Firebase (account database) | Writes live weight to the user's account |
 | Tiger Studio / Connect | Display live weight; health monitoring |
+
+## Recommended setup
+
+<img src="../assets/tigerscale-dymo-tigerpod.jpg" width="100%" alt="A TigerPOD sitting on a DYMO scale, weighing a tagged spool" />
+
+1. **Plug your DYMO scale into your computer over USB.**
+2. **Set the TigerPOD Mini or the original on top of the scale.**
+3. **Tare the DYMO scale.**
+4. **Open Tiger Studio Manager.**
+5. **Put a spool on the TigerPOD.**
+6. **The TigerPOD reads the spool's NTAG chips and opens its card in Tiger
+ Studio Manager.**
+7. **The DYMO scale weighs the spool — Tiger Studio Manager updates its
+ weight automatically.**
 
 ## Links
 
