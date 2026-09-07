@@ -46,8 +46,11 @@ tiers 100 % offline.
 
 **Verifying** a signature is free, offline and unrestricted — the public keys
 are published, and any reader can check one without an account or a network.
-**Issuing** one is what certification grants. A cloned tag fails verification,
-on the customer's own phone.
+**Issuing** one is what certification grants. The signed message deliberately
+covers the chip's **own UID**, so a signed payload copied onto another chip no
+longer matches it: a cloned tag fails verification, on the customer's own
+phone. The same property is why the two chips of one spool carry two
+*different* signatures ([how the two chips are bound](../concepts/tigertag-chip.md)).
 
 The byte-level layout — chip type ids, the 64-byte signature area at pages
 `0x18`–`0x27` — is specified in

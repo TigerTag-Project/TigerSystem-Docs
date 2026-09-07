@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e226d221b7bec9cd8cbc005307abbefbd412df76aba0852410f32a41e99327c
+sourceHash: f576d9fa4d6c06146bb918a28105d8ac2b894072bd92b90101cdc55c8ae57c5c
 sourcePath: docs/products/tigertag-plus.md
 ---
 
@@ -55,8 +55,11 @@ ce qui garde les trois paliers 100 % hors ligne.
 **Vérifier** une signature est gratuit, hors ligne et sans restriction — les
 clés publiques sont publiées, et n'importe quel lecteur peut en vérifier une
 sans compte ni réseau. **En émettre** une, voilà ce qu'accorde la
-certification. Une étiquette clonée échoue à la vérification, sur le téléphone
-même du client.
+certification. Le message signé couvre délibérément l'**UID propre** de la
+puce : une charge signée recopiée sur une autre puce ne lui correspond plus, et
+une étiquette clonée échoue à la vérification, sur le téléphone même du client.
+C'est la même propriété qui fait que les deux puces d'une bobine portent deux
+signatures *différentes* ([comment les deux puces sont liées](../concepts/tigertag-chip.md)).
 
 La disposition au niveau de l'octet — identifiants de type de puce, zone de
 signature de 64 octets aux pages `0x18`–`0x27` — est spécifiée dans
