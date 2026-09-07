@@ -117,7 +117,13 @@ function fragments(lines) {
   return found;
 }
 
-/** GitHub's heading slug, closely enough for the anchors this documentation uses. */
+/**
+ * GitHub's heading slug, closely enough for the anchors this documentation uses.
+ * Keeps letters as Unicode \u2014 a French heading like "Sch\u00e9ma de c\u00e2blage" slugs to
+ * "sch\u00e9ma-de-c\u00e2blage", accents intact, matching what Starlight's own slugger
+ * actually produces at build time (verified in the rendered page). Stripping to
+ * ASCII here would make this checker approve a link that 404s on a real accent.
+ */
 function slug(heading) {
   return heading
     .replace(/`([^`]*)`/g, '$1')
@@ -125,9 +131,7 @@ function slug(heading) {
     .replace(/[*_]/g, '')
     .trim()
     .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/[^\p{L}\p{N}\s-]/gu, '')
     .trim()
     .replace(/\s+/g, '-');
 }

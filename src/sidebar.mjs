@@ -75,6 +75,7 @@ export const sidebar = [
     { slug: 'tutorials/bambu-lab-p1-series', label: 'Bambu Lab P1 series: LAN mode', translations: { fr: 'Bambu Lab série P1 : mode LAN' } },
     { slug: 'tutorials/bambu-lab-x1-h2-p2-series', label: 'Bambu Lab X1/X1E/H2/P2: LAN mode', translations: { fr: 'Bambu Lab X1/X1E/H2/P2 : mode LAN' } },
     { slug: 'tutorials/elegoo-cc2-lan-mode', label: 'Elegoo CC2: LAN mode', translations: { fr: 'Elegoo CC2 : mode LAN' } },
+    { slug: 'tutorials/tigerscale-serial-port-driver', label: 'TigerScale: fixing a missing COM port', translations: { fr: 'TigerScale : faire apparaître le port COM' } },
     { slug: 'guides' },
     { slug: 'guides/start-for-free' },
     { slug: 'guides/twin-tag-pair' },
