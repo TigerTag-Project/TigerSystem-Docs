@@ -1,5 +1,5 @@
 ---
-sourceHash: 97f0903db07610af8024d02f8fc5059d626c27bbe000fb15cc6b0de5b3c5be61
+sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -80,6 +80,59 @@ Quelques détails de mise en œuvre :
 
 *Le support, nu : les deux antennes indépendantes sont bien visibles — une par
 extrémité repliée, chacune avec son propre UID.*
+
+### Comment les deux puces sont liées
+
+Rien de central n'enregistre la paire. Elle se **déduit de ce que portent les
+deux puces**, et le champ qui rend le lien délibéré plutôt que fortuit est
+l'**horodatage**.
+
+Les 4 octets de la page `0x0C` (offset `+32`) ont un double rôle : les
+secondes écoulées depuis le 01/01/2000 GMT, *et* le **Twin Tag ID**. Deux
+puces écrites dans la même session reçoivent exactement la même valeur — cette
+seconde partagée est la clé d'appariement.
+
+La résolution est d'une seconde : l'horodatage seul ne prouve donc rien, deux
+bobines taguées dans la même seconde le porteraient aussi. Ce qui confirme la
+paire, c'est que l'**identité descriptive concorde également** — les deux
+puces décrivent une seule bobine, donc chaque champ qui décrit cette bobine
+doit être identique sur les deux :
+
+| Champ | Page | Offset |
+|---|---|---|
+| Twin Tag ID / horodatage | `0x0C` | `+32` |
+| ID Brand | `0x07` | `+14` |
+| ID Material | `0x06` | `+8` |
+| ID Aspect 1 · ID Aspect 2 | `0x06` | `+10` · `+11` |
+| Color 1 · Color 2 · Color 3 | `0x08` · `0x0D` · `0x0E` | `+16` · `+36` · `+40` |
+| ID Product | `0x05` | `+4` |
+
+Ce qui discrimine réellement dépend de la variante :
+
+- Sur un **[TigerTag+](../products/tigertag-plus.md)**, `ID Product` est un
+ véritable identifiant catalogue. Même horodatage **et** même identifiant
+ produit suffisent à conclure à une paire avec une quasi-certitude.
+- Sur un **TigerTag standard**, `ID Product` vaut la constante `0xFFFFFFFF`
+ sur toutes les puces existantes : il ne discrimine rien du tout. Ce sont la
+ marque, la matière, les trois couleurs et les deux aspects qui font ce
+ travail — avec l'horodatage.
+
+Deux conséquences qui méritent d'être dites franchement :
+
+- **Écrire les puces en deux passes séparées ne produit pas une paire.** Elles
+ reçoivent deux horodatages différents : rien ne les lie et l'écosystème
+ compte deux bobines. C'est pour cela que l'application téléphone écrit les
+ deux dans une seule session *Dual NFC*, et pour cela que le
+ [TigerPOD](../products/tigerpod.md) tient deux lecteurs face à face.
+- **La signature est la seule chose qui diffère légitimement.** Sur un
+ TigerTag+, elle signe `SHA-256(uid ‖ id_tigertag ‖ id_product)`, et chaque
+ puce a son propre UID — les deux puces d'une paire portent donc deux
+ signatures *différentes*, par construction. Des signatures identiques
+ signaleraient une copie, pas une jumelle.
+
+Les offsets ci-dessus sont cités depuis le
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)
+canonique (§2.9), qui reste la spécification.
 
 ### Le support refill, en pratique
 

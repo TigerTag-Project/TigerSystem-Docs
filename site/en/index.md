@@ -52,7 +52,7 @@ most deployed third-party RFID protocol in the world.
 
 
 <div class="ts-cardgrid">
-<a class="ts-card" href="/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Ready to try</span><span class="ts-card__text">Make a spool smart in five minutes — a blank NTAG chip, your phone, the free app. No account, fully offline.</span></span></a>
+<a class="ts-card" href="/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Ready to try</span><span class="ts-card__text">Make a spool smart in two minutes — a blank NTAG chip, your phone, the free app. No account, fully offline.</span></span></a>
 <a class="ts-card" href="/products/"><span class="ts-card__body"><span class="ts-card__title">A user</span><span class="ts-card__text">What each product actually does for you — chips, apps, the scale, the reader stand.</span></span></a>
 <a class="ts-card" href="/compatibility/"><span class="ts-card__body"><span class="ts-card__title">A printer owner</span><span class="ts-card__text">Does it work with your machine? Six brands are live, and the chip works with all the others.</span></span></a>
 <a class="ts-card" href="/developers/"><span class="ts-card__body"><span class="ts-card__title">A developer</span><span class="ts-card__text">Read and write chips from JavaScript or Python, or plug the identity into your own software.</span></span></a>

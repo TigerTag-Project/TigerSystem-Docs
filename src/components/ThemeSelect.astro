@@ -1,0 +1,187 @@
+---
+/**
+ * Replaces Starlight's Auto/Light/Dark dropdown with a two-state switch.
+ *
+ * "Auto" is dropped on purpose: it is a third state that looks like a choice
+ * but answers a question the reader did not ask, and it makes the control a
+ * menu instead of a switch. The system preference still decides the *first*
+ * paint — Starlight's ThemeProvider reads it when nothing is stored — so
+ * nothing is lost. The switch only records a deliberate choice.
+ *
+ * Storage stays Starlight's own `starlight-theme` key, so the inline
+ * no-FOUC script in ThemeProvider keeps working untouched.
+ */
+const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
+const label = locale === 'fr' ? 'Thème clair ou sombre' : 'Light or dark theme';
+---
+
+<tiger-theme-toggle>
+  <button type="button" class="theme-toggle" role="switch" aria-checked="false" aria-label={label} title={label}>
+    <span class="theme-toggle__track">
+      <svg class="theme-toggle__hint theme-toggle__hint--sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+      <svg class="theme-toggle__hint theme-toggle__hint--moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <span class="theme-toggle__knob">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </span>
+    </span>
+  </button>
+</tiger-theme-toggle>
+
+{/* Inlined so the knob is already on the right side at first paint. */}
+<script is:inline>
+  (() => {
+    const dark = document.documentElement.dataset.theme !== 'light';
+    for (const b of document.querySelectorAll('tiger-theme-toggle button')) {
+      b.setAttribute('aria-checked', String(dark));
+    }
+  })();
+</script>
+
+<style>
+  /* A flex item in both of Starlight's containers — the header group and the
+     mobile menu footer — so it needs a box of its own, not inline default. */
+  tiger-theme-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  .theme-toggle__track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 3rem;
+    height: 1.625rem;
+    padding: 0 0.3125rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 999px;
+    background: var(--sl-color-black);
+    transition: border-color 0.2s ease;
+  }
+
+  .theme-toggle:hover .theme-toggle__track,
+  .theme-toggle:focus-visible .theme-toggle__track {
+    border-color: var(--sl-color-accent);
+  }
+
+  .theme-toggle:focus-visible {
+    outline: none;
+  }
+
+  .theme-toggle:focus-visible .theme-toggle__track {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 2px;
+  }
+
+  /* The two ends of the track: whichever the knob is not covering is the
+     destination, shown faintly so the switch says what a click will do. */
+  .theme-toggle__hint {
+    width: 0.75rem;
+    height: 0.75rem;
+    fill: none;
+    stroke: var(--sl-color-gray-3);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: opacity 0.2s ease;
+  }
+
+  .theme-toggle[aria-checked='false'] .theme-toggle__hint--sun,
+  .theme-toggle[aria-checked='true'] .theme-toggle__hint--moon {
+    opacity: 0;
+  }
+
+  .theme-toggle__knob {
+    position: absolute;
+    top: 50%;
+    left: 0.1875rem;
+    display: grid;
+    place-items: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    background: var(--sl-color-accent);
+    transform: translate(0, -50%);
+    transition: transform 0.25s cubic-bezier(0.34, 1.3, 0.64, 1);
+  }
+
+  .theme-toggle[aria-checked='true'] .theme-toggle__knob {
+    transform: translate(1.25rem, -50%);
+  }
+
+  .theme-toggle__icon {
+    grid-area: 1 / 1;
+    width: 0.75rem;
+    height: 0.75rem;
+    fill: none;
+    stroke: var(--sl-color-text-invert);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: opacity 0.2s ease;
+  }
+
+  .theme-toggle[aria-checked='false'] .theme-toggle__icon--moon,
+  .theme-toggle[aria-checked='true'] .theme-toggle__icon--sun {
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-toggle__knob,
+    .theme-toggle__icon,
+    .theme-toggle__hint {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'starlight-theme';
+
+  /** Apply a theme to the document, every switch on the page, and storage. */
+  function apply(theme: 'light' | 'dark') {
+    document.documentElement.dataset.theme = theme;
+    for (const button of document.querySelectorAll('tiger-theme-toggle button')) {
+      button.setAttribute('aria-checked', String(theme === 'dark'));
+    }
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {
+      // Private browsing, or storage disabled. The choice still holds for
+      // this page; there is nothing to recover from and nothing to say.
+    }
+  }
+
+  class TigerThemeToggle extends HTMLElement {
+    constructor() {
+      super();
+      this.querySelector('button')?.addEventListener('click', () => {
+        apply(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
+      });
+    }
+  }
+
+  customElements.define('tiger-theme-toggle', TigerThemeToggle);
+</script>

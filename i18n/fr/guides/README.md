@@ -1,5 +1,5 @@
 ---
-sourceHash: 184e2733e03e2639fe7882cca233404f8bfb1146c2670e8646ca90e5531ce2b0
+sourceHash: a99c0750adf8a6d7d2849cc06cdc883982f7fc088249431dde605011a952e761
 sourcePath: docs/guides/README.md
 ---
 
@@ -8,7 +8,16 @@ sourcePath: docs/guides/README.md
 Guides pratiques orientés tâche (plus courts et plus ciblés que les
 [tutoriels](../tutorials/README.md)).
 
-> **TODO :** cette section est une ébauche. Sujets prévus :
+## Disponibles
+
+- **[Démarrer pour 0 €](./start-for-free.md)** — pourquoi les
+  éléments visibles en sont la plus petite partie, et ce que vous possédez déjà
+  qui remplace tout ce qui semble obligatoire.
+- **[Quand les deux puces d'une bobine se lisent comme deux bobines](./twin-tag-pair.md)** — le
+  seul test qui tranche, pourquoi deux passes d'écriture séparées ne peuvent
+  jamais faire une paire, et comment réécrire les deux puces en une seule.
+
+> **TODO :** d'autres guides prévus :
 >
 > - Comment acheter / encoder des puces TigerTag
 > - Comment promouvoir une bobine sans puce (numérique) en puce réelle

@@ -1,5 +1,5 @@
 ---
-sourceHash: 2f7b29467280b5e1f2c982f7ac8a0285df80b4fd763febf0d2521e312611b9fa
+sourceHash: 829cf32bbbd2016bcc0a4b75b42d7f753ed3418deba803cb0c60653d61a31ae0
 sourcePath: docs/tutorials/README.md
 ---
 
@@ -9,7 +9,7 @@ Pas à pas orientés objectif, destinés aux utilisateurs finaux.
 
 ## Disponibles
 
-- **[Votre première bobine intelligente en 5 minutes](./first-smart-spool.md)** — une
+- **[Votre première bobine intelligente en 2 minutes](./first-smart-spool.md)** — une
  puce NTAG vierge, votre téléphone, l'application gratuite : programmez-la,
  collez-la, terminé. Gratuit, chez vous, 100 % hors ligne.
 

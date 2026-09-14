@@ -4,7 +4,7 @@ Step-by-step, goal-oriented walkthroughs for end users.
 
 ## Available
 
-- **[Your first smart spool in 5 minutes](./first-smart-spool.md)** — a blank
+- **[Your first smart spool in 2 minutes](./first-smart-spool.md)** — a blank
  NTAG chip, your phone, the free app: program it, stick it, done. Free, at
  home, 100 % offline.
 

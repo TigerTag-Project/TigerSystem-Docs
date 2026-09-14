@@ -1,5 +1,5 @@
 ---
-sourceHash: 0385bc691b491c9aa299dc0700b7612d018007cbb08b8c60f65cc704793600f1
+sourceHash: b6cee4a923a2a6c1ffc35fa5394b85d2e7612c4f2b2a2ddcc8b2ec90ae73e266
 sourcePath: docs/hall-of-fame.md
 ---
 
@@ -22,14 +22,16 @@ réclamation.
 
 | Qui | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 19 | 23 | — |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 24 | 30 | — |
+| **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 1 | 7 | 7 |
 | **[@ennisj](https://github.com/ennisj)** | 21 | 7 | — |
-| **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | — | 5 | 7 |
+| **[@ImNanou](https://github.com/ImNanou)** | — | — | 5 |
 | **[@physicsG](https://github.com/physicsG)** | — | — | 2 |
 | **[@sjordan0228](https://github.com/sjordan0228)** | — | — | 2 |
 | **[@TrueFurina](https://github.com/TrueFurina)** | — | 1 | — |
 | **[@sancho0410](https://github.com/sancho0410)** | — | 1 | — |
 | **[@anupamme](https://github.com/anupamme)** | — | 1 | — |
+| **[@solide184](https://github.com/solide184)** | — | — | 1 |
 | **[@AlexandraWhiksla](https://github.com/AlexandraWhiksla)** | — | — | 1 |
 | **[@jbast1224](https://github.com/jbast1224)** | — | — | 1 |
 | **[@3D-Frank](https://github.com/3D-Frank)** | — | — | 1 |

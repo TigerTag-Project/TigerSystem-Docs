@@ -543,3 +543,23 @@
 @media (max-width: 30rem) {
   .ts-boxes { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
 }
+
+/* Pin the mobile menu's preferences row to the bottom of the open menu.
+   Starlight puts the theme switch and the language picker *after* the whole
+   navigation tree, which on this sidebar means roughly 2 500 px of scrolling
+   before either is reachable — so on a phone the theme could not be changed
+   at all. The row is a flex item of `.sidebar-content`, so it sticks against
+   the pane that actually scrolls, and it stays one tap from the hamburger. */
+@media (max-width: 50rem) {
+  .sidebar-content > div:has(> .mobile-preferences) {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    margin-top: auto;
+    background: var(--sl-color-black);
+  }
+  .mobile-preferences {
+    align-items: center;
+    padding-block: 0.75rem;
+  }
+}

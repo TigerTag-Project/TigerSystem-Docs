@@ -13,6 +13,7 @@
  * long before the repositories are walked.
  */
 import { execFile } from 'node:child_process';
+import crypto from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -81,6 +82,26 @@ async function collect() {
 const block = (page, people) =>
   [START, '', page.header, '|---|---|---|---|', ...people.map(([l, c]) => page.line(l, c)), '', END].join('\n');
 
+/**
+ * Re-stamp the French page's `sourceHash` against the English one.
+ *
+ * This script is the only thing that edits both editions at once, so it is
+ * also the only thing that can leave them structurally identical but
+ * *declared* stale. `check-i18n` compares the hash, not the content, and it
+ * is fatal — so without this the weekly refresh would turn CI red every
+ * Monday morning for a table it had just written correctly.
+ */
+async function restampFrench() {
+  const source = path.join(ROOT, 'docs/hall-of-fame.md');
+  const target = path.join(ROOT, 'i18n/fr/hall-of-fame.md');
+  const hash = crypto.createHash('sha256').update(await readFile(source)).digest('hex');
+  const current = await readFile(target, 'utf8');
+  const next = current.replace(/^sourceHash: .*$/m, `sourceHash: ${hash}`);
+  if (next === current) return;
+  await writeFile(target, next);
+  console.log('contributors: re-stamped i18n/fr/hall-of-fame.md');
+}
+
 const check = process.argv.includes('--check');
 const people = await collect();
 let stale = 0;
@@ -102,6 +123,10 @@ for (const page of PAGES) {
   await writeFile(file, next);
   console.log(`contributors: updated ${page.file}`);
 }
+
+// Unconditional, and idempotent: it repairs a hash left stale by an earlier
+// run as readily as one this run created.
+if (!check) await restampFrench();
 
 if (check && stale) process.exit(1);
 console.log(`contributors: ${people.length} contributor(s) outside the project's own accounts`);

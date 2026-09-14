@@ -57,7 +57,7 @@ le protocole RFID tiers le plus déployé au monde.
 
 
 <div class="ts-cardgrid">
-<a class="ts-card" href="/fr/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Prêt à essayer</span><span class="ts-card__text">Rendez une bobine intelligente en cinq minutes — une puce NTAG vierge, votre téléphone, l'application gratuite. Sans compte, entièrement hors ligne.</span></span></a>
+<a class="ts-card" href="/fr/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Prêt à essayer</span><span class="ts-card__text">Rendez une bobine intelligente en deux minutes — une puce NTAG vierge, votre téléphone, l'application gratuite. Sans compte, entièrement hors ligne.</span></span></a>
 <a class="ts-card" href="/fr/products/"><span class="ts-card__body"><span class="ts-card__title">Utilisateur</span><span class="ts-card__text">Ce que chaque produit fait concrètement pour vous — puces, applications, balance, support de lecteur.</span></span></a>
 <a class="ts-card" href="/fr/compatibility/"><span class="ts-card__body"><span class="ts-card__title">Propriétaire d'imprimante</span><span class="ts-card__text">Est-ce que ça marche avec votre machine ? Six marques sont opérationnelles, et la puce fonctionne avec toutes les autres.</span></span></a>
 <a class="ts-card" href="/fr/developers/"><span class="ts-card__body"><span class="ts-card__title">Développeur</span><span class="ts-card__text">Lisez et écrivez les puces depuis JavaScript ou Python, ou branchez l'identité sur votre propre logiciel.</span></span></a>

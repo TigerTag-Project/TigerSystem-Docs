@@ -1,9 +1,9 @@
 ---
-sourceHash: 5ce83667345f3682bb55b7ce2166291343335f200cf8ee676349ec58427b734c
+sourceHash: 753177831a2577ac01ace40f8f49b6cf943aaf385d6b6c4107fcbd9d8660d0f2
 sourcePath: docs/tutorials/first-smart-spool.md
 ---
 
-# Votre première bobine intelligente en 5 minutes
+# Votre première bobine intelligente en 2 minutes
 
 Rendez n'importe quelle bobine de filament intelligente — **gratuitement, chez
 vous**, avec ce que vous possédez déjà ou que vous trouverez pour quelques

@@ -3,7 +3,16 @@
 Task-oriented how-to guides (shorter and more targeted than
 [tutorials](../tutorials/README.md)).
 
-> **TODO:** this section is scaffolding. Planned topics:
+## Available
+
+- **[Start for $0](./start-for-free.md)** — why the visible
+  parts are the smallest part, and what you already own that replaces
+  everything that looks mandatory.
+- **[When a spool's two chips read as two spools](./twin-tag-pair.md)** — the
+  one test that settles it, why two separate write passes can never make a
+  pair, and how to rewrite the two chips as one.
+
+> **TODO:** more guides planned:
 >
 > - How to buy / encode TigerTag chips
 > - How to promote a chipless (digital) spool to a real chip

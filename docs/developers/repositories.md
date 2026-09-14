@@ -14,6 +14,7 @@ All public repositories live under the
 | [Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3) | TigerScale **V3** (current) — ESP32-S3, touchscreen, dual PN532, battery | MIT |
 | [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | TigerScale V2 (previous generation — different hardware) | MIT |
 | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | 3D-printable dual reader stand | CC BY 4.0 |
+| [TigerSpool-RFID](https://github.com/TigerTag-Project/TigerSpool-RFID) | Printer-side spool scanner — ESP32-S3 + PN532, touchscreen, cross-brand | MIT |
 
 ## Which repo is canonical for what
 

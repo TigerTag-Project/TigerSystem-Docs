@@ -1,4 +1,4 @@
-# Your first smart spool in 5 minutes
+# Your first smart spool in 2 minutes
 
 Make any filament spool intelligent — **free, at home**, with things you
 already own or can get for a few cents.

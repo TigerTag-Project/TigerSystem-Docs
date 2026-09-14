@@ -31,8 +31,8 @@ there is no plan question to settle.
 > the *browser's* GitHub user, then Vercel looks the repository up under
 > Atome3D and still cannot see it. It is not a bug and retrying will not help.
 >
-> **Import from the team Owner account instead** — `tigertagdb-6014`
-> (tigertagdb@gmail.com). That is the account the two existing projects,
+> **Import from the team Owner account instead** — the `tigertagdb-6014`
+> account. That is the account the two existing projects,
 > `tiger-tag-hub` and `tiger-tag-manager`, were created from, and both are
 > connected to `TigerTag-Project` repositories. Sign in to Vercel as that
 > account, import into the same **Tiger-Project** team, and the rest of this

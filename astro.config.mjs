@@ -42,6 +42,7 @@ export default defineConfig({
         Head: './src/components/Head.astro',
         Footer: './src/components/Footer.astro',
         SocialIcons: './src/components/SocialIcons.astro',
+        ThemeSelect: './src/components/ThemeSelect.astro',
       },
 
       editLink: { baseUrl: `${REPO_URL}/edit/main/` },
