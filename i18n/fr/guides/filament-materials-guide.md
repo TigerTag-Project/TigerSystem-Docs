@@ -1,11 +1,11 @@
 ---
-sourceHash: bbe9cd0b986211cabcf0df3ae508528d50fa598f123d1d441ef3e2fdfa1c8810
+sourceHash: c2d71b6e0ed3690572c7adc1fb6804f075d0e92891a8294cb4fa076cd61c0638
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
 # Guide des matériaux filament
 
-Une référence pratique pour 20 matériaux : particularité, prix, solidité, résistance chimique, résistance à la chaleur, aux chocs et aux UV, températures buse/plateau, recommandations et exemples d'usage.
+Une référence pratique pour 21 matériaux : particularité, prix, solidité, résistance chimique, résistance à la chaleur, aux chocs et aux UV, températures buse/plateau, recommandations et exemples d'usage.
 
 **Étiquettes de résistance chimique :** <span class="ts-tag ts-tag--ok">OK</span> tient bien · <span class="ts-tag ts-tag--warn">MOYEN</span> fragilise ou varie · <span class="ts-tag ts-tag--danger">KO</span> dissout ou dégrade.
 
@@ -28,7 +28,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 190–220 °C |
 | Temp. plateau | 45–65 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Ventilo 100% · Vitesse élevée possible |
 | Exemples | Prototypes, figurines, décoration |
 
@@ -51,7 +50,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 200–230 °C |
 | Temp. plateau | 45–60 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Buse 0,6 mm si particules · Vitesse lente · Adhérence plateau très forte (verre ou PEI) — laisser refroidir complètement avant de décoller |
 | Exemples | Vases, décoration, pièces artistiques |
 
@@ -74,7 +72,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 190–230 °C |
 | Temp. plateau | 50–70 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Vitesse modérée (plus cassant aux détails fins) · Idéal pièces déco sans reflets |
 | Exemples | Figurines, maquettes, pièces d'expo |
 
@@ -97,7 +94,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 230–250 °C |
 | Temp. plateau | 75–90 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Ventilo 20–50% · Adhérence plateau très forte (verre ou PEI) — laisser refroidir complètement avant de décoller · Vitesse modérée |
 | Exemples | Pièces mécaniques, boîtes étanches, clips |
 
@@ -120,7 +116,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 245–260 °C |
 | Temp. plateau | 75–90 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Utile seulement sur hotend « high-flow » / imprimante limitée par le débit · Sans intérêt sur une imprimante lente ou Bowden classique |
 | Exemples | Mêmes usages que le PETG, sur imprimante rapide (CoreXY type Bambu Lab, Creality K1…) |
 
@@ -145,7 +140,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 220–240 °C |
 | Temp. plateau | 40–50 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Extrudeur direct-drive indispensable · Vitesse 15–25 mm/s, rétraction minimale |
 | Exemples | Semelles, poignées souples, joints |
 
@@ -168,7 +162,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 220–250 °C |
 | Temp. plateau | 40–60 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Direct-drive conseillé (Bowden bien réglé possible) · Vitesse 30–45 mm/s — le plus tolérant des TPU |
 | Exemples | Pneus RC, coques téléphone, gaines de câbles |
 
@@ -191,7 +184,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 220–250 °C |
 | Temp. plateau | 40–60 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | S'imprime presque comme un PETG · Bowden généralement OK |
 | Exemples | Roues, charnières souples, pièces anti-vibration |
 
@@ -214,7 +206,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 235–260 °C |
 | Temp. plateau | 95–110 °C |
 | Caisson | Obligatoire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Ventilo coupé · Filtration air (COV) |
 | Exemples | Pièces auto intérieures, coques, carters |
 
@@ -237,7 +228,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 235–260 °C |
 | Temp. plateau | 90–110 °C |
 | Caisson | Recommandé |
-| Type de buse | Standard (laiton) |
 | Recommandations | Séchage du filament · Ventilo faible |
 | Exemples | Pièces extérieures, boîtiers de jardin |
 
@@ -260,7 +250,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 250–270 °C |
 | Temp. plateau | 100–120 °C |
 | Caisson | Obligatoire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Séchage impératif avant/pendant · Colle Magigoo / PVA |
 | Exemples | Engrenages, pièces de frottement |
 
@@ -283,7 +272,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 260–310 °C |
 | Temp. plateau | 100–120 °C |
 | Caisson | Obligatoire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Séchage impératif · Colle Magigoo PC |
 | Exemples | Pièces moteur, pièces structurelles, moules |
 
@@ -306,7 +294,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 220–260 °C |
 | Temp. plateau | 80–100 °C |
 | Caisson | Recommandé |
-| Type de buse | Standard (laiton) |
 | Recommandations | Scotch PP obligatoire (rien d'autre n'accroche) · Brim large (retrait ~2%) |
 | Exemples | Charnières vivantes, flacons, pièces alimentaires |
 
@@ -331,9 +318,30 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | PLA-CF 200–220 °C<br/>PETG-CF 230–260 °C<br/>PA-CF 270–300 °C |
 | Temp. plateau | PLA-CF 45–60 °C<br/>PETG-CF 70–90 °C<br/>PA-CF 80–110 °C |
 | Caisson | PLA-CF/PETG-CF pas nécessaire<br/>PA-CF obligatoire |
-| Type de buse | Obligatoire renforcée, toutes bases — acier trempé/tungstène/rubis (une buse laiton s'use en 1-2 bobines) |
 | Recommandations | 0,6 mm conseillé (0,4 mm mini) · PA-CF : hotend tout métal + séchage impératif, en plus exigeant que PLA-CF/PETG-CF |
 | Exemples | Drones, supports rigides, gabarits peu sollicités aux chocs |
+
+</div>
+
+### Verre (GF)
+
+<div class="ts-fila-card">
+<span class="ts-fila-badge ts-fila-badge--composite">Composite</span>
+
+| | |
+|---|---|
+| Particularité | Fibres de verre hachées (10–30%) dans une base PLA, PETG ou Nylon : plus rigide que la base nue et plus tolérante aux chocs que l'équivalent en fibre de carbone — mais non conductrice, donc ne bloque pas les ondes radio comme le CF. |
+| Prix / kg | PLA-GF 25–35 €<br/>PETG-GF 19–33 €<br/>PA-GF 60–125 € |
+| Solidité /10 | 7 (rigide, plus tolérante aux chocs que le CF) |
+| Résistance chimique | <strong>PLA-GF :</strong> <span class="ts-tag ts-tag--ok">OK</span> IPA, huiles, eau froide · <span class="ts-tag ts-tag--warn">MOYEN</span> acétone · <span class="ts-tag ts-tag--danger">KO</span> acides/bases concentrés<br/><strong>PETG-GF :</strong> <span class="ts-tag ts-tag--ok">OK</span> eau, alcools, acides dilués, sels · <span class="ts-tag ts-tag--danger">KO</span> solvants chlorés, cétones concentrées<br/><strong>PA-GF :</strong> <span class="ts-tag ts-tag--ok">OK</span> acétone, alcools, hydrocarbures, bases · <span class="ts-tag ts-tag--danger">KO</span> acides ; gonfle à l'eau |
+| Résist. chaleur | PLA-GF ~55–60 °C<br/>PETG-GF ~75–80 °C<br/>PA-GF ~150–180 °C |
+| Résist. chocs | Moyenne (plus tolérante que le CF à charge de fibre égale) |
+| Résist. UV | Mauvaise à bonne (selon base) |
+| Temp. buse | PLA-GF 200–220 °C<br/>PETG-GF 230–260 °C<br/>PA-GF 270–300 °C |
+| Temp. plateau | PLA-GF 45–60 °C<br/>PETG-GF 70–90 °C<br/>PA-GF 80–110 °C |
+| Caisson | PLA-GF/PETG-GF pas nécessaire<br/>PA-GF obligatoire |
+| Recommandations | 0,6 mm conseillé (0,4 mm mini) · PA-GF : hotend tout métal + séchage impératif, en plus exigeant que PLA-GF/PETG-GF |
+| Exemples | Boîtiers transparents aux ondes radio (antennes, matériel radio), gabarits d'outillage, pièces tolérantes aux chocs |
 
 </div>
 
@@ -354,7 +362,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 190–220 °C |
 | Temp. plateau | 45–60 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Obligatoire renforcée — acier trempé/inox (usure quasi immédiate en laiton) |
 | Recommandations | Poncer (220 → 1000 grain) puis polir |
 | Exemples | Figurines/bustes « métal », objets déco pesants, trophées |
 
@@ -377,7 +384,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 195–220 °C |
 | Temp. plateau | 45–60 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) — buse ≥0,6 mm fortement conseillée, les particules bouchent une 0,4 mm |
 | Recommandations | Ne jamais laisser chauffer à l'arrêt (carbonise et bouche la buse) |
 | Exemples | Décoration, maquettes, objets d'art, cadres |
 
@@ -402,7 +408,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 185–210 °C |
 | Temp. plateau | 45–60 °C |
 | Caisson | Pas nécessaire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Garder au sec (très hygroscopique) · Utiliser en double extrusion |
 | Exemples | Supports pour géométries complexes (PLA) |
 
@@ -425,7 +430,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 220–250 °C |
 | Temp. plateau | 90–110 °C |
 | Caisson | Obligatoire |
-| Type de buse | Standard (laiton) |
 | Recommandations | Ventilo coupé · Dissolution au limonène |
 | Exemples | Supports pour impressions ABS, prototypes légers |
 
@@ -450,7 +454,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 370–420 °C |
 | Temp. plateau | 120–150 °C |
 | Caisson | Obligatoire, chauffé &gt;100 °C |
-| Type de buse | Standard (laiton) — nécessite un hotend tout métal pour la température |
 | Recommandations | Séchage impératif |
 | Exemples | Implants médicaux, pièces aérospatiales |
 
@@ -473,7 +476,6 @@ Une référence pratique pour 20 matériaux : particularité, prix, solidité, r
 | Temp. buse | 350–390 °C |
 | Temp. plateau | 140–160 °C |
 | Caisson | Obligatoire, chauffé |
-| Type de buse | Standard (laiton) — nécessite un hotend tout métal pour la température |
 | Recommandations | Plateau verre borosilicaté · Très hygroscopique : séchage impératif |
 | Exemples | Intérieurs avion (norme feu/fumée), gabarits industriels |
 

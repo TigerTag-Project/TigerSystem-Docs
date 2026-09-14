@@ -1,6 +1,6 @@
 # Filament materials guide
 
-A working reference for 20 materials: overview, price, strength, chemical resistance, heat/impact/UV resistance, nozzle/bed temperatures, recommendations and typical examples.
+A working reference for 21 materials: overview, price, strength, chemical resistance, heat/impact/UV resistance, nozzle/bed temperatures, recommendations and typical examples.
 
 **Chemical resistance tags:** <span class="ts-tag ts-tag--ok">OK</span> holds up well · <span class="ts-tag ts-tag--warn">FAIR</span> weakens or varies · <span class="ts-tag ts-tag--danger">POOR</span> dissolves or degrades.
 
@@ -23,7 +23,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 190–220 °C |
 | Bed temp | 45–65 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Fan 100% · High speed possible |
 | Examples | Prototypes, figurines, decoration |
 
@@ -46,7 +45,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 200–230 °C |
 | Bed temp | 45–60 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | 0.6 mm tip if it contains particles · Slow speed · Strong bed adhesion (glass or PEI) — let it cool fully before removing |
 | Examples | Vases, decoration, art pieces |
 
@@ -69,7 +67,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 190–230 °C |
 | Bed temp | 50–70 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Moderate speed (more brittle on fine detail) · Ideal for decor pieces with no shine |
 | Examples | Figurines, models, display pieces |
 
@@ -92,7 +89,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 230–250 °C |
 | Bed temp | 75–90 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Fan 20–50% · Strong bed adhesion (glass or PEI) — let it cool fully before removing · Moderate speed |
 | Examples | Mechanical parts, waterproof boxes, clips |
 
@@ -115,7 +111,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 245–260 °C |
 | Bed temp | 75–90 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Only useful on a "high-flow" hotend or a flow-limited printer · No benefit on a slow or classic Bowden printer |
 | Examples | Same uses as PETG, on a fast printer (CoreXY like Bambu Lab, Creality K1…) |
 
@@ -140,7 +135,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 220–240 °C |
 | Bed temp | 40–50 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Direct-drive extruder required · Speed 15–25 mm/s, minimal retraction |
 | Examples | Soles, soft grips, gaskets |
 
@@ -163,7 +157,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 220–250 °C |
 | Bed temp | 40–60 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Direct-drive recommended (a well-tuned Bowden can work) · Speed 30–45 mm/s — the most forgiving TPU |
 | Examples | RC tires, phone cases, cable sheathing |
 
@@ -186,7 +179,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 220–250 °C |
 | Bed temp | 40–60 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Prints almost like a PETG · Bowden generally fine |
 | Examples | Wheels, flexible hinges, anti-vibration parts |
 
@@ -209,7 +201,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 235–260 °C |
 | Bed temp | 95–110 °C |
 | Enclosure | Required |
-| Nozzle type | Standard (brass) |
 | Recommendations | Fan off · Air filtration (VOCs) |
 | Examples | Car interior parts, enclosures, housings |
 
@@ -232,7 +223,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 235–260 °C |
 | Bed temp | 90–110 °C |
 | Enclosure | Recommended |
-| Nozzle type | Standard (brass) |
 | Recommendations | Dry the filament · Low fan |
 | Examples | Outdoor parts, garden enclosures |
 
@@ -255,7 +245,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 250–270 °C |
 | Bed temp | 100–120 °C |
 | Enclosure | Required |
-| Nozzle type | Standard (brass) |
 | Recommendations | Drying required before/during printing · Magigoo/PVA glue |
 | Examples | Gears, wear/friction parts |
 
@@ -278,7 +267,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 260–310 °C |
 | Bed temp | 100–120 °C |
 | Enclosure | Required |
-| Nozzle type | Standard (brass) |
 | Recommendations | Drying required · Magigoo PC glue |
 | Examples | Engine parts, structural parts, molds |
 
@@ -301,7 +289,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 220–260 °C |
 | Bed temp | 80–100 °C |
 | Enclosure | Recommended |
-| Nozzle type | Standard (brass) |
 | Recommendations | PP tape required (nothing else sticks) · Wide brim (~2% shrinkage) |
 | Examples | Living hinges, bottles, food-contact parts |
 
@@ -326,9 +313,30 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | PLA-CF 200–220 °C<br/>PETG-CF 230–260 °C<br/>PA-CF 270–300 °C |
 | Bed temp | PLA-CF 45–60 °C<br/>PETG-CF 70–90 °C<br/>PA-CF 80–110 °C |
 | Enclosure | PLA-CF/PETG-CF not needed<br/>PA-CF required |
-| Nozzle type | Hardened required, every base — steel/tungsten/ruby (a brass nozzle wears out in 1–2 spools) |
 | Recommendations | 0.6 mm recommended (0.4 mm minimum) · PA-CF: all-metal hotend + drying required, more demanding than PLA-CF/PETG-CF |
 | Examples | Drones, rigid jigs, low-impact fixtures |
+
+</div>
+
+### Glass fiber (GF)
+
+<div class="ts-fila-card">
+<span class="ts-fila-badge ts-fila-badge--composite">Composite</span>
+
+| | |
+|---|---|
+| Overview | Chopped glass fiber (10–30%) in a PLA, PETG or nylon base: stiffer than the unfilled base and tougher (less brittle) than the equivalent CF grade — but not electrically conductive, so it doesn't block radio signals the way CF can. |
+| Price / kg | PLA-GF 25–35 €<br/>PETG-GF 19–33 €<br/>PA-GF 60–125 € |
+| Strength /10 | 7 (rigid, more impact-tolerant than CF) |
+| Chemical resistance | <strong>PLA-GF:</strong> <span class="ts-tag ts-tag--ok">OK</span> IPA, oils, cold water · <span class="ts-tag ts-tag--warn">FAIR</span> acetone · <span class="ts-tag ts-tag--danger">POOR</span> concentrated acids/bases<br/><strong>PETG-GF:</strong> <span class="ts-tag ts-tag--ok">OK</span> water, alcohols, dilute acids, salts · <span class="ts-tag ts-tag--danger">POOR</span> chlorinated solvents, concentrated ketones<br/><strong>PA-GF:</strong> <span class="ts-tag ts-tag--ok">OK</span> acetone, alcohols, hydrocarbons, bases · <span class="ts-tag ts-tag--danger">POOR</span> acids; swells in water |
+| Heat resistance | PLA-GF ~55–60 °C<br/>PETG-GF ~75–80 °C<br/>PA-GF ~150–180 °C |
+| Impact resistance | Moderate (tougher than CF at the same fiber load) |
+| UV resistance | Poor to good (depends on base) |
+| Nozzle temp | PLA-GF 200–220 °C<br/>PETG-GF 230–260 °C<br/>PA-GF 270–300 °C |
+| Bed temp | PLA-GF 45–60 °C<br/>PETG-GF 70–90 °C<br/>PA-GF 80–110 °C |
+| Enclosure | PLA-GF/PETG-GF not needed<br/>PA-GF required |
+| Recommendations | 0.6 mm recommended (0.4 mm minimum) · PA-GF: all-metal hotend + drying required, more demanding than PLA-GF/PETG-GF |
+| Examples | RF-transparent housings (antennas, radio gear), tool jigs, impact-tolerant brackets |
 
 </div>
 
@@ -349,7 +357,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 190–220 °C |
 | Bed temp | 45–60 °C |
 | Enclosure | Not needed |
-| Nozzle type | Hardened required — steel/stainless (near-instant wear in brass) |
 | Recommendations | Sand (220 → 1000 grit) then polish |
 | Examples | "Metal" figurines/busts, heavy decor objects, trophies |
 
@@ -372,7 +379,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 195–220 °C |
 | Bed temp | 45–60 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) — 0.6 mm tip strongly recommended, particles clog a 0.4 mm |
 | Recommendations | Never let it sit hot while idle (chars and clogs the nozzle) |
 | Examples | Decor, models, art objects, frames |
 
@@ -397,7 +403,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 185–210 °C |
 | Bed temp | 45–60 °C |
 | Enclosure | Not needed |
-| Nozzle type | Standard (brass) |
 | Recommendations | Keep it dry (very hygroscopic) · Use in dual extrusion |
 | Examples | Supports for complex geometries (PLA) |
 
@@ -420,7 +425,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 220–250 °C |
 | Bed temp | 90–110 °C |
 | Enclosure | Required |
-| Nozzle type | Standard (brass) |
 | Recommendations | Fan off · Dissolves in limonene |
 | Examples | Supports for ABS prints, lightweight prototypes |
 
@@ -445,7 +449,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 370–420 °C |
 | Bed temp | 120–150 °C |
 | Enclosure | Required, heated >100 °C |
-| Nozzle type | Standard (brass) OK — needs an all-metal hotend for the temperature |
 | Recommendations | Drying required |
 | Examples | Medical implants, aerospace parts |
 
@@ -468,7 +471,6 @@ A working reference for 20 materials: overview, price, strength, chemical resist
 | Nozzle temp | 350–390 °C |
 | Bed temp | 140–160 °C |
 | Enclosure | Required, heated |
-| Nozzle type | Standard (brass) OK — needs an all-metal hotend for the temperature |
 | Recommendations | Borosilicate glass bed · Very hygroscopic: drying required |
 | Examples | Aircraft interiors (fire/smoke rating), industrial jigs |
 
