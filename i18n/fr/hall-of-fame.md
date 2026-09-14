@@ -1,5 +1,5 @@
 ---
-sourceHash: b85c232542bcdff6226a6c68202b243ffba73692792609fd323c25cecf0a937f
+sourceHash: b6cee4a923a2a6c1ffc35fa5394b85d2e7612c4f2b2a2ddcc8b2ec90ae73e266
 sourcePath: docs/hall-of-fame.md
 ---
 
@@ -22,9 +22,10 @@ réclamation.
 
 | Qui | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 23 | 28 | — |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 24 | 30 | — |
+| **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 1 | 7 | 7 |
 | **[@ennisj](https://github.com/ennisj)** | 21 | 7 | — |
-| **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 1 | 6 | 7 |
+| **[@ImNanou](https://github.com/ImNanou)** | — | — | 5 |
 | **[@physicsG](https://github.com/physicsG)** | — | — | 2 |
 | **[@sjordan0228](https://github.com/sjordan0228)** | — | — | 2 |
 | **[@TrueFurina](https://github.com/TrueFurina)** | — | 1 | — |
