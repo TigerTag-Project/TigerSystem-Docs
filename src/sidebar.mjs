@@ -78,6 +78,7 @@ export const sidebar = [
     { slug: 'tutorials/elegoo-cc2-lan-mode', label: 'Elegoo CC2: LAN mode', translations: { fr: 'Elegoo CC2 : mode LAN' } },
     { slug: 'guides' },
     { slug: 'guides/twin-tag-pair' },
+    { slug: 'guides/filament-materials-guide' },
   ]),
 
   group('Philosophy & vision', 'Philosophie et vision', [

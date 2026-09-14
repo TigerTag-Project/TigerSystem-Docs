@@ -46,6 +46,27 @@
   --ts-card-bg-hover: #121d25;
   --ts-card-border: #1e2831;
   --ts-mermaid-bg: #0b1319;
+
+  /* Filament materials guide — one badge colour per material group, plus the
+     OK/FAIR/POOR chemical-resistance tags. Prefixed so they can never collide
+     with a future generic --ok/--warn/--danger token. */
+  --tsfil-public: #4fc3d0;
+  --tsfil-public-soft: #17302f;
+  --tsfil-technique: #f08a4b;
+  --tsfil-technique-soft: #3a2417;
+  --tsfil-composite: #93a4b0;
+  --tsfil-composite-soft: #262b2f;
+  --tsfil-support: #c9b98a;
+  --tsfil-support-soft: #322c1d;
+  --tsfil-pro: #b69ae8;
+  --tsfil-pro-soft: #2a2038;
+
+  --tsfil-ok: #7fc998;
+  --tsfil-ok-soft: #1c2c20;
+  --tsfil-warn: #e3b95b;
+  --tsfil-warn-soft: #332a15;
+  --tsfil-danger: #e38a8f;
+  --tsfil-danger-soft: #35201f;
 }
 
 :root[data-theme='light'] {
@@ -72,6 +93,24 @@
   --ts-card-bg-hover: #fff7f1;
   --ts-card-border: #e3e7eb;
   --ts-mermaid-bg: #fbfbfc;
+
+  --tsfil-public: #1e8a97;
+  --tsfil-public-soft: #e3f1f1;
+  --tsfil-technique: #c8541c;
+  --tsfil-technique-soft: #f7e6da;
+  --tsfil-composite: #4c5b66;
+  --tsfil-composite-soft: #e4e9ea;
+  --tsfil-support: #7a6a46;
+  --tsfil-support-soft: #efeadb;
+  --tsfil-pro: #6e4cb3;
+  --tsfil-pro-soft: #eae3f5;
+
+  --tsfil-ok: #2e7d4f;
+  --tsfil-ok-soft: #e3f0e7;
+  --tsfil-warn: #a8760a;
+  --tsfil-warn-soft: #f5ebd6;
+  --tsfil-danger: #ae3b44;
+  --tsfil-danger-soft: #f5e2e2;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -297,6 +336,85 @@
 .ts-model-picker span {
   font-weight: 600;
   font-size: var(--sl-text-sm);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Filament materials guide — one card per material, property/value tables so */
+/* the page reads top to bottom with no horizontal scroller.                   */
+/* -------------------------------------------------------------------------- */
+
+.ts-fila-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: var(--sl-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.ts-fila-badge--public {
+  color: var(--tsfil-public);
+  background: var(--tsfil-public-soft);
+}
+.ts-fila-badge--technique {
+  color: var(--tsfil-technique);
+  background: var(--tsfil-technique-soft);
+}
+.ts-fila-badge--composite {
+  color: var(--tsfil-composite);
+  background: var(--tsfil-composite-soft);
+}
+.ts-fila-badge--support {
+  color: var(--tsfil-support);
+  background: var(--tsfil-support-soft);
+}
+.ts-fila-badge--pro {
+  color: var(--tsfil-pro);
+  background: var(--tsfil-pro-soft);
+}
+
+.ts-tag {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  font-size: var(--sl-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.ts-tag--ok {
+  color: var(--tsfil-ok);
+  background: var(--tsfil-ok-soft);
+}
+.ts-tag--warn {
+  color: var(--tsfil-warn);
+  background: var(--tsfil-warn-soft);
+}
+.ts-tag--danger {
+  color: var(--tsfil-danger);
+  background: var(--tsfil-danger-soft);
+}
+
+.ts-fila-card {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--ts-card-border);
+  border-radius: 0.6rem;
+  background: var(--ts-card-bg);
+}
+
+.ts-fila-card h3 {
+  margin-top: 0 !important;
+}
+
+.ts-fila-card table {
+  margin: 0.75rem 0 0;
+}
+
+.ts-fila-card table td:first-child {
+  color: var(--sl-color-gray-3);
+  width: 11rem;
 }
 
 .ts-tuto-step {
