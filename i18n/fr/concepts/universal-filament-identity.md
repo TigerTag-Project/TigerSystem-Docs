@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 3f16993dfe016fd4dd30471911d4554a4a17a7958065d1737773a6ca0298963c
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -48,7 +48,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData**, c'est le protocole *avant* la puce : la même identité, stockée
@@ -85,6 +85,32 @@ de façon atomique** quand vous le décidez (Tiger Studio le fait en une seule
 [**format d'échange `.ttag`**](../developers/ttag-format.md) transporte un ou
 plusieurs matériaux d'inventaire — TigerData, TigerData+, TigerTag ou TigerTag+ —
 sur une clé USB, dans un mail, d'un outil à l'autre.
+
+## La promotion : de l'enregistrement à la puce
+
+*Promouvoir* une bobine, c'est passer de la gauche du schéma à la droite : un
+enregistrement TigerData ou TigerData+ existant est écrit dans une puce NTAG
+vierge, et la bobine porte désormais elle-même son identité, hors ligne. Tiger
+Studio le fait en une seule étape, de façon atomique.
+
+Ce qui en sort ne dépend que de ce qui y entre :
+
+| Vous promouvez… | Vous obtenez… | Parce que |
+|---|---|---|
+| un **TigerData** — des valeurs choisies par son propriétaire | un **TigerTag** | un UID physique est désormais associé à l'identité |
+| un **TigerData+** — un vrai produit du catalogue | un **TigerTag+** | la puce porte désormais l'identifiant produit du catalogue : *toujours identifié, toujours pas signé* |
+
+Cette seconde ligne, c'est tout le vocabulaire du `+` en une phrase. La
+promotion change l'*état* — du numérique à la puce — et jamais le sens du `+`.
+Seule la signature d'un fabricant certifié fait d'une puce un
+[TigerTag+ Certified](../products/tigertag-plus.md), et aucune promotion n'en
+produit un.
+
+La promotion n'est pas non plus un aller simple. Les puces ne sont jamais
+verrouillées en écriture : une puce promue peut être effacée depuis
+[Tiger NFC Connect](../products/tigertag-connect.md) ou Tiger Studio, puis
+réécrite ([la puce TigerTag](./tigertag-chip.md)). L'identité, c'est
+l'enregistrement ; la puce n'est que l'endroit où elle vit en ce moment.
 
 ---
 
