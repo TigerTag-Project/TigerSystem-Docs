@@ -24,6 +24,14 @@ Open source under **MIT**, ESP32-S3, about **40 €** of common parts.
 It speaks eight languages, asks which one before anything else, and updates
 itself over the air.
 
+:::caution[Warning]
+Scanning a TigerTag and confirming a slot on the screen does not load
+anything — it only tells the printer what the spool *is*. **You still have
+to physically put the spool in that slot yourself** — the CFS, the AMS, the
+ACE unit, or whatever that printer calls its own tray. Skip that and the
+printer reports no filament, because there genuinely is none loaded.
+:::
+
 ## Where it sits
 
 ```mermaid
