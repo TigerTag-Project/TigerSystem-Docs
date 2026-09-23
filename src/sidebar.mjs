@@ -94,7 +94,6 @@ export const sidebar = [
   ]),
 
   group('Reference', 'Référence', [
-    { slug: 'faq' },
     { slug: 'glossary' },
     { slug: 'certified-partners' },
     { slug: 'support' },
