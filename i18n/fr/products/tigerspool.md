@@ -1,5 +1,5 @@
 ---
-sourceHash: 0151462747b928a6030bbb9ba159f7f989f37f0a3aa531ac84c7530c3aa3891b
+sourceHash: 6bc25a75e6af3cfe0bf2b74d1750ae4b7b252cb9642cb8774fc0a26c20b0abe4
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -31,6 +31,15 @@ courantes.
 
 Il parle huit langues, demande laquelle avant toute chose, et se met à jour
 tout seul par voie hertzienne.
+
+:::caution[Avertissement]
+Scanner une TigerTag et confirmer un emplacement à l'écran ne charge rien —
+cela indique seulement à l'imprimante ce qu'*est* la bobine. **Vous devez
+toujours placer physiquement la bobine dans cet emplacement vous-même** — le
+CFS, l'AMS, l'unité ACE, ou quel que soit le nom que cette imprimante donne
+à son propre emplacement. Sautez cette étape et l'imprimante signale qu'il
+n'y a pas de filament, car il n'y en a effectivement aucun de chargé.
+:::
 
 ## Où il se situe
 
