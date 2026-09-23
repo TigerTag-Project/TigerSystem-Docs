@@ -1,5 +1,5 @@
 ---
-sourceHash: 7637b90d610dec99841d2b914a6b2549c1c1924e6fef1c0da1cac0454b4febf0
+sourceHash: 79d722d61b9194c68328dc124201ca880a743f0e74dbffff8db041cba93d35c5
 sourcePath: docs/glossary.md
 ---
 
@@ -32,6 +32,7 @@ renvoie vers la page qui en détient l'explication complète.
 | **TigerHub** | La maison web de l'écosystème, sur `tigersystem.io` — vitrine, listes d'envies, codes ami, partage de listes publiques. Voir [TigerHub](./products/tigerhub.md). |
 | **TigerPOD** | Le support de double lecteur NFC imprimable en 3D — STL gratuit. Voir [TigerPOD](./products/tigerpod.md). |
 | **TigerScale** | La balance à filament ESP32 open source qui répond à « combien en reste-t-il ? ». Voir [TigerScale](./products/tigerscale.md). |
+| **TigerSpool** | Le boîtier posé à côté de l'imprimante qui inscrit l'identité d'une bobine dans un emplacement d'impression au contact — sans appli, sans clavier, sur n'importe quelle marque. Voir [TigerSpool](./products/tigerspool.md). |
 | **TigerTag Factory / Manager** | La chaîne d'outils industrielle, de qualité production, qui programme les puces sur les lignes de production de filament, et les outils qui entretiennent la base de données filaments. Non publique. Voir la [suite Factory](./products/factory-suite.md). |
 | **Carrier** | La bande qui porte les deux puces d'une bobine — une à chaque extrémité repliée, collée sur le mandrin en carton avec un adhésif industriel 3M. Utilisée sur la ligne de production, vendue séparément pour les refills, publique et imprimable chez soi. Voir [La puce TigerTag](./concepts/tigertag-chip.md). |
 | **Masterspool** | Une bobine réutilisable sur laquelle se monte un refill sans bobine. La puce d'un refill se loge dans le mandrin en carton, pour rester avec le filament plutôt qu'avec la bobine. |

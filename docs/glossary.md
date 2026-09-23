@@ -27,6 +27,7 @@ owns the full story.
 | **TigerHub** | The ecosystem's web home at `tigersystem.io` — showcase, wishlists, friend codes, public list sharing. See [TigerHub](./products/tigerhub.md). |
 | **TigerPOD** | The 3D-printable dual NFC reader stand — free STL. See [TigerPOD](./products/tigerpod.md). |
 | **TigerScale** | The open-source ESP32 filament scale that answers "how much is left?". See [TigerScale](./products/tigerscale.md). |
+| **TigerSpool** | The box beside the printer that writes a spool's identity into a printer slot on contact — no app, no keyboard, any brand. See [TigerSpool](./products/tigerspool.md). |
 | **TigerTag Factory / Manager** | The industrial, production-grade toolchain that programs chips on filament production lines, and the tools that curate the filament database. Not public. See [Factory suite](./products/factory-suite.md). |
 | **Carrier** | The strip that carries a spool's two chips — one at each folded end, stuck to the cardboard core with industrial 3M adhesive. Used on the factory line, sold on its own for refills, and public and printable at home. See [The TigerTag chip](./concepts/tigertag-chip.md). |
 | **Masterspool** | A reusable reel a spool-less refill is mounted on. A refill's chip goes inside the cardboard core, so it stays with the filament rather than with the reel. |
