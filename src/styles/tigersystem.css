@@ -544,10 +544,6 @@
   max-width: 100%;
 }
 
-.sl-markdown-content :is(h2, h3) {
-  scroll-margin-top: 5rem;
-}
-
 /* The "Related:" line each source page ends with, turned into a quiet footer. */
 .sl-markdown-content > p:last-child > strong:first-child:only-child {
   color: var(--sl-color-gray-3);
