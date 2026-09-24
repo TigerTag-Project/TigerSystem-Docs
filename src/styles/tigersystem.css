@@ -677,3 +677,82 @@
     padding-block: 0.75rem;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/* Product call-to-action row — the buttons a page's subject actually needs    */
+/* -------------------------------------------------------------------------- */
+/* Every product here also lives on GitHub, and several ship a browser-based
+   installer. Those links existed, but only as inline text far down a long
+   page — on the TigerScale page the web installer sat 58 000 px from the top,
+   which is no link at all. This puts them under the intro, where the GitHub
+   READMEs put their own buttons, so the page opens with what to DO. */
+
+.ts-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.ts-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--ts-card-border);
+  background: var(--ts-card-bg);
+  color: var(--sl-color-white);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.ts-cta a:hover,
+.ts-cta a:focus-visible {
+  border-color: var(--ts-orange);
+  background: var(--ts-card-bg-hover);
+  transform: translateY(-1px);
+}
+
+/* One action per page leads: the thing a visitor came to do. The others stay
+   available without competing with it. */
+.ts-cta a.ts-cta-primary {
+  border-color: transparent;
+  background: linear-gradient(96deg, var(--ts-orange), var(--ts-orange-deep));
+  color: #fff;
+  box-shadow: 0 4px 16px rgb(255 122 24 / 25%);
+}
+
+.ts-cta a.ts-cta-primary:hover,
+.ts-cta a.ts-cta-primary:focus-visible {
+  background: linear-gradient(96deg, var(--ts-orange-soft), var(--ts-orange));
+  border-color: transparent;
+}
+
+.ts-cta a img {
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+}
+
+/* The icons are monochrome marks; let them take the button's text colour
+   rather than shipping a light and a dark copy of each. */
+.ts-cta a img[src$="github.svg"] {
+  filter: var(--ts-cta-icon-filter, none);
+}
+
+:root:not([data-theme='light']) .ts-cta a img[src$="github.svg"] {
+  --ts-cta-icon-filter: invert(1) brightness(1.6);
+}
+
+@media (max-width: 30rem) {
+  .ts-cta a {
+    width: 100%;
+    justify-content: center;
+  }
+}

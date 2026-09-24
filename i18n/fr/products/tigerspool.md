@@ -1,5 +1,5 @@
 ---
-sourceHash: 6bc25a75e6af3cfe0bf2b74d1750ae4b7b252cb9642cb8774fc0a26c20b0abe4
+sourceHash: d1ab8daa474f4291280062a6c2461b706fe818c53d0e37aa155d9e3f3882c222
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -10,6 +10,11 @@ emplacement, et le filament y est inscrit — sur n'importe quelle marque
 d'imprimante.**
 
 <img src="../assets/tigerspool.jpg" width="420" alt="Le logo du projet TigerSpool" />
+
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://tigertag-project.github.io/TigerSpool-RFID/">Installer depuis le navigateur</a>
+<a href="https://github.com/TigerTag-Project/TigerSpool-RFID"><img src="../assets/icons/github.svg" alt="" /> En construire un — GitHub</a>
+</div>
 
 Votre imprimante tient déjà une liste d'emplacements. Votre bobine porte déjà
 sa propre [identité](../concepts/universal-filament-identity.md). TigerSpool,

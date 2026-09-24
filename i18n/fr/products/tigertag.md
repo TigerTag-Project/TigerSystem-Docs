@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fc60a5a1f699829f3b9d1d55a2e10e27be4a8bbaa32a30400b02908ec2e4248
+sourceHash: 9e4d64588d8ed616b1339b4ca12ef51674bd7ad9cd0cb2dc1a28121dacf9c2e3
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -12,6 +12,10 @@ puce NFC contient tout ce qui concerne le filament — marque, matière, couleur
 conditions d'impression — pour que vous n'ayez plus jamais à deviner,
 étiqueter ou mémoriser. Approchez votre téléphone et la bobine se présente
 elle-même.
+
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://github.com/TigerTag-Project/TigerTag-RFID-Guide"><img src="../assets/icons/github.svg" alt="" /> La spécification ouverte de la puce</a>
+</div>
 
 Techniquement, c'est le cœur de l'écosystème : un standard RFID ouvert,
 lisible par n'importe quelle application ou n'importe quel lecteur compatible

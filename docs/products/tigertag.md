@@ -7,6 +7,10 @@ everything about the filament — brand, material, color, how it likes to be
 printed — so you never have to guess, label or remember. Tap it with your
 phone and the spool tells you itself.
 
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://github.com/TigerTag-Project/TigerTag-RFID-Guide"><img src="../assets/icons/github.svg" alt="" /> The open chip specification</a>
+</div>
+
 Technically, it is the heart of the ecosystem: an open RFID standard, readable
 by any compatible app or reader — no vendor lock, no secret format.
 

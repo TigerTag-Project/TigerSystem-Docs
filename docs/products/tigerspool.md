@@ -5,6 +5,11 @@ filament is written into that slot — on any brand of printer.**
 
 <img src="../assets/tigerspool.jpg" width="420" alt="The TigerSpool project logo" />
 
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://tigertag-project.github.io/TigerSpool-RFID/">Install from your browser</a>
+<a href="https://github.com/TigerTag-Project/TigerSpool-RFID"><img src="../assets/icons/github.svg" alt="" /> Build one — GitHub</a>
+</div>
+
 Your printer already keeps a list of slots. Your spool already carries its own
 [identity](../concepts/universal-filament-identity.md). TigerSpool is the thirty
 centimetres between the two: no app to open, no keyboard, nothing retyped that

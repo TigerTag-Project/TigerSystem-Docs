@@ -30,13 +30,25 @@ thing standing between a FlashForge owner and this ecosystem — and it is now
 gone. It is an **official FlashForge firmware**, not a community fork and not a
 patch, published here with their agreement.
 
-:::tip[Download]
-**[Creator 5](https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/)**
- · **[Creator 5 Pro](https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/)**
- · [Source and install guide](https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud)
+<div class="ts-model-picker">
+<a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="../assets/flashforge-connection-tutorial/models/creator-5.png" alt="FlashForge Creator 5" /><span>Creator 5</span></a>
+<a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="../assets/flashforge-connection-tutorial/models/creator-5-pro.png" alt="FlashForge Creator 5 Pro" /><span>Creator 5 Pro</span></a>
+</div>
+
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/">Download — Creator 5</a>
+<a class="ts-cta-primary" href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/">Download — Creator 5 Pro</a>
+<a href="https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud"><img src="../assets/icons/github.svg" alt="" /> Source and install guide</a>
+</div>
 
 Installs from a USB drive. Free for anyone, with or without TigerTag hardware.
-:::
+
+### Connecting one, once it is flashed
+
+Turn **LAN mode on** in the printer's settings — that is the whole change the
+firmware makes available. Tiger Studio then finds it by **automatic discovery**,
+or you add it by hand with its **IP address**. No choice to make any more
+between Cloud and local tools: both are live at once.
 
 | | Stock firmware | With this firmware |
 |---|:---:|:---:|

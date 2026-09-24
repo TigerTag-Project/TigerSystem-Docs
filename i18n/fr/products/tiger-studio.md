@@ -1,5 +1,5 @@
 ---
-sourceHash: f36565c4b0678261b79284413046895a4787e73d5b7d266112df8099164079fe
+sourceHash: 10a3e2f353bf32f4376667ae7d5adb999371e07ca71e3af3c79a80b18ba9c0e9
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -12,6 +12,11 @@ chaque rack, chaque imprimante sur un seul écran — scannez une puce et sa
 bobine s'ouvre, mettez un poids à jour et il se synchronise partout, jetez un
 œil à une imprimante et voyez ce qu'elle fait à l'instant même. Open source,
 sur Windows / macOS / Linux.
+
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases/latest">Télécharger Tiger Studio</a>
+<a href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager"><img src="../assets/icons/github.svg" alt="" /> Les sources — GitHub</a>
+</div>
 
 C'est délibérément **un laboratoire, pas la destination** — une démonstration
 de ce que le protocole ouvert rend possible, lisible, forkable et libre de

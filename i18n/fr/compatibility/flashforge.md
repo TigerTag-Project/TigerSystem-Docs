@@ -1,5 +1,5 @@
 ---
-sourceHash: e1c74977ac1e6b430ec83a7d6e1f3a434a0afc87cee8cabe2fa80c3a91d141d5
+sourceHash: bf1c1a183cc7955526ed0bdf71ccf76bd4e35ddeca31934a7cb27a594083221e
 sourcePath: docs/compatibility/flashforge.md
 ---
 
@@ -36,13 +36,26 @@ qui séparait un possesseur de FlashForge de cet écosystème — et il n'existe
 un **firmware FlashForge officiel**, ni un fork communautaire ni un correctif, publié
 ici avec leur accord.
 
-:::tip[Télécharger]
-**[Creator 5](https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/)**
- · **[Creator 5 Pro](https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/)**
- · [Sources et guide d'installation](https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud)
+<div class="ts-model-picker">
+<a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="../assets/flashforge-connection-tutorial/models/creator-5.png" alt="FlashForge Creator 5" /><span>Creator 5</span></a>
+<a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="../assets/flashforge-connection-tutorial/models/creator-5-pro.png" alt="FlashForge Creator 5 Pro" /><span>Creator 5 Pro</span></a>
+</div>
+
+<div class="ts-cta">
+<a class="ts-cta-primary" href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/">Télécharger — Creator 5</a>
+<a class="ts-cta-primary" href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/">Télécharger — Creator 5 Pro</a>
+<a href="https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud"><img src="../assets/icons/github.svg" alt="" /> Sources et guide d'installation</a>
+</div>
 
 S'installe depuis une clé USB. Gratuit pour tout le monde, avec ou sans matériel TigerTag.
-:::
+
+### La connecter, une fois flashée
+
+Activez le **mode LAN** dans les réglages de l'imprimante — c'est tout ce que le
+firmware rend possible. Tiger Studio la trouve ensuite par **découverte
+automatique**, ou vous l'ajoutez à la main avec son **adresse IP**. Plus aucun
+choix à faire entre le Cloud et les outils locaux : les deux fonctionnent en
+même temps.
 
 | | Firmware d'origine | Avec ce firmware |
 |---|:---:|:---:|
