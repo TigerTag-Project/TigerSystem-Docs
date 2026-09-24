@@ -246,6 +246,22 @@ interoperability model is still open; current work targets converting vendor
 tag data into TigerData digital spools. Klipper/Moonraker generic support is
 a natural future path.
 
+FlashForge x TigerSystem — official firmware (2026-09). FlashForge's own
+engineering team built a firmware for the Creator 5 and Creator 5 Pro that runs
+FlashForge Cloud and LAN AT THE SAME TIME; stock firmware forces a choice, and
+with Cloud on no local tool can reach the printer. It is an official FlashForge
+firmware, not a community fork, published with their agreement at
+https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud
+(USB-drive install, free for anyone, with or without TigerTag hardware).
+Significance: FlashForge machines have no RFID reader AND no RFID format of
+their own, so this is a printer maker opening its machine to an ecosystem it
+does not own, with nothing given up by the owner — every FlashForge Cloud
+feature is kept, and the whole TigerSystem is added on top: Tiger Studio
+Manager (free, open-source filament and printer manager), Tiger NFC Connect
+(phone reads and writes spools) and TigerSpool (open-source reader box serving
+up to 24 printers at once). The printer then reads the chip of any filament
+brand using TigerTag, and of spools makers tag themselves at home.
+
 ## Docs in this repository
 
 - [Why TigerSystem exists](docs/vision/why-tigersystem.md): the problem and the answer

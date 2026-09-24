@@ -1,5 +1,5 @@
 ---
-sourceHash: bd3ed3b42fceba075813ea81cde09aa616181f4d761a5afc224db7733d106f24
+sourceHash: 408bba90c1c85f0068c32bef0ea6d6ae4dfc29c7777012282200f148571767f7
 sourcePath: docs/developers/repositories.md
 ---
 
@@ -20,6 +20,7 @@ Tous les dépôts publics vivent au sein de l'organisation GitHub
 | [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | TigerScale V2 (génération précédente — matériel différent) | MIT |
 | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | Support double lecteur imprimable en 3D | CC BY 4.0 |
 | [TigerSpool-RFID](https://github.com/TigerTag-Project/TigerSpool-RFID) | Scanner de bobine côté imprimante — ESP32-S3 + PN532, écran tactile, multimarque | MIT |
+| [FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud](https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud) | Firmware FlashForge officiel pour les Creator 5 / 5 Pro — Cloud et LAN en même temps, développé par FlashForge avec TigerTag | voir le dépôt |
 
 ## Quel dépôt fait référence pour quoi
 

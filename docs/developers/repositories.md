@@ -15,6 +15,7 @@ All public repositories live under the
 | [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | TigerScale V2 (previous generation — different hardware) | MIT |
 | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | 3D-printable dual reader stand | CC BY 4.0 |
 | [TigerSpool-RFID](https://github.com/TigerTag-Project/TigerSpool-RFID) | Printer-side spool scanner — ESP32-S3 + PN532, touchscreen, cross-brand | MIT |
+| [FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud](https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud) | Official FlashForge firmware for the Creator 5 / 5 Pro — Cloud and LAN at the same time, built by FlashForge with TigerTag | see repo |
 
 ## Which repo is canonical for what
 

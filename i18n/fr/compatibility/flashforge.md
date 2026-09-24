@@ -1,5 +1,5 @@
 ---
-sourceHash: d62ceaaec694fe1a9a287aec0b13ccf35135a12331757c2903098287e9271eb9
+sourceHash: e1c74977ac1e6b430ec83a7d6e1f3a434a0afc87cee8cabe2fa80c3a91d141d5
 sourcePath: docs/compatibility/flashforge.md
 ---
 
@@ -17,12 +17,55 @@ sourcePath: docs/compatibility/flashforge.md
 
 ## RFID native — aucune : les machines n'ont pas de lecteur
 
-Les imprimantes FlashForge sont livrées **sans aucun lecteur RFID**. Cela en fait la
+Les imprimantes FlashForge sont livrées **sans aucun lecteur RFID**, et sans format RFID
+qui leur soit propre. Cela en fait la
 démonstration la plus nette de l'avantage TigerSystem : **nous avons donné aux machines
 FlashForge la capacité de travailler avec du filament identifié en NFC — en utilisant le
 lecteur NFC déjà présent dans le smartphone de l'utilisateur.** Une capacité toute neuve,
 ajoutée à l'imprimante de quelqu'un d'autre, **totalement gratuite, sans le moindre coût
 pour l'utilisateur et sans aucune modification de la machine.**
+
+## FlashForge × TigerSystem — le firmware officiel
+
+Les ingénieurs de FlashForge ont développé, pour les **Creator 5** et **Creator 5 Pro**,
+un firmware qui fait tourner **le Cloud FlashForge et le LAN en même temps**.
+
+C'est plus important qu'il n'y paraît. Le firmware d'origine oblige à choisir : Cloud
+activé, plus aucun outil local n'atteint l'imprimante. Ce choix était la seule chose
+qui séparait un possesseur de FlashForge de cet écosystème — et il n'existe plus. C'est
+un **firmware FlashForge officiel**, ni un fork communautaire ni un correctif, publié
+ici avec leur accord.
+
+:::tip[Télécharger]
+**[Creator 5](https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/)**
+ · **[Creator 5 Pro](https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/)**
+ · [Sources et guide d'installation](https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud)
+
+S'installe depuis une clé USB. Gratuit pour tout le monde, avec ou sans matériel TigerTag.
+:::
+
+| | Firmware d'origine | Avec ce firmware |
+|---|:---:|:---:|
+| Cloud FlashForge — appli, accès à distance | ✅ | ✅ |
+| Accès LAN — outils locaux sur votre réseau | ✅ | ✅ |
+| **Les deux en même temps** | ❌ | ✅ |
+| Tiger Studio, Tiger NFC Connect et TigerSpool **avec le Cloud activé** | ❌ | ✅ |
+
+### On ne renonce à rien
+
+Le possesseur conserve toutes les fonctions du Cloud FlashForge, et gagne l'écosystème
+entier par-dessus : un **gestionnaire de filaments et d'imprimantes** libre et gratuit
+sur le bureau, un **téléphone qui lit et écrit les bobines**, et
+**[TigerSpool](../products/tigerspool.md)** — un boîtier lecteur open source posé à côté
+des machines, qui en dessert **jusqu'à 24 en même temps**, un seul boîtier pour toute
+l'étagère.
+
+Ainsi une imprimante sans lecteur et sans format propre lit désormais la puce de
+n'importe quelle marque de filament qui utilise TigerTag — et celle des bobines que les
+makers étiquettent eux-mêmes chez eux, sur du filament livré sans puce.
+
+Qu'un fabricant d'imprimantes ouvre sa machine à un écosystème qui ne lui appartient pas
+est une décision rare. Chaque maker qui en possède une en bénéficie.
 
 ## Le déroulé
 
@@ -33,8 +76,8 @@ pour l'utilisateur et sans aucune modification de la machine.**
  dans votre inventaire.
 3. **Affectez-la à un emplacement de la station matière** — **un scan, un clic** depuis
  l'écran d'affectation de Tiger Studio. L'imprimante finit par connaître son filament
- aussi précisément qu'une machine à RFID intégrée, sans que FlashForge ait changé quoi
- que ce soit.
+ aussi précisément qu'une machine à RFID intégrée, sur n'importe quel modèle FlashForge,
+ sans changement matériel et sans rien ajouter à la machine.
 4. **En direct** — températures, avancement de la tâche et flux de la caméra MJPEG dans
  la vue des imprimantes.
 
