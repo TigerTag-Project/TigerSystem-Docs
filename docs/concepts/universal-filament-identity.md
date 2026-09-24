@@ -41,7 +41,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** is the protocol *before* the chip: the same identity, stored
@@ -75,6 +75,31 @@ all four states travel as files: the
 [**`.ttag` interchange format**](../developers/ttag-format.md) carries one or
 more inventory materials — TigerData, TigerData+, TigerTag or TigerTag+ — on a USB
 stick, in a mail, between tools.
+
+## Promotion: from a record to a chip
+
+*Promoting* a spool is the move from the left of the diagram to the right: an
+existing TigerData or TigerData+ record is written onto a blank NTAG chip, and
+the spool now carries its identity itself, offline. Tiger Studio does it in
+one step, atomically.
+
+What comes out depends only on what went in:
+
+| You promote… | You get… | Because |
+|---|---|---|
+| a **TigerData** — values its owner chose | a **TigerTag** | a physical UID is now associated with the identity |
+| a **TigerData+** — a real catalogue product | a **TigerTag+** | the chip now carries the catalogue product ID: *still identified, still not signed* |
+
+That second row is the whole `+` vocabulary in one line. Promotion changes the
+*state* — digital to chip — and never the meaning of the `+`. Only a certified
+manufacturer's signature makes a chip a
+[TigerTag+ Certified](../products/tigertag-plus.md), and no promotion produces
+one.
+
+Nor is promotion a one-way door. Chips are never write-locked: a promoted chip
+can be erased from [Tiger NFC Connect](../products/tigertag-connect.md) or
+Tiger Studio and written again ([the TigerTag chip](./tigertag-chip.md)). The
+identity is the record; the chip is only where it lives right now.
 
 ---
 
