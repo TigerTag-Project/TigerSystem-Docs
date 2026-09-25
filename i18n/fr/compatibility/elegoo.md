@@ -1,9 +1,9 @@
 ---
-sourceHash: 0cf5803b119a8f2475f23c72ac6da1deaa0cc59cefa6ef5686f60680b8737f0c
+sourceHash: 636849e192cdbe3efc38d30a1b16a4f58828a9158ac9a9f1b2584f5977ce3b08
 sourcePath: docs/compatibility/elegoo.md
 ---
 
-# <img src="../assets/brands/elegoo.svg" width="26" alt="" /> Elegoo
+# Elegoo
 
 ## Liaison imprimante — **opérationnelle**
 

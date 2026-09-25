@@ -1,9 +1,9 @@
 ---
-sourceHash: 5d2504ca693bf2a4da2b772ca4ce24bf4b24a5760d0bcf0a7672fb10983a5456
+sourceHash: 7df403d9ec01cc589f8d8c155cd8d0cb8154cd2993e09860c8c2a54ec787ef9c
 sourcePath: docs/compatibility/bambu-lab.md
 ---
 
-# <img src="../assets/brands/bambulab.svg" width="26" alt="" /> Bambu Lab
+# Bambu Lab
 
 ## Liaison imprimante — **En direct**
 

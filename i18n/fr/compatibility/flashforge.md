@@ -1,9 +1,9 @@
 ---
-sourceHash: c38d6701720c57760a97d6a114ace38887fbdbdf6c6fb0104eda85ffe81895ed
+sourceHash: 47248e2bcfb90f6f4c5088019068176f0bb0cf081f3b4484fb0dcab65b87212f
 sourcePath: docs/compatibility/flashforge.md
 ---
 
-# <img src="../assets/brands/flashforge.svg" width="26" alt="" /> FlashForge
+# FlashForge
 
 ## Liaison imprimante — **En direct**
 

@@ -1,9 +1,9 @@
 ---
-sourceHash: 274da6cee971d3d7120b9fed86cbaa0621521489c87f10c92bad42c247cac0be
+sourceHash: cbf8e821d88b60b01f06da58bf3790fa335e7d0b940f38f9f3ca066fe0851b2b
 sourcePath: docs/compatibility/creality.md
 ---
 
-# <img src="../assets/brands/creality.svg" width="26" alt="" /> Creality
+# Creality
 
 ## Liaison imprimante — **En direct**
 

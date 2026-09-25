@@ -1,4 +1,4 @@
-# <img src="../assets/brands/snapmaker.svg" width="26" alt="" /> Snapmaker
+# Snapmaker
 
 ## Printer link — **Live**
 

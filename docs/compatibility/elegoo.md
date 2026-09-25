@@ -1,4 +1,4 @@
-# <img src="../assets/brands/elegoo.svg" width="26" alt="" /> Elegoo
+# Elegoo
 
 ## Printer link — **Live**
 

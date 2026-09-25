@@ -1,4 +1,4 @@
-# <img src="../assets/brands/anycubic.svg" width="26" alt="" /> Anycubic
+# Anycubic
 
 ## Printer link — **Live** (LAN + cloud)
 

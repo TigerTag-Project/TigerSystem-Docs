@@ -1,4 +1,4 @@
-# <img src="../assets/brands/creality.svg" width="26" alt="" /> Creality
+# Creality
 
 ## Printer link — **Live**
 

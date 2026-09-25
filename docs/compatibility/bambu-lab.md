@@ -1,4 +1,4 @@
-# <img src="../assets/brands/bambulab.svg" width="26" alt="" /> Bambu Lab
+# Bambu Lab
 
 ## Printer link — **Live**
 

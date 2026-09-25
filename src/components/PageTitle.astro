@@ -1,0 +1,89 @@
+---
+/**
+ * Page title, with the product or brand mark in front of it.
+ *
+ * Six brand pages carried `# <img …/> FlashForge` in their Markdown for a long
+ * time and it never rendered: `sync-docs` lifts the first `#` line into the
+ * page's frontmatter title, and Starlight prints that as text. The markup was
+ * dead in the file and invisible on the site.
+ *
+ * So the mark belongs to the component that draws the title, not to the
+ * heading. It is derived from the page's own path — no frontmatter to add, no
+ * `sync-docs` change, and the French pages get it from the same rule, since a
+ * translation lives at the same path under `fr/`.
+ *
+ * A page with no mark simply renders the title, which is every page that is not
+ * a product or a brand.
+ */
+const PAGE_TITLE_ID = '_top';
+
+/** Product pages: the file name and the icon name do not always match. */
+const PRODUCT_MARKS: Record<string, string> = {
+  tigertag: 'tigertag',
+  'tigertag-plus': 'tigertag-plus',
+  'tigertag-plus-certified': 'tigertag-plus',
+  'tigertag-connect': 'connect',
+  'tiger-studio': 'studio',
+  tigerhub: 'tigerhub',
+  tigerpod: 'tigerpod',
+  tigerscale: 'tigerscale',
+  tigerspool: 'tigerspool',
+  'factory-suite': 'factory',
+};
+
+/** Brand pages. Klipper, OpenSpool and OpenTag3D are not ours to badge. */
+const BRAND_MARKS: Record<string, string> = {
+  anycubic: 'anycubic',
+  'bambu-lab': 'bambulab',
+  creality: 'creality',
+  elegoo: 'elegoo',
+  flashforge: 'flashforge',
+  snapmaker: 'snapmaker',
+};
+
+const route = Astro.locals.starlightRoute;
+const title = route.entry.data.title;
+
+// `id` is the page's path inside the content collection, e.g.
+// "products/tigerscale" or "fr/products/tigerscale". Drop a locale prefix so
+// one rule serves every language.
+const id = String(route.entry.id ?? '').replace(/\.(md|mdx)$/, '');
+const path = id.replace(/^[a-z]{2}(-[a-z]{2})?\//i, '');
+const [section, ...rest] = path.split('/');
+const leaf = rest.join('/');
+
+let mark: string | null = null;
+if (section === 'products' && PRODUCT_MARKS[leaf]) mark = `/assets/icons/${PRODUCT_MARKS[leaf]}.svg`;
+else if (section === 'compatibility' && BRAND_MARKS[leaf]) mark = `/assets/brands/${BRAND_MARKS[leaf]}.svg`;
+---
+
+<h1 id={PAGE_TITLE_ID}>
+  {mark && <img class="page-title__mark" src={mark} alt="" aria-hidden="true" />}
+  <span>{title}</span>
+</h1>
+
+<style>
+  @layer starlight.core {
+    h1 {
+      margin-top: 1rem;
+      font-size: var(--sl-text-h1);
+      line-height: var(--sl-line-height-headings);
+      font-weight: 600;
+      color: var(--sl-color-white);
+    }
+  }
+
+  /* Baseline-ish rather than centred: a tall title with a small mark looks
+     wrong centred, and the mark should sit with the first line of text. */
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .page-title__mark {
+    width: 1em;
+    height: 1em;
+    flex: none;
+  }
+</style>

@@ -1,9 +1,9 @@
 ---
-sourceHash: 23482730879aeb7e105433716fcc62bb23c91b08ae79d6be642c66d266f3312b
+sourceHash: 448c6630969a0d99765d2a206f9a0788e9c4e02ef90d870a57ba26db3c1c9fdf
 sourcePath: docs/compatibility/snapmaker.md
 ---
 
-# <img src="../assets/brands/snapmaker.svg" width="26" alt="" /> Snapmaker
+# Snapmaker
 
 ## Liaison imprimante — **En direct**
 

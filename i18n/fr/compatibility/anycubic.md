@@ -1,9 +1,9 @@
 ---
-sourceHash: fea861141f24ce7fe7b849b0c2846db637c655de73e02bf1bb24ed1793731aba
+sourceHash: 2d9fb2d55c78225bfac135d62f3912ead26a4eb709ecafb4ff9d0d0d7d69265e
 sourcePath: docs/compatibility/anycubic.md
 ---
 
-# <img src="../assets/brands/anycubic.svg" width="26" alt="" /> Anycubic
+# Anycubic
 
 ## Liaison imprimante — **En direct** (LAN + cloud)
 

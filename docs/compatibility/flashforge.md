@@ -1,4 +1,4 @@
-# <img src="../assets/brands/flashforge.svg" width="26" alt="" /> FlashForge
+# FlashForge
 
 ## Printer link — **Live**
 
