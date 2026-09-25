@@ -45,6 +45,24 @@ the network to print.
 That is also why a single endpoint matters: one address serves every brand, so
 a reader implements it once and it works for filament it has never seen.
 
+## Offline too — the whole catalogue is a file
+
+Nothing above requires the endpoint to be reachable, or even to exist.
+
+The full reference is published as a single file,
+[`id_catalog.json`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/database/id_catalog.json) — **every id of every filament in the database**,
+refreshed through the day, roughly 12 MB, no key and no account. Anyone may
+download it, mirror it, ship it inside an app, put it on a workshop NAS or
+carry it on a USB stick.
+
+A reader holding that copy resolves a TigerTag+ id **with no network at all**.
+That is what makes the id safer than an address: an address needs its host to
+answer, a shared reference only needs to have been copied once — and it can be
+copied anywhere on the planet, by anybody, at any time.
+
+The Web API stays the fresher path, and the one that carries the datasheets and
+the photo. The file is the floor beneath it.
+
 ## What it never does
 
 The Web API **cannot make a chip work**, because a chip already works without

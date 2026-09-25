@@ -33,11 +33,17 @@ address is written into the chip, under the payload's byte budget, and a chip
 cannot be re-pointed once it is in a customer's hands — if that host moves or
 stops answering, the link is what breaks.
 
-Storing an **id** puts one shared endpoint in the path. The cost is a common
-reference everyone resolves against. What it buys is that the chip never holds
-a location: the id stays valid whatever happens to any address, a reader
-implements one endpoint and it works for filament it has never seen, and a
-manufacturer can correct data six months after the spools left the factory.
+Storing an **id** looks like it puts a shared endpoint in the path — and it
+would, if the reference were ours to withhold. It is not: the whole catalogue
+is published as a single file, [`id_catalog.json`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/database/id_catalog.json), every id of every
+filament in the database, refreshed through the day and free for anyone to
+copy. A reader can hold its own mirror and resolve ids with no network at all.
+
+So the id buys what the address cannot. The chip never holds a location, so it
+stays valid whatever happens to any host; a reader implements one endpoint and
+it works for filament it has never seen; a manufacturer corrects data six
+months after the spools left the factory; and the resolution itself can be
+fully offline, on a copy that anybody may keep.
 
 The [signature](../products/tigertag-plus-certified.md) is the other
 consequence. Because a TigerTag+ Certified signs the chip's own UID, the data

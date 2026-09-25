@@ -1,5 +1,5 @@
 ---
-sourceHash: 75a724e6c91c36887ba7a4f884cf1b89f058cb11653ea2468e071964c4627239
+sourceHash: 5c7088ba93ee695bd1eb05ed7d0b784bebbd805ea4a6c6110737b8f81fe57177
 sourcePath: docs/products/tigertag-plus.md
 ---
 
@@ -20,6 +20,12 @@ catalogue ajoute la possibilité de consulter des données plus riches et plus
 fraîches *quand il se trouve que vous êtes en ligne*, et n'enlève rien quand
 vous ne l'êtes pas. Un TigerTag+ lu en mode avion se comporte comme n'importe
 quel autre TigerTag.
+
+Et *« en ligne »* n'est pas non plus une exigence. La référence entière est
+publiée en un seul fichier — tous les identifiants de tous les filaments de la
+base, libres de copie et de mise en miroir — de sorte qu'un lecteur qui le
+détient résout un identifiant catalogue sans aucun réseau. Voir
+[l'API Web](../developers/web-api.md).
 
 C'est le même `+` que dans [TigerData+](../concepts/universal-filament-identity.md) :
 dans les deux cas, il veut dire *cette identité est un vrai produit du

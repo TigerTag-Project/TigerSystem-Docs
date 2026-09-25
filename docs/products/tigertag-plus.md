@@ -14,6 +14,11 @@ up richer, fresher data *when you happen to be online*, and takes nothing away
 when you are not. A TigerTag+ read in airplane mode behaves like any other
 TigerTag.
 
+And *"online"* is not a requirement either. The whole reference is published as
+one file — every id of every filament in the database, free for anyone to copy
+and mirror — so a reader holding it resolves a catalogue ID with no network at
+all. See [the Web API](../developers/web-api.md).
+
 This is the same `+` as in [TigerData+](../concepts/universal-filament-identity.md):
 in both cases it means *this identity is a real catalogue product*, and in
 neither case does it mean *certified*.

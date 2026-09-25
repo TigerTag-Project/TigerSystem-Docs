@@ -1,5 +1,5 @@
 ---
-sourceHash: 270546315ea7c91d5b488c74c5d0b80f6fe602360f21b18ad9c15859b6ef11ca
+sourceHash: a2788a5364e611177c9b1b011d762345b26e5a8fd204e75a6b2b8beed634955c
 sourcePath: docs/compatibility/opentag3d.md
 ---
 
@@ -40,12 +40,19 @@ inscrite dans la puce, sous le budget d'octets de la charge, et qu'une puce ne
 peut plus être repointée une fois chez le client — si cet hébergement déménage
 ou cesse de répondre, c'est le lien qui casse.
 
-Stocker un **identifiant** met un endpoint partagé sur le chemin. Le prix,
-c'est une référence commune que tout le monde résout. Ce que ça achète : la
-puce ne contient jamais d'emplacement, l'identifiant reste valable quoi qu'il
-arrive à une adresse, un lecteur implémente un seul endpoint et il fonctionne
-pour des filaments qu'il n'a jamais vus, et un fabricant peut corriger une
-donnée six mois après la sortie d'usine.
+Stocker un **identifiant** semble mettre un endpoint partagé sur le chemin — et
+ce serait le cas si la référence était à nous de retenir. Elle ne l'est pas :
+le catalogue entier est publié en un seul fichier, [`id_catalog.json`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/database/id_catalog.json),
+tous les identifiants de tous les filaments de la base, rafraîchi plusieurs
+fois par jour et libre de copie pour qui veut. Un lecteur peut garder son
+propre miroir et résoudre les identifiants sans aucun réseau.
+
+L'identifiant achète donc ce que l'adresse ne peut pas. La puce ne contient
+jamais d'emplacement, elle reste donc valable quoi qu'il arrive à un
+hébergement ; un lecteur implémente un seul endpoint et il fonctionne pour des
+filaments qu'il n'a jamais vus ; un fabricant corrige une donnée six mois après
+la sortie d'usine ; et la résolution elle-même peut être entièrement hors
+ligne, sur une copie que n'importe qui peut conserver.
 
 La [signature](../products/tigertag-plus-certified.md) est l'autre conséquence.
 Parce qu'un TigerTag+ Certified signe l'UID propre de la puce, les données

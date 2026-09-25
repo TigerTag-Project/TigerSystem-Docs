@@ -1,5 +1,5 @@
 ---
-sourceHash: 746a918297462d11525709c410e0f64fefe9b97d0fdc3f960bfd89754bae7930
+sourceHash: 5d759a735149cce57af15cfbccc692832ff2808b2089df6425fe0d0c5df23fb8
 sourcePath: docs/developers/web-api.md
 ---
 
@@ -51,6 +51,27 @@ ait jamais dépendu du réseau pour imprimer.
 C'est aussi pourquoi un endpoint unique compte : une seule adresse dessert
 toutes les marques, un lecteur l'implémente une fois et elle fonctionne pour
 des filaments qu'il n'a jamais vus.
+
+## Hors ligne aussi — le catalogue entier est un fichier
+
+Rien de ce qui précède n'exige que l'endpoint soit joignable, ni même qu'il
+existe.
+
+La référence complète est publiée en un seul fichier,
+[`id_catalog.json`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/database/id_catalog.json) — **tous les identifiants de tous les filaments de
+la base**, rafraîchi plusieurs fois par jour, environ 12 Mo, sans clé et sans
+compte. N'importe qui peut le télécharger, le mettre en miroir, l'embarquer
+dans une application, le poser sur un NAS d'atelier ou le transporter sur une
+clé USB.
+
+Un lecteur qui détient cette copie résout un identifiant TigerTag+ **sans aucun
+réseau**. C'est ce qui rend l'identifiant plus sûr qu'une adresse : une adresse
+a besoin que son hébergement réponde, une référence partagée a seulement besoin
+d'avoir été copiée une fois — et elle peut l'être partout sur la planète, par
+n'importe qui, à n'importe quel moment.
+
+L'API Web reste le chemin le plus frais, et celui qui porte les fiches
+techniques et la photo. Le fichier est le plancher en dessous.
 
 ## Ce qu'elle ne fait jamais
 
