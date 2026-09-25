@@ -56,8 +56,10 @@ Usage — the two-gates model:
  *"compatible with TigerTag"* — and *"compatible with TigerTag+"*, since
  verifying a signature is free, offline and unrestricted, the public keys
  being published. Nobody may describe their own product as *"TigerTag
- Certified"* or *"TigerTag+ Certified"*, and no tag may be called a
- **TigerTag+** unless it actually carries a signature issued by TigerTag.
+ Certified"* or *"TigerTag+ Certified"*. Anyone may write a **TigerTag+** —
+ a chip carrying a manufacturer's catalogue product ID — but no tag may be
+ called **TigerTag+ Certified** unless it actually carries a signature issued
+ by a certified manufacturer under TigerTag's key.
 - The model is deliberately the one Zigbee and Matter use: a free
  *Compatible* tier anyone may enter, and a granted *Certified* tier that
  means something to a buyer precisely because it is granted.
