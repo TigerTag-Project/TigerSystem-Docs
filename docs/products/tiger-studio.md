@@ -7,9 +7,17 @@ rack, every printer on one screen — scan a chip and its spool pops open,
 update a weight and it syncs everywhere, glance at a printer and see what it's
 doing right now. Open source, on Windows / macOS / Linux.
 
+<img src="../assets/hero-ecosystem.png" width="820" alt="Tiger Studio on a desktop beside the mobile app and a TigerPOD reader — the ecosystem working together" />
+
+*Tiger Studio on the desk, the app in your pocket, a reader beside them — the
+same inventory, wherever you touch it.*
+
 <div class="ts-cta">
-<a class="ts-cta-primary" href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases/latest">Download Tiger Studio</a>
-<a href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager"><img src="../assets/icons/github.svg" alt="" /> Sources — GitHub</a>
+<a class="ts-cta-primary" href="https://tigersystem.io/download">Download Tiger Studio — free</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager"><img src="../assets/icons/github.svg" alt="" /> Sources</a>
 </div>
 
 It is deliberately **a laboratory, not the destination** — a demonstration of

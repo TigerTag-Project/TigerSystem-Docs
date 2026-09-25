@@ -694,7 +694,8 @@
   margin: 1.5rem 0 2rem;
 }
 
-.ts-cta a {
+.ts-cta a,
+.ts-app-card a.ts-cta-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -713,7 +714,9 @@
 }
 
 .ts-cta a:hover,
-.ts-cta a:focus-visible {
+.ts-cta a:focus-visible,
+.ts-app-card a.ts-cta-primary:hover,
+.ts-app-card a.ts-cta-primary:focus-visible {
   border-color: var(--ts-orange);
   background: var(--ts-card-bg-hover);
   transform: translateY(-1px);
@@ -721,7 +724,8 @@
 
 /* One action per page leads: the thing a visitor came to do. The others stay
    available without competing with it. */
-.ts-cta a.ts-cta-primary {
+.ts-cta a.ts-cta-primary,
+.ts-app-card a.ts-cta-primary {
   border-color: transparent;
   background: linear-gradient(96deg, var(--ts-orange), var(--ts-orange-deep));
   color: #fff;
@@ -729,7 +733,9 @@
 }
 
 .ts-cta a.ts-cta-primary:hover,
-.ts-cta a.ts-cta-primary:focus-visible {
+.ts-cta a.ts-cta-primary:focus-visible,
+.ts-app-card a.ts-cta-primary:hover,
+.ts-app-card a.ts-cta-primary:focus-visible {
   background: linear-gradient(96deg, var(--ts-orange-soft), var(--ts-orange));
   border-color: transparent;
 }
@@ -755,4 +761,81 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+/* The ESP32 projects flash from a browser page — no toolchain, no cable
+   wrangling, no account. That is the moment the whole build stops being
+   intimidating, so it gets the biggest button on the page, centered and alone.
+   GitHub sits under it, quiet: the wiki is read by people who want the thing
+   working, not by people who came to read C++. */
+.ts-cta--hero {
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.ts-cta--hero a.ts-cta-primary {
+  padding: 1.05rem 2.25rem;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 22px rgb(255 122 24 / 32%);
+}
+
+/* The second row: still real links, visibly not the point. */
+.ts-cta--quiet {
+  justify-content: center;
+  margin-top: 0;
+}
+
+.ts-cta--quiet a {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--sl-color-gray-2);
+  background: transparent;
+}
+
+.ts-cta--quiet a:hover,
+.ts-cta--quiet a:focus-visible {
+  color: var(--sl-color-white);
+  background: var(--ts-card-bg-hover);
+}
+
+/* A QR beside a store button: the page is read on a desktop, the app installs
+   on a phone. The white plate is deliberate — a QR needs its quiet zone and
+   its contrast, in either theme. */
+.ts-app-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.ts-app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem 1.1rem;
+  border: 1px solid var(--ts-card-border);
+  border-radius: 0.75rem;
+  background: var(--ts-card-bg);
+  flex: 1 1 13rem;
+}
+
+.ts-app-card img {
+  width: 9.5rem;
+  height: 9.5rem;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.ts-app-card strong {
+  font-size: 0.95rem;
+}
+
+.ts-app-card .ts-app-hint {
+  color: var(--sl-color-gray-3);
+  font-size: 0.8rem;
+  text-align: center;
 }

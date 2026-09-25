@@ -1,5 +1,5 @@
 ---
-sourceHash: b1c3fb203c185e88c16fc937a22989761d6cecaa3f379063073e7403bb8435b8
+sourceHash: 2d1ee57c457b28ee9b81225286da42eea243969063ebffc037dd98ebf1b175fa
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -10,8 +10,12 @@ sourcePath: docs/products/tigerpod.md
 **Le premier « lecteur CD » pour bobines de filament intelligentes.** TigerPOD
 pose un scanner de bobines sur votre bureau — et c'est vous qui l'imprimez.
 <div class="ts-cta">
-<a class="ts-cta-primary" href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958">L'imprimer — STL gratuit</a>
-<a href="https://github.com/TigerTag-Project/TigerPOD"><img src="../assets/icons/github.svg" alt="" /> Les sources — GitHub</a>
+<a class="ts-cta-primary" href="https://tigersystem.io/tigerpod">Obtenir un TigerPOD</a>
+<a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958">L'imprimer — STL gratuit</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://github.com/TigerTag-Project/TigerPOD"><img src="../assets/icons/github.svg" alt="" /> Les sources</a>
 </div>
 
 Un support imprimable en 3D, gratuit et open source, qui accueille **deux**

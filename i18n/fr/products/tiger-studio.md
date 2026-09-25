@@ -1,5 +1,5 @@
 ---
-sourceHash: 10a3e2f353bf32f4376667ae7d5adb999371e07ca71e3af3c79a80b18ba9c0e9
+sourceHash: a923fdf3d63a784edfd8b6aec2feeeb7b99bf391ac6a2acf0086a11c27614dd1
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -13,9 +13,17 @@ bobine s'ouvre, mettez un poids à jour et il se synchronise partout, jetez un
 œil à une imprimante et voyez ce qu'elle fait à l'instant même. Open source,
 sur Windows / macOS / Linux.
 
+<img src="../assets/hero-ecosystem.png" width="820" alt="Tiger Studio sur un ordinateur, à côté de l'application mobile et d'un lecteur TigerPOD — l'écosystème qui fonctionne ensemble" />
+
+*Tiger Studio sur le bureau, l'application dans la poche, un lecteur à côté —
+le même inventaire, où que vous y touchiez.*
+
 <div class="ts-cta">
-<a class="ts-cta-primary" href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager/releases/latest">Télécharger Tiger Studio</a>
-<a href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager"><img src="../assets/icons/github.svg" alt="" /> Les sources — GitHub</a>
+<a class="ts-cta-primary" href="https://tigersystem.io/download">Télécharger Tiger Studio — gratuit</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://github.com/TigerTag-Project/TigerTag-Studio-Manager"><img src="../assets/icons/github.svg" alt="" /> Les sources</a>
 </div>
 
 C'est délibérément **un laboratoire, pas la destination** — une démonstration

@@ -1,5 +1,5 @@
 ---
-sourceHash: 21ad428de59e39de825b505e5e7ddd8959d5131ae755294e54baf98dd631990a
+sourceHash: 94fa579b40151d333ae2e972a94f5858f614f9a28664bb7acfa26563d4e69b0a
 sourcePath: docs/products/tigertag-connect.md
 ---
 
@@ -13,6 +13,30 @@ contact, encode les puces tout aussi facilement, et garde toute votre
 collection dans votre poche. C'est le point d'entrée quotidien de l'écosystème
 et l'incarnation du
 [pont smartphone](../philosophy/smartphone-bridge.md).
+
+<div class="ts-app-row">
+<div class="ts-app-card">
+<img src="../assets/apps/qr-app-store.svg" alt="QR code vers la fiche App Store" />
+<strong>iPhone · iPad</strong>
+<a class="ts-cta-primary" href="https://apps.apple.com/app/id6745437963">App Store</a>
+<span class="ts-app-hint">Scannez avec l'appareil photo, ou touchez le bouton</span>
+</div>
+<div class="ts-app-card">
+<img src="../assets/apps/qr-google-play.svg" alt="QR code vers la fiche Google Play" />
+<strong>Android</strong>
+<a class="ts-cta-primary" href="https://play.google.com/store/apps/details?id=com.tigertag.connect">Google Play</a>
+<span class="ts-app-hint">Scannez avec l'appareil photo, ou touchez le bouton</span>
+</div>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://tigersystem.io/download">Tous les téléchargements sur tigersystem.io</a>
+<a href="https://testflight.apple.com/join/jVHhmK4C">Bêta TestFlight (iOS)</a>
+<a href="https://play.google.com/apps/testing/com.tigertag.connect">Bêta Google Play</a>
+</div>
+
+Gratuite, sur les deux boutiques. L'application lit une puce avec le NFC du
+téléphone lui-même — rien à acheter, aucun lecteur, aucun compte pour lire.
 
 ## Où cela se situe
 

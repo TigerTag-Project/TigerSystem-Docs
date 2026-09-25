@@ -8,6 +8,30 @@ keeps your whole collection in your pocket. It is the everyday entry point to
 the ecosystem and the embodiment of the
 [smartphone bridge](../philosophy/smartphone-bridge.md).
 
+<div class="ts-app-row">
+<div class="ts-app-card">
+<img src="../assets/apps/qr-app-store.svg" alt="QR code to the App Store listing" />
+<strong>iPhone · iPad</strong>
+<a class="ts-cta-primary" href="https://apps.apple.com/app/id6745437963">App Store</a>
+<span class="ts-app-hint">Scan with the camera, or tap the button</span>
+</div>
+<div class="ts-app-card">
+<img src="../assets/apps/qr-google-play.svg" alt="QR code to the Google Play listing" />
+<strong>Android</strong>
+<a class="ts-cta-primary" href="https://play.google.com/store/apps/details?id=com.tigertag.connect">Google Play</a>
+<span class="ts-app-hint">Scan with the camera, or tap the button</span>
+</div>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://tigersystem.io/download">All downloads on tigersystem.io</a>
+<a href="https://testflight.apple.com/join/jVHhmK4C">TestFlight beta (iOS)</a>
+<a href="https://play.google.com/apps/testing/com.tigertag.connect">Google Play beta</a>
+</div>
+
+Free, on both stores. The app reads a chip with the phone's own NFC — nothing
+to buy, no reader, no account needed to read.
+
 ## Where it sits
 
 ```mermaid

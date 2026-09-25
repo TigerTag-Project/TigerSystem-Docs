@@ -1,5 +1,5 @@
 ---
-sourceHash: d1ab8daa474f4291280062a6c2461b706fe818c53d0e37aa155d9e3f3882c222
+sourceHash: 46f8ffbb3c98c98d14b55d5050d25683b298b3d36758fde2156bb9c5de94478d
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -11,9 +11,12 @@ d'imprimante.**
 
 <img src="../assets/tigerspool.jpg" width="420" alt="Le logo du projet TigerSpool" />
 
-<div class="ts-cta">
+<div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/TigerSpool-RFID/">Installer depuis le navigateur</a>
-<a href="https://github.com/TigerTag-Project/TigerSpool-RFID"><img src="../assets/icons/github.svg" alt="" /> En construire un — GitHub</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://github.com/TigerTag-Project/TigerSpool-RFID"><img src="../assets/icons/github.svg" alt="" /> Les sources</a>
 </div>
 
 Votre imprimante tient déjà une liste d'emplacements. Votre bobine porte déjà

@@ -1,5 +1,5 @@
 ---
-sourceHash: 9e4d64588d8ed616b1339b4ca12ef51674bd7ad9cd0cb2dc1a28121dacf9c2e3
+sourceHash: dcfd1f98e794efef047aae6a14e78111ee8b126a62fb971e7d7913a851120144
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -14,7 +14,11 @@ conditions d'impression — pour que vous n'ayez plus jamais à deviner,
 elle-même.
 
 <div class="ts-cta">
-<a class="ts-cta-primary" href="https://github.com/TigerTag-Project/TigerTag-RFID-Guide"><img src="../assets/icons/github.svg" alt="" /> La spécification ouverte de la puce</a>
+<a class="ts-cta-primary" href="https://tigersystem.io/tigertag">Qu'est-ce que TigerTag — sur tigersystem.io</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://github.com/TigerTag-Project/TigerTag-RFID-Guide"><img src="../assets/icons/github.svg" alt="" /> La spécification ouverte de la puce</a>
 </div>
 
 Techniquement, c'est le cœur de l'écosystème : un standard RFID ouvert,

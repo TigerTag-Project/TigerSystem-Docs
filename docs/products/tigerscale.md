@@ -6,10 +6,14 @@
 spool on the open-source ESP32 scale and the live weight flows straight into
 your inventory — no manual entry, no shaking the spool next to your ear.
 
-<div class="ts-cta">
+<div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/Tiger-Scale-V3/">Install from your browser</a>
-<a href="https://github.com/TigerTag-Project/Tiger-Scale-V3"><img src="../assets/icons/github.svg" alt="" /> Build one — GitHub</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://tigersystem.io/tigerscale">TigerScale on tigersystem.io</a>
 <a href="https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543">Print the case</a>
+<a href="https://github.com/TigerTag-Project/Tiger-Scale-V3"><img src="../assets/icons/github.svg" alt="" /> Sources</a>
 </div>
 
 > **The chip knows what the filament *is*; the scale knows how much is

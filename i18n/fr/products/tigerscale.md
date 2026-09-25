@@ -1,5 +1,5 @@
 ---
-sourceHash: a59f6ab1ba675c4c668d00651e562b975ba38695c3e5cf27650a1fbc34867996
+sourceHash: 3cd5caa58c1a02d6112b6c7d36830f270102d4f8adc8f3a4d02eb0c85165c2ce
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -12,10 +12,14 @@ Posez une bobine sur cette balance ESP32 open source et le poids en direct
 part droit dans votre inventaire — aucune saisie manuelle, plus besoin de
 secouer la bobine près de son oreille.
 
-<div class="ts-cta">
+<div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/Tiger-Scale-V3/">Installer depuis le navigateur</a>
-<a href="https://github.com/TigerTag-Project/Tiger-Scale-V3"><img src="../assets/icons/github.svg" alt="" /> En construire une — GitHub</a>
+</div>
+
+<div class="ts-cta ts-cta--quiet">
+<a href="https://tigersystem.io/tigerscale">TigerScale sur tigersystem.io</a>
 <a href="https://makerworld.com/en/models/3161869-tigerscale-v3-best-smart-filament-scale-with-nfc#profileId-3573543">Imprimer la coque</a>
+<a href="https://github.com/TigerTag-Project/Tiger-Scale-V3"><img src="../assets/icons/github.svg" alt="" /> Les sources</a>
 </div>
 
 > **La puce sait ce que le filament *est* ; la balance sait ce qu'il en
