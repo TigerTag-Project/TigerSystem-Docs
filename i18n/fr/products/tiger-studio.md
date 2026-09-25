@@ -1,5 +1,5 @@
 ---
-sourceHash: a923fdf3d63a784edfd8b6aec2feeeb7b99bf391ac6a2acf0086a11c27614dd1
+sourceHash: 9b2a6c672e2d601fbe11882999e431d8483267caef4c132191c45643eedd78bb
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -58,7 +58,7 @@ flowchart LR
  analyseurs **AJAX-3D TD-1 et TD1s** (TD + couleur directement dans le profil de
  la bobine) et les **balances USB HID** (série DYMO M et toute balance
  conforme) — liste complète : [matériel tiers compatible](../compatibility/third-party-hardware.md).
-- **9 langues** — EN · FR · DE · ES · IT · PL · PT-BR · PT-PT · 中文.
+- **11 langues** — EN · FR · DE · ES · IT · NL · PL · PT-BR · PT-PT · RU · 中文.
 
 Le catalogue complet et toujours à jour vit dans le dépôt de l'application,
 dans [FEATURES.md](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/FEATURES.md).

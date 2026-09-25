@@ -51,7 +51,7 @@ flowchart LR
  **AJAX-3D TD-1 & TD1s** analyzers (TD + color straight into the spool's
  profile) and **USB HID scales** (DYMO M series and any compliant scale) —
  full list: [compatible third-party hardware](../compatibility/third-party-hardware.md).
-- **9 locales** — EN · FR · DE · ES · IT · PL · PT-BR · PT-PT · 中文.
+- **11 locales** — EN · FR · DE · ES · IT · NL · PL · PT-BR · PT-PT · RU · 中文.
 
 The complete, always-current catalogue lives in the app repo's
 [FEATURES.md](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/FEATURES.md).
