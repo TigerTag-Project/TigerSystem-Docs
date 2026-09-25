@@ -1,5 +1,5 @@
 ---
-sourceHash: 0acc1089efa85d09e8436526931ba1c6d9b1dd127638de99543ac74fd4994bc4
+sourceHash: e0e8a7f20774d1dedb4f06547a26c6f812d46b6b6a1be6ea6f0eb9218cbe06d7
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -86,8 +86,10 @@ dans Tiger Studio et elle apparaît à la synchronisation suivante.
 
 ## Quelles imprimantes
 
-*« N'importe quelle imprimante »* est l'objectif, pas une affirmation sur
-aujourd'hui. Ce qui est écrit et éprouvé sur matériel :
+**Les six marques intégrées à Tiger Studio sont couvertes** — écrites, et
+éprouvées sur matériel. Ce n'est pas toute imprimante du marché, et *« n'importe
+quelle imprimante »* reste l'objectif ; c'est toute marque à laquelle cet
+écosystème parle aujourd'hui :
 
 | Marque | Firmware | Transport |
 |---|---|---|
@@ -95,8 +97,8 @@ aujourd'hui. Ce qui est écrit et éprouvé sur matériel :
 | [FlashForge](../compatibility/flashforge.md) | implémenté, éprouvé | HTTP |
 | [Bambu Lab](../compatibility/bambu-lab.md) | implémenté, éprouvé | MQTT sur TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implémenté, éprouvé | Moonraker sur WebSocket |
-| [Elegoo](../compatibility/elegoo.md) | implémenté, lecture prouvée | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implémenté, lecture prouvée | MQTT sur TLS |
+| [Elegoo](../compatibility/elegoo.md) | implémenté, éprouvé | MQTT |
+| [Anycubic](../compatibility/anycubic.md) | implémenté, éprouvé | MQTT sur TLS |
 
 Les noms d'emplacements suivent ceux de l'imprimante : `Ext.` et `1A`–`1D`
 chez Creality et FlashForge, `A1`–`A4` puis `B1`–`B4` chez Bambu Lab,

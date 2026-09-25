@@ -180,6 +180,18 @@ endpoints.
  origin. This is
  the production-grade side of TigerSystem (not part of the sandbox).
 - **TigerPOD**: 3D-printable dual NFC reader/writer stand (free STL).
+- **TigerSpool**: the open-source reader box that sits beside the printers
+ (repo TigerSpool-RFID, MIT). ESP32-S3 with a 2" touchscreen and a PN532: hold
+ a spool against it, pick a slot on screen, and the filament identity is
+ WRITTEN into that slot — no app open, no keyboard, no retyping. It writes
+ slots on ALL SIX brands Tiger Studio integrates — Creality, FlashForge,
+ Bambu Lab, Snapmaker, Elegoo and Anycubic — implemented and proven on
+ hardware, each over that brand's own transport. Slot names follow the
+ printer's own (Ext. and 1A-1D on Creality and FlashForge, A1-A4 then B1-B4 on
+ Bambu Lab, E1-E4 on Snapmaker, S1-S4 on Elegoo's Canvas, one letter per ACE
+ unit on Anycubic). One box serves up to 24 printers at once. It does NOT move
+ filament: confirming a slot tells the printer what the spool IS; the spool
+ still goes in that slot by hand.
 - **TigerScale**: the open-source connected filament scale (MIT) — reads the
  spool's TigerTag, weighs, subtracts the empty-spool weight, syncs live.
  Current generation **V3** (repo Tiger-Scale-V3): ESP32-S3, 3.5" colour

@@ -77,8 +77,9 @@ the next sync.
 
 ## Which printers
 
-*"Any printer"* is the goal, not a claim about today. What is written and
-proven on hardware:
+**The six brands Tiger Studio integrates are covered** — written, and proven
+on hardware. That is not every printer on the market, and *"any printer"*
+stays the goal; it is every brand this ecosystem speaks to today:
 
 | Brand | Firmware | Transport |
 |---|---|---|
@@ -86,8 +87,8 @@ proven on hardware:
 | [FlashForge](../compatibility/flashforge.md) | implemented, proven | HTTP |
 | [Bambu Lab](../compatibility/bambu-lab.md) | implemented, proven | MQTT over TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implemented, proven | Moonraker over WebSocket |
-| [Elegoo](../compatibility/elegoo.md) | implemented, reading proven | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implemented, reading proven | MQTT over TLS |
+| [Elegoo](../compatibility/elegoo.md) | implemented, proven | MQTT |
+| [Anycubic](../compatibility/anycubic.md) | implemented, proven | MQTT over TLS |
 
 Slot names follow the printer's own: `Ext.` and `1A`–`1D` on Creality and
 FlashForge, `A1`–`A4` then `B1`–`B4` on Bambu Lab, `E1`–`E4` on Snapmaker, `S1`–`S4` on
