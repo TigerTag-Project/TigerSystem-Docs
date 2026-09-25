@@ -46,6 +46,7 @@ export const sidebar = [
     { slug: 'compatibility/snapmaker' },
     { slug: 'compatibility/klipper' },
     { slug: 'compatibility/openspool' },
+    { slug: 'compatibility/opentag3d' },
     { slug: 'compatibility/third-party-hardware' },
   ]),
 
@@ -66,6 +67,7 @@ export const sidebar = [
     { slug: 'developers/ttag-format' },
     { slug: 'developers/material-swatch' },
     { slug: 'developers/cloud-api' },
+    { slug: 'developers/web-api' },
     { slug: 'developers/integrations' },
     { slug: 'developers/repositories' },
   ]),
