@@ -15,12 +15,12 @@ that answers a question the other two cannot: *is this spool genuine?*
 
 | | TigerTag | TigerTag+ | TigerTag+ Certified |
 |---|---|---|---|
-| Print data, **on the chip** | yes | yes | yes |
-| Works fully offline | yes | yes | yes |
-| Catalogue product ID, **on the chip** | — | **yes** | yes |
-| Enrichment metadata, **cloud-side, optional** | — | **yes** | yes |
-| Origin signature, **on the chip** | — | — | **yes** |
-| Who can produce one | anyone | anyone writing a catalogue product | **a certified manufacturer only** |
+| Print data, **on the chip** | ✅ | ✅ | ✅ |
+| Works fully offline | ✅ | ✅ | ✅ |
+| Catalogue product ID, **on the chip** | — | ✅ | ✅ |
+| Enrichment metadata, **cloud-side, optional** | — | ✅ | ✅ |
+| Origin signature, **on the chip** | — | — | ✅ |
+| Who can produce one | everyone | everyone | **a certified manufacturer** |
 
 Read the left column carefully: the enrichment metadata is the one row that
 does **not** live on the chip. It is looked up from the catalogue when you

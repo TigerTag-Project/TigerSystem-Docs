@@ -25,11 +25,11 @@ neither case does it mean *certified*.
 
 | | TigerTag | TigerTag+ |
 |---|---|---|
-| Print data, **on the chip** | yes | yes |
-| Works fully offline | yes | yes |
-| Catalogue product ID, **on the chip** | — | **yes** |
-| Enrichment metadata, **cloud-side, optional** | — | **yes** |
-| Who can produce one | anyone | anyone writing a catalogue product |
+| Print data, **on the chip** | ✅ | ✅ |
+| Works fully offline | ✅ | ✅ |
+| Catalogue product ID, **on the chip** | — | ✅ |
+| Enrichment metadata, **cloud-side, optional** | — | ✅ |
+| Who can produce one | everyone | everyone |
 
 The enrichment metadata is the one row that does **not** live on the chip. It
 is looked up from the catalogue when you happen to be online, and it can

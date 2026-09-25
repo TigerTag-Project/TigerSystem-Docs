@@ -1,5 +1,5 @@
 ---
-sourceHash: c6cb331da6677b73afa365fa1cef15b1abca2c0b3929b1367d0bbaf83ab69415
+sourceHash: b55fe68c2db8107254bd70fa7e5366144cff09c1cbda805bafb31fa7ed744755
 sourcePath: docs/products/tigertag-plus-certified.md
 ---
 
@@ -22,12 +22,12 @@ bobine est-elle authentique ?*
 
 | | TigerTag | TigerTag+ | TigerTag+ Certified |
 |---|---|---|---|
-| Données d'impression, **sur la puce** | oui | oui | oui |
-| Fonctionne entièrement hors ligne | oui | oui | oui |
-| Identifiant produit du catalogue, **sur la puce** | — | **oui** | oui |
-| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | **oui** | oui |
-| Signature d'origine, **sur la puce** | — | — | **oui** |
-| Qui peut en produire un | n'importe qui | quiconque écrit un produit du catalogue | **un fabricant certifié uniquement** |
+| Données d'impression, **sur la puce** | ✅ | ✅ | ✅ |
+| Fonctionne entièrement hors ligne | ✅ | ✅ | ✅ |
+| Identifiant produit du catalogue, **sur la puce** | — | ✅ | ✅ |
+| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | ✅ | ✅ |
+| Signature d'origine, **sur la puce** | — | — | ✅ |
+| Qui peut en produire un | tout le monde | tout le monde | **un fabricant certifié** |
 
 Lisez attentivement la colonne de gauche : les métadonnées d'enrichissement
 sont la seule ligne qui ne vit **pas** sur la puce. Elles sont consultées dans

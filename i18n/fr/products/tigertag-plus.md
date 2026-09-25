@@ -1,5 +1,5 @@
 ---
-sourceHash: 80222102af65c724457e5e2d2f051a8c6cef39745ed4e9ff9106d06817f0fae9
+sourceHash: 5d2a0e2980b9807d16f8b7b59e216fc25e7a4f1f2942517b1a62d4f89a335128
 sourcePath: docs/products/tigertag-plus.md
 ---
 
@@ -32,11 +32,11 @@ catalogue*, et dans aucun des deux il ne veut dire *certifié*.
 
 | | TigerTag | TigerTag+ |
 |---|---|---|
-| Données d'impression, **sur la puce** | oui | oui |
-| Fonctionne entièrement hors ligne | oui | oui |
-| Identifiant produit du catalogue, **sur la puce** | — | **oui** |
-| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | **oui** |
-| Qui peut en produire un | n'importe qui | quiconque écrit un produit du catalogue |
+| Données d'impression, **sur la puce** | ✅ | ✅ |
+| Fonctionne entièrement hors ligne | ✅ | ✅ |
+| Identifiant produit du catalogue, **sur la puce** | — | ✅ |
+| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | ✅ |
+| Qui peut en produire un | tout le monde | tout le monde |
 
 Les métadonnées d'enrichissement sont la seule ligne qui ne vit **pas** sur la
 puce. Elles sont consultées dans le catalogue quand il se trouve que vous êtes
