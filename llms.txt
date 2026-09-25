@@ -122,7 +122,7 @@ endpoints.
 - **TigerTag+**: a TigerTag whose identity carries a PRODUCT ID FROM THE
  OFFICIAL CATALOGUE — the exact product (brand, colour, material,
  temperatures, diameter, SKU, EAN) rather than values someone typed — plus
- optional enrichment metadata held cloud-side and improvable after the chip is
+ optional enrichment metadata served by the Web API and improvable after the chip is
  written. The chip itself stays 100% offline; the catalogue id only adds a
  richer lookup when you happen to be online.
 - **TigerTag+ Certified**: a TigerTag+ that ADDITIONALLY carries a

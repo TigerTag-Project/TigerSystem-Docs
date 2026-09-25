@@ -18,7 +18,7 @@ that answers a question the other two cannot: *is this spool genuine?*
 | Print data, **on the chip** | ✅ | ✅ | ✅ |
 | Works fully offline | ✅ | ✅ | ✅ |
 | Catalogue product ID, **on the chip** | — | ✅ | ✅ |
-| Enrichment metadata, **cloud-side, optional** | — | ✅ | ✅ |
+| Enrichment metadata, **via the Web API, optional** | — | ✅ | ✅ |
 | Origin signature, **on the chip** | — | — | ✅ |
 | Who can produce one | everyone | everyone | **a certified manufacturer** |
 

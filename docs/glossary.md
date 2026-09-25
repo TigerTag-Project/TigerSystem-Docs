@@ -15,7 +15,7 @@ owns the full story.
 |---|---|
 | **TigerSystem** | The whole open ecosystem: the chip format, the reference data, the apps, the hardware and the cloud surface. See [Why TigerSystem exists](./vision/why-tigersystem.md). |
 | **TigerTag** | A standard NTAG NFC chip carrying the open 144-byte TigerTag payload — a spool's identity, readable by anything. See [TigerTag](./products/tigertag.md). |
-| **TigerTag+** | A TigerTag whose identity carries a **product ID from the official catalogue**, plus optional cloud-side enrichment metadata. The chip stays 100% offline-readable. The `+` means *identified*, not *certified*. See [TigerTag+](./products/tigertag-plus.md). |
+| **TigerTag+** | A TigerTag whose identity carries a **product ID from the official catalogue**, plus optional enrichment data served by the Web API metadata. The chip stays 100% offline-readable. The `+` means *identified*, not *certified*. See [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | A TigerTag+ that also carries a cryptographic **signature**, written by a manufacturer holding the certification and its signing tools. Verifying one is free and offline; issuing one is what certification grants. |
 | **TigerData** | The same identity with no chip at all: the protocol's data in purely digital form, no UID, promotable to a real chip at any time. See [One identity, three states](./concepts/universal-filament-identity.md). |
 | **TigerData+** | A chipless spool that carries a real product from the official catalogue — exact brand, colour, material, temperatures, diameter, SKU and EAN — rather than hand-typed values. The `+` means *identified*, not *certified*. |

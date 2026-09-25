@@ -1,5 +1,5 @@
 ---
-sourceHash: f17400dbedd9f04cb3e2d80231526dd12a2a89734af907d9dbefd6d2786bb38e
+sourceHash: fa8475a1808573839b0793d8d3b2468782c47afa5ae1855696ba0661e5b3eeef
 sourcePath: docs/glossary.md
 ---
 
@@ -20,7 +20,7 @@ renvoie vers la page qui en détient l'explication complète.
 |---|---|
 | **TigerSystem** | L'écosystème ouvert dans son ensemble : le format de puce, les données de référence, les applications, le matériel et la surface cloud. Voir [Pourquoi TigerSystem existe](./vision/why-tigersystem.md). |
 | **TigerTag** | Une puce NFC NTAG standard portant la charge utile TigerTag ouverte de 144 octets — l'identité d'une bobine, lisible par n'importe quoi. Voir [TigerTag](./products/tigertag.md). |
-| **TigerTag+** | Un TigerTag dont l'identité porte un **identifiant produit issu du catalogue officiel**, plus des métadonnées d'enrichissement facultatives côté cloud. La puce reste lisible à 100 % hors ligne. Le `+` signifie *identifié*, pas *certifié*. Voir [TigerTag+](./products/tigertag-plus.md). |
+| **TigerTag+** | Un TigerTag dont l'identité porte un **identifiant produit issu du catalogue officiel**, plus des données d'enrichissement facultatives servies par l'API Web. La puce reste lisible à 100 % hors ligne. Le `+` signifie *identifié*, pas *certifié*. Voir [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Un TigerTag+ qui porte en plus une **signature** cryptographique, écrite par un fabricant détenteur de la certification et de ses outils de signature. La vérifier est gratuit et hors ligne ; en émettre une est précisément ce que la certification accorde. |
 | **TigerData** | La même identité, sans aucune puce : les données du protocole sous forme purement numérique, sans UID, promouvable en puce réelle à tout moment. Voir [Une identité, trois états](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Une bobine sans puce qui porte un vrai produit du catalogue officiel — marque, couleur, matière, températures, diamètre, SKU et EAN exacts — plutôt que des valeurs saisies à la main. Le `+` signifie *identifié*, pas *certifié*. |

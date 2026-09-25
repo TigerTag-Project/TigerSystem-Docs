@@ -1,5 +1,5 @@
 ---
-sourceHash: 5d2a0e2980b9807d16f8b7b59e216fc25e7a4f1f2942517b1a62d4f89a335128
+sourceHash: 75a724e6c91c36887ba7a4f884cf1b89f058cb11653ea2468e071964c4627239
 sourcePath: docs/products/tigertag-plus.md
 ---
 
@@ -12,7 +12,7 @@ porte un **identifiant produit issu du catalogue officiel** — non pas des
 valeurs saisies par quelqu'un, mais le produit exact : marque, couleur,
 matériau, températures, diamètre, SKU, EAN, directement à la source. En plus de
 cela, il peut porter des **métadonnées d'enrichissement optionnelles**,
-conservées côté cloud et améliorables après l'écriture de la puce.
+servies par l'API Web et améliorables après l'écriture de la puce.
 
 La puce elle-même reste **100 % hors ligne**. Tout ce qu'il faut pour imprimer
 s'y trouve, exactement comme sur un TigerTag standard — l'identifiant de
@@ -35,7 +35,7 @@ catalogue*, et dans aucun des deux il ne veut dire *certifié*.
 | Données d'impression, **sur la puce** | ✅ | ✅ |
 | Fonctionne entièrement hors ligne | ✅ | ✅ |
 | Identifiant produit du catalogue, **sur la puce** | — | ✅ |
-| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | ✅ |
+| Métadonnées d'enrichissement, **via l'API Web, optionnel** | — | ✅ |
 | Qui peut en produire un | tout le monde | tout le monde |
 
 Les métadonnées d'enrichissement sont la seule ligne qui ne vit **pas** sur la

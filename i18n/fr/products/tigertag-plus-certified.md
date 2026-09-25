@@ -1,5 +1,5 @@
 ---
-sourceHash: b55fe68c2db8107254bd70fa7e5366144cff09c1cbda805bafb31fa7ed744755
+sourceHash: a441174f740b32338860a4b6a58babca49eed24ed8af7f05cf26e06f55cda504
 sourcePath: docs/products/tigertag-plus-certified.md
 ---
 
@@ -25,7 +25,7 @@ bobine est-elle authentique ?*
 | Données d'impression, **sur la puce** | ✅ | ✅ | ✅ |
 | Fonctionne entièrement hors ligne | ✅ | ✅ | ✅ |
 | Identifiant produit du catalogue, **sur la puce** | — | ✅ | ✅ |
-| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | ✅ | ✅ |
+| Métadonnées d'enrichissement, **via l'API Web, optionnel** | — | ✅ | ✅ |
 | Signature d'origine, **sur la puce** | — | — | ✅ |
 | Qui peut en produire un | tout le monde | tout le monde | **un fabricant certifié** |
 

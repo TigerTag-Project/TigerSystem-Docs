@@ -6,7 +6,7 @@
 **product ID from the official catalogue** — not values someone typed, but the
 exact product: brand, colour, material, temperatures, diameter, SKU, EAN,
 straight from the source. On top of that it can carry **optional enrichment
-metadata**, held cloud-side and improvable after the chip is written.
+metadata**, served by the Web API and improvable after the chip is written.
 
 The chip itself stays **100 % offline**. Everything needed to print is on it,
 exactly as on a standard TigerTag — the catalogue ID adds the ability to look
@@ -28,7 +28,7 @@ neither case does it mean *certified*.
 | Print data, **on the chip** | ✅ | ✅ |
 | Works fully offline | ✅ | ✅ |
 | Catalogue product ID, **on the chip** | — | ✅ |
-| Enrichment metadata, **cloud-side, optional** | — | ✅ |
+| Enrichment metadata, **via the Web API, optional** | — | ✅ |
 | Who can produce one | everyone | everyone |
 
 The enrichment metadata is the one row that does **not** live on the chip. It
