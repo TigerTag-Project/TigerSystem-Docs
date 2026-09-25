@@ -1,5 +1,5 @@
 ---
-sourceHash: 3826a2ab6416bfd436004fa6a7ad6ae525e40ce398a1f355eaf1befb8faadc95
+sourceHash: 2685d64b4f1e988e9dd0b2d7d0911e187af40c64f176864d372e6398a4a1def8
 sourcePath: docs/architecture/data-flow.md
 ---
 
@@ -55,7 +55,7 @@ flowchart LR
 - Vous tranchez et lancez vos impressions exactement comme avant, avec
  n'importe quel trancheur.
 - Tiger Studio indique à l'imprimante **quel filament se trouve dans quel
- emplacement** (AMS / CFS / Canvas / ACE / station matière), pour que
+ emplacement** (AMS / CFS / Canvas / ACE / IFS), pour que
  l'information côté machine corresponde à la réalité.
 - Quelle que soit l'origine de l'impression, le travail apparaît en direct
  dans Tiger Studio — progression, températures, heure de fin, caméra.

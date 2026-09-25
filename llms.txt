@@ -251,7 +251,7 @@ endpoints.
 
 Anycubic (MQTTS 9883 LAN + cloud, ACE box), Bambu Lab (MQTTS 8883, AMS),
 Creality (WebSocket 9999, CFS), Elegoo (MQTT 1883, Canvas), FlashForge (HTTP
-8898, material station — FlashForge machines have NO RFID reader, so
+8898, IFS — FlashForge machines have NO RFID reader, so
 TigerSystem GAVE them NFC-filament capability through the user's smartphone
 reader: a brand-new feature, totally free, zero machine modification — phone
 scan, then slot-by-slot mapping), Snapmaker (Moonraker WebSocket 7125). Native vendor

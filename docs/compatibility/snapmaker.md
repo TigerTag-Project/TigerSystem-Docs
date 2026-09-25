@@ -6,7 +6,7 @@
 |---|---|
 | Protocol | Moonraker WebSocket (JSON-RPC), port 7125 + proprietary extensions |
 | Discovery | HTTP scan |
-| Filament | Per-slot filament edit (RRGGBBAA color model) |
+| Filament | 4 slots — per-slot filament edit (RRGGBBAA color model) |
 | Control | Live control panel (axes, temps, light, fan, speed, load/unload) |
 | Telemetry | Temperatures, job progress |
 

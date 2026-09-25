@@ -1,5 +1,5 @@
 ---
-sourceHash: bf1c1a183cc7955526ed0bdf71ccf76bd4e35ddeca31934a7cb27a594083221e
+sourceHash: c38d6701720c57760a97d6a114ace38887fbdbdf6c6fb0104eda85ffe81895ed
 sourcePath: docs/compatibility/flashforge.md
 ---
 
@@ -11,7 +11,7 @@ sourcePath: docs/compatibility/flashforge.md
 |---|---|
 | Protocole | Interrogation HTTP (port 8898) + M-codes TCP (port 8899) |
 | Découverte | Multicast UDP (225.0.0.9:19000) |
-| Filament | Prise en charge de la station matière (matlStation) |
+| Filament | IFS — le système multi-filament de FlashForge |
 | Caméra | Flux MJPEG |
 | Télémétrie | Températures, avancement de la tâche |
 
@@ -33,8 +33,9 @@ un firmware qui fait tourner **le Cloud FlashForge et le LAN en même temps**.
 C'est plus important qu'il n'y paraît. Le firmware d'origine oblige à choisir : Cloud
 activé, plus aucun outil local n'atteint l'imprimante. Ce choix était la seule chose
 qui séparait un possesseur de FlashForge de cet écosystème — et il n'existe plus. C'est
-un **firmware FlashForge officiel**, ni un fork communautaire ni un correctif, publié
-ici avec leur accord.
+un **firmware FlashForge officiel**, ni un fork communautaire ni un correctif —
+développé avec TigerTag, pour cette intégration, et publié ici avec leur
+accord.
 
 <div class="ts-model-picker">
 <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="../assets/flashforge-connection-tutorial/models/creator-5.png" alt="FlashForge Creator 5" /><span>Creator 5</span></a>
@@ -87,7 +88,7 @@ est une décision rare. Chaque maker qui en possède une en bénéficie.
  numéro de série et son Printer ID.
 2. **Scannez une bobine** — avec votre téléphone (ou un lecteur de bureau) ; elle arrive
  dans votre inventaire.
-3. **Affectez-la à un emplacement de la station matière** — **un scan, un clic** depuis
+3. **Affectez-la à un emplacement IFS** — **un scan, un clic** depuis
  l'écran d'affectation de Tiger Studio. L'imprimante finit par connaître son filament
  aussi précisément qu'une machine à RFID intégrée, sur n'importe quel modèle FlashForge,
  sans changement matériel et sans rien ajouter à la machine.

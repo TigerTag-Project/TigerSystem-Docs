@@ -49,7 +49,7 @@ flowchart LR
 
 - You slice and launch jobs exactly as before, with any slicer.
 - Tiger Studio tells the printer **which filament sits in which slot**
- (AMS / CFS / Canvas / ACE / material station), so the machine-side
+ (AMS / CFS / Canvas / ACE / IFS), so the machine-side
  information matches reality.
 - Whatever started the print, the job shows up live in Tiger Studio —
  progress, temperatures, finish time, camera.

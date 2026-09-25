@@ -1,5 +1,5 @@
 ---
-sourceHash: 2009d6712ea55647dfb91e01e5a8fa0892ed02c64b7489c20abbdfb809dcf2f4
+sourceHash: 0cf5803b119a8f2475f23c72ac6da1deaa0cc59cefa6ef5686f60680b8737f0c
 sourcePath: docs/compatibility/elegoo.md
 ---
 
@@ -11,7 +11,7 @@ sourcePath: docs/compatibility/elegoo.md
 |---|---|
 | Protocole | MQTT, port 1883 |
 | Découverte | Diffusion UDP, port 52700 |
-| Filament | 4 emplacements (Canvas / bac) |
+| Filament | 4 emplacements (Canvas) |
 | Contrôle | Panneau de contrôle en direct : prise d'origine et déplacement manuel, températures, lumière, ventilateur, mode de vitesse, chargement/déchargement |
 | Télémétrie | Températures, avancement du travail |
 
@@ -31,7 +31,7 @@ Spécification de décodage en lecture seule :
 2. **Scannez une bobine** — téléphone ou lecteur de bureau ; elle atterrit dans
  votre inventaire.
 3. **Affectez-la à un emplacement** — Tiger Studio associe les bobines de
- l'inventaire aux quatre emplacements Canvas/bac.
+ l'inventaire aux quatre emplacements Canvas.
 4. **Suivi et contrôle** — au-delà de la télémétrie et de l'avancement du
  travail, Elegoo bénéficie d'un **panneau de contrôle complet** : prise
  d'origine et déplacement manuel des axes, consignes de buse et de plateau,
@@ -53,6 +53,18 @@ L'éditeur intégré à l'application peut **réécrire une puce dans le format
 attendu par les imprimantes Elegoo** — une puce TigerTag peut donc même devenir
 un tag Elegoo natif si c'est ce dont votre organisation a besoin. Votre puce,
 votre choix.
+
+## Lire les TigerTag sur la machine elle-même — en préparation
+
+Un firmware personnalisé est **en préparation** pour qu'une imprimante Elegoo
+lise les TigerTag **directement**, sur la machine, selon le même principe que
+la [Snapmaker U1](./snapmaker.md).
+
+Il n'est pas encore disponible, et il n'y a pas de date. En attendant, une
+Elegoo lit le filament identifié par TigerTag comme le décrit le déroulé
+ci-dessus — par le téléphone, Tiger Studio ou un
+[TigerSpool](../products/tigerspool.md) posé à côté de la machine, sans rien
+changer sur l'imprimante.
 
 ## Limites
 

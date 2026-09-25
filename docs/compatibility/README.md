@@ -19,9 +19,9 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **Live** — MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, UID-derived keys | Spec documented |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **Live** — WebSocket + CFS | Mifare Classic 1K | AES-128-ECB sector key | Spec documented |
 | <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas | Mifare Ultralight | Magic bytes only | Spec documented |
-| <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** — HTTP + matlStation | — (machines have no RFID reader) | — | TigerTag adds NFC to it, zero cost |
+| <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** — HTTP + IFS | — (machines have no RFID reader) | — | TigerTag adds NFC to it, zero cost |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Live** — MQTTS LAN + cloud, ACE | Mifare Ultralight | None | Spec documented |
-| <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** — Moonraker WebSocket | Mifare Classic 1K | HKDF + RSA-2048 signature | Spec documented |
+| <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** — Moonraker WebSocket + 4 slots | Mifare Classic 1K | HKDF + RSA-2048 signature | Spec documented |
 | [Klipper](./klipper.md) | Not yet (groundwork exists) | n/a | n/a | n/a |
 | [OpenSpool](./openspool.md) | n/a (tag standard, not a printer) | NFC Type 2, NDEF JSON | None — open standard | Spec documented |
 | Qidi | Not integrated | Mifare Classic 1K | Default key | [Spec documented](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |

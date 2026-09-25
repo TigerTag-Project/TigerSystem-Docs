@@ -1,5 +1,5 @@
 ---
-sourceHash: 2bc5a8883a5ca5ccda84a2da990fcf03c98160c8b15b3313c22da46ace8a9797
+sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -24,9 +24,9 @@ Comment TigerSystem fonctionne avec chaque écosystème d'imprimante. Deux axes 
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **Actif** — MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, clés dérivées de l'UID | Spécification documentée |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **Actif** — WebSocket + CFS | Mifare Classic 1K | Clé de secteur AES-128-ECB | Spécification documentée |
 | <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Actif** — MQTT + Canvas | Mifare Ultralight | Magic bytes uniquement | Spécification documentée |
-| <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Actif** — HTTP + matlStation | — (les machines n'ont pas de lecteur RFID) | — | TigerTag y ajoute le NFC, à coût nul |
+| <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Actif** — HTTP + IFS | — (les machines n'ont pas de lecteur RFID) | — | TigerTag y ajoute le NFC, à coût nul |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Actif** — MQTTS LAN + cloud, ACE | Mifare Ultralight | Aucun | Spécification documentée |
-| <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Actif** — WebSocket Moonraker | Mifare Classic 1K | HKDF + signature RSA-2048 | Spécification documentée |
+| <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Actif** — WebSocket Moonraker + 4 emplacements | Mifare Classic 1K | HKDF + signature RSA-2048 | Spécification documentée |
 | [Klipper](./klipper.md) | Pas encore (les bases existent) | n/a | n/a | n/a |
 | [OpenSpool](./openspool.md) | n/a (standard de tag, pas une imprimante) | NFC Type 2, JSON NDEF | Aucun — standard ouvert | Spécification documentée |
 | Qidi | Non intégré | Mifare Classic 1K | Clé par défaut | [Spécification documentée](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |

@@ -86,11 +86,13 @@ proven on hardware:
 | [FlashForge](../compatibility/flashforge.md) | implemented, proven | HTTP |
 | [Bambu Lab](../compatibility/bambu-lab.md) | implemented, proven | MQTT over TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implemented, proven | Moonraker over WebSocket |
-| [Elegoo](../compatibility/elegoo.md) | not implemented | protocol documented, working in Tiger Studio |
-| [Anycubic](../compatibility/anycubic.md) | not implemented | protocol documented, working in Tiger Studio |
+| [Elegoo](../compatibility/elegoo.md) | implemented, reading proven | MQTT |
+| [Anycubic](../compatibility/anycubic.md) | implemented, reading proven | MQTT over TLS |
 
 Slot names follow the printer's own: `Ext.` and `1A`–`1D` on Creality and
-FlashForge, `A1`–`A4` then `B1`–`B4` on Bambu Lab, `E1`–`E4` on Snapmaker.
+FlashForge, `A1`–`A4` then `B1`–`B4` on Bambu Lab, `E1`–`E4` on Snapmaker, `S1`–`S4` on
+Elegoo's Canvas, and one letter per ACE unit on Anycubic — `A1`, `A2`… then
+`B1`… for a second box.
 
 Check the [per-brand status](https://github.com/TigerTag-Project/TigerSpool-RFID/blob/main/docs/PRINTER-COMPATIBILITY.md)
 before buying parts for a specific machine.
@@ -151,8 +153,6 @@ Written down rather than discovered:
  same board, same reader, same four wires, same USB-C entry, so that one firmware
  image runs on every model and anyone can contribute a shell without touching
  code.
-- **No Elegoo or Anycubic backend.** Both protocols work in Tiger Studio; the
- firmware side is not written.
 - **The firmware is not signed.** Its update connection is verified against the
  root certificate store, so the box knows who it is talking to — but not who
  produced the image.

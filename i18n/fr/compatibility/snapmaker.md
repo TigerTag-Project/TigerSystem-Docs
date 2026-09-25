@@ -1,5 +1,5 @@
 ---
-sourceHash: 8fb2a106b269ff558a5c6a603c9d15dfec6e4b792dc26c4ff3c3a68a6625575a
+sourceHash: 23482730879aeb7e105433716fcc62bb23c91b08ae79d6be642c66d266f3312b
 sourcePath: docs/compatibility/snapmaker.md
 ---
 
@@ -11,7 +11,7 @@ sourcePath: docs/compatibility/snapmaker.md
 |---|---|
 | Protocole | WebSocket Moonraker (JSON-RPC), port 7125 + extensions propriétaires |
 | Découverte | Scan HTTP |
-| Filament | Édition du filament par emplacement (modèle de couleur RRGGBBAA) |
+| Filament | 4 emplacements — édition du filament par emplacement (modèle de couleur RRGGBBAA) |
 | Contrôle | Panneau de contrôle en direct (axes, températures, lumière, ventilateur, vitesse, chargement/déchargement) |
 | Télémétrie | Températures, progression du travail |
 

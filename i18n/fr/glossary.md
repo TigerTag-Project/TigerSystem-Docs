@@ -1,5 +1,5 @@
 ---
-sourceHash: 79d722d61b9194c68328dc124201ca880a743f0e74dbffff8db041cba93d35c5
+sourceHash: f17400dbedd9f04cb3e2d80231526dd12a2a89734af907d9dbefd6d2786bb38e
 sourcePath: docs/glossary.md
 ---
 
@@ -70,7 +70,7 @@ renvoie vers la page qui en détient l'explication complète.
 | **CFS** | Le Filament System de Creality — son module multi-matières. |
 | **ACE** | Le module multi-matières d'Anycubic. |
 | **Canvas** | Le module multi-matières d'Elegoo. |
-| **matlStation** | La station matière de FlashForge. |
+| **IFS** | Le système multi-filament de FlashForge — le champ de son protocole reste `matlStation`. |
 | **MMU** | Multi-Material Unit — le terme générique désignant l'accessoire qui alimente une imprimante en plusieurs filaments (ERCF, MMU2, Box Turtle… dans le monde Klipper). Voir [Klipper](./compatibility/klipper.md). |
 | **Klipper / Moonraker** | Le firmware d'imprimante ouvert et son API — le WebSocket de Moonraker est le transport qu'utilise déjà la liaison Snapmaker, et le prochain candidat naturel pour les machines Klipper. Voir [Klipper](./compatibility/klipper.md). |
 | **HID Scale** | Le protocole USB standard des balances (série DYMO M et compatibles), lu nativement par Tiger Studio comme alternative tierce à une TigerScale. |

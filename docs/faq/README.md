@@ -179,7 +179,7 @@ before. See [where the slicer fits](../architecture/data-flow.md).
 **Then what does TigerSystem add to printing?**
 Two things. First, the machine-side filament info matches reality: Tiger
 Studio pushes each spool's data to the printer's slots (AMS, CFS, Canvas, ACE,
-material station). Second, live monitoring: whatever launched the print, the
+IFS). Second, live monitoring: whatever launched the print, the
 job shows up in Tiger Studio with progress, temperatures, a wall-clock
 "ends at" time and the camera — across your whole fleet, all brands mixed.
 

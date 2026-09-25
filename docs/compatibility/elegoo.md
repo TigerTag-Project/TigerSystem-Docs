@@ -6,7 +6,7 @@
 |---|---|
 | Protocol | MQTT, port 1883 |
 | Discovery | UDP broadcast, port 52700 |
-| Filament | 4 slots (Canvas / tray) |
+| Filament | 4 slots (Canvas) |
 | Control | Live control panel: home/jog, temperatures, light, fan, speed mode, load/unload |
 | Telemetry | Temperatures, job progress |
 
@@ -23,7 +23,7 @@ Elegoo spool tags are **Mifare Ultralight** protected only by **magic bytes**
  [step-by-step](#switch-to-lan-mode).
 2. **Scan a spool** — phone or desktop reader; it lands in your inventory.
 3. **Assign it to a slot** — Tiger Studio maps inventory spools to the four
- Canvas/tray slots.
+ Canvas slots.
 4. **Live & control** — beyond telemetry and job progress, Elegoo gets a
  **full control panel**: home/jog the axes, set nozzle & bed targets,
  toggle the light, drive the fan, pick the speed mode, load/unload
@@ -43,6 +43,17 @@ on-screen setup.
 The app's built-in editor can **rewrite a chip in the format Elegoo printers
 expect** — so a TigerTag chip can even become a native Elegoo tag if that's
 what your workflow needs. Your chip, your choice.
+
+## Reading TigerTag on the machine itself — in preparation
+
+A custom firmware is **in preparation** that would let an Elegoo printer read
+TigerTags **directly**, on the machine, on the same principle as the
+[Snapmaker U1](./snapmaker.md).
+
+It is not available yet, and there is no date. Until it lands, an Elegoo reads
+TigerTag-identified filament the way the workflow above describes — through the
+phone, Tiger Studio or a [TigerSpool](../products/tigerspool.md) beside the
+machine, with nothing changed on the printer.
 
 ## Limitations
 

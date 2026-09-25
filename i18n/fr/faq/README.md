@@ -1,5 +1,5 @@
 ---
-sourceHash: d0d435defd8e06393975586e5768f9c42e058473d7d8b661f44550d9d16e7875
+sourceHash: 554971d7b57e8c0f734ce5a596683f16cde97aacc20c36a0ece437a31e993cd2
 sourcePath: docs/faq/README.md
 ---
 
@@ -206,7 +206,7 @@ lancez vos travaux exactement comme avant. Voir
 **Alors qu'est-ce que TigerSystem apporte à l'impression ?**
 Deux choses. D'abord, les informations filament côté machine correspondent à la
 réalité : Tiger Studio pousse les données de chaque bobine vers les
-emplacements de l'imprimante (AMS, CFS, Canvas, ACE, station matière). Ensuite,
+emplacements de l'imprimante (AMS, CFS, Canvas, ACE, IFS). Ensuite,
 le suivi en direct : quel que soit ce qui a lancé l'impression, le travail
 apparaît dans Tiger Studio avec l'avancement, les températures, une heure de
 fin réelle et la caméra — sur l'ensemble de votre parc, toutes marques

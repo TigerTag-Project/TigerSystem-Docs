@@ -1,5 +1,5 @@
 ---
-sourceHash: 46f8ffbb3c98c98d14b55d5050d25683b298b3d36758fde2156bb9c5de94478d
+sourceHash: 0acc1089efa85d09e8436526931ba1c6d9b1dd127638de99543ac74fd4994bc4
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -95,12 +95,13 @@ aujourd'hui. Ce qui est écrit et éprouvé sur matériel :
 | [FlashForge](../compatibility/flashforge.md) | implémenté, éprouvé | HTTP |
 | [Bambu Lab](../compatibility/bambu-lab.md) | implémenté, éprouvé | MQTT sur TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implémenté, éprouvé | Moonraker sur WebSocket |
-| [Elegoo](../compatibility/elegoo.md) | non implémenté | protocole documenté, fonctionnel dans Tiger Studio |
-| [Anycubic](../compatibility/anycubic.md) | non implémenté | protocole documenté, fonctionnel dans Tiger Studio |
+| [Elegoo](../compatibility/elegoo.md) | implémenté, lecture prouvée | MQTT |
+| [Anycubic](../compatibility/anycubic.md) | implémenté, lecture prouvée | MQTT sur TLS |
 
 Les noms d'emplacements suivent ceux de l'imprimante : `Ext.` et `1A`–`1D`
 chez Creality et FlashForge, `A1`–`A4` puis `B1`–`B4` chez Bambu Lab,
-`E1`–`E4` chez Snapmaker.
+`E1`–`E4` chez Snapmaker, `S1`–`S4` sur le Canvas d'Elegoo, et une lettre par
+unité ACE chez Anycubic — `A1`, `A2`… puis `B1`… pour un second boîtier.
 
 Vérifiez l'[état marque par marque](https://github.com/TigerTag-Project/TigerSpool-RFID/blob/main/docs/PRINTER-COMPATIBILITY.md)
 avant d'acheter des pièces pour une machine précise.
@@ -166,8 +167,6 @@ Liste complète des pièces, schéma de câblage et procédure de mise en route 
  gouverne, elle, l'est — même carte, même lecteur, mêmes quatre fils, même
  entrée USB-C, afin qu'un seul firmware tourne sur tous les modèles et que
  n'importe qui puisse proposer une coque sans toucher au code.
-- **Pas de backend Elegoo ni Anycubic.** Les deux protocoles fonctionnent dans
- Tiger Studio ; la partie firmware n'est pas écrite.
 - **Le firmware n'est pas signé.** Sa connexion de mise à jour est vérifiée
  contre le magasin de certificats racines, donc le boîtier sait à qui il
  parle — mais pas qui a produit l'image.

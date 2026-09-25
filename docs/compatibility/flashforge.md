@@ -6,7 +6,7 @@
 |---|---|
 | Protocol | HTTP polling (port 8898) + TCP M-codes (port 8899) |
 | Discovery | UDP multicast (225.0.0.9:19000) |
-| Filament | Material station (matlStation) support |
+| Filament | IFS — FlashForge's multi-filament system |
 | Camera | MJPEG stream |
 | Telemetry | Temperatures, job progress |
 
@@ -28,7 +28,8 @@ That matters more than it sounds. Stock firmware makes you pick one: turn Cloud
 on and local tools can no longer reach the printer. That choice was the only
 thing standing between a FlashForge owner and this ecosystem — and it is now
 gone. It is an **official FlashForge firmware**, not a community fork and not a
-patch, published here with their agreement.
+patch — built with TigerTag, for this integration, and published here with
+their agreement.
 
 <div class="ts-model-picker">
 <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="../assets/flashforge-connection-tutorial/models/creator-5.png" alt="FlashForge Creator 5" /><span>Creator 5</span></a>
@@ -79,7 +80,7 @@ decision. Every maker who owns one benefits from it.
  number and Printer ID.
 2. **Scan a spool** — with your phone (or a desktop reader); it lands in
  your inventory.
-3. **Assign it to a material-station slot** — **one scan, one click** from
+3. **Assign it to an IFS slot** — **one scan, one click** from
  Tiger Studio's mapping. The printer ends up knowing its filament as
  precisely as a machine with built-in RFID, on any FlashForge model, with no
  hardware change and nothing added to the machine.
