@@ -1,5 +1,5 @@
 ---
-sourceHash: f576d9fa4d6c06146bb918a28105d8ac2b894072bd92b90101cdc55c8ae57c5c
+sourceHash: 80222102af65c724457e5e2d2f051a8c6cef39745ed4e9ff9106d06817f0fae9
 sourcePath: docs/products/tigertag-plus.md
 ---
 
@@ -28,42 +28,29 @@ catalogue*, et dans aucun des deux il ne veut dire *certifié*.
 > **Note de nommage :** anciennement vendu sous le nom de **« TigerTag Pro »** —
 > le nom est désormais **TigerTag+**.
 
-## TigerTag+ Certified — la variante signée
+## Ce que le `+` ajoute
 
-Un TigerTag+ qui porte en plus une **signature cryptographique** est un
-**TigerTag+ Certified**. La signature est écrite par un fabricant titulaire de
-la [certification TigerTag+](../developers/README.md), à qui les outils de
-signature sont remis dans ce cadre ; TigerTag détient la clé privée.
+| | TigerTag | TigerTag+ |
+|---|---|---|
+| Données d'impression, **sur la puce** | oui | oui |
+| Fonctionne entièrement hors ligne | oui | oui |
+| Identifiant produit du catalogue, **sur la puce** | — | **oui** |
+| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | **oui** |
+| Qui peut en produire un | n'importe qui | quiconque écrit un produit du catalogue |
 
-| | TigerTag | TigerTag+ | TigerTag+ Certified |
-|---|---|---|---|
-| Données d'impression, **sur la puce** | oui | oui | oui |
-| Fonctionne entièrement hors ligne | oui | oui | oui |
-| Identifiant produit du catalogue, **sur la puce** | — | **oui** | oui |
-| Métadonnées d'enrichissement, **côté cloud, optionnel** | — | **oui** | oui |
-| Signature d'origine, **sur la puce** | — | — | **oui** |
-| Qui peut en produire un | n'importe qui | quiconque écrit un produit du catalogue | **un fabricant certifié uniquement** |
+Les métadonnées d'enrichissement sont la seule ligne qui ne vit **pas** sur la
+puce. Elles sont consultées dans le catalogue quand il se trouve que vous êtes
+en ligne, et elles peuvent s'améliorer après l'écriture de la puce — ce qui est
+précisément pourquoi elles ne peuvent jamais être quelque chose dont la puce a
+besoin. Tout ce dont l'imprimante a besoin est sur la puce, et c'est ce qui
+garde chaque palier 100 % hors ligne.
 
-Lisez attentivement la colonne de gauche : les métadonnées d'enrichissement
-sont la seule ligne qui ne vit **pas** sur la puce. Elles sont consultées dans
-le catalogue quand il se trouve que vous êtes en ligne, et elles peuvent
-s'améliorer après l'écriture de la puce — ce qui est précisément pourquoi elles
-ne peuvent jamais être quelque chose dont la puce a besoin. Tout ce dont
-l'imprimante a besoin figure dans les lignes marquées *sur la puce*, et c'est
-ce qui garde les trois paliers 100 % hors ligne.
+## La variante signée
 
-**Vérifier** une signature est gratuit, hors ligne et sans restriction — les
-clés publiques sont publiées, et n'importe quel lecteur peut en vérifier une
-sans compte ni réseau. **En émettre** une, voilà ce qu'accorde la
-certification. Le message signé couvre délibérément l'**UID propre** de la
-puce : une charge signée recopiée sur une autre puce ne lui correspond plus, et
-une étiquette clonée échoue à la vérification, sur le téléphone même du client.
-C'est la même propriété qui fait que les deux puces d'une bobine portent deux
-signatures *différentes* ([comment les deux puces sont liées](../concepts/tigertag-chip.md)).
-
-La disposition au niveau de l'octet — identifiants de type de puce, zone de
-signature de 64 octets aux pages `0x18`–`0x27` — est spécifiée dans
-[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide).
+Un TigerTag+ qui porte en plus une signature cryptographique est un
+**[TigerTag+ Certified](./tigertag-plus-certified.md)** — le palier capable de
+prouver l'origine d'une bobine, et le seul réservé aux fabricants certifiés.
+Vérifier une signature reste gratuit et hors ligne pour tout le monde.
 
 ## Où cela se situe
 
@@ -110,6 +97,6 @@ TigerTag+.
 
 ---
 
-**◀ Précédent :** [TigerTag](./tigertag.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Tiger NFC Connect](./tigertag-connect.md)
+**◀ Précédent :** [TigerTag](./tigertag.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [TigerTag+ Certified](./tigertag-plus-certified.md)
 
 **Voir aussi :** [Identité universelle du filament](../concepts/universal-filament-identity.md), [La puce TigerTag](../concepts/tigertag-chip.md), [Documentation développeur](../developers/README.md)

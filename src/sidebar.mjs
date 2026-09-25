@@ -26,6 +26,7 @@ export const sidebar = [
     { slug: 'products', label: 'All products', translations: { fr: 'Tous les produits' } },
     { slug: 'products/tigertag' },
     { slug: 'products/tigertag-plus' },
+    { slug: 'products/tigertag-plus-certified' },
     { slug: 'products/tigertag-connect' },
     { slug: 'products/tiger-studio' },
     { slug: 'products/tigerhub' },

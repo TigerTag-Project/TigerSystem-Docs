@@ -116,15 +116,29 @@ endpoints.
  life: two reusable NTAG chips per kilo printed.
 - Payload detail: a reserved 32-byte area ends the payload — free for
  community add-on functions on a standard TigerTag; carries the origin
- signature on a TigerTag+. Naming history: standard chips were formerly
- sold as "TigerTag Maker" and signed chips as "TigerTag Pro" — those names
- are retired; today it is simply TigerTag and TigerTag+.
-- **TigerTag+**: a TigerTag whose content has been backed up in the owner's
- account (keyed by chip UID). Backup is created by scanning in Tiger Studio
- with a TigerPOD/ACR122U reader (mobile support planned). Restore rewrites
- the ORIGINAL chip (same UID only) back to its factory state, factory
- authentication included — a safeguard, not a cloning mechanism. Also a
- sandbox concept demonstrating chip backup/restore.
+ signature on a TigerTag+ Certified. Naming history: standard chips were
+ formerly sold as "TigerTag Maker" and signed chips as "TigerTag Pro" — those
+ names are retired; today it is TigerTag, TigerTag+ and TigerTag+ Certified.
+- **TigerTag+**: a TigerTag whose identity carries a PRODUCT ID FROM THE
+ OFFICIAL CATALOGUE — the exact product (brand, colour, material,
+ temperatures, diameter, SKU, EAN) rather than values someone typed — plus
+ optional enrichment metadata held cloud-side and improvable after the chip is
+ written. The chip itself stays 100% offline; the catalogue id only adds a
+ richer lookup when you happen to be online.
+- **TigerTag+ Certified**: a TigerTag+ that ADDITIONALLY carries a
+ cryptographic signature, written by a manufacturer holding TigerTag+
+ certification (TigerTag holds the private key). The only level not open to
+ everyone, and the only one that answers "is this spool genuine?". VERIFYING a
+ signature is free, offline and unrestricted — the public keys are published;
+ ISSUING one is what certification grants. The signed message covers the
+ chip's own UID, so a signed payload copied onto another chip fails
+ verification on the customer's own phone.
+- **Chip backup/restore — NOT what the + means**: Tiger Studio can back up a
+ chip's exact content in the owner's account, keyed by chip UID, and later
+ rewrite the ORIGINAL chip (same UID only) back to that state, signature
+ included. It applies to ANY chip you can scan, and having a backup does NOT
+ make a chip a TigerTag+. A safeguard, never a cloning mechanism. Requires
+ Tiger Studio with a TigerPOD/ACR122U reader; mobile support planned.
 - **Tiger NFC Connect**: the iOS/Android mobile app (NFC scan, chip encoding,
  catalogue browsing). Released on the App Store and Google Play (v1.0.2),
  public betas via TestFlight / Android open beta; downloads at

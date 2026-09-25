@@ -1,5 +1,5 @@
 ---
-sourceHash: 94fa579b40151d333ae2e972a94f5858f614f9a28664bb7acfa26563d4e69b0a
+sourceHash: 3da48e740e0e62472387887f8e83c3e77deadaa57be744842e4eecabd8df8fbc
 sourcePath: docs/products/tigertag-connect.md
 ---
 
@@ -105,6 +105,6 @@ l'autorisent.
 
 ---
 
-**◀ Précédent :** [TigerTag+](./tigertag-plus.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Tiger Studio](./tiger-studio.md)
+**◀ Précédent :** [TigerTag+ Certified](./tigertag-plus-certified.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Tiger Studio](./tiger-studio.md)
 
 **Voir aussi :** [Pont smartphone](../philosophy/smartphone-bridge.md), [Inventaire et synchronisation cloud](../concepts/inventory-and-cloud-sync.md)

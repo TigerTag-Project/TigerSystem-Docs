@@ -21,40 +21,28 @@ neither case does it mean *certified*.
 > **Naming note:** formerly sold as **"TigerTag Pro"** — the name is now
 > **TigerTag+**.
 
-## TigerTag+ Certified — the signed variant
+## What the `+` adds
 
-A TigerTag+ that additionally carries a **cryptographic signature** is a
-**TigerTag+ Certified**. The signature is written by a manufacturer holding
-[TigerTag+ certification](../developers/README.md), who is given the signing
-tools as part of it; TigerTag holds the private key.
+| | TigerTag | TigerTag+ |
+|---|---|---|
+| Print data, **on the chip** | yes | yes |
+| Works fully offline | yes | yes |
+| Catalogue product ID, **on the chip** | — | **yes** |
+| Enrichment metadata, **cloud-side, optional** | — | **yes** |
+| Who can produce one | anyone | anyone writing a catalogue product |
 
-| | TigerTag | TigerTag+ | TigerTag+ Certified |
-|---|---|---|---|
-| Print data, **on the chip** | yes | yes | yes |
-| Works fully offline | yes | yes | yes |
-| Catalogue product ID, **on the chip** | — | **yes** | yes |
-| Enrichment metadata, **cloud-side, optional** | — | **yes** | yes |
-| Origin signature, **on the chip** | — | — | **yes** |
-| Who can produce one | anyone | anyone writing a catalogue product | **a certified manufacturer only** |
+The enrichment metadata is the one row that does **not** live on the chip. It
+is looked up from the catalogue when you happen to be online, and it can
+improve after the chip is written — which is precisely why it can never be
+something the chip needs. Everything the printer requires is on the chip, which
+is what keeps every level 100 % offline.
 
-Read the left column carefully: the enrichment metadata is the one row that
-does **not** live on the chip. It is looked up from the catalogue when you
-happen to be online, and it can improve after the chip is written — which is
-precisely why it can never be something the chip needs. Everything the printer
-requires is in the rows marked *on the chip*, which is what keeps all three
-tiers 100 % offline.
+## The signed variant
 
-**Verifying** a signature is free, offline and unrestricted — the public keys
-are published, and any reader can check one without an account or a network.
-**Issuing** one is what certification grants. The signed message deliberately
-covers the chip's **own UID**, so a signed payload copied onto another chip no
-longer matches it: a cloned tag fails verification, on the customer's own
-phone. The same property is why the two chips of one spool carry two
-*different* signatures ([how the two chips are bound](../concepts/tigertag-chip.md)).
-
-The byte-level layout — chip type ids, the 64-byte signature area at pages
-`0x18`–`0x27` — is specified in
-[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide).
+A TigerTag+ that additionally carries a cryptographic signature is a
+**[TigerTag+ Certified](./tigertag-plus-certified.md)** — the level that can
+prove a spool's origin, and the only one restricted to certified
+manufacturers. Verifying a signature stays free and offline for everyone.
 
 ## Where it sits
 
@@ -98,6 +86,6 @@ does not make a chip a TigerTag+.
 
 ---
 
-**◀ Previous:** [TigerTag](./tigertag.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Tiger NFC Connect](./tigertag-connect.md)
+**◀ Previous:** [TigerTag](./tigertag.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerTag+ Certified](./tigertag-plus-certified.md)
 
 **Related:** [Universal filament identity](../concepts/universal-filament-identity.md), [The TigerTag chip](../concepts/tigertag-chip.md), [Developer documentation](../developers/README.md)
