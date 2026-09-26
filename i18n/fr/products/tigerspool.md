@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c74d9f0de28557cb3b10809109cbc7eebc04fa0651b7ad622ad5711c2244692
+sourceHash: 423e9b6139ecfa41d673751f5260ff4133b4a708eecfca104df49ab1933c0926
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -114,20 +114,29 @@ avant d'acheter des pièces pour une machine précise.
 
 ## En construire un
 
-Trois choses à acheter, quatre fils, une coque imprimée. **L'électronique est
-identique pour toutes les marques d'imprimante** — seule la coque change, et
-c'est ce qui permet de n'avoir qu'un firmware et qu'une liste de pièces.
+Trois choses à acheter, quatre fils, une coque imprimée — plus deux extras à
+considérer. **L'électronique est identique pour toutes les marques
+d'imprimante** — seule la coque change, et c'est ce qui permet de n'avoir qu'un
+firmware et qu'une liste de pièces.
 
-| # | Pièce | Pourquoi celle-ci | Prix ~ |
-|---|---|---|---|
-| 1 | Carte de développement **Waveshare ESP32-S3-Touch-LCD-2** | Écran IPS 2,0" 240×320 tactile capacitif, ESP32-S3**R8**, 16 Mo de flash, 8 Mo de PSRAM octale. Écran, dalle tactile et MCU sur une seule carte — aucun afficheur à câbler. Les 16 Mo sont ce qui rend deux partitions OTA confortables. | ~25 € |
-| 2 | Module **PN532 NFC**, V3 à interrupteurs DIP | Lit les puces NTAG21x qu'utilise TigerTag. Il doit gérer **HSU/UART** ; les deux interrupteurs vont sur `0` / OFF. Un lot de deux coûte à peine plus qu'un seul. | ~9 € les deux |
-| 3 | **Un câble USB-C qui transporte les données** | Alimente et flashe la carte. Le débit n'a aucune importance — n'importe quel câble de données USB 2.0 suffit. | ~5–10 € |
+| Qté | Composant | Où |
+|---|---|---|
+| 1 | Carte de développement Waveshare **ESP32-S3-Touch-LCD-2** — écran IPS 2,0" 240×320 tactile capacitif, ESP32-S3**R8**, 16 Mo de flash, 8 Mo de PSRAM octale. Écran, dalle tactile et MCU sur une seule carte, et les 16 Mo rendent deux partitions OTA confortables | [Amazon](https://link.amazon/B0c5hr3uf) |
+| 1 | Module NFC **PN532 V3** — interrupteurs DIP, doit gérer **HSU/UART**, les deux sur `0` / OFF. Un lot de deux coûte à peine plus qu'un seul | [Amazon](https://link.amazon/B0dyEfwKa) |
+| 1 | Un câble USB-C **qui transporte les données** — le débit n'a aucune importance, n'importe quel câble USB 2.0 de données suffit | [Amazon](https://link.amazon/B00Xg3WT4) |
+| 1 | Connecteur USB-C magnétique — **recommandé** : le port est la pièce manipulée tous les jours, et c'est le câble qui lâche plutôt que la prise | [Amazon](https://link.amazon/B0bWVIBa0) |
+| 1 | Accu LiPo 3,7 V 1000 mAh, PH1.25 — **optionnel**, chargé par l'USB ; le boîtier fonctionne alors sans câble et gagne une entrée Batterie dans les réglages. Vérifiez la polarité | [Amazon](https://link.amazon/B0fL0jjf3) |
+
+> Certains liens de ce tableau sont des **liens affiliés Amazon** : en tant que
+> partenaire Amazon, TigerTag perçoit une commission sur les achats
+> correspondants, **sans surcoût pour vous**. Cela aide à financer le protocole
+> ouvert. Acheter les mêmes pièces ailleurs fonctionne exactement pareil.
 
 Les **quatre fils de liaison sont fournis avec le PN532** — 3V3, GND, TX, RX,
-et c'est tout le faisceau. Pas d'adaptateur de niveau (le PN532 fonctionne en
-3V3, comme la carte), pas de batterie (le boîtier est posé à côté d'une
-imprimante déjà branchée).
+et c'est tout le faisceau. Pas d'adaptateur de niveau : le PN532 fonctionne en
+3V3, comme la carte. La batterie est **optionnelle** — le boîtier est
+normalement posé à côté d'une imprimante déjà branchée, et l'accu ci-dessus est
+pour les fois où il ne l'est pas.
 
 <img src="../assets/tigerspool-wiring.jpg" width="600" alt="Câblage : la carte ESP32-S3-Touch-LCD-2 vers le PN532 — 3V3 vers VCC, GND vers GND, TX vers SDA, RX vers SCL" />
 
