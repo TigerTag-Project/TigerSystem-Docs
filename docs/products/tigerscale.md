@@ -6,6 +6,12 @@
 spool on the open-source ESP32 scale and the live weight flows straight into
 your inventory — no manual entry, no shaking the spool next to your ear.
 
+<img src="../assets/tigerscale-v3.webp" width="480" alt="A TigerScale V3 with a spool resting on it, its screen showing the weight, the filament it recognised and how much is left" />
+
+*The spool goes on, and the scale already knows what it is: the chip gives the
+brand, the material and the colour, the load cell gives the grams. Nothing
+typed, nothing guessed.*
+
 <div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/Tiger-Scale-V3/">Install from your browser</a>
 </div>
@@ -20,11 +26,6 @@ your inventory — no manual entry, no shaking the spool next to your ear.
 > *left*.** Together they make the inventory actually true: identity from
 > [TigerTag](./tigertag.md), live quantity from TigerScale.
 
-<img src="../assets/tigerscale-v3.webp" width="480" alt="A TigerScale V3 with a spool resting on it, its screen showing the weight, the filament it recognised and how much is left" />
-
-*The spool goes on, and the scale already knows what it is: the chip gives the
-brand, the material and the colour, the load cell gives the grams. Nothing
-typed, nothing guessed.*
 
 ## TigerScale V3 — the current generation
 

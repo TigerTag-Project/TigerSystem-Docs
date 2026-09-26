@@ -1,5 +1,5 @@
 ---
-sourceHash: 86cf9e1f2ee53c824cd2698825b997c3d3b714101c76d72ec9335e62b38d367d
+sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -11,6 +11,12 @@ sourcePath: docs/products/tigerscale.md
 Posez une bobine sur cette balance ESP32 open source et le poids en direct
 part droit dans votre inventaire — aucune saisie manuelle, plus besoin de
 secouer la bobine près de son oreille.
+
+<img src="../assets/tigerscale-v3.webp" width="480" alt="Une TigerScale V3 avec une bobine posée dessus, son écran affichant le poids, le filament reconnu et ce qu'il en reste" />
+
+*On pose la bobine, et la balance sait déjà ce que c'est : la puce donne la
+marque, la matière et la couleur, la cellule de charge donne les grammes. Rien
+de saisi, rien de deviné.*
 
 <div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/Tiger-Scale-V3/">Installer depuis le navigateur</a>
@@ -26,11 +32,6 @@ secouer la bobine près de son oreille.
 > *reste*.** Ensemble, ils rendent l'inventaire réellement juste : l'identité
 > vient de [TigerTag](./tigertag.md), la quantité en direct de TigerScale.
 
-<img src="../assets/tigerscale-v3.webp" width="480" alt="Une TigerScale V3 avec une bobine posée dessus, son écran affichant le poids, le filament reconnu et ce qu'il en reste" />
-
-*On pose la bobine, et la balance sait déjà ce que c'est : la puce donne la
-marque, la matière et la couleur, la cellule de charge donne les grammes. Rien
-de saisi, rien de deviné.*
 
 ## TigerScale V3 — la génération actuelle
 

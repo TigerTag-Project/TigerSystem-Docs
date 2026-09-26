@@ -1,5 +1,5 @@
 ---
-sourceHash: 2d1ee57c457b28ee9b81225286da42eea243969063ebffc037dd98ebf1b175fa
+sourceHash: 6fbb56a78285184413e7aa07bc55e881d16be6ba2a102f42337a3a0a09637ee9
 sourcePath: docs/products/tigerpod.md
 ---
 
@@ -9,6 +9,10 @@ sourcePath: docs/products/tigerpod.md
 
 **Le premier « lecteur CD » pour bobines de filament intelligentes.** TigerPOD
 pose un scanner de bobines sur votre bureau — et c'est vous qui l'imprimez.
+<img src="../assets/tigerpod-grey.png" width="480" alt="Un TigerPOD sur un bureau, une bobine de filament rouge posée dessus" />
+
+*On pose la bobine ; elle se présente d'elle-même.*
+
 <div class="ts-cta">
 <a class="ts-cta-primary" href="https://tigersystem.io/tigerpod">Obtenir un TigerPOD</a>
 <a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958">L'imprimer — STL gratuit</a>
@@ -23,9 +27,6 @@ lecteurs NFC USB **face à face** : posez une bobine, elle se présente dans Tig
 Studio ; posez une puce vierge, encodez-la. Aussi naturel que d'approcher un
 téléphone, mais mains libres sur le bureau.
 
-<img src="../assets/tigerpod-grey.png" width="480" alt="Un TigerPOD sur un bureau, une bobine de filament rouge posée dessus" />
-
-*On pose la bobine ; elle se présente d'elle-même.*
 
 ## Pourquoi deux lecteurs, face à face
 

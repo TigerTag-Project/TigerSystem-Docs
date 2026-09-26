@@ -8,6 +8,10 @@ A free, open-source 3D-printable stand holding **two** USB NFC readers **facing
 each other**: place a spool, it identifies itself in Tiger Studio; place a blank
 chip, encode it. As natural as tapping a phone, but hands-free on the desktop.
 
+<img src="../assets/tigerpod-grey.png" width="480" alt="A TigerPOD on a desk, a red filament spool resting on it" />
+
+*Put the spool down; it introduces itself.*
+
 <div class="ts-cta">
 <a class="ts-cta-primary" href="https://tigersystem.io/tigerpod">Get a TigerPOD</a>
 <a href="https://makerworld.com/fr/models/1289152-tigerpod-for-openspool-tigertag-rfid-filament#profileId-1318958">Print it — free STL</a>
@@ -17,9 +21,6 @@ chip, encode it. As natural as tapping a phone, but hands-free on the desktop.
 <a href="https://github.com/TigerTag-Project/TigerPOD"><img src="../assets/icons/github.svg" alt="" /> Sources</a>
 </div>
 
-<img src="../assets/tigerpod-grey.png" width="480" alt="A TigerPOD on a desk, a red filament spool resting on it" />
-
-*Put the spool down; it introduces itself.*
 
 ## Why two readers, facing each other
 
