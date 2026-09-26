@@ -1,5 +1,5 @@
 ---
-sourceHash: 03707b39a032bfe5edb2f09a648a56487c4817e3c99d8783c64af387bde38047
+sourceHash: 8d781b9acd818ce14d286d503bd6329dd7e9b7e3279e4efc05b290f6845d8591
 sourcePath: docs/vision/team.md
 ---
 
@@ -11,7 +11,7 @@ appartienne à son propriétaire, lisible par tous, verrouillée par personne.
 
 ## Benoit Michaut — CEO et fondateur
 
-<!-- TODO: photo du fondateur (docs/assets/team-benoit-michaut.jpg) -->
+<img class="ts-portrait" src="../assets/team-benoit-michaut.jpg" alt="Benoit Michaut, CEO et fondateur de TigerTag" />
 
 > *« Fait pour les makers. Ouvert à tous. Né de la communauté, TigerTag donne
 > aux utilisateurs des données réelles et une liberté totale. 100 % open

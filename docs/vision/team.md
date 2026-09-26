@@ -6,7 +6,7 @@ by anyone, locked by no one.
 
 ## Benoit Michaut — CEO & Founder
 
-<!-- TODO: founder photo (docs/assets/team-benoit-michaut.jpg) -->
+<img class="ts-portrait" src="../assets/team-benoit-michaut.jpg" alt="Benoit Michaut, CEO and founder of TigerTag" />
 
 > *"Made for Makers. Open to Everyone. Born from the community, TigerTag
 > empowers users with real data and total freedom. 100 % open-source, it

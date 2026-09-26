@@ -841,3 +841,16 @@
   font-size: 0.8rem;
   text-align: center;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Team — round portrait                                                       */
+/* -------------------------------------------------------------------------- */
+
+.ts-portrait {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: 50% 22%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--ts-orange);
+}
