@@ -3,7 +3,10 @@
 **A small box beside the printer. Hold a spool against it, tap a slot, and the
 filament is written into that slot — on any brand of printer.**
 
-<img src="../assets/tigerspool.jpg" width="420" alt="The TigerSpool project logo" />
+<img src="../assets/tigerspool-with-spool.webp" width="560" alt="A TigerSpool beside a filament spool, its screen listing the printer's slots with the brand loaded in each" />
+
+*The box, a spool, and the printer's own slots on screen — each one showing
+what is loaded in it. Hold the spool against the box, pick a slot, done.*
 
 <div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/TigerSpool-RFID/">Install from your browser</a>

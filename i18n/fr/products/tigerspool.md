@@ -1,5 +1,5 @@
 ---
-sourceHash: e0e8a7f20774d1dedb4f06547a26c6f812d46b6b6a1be6ea6f0eb9218cbe06d7
+sourceHash: 9c74d9f0de28557cb3b10809109cbc7eebc04fa0651b7ad622ad5711c2244692
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -9,7 +9,11 @@ sourcePath: docs/products/tigerspool.md
 emplacement, et le filament y est inscrit — sur n'importe quelle marque
 d'imprimante.**
 
-<img src="../assets/tigerspool.jpg" width="420" alt="Le logo du projet TigerSpool" />
+<img src="../assets/tigerspool-with-spool.webp" width="560" alt="Un TigerSpool à côté d'une bobine de filament, son écran listant les emplacements de l'imprimante avec la marque chargée dans chacun" />
+
+*Le boîtier, une bobine, et les emplacements de l'imprimante à l'écran — chacun
+montrant ce qui y est chargé. Approchez la bobine, choisissez un emplacement,
+c'est fait.*
 
 <div class="ts-cta ts-cta--hero">
 <a class="ts-cta-primary" href="https://tigertag-project.github.io/TigerSpool-RFID/">Installer depuis le navigateur</a>
