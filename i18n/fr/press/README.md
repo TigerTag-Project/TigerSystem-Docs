@@ -1,5 +1,5 @@
 ---
-sourceHash: 63d9c24cac41728ff2566bcdb57c4c4e94b6a49c8512cc7d60b63d77bc36d181
+sourceHash: 54e423dfba2d8a2e3dbed477ce0d4a428b6b5c740d7cdcbd9ee4a46a86b70d52
 sourcePath: docs/press/README.md
 ---
 
@@ -79,7 +79,7 @@ bannière de la gamme arc-en-ciel. En usage avec Tiger Studio :
 
 || |
 |---|---|
-| <img src="../assets/tigerscale-v3.png" alt="TigerScale V3 — écran tactile couleur, double lecteur NFC PN532" /> | <img src="../assets/tigerscale-at-home.jpg" alt="Une TigerScale V3 sur l'établi d'un maker, une bobine posée dessus" /> |
+| <img src="../assets/tigerscale-v3.webp" alt="TigerScale V3 — écran tactile couleur, double lecteur NFC PN532" /> | <img src="../assets/tigerscale-at-home.jpg" alt="Une TigerScale V3 sur l'établi d'un maker, une bobine posée dessus" /> |
 
 **TigerScale V3**, la génération actuelle : la photo produit, et une
 **illustration** de la même balance sur l'établi d'un maker — la seconde est un

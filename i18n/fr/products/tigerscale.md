@@ -1,5 +1,5 @@
 ---
-sourceHash: 3cd5caa58c1a02d6112b6c7d36830f270102d4f8adc8f3a4d02eb0c85165c2ce
+sourceHash: 86cf9e1f2ee53c824cd2698825b997c3d3b714101c76d72ec9335e62b38d367d
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -26,7 +26,11 @@ secouer la bobine près de son oreille.
 > *reste*.** Ensemble, ils rendent l'inventaire réellement juste : l'identité
 > vient de [TigerTag](./tigertag.md), la quantité en direct de TigerScale.
 
-<img src="../assets/tigerscale-v3.png" width="420" alt="TigerScale V3 — la balance à filament connectée open source, écran tactile couleur et double lecteur NFC" />
+<img src="../assets/tigerscale-v3.webp" width="480" alt="Une TigerScale V3 avec une bobine posée dessus, son écran affichant le poids, le filament reconnu et ce qu'il en reste" />
+
+*On pose la bobine, et la balance sait déjà ce que c'est : la puce donne la
+marque, la matière et la couleur, la cellule de charge donne les grammes. Rien
+de saisi, rien de deviné.*
 
 ## TigerScale V3 — la génération actuelle
 

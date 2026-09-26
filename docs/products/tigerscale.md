@@ -20,7 +20,11 @@ your inventory — no manual entry, no shaking the spool next to your ear.
 > *left*.** Together they make the inventory actually true: identity from
 > [TigerTag](./tigertag.md), live quantity from TigerScale.
 
-<img src="../assets/tigerscale-v3.png" width="420" alt="TigerScale V3 — the open-source connected filament scale, colour touchscreen and dual NFC readers" />
+<img src="../assets/tigerscale-v3.webp" width="480" alt="A TigerScale V3 with a spool resting on it, its screen showing the weight, the filament it recognised and how much is left" />
+
+*The spool goes on, and the scale already knows what it is: the chip gives the
+brand, the material and the colour, the load cell gives the grams. Nothing
+typed, nothing guessed.*
 
 ## TigerScale V3 — the current generation
 

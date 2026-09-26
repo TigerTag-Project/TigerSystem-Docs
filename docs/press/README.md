@@ -72,7 +72,7 @@ rainbow line-up banner. In use with Tiger Studio:
 
 || |
 |---|---|
-| <img src="../assets/tigerscale-v3.png" alt="TigerScale V3 — colour touchscreen, dual PN532 NFC readers" /> | <img src="../assets/tigerscale-at-home.jpg" alt="A TigerScale V3 on a maker's bench, a spool resting on it" /> |
+| <img src="../assets/tigerscale-v3.webp" alt="TigerScale V3 — colour touchscreen, dual PN532 NFC readers" /> | <img src="../assets/tigerscale-at-home.jpg" alt="A TigerScale V3 on a maker's bench, a spool resting on it" /> |
 
 **TigerScale V3**, the current generation: the product shot, and an
 **illustration** of the same scale on a maker's bench — the second one is a
