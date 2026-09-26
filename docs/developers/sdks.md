@@ -42,4 +42,4 @@ Reference data (ID → name tables) comes from the shared database — see
 
 ---
 
-**◀ Previous:** [Repositories](./repositories.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Cloud API](./cloud-api.md)
+**◀ Previous:** [Repositories](./repositories.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Account API](./account-api.md)

@@ -1,5 +1,5 @@
 ---
-sourceHash: 60aaccb3d6dc57846560b5ff5e1ddb3f3bc4e3b846a57362b7a456b5ec005b53
+sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -46,7 +46,7 @@ de rejoindre :
 
 1. Lisez le format de la puce ([TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)).
 2. Prenez un [SDK](../developers/sdks.md).
-3. Connectez-vous au [cloud](../developers/cloud-api.md) — ou pas ; les puces fonctionnent hors ligne.
+3. Connectez-vous au [cloud](../developers/account-api.md) — ou pas ; les puces fonctionnent hors ligne.
 4. Publiez le logiciel, le matériel ou l'activité que vous voulez vraiment.
 
 Votre application peut être tout autre chose — elle parlera quand même aux

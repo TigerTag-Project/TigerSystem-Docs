@@ -1,5 +1,5 @@
 ---
-sourceHash: 5283f746f604b2bf5956044ddd3e902a6a6aa39e61026868a794fb05bd51458d
+sourceHash: d963da1d63b18cc813eec778130b21befa4bd537a2c7ce7b29597059b24a8a71
 sourcePath: docs/concepts/inventory-and-cloud-sync.md
 ---
 
@@ -111,10 +111,10 @@ qui fait foi.
  demande), imposée par des règles côté serveur.
 - La configuration du projet Firebase est publique à dessein (c'est le schéma
  standard) ; **la sécurité réside dans les règles, pas dans le secret**. Voir
- [API cloud et intégration](../developers/cloud-api.md).
+ [API compte et intégration](../developers/account-api.md).
 
 ---
 
 **◀ Précédent :** [La puce TigerTag](./tigertag-chip.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Vue d'ensemble de l'architecture](../architecture/overview.md)
 
-**Voir aussi :** [TigerHub](../products/tigerhub.md), [Développeurs — API cloud](../developers/cloud-api.md)
+**Voir aussi :** [TigerHub](../products/tigerhub.md), [Développeurs — API compte](../developers/account-api.md)

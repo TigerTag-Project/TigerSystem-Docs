@@ -1,9 +1,9 @@
 ---
-sourceHash: 33f31e38f0f7b39c2f10eecad9ed04781f70c374bcaa8b98a621704e2e319907
-sourcePath: docs/developers/cloud-api.md
+sourceHash: 964aaebb15d1afe5fb99c214223b57ec3c35d863a67794dba96b1f6cb91be960
+sourcePath: docs/developers/account-api.md
 ---
 
-# API cloud et intégration tierce
+# API compte et intégration tierce
 
 ## Le contrat
 

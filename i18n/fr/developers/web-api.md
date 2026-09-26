@@ -1,5 +1,5 @@
 ---
-sourceHash: 5d759a735149cce57af15cfbccc692832ff2808b2089df6425fe0d0c5df23fb8
+sourceHash: 4534952990769306c8ebf5fcf1d9c93c9ddca86ce463b792d757f36bdda46043
 sourcePath: docs/developers/web-api.md
 ---
 
@@ -83,6 +83,6 @@ corrections par-dessus.
 
 ---
 
-**◀ Précédent :** [API cloud et intégration tierce](./cloud-api.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Carte des dépôts](./repositories.md)
+**◀ Précédent :** [API compte et intégration tierce](./account-api.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Carte des dépôts](./repositories.md)
 
 **Voir aussi :** [TigerTag+](../products/tigertag-plus.md), [TigerTag+ Certified](../products/tigertag-plus-certified.md)

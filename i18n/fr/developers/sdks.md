@@ -1,5 +1,5 @@
 ---
-sourceHash: dddf1ecd9b808ebb22194ce95cda637ee38d411bfb7bce96c50491b0fa74d229
+sourceHash: 19ce9f2af8d9561b6298fb076ca9ac4da141671c3caafc2201c393e1f19938a2
 sourcePath: docs/developers/sdks.md
 ---
 
@@ -51,4 +51,4 @@ données partagée — voir
 
 ---
 
-**◀ Précédent :** [Dépôts](./repositories.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [API cloud](./cloud-api.md)
+**◀ Précédent :** [Dépôts](./repositories.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [API compte](./account-api.md)

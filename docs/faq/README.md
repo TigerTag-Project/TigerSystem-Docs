@@ -350,7 +350,7 @@ makes the U1 **the first printer that reads TigerTags natively**. See
 
 **Can I build my own app on TigerTag?**
 Yes, without permission: open chip spec, [SDKs](../developers/sdks.md) (JS &
-Python), and a [documented cloud surface](../developers/cloud-api.md) with
+Python), and a [documented account surface](../developers/account-api.md) with
 working ESP32 / Home Assistant / Spoolman examples.
 
 **Can I plug TigerTag into my ERP or internal stock software?**
@@ -436,4 +436,4 @@ Yes. MIT/CC-licensed, deliberately forkable — just respect the
 
 ---
 
-**◀ Previous:** [Cloud API](../developers/cloud-api.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Roadmap](../roadmap/README.md)
+**◀ Previous:** [Account API](../developers/account-api.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Roadmap](../roadmap/README.md)

@@ -72,6 +72,6 @@ pictures around that, and corrections on top of it.
 
 ---
 
-**◀ Previous:** [Cloud API & third-party integration](./cloud-api.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Repository map](./repositories.md)
+**◀ Previous:** [Account API & third-party integration](./account-api.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Repository map](./repositories.md)
 
 **Related:** [TigerTag+](../products/tigertag-plus.md), [TigerTag+ Certified](../products/tigertag-plus-certified.md)

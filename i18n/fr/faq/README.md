@@ -1,5 +1,5 @@
 ---
-sourceHash: 554971d7b57e8c0f734ce5a596683f16cde97aacc20c36a0ece437a31e993cd2
+sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
 sourcePath: docs/faq/README.md
 ---
 
@@ -398,7 +398,7 @@ fait de la U1 **la première imprimante qui lit nativement les TigerTags**. Voir
 **Puis-je construire ma propre application sur TigerTag ?**
 Oui, sans autorisation : spécification ouverte de la puce,
 [SDK](../developers/sdks.md) (JS et Python), et une
-[surface cloud documentée](../developers/cloud-api.md) avec des exemples
+[surface compte documentée](../developers/account-api.md) avec des exemples
 fonctionnels ESP32 / Home Assistant / Spoolman.
 
 **Puis-je brancher TigerTag sur mon ERP ou mon logiciel de stock interne ?**
@@ -497,4 +497,4 @@ Oui. Sous licence MIT/CC, délibérément forkable — respectez simplement la
 
 ---
 
-**◀ Précédent :** [API cloud](../developers/cloud-api.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Feuille de route](../roadmap/README.md)
+**◀ Précédent :** [API compte](../developers/account-api.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Feuille de route](../roadmap/README.md)

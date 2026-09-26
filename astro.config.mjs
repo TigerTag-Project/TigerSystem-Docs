@@ -12,6 +12,16 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
 
+  // `cloud-api` became `account-api`: it documents the user's ACCOUNT — auth,
+  // inventory, friends — and sits next to the product `web-api`, where two
+  // pages both called an API needed their titles to say which is which. The old
+  // address keeps working: it was linked from the FAQ, the philosophy pages and
+  // anywhere outside this repo we cannot edit.
+  redirects: {
+    '/developers/cloud-api': '/developers/account-api/',
+    '/fr/developers/cloud-api': '/fr/developers/account-api/',
+  },
+
   integrations: [
     starlight({
       title: 'TigerSystem',

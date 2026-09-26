@@ -1,5 +1,5 @@
 ---
-sourceHash: 46a2643f40f38995509cca135edeb6e2c937a1c5f9b8fb94385ea68b8151ccde
+sourceHash: 8ae1c06de17fcd742ec5955b2ae95cc97016fada033c19b74bb58ac0e04bce58
 sourcePath: docs/developers/README.md
 ---
 
@@ -29,7 +29,7 @@ partout où une identité est utile :
  réinscriptible et documenté avec lequel expérimenter.
 
 Aucun de ces usages n'a besoin de nos applications ni de notre cloud : la puce
-+ un SDK suffisent. N'ajoutez la [surface cloud](./cloud-api.md) que si vous
++ un SDK suffisent. N'ajoutez la [surface compte](./account-api.md) que si vous
 voulez des comptes et de la synchronisation.
 
 Construisez-le et il est **TigerTag Compatible** : gratuit, auto-déclaré, sans
@@ -80,7 +80,7 @@ Politique complète, paliers de certification et éléments de marque :
 | Lire et écrire des puces TigerTag | [SDK](./sdks.md) |
 | Échanger des inventaires sous forme de fichiers | [Le format `.ttag`](./ttag-format.md) |
 | Afficher la couleur d'une bobine comme le font toutes les autres applications | [La pastille de matière](./material-swatch.md) — et son [moteur de rendu de référence en direct](./material-swatch-playground.html) |
-| Synchroniser avec l'inventaire cloud de l'utilisateur | [API cloud et intégration](./cloud-api.md) |
+| Synchroniser avec l'inventaire cloud de l'utilisateur | [API compte et intégration](./account-api.md) |
 | Comprendre la charge utile de la puce | [La puce TigerTag](../concepts/tigertag-chip.md) |
 
 ## Chemins d'intégration
@@ -96,7 +96,7 @@ flowchart LR
  pas de réseau.
 2. **Connecté au cloud** — authentifiez le *compte de l'utilisateur lui-même*
  et lisez/écrivez ses données dans le cadre des règles de sécurité côté serveur
- ([contrat d'intégration](./cloud-api.md)).
+ ([contrat d'intégration](./account-api.md)).
 3. **Matériel** — des exemples fonctionnels existent pour ESP32/Arduino, Home
  Assistant et une passerelle Spoolman (voir les
  [exemples du dépôt d'intégration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/tree/main/examples)).

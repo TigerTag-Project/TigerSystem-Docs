@@ -66,7 +66,7 @@ export const sidebar = [
     { slug: 'developers/sdks' },
     { slug: 'developers/ttag-format' },
     { slug: 'developers/material-swatch' },
-    { slug: 'developers/cloud-api' },
+    { slug: 'developers/account-api' },
     { slug: 'developers/web-api' },
     { slug: 'developers/integrations' },
     { slug: 'developers/repositories' },

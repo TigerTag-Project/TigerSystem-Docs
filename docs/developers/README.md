@@ -23,7 +23,7 @@ useful:
  identity carrier to experiment with.
 
 None of these need our apps or our cloud: the chip + an SDK is enough. Add the
-[cloud surface](./cloud-api.md) only if you want accounts and sync.
+[account surface](./account-api.md) only if you want accounts and sync.
 
 Build it and it is **TigerTag Compatible**: free, self-declared, no audit and
 no permission. Put it through the audit and it can become **TigerTag
@@ -69,7 +69,7 @@ and brand assets: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-RF
 | Read/write TigerTag chips | [SDKs](./sdks.md) |
 | Exchange inventories as files | [The `.ttag` format](./ttag-format.md) |
 | Show a spool's colour the way every other app does | [The material swatch](./material-swatch.md) — and its [live reference renderer](./material-swatch-playground.html) |
-| Sync with the user's cloud inventory | [Cloud API & integration](./cloud-api.md) |
+| Sync with the user's cloud inventory | [Account API & integration](./account-api.md) |
 | Understand the chip payload | [The TigerTag chip](../concepts/tigertag-chip.md) |
 
 ## Integration paths
@@ -84,7 +84,7 @@ flowchart LR
 1. **Chip-only** — parse and encode chips with an SDK. No account, no network.
 2. **Cloud-connected** — authenticate the *user's own account* and read/write
  their data within server-side security rules
- ([integration contract](./cloud-api.md)).
+ ([integration contract](./account-api.md)).
 3. **Hardware** — working examples exist for ESP32/Arduino, Home Assistant and
  a Spoolman bridge (see the
  [integration repo's examples](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/tree/main/examples)).

@@ -93,10 +93,10 @@ which is canonical.
  a prior relationship (friendship, request), enforced by server-side rules.
 - The Firebase project config is intentionally public (standard pattern);
  **security lives in the rules, not in secrecy**. See
- [Cloud API & integration](../developers/cloud-api.md).
+ [Account API & integration](../developers/account-api.md).
 
 ---
 
 **◀ Previous:** [The TigerTag chip](./tigertag-chip.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Architecture overview](../architecture/overview.md)
 
-**Related:** [TigerHub](../products/tigerhub.md), [Developers — Cloud API](../developers/cloud-api.md)
+**Related:** [TigerHub](../products/tigerhub.md), [Developers — Account API](../developers/account-api.md)

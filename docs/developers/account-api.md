@@ -1,4 +1,4 @@
-# Cloud API & third-party integration
+# Account API & third-party integration
 
 ## The contract
 

@@ -37,7 +37,7 @@ TigerTag is an open **protocol**, not a platform you have to join:
 
 1. Read the chip format ([TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)).
 2. Pick up an [SDK](../developers/sdks.md).
-3. Connect to the [cloud](../developers/cloud-api.md) — or don't; chips work offline.
+3. Connect to the [cloud](../developers/account-api.md) — or don't; chips work offline.
 4. Ship the software, the hardware or the business you actually want.
 
 Your app can be something else entirely — it will still speak the same chips.
