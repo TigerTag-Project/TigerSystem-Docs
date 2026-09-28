@@ -126,11 +126,12 @@ the whole harness. No level shifters: the PN532 runs at 3V3, same as the board.
 A battery is **optional** — the box normally sits beside a printer that is
 already plugged in, and the cell above is for the times it does not.
 
-<img src="../assets/tigerspool-wiring.jpg" width="600" alt="Wiring: the ESP32-S3-Touch-LCD-2 board to the PN532 — 3V3 to VCC, GND to GND, TX to SCL, RX to SDA" />
+<img src="../assets/tigerspool-wiring.jpg" width="600" alt="Wiring: the ESP32-S3-Touch-LCD-2 board to the PN532 — 3V3 to VCC, GND to GND, TX to SCL, RX to SDA — and the optional LiPo battery to the board's own BAT connector" />
 
 *The whole harness. On the PN532 the two data pins are silkscreened `SDA` and
 `SCL` — in HSU mode they carry the UART: the board's **TX goes to `SCL`**, its
-**RX to `SDA`**, and both DIP switches sit at `0` / OFF.
+**RX to `SDA`**, and both DIP switches sit at `0` / OFF. The optional battery
+plugs straight into the board's own **BAT** connector, nothing else to wire.
 [Interactive schematic](https://app.cirkitdesigner.com/project/7a6c0887-8e44-4303-81b3-be51aab4b40a).*
 
 **Flashing is done from the browser** — plug the board in, click Install, wait

@@ -1,5 +1,5 @@
 ---
-sourceHash: 294aaa530d62c01a0b4adb5bb937b5b67296c4bdba2a643ee56dd32564c07bbe
+sourceHash: 4301cfbb3987f9d73b90e593d33620e855c6a9b95ae3776fcc8a4552e6bdea90
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -139,12 +139,13 @@ et c'est tout le faisceau. Pas d'adaptateur de niveau : le PN532 fonctionne en
 normalement posé à côté d'une imprimante déjà branchée, et l'accu ci-dessus est
 pour les fois où il ne l'est pas.
 
-<img src="../assets/tigerspool-wiring.jpg" width="600" alt="Câblage : la carte ESP32-S3-Touch-LCD-2 vers le PN532 — 3V3 vers VCC, GND vers GND, TX vers SCL, RX vers SDA" />
+<img src="../assets/tigerspool-wiring.jpg" width="600" alt="Câblage : la carte ESP32-S3-Touch-LCD-2 vers le PN532 — 3V3 vers VCC, GND vers GND, TX vers SCL, RX vers SDA — et l'accu LiPo optionnel vers le connecteur BAT de la carte" />
 
 *Tout le faisceau. Sur le PN532, les deux broches de données sont sérigraphiées
 `SDA` et `SCL` — en mode HSU, ce sont elles qui portent l'UART : le **TX de la
 carte va sur `SCL`**, son **RX sur `SDA`**, et les deux interrupteurs DIP sont
-sur `0` / OFF.
+sur `0` / OFF. L'accu optionnel se branche directement sur le connecteur
+**BAT** de la carte, rien d'autre à câbler.
 [Schéma interactif](https://app.cirkitdesigner.com/project/7a6c0887-8e44-4303-81b3-be51aab4b40a).*
 
 **Le flashage se fait depuis le navigateur** — branchez la carte, cliquez sur
