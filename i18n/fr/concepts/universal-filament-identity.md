@@ -1,5 +1,5 @@
 ---
-sourceHash: 3f16993dfe016fd4dd30471911d4554a4a17a7958065d1737773a6ca0298963c
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -90,8 +90,7 @@ sur une clé USB, dans un mail, d'un outil à l'autre.
 
 *Promouvoir* une bobine, c'est passer de la gauche du schéma à la droite : un
 enregistrement TigerData ou TigerData+ existant est écrit dans une puce NTAG
-vierge, et la bobine porte désormais elle-même son identité, hors ligne. Tiger
-Studio le fait en une seule étape, de façon atomique.
+vierge, et la bobine porte désormais elle-même son identité, hors ligne.
 
 Ce qui en sort ne dépend que de ce qui y entre :
 

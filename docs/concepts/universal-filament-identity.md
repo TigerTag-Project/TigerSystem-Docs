@@ -80,8 +80,7 @@ stick, in a mail, between tools.
 
 *Promoting* a spool is the move from the left of the diagram to the right: an
 existing TigerData or TigerData+ record is written onto a blank NTAG chip, and
-the spool now carries its identity itself, offline. Tiger Studio does it in
-one step, atomically.
+the spool now carries its identity itself, offline.
 
 What comes out depends only on what went in:
 
