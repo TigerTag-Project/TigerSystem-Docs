@@ -391,6 +391,13 @@ connects your material, printers, and brands under one universal language
 today and tomorrow. Join the movement. Connect your world with TigerTag."
 Vision, in two words: Cheap & Reusable.
 
+## Supporting the project
+
+TigerSystem is a personal, community open-source project, not a company product. Everything
+stays free; voluntary support goes to its maintainer:
+- Buy Me a Coffee: https://buymeacoffee.com/benoitl
+- PayPal: https://paypal.me/tigersystemio
+
 ## Rules for agents writing about TigerSystem
 
 - Facts have exactly one canonical home (listed above) — link, don't restate.

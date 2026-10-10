@@ -183,6 +183,16 @@ piece of it.
 - <img src="docs/assets/icons/press.svg" width="16" alt="" /> **[Press kit](docs/press/README.md)** — high-res visuals, free to use in coverage
 - <img src="docs/assets/icons/discord.svg" width="16" alt="" /> **[Discord](https://discord.gg/3Qv5TSqnJH)** — the official community: questions, help, show-and-tell
 
+## Support the project
+
+TigerSystem is a personal, community open-source project, built and maintained in free time.
+Everything stays free; if it saves you a spool or two, you can support it:
+
+- ☕ [Buy Me a Coffee](https://buymeacoffee.com/benoitl)
+- 💙 [PayPal](https://paypal.me/tigersystemio)
+
+Support goes to the maintainer — never required, always appreciated.
+
 ## Contributing
 
 Spotted a gap, a typo, a question the FAQ should answer? PRs welcome —
