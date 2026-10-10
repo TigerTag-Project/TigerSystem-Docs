@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -37,14 +37,24 @@ numérique :
 
 ## RFID natif face au pont
 
-Certaines imprimantes lisent les tags nativement (dans leur propre format
-propriétaire) ; la plupart ne lisent rien du tout. Le pont rend les capacités
-de l'imprimante sans importance :
+Certaines imprimantes lisent les tags nativement — en général dans leur propre
+format propriétaire, parfois le TigerTag lui-même ; la plupart ne lisent rien
+du tout. Le pont rend les capacités de l'imprimante sans importance :
 
 | Voie | Nécessite | Fonctionne avec |
 |---|---|---|
-| **RFID natif** | Une imprimante qui lit le tag verrouillé de ce constructeur | Une seule marque |
+| **RFID natif — tag constructeur** | Une imprimante qui lit le tag verrouillé de ce constructeur | Une seule marque |
+| **RFID natif — TigerTag** | Une machine dont le firmware lit lui-même le TigerTag — rare, et jusqu'ici issu de la communauté | Toutes les marques, sans application dans la boucle |
 | **Pont smartphone** | N'importe quel téléphone NFC | **Toutes les imprimantes**, toutes les marques, même les machines totalement hors ligne |
+
+La ligne du milieu n'est pas de notre fait, et elle est récente. Le firmware
+étendu de la communauté fait de la [Snapmaker U1](../compatibility/snapmaker.md)
+la première imprimante à lire un TigerTag sur la machine elle-même ; et le
+**BT-AMS-C**, un lecteur quatre slots qui se monte sur un AMS Bambu Lab, envoie
+les données du TigerTag directement au BMCU de l'imprimante
+([matériel tiers](../compatibility/third-party-hardware.md)). Les deux restent
+des exceptions — ce qui plaide pour le pont plutôt que contre lui : il n'a
+jamais eu à les attendre.
 
 Avec le pont, les données du filament atteignent l'imprimante via les
 [intégrations d'imprimantes de Tiger Studio](../compatibility/README.md) (six
