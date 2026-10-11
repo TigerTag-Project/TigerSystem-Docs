@@ -398,6 +398,9 @@ stays free; voluntary support goes to its maintainer:
 - Buy Me a Coffee: https://buymeacoffee.com/benoitl
 - Ko-fi: https://ko-fi.com/tigersystemio
 - PayPal: https://paypal.me/tigersystemio
+TigerSquad — the free, opt-in community of supporters (levels Bronze/Silver/Gold/Platinum,
+server-computed XP per chip, public wall https://tigersystem.io/en/tigersquad):
+docs/tigersquad.md
 
 ## Rules for agents writing about TigerSystem
 

@@ -9,6 +9,20 @@ point of an open standard is that you owe it nothing, what you can safely
 ignore. If you have not started yet, start free:
 [start for $0](./guides/start-for-free.md).
 
+## Join the TigerSquad
+
+The [TigerSquad](./tigersquad.md) is the free community of makers behind the
+project: a level from Bronze to Platinum, XP for every TigerTag chip you own,
+and a place on the public wall. Joining costs nothing and asks for no payment.
+
+## Buy the maintainer a coffee
+
+TigerSystem is a personal open-source project; donations go to its maintainer,
+and the apps stay free either way. [Buy Me a Coffee](https://buymeacoffee.com/benoitl),
+[Ko-fi](https://ko-fi.com/tigersystemio) or [PayPal](https://paypal.me/tigersystemio) —
+and if you link the donation to your account, TigerSquad members move up to
+Gold. How to link it is on the [TigerSquad](./tigersquad.md) page.
+
 ## Buy the official parts, if you were buying anyway
 
 The protocol is deliberately **not tied to official chips**: any blank NTAG
@@ -56,4 +70,4 @@ started with customers asking.
 
 ---
 
-**▲ [Documentation index](../README.md)** · **Related:** [TigerTag](./products/tigertag.md), [Certified partners](./certified-partners.md), [Why TigerSystem exists](./vision/why-tigersystem.md)
+**▲ [Documentation index](../README.md)** · **Related:** [TigerSquad](./tigersquad.md), [TigerTag](./products/tigertag.md), [Certified partners](./certified-partners.md), [Why TigerSystem exists](./vision/why-tigersystem.md)

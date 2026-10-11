@@ -59,6 +59,9 @@ name lands on this page the next time the list is refreshed:
 Other ways to help, including the ones that cost money and the ones that cost
 nothing, are on [Support the project](./support.md).
 
+Looking for the maker ranking instead? That is the [TigerSquad](./tigersquad.md)
+— levels and XP for everyone who joins.
+
 ---
 
 **▲ [Documentation index](../README.md)** · **Related:** [Support the project](./support.md), [Repository map](./developers/repositories.md), [Contributing](../CONTRIBUTING.md)

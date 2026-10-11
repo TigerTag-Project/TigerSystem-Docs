@@ -194,6 +194,10 @@ Everything stays free; if it saves you a spool or two, you can support it:
 
 Support goes to the maintainer — never required, always appreciated.
 
+Join the free **[TigerSquad](docs/tigersquad.md)** too — the community of makers behind the project,
+with levels from Bronze to Platinum, XP for every TigerTag chip and a place on the
+[public wall](https://tigersystem.io/en/tigersquad).
+
 ## Contributing
 
 Spotted a gap, a typo, a question the FAQ should answer? PRs welcome —

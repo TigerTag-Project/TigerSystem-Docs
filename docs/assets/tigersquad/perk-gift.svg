@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-label="Cadeau TigerSquad orange lumineux">
+ <defs>
+  <linearGradient id="gold" x1="22" y1="18" x2="102" y2="108" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE3AA"/><stop offset=".32" stop-color="#FFB35F"/><stop offset=".7" stop-color="#FF8535"/><stop offset="1" stop-color="#D9531E"/></linearGradient>
+  <linearGradient id="ribbon" x1="58" y1="30" x2="75" y2="105" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF0C6"/><stop offset="1" stop-color="#FF9A3E"/></linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.2"/></filter>
+ </defs>
+ <!-- Localized halo only; outside remains fully transparent -->
+ <g opacity=".42" stroke="#FF7D2B" stroke-width="7" filter="url(#glow)" stroke-linejoin="round"><path d="M27 58H101V73H27Z"/><path d="M33 73H95V107H33Z"/><path d="M64 58V107"/><path d="M64 55C46 54 32 46 38 35C45 23 61 39 64 55ZM64 55C82 54 96 46 90 35C83 23 67 39 64 55Z"/></g>
+ <g stroke="url(#gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M33 74V103C33 105.2 34.8 107 37 107H91C93.2 107 95 105.2 95 103V74" fill="#3A211B" fill-opacity=".25"/>
+  <rect x="25" y="57" width="78" height="18" rx="3" fill="#3A211B" fill-opacity=".3"/>
+  <path d="M64 57V107" stroke="url(#ribbon)" stroke-width="9"/>
+  <path d="M64 55C50 53 35 49 37 39C39 29 48 29 55 37C60 42 62 49 64 55Z" fill="#4C281C" fill-opacity=".3"/>
+  <path d="M64 55C78 53 93 49 91 39C89 29 80 29 73 37C68 42 66 49 64 55Z" fill="#4C281C" fill-opacity=".3"/>
+  <path d="M64 54C62 46 60 39 57 35M64 54C66 46 68 39 71 35" stroke="#FFE2A0" stroke-width="2.4"/>
+ </g>
+ <path d="M30 62H98" stroke="#FFE3A0" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/>
+ <path d="M42 85V97M86 85V97" stroke="#FFB46D" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+ <g fill="#FFAC4D"><path d="M21 31L23 37L29 39L23 41L21 47L19 41L13 39L19 37Z"/><path d="M105 23L107 28L112 30L107 32L105 37L103 32L98 30L103 28Z"/><circle cx="108" cy="89" r="2"/><circle cx="17" cy="85" r="1.6"/></g>
+</svg>

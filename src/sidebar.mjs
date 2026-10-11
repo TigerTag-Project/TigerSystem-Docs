@@ -101,6 +101,7 @@ export const sidebar = [
     { slug: 'glossary' },
     { slug: 'certified-partners' },
     { slug: 'support' },
+    { slug: 'tigersquad' },
     { slug: 'hall-of-fame' },
     { slug: 'roadmap' },
     { slug: 'press' },

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="Badge à débloquer violet et rose">
+ <defs>
+  <linearGradient id="rim" x1="22" y1="12" x2="102" y2="105" gradientUnits="userSpaceOnUse"><stop stop-color="#FFB5F6"/><stop offset=".38" stop-color="#F275E7"/><stop offset=".72" stop-color="#A957F8"/><stop offset="1" stop-color="#7354F4"/></linearGradient>
+  <linearGradient id="inner" x1="39" y1="31" x2="91" y2="89" gradientUnits="userSpaceOnUse"><stop stop-color="#7440A8"/><stop offset="1" stop-color="#312052"/></linearGradient>
+  <linearGradient id="star" x1="50" y1="47" x2="79" y2="81" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF3FF"/><stop offset="1" stop-color="#D9B5FF"/></linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#BA51FF" flood-opacity=".55"/></filter>
+ </defs>
+ <!-- Soft localized luminous aura, transparent everywhere else -->
+ <path d="M64 14 74 20 86 19 91 30 102 35 100 47 107 57 100 67 102 79 91 84 86 95 74 94 64 101 54 94 42 95 37 84 26 79 28 67 21 57 28 47 26 35 37 30 42 19 54 20Z" fill="#D35BFF" opacity=".48" filter="url(#glow)"/>
+ <!-- Two short ribbon tails -->
+ <path d="M44 83 36 114 51 106 61 116 66 94" fill="#6236A1" stroke="url(#rim)" stroke-width="4" stroke-linejoin="round"/>
+ <path d="M84 83 92 114 77 106 67 116 62 94" fill="#51358D" stroke="url(#rim)" stroke-width="4" stroke-linejoin="round"/>
+ <!-- Scalloped medal silhouette -->
+ <path d="M64 14 74 20 86 19 91 30 102 35 100 47 107 57 100 67 102 79 91 84 86 95 74 94 64 101 54 94 42 95 37 84 26 79 28 67 21 57 28 47 26 35 37 30 42 19 54 20Z" fill="#402357" stroke="url(#rim)" stroke-width="6" stroke-linejoin="round" filter="url(#soft)"/>
+ <circle cx="64" cy="57" r="29" fill="url(#inner)" stroke="#E08AFB" stroke-width="3"/>
+ <circle cx="64" cy="57" r="23" stroke="#A965E7" stroke-width="1.5" opacity=".8"/>
+ <!-- Star-shaped unlockable achievement center -->
+ <path d="m64 39 5.7 11.6 12.8 1.9-9.3 9 2.2 12.8L64 68.3l-11.4 6 2.2-12.8-9.3-9 12.8-1.9Z" fill="url(#star)" stroke="#FFF6FF" stroke-width="1.5" stroke-linejoin="round"/>
+ <path d="m64 44 3.7 8 8.7 1.1" stroke="white" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+ <!-- Tiny sparkle accents -->
+ <path d="M15 33v8m-4-4h8M110 24v7m-3.5-3.5h7M110 90v6m-3-3h6" stroke="#E6A1FF" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+ <circle cx="17" cy="80" r="1.8" fill="#D999FF"/><circle cx="112" cy="68" r="1.6" fill="#FFA8F5"/>
+</svg>

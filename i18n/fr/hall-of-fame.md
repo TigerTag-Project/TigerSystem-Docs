@@ -1,5 +1,5 @@
 ---
-sourceHash: 38e0ed6d4e3a27734dd32384a1a43d0997347708ecfabe7469c92bacd127b158
+sourceHash: 32526bee845542a337da439f390e7e178ff09413159c27037fbaeddd7d89480e
 sourcePath: docs/hall-of-fame.md
 ---
 
@@ -67,6 +67,9 @@ choses et votre nom apparaîtra sur cette page à la prochaine régénération :
 
 Les autres façons d'aider, celles qui coûtent de l'argent comme celles qui n'en
 coûtent pas, sont sur [Soutenir le projet](./support.md).
+
+Vous cherchez plutôt le classement des makers ? C'est la [TigerSquad](./tigersquad.md)
+— des niveaux et des XP pour tous ceux qui la rejoignent.
 
 ---
 

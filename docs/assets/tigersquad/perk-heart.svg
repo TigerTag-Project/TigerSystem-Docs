@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none" role="img" aria-label="Cœur TigerSquad et petits cœurs">
+<defs>
+ <linearGradient id="heart" x1="28" y1="27" x2="94" y2="108" gradientUnits="userSpaceOnUse"><stop stop-color="#FFB0D3"/><stop offset=".24" stop-color="#FF5484"/><stop offset=".56" stop-color="#FA244F"/><stop offset="1" stop-color="#B90935"/></linearGradient>
+ <linearGradient id="rim" x1="20" y1="20" x2="105" y2="111" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF0DC"/><stop offset=".45" stop-color="#FF8F7A"/><stop offset="1" stop-color="#FF3564"/></linearGradient>
+ <linearGradient id="shine" x1="44" y1="33" x2="78" y2="79" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".82"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+ <filter id="glow" x="-55%" y="-55%" width="210%" height="210%"><feGaussianBlur stdDeviation="4"/></filter>
+ <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6"/></filter>
+ <path id="shape" d="M64 109 C54 100 19 75 19 49 C19 31 32 22 46 22 C55 22 61 27 64 34 C68 27 74 22 83 22 C98 22 109 33 109 49 C109 75 75 101 64 109Z"/>
+ <path id="mini" d="M0 12 C-3 9 -12 3 -12 -4 C-12 -10 -7 -13 -3 -13 C0 -13 2 -11 3 -9 C4 -11 6 -13 9 -13 C14 -13 18 -9 18 -4 C18 3 9 10 3 15Z"/>
+</defs>
+<!-- local halo, transparent outside -->
+<use href="#shape" fill="#FF335C" opacity=".52" filter="url(#glow)"/>
+<use href="#shape" fill="#690E30" transform="translate(0 3)" opacity=".75"/>
+<use href="#shape" fill="url(#heart)" stroke="url(#rim)" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M28 48 C28 35 36 29 46 29 C56 29 61 38 64 44 C68 36 74 29 83 29 C92 29 100 36 100 47 C100 59 90 72 77 83 C68 72 54 66 41 58 C34 54 29 51 28 48Z" fill="url(#shine)" opacity=".68"/>
+<path d="M31 44 C33 35 39 32 47 33" stroke="#FFF5F7" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+<path d="M71 42 C76 34 84 32 91 37" stroke="#FFF5F7" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M40 85 Q52 97 64 104 Q82 90 95 72" stroke="#FFB477" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+<!-- satellite hearts -->
+<g transform="translate(17 20) scale(.53)"><use href="#mini" fill="#FF547C" filter="url(#soft)"/><use href="#mini" fill="url(#heart)" stroke="#FFB7B3" stroke-width="2"/><path d="M-8 -4 Q-6 -10 -2 -9" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".75"/></g>
+<g transform="translate(104 16) scale(.43)"><use href="#mini" fill="url(#heart)" stroke="#FFD0CB" stroke-width="2"/></g>
+<g transform="translate(106 88) scale(.40)"><use href="#mini" fill="url(#heart)" stroke="#FFB7B3" stroke-width="2"/></g>
+<g transform="translate(16 101) scale(.37)"><use href="#mini" fill="url(#heart)" stroke="#FFB7B3" stroke-width="2"/></g>
+<circle cx="113" cy="51" r="2" fill="#FFC2BD"/><circle cx="12" cy="62" r="1.8" fill="#FF9E9D"/>
+</svg>

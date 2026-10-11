@@ -1,5 +1,5 @@
 ---
-sourceHash: f9ef3b6687546cfc6d858b587b95cc16fad754b0b296ec602dc950bfa74d559c
+sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
 sourcePath: docs/support.md
 ---
 
@@ -15,6 +15,22 @@ et, puisque l'intérêt même d'un standard ouvert est que vous ne lui devez rie
 ce que vous pouvez ignorer sans scrupule. Si vous n'avez pas encore commencé,
 commencez gratuitement :
 [démarrer pour 0 €](./guides/start-for-free.md).
+
+## Rejoignez la TigerSquad
+
+La [TigerSquad](./tigersquad.md), c'est la communauté gratuite des makers qui
+portent le projet : un niveau de Bronze à Platinum, des XP pour chaque puce
+TigerTag que vous possédez, et une place sur le mur public. Rejoindre ne coûte
+rien et ne demande aucun paiement.
+
+## Offrez un café au mainteneur
+
+TigerSystem est un projet open source personnel ; les dons vont à son
+mainteneur, et les applications restent gratuites dans tous les cas.
+[Buy Me a Coffee](https://buymeacoffee.com/benoitl),
+[Ko-fi](https://ko-fi.com/tigersystemio) ou [PayPal](https://paypal.me/tigersystemio) —
+et si vous reliez le don à votre compte, les membres de la TigerSquad passent
+au niveau Gold. Comment le relier : voir la page [TigerSquad](./tigersquad.md).
 
 ## Achetez les pièces officielles, si vous achetiez de toute façon
 
@@ -66,4 +82,4 @@ qui posaient la question.
 
 ---
 
-**▲ [Index de la documentation](../README.md)** · **Voir aussi :** [TigerTag](./products/tigertag.md), [Partenaires certifiés](./certified-partners.md), [Pourquoi TigerSystem existe](./vision/why-tigersystem.md)
+**▲ [Index de la documentation](../README.md)** · **Voir aussi :** [TigerSquad](./tigersquad.md), [TigerTag](./products/tigertag.md), [Partenaires certifiés](./certified-partners.md), [Pourquoi TigerSystem existe](./vision/why-tigersystem.md)
