@@ -7,6 +7,10 @@ integration today**. However, Tiger Studio's Snapmaker link already speaks
 Moonraker WebSocket/JSON-RPC — the natural foundation for a
 vendor-neutral Klipper integration.
 
+Sharing the transport does not mean sharing the support: the Snapmaker link
+happens to use Moonraker, and a generic Klipper machine is **not supported**
+today, even though it exposes the same API.
+
 | Aspect | Status |
 |---|---|
 | Moonraker transport | Exists (used by the Snapmaker integration) |
