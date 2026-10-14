@@ -1,5 +1,5 @@
 ---
-sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
+sourceHash: 75e2e06ba62fa0ebfe1c2c5ada15e34d9c0e071b58e0882c82c8847319441e2a
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -30,6 +30,10 @@ Comment TigerSystem fonctionne avec chaque écosystème d'imprimante. Deux axes 
 | [Klipper](./klipper.md) | Pas encore (les bases existent) | n/a | n/a | n/a |
 | [OpenSpool](./openspool.md) | n/a (standard de tag, pas une imprimante) | NFC Type 2, JSON NDEF | Aucun — standard ouvert | Spécification documentée |
 | Qidi | Non intégré | Mifare Classic 1K | Clé par défaut | [Spécification documentée](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
+
+> **Note :** la liaison Snapmaker passe par Moonraker, ce qui ne fait pas
+> fonctionner les autres machines Moonraker — les imprimantes
+> [Klipper](./klipper.md) génériques ne sont pas prises en charge aujourd'hui.
 
 > **Note :** les fiches RFID par constructeur (spécifications de décodage en lecture
 > seule, dérivées du projet [OpenRFID](https://github.com/suchmememanyskill/OpenRFID))
