@@ -33,6 +33,7 @@ working; it becomes **TigerTag Certified** only when TigerSystem grants it
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | 3D-printable dual NFC reader stand | Hardware |
 | <img src="../assets/icons/tigerscale.svg" width="18" alt="" /> [TigerScale](./tigerscale.md) | Open-source ESP32 filament scale | Hardware |
 | <img src="../assets/icons/tigerspool.svg" width="18" alt="" /> [TigerSpool](./tigerspool.md) | Open-source ESP32 box beside the printer — tap a spool, pick a slot, any brand | Hardware |
+| <img src="../assets/icons/tigertouch.svg" width="18" alt="" /> [Tiger Touch](./tigertouch.md) | Open-source firmware for the BIGTREETECH Panda Touch / K-Touch screen — every brand of printer, live, on one screen | Firmware |
 | <img src="../assets/icons/factory.svg" width="18" alt="" /> [TigerTag Factory & Manager](./factory-suite.md) | Industrial chip programming & filament-database tools for factories — **not public**, production-grade | Industrial |
 
 ```mermaid

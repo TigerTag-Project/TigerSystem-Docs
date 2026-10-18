@@ -142,6 +142,7 @@ the TigerTag user; every other vision is accepted and encouraged.
 | <img src="docs/assets/icons/tigerpod.svg" width="20" alt="" /> **[TigerPOD](docs/products/tigerpod.md)** | A 3D-printable scanner stand for your desk — free STL |
 | <img src="docs/assets/icons/tigerscale.svg" width="20" alt="" /> **[TigerScale](docs/products/tigerscale.md)** | The open-source scale that answers "how much is left?" |
 | <img src="docs/assets/icons/tigerspool.svg" width="20" alt="" /> **[TigerSpool](docs/products/tigerspool.md)** | Hold a spool against it, tap a slot — the filament is written on any printer brand |
+| <img src="docs/assets/icons/tigertouch.svg" width="20" alt="" /> **[Tiger Touch](docs/products/tigertouch.md)** | A firmware that turns the Panda Touch screen into one live display for every printer brand |
 
 ## Everything is open — the public repositories
 
@@ -160,6 +161,7 @@ piece of it.
 | [Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale) | The V2 scale — previous generation, different hardware (MIT) |
 | [TigerPOD](https://github.com/TigerTag-Project/TigerPOD) | Print the reader stand — free STL (CC BY 4.0) |
 | [TigerSpool-RFID](https://github.com/TigerTag-Project/TigerSpool-RFID) | Build the printer-side box — ESP32-S3, touchscreen, NFC (MIT) |
+| [Tiger-Touch](https://github.com/TigerTag-Project/Tiger-Touch) | The firmware for the Panda Touch / K-Touch screen — every printer brand on one display (MIT) |
 
 ## Dive deeper
 
