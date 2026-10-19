@@ -26,6 +26,10 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 | [OpenSpool](./openspool.md) | n/a (tag standard, not a printer) | NFC Type 2, NDEF JSON | None — open standard | Spec documented |
 | Qidi | Not integrated | Mifare Classic 1K | Default key | [Spec documented](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
+> **Note:** the Snapmaker link happens to use Moonraker; that does not make
+> other Moonraker machines work — generic [Klipper](./klipper.md) printers are
+> not supported today.
+
 > **Note:** the per-vendor RFID sheets (read-only decoding specs, derived from
 > the [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) project) are
 > maintained in the Tiger Studio repo under
