@@ -154,6 +154,12 @@ The full costed bill of materials lives in the
 
 A driver might be missing for your system. [Follow the driver install guide](../tutorials/tigerscale-serial-port-driver.md).
 
+**A weight stuck at 0 g or negative, a drifting reading, readers not detected,
+WiFi lost after a reflash?**
+
+The scale's own repository keeps the full list, symptom by symptom:
+[Tiger-Scale-V3 troubleshooting](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
+
 ## Yours to make and to sell
 
 **Anyone can manufacture and sell TigerScale hardware. No licence fee, no
