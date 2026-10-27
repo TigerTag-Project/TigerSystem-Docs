@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -168,6 +168,12 @@ La nomenclature complète et chiffrée est dans le
 **Aucun port COM détecté pour l'ESP32-S3 dans l'[installateur web](https://tigertag-project.github.io/Tiger-Scale-V3/) ?**
 
 Il manque peut-être un pilote pour votre système. [Suivez le guide d'installation du pilote](../tutorials/tigerscale-serial-port-driver.md).
+
+**Un poids bloqué à 0 g ou négatif, une mesure qui dérive, des lecteurs non
+détectés, le WiFi perdu après un reflash ?**
+
+Le dépôt de la balance tient la liste complète, symptôme par symptôme :
+[dépannage de Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## À vous de la fabriquer, et de la vendre
 
