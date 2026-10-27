@@ -1,5 +1,5 @@
 ---
-sourceHash: 6a70119833796c9aad3bd09cf54863a7572f174fd87f0f0f4d3a948ea25fe24a
+sourceHash: 03e3a29ecc9d4b7e4a787c9c13318492f06c90566ba309c9be928d03f94979b6
 sourcePath: docs/compatibility/klipper.md
 ---
 
@@ -11,6 +11,10 @@ Les imprimantes Klipper génériques (via l'API **Moonraker**) **ne font pas
 l'objet d'une intégration officielle à ce jour**. En revanche, la liaison
 Snapmaker de Tiger Studio parle déjà le WebSocket/JSON-RPC de Moonraker — la
 base naturelle d'une intégration Klipper neutre vis-à-vis des constructeurs.
+
+Partager le transport ne veut pas dire partager la prise en charge : la liaison
+Snapmaker passe par Moonraker, et une machine Klipper générique **n'est pas
+prise en charge** aujourd'hui, même si elle expose la même API.
 
 | Aspect | Statut |
 |---|---|
