@@ -8,13 +8,17 @@
  * `LOCALES`: fr, de, es, it, nl, pl, pt, pt-pt, ru, zh.
  */
 
+import { LOCALE_META } from '../scripts/lib/docs-config.mjs';
+
 const ORDER = ['fr', 'de', 'es', 'it', 'nl', 'pl', 'pt', 'pt-pt', 'ru', 'zh'];
 
 const row = (...labels) => {
   if (labels.length !== ORDER.length) {
     throw new Error(`sidebar label needs ${ORDER.length} translations, got ${labels.length}: ${labels[0]}`);
   }
-  return Object.fromEntries(ORDER.map((code, index) => [code, labels[index]]));
+  // Starlight matches sidebar translations on the locale's BCP-47 `lang`
+  // (pt-BR, zh-CN), not on the folder name.
+  return Object.fromEntries(ORDER.map((code, index) => [LOCALE_META[code].lang, labels[index]]));
 };
 
 export const LABELS = {

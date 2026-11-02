@@ -301,8 +301,19 @@ export const STRINGS = {
 };
 
 /** The strings for a locale, falling back to English for anything unknown. */
+/**
+ * Astro reports the BCP-47 tag of a locale (`pt-BR`, `zh-CN`), not the name of
+ * its folder (`pt`, `zh`). Map either spelling back to the folder name.
+ */
+const LOCALE_ALIASES = { 'pt-br': 'pt', 'pt-pt': 'pt-pt', 'zh-cn': 'zh' };
+
+export function localeCode(locale) {
+  const key = String(locale ?? 'en').toLowerCase();
+  return LOCALE_ALIASES[key] ?? (key in STRINGS ? key : key.split('-')[0]);
+}
+
 export function stringsFor(locale) {
-  return STRINGS[locale] ?? STRINGS.en;
+  return STRINGS[localeCode(locale)] ?? STRINGS.en;
 }
 
 /** Fill `{name}` placeholders. */
