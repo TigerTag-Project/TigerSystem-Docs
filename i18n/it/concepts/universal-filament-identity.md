@@ -1,0 +1,88 @@
+---
+sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourcePath: docs/concepts/universal-filament-identity.md
+---
+
+# Identità universale del filamento
+
+## Un'identità, leggibile ovunque
+
+Un chip TigerTag dà a una bobina un'**identità universale**: un unico record aperto di
+ciò che il filamento *è*, indipendente da chi lo ha prodotto, da chi lo vende e da quale
+stampante lo fonderà.
+
+L'identità comprende (elenco non esaustivo):
+
+| Famiglia di campi | Esempi |
+|---|---|
+| **Marca** | qualsiasi produttore di filamento, da un elenco di riferimento condiviso |
+| **Materiale / tipo** | PLA, PETG, ABS, TPU… + sottotipo |
+| **Aspetto / colore** | valore del colore, finitura |
+| **Geometria** | diametro (1,75 / 2,85 mm) |
+| **Impostazioni di stampa** | temperature consigliate |
+| **Ciclo di vita** | peso, data di produzione |
+
+## Il database di riferimento condiviso
+
+Le identità non sono testo libero: marche, materiali, aspetti, tipi, diametri e
+unità provengono da un **database di riferimento condiviso** servito da `cdn.tigertag.io`
+(ospitato nello stesso progetto Firebase degli account). Ogni app risolve gli stessi ID con lo stesso significato, così un
+chip codificato da uno strumento viene letto in modo identico in ogni altro.
+
+> **TODO:** collegare l'endpoint pubblico di consultazione del database / il formato del dump non appena
+> la guida RFID lo documenta. I dati di riferimento sono inclusi in Tiger Studio
+> (`assets/db/tigertag/`) e si aggiornano dalla CDN.
+
+## Un'identità, quattro stati
+
+L'identità è il *record*, non il *chip*, e attraversa quattro
+stati:
+
+```mermaid
+flowchart LR
+  TD["TigerData<br/>the protocol's data in digital form<br/>(no chip, no UID — lives anywhere)"]
+  TDP["TigerData+<br/>digital, and tied to a real catalogue product<br/>(still no chip, but nothing typed by hand)"]
+  TT["TigerTag<br/>the data written into an NFC chip<br/>(a physical UID is now associated)"]
+  TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
+  TD -- "pick it from the catalogue" --> TDP
+  TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
+  TDP -- "write to a chip" --> TT
+```
+
+- **TigerData** è il protocollo *prima* del chip: la stessa identità, memorizzata
+ in forma digitale — in un inventario, un database, un file, ovunque. Il protocollo
+ TigerTag può vivere interamente fuori da un chip RFID. Questa nozione di **chip
+ virtuale è un'innovazione di TigerSystem: non esiste altrove**: gestire un inventario completo
+ con zero chip NFC, trasferire un'identità in un chip più tardi o mai,
+ e l'interoperabilità del protocollo è preservata in entrambi i casi.
+- **TigerData+** è un TigerData che sa *esattamente di quale prodotto si tratta*. Ancora
+ nessun chip, ancora nulla da acquistare — ma invece di ciò che ha digitato il suo proprietario,
+ porta un vero prodotto del catalogo ufficiale: marca, colore,
+ materiale, temperature, diametro, SKU ed EAN esatti, direttamente dalla fonte. È
+ ciò che ottieni scegliendo un prodotto anziché descriverlo.
+ >**Non** è un TigerTag+, e non pretende mai di esserlo: nessun chip, nessun UID. Il `+`
+ >significa *identificato*, non *certificato*. Per gli sviluppatori: una bobina è un TigerData+
+ >quando è senza chip **e** porta un vero id di prodotto — questa coppia è la
+ >definizione, ed è riportata sul record come `protocol: "TigerData+"` così
+ >puoi leggerla direttamente. Vedi la
+ >[struttura dei dati Firestore](https://github.com/TigerTag-Project/TigerTag_Firebase_Backend#-firestore-data-structure).
+- Nel momento in cui quei dati vengono **scritti in un chip NFC**, diventano un
+ **TigerTag**: un **UID fisico viene finalmente associato** all'identità.
+- Scrivi in quel chip un **prodotto di catalogo** anziché valori digitati a mano
+ ed è un [**TigerTag+**](../products/tigertag-plus.md) — stesso `+` di
+ TigerData+, stesso significato: *identificato*. Firmato da un produttore certificato,
+ diventa un **TigerTag+ Certified**. In ogni caso il chip resta leggibile al 100 %
+ offline.
+
+Un TigerData può restare digitale per sempre, oppure essere **promosso a chip reale
+in modo atomico** quando sei pronto (Tiger Studio lo fa in un solo passaggio). E
+tutti e quattro gli stati viaggiano come file: il
+[**formato di scambio `.ttag`**](../developers/ttag-format.md) trasporta uno o
+più materiali di inventario — TigerData, TigerData+, TigerTag o TigerTag+ — su una chiavetta
+USB, in una e-mail, tra strumenti.
+
+---
+
+**◀ Precedente:** [Flusso di lavoro Seconda vita](../philosophy/second-life.md) · **▲ [Indice della documentazione](../../README.md)** · **Successivo ▶** [Il chip TigerTag](./tigertag-chip.md)
+
+**Vedi anche:** [Pagina del prodotto TigerTag](../products/tigertag.md), [Inventario e sincronizzazione cloud](./inventory-and-cloud-sync.md)

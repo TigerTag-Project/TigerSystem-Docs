@@ -35,6 +35,7 @@ jobs:
       - name: Build
         run: pnpm build
 
-      # Stale French pages are a signal, not a broken build — reported, never fatal.
+      # Stale translations of a language still being filled in are a signal, not a
+      # broken build — reported, never fatal.
       - name: Report translation staleness
         run: pnpm translate:check

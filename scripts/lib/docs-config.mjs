@@ -13,9 +13,35 @@ export const BLOB_URL = `${REPO_URL}/blob/main`;
 /** Public origin of the documentation site. */
 export const SITE_URL = 'https://wiki.tigersystem.io';
 
-/** Locales. `en` is the source language and is served from the site root. */
-export const LOCALES = /** @type {const} */ (['en', 'fr']);
+/**
+ * Locales. `en` is the source language and is served from the site root; every
+ * other locale is a translation of the English pages, never of another
+ * translation. They are the eleven languages Tiger Studio itself speaks, and
+ * keep its codes: `pt` is Brazilian Portuguese, `pt-pt` European, `zh` Simplified.
+ */
+export const LOCALES = /** @type {const} */ ([
+  'en', 'fr', 'de', 'es', 'it', 'nl', 'pl', 'pt', 'pt-pt', 'ru', 'zh',
+]);
 export const DEFAULT_LOCALE = 'en';
+
+/**
+ * What each locale is called, and the BCP-47 tag the page is served as. The
+ * directory under `i18n/` and the URL prefix are the locale code itself.
+ * `name` is the language in English, for the translator's prompt.
+ */
+export const LOCALE_META = {
+  en: { label: 'English', lang: 'en', name: 'English' },
+  fr: { label: 'Français', lang: 'fr', name: 'French' },
+  de: { label: 'Deutsch', lang: 'de', name: 'German' },
+  es: { label: 'Español', lang: 'es', name: 'Spanish' },
+  it: { label: 'Italiano', lang: 'it', name: 'Italian' },
+  nl: { label: 'Nederlands', lang: 'nl', name: 'Dutch' },
+  pl: { label: 'Polski', lang: 'pl', name: 'Polish' },
+  pt: { label: 'Português (Brasil)', lang: 'pt-BR', name: 'Brazilian Portuguese' },
+  'pt-pt': { label: 'Português (Portugal)', lang: 'pt-PT', name: 'European Portuguese' },
+  ru: { label: 'Русский', lang: 'ru', name: 'Russian' },
+  zh: { label: '简体中文', lang: 'zh-CN', name: 'Simplified Chinese' },
+};
 
 /**
  * How complete each locale claims to be. This is the switch that decides whether
@@ -34,6 +60,15 @@ export const DEFAULT_LOCALE = 'en';
 export const LOCALE_STATUS = {
   en: 'source',
   fr: 'complete',
+  de: 'in-progress',
+  es: 'in-progress',
+  it: 'in-progress',
+  nl: 'in-progress',
+  pl: 'in-progress',
+  pt: 'in-progress',
+  'pt-pt': 'in-progress',
+  ru: 'in-progress',
+  zh: 'in-progress',
 };
 
 /**

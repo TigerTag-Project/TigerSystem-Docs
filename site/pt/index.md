@@ -1,0 +1,100 @@
+---
+title: "A identidade aberta do filamento"
+description: "A identidade NFC aberta para filamento de impressão 3D — o que é o TigerTag, o que roda nele e como construir a sua própria solução."
+template: splash
+editUrl: false
+banner:
+  content: Esta página foi <strong>traduzida automaticamente</strong> do inglês. <a href="https://github.com/TigerTag-Project/TigerSystem-Docs/issues/new?title=%5BPT%5D+in%C3%ADcio">Informe um erro</a>.
+hero:
+  title: "TigerSystem"
+  tagline: "Seu filamento, finalmente inteligente — e finalmente seu. Um pequeno chip NFC aberto, e uma bobina finalmente pode se apresentar sozinha."
+  image:
+    html: |
+      <img src="/assets/hero-tigersystem-ecosystem.png" alt="O Tiger Studio em um computador, um leitor TigerPOD com uma bobina etiquetada e o aplicativo para celular" width="720" height="480" />
+  actions:
+    - text: "Sua primeira bobina inteligente"
+      link: /pt/tutorials/first-smart-spool/
+      icon: right-arrow
+    - text: "Por que o TigerSystem existe"
+      link: /pt/vision/why-tigersystem/
+      variant: minimal
+    - text: "Explorar os produtos"
+      link: /pt/products/
+      variant: minimal
+---
+
+## TigerSystem em 30 segundos
+
+Toda prateleira de impressão 3D esconde o mesmo mistério: vinte bobinas, metade
+sem etiqueta, e nenhuma capaz de dizer o que é, quanto ainda tem ou como gosta
+de ser impressa.
+
+**O TigerSystem resolve isso com um pequeno chip.** Cole um chip NFC
+[TigerTag](/pt/products/tigertag/) em uma bobina e ela se apresenta sozinha —
+ao seu celular, ao seu computador, à sua impressora: *“Sou PLA preto fosco da
+marca X, 1,75 mm, me imprima a 210 °C, e restam 640 g de mim.”*
+
+Os fabricantes de impressoras também etiquetam suas bobinas — mas de forma
+**bloqueada**, em formatos secretos que só funcionam com as próprias máquinas.
+O TigerSystem inverte isso: o chip é **aberto e legível por qualquer coisa**, os
+dados pertencem à **sua** conta, e cada peça — aplicativos, nuvem, balança,
+leitor, a própria especificação do chip — é publicada para que qualquer pessoa
+use ou construa em cima dela. É um formato, não um jardim murado.
+
+Mais de **2,5 milhões de chips** já foram produzidos e saem de fábrica no
+filamento de marcas como Rosa3D, eSun, Sunlu e R3D, o que faz do TigerTag o
+protocolo RFID de terceiros mais difundido do mundo.
+
+<div class="ts-boxes">
+<img src="/assets/box-rosa3d-cutout.png" alt="Caixa de filamento Rosa3D com TigerTag NFC-RFID" />
+<img src="/assets/box-esun-cutout.png" alt="Caixa de filamento eSun com TigerTag NFC-RFID" />
+<img src="/assets/box-sunlu-cutout.png" alt="Caixa de filamento Sunlu com TigerTag NFC-RFID" />
+</div>
+
+<p class="ts-boxes__caption"><em>Não é uma maquete: caixas reais em prateleiras reais, enviadas com TigerTag dentro.</em></p>
+
+
+<div class="ts-cardgrid">
+<a class="ts-card" href="/pt/tutorials/first-smart-spool/"><span class="ts-card__body"><span class="ts-card__title">Pronto para testar</span><span class="ts-card__text">Torne uma bobina inteligente em dois minutos — um chip NTAG virgem, seu celular, o aplicativo gratuito. Sem conta, totalmente offline.</span></span></a>
+<a class="ts-card" href="/pt/products/"><span class="ts-card__body"><span class="ts-card__title">Um usuário</span><span class="ts-card__text">O que cada produto realmente faz por você — chips, aplicativos, a balança, o suporte do leitor.</span></span></a>
+<a class="ts-card" href="/pt/compatibility/"><span class="ts-card__body"><span class="ts-card__title">Um dono de impressora</span><span class="ts-card__text">Funciona com a sua máquina? Seis marcas já estão no ar, e o chip funciona com todas as outras.</span></span></a>
+<a class="ts-card" href="/pt/developers/"><span class="ts-card__body"><span class="ts-card__title">Um desenvolvedor</span><span class="ts-card__text">Leia e grave chips com JavaScript ou Python, ou integre a identidade ao seu próprio software.</span></span></a>
+<a class="ts-card" href="/pt/vision/for-filament-manufacturers/"><span class="ts-card__body"><span class="ts-card__title">Um fabricante de filamento</span><span class="ts-card__text">Integração na fábrica em poucos dias, cerca de um segundo por chip, em escala de produção.</span></span></a>
+<a class="ts-card" href="/pt/faq/"><span class="ts-card__body"><span class="ts-card__title">Só curiosidade</span><span class="ts-card__text">As perguntas que todo mundo faz, respondidas — chips, nuvem, impressoras, privacidade e muito mais.</span></span></a>
+</div>
+
+<figure class="ts-figure">
+<img src="/assets/real-bench-setup.jpg" alt="Uma bancada real do TigerSystem — Tiger Studio Manager, TigerScale, um sensor de cor TD1S, um leitor ACR122U e um TigerPOD" />
+<figcaption>Não é uma maquete: o ambiente de testes em uma bancada real — Studio, TigerScale, TD1s e TigerPOD trabalhando juntos.</figcaption>
+</figure>
+
+## Onde mora a verdade
+
+Esta wiki é gerada a partir do
+[repositório TigerSystem-Docs](https://github.com/TigerTag-Project/TigerSystem-Docs), que é a **fonte da
+verdade** do ecossistema. Onde outra fonte discordar do repositório, vale o
+repositório.
+
+**E o repositório é de todos.** Você não precisa de permissão, convite nem de
+qualquer vínculo com o projeto para corrigi-lo:
+
+- Algo está errado, confuso ou faltando, e você prefere apenas avisar? →
+  [abra uma issue](https://github.com/TigerTag-Project/TigerSystem-Docs/issues/new)
+- Você sabe o que deveria estar escrito? → toda página tem um link **“Editar
+  página”** que leva direto ao Markdown por trás dela. Altere, abra um pull
+  request e pronto — o GitHub cuida do fork para você, e funciona até pelo
+  celular.
+
+Erros de digitação, redações melhores, um passo que faltou, uma página que
+fez você pegar o caminho errado: tudo é bem-vindo, e são as pequenas correções
+que se acumulam.
+O conteúdo está sob [CC BY 4.0](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/LICENSE);
+veja o [CONTRIBUTING](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/CONTRIBUTING.md) para as regras da casa, que
+cabem em uma tela.
+
+A política de marca cobre a *marca* — o logotipo em um chip físico. Ela não tem
+nada a ver com esta documentação, que é aberta a todos.
+
+Assistentes de IA devem começar pelo [llms.txt](/llms.txt), a explicação
+canônica condensada. Todos os outros podem começar pelo
+[glossário](/pt/glossary/) se algum termo atrapalhar.

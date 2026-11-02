@@ -1,5 +1,5 @@
 /**
- * Regenerates the Hall of Fame table from GitHub, in both language editions.
+ * Regenerates the Hall of Fame table from GitHub, in every language edition.
  *
  *   node scripts/contributors.mjs        # rewrite the block
  *   node scripts/contributors.mjs --check # fail if it is out of date
@@ -19,6 +19,9 @@ import path from 'node:path';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
+import { DEFAULT_LOCALE, LOCALES } from './lib/docs-config.mjs';
+import { stringsFor } from './lib/locale-strings.mjs';
+
 const run = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -29,18 +32,16 @@ const TEAM = new Set(['BenGlut', 'TigerTag-Project']);
 const START = '<!-- contributors:start -->';
 const END = '<!-- contributors:end -->';
 
-const PAGES = [
-  {
-    file: 'docs/hall-of-fame.md',
-    header: '| Who | Commits | Pull requests | Issues |',
-    line: (l, c) => `| **[@${l}](https://github.com/${l})** | ${c.commits || '—'} | ${c.prs || '—'} | ${c.issues || '—'} |`,
-  },
-  {
-    file: 'i18n/fr/hall-of-fame.md',
-    header: '| Qui | Commits | Pull requests | Issues |',
-    line: (l, c) => `| **[@${l}](https://github.com/${l})** | ${c.commits || '—'} | ${c.prs || '—'} | ${c.issues || '—'} |`,
-  },
-];
+const line = (l, c) =>
+  `| **[@${l}](https://github.com/${l})** | ${c.commits || '—'} | ${c.prs || '—'} | ${c.issues || '—'} |`;
+
+/** The English page, then one translation per language, each with its own first column. */
+const PAGES = LOCALES.map((locale) => ({
+  locale,
+  file: locale === DEFAULT_LOCALE ? 'docs/hall-of-fame.md' : `i18n/${locale}/hall-of-fame.md`,
+  header: `| ${stringsFor(locale).hofWho} | Commits | Pull requests | Issues |`,
+  line,
+}));
 
 async function gh(endpoint) {
   try {
@@ -83,23 +84,34 @@ const block = (page, people) =>
   [START, '', page.header, '|---|---|---|---|', ...people.map(([l, c]) => page.line(l, c)), '', END].join('\n');
 
 /**
- * Re-stamp the French page's `sourceHash` against the English one.
+ * Re-stamp every translated page's `sourceHash` against the English one.
  *
- * This script is the only thing that edits both editions at once, so it is
+ * This script is the only thing that edits all the editions at once, so it is
  * also the only thing that can leave them structurally identical but
  * *declared* stale. `check-i18n` compares the hash, not the content, and it
  * is fatal — so without this the weekly refresh would turn CI red every
  * Monday morning for a table it had just written correctly.
  */
-async function restampFrench() {
+async function restampTranslations() {
   const source = path.join(ROOT, 'docs/hall-of-fame.md');
-  const target = path.join(ROOT, 'i18n/fr/hall-of-fame.md');
-  const hash = crypto.createHash('sha256').update(await readFile(source)).digest('hex');
-  const current = await readFile(target, 'utf8');
-  const next = current.replace(/^sourceHash: .*$/m, `sourceHash: ${hash}`);
-  if (next === current) return;
-  await writeFile(target, next);
-  console.log('contributors: re-stamped i18n/fr/hall-of-fame.md');
+  // LF endings, as the committed blob has them — see check-i18n.
+  const text = (await readFile(source, 'utf8')).replaceAll('\r\n', '\n');
+  const hash = crypto.createHash('sha256').update(text).digest('hex');
+  for (const locale of LOCALES) {
+    if (locale === DEFAULT_LOCALE) continue;
+    const target = path.join(ROOT, `i18n/${locale}/hall-of-fame.md`);
+    let current;
+    try {
+      current = await readFile(target, 'utf8');
+    } catch (error) {
+      if (error.code === 'ENOENT') continue; // not translated yet
+      throw error;
+    }
+    const next = current.replace(/^sourceHash: .*$/m, `sourceHash: ${hash}`);
+    if (next === current) continue;
+    await writeFile(target, next);
+    console.log(`contributors: re-stamped i18n/${locale}/hall-of-fame.md`);
+  }
 }
 
 const check = process.argv.includes('--check');
@@ -108,7 +120,13 @@ let stale = 0;
 
 for (const page of PAGES) {
   const file = path.join(ROOT, page.file);
-  const current = await readFile(file, 'utf8');
+  let current;
+  try {
+    current = await readFile(file, 'utf8');
+  } catch (error) {
+    if (error.code === 'ENOENT' && page.locale !== DEFAULT_LOCALE) continue; // not translated yet
+    throw error;
+  }
   const i = current.indexOf(START);
   const j = current.indexOf(END);
   if (i === -1 || j === -1) throw new Error(`${page.file}: markers not found`);
@@ -126,7 +144,7 @@ for (const page of PAGES) {
 
 // Unconditional, and idempotent: it repairs a hash left stale by an earlier
 // run as readily as one this run created.
-if (!check) await restampFrench();
+if (!check) await restampTranslations();
 
 if (check && stale) process.exit(1);
 console.log(`contributors: ${people.length} contributor(s) outside the project's own accounts`);

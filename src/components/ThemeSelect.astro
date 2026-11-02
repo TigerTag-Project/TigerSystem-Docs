@@ -11,8 +11,9 @@
  * Storage stays Starlight's own `starlight-theme` key, so the inline
  * no-FOUC script in ThemeProvider keeps working untouched.
  */
-const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
-const label = locale === 'fr' ? 'Thème clair ou sombre' : 'Light or dark theme';
+import { stringsFor } from '../../scripts/lib/locale-strings.mjs';
+
+const label = stringsFor(Astro.currentLocale ?? 'en').theme;
 ---
 
 <tiger-theme-toggle>
