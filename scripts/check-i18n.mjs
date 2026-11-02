@@ -177,7 +177,13 @@ function tableShape(lines) {
 
 /* -------------------------------------------------------------------------- */
 
-const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex');
+/**
+ * Hashed with LF endings. A Windows checkout rewrites every text file to CRLF,
+ * and the hash a translation records is the committed blob's, which is LF:
+ * without this, every page of every locale reads as stale on that machine.
+ */
+const sha256 = (value) =>
+  crypto.createHash('sha256').update(String(value).replaceAll('\r\n', '\n')).digest('hex');
 
 async function walk(dir, base = dir) {
   const out = [];

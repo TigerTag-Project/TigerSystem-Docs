@@ -54,8 +54,8 @@ content, so `docs/` stays the only place a fact lives.
 
 ```
 docs/**             English, canonical  ─┐
-i18n/fr/**          French, derived     ─┼─►  src/content/docs/**   (generated, gitignored)
-site/en|fr/**       site-only pages     ─┘
+i18n/<locale>/**   Translations      ─┼─►  src/content/docs/**   (generated, gitignored)
+site/<locale>/**   site-only pages     ─┘
 docs/** (non-.md), llms.txt             ──►  public/**             (generated, gitignored)
 ```
 
@@ -97,15 +97,26 @@ generated tree.
 
 ### Translations
 
-English is the source language. French is derived and lives in `i18n/fr/`,
-mirroring `docs/` file for file. Each French page records the SHA-256 of the
-English file it was made from:
+English is the source language, and the only one: every translation is made
+from the English page, never from another translation. The ten translated
+languages — French, German, Spanish, Italian, Dutch, Polish, Portuguese (Brazil,
+`pt`), Portuguese (Portugal, `pt-pt`), Russian and Simplified Chinese (`zh`) —
+are the ones Tiger Studio speaks, and live in `i18n/<locale>/`, mirroring
+`docs/` file for file. Each translated page records the SHA-256 of the English
+file it was made from:
 
 ```bash
-pnpm translate:check                      # which French pages are stale or missing
-ANTHROPIC_API_KEY=… pnpm translate        # refresh the stale ones
-ANTHROPIC_API_KEY=… pnpm translate -- --only products/tigertag.md
+pnpm translate:check                      # which pages are stale or missing, per language
+ANTHROPIC_API_KEY=… pnpm translate        # refresh the stale ones, every language
+ANTHROPIC_API_KEY=… pnpm translate -- --locale de          # one language
+ANTHROPIC_API_KEY=… pnpm translate -- --locale de --only products/tigertag.md
+node scripts/stamp-translations.mjs --locale de            # stamp pages written by hand
 ```
+
+The recurring words of each language are fixed in
+[`scripts/lib/glossary.mjs`](scripts/lib/glossary.mjs), and the site's own words
+(banner, footer vocabulary, buttons) in
+[`scripts/lib/locale-strings.mjs`](scripts/lib/locale-strings.mjs).
 
 The key is read from the environment and must never be committed — see
 [`.env.example`](.env.example).
@@ -125,7 +136,10 @@ Coverage is governed per locale by `LOCALE_STATUS` in
 | `in-progress` | reported, never fatal — the locale is still being filled in |
 | `complete` | **a build failure** — the locale is announced as fully translated |
 
-**`fr` is `complete`.** An English page cannot be merged without its French
+**`fr` is `complete`; the other nine languages are `in-progress`** — they are
+full translations, announced as complete only once a native reader has gone
+through them. Until then a missing or stale page in one of them is reported,
+never fatal. As for French: An English page cannot be merged without its French
 translation, and editing an English page fails the build until the translation
 catches up. That is the whole difference between "we translate as we go" and
 "this language can be trusted" — and it is why touching `docs/` now means
@@ -134,8 +148,8 @@ touching `i18n/fr/` in the same change.
 If that blocks you, say so in the pull request rather than working around it:
 lowering `fr` back to `in-progress` is a deliberate decision, not a workaround. Translations are committed and reviewable like
 any other change; correcting French prose by hand is welcome, and the site
-carries a banner on every French page inviting readers to report an error.
-A page with no translation yet is still served under `/fr/`, showing the English
+carries a banner on every translated page inviting readers to report an error.
+A page with no translation yet is still served under `/<locale>/`, showing the English
 text with Starlight's own "not translated" notice.
 
 ### What lives where
@@ -143,14 +157,14 @@ text with Starlight's own "not translated" notice.
 | Path | What it is |
 |---|---|
 | `docs/` | The source of truth. English. Never written to by the build. |
-| `i18n/fr/` | French translations, committed. |
-| `site/en/`, `site/fr/` | Pages that belong to the site, not to the documentation — the home page. |
+| `i18n/<locale>/` | Translations (`fr`, `de`, `es`, `it`, `nl`, `pl`, `pt`, `pt-pt`, `ru`, `zh`), committed. |
+| `site/<locale>/` | Pages that belong to the site, not to the documentation — the home page. |
 | `site/public/` | Static files the site owns (as opposed to the ones under `docs/`). |
 | `src/sidebar.mjs` | The curated navigation. |
 | `src/styles/tigersystem.css` | Brand tokens and component styling. |
 | `src/components/` | Starlight overrides — header brand, mermaid, Giscus comments. |
 | `scripts/sync-docs.mjs` | Builds the content tree from `docs/`. The piece to read first. |
-| `scripts/translate.mjs` | Refreshes `i18n/fr/`. |
+| `scripts/translate.mjs` | Refreshes `i18n/<locale>/`. |
 | `scripts/screenshots.mjs` | Visual QA: every key page, both themes, desktop and mobile. |
 
 ## License

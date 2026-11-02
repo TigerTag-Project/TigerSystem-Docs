@@ -1,4 +1,5 @@
 ---
+import { localeCode } from '../../scripts/lib/locale-strings.mjs';
 /**
  * Header brand: the app icon plus the wordmark.
  *
@@ -6,7 +7,7 @@
  * ground, so one file serves both themes; the corners are rounded in CSS
  * rather than by shipping a second, pre-rounded file.
  */
-const locale = Astro.currentLocale;
+const locale = Astro.currentLocale ? localeCode(Astro.currentLocale) : undefined;
 const href = locale && locale !== 'en' ? `/${locale}/` : '/';
 ---
 

@@ -27,6 +27,7 @@ import {
   NOT_PUBLISHED,
   REPO_URL,
 } from './lib/docs-config.mjs';
+import { fill, stringsFor } from './lib/locale-strings.mjs';
 import {
   docPathToContentPath,
   docPathToUrl,
@@ -92,18 +93,23 @@ async function copyFile(from, to) {
 /* Markdown pages                                                              */
 /* -------------------------------------------------------------------------- */
 
-function frenchBanner(docRelPath) {
+/**
+ * The notice on a machine-translated page, in the page's own language, with a
+ * pre-filled issue (the page, its source, a line to say what is wrong).
+ */
+function translationBanner(locale, docRelPath) {
+  const strings = stringsFor(locale);
   const issue = new URL(`${REPO_URL}/issues/new`);
-  issue.searchParams.set('title', `[FR] ${docRelPath}`);
+  issue.searchParams.set('title', `[${locale.toUpperCase()}] ${docRelPath}`);
   issue.searchParams.set(
     'body',
-    `Page : \`i18n/fr/${docRelPath}\`\nSource : \`docs/${docRelPath}\`\n\nErreur constatée :\n`,
+    `${strings.issuePage}: \`i18n/${locale}/${docRelPath}\`\n` +
+      `${strings.issueSource}: \`docs/${docRelPath}\`\n\n${strings.issueProblem}:\n`,
   );
-  return (
-    'Cette page a été <strong>traduite automatiquement</strong> depuis l’anglais. ' +
-    `<a href="${issue.href.replace(/&/g, '&amp;')}">Signalez une erreur</a> ou ` +
-    `<a href="${REPO_URL}/blob/main/i18n/fr/${docRelPath}">proposez une correction</a>.`
-  );
+  return fill(strings.banner, {
+    report: issue.href.replace(/&/g, '&amp;'),
+    propose: `${REPO_URL}/blob/main/i18n/${locale}/${docRelPath}`,
+  });
 }
 
 /** Bookkeeping keys the translator writes are for the repository, not for Starlight. */
@@ -152,7 +158,7 @@ async function syncLocale(locale) {
       `editUrl: ${yamlString(editUrl)}`,
       locale === DEFAULT_LOCALE
         ? null
-        : ['banner:', `  content: ${yamlString(frenchBanner(fileRel))}`].join('\n'),
+        : ['banner:', `  content: ${yamlString(translationBanner(locale, fileRel))}`].join('\n'),
       passthroughFrontmatter(result.frontmatter),
       '---',
     ]
