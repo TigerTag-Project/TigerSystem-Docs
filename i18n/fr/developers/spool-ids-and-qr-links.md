@@ -1,0 +1,221 @@
+---
+sourceHash: 716078efa761489505866159551bdb82c5fb30ae6b0aab8c7fc40f000c835660
+sourcePath: docs/developers/spool-ids-and-qr-links.md
+---
+
+# Identifiants de bobine et liens QR
+
+> **Ratifié le 2026-11-05 — pas encore implémenté.** Les applications
+> s'appuient sur ce contrat. Les points encore ouverts sont listés à la fin ;
+> en trancher un ne change que ce qu'il nomme.
+
+Quatre règles que suit chaque application TigerSystem :
+
+1. comment une **bobine sans puce** (TigerData / TigerData+) reçoit son
+   identifiant ;
+2. comment une bobine **garde son lien** quand elle reçoit une puce ;
+3. comment l'identifiant d'une bobine est écrit dans le **QR code** d'une
+   étiquette imprimée, puis relu ;
+4. comment une application **appelle une bobine avec des valeurs** (un poids,
+   une note) par un lien.
+
+## 1. Identifiants de bobine
+
+Une bobine est un document de l'inventaire du compte,
+`users/{uid}/inventory/{spoolId}`. L'identifiant du document **est**
+l'identifiant de la bobine : un compte ne peut pas contenir deux bobines avec
+le même identifiant.
+
+| Bobine | Identifiant | Exemple |
+|---|---|---|
+| Avec puce (TigerTag / TigerTag+) | l'UID NFC de la puce, en hexadécimal majuscule : 14 caractères (UID de 7 octets), 8 (4 octets) ou 20 (10 octets) | `04AB12CD3E4F80` |
+| Sans puce, créée à partir de maintenant | `TigerData_` + l'heure en **millisecondes** (13 chiffres) + un nombre au hasard **0000–9999** (toujours 4 chiffres) | `TigerData_17623456789014213` |
+| Sans puce, créée avant ce contrat | `TigerData_` + 10 chiffres au hasard | `TigerData_4480517985` |
+| Sans puce, ancien préfixe | `CLOUD_` + 10 chiffres au hasard | `CLOUD_4480517985` |
+| Ancien décimal (ancienne application Android) | l'UID écrit en décimal, en cours de migration vers l'hexadécimal | `1234567890123456` |
+
+Ce contrat ne **réécrit jamais** un identifiant déjà créé. Les lecteurs ne
+testent que le préfixe (`TigerData_` / `CLOUD_` → sans puce) ; aucun ne dépend
+du nombre de chiffres. L'identifiant n'est qu'un identifiant : n'en déduisez
+jamais une date de création.
+
+### Créer un identifiant sans puce
+
+Chaque application qui crée des bobines sans puce (Tiger Studio aujourd'hui,
+l'application mobile plus tard) crée l'identifiant de la même façon :
+
+1. **Composer** `TigerData_<Date.now()><quatre chiffres au hasard>`.
+2. **Vérification locale** — si l'identifiant est déjà dans l'inventaire que
+   tient l'application (la copie de l'écoute en direct, cache hors ligne
+   compris) ou dans son `uidMigrationMap`, en composer un autre. Cela
+   fonctionne hors ligne.
+3. **Écrire**
+   - **en ligne :** dans une transaction qui lit d'abord le document et
+     échoue s'il existe ; en cas d'échec, revenir à l'étape 1 ;
+   - **hors ligne :** une écriture simple, mise en attente par Firestore
+     jusqu'au retour du réseau. Les étapes 1 et 2 sont alors la seule
+     protection.
+
+Un simple `set()` sur un identifiant qui existe déjà **écrase** la bobine qui
+s'y trouve, sans prévenir. C'est ce qu'empêche l'étape 3.
+
+Les quatre chiffres au hasard rendent aussi un nouvel identifiant sans puce
+pratiquement unique **sur tous les comptes** (environ une collision tous les
+600 ans à un million de bobines sans puce par an) : un serveur pourra donc plus
+tard résoudre un lien pour quelqu'un d'autre que le propriétaire, sans changer
+aucune étiquette imprimée.
+
+## 2. Garder le lien quand une bobine reçoit une puce
+
+Programmer une puce sur une bobine sans puce déplace la bobine vers l'UID de la
+puce. En **un seul lot d'écritures** :
+
+1. écrire la bobine sous l'UID de la puce (et l'UID jumeau, pour une paire
+   jumelle) ;
+2. supprimer le document `TigerData_…` ;
+3. écrire la redirection `users/{uid}/uidMigrationMap/{ancien identifiant}` →
+   `{ hex_uid, migrated_at }`.
+
+Le lot fait que les trois se produisent ensemble ou pas du tout. La
+redirection vit dans `uidMigrationMap` (la collection qui fait déjà
+correspondre les anciens identifiants décimaux à l'hexadécimal), jamais sous
+forme de document vide dans l'inventaire : tout ce qui lit l'inventaire compte
+un document comme une bobine.
+
+## 3. Liens QR
+
+Une étiquette de bobine imprimée porte un QR code contenant un lien vers la
+bobine, **et rien d'autre** (ni poids, ni note — une valeur imprimée devient
+fausse) :
+
+```
+HTTPS://QR.TIGERTAG.IO/<id>
+```
+
+`<id>` est l'identifiant de la bobine **sans son préfixe** :
+
+| Bobine | Lien |
+|---|---|
+| Avec puce | `HTTPS://QR.TIGERTAG.IO/04AB12CD3E4F80` |
+| Sans puce (nouvelle) | `HTTPS://QR.TIGERTAG.IO/17623456789014213` |
+| Sans puce (avant ce contrat) | `HTTPS://QR.TIGERTAG.IO/4480517985` |
+| `CLOUD_` | **pas de lien QR** — l'étiquette est imprimée sans QR code |
+| Ancien décimal | **pas de lien QR** — migrer d'abord la bobine vers l'hexadécimal |
+
+### Encodage
+
+- Tout le lien est en **majuscules**. Seuls les chiffres, les lettres
+  majuscules et ` $%*+-./:` tiennent dans le mode **alphanumérique** du QR
+  code, qui garde le code petit ; une seule minuscule ou un `_` le fait passer
+  en mode octet. Le schéma et le nom de domaine ne tiennent pas compte de la
+  casse, et les UID sont déjà en hexadécimal majuscule.
+- Segments, avec le mode donné explicitement (les générateurs utilisent le mode
+  octet par défaut) :
+  - identifiant sans puce (que des chiffres) : `HTTPS://QR.TIGERTAG.IO/` en
+    mode **alphanumérique**, puis les chiffres en mode **numérique** ;
+  - UID : tout le lien en **un seul segment alphanumérique** (l'en-tête d'un
+    second segment coûterait une taille).
+- Correction d'erreur **M** (15 %) : les étiquettes se rayent et se plient.
+- Résultat : **25 × 25 modules** pour toute bobine sans puce et tout UID de 4
+  ou 7 octets ; 29 × 29 pour un UID de 10 octets. Dessinez chaque module sur un
+  nombre entier de points d'impression, avec la marge standard de 4 modules.
+
+### Relire un lien
+
+Les lecteurs extraient l'identifiant du lien **hors ligne** : une application
+qui scanne une étiquette n'a jamais besoin du site. Ils lisent le chemin sans
+tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
+
+| Chemin | Identifiant de bobine |
+|---|---|
+| 17 chiffres | `TigerData_<17 chiffres>` |
+| 10 chiffres | `TigerData_<10 chiffres>` |
+| 8, 14 ou 20 caractères hexadécimaux | l'UID, en majuscules |
+| 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
+
+Les applications **écrivent** la forme courte ci-dessus, mais les lecteurs
+**acceptent aussi la forme longue** : le préfixe `TigerData` dans n'importe
+quelle casse, suivi de `_` ou `-`, puis les 17 ou 10 chiffres —
+`TigerData_17623456789014213`, `TigerData-17623456789014213`,
+`TIGERDATA-17623456789014213`, `tigerdata_4480517985` mènent tous à la même
+bobine. Un lien tapé ou partagé à la main continue de fonctionner. Le préfixe
+`CLOUD` n'est accepté sous aucune forme.
+
+Un UID peut ne contenir que des chiffres, mais il fait 8, 14 ou 20 caractères,
+jamais 17 ni 10 : la longueur tranche toujours. Aucun ancien identifiant
+décimal n'arrive à un lecteur, puisqu'aucun n'est jamais imprimé. Toute
+**autre forme** est une étiquette d'une version plus récente : le lecteur le
+dit (« mettez l'application à jour ») au lieu d'échouer. Aucune forme actuelle
+ne contient de lettre après `F` : un futur type d'étiquette (un rack, un
+produit) prend un préfixe en lettre comme `R-…` sans conflit avec les liens de
+bobine déjà imprimés.
+
+### Retrouver la bobine
+
+1. Chercher l'identifiant **dans l'inventaire de la personne connectée**.
+2. Absent → le chercher dans son `uidMigrationMap` et suivre la redirection.
+3. Une paire jumelle a une seule étiquette, avec l'UID principal ; l'un ou
+   l'autre UID ouvre la bobine.
+4. Une bobine supprimée (`deleted: true`) s'ouvre comme « supprimée », pas
+   comme une erreur.
+
+**Confidentialité :** connaître un identifiant ne montre jamais une bobine. Une
+bobine n'est montrée qu'à quelqu'un que les règles Firestore autorisent déjà à
+la lire (le propriétaire, un ami accepté, un inventaire public). Les
+identifiants contiennent une heure et peuvent se deviner ; cela ne doit jamais
+compter.
+
+## 4. Appeler une bobine avec des valeurs
+
+Une application peut construire un lien qui ouvre une bobine **et propose des
+valeurs**, avec des paramètres classiques (ces liens ne sont jamais imprimés :
+la lisibilité l'emporte sur la taille du QR code) :
+
+```
+https://qr.tigertag.io/04AB12CD3E4F80?weight=640&note=Opened%20in%20June
+```
+
+### Paramètres
+
+| Paramètre | Valeur | Limite |
+|---|---|---|
+| `weight` | poids net de filament, en grammes | nombre entier, de 0 à la capacité de la bobine |
+| `note` | la note de la bobine (le champ `message`) | texte brut, 28 octets UTF-8 au plus (l'emplacement de la puce) |
+
+Les noms ne tiennent pas compte de la casse. Un paramètre inconnu est ignoré,
+jamais une erreur. Une valeur hors limite est refusée. Les nouveaux paramètres
+sont ajoutés à ce tableau, jamais inventés par une seule application.
+
+### Qui peut les appliquer
+
+| Situation | Ce qui se passe |
+|---|---|
+| Non connecté | Valeurs **refusées**. Le lien propose de se connecter, puis ouvre la bobine sans elles. |
+| Connecté, pas le propriétaire (bobine d'un ami comprise) | Valeurs **refusées**. La bobine s'ouvre si les règles le permettent. |
+| Connecté, le propriétaire | La bobine s'ouvre avec les valeurs **pré-remplies**, et **un geste** les enregistre (« Mettre à jour : 640 g »). |
+
+Un lien n'écrit jamais tout seul : n'importe qui peut en fabriquer un et
+l'envoyer, et être connecté ne prouve pas que la personne voulait l'appliquer.
+Une application qui doit écrire sans confirmation (une balance qui met le poids
+à jour en continu, une intégration) n'utilise pas de lien : elle écrit par le
+compte de l'utilisateur, sous les règles Firestore
+([guide d'intégration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
+
+## Points ouverts
+
+- **Schéma en majuscules.** `HTTPS://` en majuscules est reconnu comme un lien
+  par l'appareil photo de l'iPhone (testé le 2026-11-05, liens avec et sans
+  puce). Reste à tester : Google Lens, l'appareil photo Samsung et une
+  application de scan basique. Si l'un échoue, le lien passe en minuscules
+  (`https://qr.tigertag.io/` en mode octet + l'identifiant), ce qui coûte une
+  taille (29 × 29).
+- **Liens d'application.** iOS (`apple-app-site-association`) et Android
+  (filtres d'intention) comparent les chemins en tenant compte de la casse par
+  défaut : l'application mobile doit déclarer une correspondance insensible à
+  la casse (iOS) et toutes les formes (Android).
+- **Domaine.** `qr.tigertag.io` est imprimé pour toujours : renouveler
+  `tigertag.io` sur une longue durée.
+
+---
+
+**▲ [Index de la documentation](../../README.md)** · **Voir aussi :** [Identité universelle du filament](../concepts/universal-filament-identity.md), [Inventaire et synchronisation cloud](../concepts/inventory-and-cloud-sync.md), [Vue d'ensemble pour les développeurs](./README.md)

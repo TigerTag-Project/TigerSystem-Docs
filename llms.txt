@@ -316,6 +316,15 @@ brand using TigerTag, and of spools makers tag themselves at home.
  the decision ladder, test vectors, the watermark rule). Every TigerSystem
  surface implements this; a live reference renderer sits beside it in
  docs/developers/material-swatch-playground.html
+- [Spool ids and QR links](docs/developers/spool-ids-and-qr-links.md): NORMATIVE
+ (ratified 2026-11-05, not implemented yet) — a new chipless id is
+ TigerData_<epoch ms><4 random digits> (local check, then a create-if-absent
+ transaction online); a chip promotion writes a uidMigrationMap redirect; a
+ printed label's QR holds HTTPS://QR.TIGERTAG.IO/<id without prefix>, uppercase,
+ alphanumeric/numeric segments, ECC M, 25x25; no QR for CLOUD_ or decimal ids;
+ readers resolve by length (17/10 digits = TigerData_, 8/14/20 hex = UID) and
+ accept the long TigerData_/TigerData- form; link values (?weight=, ?note=)
+ are applied only by the signed-in owner after one confirmation
 - [FAQ](docs/faq/README.md): users, developers, manufacturers, troubleshooting
 
 ## Canonical sources outside this repository
