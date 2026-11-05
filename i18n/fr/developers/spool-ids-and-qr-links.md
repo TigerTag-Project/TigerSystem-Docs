@@ -1,5 +1,5 @@
 ---
-sourceHash: 716078efa761489505866159551bdb82c5fb30ae6b0aab8c7fc40f000c835660
+sourceHash: 1681bb528e61765de2222a7eb47f04b340244e4360f9ae81a11ee2d2435d915f
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -7,9 +7,10 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 
 > **Ratifié le 2026-11-05 — pas encore implémenté.** Les applications
 > s'appuient sur ce contrat. Les points encore ouverts sont listés à la fin ;
-> en trancher un ne change que ce qu'il nomme.
+> en trancher un ne change que ce qu'il nomme. Les sections marquées
+> **Proposé** ne sont pas encore ratifiées : ne vous appuyez pas dessus avant.
 
-Quatre règles que suit chaque application TigerSystem :
+Les règles que suit chaque application TigerSystem :
 
 1. comment une **bobine sans puce** (TigerData / TigerData+) reçoit son
    identifiant ;
@@ -17,7 +18,9 @@ Quatre règles que suit chaque application TigerSystem :
 3. comment l'identifiant d'une bobine est écrit dans le **QR code** d'une
    étiquette imprimée, puis relu ;
 4. comment une application **appelle une bobine avec des valeurs** (un poids,
-   une note) par un lien.
+   une note) par un lien ;
+5. **(proposé)** comment un **produit** a son propre lien ;
+6. **(proposé)** comment un lien répond en **JSON**.
 
 ## 1. Identifiants de bobine
 
@@ -28,7 +31,7 @@ le même identifiant.
 
 | Bobine | Identifiant | Exemple |
 |---|---|---|
-| Avec puce (TigerTag / TigerTag+) | l'UID NFC de la puce, en hexadécimal majuscule : 14 caractères (UID de 7 octets), 8 (4 octets) ou 20 (10 octets) | `04AB12CD3E4F80` |
+| Avec puce (TigerTag / TigerTag+) | l'UID NFC de la puce, en hexadécimal majuscule, 14 caractères (l'UID de 7 octets d'une NTAG) | `04AB12CD3E4F80` |
 | Sans puce, créée à partir de maintenant | `TigerData_` + l'heure en **millisecondes** (13 chiffres) + un nombre au hasard **0000–9999** (toujours 4 chiffres) | `TigerData_17623456789014213` |
 | Sans puce, créée avant ce contrat | `TigerData_` + 10 chiffres au hasard | `TigerData_4480517985` |
 | Sans puce, ancien préfixe | `CLOUD_` + 10 chiffres au hasard | `CLOUD_4480517985` |
@@ -37,7 +40,9 @@ le même identifiant.
 Ce contrat ne **réécrit jamais** un identifiant déjà créé. Les lecteurs ne
 testent que le préfixe (`TigerData_` / `CLOUD_` → sans puce) ; aucun ne dépend
 du nombre de chiffres. L'identifiant n'est qu'un identifiant : n'en déduisez
-jamais une date de création.
+jamais une date de création. Un UID de 4 octets (une puce propriétaire liée à
+une bobine) n'est jamais le nom d'un document d'inventaire : il n'apparaît
+donc jamais dans un lien.
 
 ### Créer un identifiant sans puce
 
@@ -116,9 +121,8 @@ HTTPS://QR.TIGERTAG.IO/<id>
   - UID : tout le lien en **un seul segment alphanumérique** (l'en-tête d'un
     second segment coûterait une taille).
 - Correction d'erreur **M** (15 %) : les étiquettes se rayent et se plient.
-- Résultat : **25 × 25 modules** pour toute bobine sans puce et tout UID de 4
-  ou 7 octets ; 29 × 29 pour un UID de 10 octets. Dessinez chaque module sur un
-  nombre entier de points d'impression, avec la marge standard de 4 modules.
+- Résultat : **25 × 25 modules** pour toute bobine. Dessinez chaque module sur
+  un nombre entier de points d'impression, avec la marge standard de 4 modules.
 
 ### Relire un lien
 
@@ -130,8 +134,11 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 |---|---|
 | 17 chiffres | `TigerData_<17 chiffres>` |
 | 10 chiffres | `TigerData_<10 chiffres>` |
-| 8, 14 ou 20 caractères hexadécimaux | l'UID, en majuscules |
+| 14 caractères hexadécimaux | l'UID, en majuscules |
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
+| `P/` + 8 caractères hexadécimaux | **(proposé)** un produit — [section 5](#5-liens-produit-proposé) |
+
+Une fin en `.JSON` demande la réponse en JSON — **(proposé)**, [section 6](#6-réponses-json-proposé).
 
 Les applications **écrivent** la forme courte ci-dessus, mais les lecteurs
 **acceptent aussi la forme longue** : le préfixe `TigerData` dans n'importe
@@ -141,14 +148,14 @@ quelle casse, suivi de `_` ou `-`, puis les 17 ou 10 chiffres —
 bobine. Un lien tapé ou partagé à la main continue de fonctionner. Le préfixe
 `CLOUD` n'est accepté sous aucune forme.
 
-Un UID peut ne contenir que des chiffres, mais il fait 8, 14 ou 20 caractères,
-jamais 17 ni 10 : la longueur tranche toujours. Aucun ancien identifiant
-décimal n'arrive à un lecteur, puisqu'aucun n'est jamais imprimé. Toute
-**autre forme** est une étiquette d'une version plus récente : le lecteur le
-dit (« mettez l'application à jour ») au lieu d'échouer. Aucune forme actuelle
-ne contient de lettre après `F` : un futur type d'étiquette (un rack, un
-produit) prend un préfixe en lettre comme `R-…` sans conflit avec les liens de
-bobine déjà imprimés.
+Un UID peut ne contenir que des chiffres, mais il fait 14 caractères, jamais 17
+ni 10 : la longueur tranche toujours. Aucun ancien identifiant décimal n'arrive
+à un lecteur, puisqu'aucun n'est jamais imprimé. Toute **autre forme** est une
+étiquette d'une version plus récente : le lecteur le dit (« mettez
+l'application à jour ») au lieu d'échouer. Chaque autre type de chose a son
+propre dossier, une lettre et un `/` (`P/` pour un produit, plus tard `R/` pour
+un rack) : il ne peut jamais entrer en conflit avec les liens de bobine déjà
+imprimés.
 
 ### Retrouver la bobine
 
@@ -159,11 +166,22 @@ bobine déjà imprimés.
 4. Une bobine supprimée (`deleted: true`) s'ouvre comme « supprimée », pas
    comme une erreur.
 
+5. **(proposé)** Toute autre personne (non connectée, ou pas autorisée à lire
+   la bobine) reçoit le **produit** de la bobine, jamais la bobine : le serveur
+   retrouve la bobine par son identifiant sur tous les comptes (un index sur
+   l'identifiant de bobine), lit son `id_product` et répond avec la page
+   produit de la [section 5](#5-liens-produit-proposé). Pas de produit, pas de
+   correspondance, ou le même identifiant dans deux comptes avec deux produits
+   différents → aucun produit n'est montré. La recherche ne tourne que pour ces
+   scans : son coût suit ces scans, pas le nombre de comptes.
+
 **Confidentialité :** connaître un identifiant ne montre jamais une bobine. Une
 bobine n'est montrée qu'à quelqu'un que les règles Firestore autorisent déjà à
 la lire (le propriétaire, un ami accepté, un inventaire public). Les
 identifiants contiennent une heure et peuvent se deviner ; cela ne doit jamais
-compter.
+compter. Le produit d'une bobine n'est pas privé : il est imprimé sur
+l'étiquette, et une puce TigerTag+ le porte en clair pour tout téléphone NFC.
+Le poids, la note, le rack et le propriétaire ne sortent jamais.
 
 ## 4. Appeler une bobine avec des valeurs
 
@@ -200,6 +218,68 @@ Une application qui doit écrire sans confirmation (une balance qui met le poids
 à jour en continu, une intégration) n'utilise pas de lien : elle écrit par le
 compte de l'utilisateur, sous les règles Firestore
 ([guide d'intégration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
+
+## 5. Liens produit (proposé)
+
+Un produit — un filament du catalogue, quel que soit le propriétaire d'une
+bobine de ce filament — a son propre lien, pour un emballage, un rayon de
+magasin, un showroom ou un catalogue imprimé :
+
+```
+HTTPS://QR.TIGERTAG.IO/P/<id_product>
+```
+
+- `<id_product>` est écrit en **hexadécimal, toujours sur 8 caractères**, en
+  majuscules, complété par des zéros : les 4 octets tels qu'ils sont sur la
+  puce, pour qu'un firmware ou un lecteur NFC construise le lien sans
+  conversion. Exemple : le produit `2855882328` →
+  `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
+- La forme décimale reste là où les gens voient le numéro — le catalogue
+  (`tigersystem.io/<lang>/catalog/2855882328`), le texte imprimé sous un QR
+  code, un code-barres Code 128 — et n'entre jamais dans un lien
+  `qr.tigertag.io`.
+- `P/00000000` et `P/FFFFFFFF` signifient « pas de produit » : jamais
+  imprimés, réponse `404`.
+- Une étiquette de bobine ne répète jamais son produit : le lien de la bobine y
+  mène déjà ([section 3](#retrouver-la-bobine)).
+
+### La page de scan
+
+`P/…` ouvre une page faite pour un téléphone juste après un scan, pas la page
+du catalogue :
+
+1. la photo et la pastille de couleur, en grand ; marque, matière, nom de la
+   couleur ;
+2. les réglages d'impression en grandes tuiles : buse, plateau, séchage
+   (température et durée), densité, diamètre ;
+3. les documents (TDS, MSDS, RoHS, contact alimentaire) et la vidéo ;
+4. où l'acheter ;
+5. non connecté → « Créer mon inventaire » ; connecté → « Ajouter à mon
+   inventaire » (une TigerData+) et « Ajouter aux favoris » ;
+6. « Voir dans le catalogue », vers la page complète.
+
+## 6. Réponses JSON (proposé)
+
+Un lien qui finit par `.JSON` (dans n'importe quelle casse) — ou envoyé avec
+`Accept: application/json` — répond en JSON au lieu d'une page. Ce sont des
+adresses pour les outils, jamais imprimées.
+
+| Lien | Non connecté | Connecté (`Authorization: Bearer <jeton d'identité Firebase>`) |
+|---|---|---|
+| `…/P/AA394E58.JSON` | la fiche produit | pareil |
+| `…/04AB12CD3E4F80.JSON` | `401` — aucune donnée de bobine | la bobine, si les règles autorisent le compte à la lire |
+
+- **Bobine :** un [fichier `.ttag`](./ttag-format.md) contenant ce seul
+  enregistrement, le document d'inventaire tel que Firestore le stocke. Il
+  contient `id_product` ; un outil qui veut le produit appelle ensuite
+  `…/P/<id_product>.JSON`.
+- **Produit :** la fiche du catalogue telle que l'API produit la renvoie, dans
+  la langue de `?lang=` (anglais par défaut). Mise en cache sur le serveur et
+  autorisée depuis n'importe quel site.
+- Une réponse de bobine n'est jamais mise en cache : elle dépend de qui
+  demande.
+- Une requête JSON n'écrit jamais : les valeurs de lien (`?weight=`, `?note=`)
+  y sont ignorées.
 
 ## Points ouverts
 

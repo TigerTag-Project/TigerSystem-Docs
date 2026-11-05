@@ -322,9 +322,12 @@ brand using TigerTag, and of spools makers tag themselves at home.
  transaction online); a chip promotion writes a uidMigrationMap redirect; a
  printed label's QR holds HTTPS://QR.TIGERTAG.IO/<id without prefix>, uppercase,
  alphanumeric/numeric segments, ECC M, 25x25; no QR for CLOUD_ or decimal ids;
- readers resolve by length (17/10 digits = TigerData_, 8/14/20 hex = UID) and
+ readers resolve by length (17/10 digits = TigerData_, 14 hex = NTAG UID) and
  accept the long TigerData_/TigerData- form; link values (?weight=, ?note=)
- are applied only by the signed-in owner after one confirmation
+ are applied only by the signed-in owner after one confirmation. Proposed, not
+ ratified: product links HTTPS://QR.TIGERTAG.IO/P/<id_product as 8 hex> (a
+ scan page; a non-owner scanning a spool gets its product, never the spool)
+ and .JSON answers (product public; spool only with a Firebase ID token)
 - [FAQ](docs/faq/README.md): users, developers, manufacturers, troubleshooting
 
 ## Canonical sources outside this repository

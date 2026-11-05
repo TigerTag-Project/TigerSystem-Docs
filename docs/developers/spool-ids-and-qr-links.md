@@ -2,15 +2,18 @@
 
 > **Ratified 2026-11-05 — not implemented yet.** Apps build on this contract.
 > The points still open are listed at the end; settling one changes only what
-> it names.
+> it names. Sections marked **Proposed** are not ratified yet: do not build on
+> them before they are.
 
-Four rules every TigerSystem app follows:
+The rules every TigerSystem app follows:
 
 1. how a **chipless spool** (TigerData / TigerData+) gets its id;
 2. how a spool **keeps its link** when it gets a chip;
 3. how a spool's id is written into the **QR code** of a printed label, and
    read back;
-4. how an app **calls a spool with values** (a weight, a note) through a link.
+4. how an app **calls a spool with values** (a weight, a note) through a link;
+5. **(proposed)** how a **product** gets its own link;
+6. **(proposed)** how a link answers in **JSON**.
 
 ## 1. Spool ids
 
@@ -20,7 +23,7 @@ account cannot hold two spools with the same id.
 
 | Spool | Id | Example |
 |---|---|---|
-| Chip (TigerTag / TigerTag+) | the chip's NFC UID, uppercase hex: 14 characters (7-byte UID), 8 (4-byte) or 20 (10-byte) | `04AB12CD3E4F80` |
+| Chip (TigerTag / TigerTag+) | the chip's NFC UID, uppercase hex, 14 characters (an NTAG's 7-byte UID) | `04AB12CD3E4F80` |
 | Chipless, minted from now on | `TigerData_` + epoch **milliseconds** (13 digits) + a random number **0000–9999** (always 4 digits) | `TigerData_17623456789014213` |
 | Chipless, minted before this contract | `TigerData_` + 10 random digits | `TigerData_4480517985` |
 | Chipless, legacy prefix | `CLOUD_` + 10 random digits | `CLOUD_4480517985` |
@@ -29,7 +32,8 @@ account cannot hold two spools with the same id.
 Ids already minted are **never rewritten** by this contract. Readers only test
 the prefix (`TigerData_` / `CLOUD_` → chipless); none of them depends on the
 number of digits. The id is an identifier, nothing else: never derive a
-creation date from it.
+creation date from it. A 4-byte UID (a proprietary chip linked to a spool) is
+never the name of an inventory document, so it never appears in a link.
 
 ### Minting a chipless id
 
@@ -100,9 +104,8 @@ HTTPS://QR.TIGERTAG.IO/<id>
   - UID: the whole link as **one alphanumeric** segment (a second segment's
     header would cost a size).
 - Error correction **M** (15 %): labels get scratched and folded.
-- Result: **25 × 25 modules** for every chipless spool and every 4- or 7-byte
-  UID; 29 × 29 for a 10-byte UID. Draw each module on a whole number of printer
-  dots, with the standard 4-module quiet zone.
+- Result: **25 × 25 modules** for every spool. Draw each module on a whole
+  number of printer dots, with the standard 4-module quiet zone.
 
 ### Reading a link back
 
@@ -114,8 +117,11 @@ needs the website. They read the path case-insensitively, ignore a trailing
 |---|---|
 | 17 digits | `TigerData_<17 digits>` |
 | 10 digits | `TigerData_<10 digits>` |
-| 8, 14 or 20 hex characters | the UID, uppercased |
+| 14 hex characters | the UID, uppercased |
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
+| `P/` + 8 hex characters | **(proposed)** a product — [section 5](#5-product-links-proposed) |
+
+A `.JSON` ending asks for the answer in JSON — **(proposed)**, [section 6](#6-json-answers-proposed).
 
 Apps **write** the short form above, but readers also **accept the long form**:
 the `TigerData` prefix in any case, followed by `_` or `-`, then the 17 or 10
@@ -124,12 +130,12 @@ digits — `TigerData_17623456789014213`, `TigerData-17623456789014213`,
 spool. A link typed or shared by hand keeps working. The `CLOUD` prefix is not
 accepted in either form.
 
-A UID may be all digits, but it is 8, 14 or 20 characters long, never 17 or 10,
-so the length always decides. No legacy decimal id reaches a reader, since none
-is ever printed. Any **other shape** is a label from a newer version: the reader
-says so ("update the app") instead of failing. No current form contains a
-letter after `F`: a future label kind (a rack, a product) takes a letter prefix
-such as `R-…` without clashing with spool links already printed.
+A UID may be all digits, but it is 14 characters long, never 17 or 10, so the
+length always decides. No legacy decimal id reaches a reader, since none is ever
+printed. Any **other shape** is a label from a newer version: the reader says so
+("update the app") instead of failing. Every other kind of thing gets its own
+folder, a letter and a `/` (`P/` for a product, later `R/` for a rack), so it can
+never clash with spool links already printed.
 
 ### Resolving the spool
 
@@ -139,10 +145,21 @@ such as `R-…` without clashing with spool links already printed.
 3. A twin pair has one label, with the main UID; either UID opens the spool.
 4. A deleted spool (`deleted: true`) opens as "deleted", not as an error.
 
+5. **(proposed)** Anyone else (not signed in, or not allowed to read the
+   spool) gets the spool's **product**, never the spool: the server finds the
+   spool by its id across accounts (an index on the spool id), reads its
+   `id_product` and answers with the product page of
+   [section 5](#5-product-links-proposed). No product, no match, or the same id
+   in two accounts with different products → no product is shown. The lookup
+   runs only for those scans, so its cost follows them, not the number of
+   accounts.
+
 **Privacy:** knowing an id never shows a spool. A spool is shown only to
 someone the Firestore rules already let read it (the owner, an accepted
 friend, a public inventory). Ids contain a timestamp and can be guessed; that
-must never matter.
+must never matter. The product of a spool is not private: it is printed on the
+label, and a TigerTag+ chip carries it in clear for any NFC phone. The weight,
+the note, the rack and the owner never leave.
 
 ## 4. Calling a spool with values
 
@@ -178,6 +195,60 @@ signed in does not prove the person meant to apply it. An app that has to
 write without a confirmation (a scale updating the weight continuously, an
 integration) does not use links: it writes through the user's account under the
 Firestore rules ([integration guide](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
+
+## 5. Product links (proposed)
+
+A product — a filament of the catalogue, whoever owns a spool of it — has its
+own link, for packaging, a shop shelf, a showroom or a printed catalogue:
+
+```
+HTTPS://QR.TIGERTAG.IO/P/<id_product>
+```
+
+- `<id_product>` is written in **hexadecimal, always 8 characters**, uppercase,
+  zero-padded: the 4 bytes as they sit on the chip, so a firmware or an NFC
+  reader builds the link without converting. Example: product `2855882328`
+  → `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
+- The decimal form stays where people see the number — the catalogue
+  (`tigersystem.io/<lang>/catalog/2855882328`), the text printed under a QR
+  code, a Code 128 barcode — and never goes into a `qr.tigertag.io` link.
+- `P/00000000` and `P/FFFFFFFF` mean "no product": never printed, answered
+  with `404`.
+- A spool label never repeats its product: the spool link already leads to it
+  ([section 3](#resolving-the-spool)).
+
+### The scan page
+
+`P/…` opens a page built for a phone just after a scan, not the catalogue page:
+
+1. the photo and the colour swatch, large; brand, material, colour name;
+2. the print settings as large tiles: nozzle, bed, drying (temperature and
+   time), density, diameter;
+3. the documents (TDS, MSDS, RoHS, food contact) and the video;
+4. where to buy it;
+5. not signed in → "Start my inventory"; signed in → "Add to my inventory"
+   (a TigerData+) and "Add to favourites";
+6. "See it in the catalogue", to the full page.
+
+## 6. JSON answers (proposed)
+
+A link ending in `.JSON` (any case) — or sent with `Accept: application/json` —
+answers in JSON instead of a page. These are addresses for tools, never printed.
+
+| Link | Not signed in | Signed in (`Authorization: Bearer <Firebase ID token>`) |
+|---|---|---|
+| `…/P/AA394E58.JSON` | the product record | the same |
+| `…/04AB12CD3E4F80.JSON` | `401` — no spool data | the spool, if the rules let the account read it |
+
+- **Spool:** a [`.ttag` file](./ttag-format.md) holding that one record, the
+  inventory document as Firestore stores it. It carries `id_product`; a tool
+  that wants the product calls `…/P/<id_product>.JSON` next.
+- **Product:** the catalogue record as the product API returns it, in the
+  language of `?lang=` (English by default). Cached on the server and allowed
+  from any site.
+- A spool answer is never cached: it depends on who asks.
+- A JSON request never writes: link values (`?weight=`, `?note=`) are ignored
+  there.
 
 ## Open points
 
