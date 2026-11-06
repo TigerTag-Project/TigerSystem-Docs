@@ -1,5 +1,5 @@
 ---
-sourceHash: cb8d8d9471ccb7a4cf53093e73dfa0d11780f658e22d1dacb6d16c9d3de4156c
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -47,9 +47,9 @@ partenaire**, pas la qualité du partenaire.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — intégré à la demande | Tague les bobines en TigerTag+ à la demande. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
-| **[Filforme](https://www.filforme.com)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
-| **[Lotactree](https://www.lotactree.com)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
-| **[Smart3DPT](https://smart3d.pt)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
 | **[Nanovia](https://nanovia.tech)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
 
 || | |

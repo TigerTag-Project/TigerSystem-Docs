@@ -1,5 +1,5 @@
 ---
-sourceHash: 92daf19ccb2158717d51e452dee8d4081b0020496d4c764a2d181fb2517367d8
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -97,12 +97,10 @@ l'engagement public.
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…et désormais sur la ligne de production aussi —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech),
-[Lotactree](https://www.lotactree.com), [Smart3DPT](https://smart3d.pt) — et
-d'autres encore à venir.
+…et sur la ligne de production aussi —
+[Nanovia](https://nanovia.tech) — et d'autres encore à venir.
 
 **Vous voulez votre logo sur cette échelle — et en plus grand ?** Une ligne de
 production tourne sous TigerTag en 5 jours seulement :

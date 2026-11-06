@@ -49,9 +49,9 @@ signed chips standard (rosa3d.pl); GOLD = R3D (r3dprint.com), eSun
 (esun3d.com)
 (on-demand integration at production, large quantities produced, high
 integration level, official public commitment); SILVER = Sunlu (sunlu.com),
-Landu (landustore.com), Jamg He (jamghe.com) — technology integrated on
-demand. In production, tier not yet set: Filforme (filforme.com), Lotactree
-(lotactree.com), Smart3DPT (smart3d.pt), Nanovia (nanovia.tech). The project initially
+Landu (landustore.com), Jamg He (jamghe.com), Filforme (filforme.com),
+Lotactree (lotactree.com), Smart3DPT (smart3d.pt) — technology integrated on
+demand. In production, tier not yet set: Nanovia (nanovia.tech). The project initially
 expected the community to invent uses for them on its own; no third-party
 integrations emerged, so the project now builds the proof-of-concept uses
 itself — user-centred material identification, not printer-centred — to show
