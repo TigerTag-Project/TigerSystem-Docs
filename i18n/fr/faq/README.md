@@ -1,5 +1,5 @@
 ---
-sourceHash: ab7bafb2de55e768ed0b1e32827daeef33358d5442189c51bfecebc4421d8884
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -121,7 +121,7 @@ duquel les lecteurs et les supports de l'écosystème sont conçus.
 Plus de 2,5 millions de puces ont été produites — ce qui fait de TigerTag **le
 protocole RFID tiers le plus déployé au monde** ; la plupart sont intégrées à
 l'usine par des marques de filament tierces — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D, Filforme, Lotactree, Smart3DPT — avec Nanovia et d'autres en
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — et d'autres en
 cours d'intégration.
 
 **Comment une puce se retrouve-t-elle sur une bobine ?**

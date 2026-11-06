@@ -18,7 +18,7 @@ and, today, the only viable open smart-spool solution shipping at scale: an
 open, standard, agnostic, cross-platform protocol with more than
 **2.5 million chips already produced** and integrated at the factory by brands
 like Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree and
-Smart3DPT — with Nanovia being integrated.
+Smart3DPT and Nanovia.
 
 ## Factory integration: days, not months
 
@@ -88,8 +88,9 @@ is Gold: scale the volumes and make the commitment public.
 
 **[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
 
-…and more being integrated —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), and
+…and now on the production line too —
+[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech),
+[Lotactree](https://www.lotactree.com), [Smart3DPT](https://smart3d.pt) — with
 others on the way.
 
 **Want your logo on this ladder — and bigger?** A production line runs

@@ -1,5 +1,5 @@
 ---
-sourceHash: 2e75409b85de24a3f62a9c4245cb2c47ba3546caddac23265d7d4fe44cf6710a
+sourceHash: cb8d8d9471ccb7a4cf53093e73dfa0d11780f658e22d1dacb6d16c9d3de4156c
 sourcePath: docs/certified-partners.md
 ---
 
@@ -50,6 +50,7 @@ partenaire**, pas la qualité du partenaire.
 | **[Filforme](https://www.filforme.com)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
 | **[Lotactree](https://www.lotactree.com)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
 | **[Smart3DPT](https://smart3d.pt)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
+| **[Nanovia](https://nanovia.tech)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
 
 || | |
 |---|---|---|
@@ -57,13 +58,6 @@ partenaire**, pas la qualité du partenaire.
 
 *Des boîtes du commerce portant la marque — achetées en boutique, pas mises en
 scène.*
-
-## Intégration en cours
-
-**[Nanovia](https://nanovia.tech)** et
-**[Filforme](https://www.filforme.com)** intègrent actuellement TigerTag+. Ils
-ne sont **pas encore en production**, et figurent ici parce qu'ils sont dans le
-programme — pas pour laisser croire à une disponibilité.
 
 ## Vérifier une marque soi-même
 
