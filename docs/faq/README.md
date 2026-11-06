@@ -345,7 +345,9 @@ multi-vendor RFID toolkit) reads TigerTags;
 [Spooly Tracker](https://spoolytracker.com/) (inventory platform, web +
 mobile) identifies spools with TigerTags; and the
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-makes the U1 **the first printer that reads TigerTags natively**. See
+makes the U1 **the first printer that reads TigerTags natively**, and
+[COSMOS](https://github.com/OpenCentauri/cosmos) does the same on the Elegoo Centauri Carbon, with
+the NFC reader built into its Canvas. See
 [third-party integrations](../developers/integrations.md).
 
 **Can I build my own app on TigerTag?**

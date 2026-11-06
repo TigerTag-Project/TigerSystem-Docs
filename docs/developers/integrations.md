@@ -19,6 +19,15 @@ reads TigerTags natively — making it the first printer to read TigerTag on
 the machine itself.** Exactly the future the collective play aims at, arrived
 early via the community.
 
+## COSMOS — Elegoo Centauri Carbon firmware (OpenCentauri)
+
+**[github.com/OpenCentauri/cosmos](https://github.com/OpenCentauri/cosmos)**
+— an independent, GPL-3.0 community firmware for the Elegoo Centauri Carbon
+(mainline Linux built with Yocto, Klipper / Kalico). Its Canvas RFID module
+drives the **NFC reader built into the Canvas**, the printer's multi-colour
+unit, and decodes the chips with OpenRFID: **the Centauri Carbon reads TigerTags
+with its own reader**, no extra hardware.
+
 ## Spooly Tracker
 
 **[spoolytracker.com](https://spoolytracker.com/)** — a filament inventory

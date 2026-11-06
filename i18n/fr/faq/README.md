@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 4eae8684622136948f32bc6191e1e474e3916fa690362120cf0111442289ecce
 sourcePath: docs/faq/README.md
 ---
 
@@ -392,7 +392,9 @@ multiconstructeurs communautaire) lit les TigerTags ;
 [Spooly Tracker](https://spoolytracker.com/) (plateforme d'inventaire, web +
 mobile) identifie les bobines grâce aux TigerTags ; et le
 [firmware étendu pour Snapmaker U1](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-fait de la U1 **la première imprimante qui lit nativement les TigerTags**. Voir
+fait de la U1 **la première imprimante qui lit nativement les TigerTags**, et
+[COSMOS](https://github.com/OpenCentauri/cosmos) fait de même sur l'Elegoo Centauri Carbon, avec le
+lecteur NFC intégré à son Canvas. Voir
 [intégrations tierces](../developers/integrations.md).
 
 **Puis-je construire ma propre application sur TigerTag ?**

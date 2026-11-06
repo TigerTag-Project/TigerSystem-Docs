@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: 13d324a0fbdcc576baa5e5239387676b4250478ab879bcfea5d652f66bf4be8d
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -120,7 +120,8 @@ Et cela commence à arriver :
 [Spooly Tracker](https://spoolytracker.com/) a bâti son identification de
 bobines dessus, et le
 [firmware étendu communautaire](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-du Snapmaker U1 les lit **nativement sur l'imprimante elle-même** — voir les
+du Snapmaker U1 les lit **nativement sur l'imprimante elle-même**, comme
+[COSMOS](https://github.com/OpenCentauri/cosmos) sur l'Elegoo Centauri Carbon — voir les
 [intégrations tierces](../developers/integrations.md).
 
 ## Un bac à sable, volontairement
