@@ -14,6 +14,7 @@ The rules every TigerSystem app follows:
 4. how an app **calls a spool with values** (a weight, a note) through a link;
 5. **(proposed)** how a **product** gets its own link;
 6. **(proposed)** how a link answers in **JSON** or as a **`.ttag` file**.
+7. what a **printed label** carries, and its templates.
 
 ## 1. Spool ids
 
@@ -259,6 +260,56 @@ record as a [`.ttag` file](./ttag-format.md) to download
   **Import** mode, as a new TigerData+ with a fresh id.
 - A JSON or `.TTAG` request never writes: link values (`?weight=`, `?note=`)
   are ignored there.
+
+## 7. Printed labels
+
+Every app prints the same labels: two kinds, one set of templates, so a label
+printed from Tiger Studio, the mobile app or the website looks and scans the
+same.
+
+| Label | Its QR code | Printed for |
+|---|---|---|
+| **Spool** | the spool link ([section 3](#3-qr-links)) | any spool that has a QR link (not `CLOUD_`, not legacy decimal) |
+| **Product** (swatch card) | the product link ([section 5](#5-product-links-proposed)) | a spool or a catalogue product with a real `id_product` (TigerTag+, TigerData+) |
+
+The owner scanning a spool label gets the spool; anyone else gets its product
+([resolving the spool](#resolving-the-spool)). A product label opens the product
+for everyone: it is the one for a swatch, a shelf or a showroom.
+
+### What a label carries
+
+- the brand, `material · series`, the colour name and the colour swatch (drawn
+  with the [material swatch convention](../concepts/universal-filament-identity.md));
+- up to **four value slots**, chosen by the user among: nozzle range, bed range,
+  drying (temperature · time), TD, diameter;
+- the QR code.
+
+Only what does not change: never the remaining weight, the note, the rack or the
+owner. Nothing in clear next to the QR code ([section 3](#3-qr-links)).
+
+### Templates
+
+| Template | Size (width × height) | Content |
+|---|---|---|
+| Classic (default) | 40 × 30 mm | everything, four slots |
+| Expanded | 50 × 30 mm | everything, four slots, larger text |
+| Compact | 40 × 25 mm | everything, two slots |
+| Slim | 40 × 12 mm | brand, `material · series`, colour name, QR code — no slots |
+| Vertical | 30 × 40 mm | everything, four slots, QR code below |
+| Vertical compact | 25 × 40 mm | everything, two slots, QR code below |
+
+40 × 30 mm is the common thermal label and fits a spool side and a printed
+swatch. The QR code takes the largest whole number of printer dots per module
+that fits, with its 4-module quiet zone: at 203 dpi a 25 × 25 code is 3 dots a
+module on the Classic (≈ 12.4 mm with the quiet zone) and 2 on the Slim
+(≈ 8.3 mm).
+
+### Output
+
+- **PDF**, **PNG** (at the printer's resolution) and **SVG**, so any printer
+  works, through its own app if need be;
+- direct printing to label printers (Brother QL, Niimbot, Phomemo) comes later,
+  printer by printer, with the same templates.
 
 ## Open points
 

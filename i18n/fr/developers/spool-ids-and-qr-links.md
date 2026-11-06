@@ -1,5 +1,5 @@
 ---
-sourceHash: 73e5da519e66c5bddb6dbe07376acc5dcebd66390c3030e7eacaa5936907230f
+sourceHash: 95dda2b5c215914c4bf9284c61ec5643975d28923ec2baf5062a8f282dc8a208
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -21,6 +21,7 @@ Les règles que suit chaque application TigerSystem :
    une note) par un lien ;
 5. **(proposé)** comment un **produit** a son propre lien ;
 6. **(proposé)** comment un lien répond en **JSON** ou en **fichier `.ttag`**.
+7. ce que porte une **étiquette imprimée**, et ses gabarits.
 
 ## 1. Identifiants de bobine
 
@@ -292,6 +293,57 @@ jamais imprimées.
   identifiant neuf.
 - Une requête JSON ou `.TTAG` n'écrit jamais : les valeurs de lien
   (`?weight=`, `?note=`) y sont ignorées.
+
+## 7. Étiquettes imprimées
+
+Toutes les applications impriment les mêmes étiquettes : deux sortes, un seul
+jeu de gabarits. Une étiquette imprimée depuis Tiger Studio, l'application
+mobile ou le site a le même aspect et se scanne de la même façon.
+
+| Étiquette | Son QR code | Imprimée pour |
+|---|---|---|
+| **Bobine** | le lien de la bobine ([section 3](#3-liens-qr)) | toute bobine qui a un lien QR (pas `CLOUD_`, pas l'ancien décimal) |
+| **Produit** (carte nuancier) | le lien du produit ([section 5](#5-liens-produit-proposé)) | une bobine ou un produit du catalogue avec un vrai `id_product` (TigerTag+, TigerData+) |
+
+Le propriétaire qui scanne une étiquette de bobine obtient la bobine ; les
+autres obtiennent son produit ([retrouver la bobine](#retrouver-la-bobine)). Une
+étiquette produit ouvre le produit pour tout le monde : c'est celle d'un
+nuancier, d'une étagère ou d'un showroom.
+
+### Ce que porte une étiquette
+
+- la marque, `matière · série`, le nom de la couleur et la pastille de couleur
+  (dessinée selon la [convention de pastille matière](../concepts/universal-filament-identity.md)) ;
+- jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
+  de buse, plage de plateau, séchage (température · durée), TD, diamètre ;
+- le QR code.
+
+Seulement ce qui ne change pas : jamais le poids restant, la note, le rack ou
+le propriétaire. Rien en clair à côté du QR code ([section 3](#3-liens-qr)).
+
+### Gabarits
+
+| Gabarit | Taille (largeur × hauteur) | Contenu |
+|---|---|---|
+| Classique (par défaut) | 40 × 30 mm | tout, quatre cases |
+| Étendu | 50 × 30 mm | tout, quatre cases, texte plus grand |
+| Compact | 40 × 25 mm | tout, deux cases |
+| Fin | 40 × 12 mm | marque, `matière · série`, nom de la couleur, QR code — sans cases |
+| Vertical | 30 × 40 mm | tout, quatre cases, QR code en bas |
+| Vertical compact | 25 × 40 mm | tout, deux cases, QR code en bas |
+
+Le 40 × 30 mm est l'étiquette thermique courante ; elle tient sur le flanc
+d'une bobine et sur un nuancier imprimé. Le QR code prend le plus grand nombre
+entier de points d'imprimante par module qui tient, avec sa marge de 4 modules :
+à 203 ppp, un code 25 × 25 fait 3 points par module sur le Classique (≈ 12,4 mm
+avec la marge) et 2 sur le Fin (≈ 8,3 mm).
+
+### Sortie
+
+- **PDF**, **PNG** (à la résolution de l'imprimante) et **SVG**, pour que
+  n'importe quelle imprimante fonctionne, au besoin par sa propre application ;
+- l'impression directe sur les imprimantes d'étiquettes (Brother QL, Niimbot,
+  Phomemo) vient ensuite, imprimante par imprimante, avec les mêmes gabarits.
 
 ## Points ouverts
 
