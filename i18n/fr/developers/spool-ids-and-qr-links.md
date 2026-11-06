@@ -1,5 +1,5 @@
 ---
-sourceHash: 9110f31dc4bbe42873f9f4aecf282d19f7af8c7df1498eaf821fd56d8b70aca6
+sourceHash: 17725cd09d75104849e4c4c13a10482d7798568e0918480f2587a0fe2be909de
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -170,18 +170,21 @@ imprimés.
 4. Une bobine supprimée (`deleted: true`) s'ouvre comme « supprimée », pas
    comme une erreur.
 
-5. **(proposé)** Toute autre personne (non connectée, ou pas autorisée à lire
-   la bobine) reçoit le **produit** de la bobine, jamais la bobine : le serveur
-   retrouve la bobine par son identifiant sur tous les comptes (un index sur
-   l'identifiant de bobine), lit son `id_product` et répond avec la page
-   produit de la [section 5](#5-liens-produit). Pas de produit, pas de
-   correspondance, ou le même identifiant dans deux comptes avec deux produits
-   différents → aucun produit n'est montré. La recherche ne tourne que pour ces
-   scans : son coût suit ces scans, pas le nombre de comptes.
+5. Toute personne qui **n'est pas le propriétaire** — non connectée, un autre
+   compte, un ami accepté compris — est **renvoyée vers le produit** de la
+   bobine, sans jamais voir la bobine : le serveur retrouve la bobine par son
+   identifiant sur tous les comptes (un index sur l'identifiant de bobine), lit
+   son `id_product` et redirige vers le lien produit de la
+   [section 5](#5-liens-produit). Pas de produit, pas de correspondance, ou le
+   même identifiant dans deux comptes avec deux produits différents → une page
+   qui dit que la bobine est privée, avec « Créer mon inventaire ». La recherche
+   ne tourne que pour ces scans : son coût suit ces scans, pas le nombre de
+   comptes. *(Ratifié le 2026-11-06.)*
 
-**Confidentialité :** connaître un identifiant ne montre jamais une bobine. Une
-bobine n'est montrée qu'à quelqu'un que les règles Firestore autorisent déjà à
-la lire (le propriétaire, un ami accepté, un inventaire public). Les
+**Confidentialité :** connaître un identifiant ne montre jamais une bobine. Un
+lien scanné n'ouvre une bobine que pour son propriétaire ; dans les
+applications, une bobine n'est montrée qu'à quelqu'un que les règles Firestore
+autorisent déjà à la lire (le propriétaire, un ami accepté, un inventaire public). Les
 identifiants contiennent une heure et peuvent se deviner ; cela ne doit jamais
 compter. Le produit d'une bobine n'est pas privé : il est imprimé sur
 l'étiquette, et une puce TigerTag+ le porte en clair pour tout téléphone NFC.

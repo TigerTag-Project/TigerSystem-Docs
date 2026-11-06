@@ -149,17 +149,18 @@ never clash with spool links already printed.
 3. A twin pair has one label, with the main UID; either UID opens the spool.
 4. A deleted spool (`deleted: true`) opens as "deleted", not as an error.
 
-5. **(proposed)** Anyone else (not signed in, or not allowed to read the
-   spool) gets the spool's **product**, never the spool: the server finds the
-   spool by its id across accounts (an index on the spool id), reads its
-   `id_product` and answers with the product page of
-   [section 5](#5-product-links). No product, no match, or the same id
-   in two accounts with different products → no product is shown. The lookup
-   runs only for those scans, so its cost follows them, not the number of
-   accounts.
+5. Anyone who is **not the owner** — not signed in, another account, an
+   accepted friend included — is **sent to the product** of the spool, never
+   shown the spool: the server finds the spool by its id across accounts (an
+   index on the spool id), reads its `id_product` and redirects to the product
+   link of [section 5](#5-product-links). No product, no match, or the same id
+   in two accounts with different products → a page saying the spool is
+   private, with "Start my inventory". The lookup runs only for those scans, so
+   its cost follows them, not the number of accounts. *(Ratified 2026-11-06.)*
 
-**Privacy:** knowing an id never shows a spool. A spool is shown only to
-someone the Firestore rules already let read it (the owner, an accepted
+**Privacy:** knowing an id never shows a spool. A scanned link opens a spool
+for its owner only; inside the apps, a spool is shown only to someone the
+Firestore rules already let read it (the owner, an accepted
 friend, a public inventory). Ids contain a timestamp and can be guessed; that
 must never matter. The product of a spool is not private: it is printed on the
 label, and a TigerTag+ chip carries it in clear for any NFC phone. The weight,
