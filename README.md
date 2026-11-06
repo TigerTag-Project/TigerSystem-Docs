@@ -8,6 +8,18 @@ established here first, for humans and for AI assistants
 ([llms.txt](llms.txt)). Where another surface disagrees with this repo, this
 repo wins.
 
+<p align="center">
+  <a href="https://wiki.tigersystem.io">
+    <img src="docs/assets/wiki-button.svg" alt="Read the TigerSystem wiki" width="420">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://wiki.tigersystem.io" hreflang="en">English</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://wiki.tigersystem.io/fr/" hreflang="fr">Français</a>
+</p>
+
 Every 3D-printing shelf hides the same mystery: twenty spools, half of them
 unlabeled, none of them able to tell you what they are, how much is left, or
 how they like to be printed.
