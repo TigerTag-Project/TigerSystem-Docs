@@ -13,7 +13,7 @@ The rules every TigerSystem app follows:
    read back;
 4. how an app **calls a spool with values** (a weight, a note) through a link;
 5. how a **product** gets its own link (the page it opens is **proposed**);
-6. **(proposed)** how a link answers in **JSON** or as a **`.ttag` file**.
+6. how a link answers in **JSON** or as a **`.ttag` file**.
 7. what a **printed label** carries, and its templates.
 
 ## 1. Spool ids
@@ -125,7 +125,7 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
 | `P/` + 8 hex characters | a product — [section 5](#5-product-links) |
 
-A `.JSON` or `.TTAG` ending asks for the answer for tools — **(proposed)**, [section 6](#6-json-and-ttag-answers-proposed).
+A `.JSON` or `.TTAG` ending asks for the answer for tools — [section 6](#6-json-and-ttag-answers).
 
 Apps **write** the short form above, but readers also **accept the long form**:
 the `TigerData` prefix in any case, followed by `_` or `-`, then the 17 or 10
@@ -245,19 +245,27 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
    (a TigerData+) and "Add to favourites";
 6. "See it in the catalogue", to the full page.
 
-## 6. JSON and .TTAG answers (proposed)
+## 6. JSON and .TTAG answers
+
+> **Ratified 2026-11-06.**
 
 A link ending in `.JSON` (any case) — or sent with `Accept: application/json` —
 answers in JSON instead of a page. A link ending in `.TTAG` answers with the same
 record as a [`.ttag` file](./ttag-format.md) to download
 (`Content-Disposition: attachment`). These are addresses for tools, never printed.
 
-| Link | Not signed in | Signed in (`Authorization: Bearer <Firebase ID token>`) |
+The same logic as a scan ([resolving the spool](#resolving-the-spool)): the
+owner gets the spool, anyone else its product.
+
+| Link | The owner (`Authorization: Bearer <Firebase ID token>`) | Anyone else (not signed in, another account, a friend) |
 |---|---|---|
 | `…/P/AA394E58.JSON` | the product record | the same |
-| `…/04AB12CD3E4F80.JSON` | `401` — no spool data | the spool, if the rules let the account read it |
 | `…/P/AA394E58.TTAG` | the product as a `.ttag` file | the same |
-| `…/04AB12CD3E4F80.TTAG` | `401` | the spool as a `.ttag` file |
+| `…/04AB12CD3E4F80.JSON` | the spool | `303` → `…/P/<id_product>.JSON`; no catalogue product (a TigerData, a maker TigerTag) → `404` |
+| `…/04AB12CD3E4F80.TTAG` | the spool as a `.ttag` file | `303` → `…/P/<id_product>.TTAG`; no catalogue product → `404` |
+
+Without a catalogue product nothing of the spool is answered, not even its
+material: the `404` matches the "private spool" page of a scan.
 
 - **Spool:** a [`.ttag` file](./ttag-format.md) holding that one record, the
   inventory document as Firestore stores it. It carries `id_product`; a tool

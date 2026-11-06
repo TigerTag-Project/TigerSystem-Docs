@@ -1,5 +1,5 @@
 ---
-sourceHash: 17725cd09d75104849e4c4c13a10482d7798568e0918480f2587a0fe2be909de
+sourceHash: c419a676988a451c12190042024494bd2d1f6b6226c8c1c671c49ff0960ff0b5
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -20,7 +20,7 @@ Les règles que suit chaque application TigerSystem :
 4. comment une application **appelle une bobine avec des valeurs** (un poids,
    une note) par un lien ;
 5. comment un **produit** a son propre lien (la page qu'il ouvre est **proposée**) ;
-6. **(proposé)** comment un lien répond en **JSON** ou en **fichier `.ttag`**.
+6. comment un lien répond en **JSON** ou en **fichier `.ttag`**.
 7. ce que porte une **étiquette imprimée**, et ses gabarits.
 
 ## 1. Identifiants de bobine
@@ -142,7 +142,7 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
 | `P/` + 8 caractères hexadécimaux | un produit — [section 5](#5-liens-produit) |
 
-Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — **(proposé)**, [section 6](#6-réponses-json-et-ttag-proposé).
+Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — [section 6](#6-réponses-json-et-ttag).
 
 Les applications **écrivent** la forme courte ci-dessus, mais les lecteurs
 **acceptent aussi la forme longue** : le préfixe `TigerData` dans n'importe
@@ -274,7 +274,9 @@ du catalogue :
    inventaire » (une TigerData+) et « Ajouter aux favoris » ;
 6. « Voir dans le catalogue », vers la page complète.
 
-## 6. Réponses JSON et .TTAG (proposé)
+## 6. Réponses JSON et .TTAG
+
+> **Ratifié le 2026-11-06.**
 
 Un lien qui finit par `.JSON` (dans n'importe quelle casse) — ou envoyé avec
 `Accept: application/json` — répond en JSON au lieu d'une page. Un lien qui
@@ -283,12 +285,18 @@ finit par `.TTAG` répond avec le même enregistrement sous forme de
 (`Content-Disposition: attachment`). Ce sont des adresses pour les outils,
 jamais imprimées.
 
-| Lien | Non connecté | Connecté (`Authorization: Bearer <jeton d'identité Firebase>`) |
+La même logique qu'un scan ([retrouver la bobine](#retrouver-la-bobine)) : le
+propriétaire obtient la bobine, toute autre personne son produit.
+
+| Lien | Le propriétaire (`Authorization: Bearer <jeton d'identité Firebase>`) | Toute autre personne (non connectée, un autre compte, un ami) |
 |---|---|---|
 | `…/P/AA394E58.JSON` | la fiche produit | pareil |
-| `…/04AB12CD3E4F80.JSON` | `401` — aucune donnée de bobine | la bobine, si les règles autorisent le compte à la lire |
 | `…/P/AA394E58.TTAG` | le produit en fichier `.ttag` | pareil |
-| `…/04AB12CD3E4F80.TTAG` | `401` | la bobine en fichier `.ttag` |
+| `…/04AB12CD3E4F80.JSON` | la bobine | `303` → `…/P/<id_product>.JSON` ; pas de produit du catalogue (une TigerData, une TigerTag maker) → `404` |
+| `…/04AB12CD3E4F80.TTAG` | la bobine en fichier `.ttag` | `303` → `…/P/<id_product>.TTAG` ; pas de produit du catalogue → `404` |
+
+Sans produit du catalogue, rien de la bobine n'est répondu, pas même sa
+matière : le `404` correspond à la page « bobine privée » d'un scan.
 
 - **Bobine :** un [fichier `.ttag`](./ttag-format.md) contenant ce seul
   enregistrement, le document d'inventaire tel que Firestore le stocke. Il
