@@ -106,7 +106,8 @@ And it is starting to happen:
 [Spooly Tracker](https://spoolytracker.com/) built its spool identification
 on them, and the Snapmaker U1's
 [community extended firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-reads them **natively on the printer itself** — see
+reads them **natively on the printer itself**, as
+[COSMOS](https://github.com/OpenCentauri/cosmos) does on the Elegoo Centauri Carbon — see
 [third-party integrations](../developers/integrations.md).
 
 ## A sandbox, on purpose
