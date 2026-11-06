@@ -1,5 +1,5 @@
 ---
-sourceHash: 95dda2b5c215914c4bf9284c61ec5643975d28923ec2baf5062a8f282dc8a208
+sourceHash: 9110f31dc4bbe42873f9f4aecf282d19f7af8c7df1498eaf821fd56d8b70aca6
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -19,7 +19,7 @@ Les règles que suit chaque application TigerSystem :
    étiquette imprimée, puis relu ;
 4. comment une application **appelle une bobine avec des valeurs** (un poids,
    une note) par un lien ;
-5. **(proposé)** comment un **produit** a son propre lien ;
+5. comment un **produit** a son propre lien (la page qu'il ouvre est **proposée**) ;
 6. **(proposé)** comment un lien répond en **JSON** ou en **fichier `.ttag`**.
 7. ce que porte une **étiquette imprimée**, et ses gabarits.
 
@@ -140,7 +140,7 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 | 10 chiffres | `TigerData_<10 chiffres>` |
 | 14 caractères hexadécimaux | l'UID, en majuscules |
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `P/` + 8 caractères hexadécimaux | **(proposé)** un produit — [section 5](#5-liens-produit-proposé) |
+| `P/` + 8 caractères hexadécimaux | un produit — [section 5](#5-liens-produit) |
 
 Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — **(proposé)**, [section 6](#6-réponses-json-et-ttag-proposé).
 
@@ -174,7 +174,7 @@ imprimés.
    la bobine) reçoit le **produit** de la bobine, jamais la bobine : le serveur
    retrouve la bobine par son identifiant sur tous les comptes (un index sur
    l'identifiant de bobine), lit son `id_product` et répond avec la page
-   produit de la [section 5](#5-liens-produit-proposé). Pas de produit, pas de
+   produit de la [section 5](#5-liens-produit). Pas de produit, pas de
    correspondance, ou le même identifiant dans deux comptes avec deux produits
    différents → aucun produit n'est montré. La recherche ne tourne que pour ces
    scans : son coût suit ces scans, pas le nombre de comptes.
@@ -223,7 +223,9 @@ Une application qui doit écrire sans confirmation (une balance qui met le poids
 compte de l'utilisateur, sous les règles Firestore
 ([guide d'intégration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
 
-## 5. Liens produit (proposé)
+## 5. Liens produit
+
+> **Ratifié le 2026-11-06.** La page de scan ci-dessous est encore **proposée**.
 
 Un produit — un filament du catalogue, quel que soit le propriétaire d'une
 bobine de ce filament — a son propre lien, pour un emballage, un rayon de
@@ -239,15 +241,22 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
   conversion. Exemple : le produit `2855882328` →
   `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
 - La forme décimale reste là où les gens voient le numéro — le catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), le texte imprimé sous un QR
-  code, un code-barres Code 128 — et n'entre jamais dans un lien
-  `qr.tigertag.io`.
+  (`tigersystem.io/<lang>/catalog/2855882328`), un code-barres Code 128 — et
+  n'entre jamais dans un lien `qr.tigertag.io`.
 - `P/00000000` et `P/FFFFFFFF` signifient « pas de produit » : jamais
-  imprimés, réponse `404`.
+  imprimés, réponse `404`. Un identifiant absent du catalogue : `404` aussi.
+- Un produit **retiré** du catalogue (abandonné, ou fusionné dans un autre)
+  répond `410` avec une page qui dit qu'il n'est plus au catalogue et propose la
+  recherche. Un `id_product` n'est jamais redonné à un autre produit : une
+  étiquette déjà collée ne peut jamais ouvrir le mauvais filament.
+- Les liens sont servis par le **Hub** (`tigersystem.io`) : `qr.tigertag.io`
+  pointe vers lui. La page de scan est une page du Hub, dans la langue du
+  téléphone ; les réponses `.JSON` et `.TTAG` sont des routes d'API du Hub qui
+  lisent le catalogue (en cache).
 - Une étiquette de bobine ne répète jamais son produit : le lien de la bobine y
   mène déjà ([section 3](#retrouver-la-bobine)).
 
-### La page de scan
+### La page de scan (proposé)
 
 `P/…` ouvre une page faite pour un téléphone juste après un scan, pas la page
 du catalogue :
@@ -303,7 +312,7 @@ mobile ou le site a le même aspect et se scanne de la même façon.
 | Étiquette | Son QR code | Imprimée pour |
 |---|---|---|
 | **Bobine** | le lien de la bobine ([section 3](#3-liens-qr)) | toute bobine qui a un lien QR (pas `CLOUD_`, pas l'ancien décimal) |
-| **Produit** (carte nuancier) | le lien du produit ([section 5](#5-liens-produit-proposé)) | une bobine ou un produit du catalogue avec un vrai `id_product` (TigerTag+, TigerData+) |
+| **Produit** (carte nuancier) | le lien du produit ([section 5](#5-liens-produit)) | une bobine ou un produit du catalogue avec un vrai `id_product` (TigerTag+, TigerData+) |
 
 Le propriétaire qui scanne une étiquette de bobine obtient la bobine ; les
 autres obtiennent son produit ([retrouver la bobine](#retrouver-la-bobine)). Une

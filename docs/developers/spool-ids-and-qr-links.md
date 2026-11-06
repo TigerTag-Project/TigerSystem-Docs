@@ -12,7 +12,7 @@ The rules every TigerSystem app follows:
 3. how a spool's id is written into the **QR code** of a printed label, and
    read back;
 4. how an app **calls a spool with values** (a weight, a note) through a link;
-5. **(proposed)** how a **product** gets its own link;
+5. how a **product** gets its own link (the page it opens is **proposed**);
 6. **(proposed)** how a link answers in **JSON** or as a **`.ttag` file**.
 7. what a **printed label** carries, and its templates.
 
@@ -123,7 +123,7 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 10 digits | `TigerData_<10 digits>` |
 | 14 hex characters | the UID, uppercased |
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `P/` + 8 hex characters | **(proposed)** a product — [section 5](#5-product-links-proposed) |
+| `P/` + 8 hex characters | a product — [section 5](#5-product-links) |
 
 A `.JSON` or `.TTAG` ending asks for the answer for tools — **(proposed)**, [section 6](#6-json-and-ttag-answers-proposed).
 
@@ -153,7 +153,7 @@ never clash with spool links already printed.
    spool) gets the spool's **product**, never the spool: the server finds the
    spool by its id across accounts (an index on the spool id), reads its
    `id_product` and answers with the product page of
-   [section 5](#5-product-links-proposed). No product, no match, or the same id
+   [section 5](#5-product-links). No product, no match, or the same id
    in two accounts with different products → no product is shown. The lookup
    runs only for those scans, so its cost follows them, not the number of
    accounts.
@@ -200,7 +200,9 @@ write without a confirmation (a scale updating the weight continuously, an
 integration) does not use links: it writes through the user's account under the
 Firestore rules ([integration guide](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
 
-## 5. Product links (proposed)
+## 5. Product links
+
+> **Ratified 2026-11-06.** The scan page below is still **proposed**.
 
 A product — a filament of the catalogue, whoever owns a spool of it — has its
 own link, for packaging, a shop shelf, a showroom or a printed catalogue:
@@ -214,14 +216,22 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
   reader builds the link without converting. Example: product `2855882328`
   → `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
 - The decimal form stays where people see the number — the catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), the text printed under a QR
-  code, a Code 128 barcode — and never goes into a `qr.tigertag.io` link.
+  (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and never
+  goes into a `qr.tigertag.io` link.
 - `P/00000000` and `P/FFFFFFFF` mean "no product": never printed, answered
-  with `404`.
+  with `404`. An id that is not in the catalogue: `404` too.
+- A product **removed** from the catalogue (withdrawn, or merged into another)
+  answers `410` with a page saying it is no longer in the catalogue and offering
+  the search. An `id_product` is never given to another product: a label already
+  stuck can never open the wrong filament.
+- The links are served by the **Hub** (`tigersystem.io`): `qr.tigertag.io`
+  points to it. The scan page is a Hub page, in the phone's language; the
+  `.JSON` and `.TTAG` answers are Hub API routes that read the catalogue
+  (cached).
 - A spool label never repeats its product: the spool link already leads to it
   ([section 3](#resolving-the-spool)).
 
-### The scan page
+### The scan page (proposed)
 
 `P/…` opens a page built for a phone just after a scan, not the catalogue page:
 
@@ -270,7 +280,7 @@ same.
 | Label | Its QR code | Printed for |
 |---|---|---|
 | **Spool** | the spool link ([section 3](#3-qr-links)) | any spool that has a QR link (not `CLOUD_`, not legacy decimal) |
-| **Product** (swatch card) | the product link ([section 5](#5-product-links-proposed)) | a spool or a catalogue product with a real `id_product` (TigerTag+, TigerData+) |
+| **Product** (swatch card) | the product link ([section 5](#5-product-links)) | a spool or a catalogue product with a real `id_product` (TigerTag+, TigerData+) |
 
 The owner scanning a spool label gets the spool; anyone else gets its product
 ([resolving the spool](#resolving-the-spool)). A product label opens the product
