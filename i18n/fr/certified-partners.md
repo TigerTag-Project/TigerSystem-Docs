@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: 2e75409b85de24a3f62a9c4245cb2c47ba3546caddac23265d7d4fe44cf6710a
 sourcePath: docs/certified-partners.md
 ---
 
@@ -47,6 +47,9 @@ partenaire**, pas la qualité du partenaire.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — intégré à la demande | Tague les bobines en TigerTag+ à la demande. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Filforme](https://www.filforme.com)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
+| **[Lotactree](https://www.lotactree.com)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
+| **[Smart3DPT](https://smart3d.pt)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
 
 || | |
 |---|---|---|
