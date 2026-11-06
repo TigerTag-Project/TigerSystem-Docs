@@ -1,5 +1,5 @@
 ---
-sourceHash: 4eae8684622136948f32bc6191e1e474e3916fa690362120cf0111442289ecce
+sourceHash: ab7bafb2de55e768ed0b1e32827daeef33358d5442189c51bfecebc4421d8884
 sourcePath: docs/faq/README.md
 ---
 
@@ -121,7 +121,8 @@ duquel les lecteurs et les supports de l'écosystème sont conçus.
 Plus de 2,5 millions de puces ont été produites — ce qui fait de TigerTag **le
 protocole RFID tiers le plus déployé au monde** ; la plupart sont intégrées à
 l'usine par des marques de filament tierces — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D — avec Filforme, Nanovia et d'autres en cours d'intégration.
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT — avec Nanovia et d'autres en
+cours d'intégration.
 
 **Comment une puce se retrouve-t-elle sur une bobine ?**
 Elle se colle — et il y en a **deux par bobine, sur des faces opposées**. C'est
@@ -430,7 +431,8 @@ TigerTag ?**
 Rapidement : une ligne de production peut être opérationnelle avec TigerTag en
 **5 jours à peine**, pour un coût très faible, avec chaque puce écrite en
 **environ 1 seconde** — c'est prouvé par plus de 2,5 millions de puces déjà
-expédiées par Rosa3D, eSun, Sunlu, Landu, Jamg He et R3D. Et chaque marque qui
+expédiées par Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree et
+Smart3DPT. Et chaque marque qui
 rejoint le mouvement renforce l'argument collectif pour que les fabricants
 d'imprimantes lisent TigerTag nativement. Lisez
 [Pour les fabricants de filament](../vision/for-filament-manufacturers.md),
