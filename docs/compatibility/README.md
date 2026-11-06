@@ -32,6 +32,11 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 > [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors)
 > — they are linked, not duplicated, here.
 
+## Tag formats side by side
+
+TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab and Creality CFS,
+figure by figure and with sources: **[Spool tag formats compared](./tag-formats.md)**.
+
 ## Beyond printers
 
 Compatibility isn't only about printers: see the growing list of
