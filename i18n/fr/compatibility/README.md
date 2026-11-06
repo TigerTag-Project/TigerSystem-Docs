@@ -1,5 +1,5 @@
 ---
-sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
+sourceHash: f390e1160b1eb8e0296cb0d38742b6d441703d2c4d247383a8e65392027a54b3
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -36,6 +36,11 @@ Comment TigerSystem fonctionne avec chaque écosystème d'imprimante. Deux axes 
 > sont maintenues dans le dépôt Tiger Studio, sous
 > [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors)
 > — elles sont liées ici, pas dupliquées.
+
+## Les formats de puce côte à côte
+
+TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab et Creality CFS,
+chiffre par chiffre et sources à l’appui : **[Formats de puce comparés](./tag-formats.md)**.
 
 ## Au-delà des imprimantes
 

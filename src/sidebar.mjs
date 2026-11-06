@@ -48,6 +48,7 @@ export const sidebar = [
     { slug: 'compatibility/klipper' },
     { slug: 'compatibility/openspool' },
     { slug: 'compatibility/opentag3d' },
+    { slug: 'compatibility/tag-formats', label: 'Spool tag formats compared', translations: { fr: 'Formats de puce comparés' } },
     { slug: 'compatibility/third-party-hardware' },
   ]),
 
