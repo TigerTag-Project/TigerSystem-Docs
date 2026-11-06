@@ -41,9 +41,9 @@ production**, not how good the partner is.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — integrated on request | Tags spools with TigerTag+ on request. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Tags spools with TigerTag+ on request. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Tags spools with TigerTag+ on request. |
-| **[Filforme](https://www.filforme.com)** | **In production** | Ships TigerTag-tagged spools from its production line. |
-| **[Lotactree](https://www.lotactree.com)** | **In production** | Ships TigerTag-tagged spools from its production line. |
-| **[Smart3DPT](https://smart3d.pt)** | **In production** | Ships TigerTag-tagged spools from its production line. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Tags spools with TigerTag+ on request. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Tags spools with TigerTag+ on request. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Tags spools with TigerTag+ on request. |
 | **[Nanovia](https://nanovia.tech)** | **In production** | Ships TigerTag-tagged spools from its production line. |
 
 || | |
