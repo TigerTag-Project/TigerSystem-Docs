@@ -1,5 +1,5 @@
 ---
-sourceHash: 4cfc0ebd748424978208a7b97d92319f3a63617b273b256de61c1b305cc7dcb9
+sourceHash: 92daf19ccb2158717d51e452dee8d4081b0020496d4c764a2d181fb2517367d8
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -24,7 +24,7 @@ jour, la seule solution ouverte de bobine intelligente réellement viable et
 diffusée à grande échelle : un protocole ouvert, standard, agnostique et
 multiplateforme, avec plus de **2,5 millions de puces déjà produites** et
 intégrées en usine par des marques comme Rosa3D, eSun, Sunlu, Landu, Jamg He,
-R3D, Filforme, Lotactree et Smart3DPT — Nanovia étant en cours d'intégration.
+R3D, Filforme, Lotactree, Smart3DPT et Nanovia.
 
 ## Intégration en usine : des jours, pas des mois
 
@@ -99,8 +99,9 @@ l'engagement public.
 
 **[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
 
-…et d'autres en cours d'intégration —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), et
+…et désormais sur la ligne de production aussi —
+[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech),
+[Lotactree](https://www.lotactree.com), [Smart3DPT](https://smart3d.pt) — et
 d'autres encore à venir.
 
 **Vous voulez votre logo sur cette échelle — et en plus grand ?** Une ligne de

@@ -103,7 +103,7 @@ round is the format the ecosystem's readers and holders are designed around.
 More than 2.5 million chips have been produced — making TigerTag **the most
 deployed third-party RFID protocol in the world**; most are integrated at the
 factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D, Filforme, Lotactree, Smart3DPT — with Nanovia and more being
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — and more being
 integrated.
 
 **How does a chip get on a spool?**

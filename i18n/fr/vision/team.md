@@ -1,5 +1,5 @@
 ---
-sourceHash: 571449a73f649cd12fb6234926e757dfb0758cb4207e1b61c84e9857939d0c0d
+sourceHash: 62f0dbe3c583f7f4f9624b611932c6626178466d95056f1c32b259c965a35f14
 sourcePath: docs/vision/team.md
 ---
 
@@ -40,7 +40,7 @@ combat est mené.*
 
 - **Les usines partenaires** qui ont choisi la puce ouverte plutôt qu'un
  jardin clos — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree,
- Smart3DPT — avec Nanovia et d'autres en cours d'intégration.
+ Smart3DPT, Nanovia — et d'autres en cours d'intégration.
 - **Les développeurs indépendants** qui se sont emparés du protocole
  d'eux-mêmes — OpenRFID, Spooly Tracker, le firmware communautaire de la
  Snapmaker U1 ([intégrations tierces](../developers/integrations.md)).
