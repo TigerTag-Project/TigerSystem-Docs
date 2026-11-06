@@ -13,7 +13,7 @@ The rules every TigerSystem app follows:
    read back;
 4. how an app **calls a spool with values** (a weight, a note) through a link;
 5. **(proposed)** how a **product** gets its own link;
-6. **(proposed)** how a link answers in **JSON**.
+6. **(proposed)** how a link answers in **JSON** or as a **`.ttag` file**.
 
 ## 1. Spool ids
 
@@ -82,6 +82,9 @@ nothing else** (no weight, no note — printed values go stale):
 HTTPS://QR.TIGERTAG.IO/<id>
 ```
 
+Nothing is printed in clear next to the code: no id, no link. The QR code is
+the way back to the spool.
+
 `<id>` is the spool id **without its prefix**:
 
 | Spool | Link |
@@ -121,7 +124,7 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
 | `P/` + 8 hex characters | **(proposed)** a product — [section 5](#5-product-links-proposed) |
 
-A `.JSON` ending asks for the answer in JSON — **(proposed)**, [section 6](#6-json-answers-proposed).
+A `.JSON` or `.TTAG` ending asks for the answer for tools — **(proposed)**, [section 6](#6-json-and-ttag-answers-proposed).
 
 Apps **write** the short form above, but readers also **accept the long form**:
 the `TigerData` prefix in any case, followed by `_` or `-`, then the 17 or 10
@@ -230,15 +233,19 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
    (a TigerData+) and "Add to favourites";
 6. "See it in the catalogue", to the full page.
 
-## 6. JSON answers (proposed)
+## 6. JSON and .TTAG answers (proposed)
 
 A link ending in `.JSON` (any case) — or sent with `Accept: application/json` —
-answers in JSON instead of a page. These are addresses for tools, never printed.
+answers in JSON instead of a page. A link ending in `.TTAG` answers with the same
+record as a [`.ttag` file](./ttag-format.md) to download
+(`Content-Disposition: attachment`). These are addresses for tools, never printed.
 
 | Link | Not signed in | Signed in (`Authorization: Bearer <Firebase ID token>`) |
 |---|---|---|
 | `…/P/AA394E58.JSON` | the product record | the same |
 | `…/04AB12CD3E4F80.JSON` | `401` — no spool data | the spool, if the rules let the account read it |
+| `…/P/AA394E58.TTAG` | the product as a `.ttag` file | the same |
+| `…/04AB12CD3E4F80.TTAG` | `401` | the spool as a `.ttag` file |
 
 - **Spool:** a [`.ttag` file](./ttag-format.md) holding that one record, the
   inventory document as Firestore stores it. It carries `id_product`; a tool
@@ -247,8 +254,11 @@ answers in JSON instead of a page. These are addresses for tools, never printed.
   language of `?lang=` (English by default). Cached on the server and allowed
   from any site.
 - A spool answer is never cached: it depends on who asks.
-- A JSON request never writes: link values (`?weight=`, `?note=`) are ignored
-  there.
+- Opened in Tiger Studio, a spool's `.ttag` imports in **Restore** mode (the
+  spool as it was, chip and backup included); a product's `.ttag` imports in
+  **Import** mode, as a new TigerData+ with a fresh id.
+- A JSON or `.TTAG` request never writes: link values (`?weight=`, `?note=`)
+  are ignored there.
 
 ## Open points
 

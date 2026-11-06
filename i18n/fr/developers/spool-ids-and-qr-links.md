@@ -1,5 +1,5 @@
 ---
-sourceHash: 1681bb528e61765de2222a7eb47f04b340244e4360f9ae81a11ee2d2435d915f
+sourceHash: 73e5da519e66c5bddb6dbe07376acc5dcebd66390c3030e7eacaa5936907230f
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -20,7 +20,7 @@ Les règles que suit chaque application TigerSystem :
 4. comment une application **appelle une bobine avec des valeurs** (un poids,
    une note) par un lien ;
 5. **(proposé)** comment un **produit** a son propre lien ;
-6. **(proposé)** comment un lien répond en **JSON**.
+6. **(proposé)** comment un lien répond en **JSON** ou en **fichier `.ttag`**.
 
 ## 1. Identifiants de bobine
 
@@ -97,6 +97,9 @@ fausse) :
 HTTPS://QR.TIGERTAG.IO/<id>
 ```
 
+Rien n'est imprimé en clair à côté du code : ni identifiant, ni lien. Le QR
+code est le chemin vers la bobine.
+
 `<id>` est l'identifiant de la bobine **sans son préfixe** :
 
 | Bobine | Lien |
@@ -138,7 +141,7 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
 | `P/` + 8 caractères hexadécimaux | **(proposé)** un produit — [section 5](#5-liens-produit-proposé) |
 
-Une fin en `.JSON` demande la réponse en JSON — **(proposé)**, [section 6](#6-réponses-json-proposé).
+Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — **(proposé)**, [section 6](#6-réponses-json-et-ttag-proposé).
 
 Les applications **écrivent** la forme courte ci-dessus, mais les lecteurs
 **acceptent aussi la forme longue** : le préfixe `TigerData` dans n'importe
@@ -258,16 +261,21 @@ du catalogue :
    inventaire » (une TigerData+) et « Ajouter aux favoris » ;
 6. « Voir dans le catalogue », vers la page complète.
 
-## 6. Réponses JSON (proposé)
+## 6. Réponses JSON et .TTAG (proposé)
 
 Un lien qui finit par `.JSON` (dans n'importe quelle casse) — ou envoyé avec
-`Accept: application/json` — répond en JSON au lieu d'une page. Ce sont des
-adresses pour les outils, jamais imprimées.
+`Accept: application/json` — répond en JSON au lieu d'une page. Un lien qui
+finit par `.TTAG` répond avec le même enregistrement sous forme de
+[fichier `.ttag`](./ttag-format.md) à télécharger
+(`Content-Disposition: attachment`). Ce sont des adresses pour les outils,
+jamais imprimées.
 
 | Lien | Non connecté | Connecté (`Authorization: Bearer <jeton d'identité Firebase>`) |
 |---|---|---|
 | `…/P/AA394E58.JSON` | la fiche produit | pareil |
 | `…/04AB12CD3E4F80.JSON` | `401` — aucune donnée de bobine | la bobine, si les règles autorisent le compte à la lire |
+| `…/P/AA394E58.TTAG` | le produit en fichier `.ttag` | pareil |
+| `…/04AB12CD3E4F80.TTAG` | `401` | la bobine en fichier `.ttag` |
 
 - **Bobine :** un [fichier `.ttag`](./ttag-format.md) contenant ce seul
   enregistrement, le document d'inventaire tel que Firestore le stocke. Il
@@ -278,8 +286,12 @@ adresses pour les outils, jamais imprimées.
   autorisée depuis n'importe quel site.
 - Une réponse de bobine n'est jamais mise en cache : elle dépend de qui
   demande.
-- Une requête JSON n'écrit jamais : les valeurs de lien (`?weight=`, `?note=`)
-  y sont ignorées.
+- Ouvert dans Tiger Studio, le `.ttag` d'une bobine s'importe en mode
+  **Restaurer** (la bobine telle qu'elle était, puce et sauvegarde comprises) ;
+  celui d'un produit en mode **Importer**, comme une nouvelle TigerData+ avec un
+  identifiant neuf.
+- Une requête JSON ou `.TTAG` n'écrit jamais : les valeurs de lien
+  (`?weight=`, `?note=`) y sont ignorées.
 
 ## Points ouverts
 
