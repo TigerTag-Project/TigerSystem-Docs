@@ -152,10 +152,13 @@ never clash with spool links already printed.
    accepted friend included — is **sent to the product** of the spool, never
    shown the spool: the server finds the spool by its id across accounts (an
    index on the spool id), reads its `id_product` and redirects to the product
-   link of [section 5](#5-product-links). No product, no match, or the same id
-   in two accounts with different products → a page saying the spool is
-   private, with "Start my inventory". The lookup runs only for those scans, so
-   its cost follows them, not the number of accounts. *(Ratified 2026-11-06.)*
+   link of [section 5](#5-product-links). The same id in two accounts with
+   different products (a rewritten chip whose old doc another account kept) →
+   the product of the doc updated last (`updatedAt`), right in practically
+   every case. No product or no match → a page saying the spool is private,
+   with "Start my inventory". The lookup runs only for those scans, so its cost
+   follows them, not the number of accounts. *(Ratified 2026-11-06; the
+   conflict rule 2026-11-07.)*
 
 **Privacy:** knowing an id never shows a spool. A scanned link opens a spool
 for its owner only; inside the apps, a spool is shown only to someone the

@@ -1,5 +1,5 @@
 ---
-sourceHash: 8ac6461fc6770d2cb349fdec339bc41160e7b5f00a2d2328ba27962b17fa4b88
+sourceHash: 0f3808adf3eabd0a88acebe5d3e1a5e8649bc7022a21c715bce24f3a56e885ee
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -173,11 +173,14 @@ imprimés.
    bobine, sans jamais voir la bobine : le serveur retrouve la bobine par son
    identifiant sur tous les comptes (un index sur l'identifiant de bobine), lit
    son `id_product` et redirige vers le lien produit de la
-   [section 5](#5-liens-produit). Pas de produit, pas de correspondance, ou le
-   même identifiant dans deux comptes avec deux produits différents → une page
-   qui dit que la bobine est privée, avec « Créer mon inventaire ». La recherche
-   ne tourne que pour ces scans : son coût suit ces scans, pas le nombre de
-   comptes. *(Ratifié le 2026-11-06.)*
+   [section 5](#5-liens-produit). Le même identifiant dans deux comptes avec
+   deux produits différents (une puce réécrite dont un autre compte a gardé
+   l'ancien doc) → le produit du doc mis à jour le plus récemment
+   (`updatedAt`), juste dans la quasi-totalité des cas. Pas de produit ou pas
+   de correspondance → une page qui dit que la bobine est privée, avec « Créer
+   mon inventaire ». La recherche ne tourne que pour ces scans : son coût suit
+   ces scans, pas le nombre de comptes. *(Ratifié le 2026-11-06 ; la règle de
+   conflit le 2026-11-07.)*
 
 **Confidentialité :** connaître un identifiant ne montre jamais une bobine. Un
 lien scanné n'ouvre une bobine que pour son propriétaire ; dans les
