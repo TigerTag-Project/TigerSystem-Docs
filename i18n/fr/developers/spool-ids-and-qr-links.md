@@ -1,5 +1,5 @@
 ---
-sourceHash: 1acb017888efcf27bed953b972c74d38d33f374becdc8c70fe144c78a3010930
+sourceHash: 8ac6461fc6770d2cb349fdec339bc41160e7b5f00a2d2328ba27962b17fa4b88
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -244,12 +244,14 @@ https://qr.tigertag.io/p/<id_product>
 - La forme décimale reste là où les gens voient le numéro — le catalogue
   (`tigersystem.io/<lang>/catalog/2855882328`), un code-barres Code 128 — et
   n'entre jamais dans un lien `qr.tigertag.io`.
-- `p/00000000` et `p/ffffffff` signifient « pas de produit » : jamais
-  imprimés, réponse `404`. Un identifiant absent du catalogue : `404` aussi.
-- Un produit **retiré** du catalogue (abandonné, ou fusionné dans un autre)
-  répond `410` avec une page qui dit qu'il n'est plus au catalogue et propose la
-  recherche. Un `id_product` n'est jamais redonné à un autre produit : une
-  étiquette déjà collée ne peut jamais ouvrir le mauvais filament.
+- Un identifiant qui n'est pas, ou plus, au catalogue — `p/00000000` et
+  `p/ffffffff` (« pas de produit », jamais imprimés), un identifiant inconnu, un
+  produit archivé, supprimé ou fusionné — ouvre **une seule page « produit
+  oublié »** : ce filament n'est plus au catalogue, avec la recherche. Un seul
+  statut pour tous, `404` (la page comme les réponses `.json` / `.ttag`) :
+  pourquoi un produit a disparu ne compte pas pour celui qui scanne. Un
+  `id_product` n'est jamais redonné à un autre produit : une étiquette déjà
+  collée ne peut jamais ouvrir le mauvais filament.
 - Les liens sont servis par le **Hub** (`tigersystem.io`) : `qr.tigertag.io`
   pointe vers lui. La page est la page catalogue du Hub (ci-dessous) ; les réponses `.JSON` et `.TTAG` sont des routes d'API du Hub qui
   lisent le catalogue (en cache).

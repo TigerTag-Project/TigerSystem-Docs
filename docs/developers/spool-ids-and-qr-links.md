@@ -218,12 +218,13 @@ https://qr.tigertag.io/p/<id_product>
 - The decimal form stays where people see the number — the catalogue
   (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and never
   goes into a `qr.tigertag.io` link.
-- `p/00000000` and `p/ffffffff` mean "no product": never printed, answered
-  with `404`. An id that is not in the catalogue: `404` too.
-- A product **removed** from the catalogue (withdrawn, or merged into another)
-  answers `410` with a page saying it is no longer in the catalogue and offering
-  the search. An `id_product` is never given to another product: a label already
-  stuck can never open the wrong filament.
+- An id that is not, or no longer, in the catalogue — `p/00000000` and
+  `p/ffffffff` ("no product", never printed), an unknown id, a product archived,
+  deleted or merged — opens **one "forgotten product" page**: this filament is no
+  longer in the catalogue, with the search. One status for all of them, `404`
+  (the page and the `.json` / `.ttag` answers alike): why a product went does not
+  matter to the reader. An `id_product` is never given to another product: a
+  label already stuck can never open the wrong filament.
 - The links are served by the **Hub** (`tigersystem.io`): `qr.tigertag.io`
   points to it. The page is the Hub's catalogue page (below); the
   `.JSON` and `.TTAG` answers are Hub API routes that read the catalogue
