@@ -1,5 +1,5 @@
 ---
-sourceHash: 60f304f4e701ebc9df88f2538120a16fc1b68572a4b4754b79ead756e6dc7da1
+sourceHash: 044319f4911dea2c9dbc1e940912765aba05cacacc730e8db1078a6876e8be34
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -210,7 +210,10 @@ compter. Le produit d'une bobine n'est pas privé : il est imprimé sur
 l'étiquette, et une puce TigerTag+ le porte en clair pour tout téléphone NFC.
 Le poids, la note, le rack et le propriétaire ne sortent jamais. Un scan est
 compté avec son produit, sa marque, sa matière et un lieu à l'échelle de la
-ville, jamais l'identifiant de la bobine.
+ville, jamais l'identifiant de la bobine. Le compte rendu du scan porte aussi
+l'adresse IP du visiteur, gardée contre les inondations de requêtes et pour
+l'analyse : elle ne s'affiche que dans l'historique d'administration, jamais
+pour les marques, et sert à vérifier la ville donnée par le serveur de bord.
 
 ## 4. Appeler une bobine avec des valeurs
 
@@ -393,6 +396,8 @@ avec la marge) et 2 sur le Fin (≈ 9,3 mm).
   (Android).
 - **Domaine.** `qr.tigertag.io` est imprimé pour toujours : renouveler
   `tigertag.io` sur une longue durée.
+- **Conservation de l'IP.** La durée pendant laquelle les comptes rendus de
+  scan gardent l'IP du visiteur n'est pas encore décidée (30 jours proposés).
 
 ---
 
