@@ -1,5 +1,5 @@
 ---
-sourceHash: 0b3eba2aa980e67e39bf6c5f6cb2edb9bd7ceb0d89c340fb91e76980264bdfab
+sourceHash: 60f304f4e701ebc9df88f2538120a16fc1b68572a4b4754b79ead756e6dc7da1
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -168,6 +168,17 @@ imprimés.
 4. Une bobine supprimée (`deleted: true`) s'ouvre comme « supprimée », pas
    comme une erreur.
 
+   **Le propriétaire voit la bobine sur la page même**, lue dans le navigateur
+   depuis son propre document d'inventaire (les règles la lui réservent) : le
+   produit (photo sur sa couleur), la marque, la matière, le niveau, le poids
+   restant sur la capacité, les températures de buse, de plateau et de séchage,
+   le diamètre, le rack et l'emplacement, le poids de la bobine vide. Deux
+   boutons : « Ouvrir dans Tiger Studio »
+   (`https://studio.tigersystem.io/?spool=<docId>`, avec les valeurs du lien)
+   et « Voir la fiche produit ». Un propriétaire connecté à Studio Web sur
+   l'appareil mais pas au site est envoyé vers Studio Web : le site ne peut pas
+   lire le document sans sa propre session. *(2026-11-07.)*
+
 5. Toute personne qui **n'est pas le propriétaire** — non connectée, un autre
    compte, un ami accepté compris — est **renvoyée vers le produit** de la
    bobine, sans jamais voir la bobine : le serveur retrouve la bobine par son
@@ -197,7 +208,9 @@ autorisent déjà à la lire (le propriétaire, un ami accepté, un inventaire p
 identifiants contiennent une heure et peuvent se deviner ; cela ne doit jamais
 compter. Le produit d'une bobine n'est pas privé : il est imprimé sur
 l'étiquette, et une puce TigerTag+ le porte en clair pour tout téléphone NFC.
-Le poids, la note, le rack et le propriétaire ne sortent jamais.
+Le poids, la note, le rack et le propriétaire ne sortent jamais. Un scan est
+compté avec son produit, sa marque, sa matière et un lieu à l'échelle de la
+ville, jamais l'identifiant de la bobine.
 
 ## 4. Appeler une bobine avec des valeurs
 

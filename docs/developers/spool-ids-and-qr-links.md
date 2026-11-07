@@ -148,6 +148,16 @@ never clash with spool links already printed.
 3. A twin pair has one label, with the main UID; either UID opens the spool.
 4. A deleted spool (`deleted: true`) opens as "deleted", not as an error.
 
+   **The owner sees the spool on the page itself**, read in the browser from
+   their own inventory document (the rules scope it to them): the product
+   (photo on its colour), brand, material, tier, weight left out of capacity,
+   nozzle, bed and drying temperatures, diameter, rack and slot, empty-spool
+   weight. Two buttons: "Open in Tiger Studio"
+   (`https://studio.tigersystem.io/?spool=<docId>`, with the link's values) and
+   "See the product page". An owner signed in to Studio Web on the device but
+   not to the site is sent to Studio Web: the site cannot read the document
+   without its own session. *(2026-11-07.)*
+
 5. Anyone who is **not the owner** — not signed in, another account, an
    accepted friend included — is **sent to the product** of the spool, never
    shown the spool: the server finds the spool by its id across accounts (an
@@ -173,7 +183,8 @@ Firestore rules already let read it (the owner, an accepted
 friend, a public inventory). Ids contain a timestamp and can be guessed; that
 must never matter. The product of a spool is not private: it is printed on the
 label, and a TigerTag+ chip carries it in clear for any NFC phone. The weight,
-the note, the rack and the owner never leave.
+the note, the rack and the owner never leave. A scan is counted
+with its product, brand, material and a city-level place, never the spool id.
 
 ## 4. Calling a spool with values
 
