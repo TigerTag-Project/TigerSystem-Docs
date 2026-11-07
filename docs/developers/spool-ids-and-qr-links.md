@@ -160,6 +160,13 @@ never clash with spool links already printed.
    follows them, not the number of accounts. *(Ratified 2026-11-06; the
    conflict rule 2026-11-07.)*
 
+   A visitor **with no session** (no sign-in found on the device) is not
+   redirected: the page lets them choose. It shows a card of the spool's
+   product (the public product only, never for a private spool), signs in on
+   the spot (once signed in, the owner check runs again and the owner lands on
+   the spool), or goes on to the product page. Someone signed in who is not
+   the owner is sent to the product as above. *(2026-11-07.)*
+
 **Privacy:** knowing an id never shows a spool. A scanned link opens a spool
 for its owner only; inside the apps, a spool is shown only to someone the
 Firestore rules already let read it (the owner, an accepted

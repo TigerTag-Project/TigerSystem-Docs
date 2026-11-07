@@ -1,5 +1,5 @@
 ---
-sourceHash: 0f3808adf3eabd0a88acebe5d3e1a5e8649bc7022a21c715bce24f3a56e885ee
+sourceHash: 0b3eba2aa980e67e39bf6c5f6cb2edb9bd7ceb0d89c340fb91e76980264bdfab
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -181,6 +181,14 @@ imprimés.
    mon inventaire ». La recherche ne tourne que pour ces scans : son coût suit
    ces scans, pas le nombre de comptes. *(Ratifié le 2026-11-06 ; la règle de
    conflit le 2026-11-07.)*
+
+   Un visiteur **sans session** (aucune connexion trouvée sur l'appareil) n'est
+   pas redirigé : la page le laisse choisir. Elle montre une carte du produit de
+   la bobine (le produit public seulement, jamais pour une bobine privée),
+   permet de se connecter sur place (une fois connecté, la vérification du
+   propriétaire repart et le propriétaire arrive sur sa bobine), ou de passer à
+   la fiche produit. Une personne connectée qui n'est pas le propriétaire est
+   renvoyée vers le produit comme ci-dessus. *(2026-11-07.)*
 
 **Confidentialité :** connaître un identifiant ne montre jamais une bobine. Un
 lien scanné n'ouvre une bobine que pour son propriétaire ; dans les
