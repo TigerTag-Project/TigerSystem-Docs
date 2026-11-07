@@ -1,5 +1,5 @@
 ---
-sourceHash: cb01a61f8540f62c07457a06f17fde7a2d9970f498737bc14d40e86161b808fc
+sourceHash: 1acb017888efcf27bed953b972c74d38d33f374becdc8c70fe144c78a3010930
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -95,7 +95,7 @@ bobine, **et rien d'autre** (ni poids, ni note — une valeur imprimée devient
 fausse) :
 
 ```
-HTTPS://QR.TIGERTAG.IO/<id>
+https://qr.tigertag.io/<id>
 ```
 
 Rien n'est imprimé en clair à côté du code : ni identifiant, ni lien. Le QR
@@ -105,28 +105,26 @@ code est le chemin vers la bobine.
 
 | Bobine | Lien |
 |---|---|
-| Avec puce | `HTTPS://QR.TIGERTAG.IO/04AB12CD3E4F80` |
-| Sans puce (nouvelle) | `HTTPS://QR.TIGERTAG.IO/17623456789014213` |
-| Sans puce (avant ce contrat) | `HTTPS://QR.TIGERTAG.IO/4480517985` |
+| Avec puce | `https://qr.tigertag.io/04ab12cd3e4f80` |
+| Sans puce (nouvelle) | `https://qr.tigertag.io/17623456789014213` |
+| Sans puce (avant ce contrat) | `https://qr.tigertag.io/4480517985` |
 | `CLOUD_` | **pas de lien QR** — l'étiquette est imprimée sans QR code |
 | Ancien décimal | **pas de lien QR** — migrer d'abord la bobine vers l'hexadécimal |
 
 ### Encodage
 
-- Tout le lien est en **majuscules**. Seuls les chiffres, les lettres
-  majuscules et ` $%*+-./:` tiennent dans le mode **alphanumérique** du QR
-  code, qui garde le code petit ; une seule minuscule ou un `_` le fait passer
-  en mode octet. Le schéma et le nom de domaine ne tiennent pas compte de la
-  casse, et les UID sont déjà en hexadécimal majuscule.
-- Segments, avec le mode donné explicitement (les générateurs utilisent le mode
-  octet par défaut) :
-  - identifiant sans puce (que des chiffres) : `HTTPS://QR.TIGERTAG.IO/` en
-    mode **alphanumérique**, puis les chiffres en mode **numérique** ;
-  - UID : tout le lien en **un seul segment alphanumérique** (l'en-tête d'un
-    second segment coûterait une taille).
+- Tout le lien est en **minuscules**, identifiant compris :
+  `https://qr.tigertag.io/04ab12cd3e4f80`. Testé le 2026-11-07 : l'appareil
+  photo de l'iPhone ouvre un lien dans les deux casses, mais celui de Samsung
+  (Galaxy S24) affiche un lien `HTTPS://` en majuscules comme du simple texte
+  et n'ouvre qu'un lien en minuscules.
+- Un seul segment en mode **octet**. Un schéma en minuscules ne peut pas
+  utiliser le mode alphanumérique, et découper le lien en segments ne fait rien
+  gagner (mesuré : toutes les variantes font 29 × 29).
 - Correction d'erreur **M** (15 %) : les étiquettes se rayent et se plient.
-- Résultat : **25 × 25 modules** pour toute bobine. Dessinez chaque module sur
-  un nombre entier de points d'impression, avec la marge standard de 4 modules.
+- Résultat : **29 × 29 modules** pour tout lien de bobine ou de produit.
+  Dessinez chaque module sur un nombre entier de points d'impression, avec la
+  marge standard de 4 modules.
 
 ### Relire un lien
 
@@ -140,7 +138,7 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 | 10 chiffres | `TigerData_<10 chiffres>` |
 | 14 caractères hexadécimaux | l'UID, en majuscules |
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `P/` + 8 caractères hexadécimaux | un produit — [section 5](#5-liens-produit) |
+| `p/` + 8 caractères hexadécimaux | un produit — [section 5](#5-liens-produit) |
 
 Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — [section 6](#6-réponses-json-et-ttag).
 
@@ -235,18 +233,18 @@ bobine de ce filament — a son propre lien, pour un emballage, un rayon de
 magasin, un showroom ou un catalogue imprimé :
 
 ```
-HTTPS://QR.TIGERTAG.IO/P/<id_product>
+https://qr.tigertag.io/p/<id_product>
 ```
 
 - `<id_product>` est écrit en **hexadécimal, toujours sur 8 caractères**, en
-  majuscules, complété par des zéros : les 4 octets tels qu'ils sont sur la
+  minuscules, complété par des zéros : les 4 octets tels qu'ils sont sur la
   puce, pour qu'un firmware ou un lecteur NFC construise le lien sans
   conversion. Exemple : le produit `2855882328` →
-  `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
+  `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
 - La forme décimale reste là où les gens voient le numéro — le catalogue
   (`tigersystem.io/<lang>/catalog/2855882328`), un code-barres Code 128 — et
   n'entre jamais dans un lien `qr.tigertag.io`.
-- `P/00000000` et `P/FFFFFFFF` signifient « pas de produit » : jamais
+- `p/00000000` et `p/ffffffff` signifient « pas de produit » : jamais
   imprimés, réponse `404`. Un identifiant absent du catalogue : `404` aussi.
 - Un produit **retiré** du catalogue (abandonné, ou fusionné dans un autre)
   répond `410` avec une page qui dit qu'il n'est plus au catalogue et propose la
@@ -260,7 +258,7 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
 
 ### La page qu'il ouvre
 
-`P/…` redirige (`302`) vers la **page catalogue existante** du produit,
+`p/…` redirige (`302`) vers la **page catalogue existante** du produit,
 `tigersystem.io/<lang>/catalog/<id_product en décimal>`, dans la langue du
 téléphone. Il n'y a pas de page de scan à part : la page catalogue est conçue
 **d'abord pour le téléphone** (responsive), puisque la plupart de ses visites
@@ -284,10 +282,10 @@ propriétaire obtient la bobine, toute autre personne son produit.
 
 | Lien | Le propriétaire (`Authorization: Bearer <jeton d'identité Firebase>`) | Toute autre personne (non connectée, un autre compte, un ami) |
 |---|---|---|
-| `…/P/AA394E58.JSON` | la fiche produit | pareil |
-| `…/P/AA394E58.TTAG` | le produit en fichier `.ttag` | pareil |
-| `…/04AB12CD3E4F80.JSON` | la bobine | `303` → `…/P/<id_product>.JSON` ; pas de produit du catalogue (une TigerData, une TigerTag maker) → `404` |
-| `…/04AB12CD3E4F80.TTAG` | la bobine en fichier `.ttag` | `303` → `…/P/<id_product>.TTAG` ; pas de produit du catalogue → `404` |
+| `…/p/aa394e58.json` | la fiche produit | pareil |
+| `…/p/aa394e58.ttag` | le produit en fichier `.ttag` | pareil |
+| `…/04ab12cd3e4f80.json` | la bobine | `303` → `…/p/<id_product>.json` ; pas de produit du catalogue (une TigerData, une TigerTag maker) → `404` |
+| `…/04ab12cd3e4f80.ttag` | la bobine en fichier `.ttag` | `303` → `…/p/<id_product>.ttag` ; pas de produit du catalogue → `404` |
 
 Sans produit du catalogue, rien de la bobine n'est répondu, pas même sa
 matière : le `404` correspond à la page « bobine privée » d'un scan.
@@ -295,7 +293,7 @@ matière : le `404` correspond à la page « bobine privée » d'un scan.
 - **Bobine :** un [fichier `.ttag`](./ttag-format.md) contenant ce seul
   enregistrement, le document d'inventaire tel que Firestore le stocke. Il
   contient `id_product` ; un outil qui veut le produit appelle ensuite
-  `…/P/<id_product>.JSON`.
+  `…/p/<id_product>.json`.
 - **Produit :** la fiche du catalogue telle que l'API produit la renvoie, dans
   la langue de `?lang=` (anglais par défaut). Mise en cache sur le serveur et
   autorisée depuis n'importe quel site.
@@ -349,8 +347,8 @@ le propriétaire. Rien en clair à côté du QR code ([section 3](#3-liens-qr)).
 Le 40 × 30 mm est l'étiquette thermique courante ; elle tient sur le flanc
 d'une bobine et sur un nuancier imprimé. Le QR code prend le plus grand nombre
 entier de points d'imprimante par module qui tient, avec sa marge de 4 modules :
-à 203 ppp, un code 25 × 25 fait 3 points par module sur le Classique (≈ 12,4 mm
-avec la marge) et 2 sur le Fin (≈ 8,3 mm).
+à 203 ppp, un code 29 × 29 fait 3 points par module sur le Classique (≈ 13,9 mm
+avec la marge) et 2 sur le Fin (≈ 9,3 mm).
 
 ### Sortie
 
@@ -361,16 +359,12 @@ avec la marge) et 2 sur le Fin (≈ 8,3 mm).
 
 ## Points ouverts
 
-- **Schéma en majuscules.** `HTTPS://` en majuscules est reconnu comme un lien
-  par l'appareil photo de l'iPhone (testé le 2026-11-05, liens avec et sans
-  puce). Reste à tester : Google Lens, l'appareil photo Samsung et une
-  application de scan basique. Si l'un échoue, le lien passe en minuscules
-  (`https://qr.tigertag.io/` en mode octet + l'identifiant), ce qui coûte une
-  taille (29 × 29).
 - **Liens d'application.** iOS (`apple-app-site-association`) et Android
   (filtres d'intention) comparent les chemins en tenant compte de la casse par
-  défaut : l'application mobile doit déclarer une correspondance insensible à
-  la casse (iOS) et toutes les formes (Android).
+  défaut : les liens sont imprimés en minuscules, mais un lien tapé ou partagé
+  à la main peut ne pas l'être ; l'application mobile déclare donc une
+  correspondance insensible à la casse (iOS) et filtre le chemin dans le code
+  (Android).
 - **Domaine.** `qr.tigertag.io` est imprimé pour toujours : renouveler
   `tigertag.io` sur une longue durée.
 

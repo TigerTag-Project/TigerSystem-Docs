@@ -80,7 +80,7 @@ A printed spool label carries a QR code holding a link to the spool, **and
 nothing else** (no weight, no note — printed values go stale):
 
 ```
-HTTPS://QR.TIGERTAG.IO/<id>
+https://qr.tigertag.io/<id>
 ```
 
 Nothing is printed in clear next to the code: no id, no link. The QR code is
@@ -90,26 +90,25 @@ the way back to the spool.
 
 | Spool | Link |
 |---|---|
-| Chip | `HTTPS://QR.TIGERTAG.IO/04AB12CD3E4F80` |
-| Chipless (new) | `HTTPS://QR.TIGERTAG.IO/17623456789014213` |
-| Chipless (before this contract) | `HTTPS://QR.TIGERTAG.IO/4480517985` |
+| Chip | `https://qr.tigertag.io/04ab12cd3e4f80` |
+| Chipless (new) | `https://qr.tigertag.io/17623456789014213` |
+| Chipless (before this contract) | `https://qr.tigertag.io/4480517985` |
 | `CLOUD_` | **no QR link** — the label is printed without a QR code |
 | Legacy decimal | **no QR link** — migrate the spool to hex first |
 
 ### Encoding
 
-- The whole link is **uppercase**. Only digits, uppercase letters and
-  ` $%*+-./:` fit the QR **alphanumeric** mode, which keeps the code small; one
-  lowercase letter or `_` switches it to byte mode. Schemes and host names are
-  case-insensitive, and UIDs are uppercase hex already.
-- Segments, with the mode set explicitly (generators default to byte mode):
-  - chipless id (all digits): `HTTPS://QR.TIGERTAG.IO/` in **alphanumeric**
-    mode, then the digits in **numeric** mode;
-  - UID: the whole link as **one alphanumeric** segment (a second segment's
-    header would cost a size).
+- The whole link is **lowercase**, the id included: `https://qr.tigertag.io/04ab12cd3e4f80`.
+  Tested 2026-11-07: the iPhone camera opens a link in either case, but the
+  Samsung camera (Galaxy S24) shows an uppercase `HTTPS://` link as plain text
+  and opens only a lowercase one.
+- One **byte**-mode segment. A lowercase scheme cannot use the alphanumeric
+  mode, and splitting the link into segments saves nothing (measured: every
+  variant is 29 × 29).
 - Error correction **M** (15 %): labels get scratched and folded.
-- Result: **25 × 25 modules** for every spool. Draw each module on a whole
-  number of printer dots, with the standard 4-module quiet zone.
+- Result: **29 × 29 modules** for every spool and product link. Draw each
+  module on a whole number of printer dots, with the standard 4-module quiet
+  zone.
 
 ### Reading a link back
 
@@ -123,7 +122,7 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 10 digits | `TigerData_<10 digits>` |
 | 14 hex characters | the UID, uppercased |
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `P/` + 8 hex characters | a product — [section 5](#5-product-links) |
+| `p/` + 8 hex characters | a product — [section 5](#5-product-links) |
 
 A `.JSON` or `.TTAG` ending asks for the answer for tools — [section 6](#6-json-and-ttag-answers).
 
@@ -138,7 +137,7 @@ A UID may be all digits, but it is 14 characters long, never 17 or 10, so the
 length always decides. No legacy decimal id reaches a reader, since none is ever
 printed. Any **other shape** is a label from a newer version: the reader says so
 ("update the app") instead of failing. Every other kind of thing gets its own
-folder, a letter and a `/` (`P/` for a product, later `R/` for a rack), so it can
+folder, a letter and a `/` (`p/` for a product, later `r/` for a rack), so it can
 never clash with spool links already printed.
 
 ### Resolving the spool
@@ -209,17 +208,17 @@ A product — a filament of the catalogue, whoever owns a spool of it — has it
 own link, for packaging, a shop shelf, a showroom or a printed catalogue:
 
 ```
-HTTPS://QR.TIGERTAG.IO/P/<id_product>
+https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` is written in **hexadecimal, always 8 characters**, uppercase,
+- `<id_product>` is written in **hexadecimal, always 8 characters**, lowercase,
   zero-padded: the 4 bytes as they sit on the chip, so a firmware or an NFC
   reader builds the link without converting. Example: product `2855882328`
-  → `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
+  → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
 - The decimal form stays where people see the number — the catalogue
   (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and never
   goes into a `qr.tigertag.io` link.
-- `P/00000000` and `P/FFFFFFFF` mean "no product": never printed, answered
+- `p/00000000` and `p/ffffffff` mean "no product": never printed, answered
   with `404`. An id that is not in the catalogue: `404` too.
 - A product **removed** from the catalogue (withdrawn, or merged into another)
   answers `410` with a page saying it is no longer in the catalogue and offering
@@ -234,7 +233,7 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
 
 ### The page it opens
 
-`P/…` redirects (`302`) to the product's **existing catalogue page**,
+`p/…` redirects (`302`) to the product's **existing catalogue page**,
 `tigersystem.io/<lang>/catalog/<id_product in decimal>`, in the phone's
 language. There is no separate scan page: the catalogue page is built
 **phone-first** (responsive), since most of its visits come from a scan — photo
@@ -255,17 +254,17 @@ owner gets the spool, anyone else its product.
 
 | Link | The owner (`Authorization: Bearer <Firebase ID token>`) | Anyone else (not signed in, another account, a friend) |
 |---|---|---|
-| `…/P/AA394E58.JSON` | the product record | the same |
-| `…/P/AA394E58.TTAG` | the product as a `.ttag` file | the same |
-| `…/04AB12CD3E4F80.JSON` | the spool | `303` → `…/P/<id_product>.JSON`; no catalogue product (a TigerData, a maker TigerTag) → `404` |
-| `…/04AB12CD3E4F80.TTAG` | the spool as a `.ttag` file | `303` → `…/P/<id_product>.TTAG`; no catalogue product → `404` |
+| `…/p/aa394e58.json` | the product record | the same |
+| `…/p/aa394e58.ttag` | the product as a `.ttag` file | the same |
+| `…/04ab12cd3e4f80.json` | the spool | `303` → `…/p/<id_product>.json`; no catalogue product (a TigerData, a maker TigerTag) → `404` |
+| `…/04ab12cd3e4f80.ttag` | the spool as a `.ttag` file | `303` → `…/p/<id_product>.ttag`; no catalogue product → `404` |
 
 Without a catalogue product nothing of the spool is answered, not even its
 material: the `404` matches the "private spool" page of a scan.
 
 - **Spool:** a [`.ttag` file](./ttag-format.md) holding that one record, the
   inventory document as Firestore stores it. It carries `id_product`; a tool
-  that wants the product calls `…/P/<id_product>.JSON` next.
+  that wants the product calls `…/p/<id_product>.json` next.
 - **Product:** the catalogue record as the product API returns it, in the
   language of `?lang=` (English by default). Cached on the server and allowed
   from any site.
@@ -315,9 +314,9 @@ owner. Nothing in clear next to the QR code ([section 3](#3-qr-links)).
 
 40 × 30 mm is the common thermal label and fits a spool side and a printed
 swatch. The QR code takes the largest whole number of printer dots per module
-that fits, with its 4-module quiet zone: at 203 dpi a 25 × 25 code is 3 dots a
-module on the Classic (≈ 12.4 mm with the quiet zone) and 2 on the Slim
-(≈ 8.3 mm).
+that fits, with its 4-module quiet zone: at 203 dpi a 29 × 29 code is 3 dots a
+module on the Classic (≈ 13.9 mm with the quiet zone) and 2 on the Slim
+(≈ 9.3 mm).
 
 ### Output
 
@@ -328,14 +327,11 @@ module on the Classic (≈ 12.4 mm with the quiet zone) and 2 on the Slim
 
 ## Open points
 
-- **Uppercase scheme.** `HTTPS://` in uppercase is recognised as a link by the
-  iPhone camera (tested 2026-11-05, chip and chipless links). Still to test:
-  Google Lens, the Samsung camera and a basic scanner app. If one fails,
-  the link goes lowercase (`https://qr.tigertag.io/` in byte mode + the id),
-  which costs one size (29 × 29).
 - **App links.** iOS (`apple-app-site-association`) and Android (intent
-  filters) match paths case-sensitively by default: the mobile app must declare
-  case-insensitive matching (iOS) and every form (Android).
+  filters) match paths case-sensitively by default: links are printed
+  lowercase, but a link typed or shared by hand may not be, so the mobile app
+  declares case-insensitive matching (iOS) and filters the path in code
+  (Android).
 - **Domain.** `qr.tigertag.io` is printed forever: renew `tigertag.io` on a long
   term.
 
