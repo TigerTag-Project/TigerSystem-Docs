@@ -1,5 +1,5 @@
 ---
-sourceHash: c419a676988a451c12190042024494bd2d1f6b6226c8c1c671c49ff0960ff0b5
+sourceHash: cb01a61f8540f62c07457a06f17fde7a2d9970f498737bc14d40e86161b808fc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -19,7 +19,7 @@ Les règles que suit chaque application TigerSystem :
    étiquette imprimée, puis relu ;
 4. comment une application **appelle une bobine avec des valeurs** (un poids,
    une note) par un lien ;
-5. comment un **produit** a son propre lien (la page qu'il ouvre est **proposée**) ;
+5. comment un **produit** a son propre lien ;
 6. comment un lien répond en **JSON** ou en **fichier `.ttag`**.
 7. ce que porte une **étiquette imprimée**, et ses gabarits.
 
@@ -228,7 +228,7 @@ compte de l'utilisateur, sous les règles Firestore
 
 ## 5. Liens produit
 
-> **Ratifié le 2026-11-06.** La page de scan ci-dessous est encore **proposée**.
+> **Ratifié le 2026-11-06.**
 
 Un produit — un filament du catalogue, quel que soit le propriétaire d'une
 bobine de ce filament — a son propre lien, pour un emballage, un rayon de
@@ -253,26 +253,20 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
   recherche. Un `id_product` n'est jamais redonné à un autre produit : une
   étiquette déjà collée ne peut jamais ouvrir le mauvais filament.
 - Les liens sont servis par le **Hub** (`tigersystem.io`) : `qr.tigertag.io`
-  pointe vers lui. La page de scan est une page du Hub, dans la langue du
-  téléphone ; les réponses `.JSON` et `.TTAG` sont des routes d'API du Hub qui
+  pointe vers lui. La page est la page catalogue du Hub (ci-dessous) ; les réponses `.JSON` et `.TTAG` sont des routes d'API du Hub qui
   lisent le catalogue (en cache).
 - Une étiquette de bobine ne répète jamais son produit : le lien de la bobine y
   mène déjà ([section 3](#retrouver-la-bobine)).
 
-### La page de scan (proposé)
+### La page qu'il ouvre
 
-`P/…` ouvre une page faite pour un téléphone juste après un scan, pas la page
-du catalogue :
-
-1. la photo et la pastille de couleur, en grand ; marque, matière, nom de la
-   couleur ;
-2. les réglages d'impression en grandes tuiles : buse, plateau, séchage
-   (température et durée), densité, diamètre ;
-3. les documents (TDS, MSDS, RoHS, contact alimentaire) et la vidéo ;
-4. où l'acheter ;
-5. non connecté → « Créer mon inventaire » ; connecté → « Ajouter à mon
-   inventaire » (une TigerData+) et « Ajouter aux favoris » ;
-6. « Voir dans le catalogue », vers la page complète.
+`P/…` redirige (`302`) vers la **page catalogue existante** du produit,
+`tigersystem.io/<lang>/catalog/<id_product en décimal>`, dans la langue du
+téléphone. Il n'y a pas de page de scan à part : la page catalogue est conçue
+**d'abord pour le téléphone** (responsive), puisque la plupart de ses visites
+viennent d'un scan — photo et pastille de couleur, marque, matière et nom de la
+couleur en haut, les réglages d'impression lisibles d'un coup d'œil, puis le
+reste de la page.
 
 ## 6. Réponses JSON et .TTAG
 

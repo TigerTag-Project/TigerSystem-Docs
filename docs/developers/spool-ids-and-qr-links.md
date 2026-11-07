@@ -12,7 +12,7 @@ The rules every TigerSystem app follows:
 3. how a spool's id is written into the **QR code** of a printed label, and
    read back;
 4. how an app **calls a spool with values** (a weight, a note) through a link;
-5. how a **product** gets its own link (the page it opens is **proposed**);
+5. how a **product** gets its own link;
 6. how a link answers in **JSON** or as a **`.ttag` file**.
 7. what a **printed label** carries, and its templates.
 
@@ -203,7 +203,7 @@ Firestore rules ([integration guide](https://github.com/TigerTag-Project/TigerTa
 
 ## 5. Product links
 
-> **Ratified 2026-11-06.** The scan page below is still **proposed**.
+> **Ratified 2026-11-06.**
 
 A product — a filament of the catalogue, whoever owns a spool of it — has its
 own link, for packaging, a shop shelf, a showroom or a printed catalogue:
@@ -226,24 +226,20 @@ HTTPS://QR.TIGERTAG.IO/P/<id_product>
   the search. An `id_product` is never given to another product: a label already
   stuck can never open the wrong filament.
 - The links are served by the **Hub** (`tigersystem.io`): `qr.tigertag.io`
-  points to it. The scan page is a Hub page, in the phone's language; the
+  points to it. The page is the Hub's catalogue page (below); the
   `.JSON` and `.TTAG` answers are Hub API routes that read the catalogue
   (cached).
 - A spool label never repeats its product: the spool link already leads to it
   ([section 3](#resolving-the-spool)).
 
-### The scan page (proposed)
+### The page it opens
 
-`P/…` opens a page built for a phone just after a scan, not the catalogue page:
-
-1. the photo and the colour swatch, large; brand, material, colour name;
-2. the print settings as large tiles: nozzle, bed, drying (temperature and
-   time), density, diameter;
-3. the documents (TDS, MSDS, RoHS, food contact) and the video;
-4. where to buy it;
-5. not signed in → "Start my inventory"; signed in → "Add to my inventory"
-   (a TigerData+) and "Add to favourites";
-6. "See it in the catalogue", to the full page.
+`P/…` redirects (`302`) to the product's **existing catalogue page**,
+`tigersystem.io/<lang>/catalog/<id_product in decimal>`, in the phone's
+language. There is no separate scan page: the catalogue page is built
+**phone-first** (responsive), since most of its visits come from a scan — photo
+and colour swatch, brand, material and colour name at the top, the print
+settings readable at a glance, then the rest of the page.
 
 ## 6. JSON and .TTAG answers
 
