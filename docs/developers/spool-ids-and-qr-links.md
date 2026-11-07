@@ -187,7 +187,8 @@ the note, the rack and the owner never leave. A scan is counted
 with its product, brand, material and a city-level place, never the spool id.
 The scan report also carries the visitor's IP address, kept against floods
 and for analysis: it is shown only in the admin history, never to brands, and
-is used to check the city the edge reported.
+is used to check the city the edge reported. It is kept for one year, for security
+only. A scan by a signed-in visitor is linked to their account.
 
 ## 4. Calling a spool with values
 
@@ -359,8 +360,6 @@ module on the Classic (≈ 13.9 mm with the quiet zone) and 2 on the Slim
   (Android).
 - **Domain.** `qr.tigertag.io` is printed forever: renew `tigertag.io` on a long
   term.
-- **IP retention.** How long the scan reports keep the visitor's IP is not
-  decided yet (30 days proposed).
 
 ---
 

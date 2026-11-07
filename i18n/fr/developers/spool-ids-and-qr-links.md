@@ -1,5 +1,5 @@
 ---
-sourceHash: 044319f4911dea2c9dbc1e940912765aba05cacacc730e8db1078a6876e8be34
+sourceHash: 309b58fc3fab4516fe0410d39f8ef76c520f7b29571d63ee0235d8c92e8a7a2c
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -213,7 +213,8 @@ compté avec son produit, sa marque, sa matière et un lieu à l'échelle de la
 ville, jamais l'identifiant de la bobine. Le compte rendu du scan porte aussi
 l'adresse IP du visiteur, gardée contre les inondations de requêtes et pour
 l'analyse : elle ne s'affiche que dans l'historique d'administration, jamais
-pour les marques, et sert à vérifier la ville donnée par le serveur de bord.
+pour les marques, et sert à vérifier la ville donnée par le serveur de bord. Elle est gardée un an,
+pour la sécurité seulement. Le scan d'un visiteur connecté est lié à son compte.
 
 ## 4. Appeler une bobine avec des valeurs
 
@@ -396,8 +397,6 @@ avec la marge) et 2 sur le Fin (≈ 9,3 mm).
   (Android).
 - **Domaine.** `qr.tigertag.io` est imprimé pour toujours : renouveler
   `tigertag.io` sur une longue durée.
-- **Conservation de l'IP.** La durée pendant laquelle les comptes rendus de
-  scan gardent l'IP du visiteur n'est pas encore décidée (30 jours proposés).
 
 ---
 
