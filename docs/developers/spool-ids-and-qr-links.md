@@ -12,8 +12,9 @@ The rules every TigerSystem app follows:
 3. how a spool's id is written into the **QR code** of a printed label, and
    read back;
 4. how an app **calls a spool with values** (a weight, a note) through a link;
-5. **(proposed)** how a **product** gets its own link;
-6. **(proposed)** how a link answers in **JSON**.
+5. how a **product** gets its own link;
+6. how a link answers in **JSON** or as a **`.ttag` file**.
+7. what a **printed label** carries, and its templates.
 
 ## 1. Spool ids
 
@@ -79,33 +80,35 @@ A printed spool label carries a QR code holding a link to the spool, **and
 nothing else** (no weight, no note — printed values go stale):
 
 ```
-HTTPS://QR.TIGERTAG.IO/<id>
+https://qr.tigertag.io/<id>
 ```
+
+Nothing is printed in clear next to the code: no id, no link. The QR code is
+the way back to the spool.
 
 `<id>` is the spool id **without its prefix**:
 
 | Spool | Link |
 |---|---|
-| Chip | `HTTPS://QR.TIGERTAG.IO/04AB12CD3E4F80` |
-| Chipless (new) | `HTTPS://QR.TIGERTAG.IO/17623456789014213` |
-| Chipless (before this contract) | `HTTPS://QR.TIGERTAG.IO/4480517985` |
+| Chip | `https://qr.tigertag.io/04ab12cd3e4f80` |
+| Chipless (new) | `https://qr.tigertag.io/17623456789014213` |
+| Chipless (before this contract) | `https://qr.tigertag.io/4480517985` |
 | `CLOUD_` | **no QR link** — the label is printed without a QR code |
 | Legacy decimal | **no QR link** — migrate the spool to hex first |
 
 ### Encoding
 
-- The whole link is **uppercase**. Only digits, uppercase letters and
-  ` $%*+-./:` fit the QR **alphanumeric** mode, which keeps the code small; one
-  lowercase letter or `_` switches it to byte mode. Schemes and host names are
-  case-insensitive, and UIDs are uppercase hex already.
-- Segments, with the mode set explicitly (generators default to byte mode):
-  - chipless id (all digits): `HTTPS://QR.TIGERTAG.IO/` in **alphanumeric**
-    mode, then the digits in **numeric** mode;
-  - UID: the whole link as **one alphanumeric** segment (a second segment's
-    header would cost a size).
+- The whole link is **lowercase**, the id included: `https://qr.tigertag.io/04ab12cd3e4f80`.
+  Tested 2026-11-07: the iPhone camera opens a link in either case, but the
+  Samsung camera (Galaxy S24) shows an uppercase `HTTPS://` link as plain text
+  and opens only a lowercase one.
+- One **byte**-mode segment. A lowercase scheme cannot use the alphanumeric
+  mode, and splitting the link into segments saves nothing (measured: every
+  variant is 29 × 29).
 - Error correction **M** (15 %): labels get scratched and folded.
-- Result: **25 × 25 modules** for every spool. Draw each module on a whole
-  number of printer dots, with the standard 4-module quiet zone.
+- Result: **29 × 29 modules** for every spool and product link. Draw each
+  module on a whole number of printer dots, with the standard 4-module quiet
+  zone.
 
 ### Reading a link back
 
@@ -119,9 +122,9 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 10 digits | `TigerData_<10 digits>` |
 | 14 hex characters | the UID, uppercased |
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `P/` + 8 hex characters | **(proposed)** a product — [section 5](#5-product-links-proposed) |
+| `p/` + 8 hex characters | a product — [section 5](#5-product-links) |
 
-A `.JSON` ending asks for the answer in JSON — **(proposed)**, [section 6](#6-json-answers-proposed).
+A `.JSON` or `.TTAG` ending asks for the answer for tools — [section 6](#6-json-and-ttag-answers).
 
 Apps **write** the short form above, but readers also **accept the long form**:
 the `TigerData` prefix in any case, followed by `_` or `-`, then the 17 or 10
@@ -134,7 +137,7 @@ A UID may be all digits, but it is 14 characters long, never 17 or 10, so the
 length always decides. No legacy decimal id reaches a reader, since none is ever
 printed. Any **other shape** is a label from a newer version: the reader says so
 ("update the app") instead of failing. Every other kind of thing gets its own
-folder, a letter and a `/` (`P/` for a product, later `R/` for a rack), so it can
+folder, a letter and a `/` (`p/` for a product, later `r/` for a rack), so it can
 never clash with spool links already printed.
 
 ### Resolving the spool
@@ -145,17 +148,18 @@ never clash with spool links already printed.
 3. A twin pair has one label, with the main UID; either UID opens the spool.
 4. A deleted spool (`deleted: true`) opens as "deleted", not as an error.
 
-5. **(proposed)** Anyone else (not signed in, or not allowed to read the
-   spool) gets the spool's **product**, never the spool: the server finds the
-   spool by its id across accounts (an index on the spool id), reads its
-   `id_product` and answers with the product page of
-   [section 5](#5-product-links-proposed). No product, no match, or the same id
-   in two accounts with different products → no product is shown. The lookup
-   runs only for those scans, so its cost follows them, not the number of
-   accounts.
+5. Anyone who is **not the owner** — not signed in, another account, an
+   accepted friend included — is **sent to the product** of the spool, never
+   shown the spool: the server finds the spool by its id across accounts (an
+   index on the spool id), reads its `id_product` and redirects to the product
+   link of [section 5](#5-product-links). No product, no match, or the same id
+   in two accounts with different products → a page saying the spool is
+   private, with "Start my inventory". The lookup runs only for those scans, so
+   its cost follows them, not the number of accounts. *(Ratified 2026-11-06.)*
 
-**Privacy:** knowing an id never shows a spool. A spool is shown only to
-someone the Firestore rules already let read it (the owner, an accepted
+**Privacy:** knowing an id never shows a spool. A scanned link opens a spool
+for its owner only; inside the apps, a spool is shown only to someone the
+Firestore rules already let read it (the owner, an accepted
 friend, a public inventory). Ids contain a timestamp and can be guessed; that
 must never matter. The product of a spool is not private: it is printed on the
 label, and a TigerTag+ chip carries it in clear for any NFC phone. The weight,
@@ -196,70 +200,138 @@ write without a confirmation (a scale updating the weight continuously, an
 integration) does not use links: it writes through the user's account under the
 Firestore rules ([integration guide](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
 
-## 5. Product links (proposed)
+## 5. Product links
+
+> **Ratified 2026-11-06.**
 
 A product — a filament of the catalogue, whoever owns a spool of it — has its
 own link, for packaging, a shop shelf, a showroom or a printed catalogue:
 
 ```
-HTTPS://QR.TIGERTAG.IO/P/<id_product>
+https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` is written in **hexadecimal, always 8 characters**, uppercase,
+- `<id_product>` is written in **hexadecimal, always 8 characters**, lowercase,
   zero-padded: the 4 bytes as they sit on the chip, so a firmware or an NFC
   reader builds the link without converting. Example: product `2855882328`
-  → `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
+  → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
 - The decimal form stays where people see the number — the catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), the text printed under a QR
-  code, a Code 128 barcode — and never goes into a `qr.tigertag.io` link.
-- `P/00000000` and `P/FFFFFFFF` mean "no product": never printed, answered
-  with `404`.
+  (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and never
+  goes into a `qr.tigertag.io` link.
+- `p/00000000` and `p/ffffffff` mean "no product": never printed, answered
+  with `404`. An id that is not in the catalogue: `404` too.
+- A product **removed** from the catalogue (withdrawn, or merged into another)
+  answers `410` with a page saying it is no longer in the catalogue and offering
+  the search. An `id_product` is never given to another product: a label already
+  stuck can never open the wrong filament.
+- The links are served by the **Hub** (`tigersystem.io`): `qr.tigertag.io`
+  points to it. The page is the Hub's catalogue page (below); the
+  `.JSON` and `.TTAG` answers are Hub API routes that read the catalogue
+  (cached).
 - A spool label never repeats its product: the spool link already leads to it
   ([section 3](#resolving-the-spool)).
 
-### The scan page
+### The page it opens
 
-`P/…` opens a page built for a phone just after a scan, not the catalogue page:
+`p/…` redirects (`302`) to the product's **existing catalogue page**,
+`tigersystem.io/<lang>/catalog/<id_product in decimal>`, in the phone's
+language. There is no separate scan page: the catalogue page is built
+**phone-first** (responsive), since most of its visits come from a scan — photo
+and colour swatch, brand, material and colour name at the top, the print
+settings readable at a glance, then the rest of the page.
 
-1. the photo and the colour swatch, large; brand, material, colour name;
-2. the print settings as large tiles: nozzle, bed, drying (temperature and
-   time), density, diameter;
-3. the documents (TDS, MSDS, RoHS, food contact) and the video;
-4. where to buy it;
-5. not signed in → "Start my inventory"; signed in → "Add to my inventory"
-   (a TigerData+) and "Add to favourites";
-6. "See it in the catalogue", to the full page.
+## 6. JSON and .TTAG answers
 
-## 6. JSON answers (proposed)
+> **Ratified 2026-11-06.**
 
 A link ending in `.JSON` (any case) — or sent with `Accept: application/json` —
-answers in JSON instead of a page. These are addresses for tools, never printed.
+answers in JSON instead of a page. A link ending in `.TTAG` answers with the same
+record as a [`.ttag` file](./ttag-format.md) to download
+(`Content-Disposition: attachment`). These are addresses for tools, never printed.
 
-| Link | Not signed in | Signed in (`Authorization: Bearer <Firebase ID token>`) |
+The same logic as a scan ([resolving the spool](#resolving-the-spool)): the
+owner gets the spool, anyone else its product.
+
+| Link | The owner (`Authorization: Bearer <Firebase ID token>`) | Anyone else (not signed in, another account, a friend) |
 |---|---|---|
-| `…/P/AA394E58.JSON` | the product record | the same |
-| `…/04AB12CD3E4F80.JSON` | `401` — no spool data | the spool, if the rules let the account read it |
+| `…/p/aa394e58.json` | the product record | the same |
+| `…/p/aa394e58.ttag` | the product as a `.ttag` file | the same |
+| `…/04ab12cd3e4f80.json` | the spool | `303` → `…/p/<id_product>.json`; no catalogue product (a TigerData, a maker TigerTag) → `404` |
+| `…/04ab12cd3e4f80.ttag` | the spool as a `.ttag` file | `303` → `…/p/<id_product>.ttag`; no catalogue product → `404` |
+
+Without a catalogue product nothing of the spool is answered, not even its
+material: the `404` matches the "private spool" page of a scan.
 
 - **Spool:** a [`.ttag` file](./ttag-format.md) holding that one record, the
   inventory document as Firestore stores it. It carries `id_product`; a tool
-  that wants the product calls `…/P/<id_product>.JSON` next.
+  that wants the product calls `…/p/<id_product>.json` next.
 - **Product:** the catalogue record as the product API returns it, in the
   language of `?lang=` (English by default). Cached on the server and allowed
   from any site.
 - A spool answer is never cached: it depends on who asks.
-- A JSON request never writes: link values (`?weight=`, `?note=`) are ignored
-  there.
+- Opened in Tiger Studio, a spool's `.ttag` imports in **Restore** mode (the
+  spool as it was, chip and backup included); a product's `.ttag` imports in
+  **Import** mode, as a new TigerData+ with a fresh id.
+- A JSON or `.TTAG` request never writes: link values (`?weight=`, `?note=`)
+  are ignored there.
+
+## 7. Printed labels
+
+Every app prints the same labels: two kinds, one set of templates, so a label
+printed from Tiger Studio, the mobile app or the website looks and scans the
+same.
+
+| Label | Its QR code | Printed for |
+|---|---|---|
+| **Spool** | the spool link ([section 3](#3-qr-links)) | any spool that has a QR link (not `CLOUD_`, not legacy decimal) |
+| **Product** (swatch card) | the product link ([section 5](#5-product-links)) | a spool or a catalogue product with a real `id_product` (TigerTag+, TigerData+) |
+
+The owner scanning a spool label gets the spool; anyone else gets its product
+([resolving the spool](#resolving-the-spool)). A product label opens the product
+for everyone: it is the one for a swatch, a shelf or a showroom.
+
+### What a label carries
+
+- the brand, `material · series`, the colour name and the colour swatch (drawn
+  with the [material swatch convention](../concepts/universal-filament-identity.md));
+- up to **four value slots**, chosen by the user among: nozzle range, bed range,
+  drying (temperature · time), TD, diameter;
+- the QR code.
+
+Only what does not change: never the remaining weight, the note, the rack or the
+owner. Nothing in clear next to the QR code ([section 3](#3-qr-links)).
+
+### Templates
+
+| Template | Size (width × height) | Content |
+|---|---|---|
+| Classic (default) | 40 × 30 mm | everything, four slots |
+| Expanded | 50 × 30 mm | everything, four slots, larger text |
+| Compact | 40 × 25 mm | everything, two slots |
+| Slim | 40 × 12 mm | brand, `material · series`, colour name, QR code — no slots |
+| Vertical | 30 × 40 mm | everything, four slots, QR code below |
+| Vertical compact | 25 × 40 mm | everything, two slots, QR code below |
+
+40 × 30 mm is the common thermal label and fits a spool side and a printed
+swatch. The QR code takes the largest whole number of printer dots per module
+that fits, with its 4-module quiet zone: at 203 dpi a 29 × 29 code is 3 dots a
+module on the Classic (≈ 13.9 mm with the quiet zone) and 2 on the Slim
+(≈ 9.3 mm).
+
+### Output
+
+- **PDF**, **PNG** (at the printer's resolution) and **SVG**, so any printer
+  works, through its own app if need be;
+- direct printing to label printers (Brother QL, Niimbot, Phomemo) comes later,
+  printer by printer, with the same templates.
 
 ## Open points
 
-- **Uppercase scheme.** `HTTPS://` in uppercase is recognised as a link by the
-  iPhone camera (tested 2026-11-05, chip and chipless links). Still to test:
-  Google Lens, the Samsung camera and a basic scanner app. If one fails,
-  the link goes lowercase (`https://qr.tigertag.io/` in byte mode + the id),
-  which costs one size (29 × 29).
 - **App links.** iOS (`apple-app-site-association`) and Android (intent
-  filters) match paths case-sensitively by default: the mobile app must declare
-  case-insensitive matching (iOS) and every form (Android).
+  filters) match paths case-sensitively by default: links are printed
+  lowercase, but a link typed or shared by hand may not be, so the mobile app
+  declares case-insensitive matching (iOS) and filters the path in code
+  (Android).
 - **Domain.** `qr.tigertag.io` is printed forever: renew `tigertag.io` on a long
   term.
 

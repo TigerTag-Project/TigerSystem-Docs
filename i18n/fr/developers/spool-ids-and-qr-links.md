@@ -1,5 +1,5 @@
 ---
-sourceHash: 1681bb528e61765de2222a7eb47f04b340244e4360f9ae81a11ee2d2435d915f
+sourceHash: 1acb017888efcf27bed953b972c74d38d33f374becdc8c70fe144c78a3010930
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -19,8 +19,9 @@ Les règles que suit chaque application TigerSystem :
    étiquette imprimée, puis relu ;
 4. comment une application **appelle une bobine avec des valeurs** (un poids,
    une note) par un lien ;
-5. **(proposé)** comment un **produit** a son propre lien ;
-6. **(proposé)** comment un lien répond en **JSON**.
+5. comment un **produit** a son propre lien ;
+6. comment un lien répond en **JSON** ou en **fichier `.ttag`**.
+7. ce que porte une **étiquette imprimée**, et ses gabarits.
 
 ## 1. Identifiants de bobine
 
@@ -94,35 +95,36 @@ bobine, **et rien d'autre** (ni poids, ni note — une valeur imprimée devient
 fausse) :
 
 ```
-HTTPS://QR.TIGERTAG.IO/<id>
+https://qr.tigertag.io/<id>
 ```
+
+Rien n'est imprimé en clair à côté du code : ni identifiant, ni lien. Le QR
+code est le chemin vers la bobine.
 
 `<id>` est l'identifiant de la bobine **sans son préfixe** :
 
 | Bobine | Lien |
 |---|---|
-| Avec puce | `HTTPS://QR.TIGERTAG.IO/04AB12CD3E4F80` |
-| Sans puce (nouvelle) | `HTTPS://QR.TIGERTAG.IO/17623456789014213` |
-| Sans puce (avant ce contrat) | `HTTPS://QR.TIGERTAG.IO/4480517985` |
+| Avec puce | `https://qr.tigertag.io/04ab12cd3e4f80` |
+| Sans puce (nouvelle) | `https://qr.tigertag.io/17623456789014213` |
+| Sans puce (avant ce contrat) | `https://qr.tigertag.io/4480517985` |
 | `CLOUD_` | **pas de lien QR** — l'étiquette est imprimée sans QR code |
 | Ancien décimal | **pas de lien QR** — migrer d'abord la bobine vers l'hexadécimal |
 
 ### Encodage
 
-- Tout le lien est en **majuscules**. Seuls les chiffres, les lettres
-  majuscules et ` $%*+-./:` tiennent dans le mode **alphanumérique** du QR
-  code, qui garde le code petit ; une seule minuscule ou un `_` le fait passer
-  en mode octet. Le schéma et le nom de domaine ne tiennent pas compte de la
-  casse, et les UID sont déjà en hexadécimal majuscule.
-- Segments, avec le mode donné explicitement (les générateurs utilisent le mode
-  octet par défaut) :
-  - identifiant sans puce (que des chiffres) : `HTTPS://QR.TIGERTAG.IO/` en
-    mode **alphanumérique**, puis les chiffres en mode **numérique** ;
-  - UID : tout le lien en **un seul segment alphanumérique** (l'en-tête d'un
-    second segment coûterait une taille).
+- Tout le lien est en **minuscules**, identifiant compris :
+  `https://qr.tigertag.io/04ab12cd3e4f80`. Testé le 2026-11-07 : l'appareil
+  photo de l'iPhone ouvre un lien dans les deux casses, mais celui de Samsung
+  (Galaxy S24) affiche un lien `HTTPS://` en majuscules comme du simple texte
+  et n'ouvre qu'un lien en minuscules.
+- Un seul segment en mode **octet**. Un schéma en minuscules ne peut pas
+  utiliser le mode alphanumérique, et découper le lien en segments ne fait rien
+  gagner (mesuré : toutes les variantes font 29 × 29).
 - Correction d'erreur **M** (15 %) : les étiquettes se rayent et se plient.
-- Résultat : **25 × 25 modules** pour toute bobine. Dessinez chaque module sur
-  un nombre entier de points d'impression, avec la marge standard de 4 modules.
+- Résultat : **29 × 29 modules** pour tout lien de bobine ou de produit.
+  Dessinez chaque module sur un nombre entier de points d'impression, avec la
+  marge standard de 4 modules.
 
 ### Relire un lien
 
@@ -136,9 +138,9 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 | 10 chiffres | `TigerData_<10 chiffres>` |
 | 14 caractères hexadécimaux | l'UID, en majuscules |
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `P/` + 8 caractères hexadécimaux | **(proposé)** un produit — [section 5](#5-liens-produit-proposé) |
+| `p/` + 8 caractères hexadécimaux | un produit — [section 5](#5-liens-produit) |
 
-Une fin en `.JSON` demande la réponse en JSON — **(proposé)**, [section 6](#6-réponses-json-proposé).
+Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — [section 6](#6-réponses-json-et-ttag).
 
 Les applications **écrivent** la forme courte ci-dessus, mais les lecteurs
 **acceptent aussi la forme longue** : le préfixe `TigerData` dans n'importe
@@ -166,18 +168,21 @@ imprimés.
 4. Une bobine supprimée (`deleted: true`) s'ouvre comme « supprimée », pas
    comme une erreur.
 
-5. **(proposé)** Toute autre personne (non connectée, ou pas autorisée à lire
-   la bobine) reçoit le **produit** de la bobine, jamais la bobine : le serveur
-   retrouve la bobine par son identifiant sur tous les comptes (un index sur
-   l'identifiant de bobine), lit son `id_product` et répond avec la page
-   produit de la [section 5](#5-liens-produit-proposé). Pas de produit, pas de
-   correspondance, ou le même identifiant dans deux comptes avec deux produits
-   différents → aucun produit n'est montré. La recherche ne tourne que pour ces
-   scans : son coût suit ces scans, pas le nombre de comptes.
+5. Toute personne qui **n'est pas le propriétaire** — non connectée, un autre
+   compte, un ami accepté compris — est **renvoyée vers le produit** de la
+   bobine, sans jamais voir la bobine : le serveur retrouve la bobine par son
+   identifiant sur tous les comptes (un index sur l'identifiant de bobine), lit
+   son `id_product` et redirige vers le lien produit de la
+   [section 5](#5-liens-produit). Pas de produit, pas de correspondance, ou le
+   même identifiant dans deux comptes avec deux produits différents → une page
+   qui dit que la bobine est privée, avec « Créer mon inventaire ». La recherche
+   ne tourne que pour ces scans : son coût suit ces scans, pas le nombre de
+   comptes. *(Ratifié le 2026-11-06.)*
 
-**Confidentialité :** connaître un identifiant ne montre jamais une bobine. Une
-bobine n'est montrée qu'à quelqu'un que les règles Firestore autorisent déjà à
-la lire (le propriétaire, un ami accepté, un inventaire public). Les
+**Confidentialité :** connaître un identifiant ne montre jamais une bobine. Un
+lien scanné n'ouvre une bobine que pour son propriétaire ; dans les
+applications, une bobine n'est montrée qu'à quelqu'un que les règles Firestore
+autorisent déjà à la lire (le propriétaire, un ami accepté, un inventaire public). Les
 identifiants contiennent une heure et peuvent se deviner ; cela ne doit jamais
 compter. Le produit d'une bobine n'est pas privé : il est imprimé sur
 l'étiquette, et une puce TigerTag+ le porte en clair pour tout téléphone NFC.
@@ -219,80 +224,147 @@ Une application qui doit écrire sans confirmation (une balance qui met le poids
 compte de l'utilisateur, sous les règles Firestore
 ([guide d'intégration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
 
-## 5. Liens produit (proposé)
+## 5. Liens produit
+
+> **Ratifié le 2026-11-06.**
 
 Un produit — un filament du catalogue, quel que soit le propriétaire d'une
 bobine de ce filament — a son propre lien, pour un emballage, un rayon de
 magasin, un showroom ou un catalogue imprimé :
 
 ```
-HTTPS://QR.TIGERTAG.IO/P/<id_product>
+https://qr.tigertag.io/p/<id_product>
 ```
 
 - `<id_product>` est écrit en **hexadécimal, toujours sur 8 caractères**, en
-  majuscules, complété par des zéros : les 4 octets tels qu'ils sont sur la
+  minuscules, complété par des zéros : les 4 octets tels qu'ils sont sur la
   puce, pour qu'un firmware ou un lecteur NFC construise le lien sans
   conversion. Exemple : le produit `2855882328` →
-  `HTTPS://QR.TIGERTAG.IO/P/AA394E58`, **25 × 25** modules.
+  `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
 - La forme décimale reste là où les gens voient le numéro — le catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), le texte imprimé sous un QR
-  code, un code-barres Code 128 — et n'entre jamais dans un lien
-  `qr.tigertag.io`.
-- `P/00000000` et `P/FFFFFFFF` signifient « pas de produit » : jamais
-  imprimés, réponse `404`.
+  (`tigersystem.io/<lang>/catalog/2855882328`), un code-barres Code 128 — et
+  n'entre jamais dans un lien `qr.tigertag.io`.
+- `p/00000000` et `p/ffffffff` signifient « pas de produit » : jamais
+  imprimés, réponse `404`. Un identifiant absent du catalogue : `404` aussi.
+- Un produit **retiré** du catalogue (abandonné, ou fusionné dans un autre)
+  répond `410` avec une page qui dit qu'il n'est plus au catalogue et propose la
+  recherche. Un `id_product` n'est jamais redonné à un autre produit : une
+  étiquette déjà collée ne peut jamais ouvrir le mauvais filament.
+- Les liens sont servis par le **Hub** (`tigersystem.io`) : `qr.tigertag.io`
+  pointe vers lui. La page est la page catalogue du Hub (ci-dessous) ; les réponses `.JSON` et `.TTAG` sont des routes d'API du Hub qui
+  lisent le catalogue (en cache).
 - Une étiquette de bobine ne répète jamais son produit : le lien de la bobine y
   mène déjà ([section 3](#retrouver-la-bobine)).
 
-### La page de scan
+### La page qu'il ouvre
 
-`P/…` ouvre une page faite pour un téléphone juste après un scan, pas la page
-du catalogue :
+`p/…` redirige (`302`) vers la **page catalogue existante** du produit,
+`tigersystem.io/<lang>/catalog/<id_product en décimal>`, dans la langue du
+téléphone. Il n'y a pas de page de scan à part : la page catalogue est conçue
+**d'abord pour le téléphone** (responsive), puisque la plupart de ses visites
+viennent d'un scan — photo et pastille de couleur, marque, matière et nom de la
+couleur en haut, les réglages d'impression lisibles d'un coup d'œil, puis le
+reste de la page.
 
-1. la photo et la pastille de couleur, en grand ; marque, matière, nom de la
-   couleur ;
-2. les réglages d'impression en grandes tuiles : buse, plateau, séchage
-   (température et durée), densité, diamètre ;
-3. les documents (TDS, MSDS, RoHS, contact alimentaire) et la vidéo ;
-4. où l'acheter ;
-5. non connecté → « Créer mon inventaire » ; connecté → « Ajouter à mon
-   inventaire » (une TigerData+) et « Ajouter aux favoris » ;
-6. « Voir dans le catalogue », vers la page complète.
+## 6. Réponses JSON et .TTAG
 
-## 6. Réponses JSON (proposé)
+> **Ratifié le 2026-11-06.**
 
 Un lien qui finit par `.JSON` (dans n'importe quelle casse) — ou envoyé avec
-`Accept: application/json` — répond en JSON au lieu d'une page. Ce sont des
-adresses pour les outils, jamais imprimées.
+`Accept: application/json` — répond en JSON au lieu d'une page. Un lien qui
+finit par `.TTAG` répond avec le même enregistrement sous forme de
+[fichier `.ttag`](./ttag-format.md) à télécharger
+(`Content-Disposition: attachment`). Ce sont des adresses pour les outils,
+jamais imprimées.
 
-| Lien | Non connecté | Connecté (`Authorization: Bearer <jeton d'identité Firebase>`) |
+La même logique qu'un scan ([retrouver la bobine](#retrouver-la-bobine)) : le
+propriétaire obtient la bobine, toute autre personne son produit.
+
+| Lien | Le propriétaire (`Authorization: Bearer <jeton d'identité Firebase>`) | Toute autre personne (non connectée, un autre compte, un ami) |
 |---|---|---|
-| `…/P/AA394E58.JSON` | la fiche produit | pareil |
-| `…/04AB12CD3E4F80.JSON` | `401` — aucune donnée de bobine | la bobine, si les règles autorisent le compte à la lire |
+| `…/p/aa394e58.json` | la fiche produit | pareil |
+| `…/p/aa394e58.ttag` | le produit en fichier `.ttag` | pareil |
+| `…/04ab12cd3e4f80.json` | la bobine | `303` → `…/p/<id_product>.json` ; pas de produit du catalogue (une TigerData, une TigerTag maker) → `404` |
+| `…/04ab12cd3e4f80.ttag` | la bobine en fichier `.ttag` | `303` → `…/p/<id_product>.ttag` ; pas de produit du catalogue → `404` |
+
+Sans produit du catalogue, rien de la bobine n'est répondu, pas même sa
+matière : le `404` correspond à la page « bobine privée » d'un scan.
 
 - **Bobine :** un [fichier `.ttag`](./ttag-format.md) contenant ce seul
   enregistrement, le document d'inventaire tel que Firestore le stocke. Il
   contient `id_product` ; un outil qui veut le produit appelle ensuite
-  `…/P/<id_product>.JSON`.
+  `…/p/<id_product>.json`.
 - **Produit :** la fiche du catalogue telle que l'API produit la renvoie, dans
   la langue de `?lang=` (anglais par défaut). Mise en cache sur le serveur et
   autorisée depuis n'importe quel site.
 - Une réponse de bobine n'est jamais mise en cache : elle dépend de qui
   demande.
-- Une requête JSON n'écrit jamais : les valeurs de lien (`?weight=`, `?note=`)
-  y sont ignorées.
+- Ouvert dans Tiger Studio, le `.ttag` d'une bobine s'importe en mode
+  **Restaurer** (la bobine telle qu'elle était, puce et sauvegarde comprises) ;
+  celui d'un produit en mode **Importer**, comme une nouvelle TigerData+ avec un
+  identifiant neuf.
+- Une requête JSON ou `.TTAG` n'écrit jamais : les valeurs de lien
+  (`?weight=`, `?note=`) y sont ignorées.
+
+## 7. Étiquettes imprimées
+
+Toutes les applications impriment les mêmes étiquettes : deux sortes, un seul
+jeu de gabarits. Une étiquette imprimée depuis Tiger Studio, l'application
+mobile ou le site a le même aspect et se scanne de la même façon.
+
+| Étiquette | Son QR code | Imprimée pour |
+|---|---|---|
+| **Bobine** | le lien de la bobine ([section 3](#3-liens-qr)) | toute bobine qui a un lien QR (pas `CLOUD_`, pas l'ancien décimal) |
+| **Produit** (carte nuancier) | le lien du produit ([section 5](#5-liens-produit)) | une bobine ou un produit du catalogue avec un vrai `id_product` (TigerTag+, TigerData+) |
+
+Le propriétaire qui scanne une étiquette de bobine obtient la bobine ; les
+autres obtiennent son produit ([retrouver la bobine](#retrouver-la-bobine)). Une
+étiquette produit ouvre le produit pour tout le monde : c'est celle d'un
+nuancier, d'une étagère ou d'un showroom.
+
+### Ce que porte une étiquette
+
+- la marque, `matière · série`, le nom de la couleur et la pastille de couleur
+  (dessinée selon la [convention de pastille matière](../concepts/universal-filament-identity.md)) ;
+- jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
+  de buse, plage de plateau, séchage (température · durée), TD, diamètre ;
+- le QR code.
+
+Seulement ce qui ne change pas : jamais le poids restant, la note, le rack ou
+le propriétaire. Rien en clair à côté du QR code ([section 3](#3-liens-qr)).
+
+### Gabarits
+
+| Gabarit | Taille (largeur × hauteur) | Contenu |
+|---|---|---|
+| Classique (par défaut) | 40 × 30 mm | tout, quatre cases |
+| Étendu | 50 × 30 mm | tout, quatre cases, texte plus grand |
+| Compact | 40 × 25 mm | tout, deux cases |
+| Fin | 40 × 12 mm | marque, `matière · série`, nom de la couleur, QR code — sans cases |
+| Vertical | 30 × 40 mm | tout, quatre cases, QR code en bas |
+| Vertical compact | 25 × 40 mm | tout, deux cases, QR code en bas |
+
+Le 40 × 30 mm est l'étiquette thermique courante ; elle tient sur le flanc
+d'une bobine et sur un nuancier imprimé. Le QR code prend le plus grand nombre
+entier de points d'imprimante par module qui tient, avec sa marge de 4 modules :
+à 203 ppp, un code 29 × 29 fait 3 points par module sur le Classique (≈ 13,9 mm
+avec la marge) et 2 sur le Fin (≈ 9,3 mm).
+
+### Sortie
+
+- **PDF**, **PNG** (à la résolution de l'imprimante) et **SVG**, pour que
+  n'importe quelle imprimante fonctionne, au besoin par sa propre application ;
+- l'impression directe sur les imprimantes d'étiquettes (Brother QL, Niimbot,
+  Phomemo) vient ensuite, imprimante par imprimante, avec les mêmes gabarits.
 
 ## Points ouverts
 
-- **Schéma en majuscules.** `HTTPS://` en majuscules est reconnu comme un lien
-  par l'appareil photo de l'iPhone (testé le 2026-11-05, liens avec et sans
-  puce). Reste à tester : Google Lens, l'appareil photo Samsung et une
-  application de scan basique. Si l'un échoue, le lien passe en minuscules
-  (`https://qr.tigertag.io/` en mode octet + l'identifiant), ce qui coûte une
-  taille (29 × 29).
 - **Liens d'application.** iOS (`apple-app-site-association`) et Android
   (filtres d'intention) comparent les chemins en tenant compte de la casse par
-  défaut : l'application mobile doit déclarer une correspondance insensible à
-  la casse (iOS) et toutes les formes (Android).
+  défaut : les liens sont imprimés en minuscules, mais un lien tapé ou partagé
+  à la main peut ne pas l'être ; l'application mobile déclare donc une
+  correspondance insensible à la casse (iOS) et filtre le chemin dans le code
+  (Android).
 - **Domaine.** `qr.tigertag.io` est imprimé pour toujours : renouveler
   `tigertag.io` sur une longue durée.
 
