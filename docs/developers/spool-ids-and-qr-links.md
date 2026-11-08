@@ -156,7 +156,11 @@ never clash with spool links already printed.
    (`https://studio.tigersystem.io/?spool=<docId>`, with the link's values) and
    "See the product page". An owner signed in to Studio Web on the device but
    not to the site is sent to Studio Web: the site cannot read the document
-   without its own session. *(2026-11-07.)*
+   without its own session. *(2026-11-07.)* The owner can change the weight
+   and the note there, with the same write as Studio: `weight_available` or
+   `message` (at most 28 bytes UTF-8), `updatedAt` (server time),
+   `needUpdateAt` (server time) on a chip format, the twin in the same batch.
+   The page has a sign-out button. *(2026-11-08.)*
 
 5. Anyone who is **not the owner** — not signed in, another account, an
    accepted friend included — is **sent to the product** of the spool, never
@@ -177,14 +181,21 @@ never clash with spool links already printed.
    the spool), or goes on to the product page. Someone signed in who is not
    the owner is sent to the product as above. *(2026-11-07.)*
 
+   **Whose spool it is.** Anyone who scans a spool, signed in or not, sees its
+   owner: the display name and photo from `userProfiles` of the account whose
+   doc was updated last, even when the profile is not public and even for a
+   spool with no product, so whoever finds a spool knows whom it belongs to.
+   Never the uid or the e-mail. *(2026-11-08.)*
+
 **Privacy:** knowing an id never shows a spool. A scanned link opens a spool
 for its owner only; inside the apps, a spool is shown only to someone the
 Firestore rules already let read it (the owner, an accepted
 friend, a public inventory). Ids contain a timestamp and can be guessed; that
 must never matter. The product of a spool is not private: it is printed on the
 label, and a TigerTag+ chip carries it in clear for any NFC phone. The weight,
-the note, the rack and the owner never leave. A scan is counted
-with its product, brand, material and a city-level place, never the spool id.
+the note and the rack never leave; the owner shows only as a display name and
+photo (above). A scan is counted once per browser tab and spool (a reload is
+not a new scan), with its product, brand, material and a city-level place, never the spool id.
 The scan report also carries the visitor's IP address, kept against floods
 and for analysis: it is shown only in the admin history, never to brands, and
 is used to check the city the edge reported. It is kept for one year, for security

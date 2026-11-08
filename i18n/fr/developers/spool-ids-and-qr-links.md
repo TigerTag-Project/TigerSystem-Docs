@@ -1,5 +1,5 @@
 ---
-sourceHash: 7a73983e88bc30824260b82412b725695bf7fc2a23594764190003e45bae6c62
+sourceHash: 3743364b005476933314b6612752ac8ba19ec102af7797f73cb6d2a77eb271fc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -177,7 +177,11 @@ imprimés.
    (`https://studio.tigersystem.io/?spool=<docId>`, avec les valeurs du lien)
    et « Voir la fiche produit ». Un propriétaire connecté à Studio Web sur
    l'appareil mais pas au site est envoyé vers Studio Web : le site ne peut pas
-   lire le document sans sa propre session. *(2026-11-07.)*
+   lire le document sans sa propre session. *(2026-11-07.)* Le propriétaire y
+   modifie le poids et la note, avec la même écriture que Studio :
+   `weight_available` ou `message` (28 octets UTF-8 au plus), `updatedAt`
+   (heure serveur), `needUpdateAt` (heure serveur) sur un format à puce, la
+   jumelle dans le même lot. La page a un bouton de déconnexion. *(2026-11-08.)*
 
 5. Toute personne qui **n'est pas le propriétaire** — non connectée, un autre
    compte, un ami accepté compris — est **renvoyée vers le produit** de la
@@ -201,6 +205,13 @@ imprimés.
    la fiche produit. Une personne connectée qui n'est pas le propriétaire est
    renvoyée vers le produit comme ci-dessus. *(2026-11-07.)*
 
+   **À qui est la bobine.** Toute personne qui scanne une bobine, connectée ou
+   non, voit son propriétaire : le pseudo et la photo de `userProfiles` du
+   compte dont le doc a été mis à jour le plus récemment, même si le profil
+   n'est pas public et même pour une bobine sans produit, pour que celui qui
+   trouve une bobine sache à qui elle est. Jamais l'uid ni l'e-mail.
+   *(2026-11-08.)*
+
 **Confidentialité :** connaître un identifiant ne montre jamais une bobine. Un
 lien scanné n'ouvre une bobine que pour son propriétaire ; dans les
 applications, une bobine n'est montrée qu'à quelqu'un que les règles Firestore
@@ -208,8 +219,9 @@ autorisent déjà à la lire (le propriétaire, un ami accepté, un inventaire p
 identifiants contiennent une heure et peuvent se deviner ; cela ne doit jamais
 compter. Le produit d'une bobine n'est pas privé : il est imprimé sur
 l'étiquette, et une puce TigerTag+ le porte en clair pour tout téléphone NFC.
-Le poids, la note, le rack et le propriétaire ne sortent jamais. Un scan est
-compté avec son produit, sa marque, sa matière et un lieu à l'échelle de la
+Le poids, la note et le rack ne sortent jamais ; le propriétaire n'apparaît que
+par son pseudo et sa photo (ci-dessus). Un scan est compté une fois par onglet
+et par bobine (recharger la page n'est pas un nouveau scan), avec son produit, sa marque, sa matière et un lieu à l'échelle de la
 ville, jamais l'identifiant de la bobine. Le compte rendu du scan porte aussi
 l'adresse IP du visiteur, gardée contre les inondations de requêtes et pour
 l'analyse : elle ne s'affiche que dans l'historique d'administration, jamais
