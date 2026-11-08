@@ -330,7 +330,7 @@ for everyone: it is the one for a swatch, a shelf or a showroom.
 ### What a label carries
 
 - the brand, where a maker logo would go (maker logos come later);
-- `material series` in white on a black bar (`PLA Rainbow`);
+- the series in white on a black bar (`PLA Rainbow`; the material when there is no series);
 - the colour name, and its hex code(s) (`#F2D066`, up to three on the wide templates);
 - on a spool label, the spool's protocol in the top-right corner, as an outlined pill:
   `TigerTag+` whenever its reference is a catalogue product (a real `id_product`),
@@ -352,7 +352,7 @@ Eight templates, the common spool-label sizes and layouts:
 | Wide | 50 × 30 mm | the Classic, wider bar |
 | Compact | 40 × 25 mm | brand, QR left, bar, colour, hex — no slots |
 | Slim | 40 × 12 mm | QR left, brand, bar, colour — no slots |
-| Slicer-friendly | 40 × 30 mm | brand, material, series, colour stacked large, big QR right — no slots |
+| Slicer-friendly | 40 × 30 mm | brand, series, colour stacked large, big QR right — no slots |
 | Vertical | 30 × 40 mm | brand, bar, colour large, hex, a rule, slots stacked left, QR bottom right |
 | Vertical bold | 30 × 40 mm | brand, full-width bar, colour, a rule, QR centred below — no slots |
 | Vertical compact | 25 × 40 mm | brand, bar, colour, hex, a rule, big QR below — no slots |

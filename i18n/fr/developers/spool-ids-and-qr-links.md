@@ -1,5 +1,5 @@
 ---
-sourceHash: b6917a5bde4948d4c1eaeaa6bd36f6bb5a7e446936154fe48d810dbd12152e53
+sourceHash: 31f9af9f04a7d0e45ec3990036ab12455a06a1e668fb2379ca09011d7b4a907e
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -366,7 +366,8 @@ nuancier, d'une étagère ou d'un showroom.
 ### Ce que porte une étiquette
 
 - la marque, à la place d'un logo de fabricant (les logos viendront plus tard) ;
-- `matière série` en blanc sur une barre noire (`PLA Rainbow`) ;
+- la série en blanc sur une barre noire (`PLA Rainbow` ; la matière quand il n'y a
+  pas de série) ;
 - le nom de la couleur et son ou ses codes hex (`#F2D066`, jusqu'à trois sur les
   gabarits larges) ;
 - sur une étiquette de bobine, le protocole de la bobine en haut à droite, dans
@@ -390,7 +391,7 @@ Huit gabarits, les tailles et mises en page courantes des étiquettes de bobine 
 | Large | 50 × 30 mm | le Classique, barre plus large |
 | Compact | 40 × 25 mm | marque, QR à gauche, barre, couleur, hex — sans cases |
 | Fin | 40 × 12 mm | QR à gauche, marque, barre, couleur — sans cases |
-| Pour slicers | 40 × 30 mm | marque, matière, série, couleur empilées en grand, grand QR à droite — sans cases |
+| Pour slicers | 40 × 30 mm | marque, série, couleur empilées en grand, grand QR à droite — sans cases |
 | Vertical | 30 × 40 mm | marque, barre, couleur en grand, hex, un filet, cases empilées à gauche, QR en bas à droite |
 | Vertical gras | 30 × 40 mm | marque, barre pleine largeur, couleur, un filet, QR centré dessous — sans cases |
 | Vertical compact | 25 × 40 mm | marque, barre, couleur, hex, un filet, grand QR dessous — sans cases |
