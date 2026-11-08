@@ -331,8 +331,9 @@ for everyone: it is the one for a swatch, a shelf or a showroom.
 
 - on a spool label, the spool's protocol in the top-right corner, as an outlined pill:
   `TigerTag`, `TigerTag+`, `TigerData` or `TigerData+` (none on a product label);
-- the brand, `material · series`, the colour name and the colour swatch (drawn
-  with the [material swatch convention](../concepts/universal-filament-identity.md));
+- one under the other: the brand, the series, the colour swatch and colour name,
+  then "Material: PLA" (left out of the 12 mm label); the swatch is drawn
+  with the [material swatch convention](../concepts/universal-filament-identity.md);
 - up to **four value slots**, chosen by the user among: nozzle range, bed range,
   drying (temperature · time), TD, diameter;
 - the QR code.

@@ -1,5 +1,5 @@
 ---
-sourceHash: 41c85dc5e19303a5b19d714a9e7ef304783ff18faddbe144564c12b8c2eddcfb
+sourceHash: 34478d5ec06f52f9c63287805cb8f8081ed6e5b2745e881edafb6d086e68aa96
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -368,8 +368,9 @@ nuancier, d'une étagère ou d'un showroom.
 - sur une étiquette de bobine, le protocole de la bobine en haut à droite, dans
   une pastille cernée : `TigerTag`, `TigerTag+`, `TigerData` ou `TigerData+`
   (aucun sur une étiquette produit) ;
-- la marque, `matière · série`, le nom de la couleur et la pastille de couleur
-  (dessinée selon la [convention de pastille matière](../concepts/universal-filament-identity.md)) ;
+- l'un sous l'autre : la marque, la série, la pastille et le nom de la couleur,
+  puis « Matière : PLA » (absent de l'étiquette de 12 mm) ; la pastille est dessinée
+  selon la [convention de pastille matière](../concepts/universal-filament-identity.md) ;
 - jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
   de buse, plage de plateau, séchage (température · durée), TD, diamètre ;
 - le QR code.
