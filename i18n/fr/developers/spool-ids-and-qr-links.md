@@ -1,5 +1,5 @@
 ---
-sourceHash: 31f9af9f04a7d0e45ec3990036ab12455a06a1e668fb2379ca09011d7b4a907e
+sourceHash: 804d1dfac4825b89901dda7f944f0559dd54537024b4d944e7fe29baefbc1d29
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -397,10 +397,12 @@ Huit gabarits, les tailles et mises en page courantes des étiquettes de bobine 
 | Vertical compact | 25 × 40 mm | marque, barre, couleur, hex, un filet, grand QR dessous — sans cases |
 
 Chaque gabarit est un SVG mis en page en dixièmes de millimètre puis mis à
-l'échelle des points de l'imprimante. Le QR code prend le plus grand nombre
-entier de points par module qui tient dans son cadre ; les marges blanches de
-l'étiquette font sa zone de silence. À 203 ppp, un code 29 × 29 fait 3 points
-par module sur le Classique (≈ 10,9 mm).
+l'échelle des points de l'imprimante. Le QR code remplit le même cadre que sur
+les étiquettes de bobine courantes (≈ 14 mm sur le Classique), en un nombre
+entier de points d'imprimante par module : le plus proche, arrondi au-dessus
+tant que ça reste dans 6 % du cadre. Les marges blanches de l'étiquette font sa
+zone de silence. À 203 ppp, un code 29 × 29 fait 4 points par module sur le
+Classique (≈ 14,5 mm).
 
 ### Sortie
 

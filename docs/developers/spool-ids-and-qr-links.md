@@ -358,9 +358,11 @@ Eight templates, the common spool-label sizes and layouts:
 | Vertical compact | 25 × 40 mm | brand, bar, colour, hex, a rule, big QR below — no slots |
 
 Each template is one SVG laid out in tenths of a millimetre and scaled to the
-printer's dots. The QR code takes the largest whole number of printer dots per
-module that fits its box; the label's white margins are its quiet zone. At
-203 dpi a 29 × 29 code is 3 dots a module on the Classic (≈ 10.9 mm).
+printer's dots. The QR code fills the same box as on the common spool labels
+(≈ 14 mm on the Classic), in a whole number of printer dots per module: the
+nearest one, rounded up when that stays within 6 % of the box. The label's white
+margins are its quiet zone. At 203 dpi a 29 × 29 code is 4 dots a module on the
+Classic (≈ 14.5 mm).
 
 ### Output
 
