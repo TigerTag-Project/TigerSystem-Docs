@@ -1,5 +1,5 @@
 ---
-sourceHash: 34478d5ec06f52f9c63287805cb8f8081ed6e5b2745e881edafb6d086e68aa96
+sourceHash: 6a67d6c2c6b09693a95e3e00be6bc9e7dae6202678295ef640aac6fd9edca5eb
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -365,12 +365,13 @@ nuancier, d'une étagère ou d'un showroom.
 
 ### Ce que porte une étiquette
 
+- la marque, à la place d'un logo de fabricant (les logos viendront plus tard) ;
+- `matière série` en blanc sur une barre noire (`PLA Rainbow`) ;
+- le nom de la couleur et son ou ses codes hex (`#F2D066`, jusqu'à trois sur les
+  gabarits larges) ;
 - sur une étiquette de bobine, le protocole de la bobine en haut à droite, dans
   une pastille cernée : `TigerTag`, `TigerTag+`, `TigerData` ou `TigerData+`
   (aucun sur une étiquette produit) ;
-- l'un sous l'autre : la marque, la série, la pastille et le nom de la couleur,
-  puis « Matière : PLA » (absent de l'étiquette de 12 mm) ; la pastille est dessinée
-  selon la [convention de pastille matière](../concepts/universal-filament-identity.md) ;
 - jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
   de buse, plage de plateau, séchage (température · durée), TD, diamètre ;
 - le QR code.
@@ -380,20 +381,24 @@ le propriétaire. Rien en clair à côté du QR code ([section 3](#3-liens-qr)).
 
 ### Gabarits
 
-| Gabarit | Taille (largeur × hauteur) | Contenu |
-|---|---|---|
-| Classique (par défaut) | 40 × 30 mm | tout, quatre cases |
-| Étendu | 50 × 30 mm | tout, quatre cases, texte plus grand |
-| Compact | 40 × 25 mm | tout, deux cases |
-| Fin | 40 × 12 mm | marque, `matière · série`, nom de la couleur, QR code — sans cases |
-| Vertical | 30 × 40 mm | tout, quatre cases, QR code en bas |
-| Vertical compact | 25 × 40 mm | tout, deux cases, QR code en bas |
+Huit gabarits, les tailles et mises en page courantes des étiquettes de bobine :
 
-Le 40 × 30 mm est l'étiquette thermique courante ; elle tient sur le flanc
-d'une bobine et sur un nuancier imprimé. Le QR code prend le plus grand nombre
-entier de points d'imprimante par module qui tient, avec sa marge de 4 modules :
-à 203 ppp, un code 29 × 29 fait 3 points par module sur le Classique (≈ 13,9 mm
-avec la marge) et 2 sur le Fin (≈ 9,3 mm).
+| Gabarit | Taille (largeur × hauteur) | Mise en page |
+|---|---|---|
+| Classique (par défaut) | 40 × 30 mm | marque, barre, couleur + hex, quatre cases, QR en bas à droite |
+| Large | 50 × 30 mm | le Classique, barre plus large |
+| Compact | 40 × 25 mm | marque, QR à gauche, barre, couleur, hex — sans cases |
+| Fin | 40 × 12 mm | QR à gauche, marque, barre, couleur — sans cases |
+| Pour slicers | 40 × 30 mm | marque, matière, série, couleur empilées en grand, grand QR à droite — sans cases |
+| Vertical | 30 × 40 mm | marque, barre, couleur en grand, hex, un filet, cases empilées à gauche, QR en bas à droite |
+| Vertical gras | 30 × 40 mm | marque, barre pleine largeur, couleur, un filet, QR centré dessous — sans cases |
+| Vertical compact | 25 × 40 mm | marque, barre, couleur, hex, un filet, grand QR dessous — sans cases |
+
+Chaque gabarit est un SVG mis en page en dixièmes de millimètre puis mis à
+l'échelle des points de l'imprimante. Le QR code prend le plus grand nombre
+entier de points par module qui tient dans son cadre ; les marges blanches de
+l'étiquette font sa zone de silence. À 203 ppp, un code 29 × 29 fait 3 points
+par module sur le Classique (≈ 10,9 mm).
 
 ### Sortie
 

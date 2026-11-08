@@ -329,11 +329,11 @@ for everyone: it is the one for a swatch, a shelf or a showroom.
 
 ### What a label carries
 
+- the brand, where a maker logo would go (maker logos come later);
+- `material series` in white on a black bar (`PLA Rainbow`);
+- the colour name, and its hex code(s) (`#F2D066`, up to three on the wide templates);
 - on a spool label, the spool's protocol in the top-right corner, as an outlined pill:
   `TigerTag`, `TigerTag+`, `TigerData` or `TigerData+` (none on a product label);
-- one under the other: the brand, the series, the colour swatch and colour name,
-  then "Material: PLA" (left out of the 12 mm label); the swatch is drawn
-  with the [material swatch convention](../concepts/universal-filament-identity.md);
 - up to **four value slots**, chosen by the user among: nozzle range, bed range,
   drying (temperature · time), TD, diameter;
 - the QR code.
@@ -343,20 +343,23 @@ owner. Nothing in clear next to the QR code ([section 3](#3-qr-links)).
 
 ### Templates
 
-| Template | Size (width × height) | Content |
-|---|---|---|
-| Classic (default) | 40 × 30 mm | everything, four slots |
-| Expanded | 50 × 30 mm | everything, four slots, larger text |
-| Compact | 40 × 25 mm | everything, two slots |
-| Slim | 40 × 12 mm | brand, `material · series`, colour name, QR code — no slots |
-| Vertical | 30 × 40 mm | everything, four slots, QR code below |
-| Vertical compact | 25 × 40 mm | everything, two slots, QR code below |
+Eight templates, the common spool-label sizes and layouts:
 
-40 × 30 mm is the common thermal label and fits a spool side and a printed
-swatch. The QR code takes the largest whole number of printer dots per module
-that fits, with its 4-module quiet zone: at 203 dpi a 29 × 29 code is 3 dots a
-module on the Classic (≈ 13.9 mm with the quiet zone) and 2 on the Slim
-(≈ 9.3 mm).
+| Template | Size (width × height) | Layout |
+|---|---|---|
+| Classic (default) | 40 × 30 mm | brand, bar, colour + hex, four slots, QR bottom right |
+| Wide | 50 × 30 mm | the Classic, wider bar |
+| Compact | 40 × 25 mm | brand, QR left, bar, colour, hex — no slots |
+| Slim | 40 × 12 mm | QR left, brand, bar, colour — no slots |
+| Slicer-friendly | 40 × 30 mm | brand, material, series, colour stacked large, big QR right — no slots |
+| Vertical | 30 × 40 mm | brand, bar, colour large, hex, a rule, slots stacked left, QR bottom right |
+| Vertical bold | 30 × 40 mm | brand, full-width bar, colour, a rule, QR centred below — no slots |
+| Vertical compact | 25 × 40 mm | brand, bar, colour, hex, a rule, big QR below — no slots |
+
+Each template is one SVG laid out in tenths of a millimetre and scaled to the
+printer's dots. The QR code takes the largest whole number of printer dots per
+module that fits its box; the label's white margins are its quiet zone. At
+203 dpi a 29 × 29 code is 3 dots a module on the Classic (≈ 10.9 mm).
 
 ### Output
 
