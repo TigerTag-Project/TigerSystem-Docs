@@ -1,5 +1,5 @@
 ---
-sourceHash: a7e4c03c1794756522a784e308283acdd4ca0f40216d7c1ee1dce7d001b0279c
+sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -181,7 +181,10 @@ imprimés.
    modifie le poids et la note, avec la même écriture que Studio :
    `weight_available` ou `message` (28 octets UTF-8 au plus), `updatedAt`
    (heure serveur), `needUpdateAt` (heure serveur) sur un format à puce, la
-   jumelle dans le même lot. La page a un bouton de déconnexion. *(2026-11-08.)*
+   jumelle dans le même lot. La bobine vide s'y change aussi, comme Studio
+   l'écrit : `container_id`, `container_weight` (avec la correction propre au
+   compte), `updatedAt`, la jumelle dans le même lot. La page a un bouton de
+   déconnexion. *(2026-11-08.)*
 
 5. Toute personne qui **n'est pas le propriétaire** — non connectée, un autre
    compte, un ami accepté compris — est **renvoyée vers le produit** de la

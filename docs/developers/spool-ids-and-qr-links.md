@@ -160,7 +160,10 @@ never clash with spool links already printed.
    and the note there, with the same write as Studio: `weight_available` or
    `message` (at most 28 bytes UTF-8), `updatedAt` (server time),
    `needUpdateAt` (server time) on a chip format, the twin in the same batch.
-   The page has a sign-out button. *(2026-11-08.)*
+   The container (empty spool) can be changed there too, as Studio writes it:
+   `container_id`, `container_weight` (with the account's own correction),
+   `updatedAt`, the twin in the same batch. The page has a sign-out button.
+   *(2026-11-08.)*
 
 5. Anyone who is **not the owner** — not signed in, another account, an
    accepted friend included — is **sent to the product** of the spool, never
