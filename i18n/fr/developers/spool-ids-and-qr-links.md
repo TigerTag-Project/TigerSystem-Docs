@@ -1,5 +1,5 @@
 ---
-sourceHash: 309b58fc3fab4516fe0410d39f8ef76c520f7b29571d63ee0235d8c92e8a7a2c
+sourceHash: 7a73983e88bc30824260b82412b725695bf7fc2a23594764190003e45bae6c62
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -243,10 +243,9 @@ sont ajoutés à ce tableau, jamais inventés par une seule application.
 |---|---|
 | Non connecté | Valeurs **refusées**. Le lien propose de se connecter, puis ouvre la bobine sans elles. |
 | Connecté, pas le propriétaire (bobine d'un ami comprise) | Valeurs **refusées**. La bobine s'ouvre si les règles le permettent. |
-| Connecté, le propriétaire | La bobine s'ouvre avec les valeurs **pré-remplies**, et **un geste** les enregistre (« Mettre à jour : 640 g »). |
+| Connecté, le propriétaire | Studio : la bobine s'ouvre avec les valeurs **pré-remplies**, et **un geste** les enregistre (« Mettre à jour : 640 g »). La page du Hub : un poids qui tient dans la capacité et diffère de celui enregistré est **enregistré tout de suite**, sur la bobine et sa jumelle en un seul lot, puis un bandeau propose de remettre l'ancien poids (« Revenir à 772 g »), contre un vieux lien scanné à nouveau. *(Hub, 2026-11-08.)* |
 
-Un lien n'écrit jamais tout seul : n'importe qui peut en fabriquer un et
-l'envoyer, et être connecté ne prouve pas que la personne voulait l'appliquer.
+Les valeurs ne s'appliquent qu'à la bobine du propriétaire lui-même.
 Une application qui doit écrire sans confirmation (une balance qui met le poids
 à jour en continu, une intégration) n'utilise pas de lien : elle écrit par le
 compte de l'utilisateur, sous les règles Firestore

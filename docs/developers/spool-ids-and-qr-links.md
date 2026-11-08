@@ -217,10 +217,10 @@ invented by one app alone.
 |---|---|
 | Not signed in | Values **refused**. The link offers to sign in, then opens the spool without them. |
 | Signed in, not the owner (a friend's spool included) | Values **refused**. The spool opens if the rules allow it. |
-| Signed in, the owner | The spool opens with the values **pre-filled**, and **one gesture** saves them ("Update: 640 g"). |
+| Signed in, the owner | Studio: the spool opens with the values **pre-filled**, and **one gesture** saves them ("Update: 640 g"). The Hub page: a weight that fits the capacity and differs from the stored one is **saved at once**, on the spool and its twin in one batch, then a banner offers to put the previous weight back ("Revert to 772 g"), against an old link scanned again. *(Hub, 2026-11-08.)* |
 
-A link never writes by itself: anyone can craft one and send it, and being
-signed in does not prove the person meant to apply it. An app that has to
+A link from anyone else never writes: values apply to the owner's own spool
+only. An app that has to
 write without a confirmation (a scale updating the weight continuously, an
 integration) does not use links: it writes through the user's account under the
 Firestore rules ([integration guide](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)).
