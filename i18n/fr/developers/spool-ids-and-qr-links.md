@@ -1,5 +1,5 @@
 ---
-sourceHash: 3743364b005476933314b6612752ac8ba19ec102af7797f73cb6d2a77eb271fc
+sourceHash: 8e94ff411331d37eb3957f507e521207272225dd8911f5c50b818c724bef70ef
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -365,6 +365,9 @@ nuancier, d'une étagère ou d'un showroom.
 
 ### Ce que porte une étiquette
 
+- sur une étiquette de bobine, le protocole de la bobine après la marque, dans
+  une pastille cernée : `TigerTag`, `TigerTag+`, `TigerData` ou `TigerData+`
+  (aucun sur une étiquette produit) ;
 - la marque, `matière · série`, le nom de la couleur et la pastille de couleur
   (dessinée selon la [convention de pastille matière](../concepts/universal-filament-identity.md)) ;
 - jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
