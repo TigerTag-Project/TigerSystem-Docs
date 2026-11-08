@@ -1,5 +1,5 @@
 ---
-sourceHash: 8e94ff411331d37eb3957f507e521207272225dd8911f5c50b818c724bef70ef
+sourceHash: 41c85dc5e19303a5b19d714a9e7ef304783ff18faddbe144564c12b8c2eddcfb
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -365,7 +365,7 @@ nuancier, d'une étagère ou d'un showroom.
 
 ### Ce que porte une étiquette
 
-- sur une étiquette de bobine, le protocole de la bobine après la marque, dans
+- sur une étiquette de bobine, le protocole de la bobine en haut à droite, dans
   une pastille cernée : `TigerTag`, `TigerTag+`, `TigerData` ou `TigerData+`
   (aucun sur une étiquette produit) ;
 - la marque, `matière · série`, le nom de la couleur et la pastille de couleur

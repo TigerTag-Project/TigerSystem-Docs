@@ -329,7 +329,7 @@ for everyone: it is the one for a swatch, a shelf or a showroom.
 
 ### What a label carries
 
-- on a spool label, the spool's protocol after the brand, as an outlined pill:
+- on a spool label, the spool's protocol in the top-right corner, as an outlined pill:
   `TigerTag`, `TigerTag+`, `TigerData` or `TigerData+` (none on a product label);
 - the brand, `material · series`, the colour name and the colour swatch (drawn
   with the [material swatch convention](../concepts/universal-filament-identity.md));
