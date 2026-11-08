@@ -333,7 +333,8 @@ for everyone: it is the one for a swatch, a shelf or a showroom.
 - `material series` in white on a black bar (`PLA Rainbow`);
 - the colour name, and its hex code(s) (`#F2D066`, up to three on the wide templates);
 - on a spool label, the spool's protocol in the top-right corner, as an outlined pill:
-  `TigerTag`, `TigerTag+`, `TigerData` or `TigerData+` (none on a product label);
+  `TigerTag+` whenever its reference is a catalogue product (a real `id_product`),
+  else `TigerTag`, `TigerData` or `TigerData+` (none on a product label);
 - up to **four value slots**, chosen by the user among: nozzle range, bed range,
   drying (temperature · time), TD, diameter;
 - the QR code.

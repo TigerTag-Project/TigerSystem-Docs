@@ -1,5 +1,5 @@
 ---
-sourceHash: 6a67d6c2c6b09693a95e3e00be6bc9e7dae6202678295ef640aac6fd9edca5eb
+sourceHash: b6917a5bde4948d4c1eaeaa6bd36f6bb5a7e446936154fe48d810dbd12152e53
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -370,7 +370,8 @@ nuancier, d'une étagère ou d'un showroom.
 - le nom de la couleur et son ou ses codes hex (`#F2D066`, jusqu'à trois sur les
   gabarits larges) ;
 - sur une étiquette de bobine, le protocole de la bobine en haut à droite, dans
-  une pastille cernée : `TigerTag`, `TigerTag+`, `TigerData` ou `TigerData+`
+  une pastille cernée : `TigerTag+` dès que sa référence est un produit du
+  catalogue (un vrai `id_product`), sinon `TigerTag`, `TigerData` ou `TigerData+`
   (aucun sur une étiquette produit) ;
 - jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
   de buse, plage de plateau, séchage (température · durée), TD, diamètre ;
