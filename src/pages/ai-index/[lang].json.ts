@@ -1,6 +1,6 @@
 // /ai-index/<lang>.json — every page of one language as plain text, for the AI
 // assistants that answer TigerSystem questions (Tiger Studio's `search_wiki` /
-// `read_wiki_page` MCP tools). A page not translated yet comes in English, the
+// `read_wiki_page` MCP tools), with each page's pictures. A page not translated yet comes in English, the
 // way Starlight serves it. Built with the site; nothing is fetched at runtime.
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
@@ -26,6 +26,26 @@ function plain(body = '') {
     .trim();
 }
 
+// The page's pictures (photos, screenshots, diagrams) as absolute URLs with their
+// alt text, so an assistant can show one to illustrate an answer. Icons skipped.
+function images(body = '') {
+  const found = [
+    ...[...body.matchAll(/<img\b[^>]*>/gi)].map((m) => ({
+      src: /\bsrc="([^"]+)"/i.exec(m[0])?.[1], alt: /\balt="([^"]*)"/i.exec(m[0])?.[1] || '',
+    })),
+    ...[...body.matchAll(/!\[([^\]]*)\]\(([^)\s]+)[^)]*\)/g)].map((m) => ({ src: m[2], alt: m[1] })),
+  ];
+  const seen = new Set();
+  return found
+    .map(({ src, alt }) => {
+      if (!src) return null;
+      const url = /^https?:/.test(src) ? src : src.includes('assets/') ? `${SITE_URL}/assets/${src.split('assets/').pop()}` : null;
+      return url && !/\.svg$/i.test(url) && !url.includes('/icons/') ? { url, alt } : null;
+    })
+    .filter((x) => x && !seen.has(x.url) && seen.add(x.url))
+    .slice(0, 8);
+}
+
 export const GET: APIRoute = async ({ params }) => {
   const lang = String(params.lang);
   const prefixes = LOCALES.filter((l) => l !== DEFAULT_LOCALE).map((l) => `${l}/`);
@@ -43,6 +63,7 @@ export const GET: APIRoute = async ({ params }) => {
       description: e.data.description || '',
       headings,
       text: plain(e.body).slice(0, MAX_TEXT),
+      images: images(e.body),
     };
   });
   return new Response(JSON.stringify({ lang, built: new Date().toISOString(), pages }), {
