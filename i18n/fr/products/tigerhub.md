@@ -1,5 +1,5 @@
 ---
-sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
+sourceHash: d45e89c2c7d78d29cde40e360b79944fe16e2d6691bd0411d0ea79299082efde
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -50,6 +50,38 @@ flowchart TB
  l'intégration, les ressources média.
 - **Goodies** (`/goodies`) — la casquette et le polo officiels. En acheter est
  l'une des façons de [soutenir le projet](../support.md).
+
+## Un lien de liste publique, en pratique
+
+Un lien de liste publique a la forme `https://tigersystem.io/list/<token>`.
+Trois choses à savoir avant d'en coller un quelque part :
+
+- **Le token est toute la clé.** Quiconque détient le lien ouvre la liste —
+  sans compte, sans application, sans rien à prouver. Traitez-le comme un mot
+  de passe que vous avez choisi de partager : parfait pour un forum ou un ami,
+  pas pour une liste que vous n'aimeriez pas voir recopiée plus loin.
+- **Il se crée et se retire depuis les applications, pas depuis le site.**
+  Tiger Studio et Tiger NFC Connect génèrent et révoquent les liens de partage
+  (voir *Interactions* ci-dessous) ; TigerHub ne fait qu'afficher ce qu'elles
+  publient. Révoquer, c'est ainsi qu'on retire une liste ; la republier ensuite
+  produit un **nouveau** token, si bien qu'un lien distribué auparavant n'en
+  est pas ressuscité.
+- **En lecture seule, et cette liste seulement.** Le visiteur voit la liste
+  que vous avez publiée et rien d'autre de votre compte. Les listes de souhaits
+  se partagent de la même façon.
+
+Un lien est l'une des deux façons de partager ; l'autre, c'est un ami :
+
+| | Lien de liste publique | Ami |
+|---|---|---|
+| Qui la voit | quiconque a le lien | une personne que vous avez acceptée |
+| Compte nécessaire | non | oui |
+| Comment | générer un lien dans les applications | échanger des codes de découverte |
+| Annuler | révoquer le lien | retirer l'ami |
+
+La moitié « ami » n'est résumée ici que pour tenir à côté du lien ; les règles
+de demande et de retrait, et leur application côté serveur, appartiennent à
+[Inventaire et synchronisation cloud](../concepts/inventory-and-cloud-sync.md).
 
 ## TigerHub n'est pas la base de données
 

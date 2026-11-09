@@ -41,6 +41,36 @@ flowchart TB
 - **Goodies** (`/goodies`) — the official cap and polo. Buying one is one of
  the ways to [support the project](../support.md).
 
+## A public list link, in practice
+
+A public list link is `https://tigersystem.io/list/<token>`. Three things to
+know before you paste one somewhere:
+
+- **The token is the whole key.** Anyone holding the link opens the list — no
+  account, no app, nothing to prove. Treat it like a password you chose to
+  share: fine for a forum post or a friend, not for a list you would mind
+  seeing copied further.
+- **It is made and unmade from the apps, not from the website.** Tiger Studio
+  and Tiger NFC Connect generate and revoke share links (see *Interactions*
+  below); TigerHub only renders what they publish. Revoking is how you
+  withdraw a list; publishing it again afterwards produces a **new** token,
+  so a link handed out earlier is not revived by it.
+- **Read-only, and only that list.** The viewer sees the list you published
+  and nothing else from your account. Wishlists are shared the same way.
+
+A link is one of two ways to share; the other is a friend:
+
+| | Public list link | Friend |
+|---|---|---|
+| Who sees it | anyone with the link | one person you accepted |
+| Needs an account | no | yes |
+| How | generate a link in the apps | exchange discovery codes |
+| Undo | revoke the link | remove the friend |
+
+The friend half is summarised here only to sit beside the link; the request
+and removal rules, and the server-side enforcement of both, belong to
+[Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md).
+
 ## TigerHub is not the database
 
 The user accounts and the data behind all the apps live in **plain Firebase**
