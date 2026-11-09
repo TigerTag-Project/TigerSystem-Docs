@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -284,10 +284,21 @@ entièrement ouverts (MIT) dans le
 [dépôt Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **Et le poids propre de la bobine vide ?**
-Le calibrage de contenant de Tiger Studio vous permet de mesurer une fois le
-poids à vide réel d'un contenant ; il est ensuite appliqué à chaque bobine de
-ce contenant, de sorte que le chiffre affiché correspond au filament net, pas à
-la bobine en plastique.
+Chaque bobine de votre inventaire enregistre la bobine vide sur laquelle elle
+est enroulée — son *contenant* — et le poids de ce contenant, qui est retiré
+pour que le chiffre affiché soit du filament net, pas la bobine en plastique.
+Une nouvelle bobine reçoit automatiquement le contenant propre à sa marque ;
+Tiger Studio demande quand la marque en a plusieurs, ou aucun dans la liste.
+
+Une bobine neuve de 1 kg qui affiche environ 200 g de trop est presque toujours
+sur le mauvais contenant, le plus souvent *Generic · Refill — Without
+MasterSpool*, qui pèse 0 g. Dans Tiger Studio, ouvrez la bobine et appuyez sur
+**Changer** sur sa carte **Contenant** pour choisir le bon. Si vos bobines vides
+pèsent autre chose que le catalogue, corrigez le poids une fois depuis cette
+même liste (**Corriger ce poids**) : il sert pour chaque bobine de ce contenant
+dans votre compte, et vous choisissez si les bobines déjà dessus suivent. Les
+identifiants et les poids sont listés dans
+[le format `.ttag`](../developers/ttag-format.md).
 
 **Qu'est-ce que le TD-1 / TD1s ?**
 Un analyseur de filament tiers signé **[AJAX-3D](https://ajax-3d.com)**, en

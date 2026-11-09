@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -251,9 +251,20 @@ Tak — o to właśnie chodzi. Projekt sprzętu i firmware są w pełni otwarte 
 [repozytorium Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **A masa pustej szpuli?**
-Kalibracja pojemników w Tiger Studio pozwala zmierzyć rzeczywistą masę pustego pojemnika
-raz; jest ona potem stosowana do każdej szpuli w tym pojemniku, więc liczba, którą
-widzisz, to filament netto, a nie plastikowa rolka.
+Każda szpula w twoim inwentarzu zapisuje pustą szpulę, na której jest
+nawinięta — swój *pojemnik* — oraz jego masę, która jest odejmowana, więc
+liczba, którą widzisz, to filament netto, a nie plastikowa rolka. Nowa szpula
+automatycznie dostaje własny pojemnik swojej marki; Tiger Studio pyta, gdy
+marka ma ich kilka albo jeszcze żadnego na liście.
+
+Nowa szpula 1 kg, która pokazuje około 200 g za dużo, prawie zawsze ma
+niewłaściwy pojemnik, najczęściej *Generic · Refill — Without MasterSpool*,
+który waży 0 g. W Tiger Studio otwórz szpulę i naciśnij **Zmień** na jej karcie
+**Pojemnik**, aby wybrać właściwy. Jeśli twoje puste szpule ważą inaczej niż w
+katalogu, popraw masę raz z tej samej listy (**Popraw tę wagę**): jest używana
+dla każdej szpuli w tym pojemniku na twoim koncie, a ty decydujesz, czy
+szpule, które już na nim są, też ją przejmą. Identyfikatory i masy są w
+[formacie `.ttag`](../developers/ttag-format.md).
 
 **Czym jest TD-1 / TD1s?**
 Analizatorem filamentu firmy trzeciej od **[AJAX-3D](https://ajax-3d.com)**, w dwóch

@@ -1,5 +1,5 @@
 ---
-sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
+sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -95,6 +95,40 @@ In das Format eingebaute Regeln:
 - **ID-Disziplin.** Nur chiplose IDs der Form `TigerData_<id>` dürfen vorkommen;
  eine ältere ID `CLOUD_<id>` wird beim Export abgelehnt.
 
+### Behälter (`container_id`, `container_weight`)
+
+`container_id` benennt die leere Spule, auf der das Filament sitzt.
+`container_weight` ist das Gewicht dieser leeren Spule in Gramm: die Tara, die
+eine Waage abzieht, damit das Inventar Netto-Filament zeigt.
+
+Die IDs sind Zeichenketten aus einer festen Liste, die mit Tiger Studio
+ausgeliefert wird: [`data/container_spool/spools_filament.json`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/data/container_spool/spools_filament.json).
+Jeder Eintrag trägt die Marke, zu der er gehört (`brandId`, dieselbe Zahl wie
+`id_brand`), und ein Katalog-Gewicht. Die meisten sind die eigene Spule einer
+Marke — `bambu_grey` (249 g), `esun_masterspool_2_0` (210 g),
+`polymaker_cardboard` (170 g) — und drei sind generisch, für eine Marke, deren
+Spule noch nicht in der Liste steht:
+
+| `container_id` | Anzeige in Tiger Studio | Katalog-Gewicht |
+|---|---|---|
+| `custom_cardboard` | Generic · Cardboard | 165 g |
+| `custom_plastic` | Generic · Plastic | 200 g |
+| `custom_no_masterspool` | Generic · Refill — Without MasterSpool | **0 g** |
+
+`custom_no_masterspool` zieht nichts ab. Richtig ist es für ein Refill, das
+ohne Spule gewogen wird, und überall sonst falsch: Eine Spule mit diesem
+Behälter zeigt ihr Bruttogewicht, rund 200 g mehr als das verbleibende
+Filament.
+
+`container_weight` ist eine **Momentaufnahme** vom Zeitpunkt der Auswahl, kein
+Nachschlagen. Ein Datensatz behält seinen Wert, wenn sich die Liste ändert, und
+ein Konto kann das Gewicht eines Behälters für seine eigenen Spulen korrigieren
+(gespeichert in `users/{uid}/containerOverrides/{id}`; die gemeinsame Liste
+wird nie verändert).
+
+Ein Generator, der die leere Spule kennt, schreibt beide Felder. Einer, der sie
+nicht kennt, lässt sie weg, statt zu raten: Tiger Studio setzt dann den
+markeneigenen Behälter oder fragt nach, wenn es mehrere oder keinen gibt.
 ## Medientyp
 
 Der kanonische Medientyp ist **`application/vnd.tigertag.ttag+json`** – er zählt
@@ -221,7 +255,7 @@ gesichert ist:
    "color_r": 88, "color_g": 170, "color_b": 220,
    "online_color_list": "58AADC", "online_color_type": 1,
    "measure_gr": 1000, "weight_available": 640,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "TD": 0, "tags": ["desk", "prototyping"],
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -233,7 +267,7 @@ gesichert ist:
    "color_r": 212, "color_g": 175, "color_b": 55,
    "online_color_list": "D4AF37",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04F6E5D4C3B2A1", "tag_index": 1, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -245,7 +279,7 @@ gesichert ist:
    "color_r": 0, "color_g": 130, "color_b": 90,
    "online_color_list": "00825A",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04A1B2C3D4E5F6", "tag_index": 2, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -258,7 +292,7 @@ gesichert ist:
    "color_r": 0, "color_g": 160, "color_b": 70,
    "online_color_list": "00A046",
    "measure_gr": 1000, "weight_available": 480,
-   "container_id": 3, "container_weight": 215, "TD": 6,
+   "container_id": "custom_plastic", "container_weight": 200, "TD": 6,
    "LinkTDS": "https://example-brand.example/tds/petg-hf-basic.pdf",
    "sku": "RFHPPETG175GN1",
    "rfidBackup": true, "updatedAt": 1769212800000

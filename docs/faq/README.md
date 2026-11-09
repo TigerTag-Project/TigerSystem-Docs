@@ -247,9 +247,21 @@ Yes — that's the point. Hardware design and firmware are fully open (MIT) in
 the [Tiger-Scale repo](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **What about the empty spool's own weight?**
-Tiger Studio's container calibration lets you measure a container's real empty
-weight once; it's then applied to every spool in that container, so the number
-you see is net filament, not plastic reel.
+Every spool in your inventory records the empty spool it sits on — its
+*container* — and that container's weight, which is subtracted so the number
+you see is net filament, not plastic reel. A new spool gets its brand's own
+container automatically; Tiger Studio asks when the brand has several, or
+none in the list yet.
+
+A fresh 1 kg spool that reads about 200 g too much is almost always on the
+wrong container, usually *Generic · Refill — Without MasterSpool*, which
+weighs 0 g. In Tiger Studio, open the spool and press **Change** on its
+**Container** card to pick the right one. If your empty spools weigh
+differently from the catalogue, correct the weight once from that same list
+(**Correct this weight**): it is used for every spool on that container in
+your account, and you choose whether the spools already on it follow. The
+ids and weights are listed in
+[the `.ttag` format](../developers/ttag-format.md).
 
 **What is the TD-1 / TD1s?**
 A third-party filament analyzer by **[AJAX-3D](https://ajax-3d.com)**, in two

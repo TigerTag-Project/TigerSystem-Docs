@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -259,9 +259,21 @@ Ja – das ist der Punkt. Hardware-Design und Firmware sind vollständig offen (
 [Tiger-Scale-Repo](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **Und das Eigengewicht der leeren Spule?**
-Mit der Behälterkalibrierung von Tiger Studio misst du das tatsächliche Leergewicht
-eines Behälters einmal; es wird dann auf jede Spule in diesem Behälter angewendet,
-sodass die Zahl, die du siehst, Netto-Filament ist, nicht die Plastikrolle.
+Jede Spule in deinem Inventar speichert die leere Spule, auf der sie sitzt —
+ihren *Behälter* — und dessen Gewicht, das abgezogen wird, damit die Zahl, die
+du siehst, Netto-Filament ist und nicht die Plastikrolle. Eine neue Spule
+bekommt automatisch den Behälter ihrer Marke; Tiger Studio fragt nach, wenn die
+Marke mehrere hat oder noch keinen in der Liste.
+
+Eine neue 1-kg-Spule, die rund 200 g zu viel anzeigt, sitzt fast immer auf dem
+falschen Behälter, meist *Generic · Refill — Without MasterSpool*, der 0 g
+wiegt. Öffne die Spule in Tiger Studio und drücke auf ihrer Karte **Behälter**
+auf **Ändern**, um den richtigen zu wählen. Wiegen deine leeren Spulen anders
+als im Katalog, korrigiere das Gewicht einmal in derselben Liste (**Dieses
+Gewicht korrigieren**): Es gilt für jede Spule in diesem Behälter in deinem
+Konto, und du entscheidest, ob die Spulen, die schon darauf sind, folgen. Die
+IDs und Gewichte stehen im
+[`.ttag`-Format](../developers/ttag-format.md).
 
 **Was ist das TD-1 / TD1s?**
 Ein Filament-Analysegerät eines Drittanbieters von **[AJAX-3D](https://ajax-3d.com)**,

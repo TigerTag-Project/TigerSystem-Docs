@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -251,9 +251,20 @@ Ja — dat is het punt. Hardwareontwerp en firmware zijn volledig open (MIT) in
 de [Tiger-Scale-repo](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **En het eigen gewicht van de lege spoel?**
-Met de containerkalibratie van Tiger Studio meet je het werkelijke leeggewicht van een container
-één keer; dat wordt dan toegepast op elke spoel in die container, zodat het getal
-dat je ziet netto filament is, geen plastic haspel.
+Elke spoel in je inventaris legt vast op welke lege spoel hij zit — zijn
+*container* — en het gewicht daarvan, dat wordt afgetrokken zodat het getal dat
+je ziet netto filament is, geen plastic haspel. Een nieuwe spoel krijgt
+automatisch de eigen container van zijn merk; Tiger Studio vraagt het wanneer
+het merk er meerdere heeft, of nog geen in de lijst.
+
+Een nieuwe spoel van 1 kg die ongeveer 200 g te veel aangeeft, zit bijna altijd
+op de verkeerde container, meestal *Generic · Refill — Without MasterSpool*,
+die 0 g weegt. Open de spoel in Tiger Studio en druk op **Wijzigen** op de
+kaart **Container** om de juiste te kiezen. Wegen je lege spoelen anders dan de
+catalogus, corrigeer het gewicht dan één keer vanuit diezelfde lijst (**Dit
+gewicht corrigeren**): het geldt voor elke spoel op die container in je
+account, en jij kiest of de spoelen die er al op zitten meegaan. De id's en
+gewichten staan in [het `.ttag`-formaat](../developers/ttag-format.md).
 
 **Wat is de TD-1 / TD1s?**
 Een filamentanalyzer van derden van **[AJAX-3D](https://ajax-3d.com)**, in twee

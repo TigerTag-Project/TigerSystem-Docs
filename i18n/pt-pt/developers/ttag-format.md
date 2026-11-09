@@ -1,5 +1,5 @@
 ---
-sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
+sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -70,6 +70,23 @@ Regras incorporadas no formato:
 - **Os gémeos são atómicos.** Um material com gémeo exporta sempre **os dois** lados — um material → dois registos, ligados por `twin_tag_uid`. Nunca se produz meio gémeo.
 - **Disciplina de ids.** Só podem aparecer ids `TigerData_<id>` sem chip; um id antigo `CLOUD_<id>` é recusado na exportação.
 
+### Recipientes (`container_id`, `container_weight`)
+
+`container_id` indica a bobina vazia em que o filamento está. `container_weight` é o peso dessa bobina vazia, em gramas: a tara que uma balança subtrai para que o inventário mostre o filamento líquido.
+
+Os ids são cadeias de uma lista fixa distribuída com o Tiger Studio, [`data/container_spool/spools_filament.json`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/data/container_spool/spools_filament.json). Cada entrada traz a marca a que pertence (`brandId`, o mesmo número que `id_brand`) e um peso de catálogo. A maioria é a bobina própria de uma marca — `bambu_grey` (249 g), `esun_masterspool_2_0` (210 g), `polymaker_cardboard` (170 g) — e três são genéricas, para uma marca cuja bobina ainda não está na lista:
+
+| `container_id` | Como aparece no Tiger Studio | Peso de catálogo |
+|---|---|---|
+| `custom_cardboard` | Generic · Cardboard | 165 g |
+| `custom_plastic` | Generic · Plastic | 200 g |
+| `custom_no_masterspool` | Generic · Refill — Without MasterSpool | **0 g** |
+
+`custom_no_masterspool` não subtrai nada. Está certo para uma recarga pesada sem qualquer bobina, e errado em todos os outros casos: uma bobina que o tem mostra o seu peso bruto, cerca de 200 g a mais do que o filamento restante.
+
+`container_weight` é um **instantâneo** tirado quando o recipiente foi escolhido, não uma consulta. Um registo mantém o seu valor quando a lista muda, e uma conta pode corrigir o peso de um recipiente para as suas próprias bobinas (guardado em `users/{uid}/containerOverrides/{id}`; a lista partilhada nunca é modificada).
+
+Um gerador que conhece a bobina vazia escreve os dois campos. Um que não a conhece omite-os em vez de adivinhar: o Tiger Studio define então o recipiente próprio da marca, ou pergunta quando há vários ou nenhum.
 ## Tipo de media
 
 O tipo de media de referência é **`application/vnd.tigertag.ttag+json`** — importa quando um `.ttag` é **servido por http(s)** (o `Content-Type` que um playground web, uma CDN ou um alojamento de coleções de marca deve enviar). O `application/json` também é aceite. Um ficheiro em disco não traz MIME — é identificado pela extensão `.ttag` e, de forma autoritativa, pelo seu conteúdo: os importadores **validam pelo conteúdo** (`format`/`kind`/`version`), nunca apenas pelo cabeçalho MIME ou pela extensão do ficheiro.
@@ -154,7 +171,7 @@ Uma exportação de seleção múltipla fiel e anonimizada — um TigerData, um 
    "color_r": 88, "color_g": 170, "color_b": 220,
    "online_color_list": "58AADC", "online_color_type": 1,
    "measure_gr": 1000, "weight_available": 640,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "TD": 0, "tags": ["desk", "prototyping"],
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -166,7 +183,7 @@ Uma exportação de seleção múltipla fiel e anonimizada — um TigerData, um 
    "color_r": 212, "color_g": 175, "color_b": 55,
    "online_color_list": "D4AF37",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04F6E5D4C3B2A1", "tag_index": 1, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -178,7 +195,7 @@ Uma exportação de seleção múltipla fiel e anonimizada — um TigerData, um 
    "color_r": 0, "color_g": 130, "color_b": 90,
    "online_color_list": "00825A",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04A1B2C3D4E5F6", "tag_index": 2, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -191,7 +208,7 @@ Uma exportação de seleção múltipla fiel e anonimizada — um TigerData, um 
    "color_r": 0, "color_g": 160, "color_b": 70,
    "online_color_list": "00A046",
    "measure_gr": 1000, "weight_available": 480,
-   "container_id": 3, "container_weight": 215, "TD": 6,
+   "container_id": "custom_plastic", "container_weight": 200, "TD": 6,
    "LinkTDS": "https://example-brand.example/tds/petg-hf-basic.pdf",
    "sku": "RFHPPETG175GN1",
    "rfidBackup": true, "updatedAt": 1769212800000

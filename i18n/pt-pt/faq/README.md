@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -134,7 +134,9 @@ Não. Pode definir ou ajustar manualmente o peso de uma bobina nas aplicações 
 Sim — é esse o ponto. O desenho do hardware e o firmware são totalmente abertos (MIT) no [repositório Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **E o peso da própria bobina vazia?**
-A calibração de contentores do Tiger Studio permite medir uma vez o peso real de um contentor vazio; é depois aplicado a todas as bobinas desse contentor, de modo que o número que vê é filamento líquido, não a bobina de plástico.
+Cada bobina do seu inventário regista a bobina vazia em que está — o seu *recipiente* — e o peso desse recipiente, que é subtraído para que o número que vê seja filamento líquido, não a bobina de plástico. Uma bobina nova recebe automaticamente o recipiente próprio da sua marca; o Tiger Studio pergunta quando a marca tem vários, ou ainda nenhum na lista.
+
+Uma bobina nova de 1 kg que mostra cerca de 200 g a mais está quase sempre no recipiente errado, normalmente *Generic · Refill — Without MasterSpool*, que pesa 0 g. No Tiger Studio, abra a bobina e carregue em **Alterar** no cartão **Recipiente** para escolher o certo. Se as suas bobinas vazias pesam de forma diferente do catálogo, corrija o peso uma vez a partir dessa mesma lista (**Corrigir este peso**): é usado para todas as bobinas desse recipiente na sua conta, e é o utilizador que escolhe se as bobinas que já lá estão o acompanham. Os ids e os pesos estão no [formato `.ttag`](../developers/ttag-format.md).
 
 **O que é o TD-1 / TD1s?**
 Um analisador de filamento de terceiros da **[AJAX-3D](https://ajax-3d.com)**, em duas variantes que funcionam ambas com o ecossistema: o **TD-1** (a versão DIY — construa-o você mesmo) e o **TD1s** (pré-montado, pronto a usar). A sua função principal é medir a **Transmission Distance** do filamento («TD» — quanta luz o material deixa passar), o valor sem o qual os utilizadores de impressão HueForge / Full Spectrum não conseguem viver; lê também a **cor** (RGB, 1–3 slots) — ligeiramente menos precisa, mas uma boa indicação. O Tiger Studio integra-o nativamente por USB e o **Tiger NFC Connect suporta-o por USB-C** no telemóvel. O TD medido pode ser **guardado no próprio protocolo TigerTag** — no chip NFC ou no formato de ficheiro `.ttag`. Um acessório de terceiros e o ecossistema aberto a trabalhar em conjunto, como previsto.

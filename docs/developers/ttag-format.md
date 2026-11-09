@@ -90,6 +90,39 @@ Rules baked into the format:
 - **Id discipline.** Only chipless `TigerData_<id>` ids may appear; a legacy
  `CLOUD_<id>` id is refused at export time.
 
+### Containers (`container_id`, `container_weight`)
+
+`container_id` names the empty spool the filament sits on. `container_weight`
+is that empty spool's weight in grams: the tare a scale subtracts so the
+inventory shows net filament.
+
+The ids are strings from one fixed list shipped with Tiger Studio,
+[`data/container_spool/spools_filament.json`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/data/container_spool/spools_filament.json).
+Each entry carries the brand it belongs to (`brandId`, the same number as
+`id_brand`) and a catalogue weight. Most are a brand's own spool —
+`bambu_grey` (249 g), `esun_masterspool_2_0` (210 g), `polymaker_cardboard`
+(170 g) — and three are generic, for a brand whose spool is not in the list
+yet:
+
+| `container_id` | Shown in Tiger Studio as | Catalogue weight |
+|---|---|---|
+| `custom_cardboard` | Generic · Cardboard | 165 g |
+| `custom_plastic` | Generic · Plastic | 200 g |
+| `custom_no_masterspool` | Generic · Refill — Without MasterSpool | **0 g** |
+
+`custom_no_masterspool` subtracts nothing. It is right for a refill weighed
+without any spool, and wrong everywhere else: a spool carrying it shows its
+gross weight, about 200 g more than the filament left.
+
+`container_weight` is a **snapshot** taken when the container was chosen, not
+a lookup. A record keeps its value when the list changes, and an account can
+correct a container's weight for its own spools (stored in
+`users/{uid}/containerOverrides/{id}`; the shared list is never modified).
+
+A generator that knows the empty spool writes both fields. One that does not
+leaves them out rather than guess: Tiger Studio then sets the brand's own
+container, or asks when there are several or none.
+
 ## Media type
 
 The canonical media type is **`application/vnd.tigertag.ttag+json`** — it
@@ -210,7 +243,7 @@ A faithful, anonymized multi-selection export — one TigerData, one twin pair
    "color_r": 88, "color_g": 170, "color_b": 220,
    "online_color_list": "58AADC", "online_color_type": 1,
    "measure_gr": 1000, "weight_available": 640,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "TD": 0, "tags": ["desk", "prototyping"],
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -222,7 +255,7 @@ A faithful, anonymized multi-selection export — one TigerData, one twin pair
    "color_r": 212, "color_g": 175, "color_b": 55,
    "online_color_list": "D4AF37",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04F6E5D4C3B2A1", "tag_index": 1, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -234,7 +267,7 @@ A faithful, anonymized multi-selection export — one TigerData, one twin pair
    "color_r": 0, "color_g": 130, "color_b": 90,
    "online_color_list": "00825A",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04A1B2C3D4E5F6", "tag_index": 2, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -247,7 +280,7 @@ A faithful, anonymized multi-selection export — one TigerData, one twin pair
    "color_r": 0, "color_g": 160, "color_b": 70,
    "online_color_list": "00A046",
    "measure_gr": 1000, "weight_available": 480,
-   "container_id": 3, "container_weight": 215, "TD": 6,
+   "container_id": "custom_plastic", "container_weight": 200, "TD": 6,
    "LinkTDS": "https://example-brand.example/tds/petg-hf-basic.pdf",
    "sku": "RFHPPETG175GN1",
    "rfidBackup": true, "updatedAt": 1769212800000

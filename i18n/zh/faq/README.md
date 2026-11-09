@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -205,8 +205,16 @@ Tiger Studio 还可以读取标准的 **USB“HID Scale”设备**——DYMO M �
 可以——这正是重点。硬件设计和固件在 [Tiger-Scale 仓库](https://github.com/TigerTag-Project/Tiger-Scale)中完全开放（MIT）。
 
 **空线盘自身的重量怎么办？**
-Tiger Studio 的容器校准让你一次性测量容器真实的空重；之后它会应用于该容器中的每卷线轴，
-所以你看到的数字是净耗材重量，而不是塑料线盘。
+库存中的每卷线都记录着它所绕的空线盘——即它的*容器*——以及该容器的重量，
+这个重量会被减去，所以你看到的数字是净耗材重量，而不是塑料线盘。新线卷会自动获得其品牌自己的容器；
+当品牌有多个容器，或列表中还没有时，Tiger Studio 会询问。
+
+一卷新的 1 kg 线卷如果多显示约 200 g，几乎总是选错了容器，通常是
+*Generic · Refill — Without MasterSpool*，它的重量为 0 g。在 Tiger Studio 中打开该线卷，
+在它的**容器**卡片上点击**更换**，选择正确的容器。如果你的空线盘重量与目录不同，
+在同一个列表中修正一次重量（**修正该重量**）：它适用于你账户中使用该容器的所有线卷，
+并由你选择已在使用它的线卷是否跟随。id 和重量列在
+[`.ttag` 格式](../developers/ttag-format.md)中。
 
 **TD-1 / TD1s 是什么？**
 **[AJAX-3D](https://ajax-3d.com)** 出品的第三方耗材分析仪，有两个变体，都能与生态系统配合：

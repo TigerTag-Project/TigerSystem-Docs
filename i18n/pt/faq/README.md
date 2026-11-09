@@ -1,5 +1,5 @@
 ---
-sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
+sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
 sourcePath: docs/faq/README.md
 ---
 
@@ -252,9 +252,20 @@ Sim — esse é o ponto. O projeto de hardware e o firmware são totalmente aber
 [repositório Tiger-Scale](https://github.com/TigerTag-Project/Tiger-Scale).
 
 **E o peso do carretel vazio?**
-A calibração de recipiente do Tiger Studio permite medir uma única vez o peso real vazio de um
-recipiente; ele é então aplicado a todas as bobinas desse recipiente, de modo que o número
-que você vê é o de filamento líquido, não o do carretel de plástico.
+Cada bobina do seu inventário registra o carretel vazio em que está — o seu
+*recipiente* — e o peso desse recipiente, que é subtraído para que o número que
+você vê seja filamento líquido, não o carretel de plástico. Uma bobina nova
+recebe automaticamente o recipiente próprio da sua marca; o Tiger Studio
+pergunta quando a marca tem vários, ou nenhum na lista ainda.
+
+Uma bobina nova de 1 kg que mostra cerca de 200 g a mais está quase sempre no
+recipiente errado, geralmente *Generic · Refill — Without MasterSpool*, que
+pesa 0 g. No Tiger Studio, abra a bobina e clique em **Alterar** no cartão
+**Recipiente** para escolher o certo. Se os seus carretéis vazios pesam
+diferente do catálogo, corrija o peso uma vez nessa mesma lista (**Corrigir
+este peso**): ele vale para todas as bobinas desse recipiente na sua conta, e
+você escolhe se as bobinas que já estão nele acompanham. Os ids e os pesos estão
+no [formato `.ttag`](../developers/ttag-format.md).
 
 **O que é o TD-1 / TD1s?**
 Um analisador de filamento de terceiros da **[AJAX-3D](https://ajax-3d.com)**, em duas

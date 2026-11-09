@@ -1,5 +1,5 @@
 ---
-sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
+sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -85,6 +85,32 @@ sourcePath: docs/developers/ttag-format.md
  一种材料 → 两条记录，由 `twin_tag_uid` 相连。绝不会产生半个孪生。
 - **ID 纪律。** 只允许出现无芯片的 `TigerData_<id>` id；旧版 `CLOUD_<id>` id 在导出时会被拒绝。
 
+### 容器 (`container_id`, `container_weight`)
+
+`container_id` 指明耗材所绕的空线盘。`container_weight` 是该空线盘的重量（克）：
+秤会减去这个皮重，让库存显示净耗材重量。
+
+这些 id 是字符串，来自 Tiger Studio 自带的一份固定列表
+[`data/container_spool/spools_filament.json`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/data/container_spool/spools_filament.json)。
+每个条目都带有所属品牌（`brandId`，与 `id_brand` 是同一个数字）和一个目录重量。
+大多数是某个品牌自己的线盘——`bambu_grey`（249 g）、`esun_masterspool_2_0`（210 g）、
+`polymaker_cardboard`（170 g）——另有三个通用条目，用于线盘尚未收录的品牌：
+
+| `container_id` | Tiger Studio 中的显示 | 目录重量 |
+|---|---|---|
+| `custom_cardboard` | Generic · Cardboard | 165 g |
+| `custom_plastic` | Generic · Plastic | 200 g |
+| `custom_no_masterspool` | Generic · Refill — Without MasterSpool | **0 g** |
+
+`custom_no_masterspool` 不减去任何重量。它只适用于不带任何线盘称重的补充装，
+用在其他地方都是错的：带有它的线卷会显示毛重，比剩余耗材多出约 200 g。
+
+`container_weight` 是选择容器时记下的**快照**，而不是查表。列表变化时记录保留自己的值；
+账户也可以为自己的线卷修正某个容器的重量（存储在
+`users/{uid}/containerOverrides/{id}`；共享列表本身从不修改）。
+
+知道空线盘的生成器会写入这两个字段。不知道的生成器应省略它们，而不是猜测：
+Tiger Studio 随后会设置该品牌自己的容器，或在有多个、或一个都没有时询问。
 ## 媒体类型
 
 规范的媒体类型是 **`application/vnd.tigertag.ttag+json`**——
@@ -194,7 +220,7 @@ TigerTag+。无芯片的记录（`uid` 以 `TigerData_` 或旧版 `CLOUD_` 开�
    "color_r": 88, "color_g": 170, "color_b": 220,
    "online_color_list": "58AADC", "online_color_type": 1,
    "measure_gr": 1000, "weight_available": 640,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "TD": 0, "tags": ["desk", "prototyping"],
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -206,7 +232,7 @@ TigerTag+。无芯片的记录（`uid` 以 `TigerData_` 或旧版 `CLOUD_` 开�
    "color_r": 212, "color_g": 175, "color_b": 55,
    "online_color_list": "D4AF37",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04F6E5D4C3B2A1", "tag_index": 1, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -218,7 +244,7 @@ TigerTag+。无芯片的记录（`uid` 以 `TigerData_` 或旧版 `CLOUD_` 开�
    "color_r": 0, "color_g": 130, "color_b": 90,
    "online_color_list": "00825A",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04A1B2C3D4E5F6", "tag_index": 2, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -231,7 +257,7 @@ TigerTag+。无芯片的记录（`uid` 以 `TigerData_` 或旧版 `CLOUD_` 开�
    "color_r": 0, "color_g": 160, "color_b": 70,
    "online_color_list": "00A046",
    "measure_gr": 1000, "weight_available": 480,
-   "container_id": 3, "container_weight": 215, "TD": 6,
+   "container_id": "custom_plastic", "container_weight": 200, "TD": 6,
    "LinkTDS": "https://example-brand.example/tds/petg-hf-basic.pdf",
    "sku": "RFHPPETG175GN1",
    "rfidBackup": true, "updatedAt": 1769212800000

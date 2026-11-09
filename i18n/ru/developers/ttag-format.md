@@ -1,5 +1,5 @@
 ---
-sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
+sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -96,6 +96,38 @@ sourcePath: docs/developers/ttag-format.md
 - **Дисциплина идентификаторов.** Могут встречаться только id `TigerData_<id>`
   без чипа; устаревший id `CLOUD_<id>` отвергается при экспорте.
 
+### Контейнеры (`container_id`, `container_weight`)
+
+`container_id` указывает пустую катушку, на которой намотан филамент.
+`container_weight` — вес этой пустой катушки в граммах: тара, которую весы
+вычитают, чтобы инвентарь показывал чистый филамент.
+
+Идентификаторы — это строки из одного фиксированного списка, поставляемого с
+Tiger Studio: [`data/container_spool/spools_filament.json`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/data/container_spool/spools_filament.json).
+Каждая запись содержит бренд, к которому она относится (`brandId`, то же
+число, что и `id_brand`), и каталожный вес. Большинство — собственная катушка
+бренда: `bambu_grey` (249 г), `esun_masterspool_2_0` (210 г),
+`polymaker_cardboard` (170 г); три — универсальные, для бренда, чьей катушки
+ещё нет в списке:
+
+| `container_id` | Как показывает Tiger Studio | Каталожный вес |
+|---|---|---|
+| `custom_cardboard` | Generic · Cardboard | 165 г |
+| `custom_plastic` | Generic · Plastic | 200 г |
+| `custom_no_masterspool` | Generic · Refill — Without MasterSpool | **0 г** |
+
+`custom_no_masterspool` ничего не вычитает. Он верен для рефилла, который
+взвешивают без катушки, и неверен во всех остальных случаях: катушка с ним
+показывает вес брутто, примерно на 200 г больше оставшегося филамента.
+
+`container_weight` — это **снимок**, сделанный в момент выбора контейнера, а
+не поиск по списку. Запись сохраняет своё значение, когда список меняется, а
+аккаунт может исправить вес контейнера для своих катушек (хранится в
+`users/{uid}/containerOverrides/{id}`; общий список никогда не изменяется).
+
+Генератор, который знает пустую катушку, записывает оба поля. Тот, который не
+знает, опускает их, а не угадывает: тогда Tiger Studio ставит собственный
+контейнер бренда или спрашивает, если их несколько или нет ни одного.
 ## Тип носителя
 
 Каноничный тип носителя — **`application/vnd.tigertag.ttag+json`**; он важен
@@ -219,7 +251,7 @@ TigerTag+. У записи без чипа (`uid` начинается с `Tiger
    "color_r": 88, "color_g": 170, "color_b": 220,
    "online_color_list": "58AADC", "online_color_type": 1,
    "measure_gr": 1000, "weight_available": 640,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "TD": 0, "tags": ["desk", "prototyping"],
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -231,7 +263,7 @@ TigerTag+. У записи без чипа (`uid` начинается с `Tiger
    "color_r": 212, "color_g": 175, "color_b": 55,
    "online_color_list": "D4AF37",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04F6E5D4C3B2A1", "tag_index": 1, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -243,7 +275,7 @@ TigerTag+. У записи без чипа (`uid` начинается с `Tiger
    "color_r": 0, "color_g": 130, "color_b": 90,
    "online_color_list": "00825A",
    "measure_gr": 1000, "weight_available": 500,
-   "container_id": 3, "container_weight": 215,
+   "container_id": "custom_plastic", "container_weight": 200,
    "twin_tag_uid": "04A1B2C3D4E5F6", "tag_index": 2, "tag_count": 2,
    "rfidBackup": false, "updatedAt": 1769212800000
   },
@@ -256,7 +288,7 @@ TigerTag+. У записи без чипа (`uid` начинается с `Tiger
    "color_r": 0, "color_g": 160, "color_b": 70,
    "online_color_list": "00A046",
    "measure_gr": 1000, "weight_available": 480,
-   "container_id": 3, "container_weight": 215, "TD": 6,
+   "container_id": "custom_plastic", "container_weight": 200, "TD": 6,
    "LinkTDS": "https://example-brand.example/tds/petg-hf-basic.pdf",
    "sku": "RFHPPETG175GN1",
    "rfidBackup": true, "updatedAt": 1769212800000
