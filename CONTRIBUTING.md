@@ -110,7 +110,8 @@ pnpm translate:check                      # which pages are stale or missing, pe
 ANTHROPIC_API_KEY=… pnpm translate        # refresh the stale ones, every language
 ANTHROPIC_API_KEY=… pnpm translate -- --locale de          # one language
 ANTHROPIC_API_KEY=… pnpm translate -- --locale de --only products/tigertag.md
-node scripts/stamp-translations.mjs --locale de            # stamp pages written by hand
+node scripts/stamp-translations.mjs --locale de            # stamp new pages written by hand
+node scripts/stamp-translations.mjs --force i18n/de/faq/README.md   # re-stamp exactly the pages you refreshed
 ```
 
 The recurring words of each language are fixed in
