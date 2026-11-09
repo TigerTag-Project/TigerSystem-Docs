@@ -1,6 +1,8 @@
 ---
 import Default from '@astrojs/starlight/components/Footer.astro';
 
+import { stringsFor } from '../../scripts/lib/locale-strings.mjs';
+
 /**
  * Giscus — comments backed by GitHub Discussions, no server of our own.
  *
@@ -18,12 +20,10 @@ const category = import.meta.env.PUBLIC_GISCUS_CATEGORY ?? 'Docs';
 const repo = import.meta.env.PUBLIC_GISCUS_REPO ?? 'TigerTag-Project/TigerSystem-Docs';
 const repoId = import.meta.env.PUBLIC_GISCUS_REPO_ID ?? 'R_kgDOTdiZjQ';
 
-const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
-const heading = locale === 'fr' ? 'Questions & retours' : 'Questions & feedback';
-const intro =
-  locale === 'fr'
-    ? 'Les commentaires vivent dans les Discussions GitHub du dépôt — un compte GitHub suffit.'
-    : 'Comments live in the repository’s GitHub Discussions — a GitHub account is all you need.';
+const locale = Astro.currentLocale ?? 'en';
+const strings = stringsFor(locale);
+const heading = strings.comments;
+const intro = strings.commentsIntro;
 ---
 
 <Default><slot /></Default>
@@ -39,7 +39,7 @@ const intro =
         data-repo-id={repoId}
         data-category={category}
         data-category-id={categoryId}
-        data-lang={locale}
+        data-lang={strings.giscus}
       />
     </section>
   )

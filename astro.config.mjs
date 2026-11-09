@@ -3,7 +3,13 @@ import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 import starlightLinksValidator from 'starlight-links-validator';
 
-import { REPO_URL, SITE_URL } from './scripts/lib/docs-config.mjs';
+import {
+  DEFAULT_LOCALE,
+  LOCALES,
+  LOCALE_META,
+  REPO_URL,
+  SITE_URL,
+} from './scripts/lib/docs-config.mjs';
 import { sidebar } from './src/sidebar.mjs';
 
 // https://astro.build/config
@@ -19,7 +25,12 @@ export default defineConfig({
   // anywhere outside this repo we cannot edit.
   redirects: {
     '/developers/cloud-api': '/developers/account-api/',
-    '/fr/developers/cloud-api': '/fr/developers/account-api/',
+    ...Object.fromEntries(
+      LOCALES.filter((code) => code !== DEFAULT_LOCALE).map((code) => [
+        `/${code}/developers/cloud-api`,
+        `/${code}/developers/account-api/`,
+      ]),
+    ),
   },
 
   integrations: [
@@ -33,10 +44,14 @@ export default defineConfig({
       favicon: '/favicon.ico',
 
       defaultLocale: 'root',
-      locales: {
-        root: { label: 'English', lang: 'en' },
-        fr: { label: 'Français', lang: 'fr' },
-      },
+      // English at the root, then one entry per translated language — the
+      // eleven Tiger Studio speaks, listed once in docs-config.
+      locales: Object.fromEntries(
+        LOCALES.map((code) => [
+          code === DEFAULT_LOCALE ? 'root' : code,
+          { label: LOCALE_META[code].label, lang: LOCALE_META[code].lang },
+        ]),
+      ),
 
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/TigerTag-Project' },

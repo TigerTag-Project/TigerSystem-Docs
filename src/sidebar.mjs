@@ -6,24 +6,26 @@
  * `docs/` is missing from this tree, or if an entry here points nowhere.
  *
  * Leaf entries use `slug`, so their label is the page's own title and the
- * French sidebar picks up the French title automatically. Only the group
- * headings — which exist in the navigation, not in the content — are
- * translated here.
+ * translated sidebars pick up each language's own title automatically. Only the
+ * group headings — which exist in the navigation, not in the content — and a
+ * few custom labels are translated, in `sidebar-labels.mjs`.
  */
 
-const group = (label, fr, items) => ({ label, translations: { fr }, items });
+import { LABELS } from './sidebar-labels.mjs';
+
+const group = (label, translations, items) => ({ label, translations, items });
 
 export const sidebar = [
-  group('Start here', 'Commencer ici', [
-    { label: 'Home', translations: { fr: 'Accueil' }, link: '/' },
+  group('Start here', LABELS.startHere, [
+    { label: 'Home', translations: LABELS.home, link: '/' },
     { slug: 'vision/why-tigersystem' },
     { slug: 'guides/start-for-free' },
     { slug: 'tutorials/first-smart-spool' },
     { slug: 'faq' },
   ]),
 
-  group('Products', 'Produits', [
-    { slug: 'products', label: 'All products', translations: { fr: 'Tous les produits' } },
+  group('Products', LABELS.products, [
+    { slug: 'products', label: 'All products', translations: LABELS.allProducts },
     { slug: 'products/tigertag' },
     { slug: 'products/tigertag-plus' },
     { slug: 'products/tigertag-plus-certified' },
@@ -37,8 +39,8 @@ export const sidebar = [
     { slug: 'products/factory-suite' },
   ]),
 
-  group('Printer compatibility', 'Compatibilité imprimantes', [
-    { slug: 'compatibility', label: 'Overview & matrix', translations: { fr: 'Vue d’ensemble et matrice' } },
+  group('Printer compatibility', LABELS.printerCompatibility, [
+    { slug: 'compatibility', label: 'Overview & matrix', translations: LABELS.overviewMatrix },
     { slug: 'compatibility/bambu-lab' },
     { slug: 'compatibility/creality' },
     { slug: 'compatibility/elegoo' },
@@ -52,19 +54,19 @@ export const sidebar = [
     { slug: 'compatibility/third-party-hardware' },
   ]),
 
-  group('Concepts', 'Concepts', [
+  group('Concepts', LABELS.concepts, [
     { slug: 'concepts/tigertag-chip' },
     { slug: 'concepts/universal-filament-identity' },
     { slug: 'concepts/inventory-and-cloud-sync' },
   ]),
 
-  group('Architecture', 'Architecture', [
+  group('Architecture', LABELS.architecture, [
     { slug: 'architecture/overview' },
     { slug: 'architecture/data-flow' },
   ]),
 
-  group('Developers', 'Développeurs', [
-    { slug: 'developers', label: 'Developer overview', translations: { fr: 'Vue d’ensemble développeur' } },
+  group('Developers', LABELS.developers, [
+    { slug: 'developers', label: 'Developer overview', translations: LABELS.developerOverview },
     { slug: 'developers/sdks' },
     { slug: 'developers/ttag-format' },
     { slug: 'developers/material-swatch' },
@@ -75,23 +77,23 @@ export const sidebar = [
     { slug: 'developers/repositories' },
   ]),
 
-  group('Guides & tutorials', 'Guides et tutoriels', [
+  group('Guides & tutorials', LABELS.guidesTutorials, [
     { slug: 'tutorials' },
     { slug: 'guides' },
     { slug: 'tutorials/first-smart-spool' },
     { slug: 'tutorials/send-a-request' },
     { slug: 'guides/twin-tag-pair' },
-    { slug: 'tutorials/tigerscale-serial-port-driver', label: 'TigerScale: fixing a missing COM port', translations: { fr: 'TigerScale : faire apparaître le port COM' } },
+    { slug: 'tutorials/tigerscale-serial-port-driver', label: 'TigerScale: fixing a missing COM port', translations: LABELS.tigerscaleComPort },
     { slug: 'guides/connect-an-ai-assistant' },
     { slug: 'guides/filament-materials-guide' },
-    { slug: 'tutorials/bambu-lab-a1-series', label: 'Bambu Lab A1 series: LAN mode', translations: { fr: 'Bambu Lab série A1 : mode LAN' } },
-    { slug: 'tutorials/bambu-lab-p1-series', label: 'Bambu Lab P1 series: LAN mode', translations: { fr: 'Bambu Lab série P1 : mode LAN' } },
-    { slug: 'tutorials/bambu-lab-x1-h2-p2-series', label: 'Bambu Lab X1/X1E/H2/P2: LAN mode', translations: { fr: 'Bambu Lab X1/X1E/H2/P2 : mode LAN' } },
-    { slug: 'tutorials/elegoo-cc2-lan-mode', label: 'Elegoo CC2: LAN mode', translations: { fr: 'Elegoo CC2 : mode LAN' } },
-    { slug: 'tutorials/flashforge-connection-tutorial', label: 'FlashForge: connection tutorial', translations: { fr: 'FlashForge : tutoriel de connexion' } },
+    { slug: 'tutorials/bambu-lab-a1-series', label: 'Bambu Lab A1 series: LAN mode', translations: LABELS.bambuA1 },
+    { slug: 'tutorials/bambu-lab-p1-series', label: 'Bambu Lab P1 series: LAN mode', translations: LABELS.bambuP1 },
+    { slug: 'tutorials/bambu-lab-x1-h2-p2-series', label: 'Bambu Lab X1/X1E/H2/P2: LAN mode', translations: LABELS.bambuX1 },
+    { slug: 'tutorials/elegoo-cc2-lan-mode', label: 'Elegoo CC2: LAN mode', translations: LABELS.elegooCc2 },
+    { slug: 'tutorials/flashforge-connection-tutorial', label: 'FlashForge: connection tutorial', translations: LABELS.flashforge },
   ]),
 
-  group('Philosophy & vision', 'Philosophie et vision', [
+  group('Philosophy & vision', LABELS.philosophyVision, [
     { slug: 'vision/why-tigersystem' },
     { slug: 'philosophy/user-centric-ecosystem' },
     { slug: 'philosophy/open-ecosystem' },
@@ -101,7 +103,7 @@ export const sidebar = [
     { slug: 'vision/team' },
   ]),
 
-  group('Reference', 'Référence', [
+  group('Reference', LABELS.reference, [
     { slug: 'glossary' },
     { slug: 'certified-partners' },
     { slug: 'support' },

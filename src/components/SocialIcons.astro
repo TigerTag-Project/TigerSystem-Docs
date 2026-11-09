@@ -8,16 +8,14 @@
 import Default from '@astrojs/starlight/components/SocialIcons.astro';
 
 import { REPO_URL } from '../../scripts/lib/docs-config.mjs';
+import { fill, stringsFor } from '../../scripts/lib/locale-strings.mjs';
 
-const locale = Astro.currentLocale === 'fr' ? 'fr' : 'en';
-const label = locale === 'fr' ? 'Signaler un problème' : 'Report issue';
+const strings = stringsFor(Astro.currentLocale ?? 'en');
+const label = strings.report;
 
 const page = Astro.url.pathname;
-const title = locale === 'fr' ? `Problème sur ${page}` : `Issue on ${page}`;
-const body =
-  locale === 'fr'
-    ? `Page : ${page}\n\nCe qui ne va pas :\n`
-    : `Page: ${page}\n\nWhat is wrong:\n`;
+const title = fill(strings.reportTitle, { page });
+const body = fill(strings.reportBody, { page });
 
 const href = `${REPO_URL}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 ---
