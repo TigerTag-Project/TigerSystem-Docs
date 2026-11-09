@@ -1,5 +1,5 @@
 ---
-sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
+sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,7 +22,7 @@ más inteligentes que las propietarias, sin el jardín vallado.
 única solución abierta viable de bobina inteligente que se envía a escala: un
 protocolo abierto, estándar, agnóstico y multiplataforma con más de **2,5 millones de
 chips ya producidos** e integrados en fábrica por marcas como Rosa3D, eSun, Sunlu,
-Landu, Jamg He, R3D, Filforme, Lotactree y Smart3DPT, y también Nanovia.
+Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT y Nanovia.
 
 ## Integración en fábrica: días, no meses
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
+sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,7 +22,7 @@ quelle proprietarie, senza il giardino recintato.
 e, oggi, l'unica soluzione aperta di bobina intelligente praticabile e distribuita su larga scala: un
 protocollo aperto, standard, agnostico e multipiattaforma, con più di
 **2,5 milioni di chip già prodotti** e integrati in fabbrica da marchi
-come Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree e
+come Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree,
 Smart3DPT e Nanovia.
 
 ## Integrazione in fabbrica: giorni, non mesi

@@ -1,5 +1,5 @@
 ---
-sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
+sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -11,7 +11,7 @@ sourcePath: docs/vision/for-filament-manufacturers.md
 
 As impressoras esperam cada vez mais filamento inteligente: sistemas da classe AMS, deteção de material por slot, definições automáticas. Todos os fabricantes de impressoras respondem com uma **etiqueta fechada, presa às suas máquinas, a alimentar a sua nuvem** — zero interoperabilidade, zero valor para a sua marca fora das paredes deles. E cada etiqueta bloqueada serve um segundo propósito: **encaminhar os seus clientes para o filamento do próprio fabricante da impressora.** O TigerTag foi criado em 2023 precisamente para que as marcas de terceiros tivessem uma resposta melhor — bobinas mais inteligentes do que as proprietárias, sem o jardim murado.
 
-**O TigerTag é o protocolo RFID de terceiros mais implementado do mundo** — e, hoje, a única solução aberta de bobina inteligente viável fornecida em escala: um protocolo aberto, padrão, agnóstico e multiplataforma com mais de **2,5 milhões de chips já produzidos** e integrados de fábrica por marcas como a Rosa3D, a eSun, a Sunlu, a Landu, a Jamg He, a R3D, a Filforme, a Lotactree e a Smart3DPT e a Nanovia.
+**O TigerTag é o protocolo RFID de terceiros mais implementado do mundo** — e, hoje, a única solução aberta de bobina inteligente viável fornecida em escala: um protocolo aberto, padrão, agnóstico e multiplataforma com mais de **2,5 milhões de chips já produzidos** e integrados de fábrica por marcas como a Rosa3D, a eSun, a Sunlu, a Landu, a Jamg He, a R3D, a Filforme, a Lotactree, a Smart3DPT e a Nanovia.
 
 ## Integração na fábrica: dias, não meses
 

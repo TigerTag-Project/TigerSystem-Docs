@@ -1,5 +1,5 @@
 ---
-sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
+sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 

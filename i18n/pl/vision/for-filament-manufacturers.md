@@ -1,5 +1,5 @@
 ---
-sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
+sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,8 +22,8 @@ własnościowe, bez ogrodzonego ogrodu.
 i dziś jedyne realne otwarte rozwiązanie inteligentnej szpuli dostarczane w skali: otwarty,
 standardowy, niezależny od producenta, wieloplatformowy protokół z ponad
 **2,5 miliona wyprodukowanych chipów**, zintegrowanych w fabryce przez marki
-takie jak Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree i
-Smart3DPT oraz Nanovia.
+takie jak Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree,
+Smart3DPT i Nanovia.
 
 ## Integracja w fabryce: dni, nie miesiące
 
