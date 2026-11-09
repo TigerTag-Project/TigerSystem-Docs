@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -34,13 +34,20 @@ flowchart LR
 
 ## 原生 RFID 与桥接
 
-有些打印机能原生读取标签（读取它们自己的专有格式）；大多数
+有些打印机能原生读取标签——通常是它们自己的专有格式，偶尔是 TigerTag 本身；大多数
 则什么都读不到。桥接让打印机自身的能力变得无关紧要：
 
 | 路径 | 需要 | 适用于 |
 |---|---|---|
-| **原生 RFID** | 能读取该厂商锁定标签的打印机 | 仅限一个品牌 |
+| **原生 RFID——厂商标签** | 能读取该厂商锁定标签的打印机 | 仅限一个品牌 |
+| **原生 RFID——TigerTag** | 自身固件就能读取 TigerTag 的机器——很少见，目前都出自社区 | 所有品牌，中间无需应用 |
 | **智能手机桥接** | 任何支持 NFC 的手机 | **所有打印机**、所有品牌，甚至完全离线的机器 |
+
+中间这一行不是我们做的，而且是最近才有的。社区的扩展固件让
+[Snapmaker U1](../compatibility/snapmaker.md) 成为第一台在机器本身上读取 TigerTag 的打印机；
+而 **BT-AMS-C**——一款安装在 Bambu Lab AMS 上的四槽位读卡器——会把 TigerTag 数据直接发送到打印机的 BMCU
+（[第三方硬件](../compatibility/third-party-hardware.md)）。两者都仍是例外——这正是支持桥接的理由，
+而不是反对它的理由：桥接从来不必等待它们。
 
 借助桥接，耗材数据通过
 [Tiger Studio 的打印机集成](../compatibility/README.md)（目前已有六个品牌

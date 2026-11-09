@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -37,13 +37,24 @@ Bestand:
 
 ## Natives RFID oder die Brücke
 
-Manche Drucker lesen Tags nativ (ihr eigenes proprietäres Format); die meisten lesen
-gar nichts. Die Brücke macht die Fähigkeiten des Druckers irrelevant:
+Manche Drucker lesen Tags nativ – meist ihr eigenes proprietäres Format,
+gelegentlich TigerTag selbst; die meisten lesen gar nichts. Die Brücke macht die
+Fähigkeiten des Druckers irrelevant:
 
 | Weg | Voraussetzung | Funktioniert mit |
 |---|---|---|
-| **Natives RFID** | Ein Drucker, der den gesperrten Tag dieses Herstellers liest | Nur einer Marke |
+| **Natives RFID – Hersteller-Tag** | Ein Drucker, der den gesperrten Tag dieses Herstellers liest | Nur einer Marke |
+| **Natives RFID – TigerTag** | Eine Maschine, deren eigene Firmware TigerTag liest – selten und bisher von der Community gebaut | Jeder Marke, ohne App dazwischen |
 | **Smartphone-Brücke** | Ein beliebiges NFC-Handy | **Jedem Drucker**, jeder Marke, selbst ganz offline betriebenen Maschinen |
+
+Die mittlere Zeile stammt nicht von uns, und sie ist neu. Die erweiterte
+Firmware der Community macht den [Snapmaker U1](../compatibility/snapmaker.md) zum
+ersten Drucker, der einen TigerTag an der Maschine selbst liest; und der
+**BT-AMS-C**, ein Lesegerät mit vier Slots, das auf ein Bambu Lab AMS montiert
+wird, schickt TigerTag-Daten direkt an die BMCU des Druckers
+([Hardware von Drittanbietern](../compatibility/third-party-hardware.md)).
+Beide bleiben Ausnahmen – und das spricht für die Brücke, nicht gegen sie: Sie
+musste nie auf sie warten.
 
 Mit der Brücke erreichen die Filamentdaten den Drucker über die
 [Drucker-Integrationen von Tiger Studio](../compatibility/README.md) (sechs Marken

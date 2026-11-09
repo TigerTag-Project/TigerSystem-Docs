@@ -1,5 +1,5 @@
 ---
-sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
+sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -34,8 +34,8 @@ flowchart TB
  desde un navegador.
 - **Listas de deseos** — públicas y solo para amigos, ambas desplegadas.
 - **Códigos de amigo e invitaciones** — añadíos como amigos desde la web.
-- **Enlaces de lista pública** — comparte un inventario o una lista de deseos de solo
- lectura como `https://tigersystem.io/list/<token>`; quien la vea no necesita
+- **Enlaces de lista pública** — comparte una lista en solo lectura como
+ `https://tigersystem.io/wishlist/<token>`; quien la vea no necesita
  aplicación ni cuenta.
 - **Catálogo de materiales y base de datos de referencia** (`/materials`, `/database`) —
  explora el catálogo compartido con el que se resuelven todas las aplicaciones.
@@ -45,6 +45,39 @@ flowchart TB
  `/press`) — la historia B2B, indicaciones de integración, recursos de medios.
 - **Merchandising** (`/goodies`) — la gorra y el polo oficiales. Comprar uno es una de
  las formas de [apoyar el proyecto](../support.md).
+
+## Un enlace de lista pública, en la práctica
+
+Un enlace de lista pública es `https://tigersystem.io/wishlist/<token>`. Tres
+cosas que conviene saber antes de pegar uno en algún sitio:
+
+- **El token es toda la llave.** Cualquiera que tenga el enlace abre la lista:
+  sin cuenta, sin aplicación, sin nada que demostrar. Trátalo como una
+  contraseña que decidiste compartir: bien para una publicación en un foro o
+  para un amigo, no para una lista que no querrías ver copiada más allá.
+- **Hacer pública una lista es lo que crea el enlace.** En la aplicación, poner
+  una lista en *pública* genera su token y publica una copia de la lista;
+  volver a ponerla en privada borra esa copia y el token. Si la haces pública de
+  nuevo, recibe un token **nuevo**, así que un enlace repartido antes no
+  revive. TigerHub solo muestra lo que publica la aplicación.
+- **Solo lectura, y dice quién la compartió.** Quien la ve ve esa única lista
+  (sus elementos, y la ocasión o el mensaje si pusiste uno), nunca tu
+  inventario ni tus otras listas. La página sí muestra tu **nombre visible**,
+  tus **enlaces a redes sociales** y un botón *añadir como amigo* que lleva tu
+  **código de descubrimiento**.
+
+Un enlace es una de las dos formas de compartir; la otra es un amigo:
+
+| | Enlace de lista pública | Amigo |
+|---|---|---|
+| Quién lo ve | cualquiera con el enlace | una persona que aceptaste |
+| Necesita una cuenta | no | sí |
+| Cómo | hacer pública una lista | intercambiar códigos de descubrimiento |
+| Deshacer | hacer privada la lista | eliminar al amigo |
+
+La parte de los amigos se resume aquí solo para ponerla junto al enlace; las
+reglas de solicitud y eliminación, y su aplicación en el servidor, corresponden a
+[Inventario y sincronización en la nube](../concepts/inventory-and-cloud-sync.md).
 
 ## TigerHub no es la base de datos
 
@@ -59,7 +92,7 @@ mismos datos. TigerHub es la **superficie web** construida encima. Véase
 
 | Con | Cómo |
 |---|---|
-| Tiger Studio / Connect | Generar y revocar enlaces para compartir, enviar invitaciones de amistad |
+| Tiger Studio / Connect | Hacer una lista pública o privada (lo que crea o borra su enlace) y enviar invitaciones de amistad |
 | Firebase (base de datos de cuentas) | Origen de los datos publicados |
 | Visitantes | Navegador normal, sin necesidad de cuenta |
 

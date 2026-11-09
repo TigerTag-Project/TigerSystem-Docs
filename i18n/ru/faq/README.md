@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -109,8 +109,8 @@ TigerTag или нет. Идентичность филамента вы зап�
 **Какие бренды филамента поставляют TigerTag с завода?**
 Выпущено более 2,5 миллиона чипов — это делает TigerTag **самым распространённым
 сторонним протоколом RFID в мире**; большинство встроены на заводе сторонними
-брендами филамента — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — а Filforme,
-Nanovia и другие находятся в процессе интеграции.
+брендами филамента — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme,
+Lotactree, Smart3DPT, Nanovia, — а другие находятся в процессе интеграции.
 
 **Как чип попадает на катушку?**
 Он клеится — и на катушке **их два, на противоположных сторонах**. Это
@@ -357,7 +357,9 @@ TigerTag, а любое другое принимается и поощряет�
 [Spooly Tracker](https://spoolytracker.com/) (платформа инвентаря, веб +
 мобильное) распознаёт катушки по TigerTag; а
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-делает U1 **первым принтером, который нативно читает TigerTag**. См.
+делает U1 **первым принтером, который нативно читает TigerTag**, а
+[COSMOS](https://github.com/OpenCentauri/cosmos) делает то же самое на Elegoo Centauri Carbon,
+с помощью NFC-считывателя, встроенного в её Canvas. См.
 [сторонние интеграции](../developers/integrations.md).
 
 **Могу ли я создать собственное приложение на TigerTag?**
@@ -388,7 +390,7 @@ DIY: простого ESP32 с модулем считывателя PN532 ил�
 Быстро: производственная линия может заработать с TigerTag **всего за 5 дней**,
 при очень низких затратах, с записью каждого чипа **примерно за 1 секунду** —
 подтверждено более чем 2,5 миллионами чипов, уже поставленных
-Rosa3D, eSun, Sunlu, Landu, Jamg He и R3D. И каждый присоединившийся бренд
+Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree и Smart3DPT. И каждый присоединившийся бренд
 усиливает общий довод для производителей принтеров читать TigerTag нативно.
 Прочитайте
 [Для производителей филамента](../vision/for-filament-manufacturers.md), затем

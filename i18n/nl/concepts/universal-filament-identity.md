@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -46,7 +46,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** is het protocol *vóór* de chip: dezelfde identiteit, digitaal
@@ -80,6 +80,31 @@ alle vier de toestanden reizen als bestanden: het
 [**`.ttag`-uitwisselingsformaat**](../developers/ttag-format.md) bevat een of
 meer inventarismaterialen — TigerData, TigerData+, TigerTag of TigerTag+ — op een USB-
 stick, in een e-mail, tussen tools.
+
+## Promotie: van een record naar een chip
+
+Een spoel *promoveren* is de stap van links in het diagram naar rechts: een
+bestaand TigerData- of TigerData+-record wordt op een lege NTAG-chip geschreven,
+en de spoel draagt zijn identiteit voortaan zelf, offline.
+
+Wat eruit komt, hangt alleen af van wat erin ging:
+
+| Je promoveert… | Je krijgt… | Omdat |
+|---|---|---|
+| een **TigerData** — waarden die de eigenaar koos | een **TigerTag** | er nu een fysieke UID aan de identiteit gekoppeld is |
+| een **TigerData+** — een echt catalogusproduct | een **TigerTag+** | de chip nu het product-ID uit de catalogus draagt: *nog steeds geïdentificeerd, nog steeds niet ondertekend* |
+
+Die tweede rij is de hele `+`-woordenschat in één regel. Promotie verandert de
+*toestand* — digitaal naar chip — en nooit de betekenis van de `+`. Alleen de
+handtekening van een gecertificeerde fabrikant maakt van een chip een
+[TigerTag+ Certified](../products/tigertag-plus.md), en geen enkele promotie
+levert er een op.
+
+Promotie is ook geen deur die maar één kant op gaat. Chips worden nooit tegen
+schrijven vergrendeld: een gepromoveerde chip kan vanuit
+[Tiger NFC Connect](../products/tigertag-connect.md) of Tiger Studio worden
+gewist en opnieuw beschreven ([de TigerTag-chip](./tigertag-chip.md)). De
+identiteit is het record; de chip is alleen de plek waar ze nu woont.
 
 ---
 

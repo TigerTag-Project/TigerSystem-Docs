@@ -1,5 +1,5 @@
 ---
-sourceHash: a2788a5364e611177c9b1b011d762345b26e5a8fd204e75a6b2b8beed634955c
+sourceHash: bbc5e9975e29d36151f72d68e741b2688c5f2a46503d71f8f73aae13a8b74ce6
 sourcePath: docs/compatibility/opentag3d.md
 ---
 
@@ -69,6 +69,6 @@ einnehmen, aus demselben Grund: Die Spule gehört dem, der sie gekauft hat.
 
 ---
 
-**◀ Zurück:** [OpenSpool](./openspool.md) · **▲ [Dokumentationsindex](../../README.md)** · **Weiter ▶** [Entwickler](../developers/README.md)
+**◀ Zurück:** [OpenSpool](./openspool.md) · **▲ [Dokumentationsindex](../../README.md)** · **Weiter ▶** [Spulen-Tag-Formate im Vergleich](./tag-formats.md)
 
 **Siehe auch:** [Die Web API](../developers/web-api.md), [TigerTag+ Certified](../products/tigertag-plus-certified.md)

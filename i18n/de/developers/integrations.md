@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f9124180c40a232c7aab51fda782a891af83baafbcf03c27d697b0ccfcff594
+sourceHash: f283703d11787d5928096fe85013ad132ac596d2e2898ee65ac2adbfbb60d0ef
 sourcePath: docs/developers/integrations.md
 ---
 
@@ -23,6 +23,15 @@ Kamera-Streaming, Metriken … und RFID-Extras). **Mit ihr liest der Snapmaker U
 TigerTags nativ – er ist damit der erste Drucker, der TigerTag direkt an der
 Maschine liest.** Genau die Zukunft, auf die das gemeinsame Spiel zielt, durch die
 Community früher eingetroffen.
+
+## COSMOS – Firmware für den Elegoo Centauri Carbon (OpenCentauri)
+
+**[github.com/OpenCentauri/cosmos](https://github.com/OpenCentauri/cosmos)**
+– eine unabhängige Community-Firmware (GPL-3.0) für den Elegoo Centauri Carbon
+(Mainline-Linux, gebaut mit Yocto, Klipper / Kalico). Ihr Canvas-RFID-Modul
+steuert das **im Canvas eingebaute NFC-Lesegerät**, die Mehrfarbeneinheit des
+Druckers, und dekodiert die Chips mit OpenRFID: **Der Centauri Carbon liest
+TigerTags mit seinem eigenen Lesegerät**, ohne zusätzliche Hardware.
 
 ## Spooly Tracker
 

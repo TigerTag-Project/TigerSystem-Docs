@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -11,7 +11,7 @@ sourcePath: docs/vision/for-filament-manufacturers.md
 
 As impressoras esperam cada vez mais filamento inteligente: sistemas da classe AMS, deteção de material por slot, definições automáticas. Todos os fabricantes de impressoras respondem com uma **etiqueta fechada, presa às suas máquinas, a alimentar a sua nuvem** — zero interoperabilidade, zero valor para a sua marca fora das paredes deles. E cada etiqueta bloqueada serve um segundo propósito: **encaminhar os seus clientes para o filamento do próprio fabricante da impressora.** O TigerTag foi criado em 2023 precisamente para que as marcas de terceiros tivessem uma resposta melhor — bobinas mais inteligentes do que as proprietárias, sem o jardim murado.
 
-**O TigerTag é o protocolo RFID de terceiros mais implementado do mundo** — e, hoje, a única solução aberta de bobina inteligente viável fornecida em escala: um protocolo aberto, padrão, agnóstico e multiplataforma com mais de **2,5 milhões de chips já produzidos** e integrados de fábrica por marcas como a Rosa3D, a eSun, a Sunlu, a Landu, a Jamg He e a R3D — com a Filforme e a Nanovia em integração.
+**O TigerTag é o protocolo RFID de terceiros mais implementado do mundo** — e, hoje, a única solução aberta de bobina inteligente viável fornecida em escala: um protocolo aberto, padrão, agnóstico e multiplataforma com mais de **2,5 milhões de chips já produzidos** e integrados de fábrica por marcas como a Rosa3D, a eSun, a Sunlu, a Landu, a Jamg He, a R3D, a Filforme, a Lotactree e a Smart3DPT e a Nanovia.
 
 ## Integração na fábrica: dias, não meses
 
@@ -51,9 +51,9 @@ As marcas abaixo tornaram a bobina aberta real — cada uma no seu nível de com
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…e mais em integração — [Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech) e outras a caminho.
+…e também na linha de produção — [Nanovia](https://nanovia.tech) — com outras a caminho.
 
 **Quer o seu logótipo nesta escada — e maior?** Uma linha de produção executa o TigerTag em apenas 5 dias: [tigertag@tigertag.io](mailto:tigertag@tigertag.io).
 

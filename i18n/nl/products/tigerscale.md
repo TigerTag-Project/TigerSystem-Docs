@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -158,6 +158,12 @@ De volledige stuklijst met kosten staat in de
 **Geen COM-poort gedetecteerd voor de ESP32-S3 in de [webinstallatie](https://tigertag-project.github.io/Tiger-Scale-V3/)?**
 
 Mogelijk ontbreekt er een driver voor je systeem. [Volg de installatiehandleiding voor de driver](../tutorials/tigerscale-serial-port-driver.md).
+
+**Een gewicht dat vastzit op 0 g of negatief is, een verlopende meting, lezers
+die niet worden gedetecteerd, wifi kwijt na opnieuw flashen?**
+
+De eigen repository van de weegschaal houdt de volledige lijst bij, symptoom per symptoom:
+[probleemoplossing voor Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## Aan jou om te maken en te verkopen
 

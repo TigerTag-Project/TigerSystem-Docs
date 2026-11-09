@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -92,8 +92,8 @@ Onestamente: costruire tutto questo da soli non è mai stato il piano iniziale. 
 prodotti più di 2,5 milioni di chip NFC TigerTag — il che fa di TigerTag il
 protocollo RFID di terze parti più diffuso al mondo** — la maggior parte
 integrati in fabbrica da marchi di filamento terzi (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — con Filforme, Nanovia e altri in corso di
-integrazione), più una quota minore
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e
+altri in corso di integrazione), più una quota minore
 acquistata da maker per taggare le bobine a casa. Pensavamo ingenuamente che la community
 avrebbe immaginato gli usi da sola: un'identità NFC aperta e documentata su ogni
 bobina sembrava un ovvio terreno di gioco.
@@ -111,7 +111,8 @@ E sta cominciando ad accadere:
 [Spooly Tracker](https://spoolytracker.com/) ha costruito su di essi la propria
 identificazione delle bobine, e il
 [firmware esteso della community](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-della Snapmaker U1 li legge **in modo nativo sulla stampante stessa** — vedi
+della Snapmaker U1 li legge **in modo nativo sulla stampante stessa**, come fa
+[COSMOS](https://github.com/OpenCentauri/cosmos) sulla Elegoo Centauri Carbon — vedi
 [integrazioni di terze parti](../developers/integrations.md).
 
 ## Una sandbox, di proposito

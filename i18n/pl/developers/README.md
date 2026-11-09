@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -79,6 +79,7 @@ poziomy certyfikacji i zasoby marki:
 | Odczytywać/zapisywać chipy TigerTag | [SDK](./sdks.md) |
 | Wymieniać magazyny jako pliki | [Format `.ttag`](./ttag-format.md) |
 | Pokazywać kolor szpuli tak, jak robi to każda inna aplikacja | [Próbnik materiału](./material-swatch.md) — oraz jego [referencyjny renderer na żywo](./material-swatch-playground.html) |
+| Nadać identyfikator szpuli bez chipa, wydrukować etykietę QR szpuli lub ją odczytać | [Identyfikatory szpul i linki QR](./spool-ids-and-qr-links.md) |
 | Synchronizować z magazynem użytkownika w chmurze | [API konta i integracje](./account-api.md) |
 | Zrozumieć ładunek chipa | [Chip TigerTag](../concepts/tigertag-chip.md) |
 

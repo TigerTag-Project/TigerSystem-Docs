@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -37,6 +37,7 @@ Dois detalhes que convém ter exatamente certos. A afirmação de compatibilidad
 | Ler/escrever chips TigerTag | [SDKs](./sdks.md) |
 | Trocar inventários como ficheiros | [O formato `.ttag`](./ttag-format.md) |
 | Mostrar a cor de uma bobina como todas as outras aplicações | [A amostra de material](./material-swatch.md) — e o seu [renderizador de referência em direto](./material-swatch-playground.html) |
+| Gerar o id de uma bobina sem chip, imprimir a etiqueta QR de uma bobina ou voltar a lê-la | [Ids de bobina e ligações QR](./spool-ids-and-qr-links.md) |
 | Sincronizar com o inventário do utilizador na nuvem | [API de conta e integração](./account-api.md) |
 | Compreender o payload do chip | [O chip TigerTag](../concepts/tigertag-chip.md) |
 

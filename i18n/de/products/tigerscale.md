@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -157,6 +157,12 @@ Die vollständige Stückliste mit Kosten liegt im
 **Im [Web-Installer](https://tigertag-project.github.io/Tiger-Scale-V3/) wird kein COM-Port für den ESP32-S3 erkannt?**
 
 Möglicherweise fehlt ein Treiber für dein System. [Folge der Anleitung zur Treiberinstallation](../tutorials/tigerscale-serial-port-driver.md).
+
+**Ein Gewicht, das bei 0 g oder im Minus hängt, ein driftender Messwert, nicht
+erkannte Lesegeräte, WLAN nach einem Neuflashen weg?**
+
+Das Repository der Waage führt die vollständige Liste, Symptom für Symptom:
+[Fehlerbehebung für Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## Zum Selbermachen und Verkaufen
 

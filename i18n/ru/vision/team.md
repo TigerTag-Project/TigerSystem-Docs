@@ -1,5 +1,5 @@
 ---
-sourceHash: 8d781b9acd818ce14d286d503bd6329dd7e9b7e3279e4efc05b290f6845d8591
+sourceHash: 62f0dbe3c583f7f4f9624b611932c6626178466d95056f1c32b259c965a35f14
 sourcePath: docs/vision/team.md
 ---
 
@@ -37,8 +37,8 @@ Benoit запустил TigerTag в 2023 году, сразу после выс�
 ## И все, кто борется рядом
 
 - **Заводы-партнёры**, выбравшие открытый чип вместо закрытого сада —
- Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — а Filforme, Nanovia и
- другие находятся в процессе интеграции.
+ Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT,
+ Nanovia, — а другие находятся в процессе интеграции.
 - **Независимые разработчики**, подхватившие протокол самостоятельно —
  OpenRFID, Spooly Tracker, прошивка сообщества для Snapmaker U1
  ([интеграции сторонних разработчиков](../developers/integrations.md)).

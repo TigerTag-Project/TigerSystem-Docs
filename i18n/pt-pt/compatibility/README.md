@@ -1,5 +1,5 @@
 ---
-sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
+sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -20,11 +20,15 @@ Como o TigerSystem funciona com cada ecossistema de impressoras. Dois eixos inde
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Ativa** — HTTP + IFS | — (as máquinas não têm leitor RFID) | — | O TigerTag acrescenta-lhe NFC, sem custos |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Ativa** — MQTTS LAN + nuvem, ACE | Mifare Ultralight | Nenhum | Especificação documentada |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Ativa** — WebSocket Moonraker + 4 slots | Mifare Classic 1K | HKDF + assinatura RSA-2048 | Especificação documentada |
-| [Klipper](./klipper.md) | Ainda não (existem trabalhos preparatórios) | n/a | n/a | n/a |
+| [Klipper](./klipper.md) | **Ativa (beta)** — Moonraker + Happy Hare / AFC | n/a | n/a | n/a |
 | [OpenSpool](./openspool.md) | n/a (norma de etiquetas, não uma impressora) | NFC Tipo 2, NDEF JSON | Nenhum — norma aberta | Especificação documentada |
 | Qidi | Não integrada | Mifare Classic 1K | Chave predefinida | [Especificação documentada](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
 > **Nota:** as fichas RFID por fabricante (especificações de descodificação só de leitura, derivadas do projeto [OpenRFID](https://github.com/suchmememanyskill/OpenRFID)) são mantidas no repositório do Tiger Studio em [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors) — estão aqui ligadas, não duplicadas.
+
+## Formatos de etiqueta lado a lado
+
+TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab e Creality CFS, número a número e com fontes: **[Formatos de etiqueta de bobina comparados](./tag-formats.md)**.
 
 ## Para além das impressoras
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -76,6 +76,7 @@ e ativos da marca: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-R
 | Ler/gravar chips TigerTag | [SDKs](./sdks.md) |
 | Trocar inventários como arquivos | [O formato `.ttag`](./ttag-format.md) |
 | Mostrar a cor de uma bobina como todos os outros aplicativos fazem | [O swatch do material](./material-swatch.md) — e o seu [renderizador de referência ao vivo](./material-swatch-playground.html) |
+| Gerar o id de uma bobina sem chip, imprimir a etiqueta QR de uma bobina ou lê-la de volta | [Ids de bobina e links QR](./spool-ids-and-qr-links.md) |
 | Sincronizar com o inventário do usuário na nuvem | [API da conta e integração](./account-api.md) |
 | Entender o payload do chip | [O chip TigerTag](../concepts/tigertag-chip.md) |
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f9124180c40a232c7aab51fda782a891af83baafbcf03c27d697b0ccfcff594
+sourceHash: f283703d11787d5928096fe85013ad132ac596d2e2898ee65ac2adbfbb60d0ef
 sourcePath: docs/developers/integrations.md
 ---
 
@@ -14,6 +14,10 @@ O objetivo de um protocolo aberto é aquilo que *outros* constroem com ele. Já 
 ## Snapmaker U1 Extended Firmware (Paxx)
 
 **[github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)** — um firmware comunitário independente, GPL-3.0, para a Snapmaker U1 (SSH, streaming da câmara, métricas… e RFID). **Com ele, a Snapmaker U1 lê TigerTags nativamente — tornando-se a primeira impressora a ler TigerTag na própria máquina.** Exatamente o futuro a que visa a jogada coletiva, chegado mais cedo graças à comunidade.
+
+## COSMOS — firmware para a Elegoo Centauri Carbon (OpenCentauri)
+
+**[github.com/OpenCentauri/cosmos](https://github.com/OpenCentauri/cosmos)** — um firmware comunitário independente, GPL-3.0, para a Elegoo Centauri Carbon (Linux mainline construído com Yocto, Klipper / Kalico). O seu módulo RFID do Canvas controla o **leitor NFC integrado no Canvas**, a unidade multicor da impressora, e descodifica os chips com o OpenRFID: **a Centauri Carbon lê TigerTags com o seu próprio leitor**, sem hardware adicional.
 
 ## Spooly Tracker
 

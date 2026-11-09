@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,8 +22,8 @@ własnościowe, bez ogrodzonego ogrodu.
 i dziś jedyne realne otwarte rozwiązanie inteligentnej szpuli dostarczane w skali: otwarty,
 standardowy, niezależny od producenta, wieloplatformowy protokół z ponad
 **2,5 miliona wyprodukowanych chipów**, zintegrowanych w fabryce przez marki
-takie jak Rosa3D, eSun, Sunlu, Landu, Jamg He i R3D — a Filforme i
-Nanovia są w trakcie integracji.
+takie jak Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree i
+Smart3DPT oraz Nanovia.
 
 ## Integracja w fabryce: dni, nie miesiące
 
@@ -90,11 +90,10 @@ jest Gold: zwiększyć wolumeny i uczynić zobowiązanie publicznym.
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…a kolejne są w trakcie integracji —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech) i
-inne w drodze.
+…a także na linii produkcyjnej —
+[Nanovia](https://nanovia.tech) — z kolejnymi w drodze.
 
 **Chcesz swoje logo na tej drabinie — i większe?** Linia produkcyjna uruchamia
 TigerTag nawet w 5 dni:

@@ -1,5 +1,5 @@
 ---
-sourceHash: 551d534fd3d554ae4db42c43701bf66647afcbe1ff812f7264bb1ff79aff43a8
+sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -150,7 +150,8 @@ http(s)-link plakken, of slepen en neerzetten ergens op het venster.
 |---|---|---|
 | Doel | Hetzelfde account / een echt herstel | De materialen van iemand anders overnemen |
 | Record-id's | Behouden — **letterlijk** geschreven onder de oorspronkelijke id's | **Nieuwe** id's — elk record wordt een nieuwe `TigerData_`-spoel zonder chip, eigendom van de importeur |
-| TigerTag+-status | Behouden — elke `rfidList`-back-up hersteld | Vervalt — de kopie heeft geen chip, dus `id_product` is **niet ingesteld**, en juist daardoor is het geen TigerTag+; `id_tigertag` verwijderd en `rfidBackup:false` volgen uit het ontbreken van een chip; back-ups verworpen (een ondertekende dump is gebonden aan een chip die de importeur niet heeft) |
+| Chipstatus | Behouden — elke `rfidList`-back-up hersteld | Vervalt — de kopie heeft geen chip: `id_tigertag` verwijderd, `rfidBackup:false`, back-ups verworpen (een ondertekende dump is gebonden aan een chip die de importeur niet heeft) |
+| Product | Behouden | **Behouden** als `id_product` een echt catalogus-id is (niet `0`, niet `0xFFFFFFFF`), zodat een TigerData+ een TigerData+ blijft en een TigerTag+ aankomt als de TigerData+ van hetzelfde product; al het andere wordt op `0xFFFFFFFF` (niet ingesteld) gezet. Vóór Tiger Studio v2.51.1 was het altijd niet ingesteld, zodat een TigerData+ aankwam als een gewone TigerData |
 | Gewicht | Zoals vastgelegd | Teruggezet naar volle capaciteit |
 | Tweelingen | Zoals vastgelegd | `twin_tag_uid` opnieuw toegewezen via de nieuwe id's |
 

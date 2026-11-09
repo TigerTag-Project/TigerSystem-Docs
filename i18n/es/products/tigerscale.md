@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -160,6 +160,12 @@ La lista de materiales completa y con costes está en el
 **¿No se detecta ningún puerto COM para el ESP32-S3 en el [instalador web](https://tigertag-project.github.io/Tiger-Scale-V3/)?**
 
 Puede que falte un controlador para tu sistema. [Sigue la guía de instalación del controlador](../tutorials/tigerscale-serial-port-driver.md).
+
+**¿Un peso atascado en 0 g o negativo, una lectura que deriva, lectores no
+detectados, el WiFi perdido tras volver a flashear?**
+
+El propio repositorio de la báscula mantiene la lista completa, síntoma por síntoma:
+[solución de problemas de Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## Tuya para fabricar y vender
 

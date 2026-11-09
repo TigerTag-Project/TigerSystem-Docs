@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,8 +22,8 @@ quelle proprietarie, senza il giardino recintato.
 e, oggi, l'unica soluzione aperta di bobina intelligente praticabile e distribuita su larga scala: un
 protocollo aperto, standard, agnostico e multipiattaforma, con più di
 **2,5 milioni di chip già prodotti** e integrati in fabbrica da marchi
-come Rosa3D, eSun, Sunlu, Landu, Jamg He e R3D — con Filforme e
-Nanovia in corso di integrazione.
+come Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree e
+Smart3DPT e Nanovia.
 
 ## Integrazione in fabbrica: giorni, non mesi
 
@@ -90,11 +90,10 @@ i loro clienti possono comprare oggi bobine dotate di TigerTag. Il gradino succe
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…e altri in corso di integrazione —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), e
-altri in arrivo.
+…e anche sulla linea di produzione —
+[Nanovia](https://nanovia.tech) — con altri in arrivo.
 
 **Vuoi il tuo logo su questa scala — e più grande?** Una linea di produzione adotta
 TigerTag in appena 5 giorni:

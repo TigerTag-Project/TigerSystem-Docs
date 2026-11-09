@@ -1,5 +1,5 @@
 ---
-sourceHash: 76ef763ccd1b41e1b5203fc1f2abe006e5e2b492e129510932ab728b6a57ae4e
+sourceHash: 386497c42994ff3a60f94f96843d530418f6734375457354bc08b66cd6927aa9
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -98,8 +98,8 @@ flowchart LR
 разрешения. См. [TRADEMARK.md](../../TRADEMARK.md).
 
 Произведено более **2,5 миллиона чипов TigerTag** — большинство встроено
-на заводе брендами филамента (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —
-а Filforme, Nanovia и другие находятся в процессе интеграции). Все они —
+на заводе брендами филамента (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D,
+Filforme, Lotactree, Smart3DPT, Nanovia, — а другие находятся в процессе интеграции). Все они —
 [сертифицированные партнёры](../certified-partners.md); эта страница — реестр и
 единственный авторитетный способ проверить, что знак на коробке легитимен.
 

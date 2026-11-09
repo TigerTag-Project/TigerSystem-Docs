@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -42,7 +42,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** 是*芯片之前*的协议：同样的身份，以数字形式存储——
@@ -68,6 +68,26 @@ TigerData 可以永远保持数字形式，也可以在你准备好时**原子�
 （Tiger Studio 一步即可完成）。并且这四种状态都能以文件形式流转：
 [**`.ttag` 交换格式**](../developers/ttag-format.md)可以在 U 盘上、邮件中、工具之间，
 携带一个或多个库存材料——TigerData、TigerData+、TigerTag 或 TigerTag+。
+
+## 升级：从记录到芯片
+
+*升级*一卷线轴，就是在图中从左走到右：把一条现有的 TigerData 或 TigerData+ 记录写入一枚空白
+NTAG 芯片，从此线轴自己携带自己的身份，离线可用。
+
+得到什么，只取决于放进去的是什么：
+
+| 你升级的是… | 你得到… | 因为 |
+|---|---|---|
+| 一个 **TigerData**——由其主人自选的数值 | 一个 **TigerTag** | 现在有一个物理 UID 与该身份关联 |
+| 一个 **TigerData+**——一个真实的产品库产品 | 一个 **TigerTag+** | 芯片现在携带产品库的产品 ID：*仍然是已识别的，仍然未签名* |
+
+第二行就是整个 `+` 词汇的一句话概括。升级改变的是*状态*——从数字到芯片——而绝不改变 `+` 的含义。
+只有认证制造商的签名才能让一枚芯片成为 [TigerTag+ Certified](../products/tigertag-plus.md)，
+任何升级都不会产生它。
+
+升级也不是一扇单向门。芯片从不写锁定：升级后的芯片可以在
+[Tiger NFC Connect](../products/tigertag-connect.md) 或 Tiger Studio 中擦除并重新写入
+（[TigerTag 芯片](./tigertag-chip.md)）。身份就是那条记录；芯片只是它此刻所在的地方。
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 551d534fd3d554ae4db42c43701bf66647afcbe1ff812f7264bb1ff79aff43a8
+sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -150,7 +150,8 @@ link http(s) ou arraste e solte em qualquer lugar da janela.
 |---|---|---|
 | Intenção | Mesma conta / uma restauração genuína | Adotar materiais de outra pessoa |
 | Ids dos registros | Mantidos — gravados **literalmente** sob os ids originais | Ids **novos** — cada registro vira uma nova bobina `TigerData_` sem chip, de propriedade de quem importa |
-| Situação TigerTag+ | Mantida — cada backup de `rfidList` é restaurado | Descartada — a cópia não tem chip, então `id_product` fica **não definido**, o que faz com que não seja um TigerTag+; `id_tigertag` removido e `rfidBackup:false` decorrem de não haver chip; backups descartados (um dump assinado está ligado a um chip que quem importa não possui) |
+| Situação do chip | Mantida — cada backup de `rfidList` é restaurado | Descartada — a cópia não tem chip: `id_tigertag` removido, `rfidBackup:false`, backups descartados (um dump assinado está ligado a um chip que quem importa não possui) |
+| Produto | Mantido | **Mantido** quando `id_product` é um id real do catálogo (nem `0`, nem `0xFFFFFFFF`), de modo que um TigerData+ continua um TigerData+ e um TigerTag+ chega como o TigerData+ do mesmo produto; qualquer outro valor é definido como `0xFFFFFFFF` (não definido). Antes do Tiger Studio v2.51.1 ele ficava sempre não definido, então um TigerData+ chegava como um TigerData simples |
 | Peso | Como registrado | Redefinido para a capacidade total |
 | Gêmeos | Como registrado | `twin_tag_uid` remapeado pelos novos ids |
 

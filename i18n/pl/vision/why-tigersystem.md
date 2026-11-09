@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -91,8 +91,8 @@ Szczerze: zbudowanie tego wszystkiego samemu nigdy nie było początkowym planem
 ponad 2,5 miliona chipów NFC TigerTag — co czyni TigerTag
 najbardziej rozpowszechnionym protokołem RFID firm trzecich na świecie** — większość z nich
 zintegrowana w fabryce przez marki filamentu z zewnątrz (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — a Filforme, Nanovia i kolejne są w trakcie
-integracji), plus mniejszy udział
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — a
+kolejne są w trakcie integracji), plus mniejszy udział
 kupowany przez twórców do oznaczania szpul w domu. Naiwnie zakładaliśmy, że społeczność
 sama wymyśli zastosowania: otwarta, udokumentowana tożsamość NFC na każdej
 szpuli wydawała się oczywistym placem zabaw.
@@ -109,7 +109,8 @@ I to się zaczyna dziać:
 [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) odczytuje TigerTagi,
 [Spooly Tracker](https://spoolytracker.com/) oparł na nich swoją identyfikację szpul,
 a [rozszerzony firmware społeczności](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-Snapmakera U1 odczytuje je **natywnie na samej drukarce** — zob.
+Snapmakera U1 odczytuje je **natywnie na samej drukarce**, tak jak
+[COSMOS](https://github.com/OpenCentauri/cosmos) na Elegoo Centauri Carbon — zob.
 [integracje firm trzecich](../developers/integrations.md).
 
 ## Piaskownica z założenia

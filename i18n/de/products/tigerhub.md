@@ -1,5 +1,5 @@
 ---
-sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
+sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -34,8 +34,8 @@ flowchart TB
  TigerSystem-Konto an.
 - **Wunschlisten** – öffentliche und nur für Freunde, beide im Einsatz.
 - **Freundescodes & Einladungen** – füge dich gegenseitig vom Web aus als Freunde hinzu.
-- **Öffentliche Listenlinks** – teile einen schreibgeschützten Bestand oder eine
- Wunschliste als `https://tigersystem.io/list/<token>`; der Betrachter braucht keine App
+- **Öffentliche Listenlinks** – teile eine Liste schreibgeschützt als
+ `https://tigersystem.io/wishlist/<token>`; der Betrachter braucht keine App
  und kein Konto.
 - **Materialkatalog & Referenzdatenbank** (`/materials`, `/database`) – durchstöbere den
  gemeinsamen Katalog, gegen den jede App auflöst.
@@ -45,6 +45,41 @@ flowchart TB
  die B2B-Geschichte, Integrationshinweise, Medien-Assets.
 - **Goodies** (`/goodies`) – die offizielle Kappe und das Polo. Eines zu kaufen ist
  eine der Möglichkeiten, das [Projekt zu unterstützen](../support.md).
+
+## Ein öffentlicher Listenlink in der Praxis
+
+Ein öffentlicher Listenlink ist `https://tigersystem.io/wishlist/<token>`. Drei
+Dinge solltest du wissen, bevor du einen irgendwo einfügst:
+
+- **Das Token ist der ganze Schlüssel.** Wer den Link hat, öffnet die Liste –
+  kein Konto, keine App, nichts nachzuweisen. Behandle ihn wie ein Passwort,
+  das du bewusst teilst: gut für einen Forenbeitrag oder einen Freund, nicht
+  für eine Liste, bei der es dich stören würde, wenn sie weiterkopiert wird.
+- **Eine Liste öffentlich zu machen, erzeugt den Link.** Wenn du eine Liste in
+  der App auf *öffentlich* stellst, wird ihr Token erzeugt und eine Kopie der
+  Liste veröffentlicht; stellst du sie wieder auf privat, werden diese Kopie
+  und das Token gelöscht. Machst du sie wieder öffentlich, erhält sie ein
+  **neues** Token, ein früher weitergegebener Link wird also nicht wieder
+  lebendig. TigerHub zeigt nur an, was die App veröffentlicht.
+- **Schreibgeschützt, und sie zeigt, wer sie geteilt hat.** Der Betrachter
+  sieht diese eine Liste – ihre Einträge und den Anlass oder die Nachricht,
+  falls du eine festgelegt hast –, nie deinen Bestand oder deine anderen
+  Listen. Die Seite zeigt allerdings deinen **Anzeigenamen**, deine
+  **Social-Media-Links** und einen Button *als Freund hinzufügen*, der deinen
+  **Erkennungscode** enthält.
+
+Ein Link ist eine von zwei Arten zu teilen; die andere ist ein Freund:
+
+| | Öffentlicher Listenlink | Freund |
+|---|---|---|
+| Wer sieht sie | jeder mit dem Link | eine Person, die du angenommen hast |
+| Braucht ein Konto | nein | ja |
+| Wie | eine Liste öffentlich machen | Erkennungscodes austauschen |
+| Rückgängig machen | die Liste privat machen | den Freund entfernen |
+
+Die Seite der Freunde ist hier nur zusammengefasst, um neben dem Link zu
+stehen; die Regeln für Anfragen und Entfernen und ihre serverseitige
+Durchsetzung gehören zu [Bestand & Cloud-Sync](../concepts/inventory-and-cloud-sync.md).
 
 ## TigerHub ist nicht die Datenbank
 
@@ -59,7 +94,7 @@ und das TigerSystem-Konto auf denselben Daten zusammenarbeiten. TigerHub ist die
 
 | Mit | Wie |
 |---|---|
-| Tiger Studio / Connect | Freigabelinks erzeugen und widerrufen, Freundeseinladungen senden |
+| Tiger Studio / Connect | Eine Liste öffentlich oder privat machen – was ihren Link erzeugt oder löscht – und Freundeseinladungen senden |
 | Firebase (Konto-Datenbank) | Quelle der veröffentlichten Daten |
 | Besucher | Normaler Browser, kein Konto nötig |
 

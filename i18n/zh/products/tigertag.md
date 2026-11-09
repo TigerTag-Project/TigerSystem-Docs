@@ -1,5 +1,5 @@
 ---
-sourceHash: 76ef763ccd1b41e1b5203fc1f2abe006e5e2b492e129510932ab728b6a57ae4e
+sourceHash: 386497c42994ff3a60f94f96843d530418f6734375457354bc08b66cd6927aa9
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -88,7 +88,7 @@ flowchart LR
 
 最后这一条区分就是整个商标政策，而且它比看上去要窄。说你的产品*能与* TigerTag 对话，是关于你产品的一个事实，展示标志来说明这一点是免费的。把标记——标志或名称——放在任何格式的芯片**上**，则是在声明**是谁制造的**——它不再表示“这能配合 TigerTag 使用”，而是开始表示“这*就是* TigerTag”。只有第二种用法才需要书面授权。见 [TRADEMARK.md](../../TRADEMARK.md)。
 
-已生产超过 **250 万枚 TigerTag 芯片**——大多数由耗材品牌在工厂集成（Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D——Filforme、Nanovia 等也正在集成）。它们全部都是[认证合作伙伴](../certified-partners.md)；该页面就是登记册，也是核实包装盒上的标记是否合法的唯一权威方式。
+已生产超过 **250 万枚 TigerTag 芯片**——大多数由耗材品牌在工厂集成（Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D、Filforme、Lotactree、Smart3DPT、Nanovia——还有更多正在集成）。它们全部都是[认证合作伙伴](../certified-partners.md)；该页面就是登记册，也是核实包装盒上的标记是否合法的唯一权威方式。
 
 || | |
 |---|---|---|

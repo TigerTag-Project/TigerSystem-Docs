@@ -1,5 +1,5 @@
 ---
-sourceHash: 8d781b9acd818ce14d286d503bd6329dd7e9b7e3279e4efc05b290f6845d8591
+sourceHash: 62f0dbe3c583f7f4f9624b611932c6626178466d95056f1c32b259c965a35f14
 sourcePath: docs/vision/team.md
 ---
 
@@ -36,8 +36,8 @@ integrowania TigerTag w ich szpulach.
 ## I wszyscy, którzy walczą u naszego boku
 
 - **Partnerzy fabryczni**, którzy wybrali otwarty chip zamiast zamkniętego ogrodu —
- Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — a Filforme, Nanovia i
- kolejni są w trakcie integracji.
+ Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT,
+ Nanovia — a kolejni są w trakcie integracji.
 - **Niezależni twórcy**, którzy sami przejęli protokół —
  OpenRFID, Spooly Tracker, społecznościowy firmware Snapmakera U1
  ([integracje zewnętrzne](../developers/integrations.md)).

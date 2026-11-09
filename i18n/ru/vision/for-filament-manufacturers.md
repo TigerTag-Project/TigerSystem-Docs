@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,8 +22,8 @@ sourcePath: docs/vision/for-filament-manufacturers.md
 и сегодня единственное жизнеспособное открытое решение для умной катушки, поставляемое в больших масштабах: открытый,
 стандартный, агностичный, кросс-платформенный протокол, по которому уже произведено более
 **2,5 миллиона чипов**, встроенных на заводе такими брендами,
-как Rosa3D, eSun, Sunlu, Landu, Jamg He и R3D — а Filforme и
-Nanovia находятся в процессе интеграции.
+как Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree и
+Smart3DPT, а также Nanovia.
 
 ## Интеграция на заводе: дни, а не месяцы
 
@@ -89,11 +89,10 @@ Gold: нарастить объёмы и сделать обязательств
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…и другие в процессе интеграции —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech) и
-другие на подходе.
+…а также на производственной линии —
+[Nanovia](https://nanovia.tech), — и другие на подходе.
 
 **Хотите увидеть свой логотип на этой лестнице — и покрупнее?** Производственная линия запускает
 TigerTag уже через 5 дней:

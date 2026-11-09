@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -90,7 +90,7 @@ sourcePath: docs/faq/README.md
 **哪些耗材品牌在工厂里随货附带 TigerTag？**
 已生产超过 250 万枚芯片——使 TigerTag 成为**全球部署最广的第三方 RFID 协议**；
 大多数由第三方耗材品牌在工厂中集成——Rosa3D、eSun、Sunlu、Landu、
-Jamg He、R3D——Filforme、Nanovia 等也在集成之中。
+Jamg He、R3D、Filforme、Lotactree、Smart3DPT、Nanovia——还有更多品牌正在集成之中。
 
 **芯片是怎样装到线轴上的？**
 贴上去——而且**每卷线轴有两枚，位于相对的两侧**。这是刻意的：
@@ -286,7 +286,9 @@ SDK 和桌面应用是开源的，云接口也有文档。你的线轴不会被�
 [OpenRFID](https://github.com/suchmememanyskill/OpenRFID)（社区的多厂商 RFID 工具包）可读取 TigerTag；
 [Spooly Tracker](https://spoolytracker.com/)（库存平台，网页 + 移动端）用 TigerTag 识别线轴；
 而 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-让 U1 成为**第一台原生读取 TigerTag 的打印机**。参见
+让 U1 成为**第一台原生读取 TigerTag 的打印机**，而
+[COSMOS](https://github.com/OpenCentauri/cosmos) 在 Elegoo Centauri Carbon 上做到了同样的事，用的是内置于其 Canvas 的
+NFC 读卡器。参见
 [第三方集成](../developers/integrations.md)。
 
 **我可以基于 TigerTag 构建自己的应用吗？**
@@ -310,7 +312,7 @@ SDK 和桌面应用是开源的，云接口也有文档。你的线轴不会被�
 
 **我们是一家耗材品牌——如何出货带有 TigerTag 标签的线轴？**
 很快：生产线最快 **5 天**就能用上 TigerTag，成本很低，每枚芯片写入约需 **1 秒**——
-Rosa3D、eSun、Sunlu、Landu、Jamg He 和 R3D 已经出货超过 250 万枚芯片，证明了这一点。
+Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D、Filforme、Lotactree 和 Smart3DPT 已经出货超过 250 万枚芯片，证明了这一点。
 而且每多一个品牌加入，就进一步增强了打印机制造商原生读取 TigerTag 的集体理由。请阅读
 [面向耗材制造商](../vision/for-filament-manufacturers.md)，然后联系
 **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**。

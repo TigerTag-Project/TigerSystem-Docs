@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -75,6 +75,7 @@ en merkmiddelen: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-RFI
 | TigerTag-chips lezen/schrijven | [SDK's](./sdks.md) |
 | Inventarissen als bestanden uitwisselen | [Het `.ttag`-formaat](./ttag-format.md) |
 | De kleur van een spoel tonen zoals elke andere app dat doet | [De materiaalswatch](./material-swatch.md) — en de bijbehorende [live referentierenderer](./material-swatch-playground.html) |
+| Een spoel-id zonder chip aanmaken, het QR-label van een spoel printen of het teruglezen | [Spoel-id's en QR-links](./spool-ids-and-qr-links.md) |
 | Synchroniseren met de cloudinventaris van de gebruiker | [Account-API en integratie](./account-api.md) |
 | De chippayload begrijpen | [De TigerTag-chip](../concepts/tigertag-chip.md) |
 

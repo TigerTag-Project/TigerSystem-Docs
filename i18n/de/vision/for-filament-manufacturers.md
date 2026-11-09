@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -22,8 +22,8 @@ proprietären, ohne geschlossenen Garten.
 und heute die einzige tragfähige offene Smart-Spool-Lösung, die in großem Maßstab ausgeliefert wird: ein
 offenes, standardisiertes, herstellerunabhängiges, plattformübergreifendes Protokoll mit mehr als
 **2,5 Millionen bereits produzierten Chips**, ab Werk integriert von Marken
-wie Rosa3D, eSun, Sunlu, Landu, Jamg He und R3D – mit Filforme und
-Nanovia in der Integration.
+wie Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree und
+Smart3DPT sowie Nanovia.
 
 ## Fabrikintegration: Tage, nicht Monate
 
@@ -91,11 +91,10 @@ ist Gold: die Stückzahlen steigern und die Verpflichtung öffentlich machen.
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…und weitere in der Integration –
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech) und
-andere sind unterwegs.
+…und ebenfalls an der Produktionslinie –
+[Nanovia](https://nanovia.tech) –, weitere sind unterwegs.
 
 **Du willst dein Logo auf dieser Leiter – und größer?** Eine Produktionslinie betreibt
 TigerTag in nur 5 Tagen:

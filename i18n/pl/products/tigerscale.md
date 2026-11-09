@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -158,6 +158,12 @@ Pełny wycenione zestawienie materiałowe znajduje się w
 **Nie wykryto portu COM dla ESP32-S3 w [instalatorze webowym](https://tigertag-project.github.io/Tiger-Scale-V3/)?**
 
 Może brakować sterownika dla twojego systemu. [Skorzystaj z przewodnika instalacji sterownika](../tutorials/tigerscale-serial-port-driver.md).
+
+**Waga zatrzymana na 0 g lub ujemna, dryfujący odczyt, niewykryte czytniki,
+utrata WiFi po ponownym wgraniu firmware'u?**
+
+Repozytorium samej wagi prowadzi pełną listę, objaw po objawie:
+[rozwiązywanie problemów z Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## Do wykonywania i sprzedawania
 

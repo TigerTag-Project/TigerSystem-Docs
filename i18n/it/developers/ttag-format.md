@@ -1,5 +1,5 @@
 ---
-sourceHash: 551d534fd3d554ae4db42c43701bf66647afcbe1ff812f7264bb1ff79aff43a8
+sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -150,7 +150,8 @@ link http(s) o trascina e rilascia in qualsiasi punto della finestra.
 |---|---|---|
 | Intento | Stesso account / un vero ripristino | Adottare i materiali di qualcun altro |
 | Id dei record | Mantenuti: scritti **alla lettera** sotto gli id originali | Id **nuovi**: ogni record diventa una nuova bobina `TigerData_` senza chip di proprietà di chi importa |
-| Stato TigerTag+ | Mantenuto: ogni backup `rfidList` viene ripristinato | Eliminato: la copia è senza chip, quindi `id_product` è **non impostato**, ed è ciò che la rende non un TigerTag+; `id_tigertag` rimosso e `rfidBackup:false` derivano dall'assenza di chip; backup scartati (un dump firmato è legato a un chip che chi importa non possiede) |
+| Stato del chip | Mantenuto: ogni backup `rfidList` viene ripristinato | Eliminato — la copia è senza chip: `id_tigertag` rimosso, `rfidBackup:false`, backup scartati (un dump firmato è legato a un chip che chi importa non possiede) |
+| Prodotto | Mantenuto | **Mantenuto** quando `id_product` è un vero id del catalogo (non `0`, non `0xFFFFFFFF`), così un TigerData+ resta un TigerData+ e un TigerTag+ arriva come il TigerData+ dello stesso prodotto; qualsiasi altro valore è impostato a `0xFFFFFFFF` (non impostato). Prima di Tiger Studio v2.51.1 era sempre non impostato, quindi un TigerData+ arrivava come un semplice TigerData |
 | Peso | Come registrato | Reimpostato alla capacità piena |
 | Gemelli | Come registrato | `twin_tag_uid` rimappato tramite i nuovi id |
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -38,7 +38,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** é o protocolo *antes* do chip: a mesma identidade, guardada em formato digital — num inventário, numa base de dados, num ficheiro, em qualquer lado. O protocolo TigerTag pode viver inteiramente fora de um chip RFID. Esta noção de **chip virtual é uma inovação do TigerSystem — não existe em mais lado nenhum**: gerir um inventário completo sem nenhum chip NFC, enviar uma identidade para um chip mais tarde ou nunca, e a interoperabilidade do protocolo é preservada nos dois casos.
@@ -53,6 +53,21 @@ flowchart LR
 - Escreva nesse chip um **produto do catálogo** em vez de valores escritos à mão e é um [**TigerTag+**](../products/tigertag-plus.md) — o mesmo `+` do TigerData+, com o mesmo significado: *identificado*. Assinado por um fabricante certificado, torna-se um **TigerTag+ Certified**. Em qualquer dos casos, o chip continua legível a 100 % offline.
 
 Um TigerData pode ficar digital para sempre, ou ser **promovido a um chip real de forma atómica** quando estiver pronto (o Tiger Studio fá-lo num só passo). E os quatro estados viajam como ficheiros: o [**formato de intercâmbio `.ttag`**](../developers/ttag-format.md) transporta um ou mais materiais do inventário — TigerData, TigerData+, TigerTag ou TigerTag+ — numa unidade USB, num e-mail, entre ferramentas.
+
+## Promoção: de um registo a um chip
+
+*Promover* uma bobina é a passagem da esquerda do diagrama para a direita: um registo TigerData ou TigerData+ existente é escrito num chip NTAG virgem, e a bobina passa a transportar ela própria a sua identidade, offline.
+
+O que sai depende apenas do que entrou:
+
+| Promove… | Obtém… | Porque |
+|---|---|---|
+| um **TigerData** — valores escolhidos pelo seu dono | um **TigerTag** | um UID físico fica agora associado à identidade |
+| um **TigerData+** — um produto real do catálogo | um **TigerTag+** | o chip passa a transportar o ID de produto do catálogo: *continua identificado, continua sem assinatura* |
+
+Essa segunda linha é todo o vocabulário do `+` numa só linha. A promoção muda o *estado* — de digital para chip — e nunca o significado do `+`. Só a assinatura de um fabricante certificado faz de um chip um [TigerTag+ Certified](../products/tigertag-plus.md), e nenhuma promoção produz um.
+
+A promoção também não é uma porta de sentido único. Os chips nunca ficam bloqueados contra escrita: um chip promovido pode ser apagado a partir do [Tiger NFC Connect](../products/tigertag-connect.md) ou do Tiger Studio e escrito de novo ([o chip TigerTag](./tigertag-chip.md)). A identidade é o registo; o chip é apenas o sítio onde ela vive neste momento.
 
 ---
 

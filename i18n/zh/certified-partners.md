@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -35,17 +35,16 @@ sourcePath: docs/certified-partners.md
 | **[Sunlu](https://www.sunlu.com)** | **白银**——按需集成 | 按需为线轴贴上 TigerTag+。 |
 | **[Landu](https://www.landu3d.com)** | **白银** | 按需为线轴贴上 TigerTag+。 |
 | **[JamgHE](https://www.jamghe.com)** | **白银** | 按需为线轴贴上 TigerTag+。 |
+| **[Filforme](https://www.filforme.com)** | **白银** | 按需为线轴贴上 TigerTag+。 |
+| **[Lotactree](https://www.lotactree.com)** | **白银** | 按需为线轴贴上 TigerTag+。 |
+| **[Smart3DPT](https://smart3d.pt)** | **白银** | 按需为线轴贴上 TigerTag+。 |
+| **[Nanovia](https://nanovia.tech)** | **已投产** | 从自家生产线出货带 TigerTag 的线轴。 |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="带有 TigerTag 标志的 Rosa3D 耗材盒" /> | <img src="./assets/box-esun-cutout.png" alt="带有 TigerTag 标志的 eSun 耗材盒" /> | <img src="./assets/box-sunlu-cutout.png" alt="带有 TigerTag 标志的 Sunlu 耗材盒" /> |
 
 *带有该标志的零售包装盒——在商店购买，而非摆拍。*
-
-## 集成进行中
-
-**[Nanovia](https://nanovia.tech)** 和 **[Filforme](https://www.filforme.com)** 正在集成 TigerTag+。
-它们**尚未出货**，列在这里是因为它们参与了该计划——而不是暗示已可购买。
 
 ## 自行核实标志
 

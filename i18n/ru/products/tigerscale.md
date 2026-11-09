@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -158,6 +158,12 @@ sourcePath: docs/products/tigerscale.md
 **Не обнаруживается COM-порт для ESP32-S3 в [веб-установщике](https://tigertag-project.github.io/Tiger-Scale-V3/)?**
 
 Возможно, в вашей системе не хватает драйвера. [Следуйте руководству по установке драйвера](../tutorials/tigerscale-serial-port-driver.md).
+
+**Вес застыл на 0 г или стал отрицательным, показания дрейфуют, считыватели не
+обнаруживаются, WiFi пропал после перепрошивки?**
+
+В собственном репозитории весов ведётся полный список, симптом за симптомом:
+[устранение неполадок Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## Делайте и продавайте сами
 

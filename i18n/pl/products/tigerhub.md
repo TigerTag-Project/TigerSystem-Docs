@@ -1,5 +1,5 @@
 ---
-sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
+sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -34,8 +34,8 @@ flowchart TB
  TigerSystem z przeglądarki.
 - **Listy życzeń** — publiczne i tylko dla znajomych, obie wdrożone.
 - **Kody znajomych i zaproszenia** — dodawajcie się nawzajem do znajomych z poziomu sieci.
-- **Publiczne linki do list** — udostępnij magazyn lub listę życzeń tylko do odczytu jako
- `https://tigersystem.io/list/<token>`; oglądający nie potrzebuje aplikacji ani
+- **Publiczne linki do list** — udostępnij listę tylko do odczytu jako
+ `https://tigersystem.io/wishlist/<token>`; oglądający nie potrzebuje aplikacji ani
  konta.
 - **Katalog materiałów i baza referencyjna** (`/materials`, `/database`) —
  przeglądaj wspólny katalog, względem którego rozwiązują się wszystkie aplikacje.
@@ -45,6 +45,39 @@ flowchart TB
  `/press`) — historia B2B, wskazówki integracyjne, materiały medialne.
 - **Goodies** (`/goodies`) — oficjalna czapka i polo. Kupno jednego z nich to jeden
  ze sposobów [wsparcia projektu](../support.md).
+
+## Publiczny link do listy w praktyce
+
+Publiczny link do listy to `https://tigersystem.io/wishlist/<token>`. Trzy
+rzeczy, które warto wiedzieć, zanim się go gdzieś wklei:
+
+- **Token jest całym kluczem.** Każdy, kto ma link, otwiera listę — bez konta,
+  bez aplikacji, bez niczego do udowodnienia. Należy traktować go jak hasło,
+  które świadomie się udostępnia: dobre do posta na forum albo dla znajomego,
+  nie do listy, której dalsze kopiowanie byłoby kłopotem.
+- **To upublicznienie listy tworzy link.** W aplikacji ustawienie listy jako
+  *publicznej* generuje jej token i publikuje kopię listy; przywrócenie jej do
+  stanu prywatnego usuwa tę kopię i token. Po ponownym upublicznieniu lista
+  dostaje **nowy** token, więc wcześniej rozdany link nie ożywa. TigerHub
+  wyświetla tylko to, co publikuje aplikacja.
+- **Tylko do odczytu, i widać, kto udostępnił.** Oglądający widzi tę jedną
+  listę — jej pozycje oraz okazję lub wiadomość, jeśli zostały ustawione — nigdy
+  magazyn ani inne listy. Strona pokazuje jednak **nazwę wyświetlaną**, **linki
+  do mediów społecznościowych** i przycisk *dodaj do znajomych*, który niesie
+  **kod wyszukiwania** udostępniającego.
+
+Link to jeden z dwóch sposobów udostępniania; drugim jest znajomy:
+
+| | Publiczny link do listy | Znajomy |
+|---|---|---|
+| Kto widzi | każdy, kto ma link | jedna zaakceptowana osoba |
+| Wymaga konta | nie | tak |
+| Jak | upublicznić listę | wymienić się kodami wyszukiwania |
+| Cofnięcie | ustawić listę jako prywatną | usunąć znajomego |
+
+Część o znajomych jest tu streszczona tylko po to, by stała obok linku; zasady
+zaproszeń i usuwania oraz ich egzekwowanie po stronie serwera należą do
+[Magazyn i synchronizacja z chmurą](../concepts/inventory-and-cloud-sync.md).
 
 ## TigerHub nie jest bazą danych
 
@@ -59,7 +92,7 @@ i konto TigerSystem współpracowały na tych samych danych. TigerHub to
 
 | Z | Jak |
 |---|---|
-| Tiger Studio / Connect | Generowanie i unieważnianie linków do udostępniania, wysyłanie zaproszeń do znajomych |
+| Tiger Studio / Connect | Ustawianie listy jako publicznej lub prywatnej — co tworzy lub usuwa jej link — i wysyłanie zaproszeń do znajomych |
 | Firebase (baza danych kont) | Źródło opublikowanych danych |
 | Odwiedzający | Zwykła przeglądarka, bez konta |
 

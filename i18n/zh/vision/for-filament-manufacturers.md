@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -11,7 +11,7 @@ sourcePath: docs/vision/for-filament-manufacturers.md
 
 打印机越来越期待智能耗材：AMS 级别的系统、按槽位检测材料、自动设置。每一家打印机厂商给出的答案都是**封闭的标签，锁定在他们自己的机器上，向他们的云提供数据**——零互操作性，在他们的围墙之外，对你的品牌毫无价值。而每一枚被锁定的标签还有第二个用途：**把你的客户引向打印机厂商自己的耗材。** TigerTag 创建于 2023 年，正是为了让第三方品牌有一个更好的答案——比专有线轴更智能的线轴，而且没有围墙花园。
 
-**TigerTag 是全球部署最广的第三方 RFID 协议**——并且是如今唯一可行的、已大规模出货的开放智能线轴方案：一个开放、标准、与厂商无关、跨平台的协议，已生产超过 **250 万枚芯片**，并由 Rosa3D、eSun、Sunlu、Landu、Jamg He 和 R3D 等品牌在工厂集成——Filforme 和 Nanovia 也正在集成。
+**TigerTag 是全球部署最广的第三方 RFID 协议**——并且是如今唯一可行的、已大规模出货的开放智能线轴方案：一个开放、标准、与厂商无关、跨平台的协议，已生产超过 **250 万枚芯片**，并由 Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D、Filforme、Lotactree 和 Smart3DPT 以及 Nanovia 等品牌在工厂集成。
 
 ## 工厂集成：以天计，而不是以月计
 
@@ -57,10 +57,10 @@ sourcePath: docs/vision/for-filament-manufacturers.md
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-……还有更多正在集成中——
-[Filforme](https://www.filforme.com)、[Nanovia](https://nanovia.tech)，以及其他即将加入的。
+……生产线上也有——
+[Nanovia](https://nanovia.tech)——还有更多即将加入。
 
 **想让你的标志出现在这个阶梯上——而且更大？** 一条生产线最快 5 天即可运行 TigerTag：
 [tigertag@tigertag.io](mailto:tigertag@tigertag.io)。

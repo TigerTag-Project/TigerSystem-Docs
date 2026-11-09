@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -46,19 +46,16 @@ a nie to, jak dobry jest partner.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — integracja na życzenie | Oznacza szpule TigerTag+ na życzenie. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Oznacza szpule TigerTag+ na życzenie. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Oznacza szpule TigerTag+ na życzenie. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Oznacza szpule TigerTag+ na życzenie. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Oznacza szpule TigerTag+ na życzenie. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Oznacza szpule TigerTag+ na życzenie. |
+| **[Nanovia](https://nanovia.tech)** | **W produkcji** | Wysyła szpule z TigerTag prosto ze swojej linii produkcyjnej. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Pudełko filamentu Rosa3D ze znakiem TigerTag" /> | <img src="./assets/box-esun-cutout.png" alt="Pudełko filamentu eSun ze znakiem TigerTag" /> | <img src="./assets/box-sunlu-cutout.png" alt="Pudełko filamentu Sunlu ze znakiem TigerTag" /> |
 
 *Pudełka detaliczne ze znakiem — kupione w sklepie, nie inscenizowane.*
-
-## Integracja w toku
-
-**[Nanovia](https://nanovia.tech)** i **[Filforme](https://www.filforme.com)**
-obecnie integrują TigerTag+. **Jeszcze nie dostarczają** produktów i są tu
-wymienione, ponieważ uczestniczą w programie — a nie po to, by sugerować
-dostępność.
 
 ## Samodzielne sprawdzenie znaku
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
+sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -28,7 +28,7 @@ Cómo funciona TigerSystem con cada ecosistema de impresoras. Dos ejes independi
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **En vivo**: HTTP + IFS | — (las máquinas no tienen lector RFID) | — | TigerTag le añade NFC, sin coste |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **En vivo**: MQTTS LAN + nube, ACE | Mifare Ultralight | Ninguno | Especificación documentada |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **En vivo**: WebSocket Moonraker + 4 ranuras | Mifare Classic 1K | HKDF + firma RSA-2048 | Especificación documentada |
-| [Klipper](./klipper.md) | Todavía no (hay trabajo previo) | n/d | n/d | n/d |
+| [Klipper](./klipper.md) | **En vivo (beta)** — Moonraker + Happy Hare / AFC | n/d | n/d | n/d |
 | [OpenSpool](./openspool.md) | n/d (estándar de etiqueta, no una impresora) | NFC Tipo 2, JSON NDEF | Ninguno: estándar abierto | Especificación documentada |
 | Qidi | No integrada | Mifare Classic 1K | Clave por defecto | [Especificación documentada](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -37,6 +37,11 @@ Cómo funciona TigerSystem con cada ecosistema de impresoras. Dos ejes independi
 > se mantienen en el repositorio de Tiger Studio, en
 > [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors)
 > — aquí se enlazan, no se duplican.
+
+## Formatos de etiqueta, lado a lado
+
+TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab y Creality CFS, cifra
+por cifra y con fuentes: **[Formatos de etiqueta de bobina comparados](./tag-formats.md)**.
 
 ## Más allá de las impresoras
 

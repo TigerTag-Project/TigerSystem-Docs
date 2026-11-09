@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -47,11 +47,11 @@ Em **setembro de 2024**, os chips estavam em produção em massa e as fábricas 
 
 Essa escolha veio de uma pergunta que fazíamos sem parar na China: *«Onde estão os leitores RFID?»* Todos respondiam: *«Nas Bambu Lab.»* E nós dizíamos: falso. Na Bambu Lab os leitores estão **no AMS, não na impressora** — uma bobina de terceiros não pode ser detetada de todo pela máquina. **Os leitores RFID estão nos seus bolsos.** Em todos os telemóveis, prontos a usar — sem que sequer o saiba.
 
-Sinceramente: construir tudo isto nós próprios nunca foi o plano inicial. **Foram produzidos mais de 2,5 milhões de chips NFC TigerTag — fazendo do TigerTag o protocolo RFID de terceiros mais implementado do mundo** — a maioria integrada de fábrica por marcas de filamento de terceiros (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — com a Filforme, a Nanovia e outras em integração), mais uma parte menor comprada por makers para etiquetar bobinas em casa. Assumimos ingenuamente que a comunidade imaginaria sozinha as utilizações: uma identidade NFC aberta e documentada em cada bobina parecia um recreio óbvio.
+Sinceramente: construir tudo isto nós próprios nunca foi o plano inicial. **Foram produzidos mais de 2,5 milhões de chips NFC TigerTag — fazendo do TigerTag o protocolo RFID de terceiros mais implementado do mundo** — a maioria integrada de fábrica por marcas de filamento de terceiros (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e outras em integração), mais uma parte menor comprada por makers para etiquetar bobinas em casa. Assumimos ingenuamente que a comunidade imaginaria sozinha as utilizações: uma identidade NFC aberta e documentada em cada bobina parecia um recreio óbvio.
 
 Não aconteceu. Apesar da escala da implementação, nenhuma comunidade pegou no assunto; ninguém achou que valesse a pena construir integrações em torno do protocolo. Esperávamos que outros o assumissem — não o fizeram. Por isso fizemo-lo nós, embora não fosse o nosso objetivo original: começámos a **imaginar nós as utilizações**, para mostrar o potencial de um **protocolo NFC de código aberto para identificação de materiais centrado no utilizador, e não na impressora** — e para deixar exemplos funcionais a quem finalmente pegar no fio.
 
-E está a começar a acontecer: o [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) lê TigerTags, o [Spooly Tracker](https://spoolytracker.com/) construiu sobre eles a sua identificação de bobinas, e o [firmware alargado da comunidade](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware) da Snapmaker U1 lê-os **nativamente na própria impressora** — veja as [integrações de terceiros](../developers/integrations.md).
+E está a começar a acontecer: o [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) lê TigerTags, o [Spooly Tracker](https://spoolytracker.com/) construiu sobre eles a sua identificação de bobinas, e o [firmware alargado da comunidade](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware) da Snapmaker U1 lê-os **nativamente na própria impressora**, tal como o [COSMOS](https://github.com/OpenCentauri/cosmos) na Elegoo Centauri Carbon — veja as [integrações de terceiros](../developers/integrations.md).
 
 ## Uma caixa de areia, de propósito
 

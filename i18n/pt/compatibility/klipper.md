@@ -1,31 +1,52 @@
 ---
-sourceHash: 6a70119833796c9aad3bd09cf54863a7572f174fd87f0f0f4d3a948ea25fe24a
+sourceHash: dca3254cea9d6296d6f313f60c5ca02779bb716dda7dd4a0a7f1b717b4c12590
 sourcePath: docs/compatibility/klipper.md
 ---
 
 # Klipper / Moonraker
 
-## Conexão com a impressora — ainda não, mas a base já existe
+## Vínculo com a impressora — **Ativo (beta)**, desde o Tiger Studio 2.41
 
-As impressoras Klipper genéricas (via API **Moonraker**) **não são uma integração
-oficial hoje**. No entanto, a conexão do Tiger Studio com a Snapmaker já fala
-WebSocket/JSON-RPC do Moonraker — a base natural para uma integração Klipper
-neutra em relação a fabricantes.
+O Tiger Studio se conecta a **qualquer impressora que rode Klipper com Moonraker**:
+Voron, RatRig, Vzbot, Sovol, Qidi, Elegoo Neptune 4, Creality K1 / K2 /
+Ender-3 V3, FLSun, Artillery X4, Kingroon e as demais — 161 máquinas estão no
+fluxo de adição com a sua imagem. A integração é um **beta**.
 
-| Aspecto | Situação |
+| Aspecto | Detalhe |
 |---|---|
-| Transporte Moonraker | Existe (usado pela integração com a Snapmaker) |
-| Suporte genérico a Klipper | Planejado / a definir |
-| Mapeamento dos slots de filamento | Depende da configuração MMU da máquina — a definir |
+| Protocolo | API HTTP do Moonraker, consultada a cada 2 s; porta 7125 por padrão, outra porta pode ser definida |
+| Descoberta | Varredura da LAN, ou adição manual com o endereço e uma chave de API do Moonraker opcional |
+| Slots de filamento | Gates do **Happy Hare** e lanes do **AFC**, lidos e editados pelos próprios comandos da máquina (`MMU_GATE_MAP`, `SET_MATERIAL` / `SET_COLOR`); uma extrusora simples é exibida, mas não guarda dados de filamento |
+| Trabalho | Trabalho em andamento com miniatura e camadas; pausar, retomar, cancelar |
+| Controle | Movimento dos eixos, homing, ventoinha da peça, velocidade, luzes; temperaturas definidas com um clique |
+| Telemetria | Extrusoras, mesa, câmara e cada `temperature_sensor` / `temperature_fan` / `heater_generic` |
+| Câmera | Stream MJPEG ou capturas |
 
-> **TODO:** definir o alvo: qual parte da API Moonraker é genérica o bastante
-> (objetos da impressora, fila de trabalhos, webcams) e como o MMU e os slots de
-> filamento se mapeiam no ecossistema Klipper (ERCF, MMU2, Box Turtle…).
+Máquinas cujos fabricantes instalam um firmware fechado sobre o Klipper mantêm o
+próprio vínculo: [Snapmaker](./snapmaker.md), [FlashForge](./flashforge.md) e
+[Anycubic](./anycubic.md) são acessadas pelos próprios conectores, não por este.
+Uma máquina acessível pelos dois caminhos — uma Creality K1, por exemplo —
+oferece a escolha ao ser adicionada.
 
-## Usar o TigerTag com Klipper hoje
+## RFID nativo — n/d
 
-Tudo, exceto a conexão ao vivo com a impressora, já funciona: chips TigerTag,
-inventário, controle de peso, racks e compartilhamento não dependem da impressora.
+O Klipper é um firmware de impressora, não um formato de tag de bobina. A
+identidade da bobina vem do seu TigerTag, lido com um celular ou um leitor de
+mesa.
+
+## O fluxo de trabalho
+
+1. **Adicione a impressora** — encontrada pela varredura da LAN, ou adicionada manualmente.
+2. **Escaneie uma bobina** — com o seu celular (ou um leitor de mesa); ela vai para o
+ seu inventário.
+3. **Atribua-a a um gate ou a uma lane** — o Tiger Studio a grava com o próprio
+ comando Happy Hare ou AFC da máquina, então não é preciso instalar nada na
+ impressora.
+4. **Ao vivo** — trabalho, temperaturas e câmera na visualização das impressoras.
+
+Um [TigerSpool](../products/tigerspool.md) também pode atribuir um slot do
+Klipper, mas esse caminho é **experimental**: escrito contra o driver do Tiger
+Studio e um mock do Moonraker, ainda não executado em uma impressora.
 
 ---
 

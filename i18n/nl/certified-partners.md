@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -46,18 +46,16 @@ productie van de partner**, niet hoe goed de partner is.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — geïntegreerd op verzoek | Voorziet spoelen op verzoek van TigerTag+. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Voorziet spoelen op verzoek van TigerTag+. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Voorziet spoelen op verzoek van TigerTag+. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Voorziet spoelen op verzoek van TigerTag+. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Voorziet spoelen op verzoek van TigerTag+. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Voorziet spoelen op verzoek van TigerTag+. |
+| **[Nanovia](https://nanovia.tech)** | **In productie** | Levert spoelen met TigerTag vanaf de eigen productielijn. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Filamentdoos van Rosa3D met het TigerTag-merk" /> | <img src="./assets/box-esun-cutout.png" alt="Filamentdoos van eSun met het TigerTag-merk" /> | <img src="./assets/box-sunlu-cutout.png" alt="Filamentdoos van Sunlu met het TigerTag-merk" /> |
 
 *Verkoopdozen met het merk — in een winkel gekocht, niet in scène gezet.*
-
-## Integratie in uitvoering
-
-**[Nanovia](https://nanovia.tech)** en **[Filforme](https://www.filforme.com)**
-zijn TigerTag+ momenteel aan het integreren. Ze leveren **nog niet**, en
-staan hier omdat ze in het programma zitten — niet om beschikbaarheid te suggereren.
 
 ## Zelf een merk controleren
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -46,18 +46,16 @@ do parceiro**, não o quanto o parceiro é bom.
 | **[Sunlu](https://www.sunlu.com)** | **Prata** — integrado sob demanda | Etiqueta bobinas com TigerTag+ sob demanda. |
 | **[Landu](https://www.landu3d.com)** | **Prata** | Etiqueta bobinas com TigerTag+ sob demanda. |
 | **[JamgHE](https://www.jamghe.com)** | **Prata** | Etiqueta bobinas com TigerTag+ sob demanda. |
+| **[Filforme](https://www.filforme.com)** | **Prata** | Etiqueta bobinas com TigerTag+ sob demanda. |
+| **[Lotactree](https://www.lotactree.com)** | **Prata** | Etiqueta bobinas com TigerTag+ sob demanda. |
+| **[Smart3DPT](https://smart3d.pt)** | **Prata** | Etiqueta bobinas com TigerTag+ sob demanda. |
+| **[Nanovia](https://nanovia.tech)** | **Em produção** | Despacha bobinas com TigerTag direto da sua linha de produção. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Caixa de filamento Rosa3D com a marca TigerTag" /> | <img src="./assets/box-esun-cutout.png" alt="Caixa de filamento eSun com a marca TigerTag" /> | <img src="./assets/box-sunlu-cutout.png" alt="Caixa de filamento Sunlu com a marca TigerTag" /> |
 
 *Caixas de varejo com a marca — compradas em uma loja, não montadas para a foto.*
-
-## Integração em andamento
-
-A **[Nanovia](https://nanovia.tech)** e a **[Filforme](https://www.filforme.com)**
-estão integrando o TigerTag+ neste momento. Elas **ainda não estão vendendo** e
-estão listadas aqui porque fazem parte do programa — não para sugerir disponibilidade.
 
 ## Verificando uma marca por conta própria
 

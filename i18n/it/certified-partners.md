@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -46,18 +46,16 @@ produzione del partner**, non quanto sia bravo il partner.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — integrato su richiesta | Tagga le bobine con TigerTag+ su richiesta. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Tagga le bobine con TigerTag+ su richiesta. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Tagga le bobine con TigerTag+ su richiesta. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Tagga le bobine con TigerTag+ su richiesta. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Tagga le bobine con TigerTag+ su richiesta. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Tagga le bobine con TigerTag+ su richiesta. |
+| **[Nanovia](https://nanovia.tech)** | **In produzione** | Spedisce dalla sua linea di produzione bobine dotate di TigerTag. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Scatola di filamento Rosa3D con il marchio TigerTag" /> | <img src="./assets/box-esun-cutout.png" alt="Scatola di filamento eSun con il marchio TigerTag" /> | <img src="./assets/box-sunlu-cutout.png" alt="Scatola di filamento Sunlu con il marchio TigerTag" /> |
 
 *Scatole al dettaglio con il marchio, acquistate in negozio, non allestite.*
-
-## Integrazione in corso
-
-**[Nanovia](https://nanovia.tech)** e **[Filforme](https://www.filforme.com)**
-stanno integrando TigerTag+. **Non sono ancora in commercio** e
-sono elencati qui perché fanno parte del programma, non per far intendere che siano disponibili.
 
 ## Verificare tu stesso un marchio
 

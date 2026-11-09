@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -108,7 +108,8 @@ rond is het formaat waaromheen de lezers en houders van het ecosysteem zijn ontw
 Er zijn meer dan 2,5 miljoen chips geproduceerd — waarmee TigerTag **het meest
 gebruikte RFID-protocol van derden ter wereld** is; de meeste worden in de
 fabriek geïntegreerd door filamentmerken van derden — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D — terwijl Filforme, Nanovia en meer merken worden geïntegreerd.
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — en er worden meer
+merken geïntegreerd.
 
 **Hoe komt een chip op een spoel?**
 Hij wordt opgeplakt — en er zitten **er twee per spoel, aan tegenovergestelde zijden**. Dat is
@@ -348,7 +349,9 @@ RFID van meerdere fabrikanten) leest TigerTags;
 [Spooly Tracker](https://spoolytracker.com/) (inventarisplatform, web +
 mobiel) identificeert spoelen met TigerTags; en de
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-maakt van de U1 **de eerste printer die TigerTags native leest**. Zie
+maakt van de U1 **de eerste printer die TigerTags native leest**, en
+[COSMOS](https://github.com/OpenCentauri/cosmos) doet hetzelfde op de Elegoo Centauri Carbon, met
+de NFC-lezer die in de Canvas is ingebouwd. Zie
 [integraties van derden](../developers/integrations.md).
 
 **Kan ik mijn eigen app op TigerTag bouwen?**
@@ -377,7 +380,7 @@ beveiligingsregels; een client kan alleen bij de gegevens van zijn eigen gebruik
 Snel: een productielijn kan met TigerTag draaien in **slechts
 5 dagen**, tegen zeer lage kosten, waarbij elke chip in **ongeveer
 1 seconde** wordt geschreven — bewezen met meer dan 2,5 miljoen chips die al zijn geleverd door
-Rosa3D, eSun, Sunlu, Landu, Jamg He en R3D. En elk merk dat zich aansluit, versterkt het collectieve argument voor
+Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree en Smart3DPT. En elk merk dat zich aansluit, versterkt het collectieve argument voor
 printerfabrikanten om TigerTag native te lezen. Lees
 [Voor filamentfabrikanten](../vision/for-filament-manufacturers.md) en neem dan
 contact op via **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.

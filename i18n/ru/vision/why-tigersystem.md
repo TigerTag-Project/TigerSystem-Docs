@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -91,7 +91,7 @@ RFID-считыватели?»* Все отвечали: *«В Bambu Lab.»* А 
 более 2,5 миллиона NFC-чипов TigerTag — это делает TigerTag
 самым распространённым сторонним RFID-протоколом в мире** — большая их часть
 встроена на заводе сторонними брендами филамента (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — а Filforme, Nanovia и другие находятся в процессе интеграции), плюс меньшая часть
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia, — а другие находятся в процессе интеграции), плюс меньшая часть
 куплена мейкерами для разметки катушек дома. Мы наивно полагали, что сообщество
 само придумает способы применения: открытая, задокументированная NFC-идентичность на каждой
 катушке казалась очевидной площадкой для экспериментов.
@@ -108,7 +108,8 @@ Sunlu, Landu, Jamg He, R3D — а Filforme, Nanovia и другие находя
 [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) читает TigerTag,
 [Spooly Tracker](https://spoolytracker.com/) построил на них идентификацию катушек,
 а [расширенная прошивка сообщества](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-для Snapmaker U1 читает их **нативно, прямо на принтере** — см.
+для Snapmaker U1 читает их **нативно, прямо на принтере**, как и
+[COSMOS](https://github.com/OpenCentauri/cosmos) на Elegoo Centauri Carbon, — см.
 [интеграции сторонних разработчиков](../developers/integrations.md).
 
 ## Песочница — намеренно

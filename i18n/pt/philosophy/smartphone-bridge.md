@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -34,13 +34,23 @@ O celular funciona como a **ponte** entre a bobina física e o inventário digit
 
 ## RFID nativo vs a ponte
 
-Algumas impressoras leem tags nativamente (no seu próprio formato proprietário); a maioria não lê
-nada. A ponte torna irrelevantes as capacidades da impressora:
+Algumas impressoras leem tags nativamente — geralmente no seu próprio formato
+proprietário, às vezes o próprio TigerTag; a maioria não lê nada. A ponte torna
+irrelevantes as capacidades da impressora:
 
 | Caminho | Exige | Funciona com |
 |---|---|---|
-| **RFID nativo** | Uma impressora que leia a tag bloqueada desse fabricante | Uma única marca |
+| **RFID nativo — tag do fabricante** | Uma impressora que leia a tag bloqueada desse fabricante | Uma única marca |
+| **RFID nativo — TigerTag** | Uma máquina cujo próprio firmware lê TigerTag — algo raro e, por enquanto, feito pela comunidade | Todas as marcas, sem aplicativo no meio |
 | **Ponte via smartphone** | Qualquer celular com NFC | **Todas as impressoras**, todas as marcas, até máquinas totalmente offline |
+
+A linha do meio não é nossa, e é recente. O firmware estendido da comunidade faz
+da [Snapmaker U1](../compatibility/snapmaker.md) a primeira impressora a ler um
+TigerTag na própria máquina; e o **BT-AMS-C**, um leitor de quatro slots que se
+monta sobre um AMS da Bambu Lab, envia os dados do TigerTag direto para a BMCU da
+impressora ([hardware de terceiros](../compatibility/third-party-hardware.md)).
+Os dois continuam sendo exceções — o que é um argumento a favor da ponte, não
+contra ela: ela nunca precisou esperar por eles.
 
 Com a ponte, os dados do filamento chegam à impressora pelas
 [integrações de impressoras do Tiger Studio](../compatibility/README.md) (seis marcas

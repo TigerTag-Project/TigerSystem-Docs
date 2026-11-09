@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -46,18 +46,16 @@ sourcePath: docs/certified-partners.md
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — интеграция по запросу | Маркирует катушки TigerTag+ по запросу. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Маркирует катушки TigerTag+ по запросу. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Маркирует катушки TigerTag+ по запросу. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Маркирует катушки TigerTag+ по запросу. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Маркирует катушки TigerTag+ по запросу. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Маркирует катушки TigerTag+ по запросу. |
+| **[Nanovia](https://nanovia.tech)** | **В производстве** | Поставляет катушки с TigerTag прямо со своей производственной линии. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Коробка филамента Rosa3D со знаком TigerTag" /> | <img src="./assets/box-esun-cutout.png" alt="Коробка филамента eSun со знаком TigerTag" /> | <img src="./assets/box-sunlu-cutout.png" alt="Коробка филамента Sunlu со знаком TigerTag" /> |
 
 *Розничные коробки со знаком — куплены в магазине, не постановочные.*
-
-## Интеграция в процессе
-
-**[Nanovia](https://nanovia.tech)** и **[Filforme](https://www.filforme.com)**
-сейчас интегрируют TigerTag+. Они **пока не поставляют продукцию** и
-перечислены здесь, потому что участвуют в программе, — а не для того, чтобы подразумевать наличие.
 
 ## Как самостоятельно проверить знак
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -35,13 +35,24 @@ digitale:
 
 ## RFID nativo e bridge
 
-Alcune stampanti leggono i tag in modo nativo (con il proprio formato proprietario); la maggior parte non
-legge nulla. Il bridge rende irrilevanti le capacità della stampante:
+Alcune stampanti leggono i tag in modo nativo — di solito il proprio formato
+proprietario, a volte TigerTag stesso; la maggior parte non legge nulla. Il
+bridge rende irrilevanti le capacità della stampante:
 
 | Percorso | Richiede | Funziona con |
 |---|---|---|
-| **RFID nativo** | Una stampante che legge il tag bloccato di quel produttore | Una sola marca |
+| **RFID nativo — tag del produttore** | Una stampante che legge il tag bloccato di quel produttore | Una sola marca |
+| **RFID nativo — TigerTag** | Una macchina il cui firmware legge TigerTag — rara, e finora realizzata dalla community | Ogni marca, nessuna app di mezzo |
 | **Smartphone bridge** | Qualsiasi telefono NFC | **Ogni stampante**, ogni marca, persino le macchine completamente offline |
+
+La riga centrale non è nostra, ed è recente. Il firmware esteso della community
+rende la [Snapmaker U1](../compatibility/snapmaker.md) la prima stampante a
+leggere un TigerTag sulla macchina stessa; e il **BT-AMS-C**, un lettore a
+quattro slot che si monta su un AMS di Bambu Lab, invia i dati TigerTag
+direttamente al BMCU della stampante
+([hardware di terze parti](../compatibility/third-party-hardware.md)).
+Entrambi restano eccezioni — ed è un argomento a favore del bridge, non contro:
+non ha mai dovuto aspettarli.
 
 Con il bridge, i dati del filamento raggiungono la stampante tramite
 [le integrazioni delle stampanti di Tiger Studio](../compatibility/README.md) (sei marchi

@@ -1,5 +1,5 @@
 ---
-sourceHash: 8d781b9acd818ce14d286d503bd6329dd7e9b7e3279e4efc05b290f6845d8591
+sourceHash: 62f0dbe3c583f7f4f9624b611932c6626178466d95056f1c32b259c965a35f14
 sourcePath: docs/vision/team.md
 ---
 
@@ -36,8 +36,8 @@ Kampf.*
 ## Und alle, die an unserer Seite kämpfen
 
 - **Die Fabrikpartner**, die sich für den offenen Chip statt für einen geschlossenen Garten entschieden haben –
- Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D – mit Filforme, Nanovia und
- weiteren in der Integration.
+ Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT,
+ Nanovia – und weitere in der Integration.
 - **Die unabhängigen Entwickler**, die das Protokoll von sich aus aufgegriffen haben –
  OpenRFID, Spooly Tracker, die Community-Firmware des Snapmaker U1
  ([Integrationen von Drittanbietern](../developers/integrations.md)).

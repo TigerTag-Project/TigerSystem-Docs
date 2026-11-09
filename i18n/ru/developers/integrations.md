@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f9124180c40a232c7aab51fda782a891af83baafbcf03c27d697b0ccfcff594
+sourceHash: f283703d11787d5928096fe85013ad132ac596d2e2898ee65ac2adbfbb60d0ef
 sourcePath: docs/developers/integrations.md
 ---
 
@@ -23,6 +23,15 @@ sourcePath: docs/developers/integrations.md
 нативно читает TigerTag — это первый принтер, читающий TigerTag на самой
 машине.** Именно то будущее, к которому стремится коллективная игра, наступило
 раньше срока благодаря сообществу.
+
+## COSMOS — прошивка для Elegoo Centauri Carbon (OpenCentauri)
+
+**[github.com/OpenCentauri/cosmos](https://github.com/OpenCentauri/cosmos)**
+— независимая прошивка сообщества под GPL-3.0 для Elegoo Centauri Carbon
+(mainline Linux, собранный на Yocto, Klipper / Kalico). Её RFID-модуль Canvas
+управляет **NFC-считывателем, встроенным в Canvas**, — многоцветным блоком
+принтера — и декодирует чипы с помощью OpenRFID: **Centauri Carbon читает
+TigerTag собственным считывателем**, без дополнительного оборудования.
 
 ## Spooly Tracker
 

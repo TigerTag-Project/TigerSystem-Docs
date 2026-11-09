@@ -1,5 +1,5 @@
 ---
-sourceHash: 551d534fd3d554ae4db42c43701bf66647afcbe1ff812f7264bb1ff79aff43a8
+sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -133,7 +133,8 @@ sourcePath: docs/developers/ttag-format.md
 |---|---|---|
 | 意图 | 同一账号 / 真正的恢复 | 采用他人的材料 |
 | 记录 id | 保留——以原始 id **原样**写入 | **新** id——每条记录成为导入者拥有的全新无芯片 `TigerData_` 线轴 |
-| TigerTag+ 状态 | 保留——每个 `rfidList` 备份都被恢复 | 丢弃——副本是无芯片的，所以 `id_product` 为**未设置**，这正是它不是 TigerTag+ 的原因；`id_tigertag` 被移除、`rfidBackup:false` 随之而来，因为没有芯片；备份被丢弃（已签名的转储绑定于导入者并不持有的芯片） |
+| 芯片状态 | 保留——每个 `rfidList` 备份都被恢复 | 丢弃——副本是无芯片的：`id_tigertag` 被移除，`rfidBackup:false`，备份被丢弃（已签名的转储绑定于导入者并不持有的芯片） |
+| 产品 | 保留 | 当 `id_product` 是真实的产品库 id（不是 `0`，也不是 `0xFFFFFFFF`）时**保留**，因此 TigerData+ 仍是 TigerData+，TigerTag+ 则作为同一产品的 TigerData+ 到达；其他任何值都设为 `0xFFFFFFFF`（未设置）。在 Tiger Studio v2.51.1 之前，它总是未设置，所以 TigerData+ 会作为普通 TigerData 到达 |
 | 重量 | 按记录 | 重置为满容量 |
 | 孪生 | 按记录 | `twin_tag_uid` 通过新 id 重新映射 |
 

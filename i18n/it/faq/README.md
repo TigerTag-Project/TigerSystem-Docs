@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -108,7 +108,8 @@ rotondo è il formato attorno a cui sono progettati i lettori e i supporti dell'
 Sono stati prodotti oltre 2,5 milioni di chip, il che rende TigerTag **il protocollo RFID di terze parti
 più diffuso al mondo**; la maggior parte è integrata in
 fabbrica da marche di filamento terze — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D — con Filforme, Nanovia e altre in fase di integrazione.
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e altre in fase di
+integrazione.
 
 **Come si mette un chip su una bobina?**
 Si incolla — e ce ne sono **due per bobina, su lati opposti**. È voluto:
@@ -350,7 +351,9 @@ multi-produttore della community) legge i TigerTag;
 [Spooly Tracker](https://spoolytracker.com/) (piattaforma di inventario, web +
 mobile) identifica le bobine con i TigerTag; e il
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-rende la U1 **la prima stampante che legge nativamente i TigerTag**. Vedi
+rende la U1 **la prima stampante che legge nativamente i TigerTag**, e
+[COSMOS](https://github.com/OpenCentauri/cosmos) fa lo stesso sulla Elegoo Centauri Carbon, con
+il lettore NFC integrato nel suo Canvas. Vedi
 [le integrazioni di terze parti](../developers/integrations.md).
 
 **Posso costruire una mia app su TigerTag?**
@@ -379,7 +382,7 @@ regole di sicurezza; un client può toccare solo i dati del proprio utente.
 In fretta: una linea di produzione può essere operativa con TigerTag in **appena
 5 giorni**, a costo molto basso, con ogni chip scritto in **circa
 1 secondo** — dimostrato da oltre 2,5 milioni di chip già spediti da
-Rosa3D, eSun, Sunlu, Landu, Jamg He e R3D. E ogni marca che si unisce rafforza le ragioni collettive
+Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree e Smart3DPT. E ogni marca che si unisce rafforza le ragioni collettive
 perché i produttori di stampanti leggano TigerTag in modo nativo. Leggi
 [Per i produttori di filamento](../vision/for-filament-manufacturers.md), poi
 scrivi a **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.

@@ -1,5 +1,5 @@
 ---
-sourceHash: 8d781b9acd818ce14d286d503bd6329dd7e9b7e3279e4efc05b290f6845d8591
+sourceHash: 62f0dbe3c583f7f4f9624b611932c6626178466d95056f1c32b259c965a35f14
 sourcePath: docs/vision/team.md
 ---
 
@@ -25,7 +25,7 @@ A **3D France** é um parceiro que apoia desde o primeiro dia a visão open sour
 
 ## E todos os que lutam ao seu lado
 
-- **Os parceiros de fábrica** que escolheram o chip aberto em vez de um jardim murado — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — com a Filforme, a Nanovia e outros em integração.
+- **Os parceiros de fábrica** que escolheram o chip aberto em vez de um jardim murado — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e outros em integração.
 - **Os criadores independentes** que adotaram o protocolo por conta própria — OpenRFID, Spooly Tracker, o firmware comunitário da Snapmaker U1 ([integrações de terceiros](../developers/integrations.md)).
 - **A comunidade** — os makers que etiquetam, pesam, partilham, comunicam erros, traduzem e fazem avançar tudo isto, bobina a bobina.
 

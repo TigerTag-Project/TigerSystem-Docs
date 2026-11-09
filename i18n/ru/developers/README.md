@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -74,6 +74,7 @@ Certified**, что открыто для всего, что создаёт тр
 | Читать/записывать чипы TigerTag | [SDK](./sdks.md) |
 | Обмениваться инвентарями в виде файлов | [Формат `.ttag`](./ttag-format.md) |
 | Показывать цвет катушки так же, как все остальные приложения | [Образец материала](./material-swatch.md) — и его [живой эталонный рендерер](./material-swatch-playground.html) |
+| Выдать id катушке без чипа, напечатать QR-этикетку катушки или прочитать её обратно | [Id катушек и QR-ссылки](./spool-ids-and-qr-links.md) |
 | Синхронизироваться с облачным инвентарём пользователя | [Account API и интеграция](./account-api.md) |
 | Понять нагрузку чипа | [Чип TigerTag](../concepts/tigertag-chip.md) |
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -92,8 +92,8 @@ Eerlijk gezegd: dit alles zelf bouwen was nooit het oorspronkelijke plan. **Er z
 meer dan 2,5 miljoen TigerTag-NFC-chips geproduceerd — waarmee TigerTag het
 meest ingezette RFID-protocol van derden ter wereld is** — de meeste ervan
 in de fabriek geïntegreerd door filamentmerken van derden (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — met Filforme, Nanovia en meer in
-integratie), plus een kleiner deel
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — en
+meer in integratie), plus een kleiner deel
 gekocht door makers om thuis spoelen te taggen. We gingen er naïef van uit dat de gemeenschap
 de toepassingen zelf zou bedenken: een open, gedocumenteerde NFC-identiteit op elke
 spoel voelde als een vanzelfsprekende speeltuin.
@@ -111,7 +111,8 @@ En het begint te gebeuren:
 [Spooly Tracker](https://spoolytracker.com/) bouwde zijn spoolidentificatie
 erop, en de
 [door de community uitgebreide firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-van de Snapmaker U1 leest ze **native op de printer zelf** — zie
+van de Snapmaker U1 leest ze **native op de printer zelf**, zoals
+[COSMOS](https://github.com/OpenCentauri/cosmos) dat doet op de Elegoo Centauri Carbon — zie
 [integraties van derden](../developers/integrations.md).
 
 ## Een zandbak, met opzet

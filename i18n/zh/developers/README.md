@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -61,6 +61,7 @@ Compatible 凭你的话说*“它能用”*，Certified 凭我们的话说*“�
 | 读写 TigerTag 芯片 | [SDK](./sdks.md) |
 | 以文件形式交换库存 | [`.ttag` 格式](./ttag-format.md) |
 | 像其他所有应用一样显示线轴的颜色 | [材料色卡](./material-swatch.md)——及其[实时参考渲染器](./material-swatch-playground.html) |
+| 为无芯片线轴生成 id、打印线轴的二维码标签或读回它 | [线轴 id 与二维码链接](./spool-ids-and-qr-links.md) |
 | 与用户的云库存同步 | [账号 API 与集成](./account-api.md) |
 | 了解芯片载荷 | [TigerTag 芯片](../concepts/tigertag-chip.md) |
 

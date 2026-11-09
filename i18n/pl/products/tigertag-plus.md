@@ -7,7 +7,7 @@ sourcePath: docs/products/tigertag-plus.md
 
 ## Cel
 
-**Plus oznacza zidentyfikowany.** TigerTag+ to TigerTag, którego tożsamość niesie
+**Znak `+` oznacza zidentyfikowany.** TigerTag+ to TigerTag, którego tożsamość niesie
 **identyfikator produktu z oficjalnego katalogu** — nie wartości, które ktoś wpisał, lecz
 dokładny produkt: marka, kolor, materiał, temperatury, średnica, SKU, EAN,
 prosto ze źródła. Ponadto może nieść **opcjonalne metadane wzbogacające**,
@@ -24,14 +24,14 @@ jeden plik — każdy identyfikator każdego filamentu w bazie, do swobodnego ko
 i tworzenia lustra — więc czytnik, który go ma, rozwiązuje identyfikator katalogowy bez żadnej
 sieci. Zob. [Web API](../developers/web-api.md).
 
-To ten sam plus co w [TigerData+](../concepts/universal-filament-identity.md):
+To ten sam `+` co w [TigerData+](../concepts/universal-filament-identity.md):
 w obu przypadkach oznacza *ta tożsamość to prawdziwy produkt z katalogu*, i w żadnym
 nie oznacza *certyfikowany*.
 
 > **Uwaga o nazwie:** dawniej sprzedawany jako **„TigerTag Pro”** — nazwa to teraz
 > **TigerTag+**.
 
-## Co dodaje plus
+## Co dodaje `+`
 
 | | TigerTag | TigerTag+ |
 |---|---|---|
@@ -67,7 +67,7 @@ flowchart LR
 
 Tiger Studio może **zarchiwizować dokładną zawartość chipa** na twoim koncie, powiązaną
 z jego fizycznym UID, i później przeprogramować go z powrotem do tego stanu. Jest to przydatne
-i niezwiązane z plusem: dotyczy każdego chipa, który da się zeskanować, a posiadanie kopii zapasowej
+i niezwiązane ze znakiem `+`: dotyczy każdego chipa, który da się zeskanować, a posiadanie kopii zapasowej
 nie czyni chipa TigerTag+.
 
 - **Przywrócenie stanu fabrycznego**: jeśli chip zostanie przypadkowo przepisany lub uszkodzony,

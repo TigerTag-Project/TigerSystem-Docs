@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -144,6 +144,11 @@ sourcePath: docs/products/tigerscale.md
 **[网页安装程序](https://tigertag-project.github.io/Tiger-Scale-V3/)里检测不到 ESP32-S3 的 COM 端口？**
 
 你的系统可能缺少驱动。[请按照驱动安装指南操作](../tutorials/tigerscale-serial-port-driver.md)。
+
+**重量卡在 0 g 或为负数、读数漂移、检测不到读卡器、重新刷写后 WiFi 丢失？**
+
+秤自己的仓库按症状逐一列出了完整清单：
+[Tiger-Scale-V3 故障排除](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md)。
 
 ## 由你制造，由你销售
 

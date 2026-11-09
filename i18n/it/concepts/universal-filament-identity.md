@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -46,7 +46,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** è il protocollo *prima* del chip: la stessa identità, memorizzata
@@ -80,6 +80,31 @@ tutti e quattro gli stati viaggiano come file: il
 [**formato di scambio `.ttag`**](../developers/ttag-format.md) trasporta uno o
 più materiali di inventario — TigerData, TigerData+, TigerTag o TigerTag+ — su una chiavetta
 USB, in una e-mail, tra strumenti.
+
+## Promozione: da un record a un chip
+
+*Promuovere* una bobina significa passare dalla sinistra del diagramma alla
+destra: un record TigerData o TigerData+ esistente viene scritto su un chip NTAG
+vergine, e da quel momento la bobina porta con sé la propria identità, offline.
+
+Ciò che si ottiene dipende solo da ciò che si è messo dentro:
+
+| Promuovi… | Ottieni… | Perché |
+|---|---|---|
+| un **TigerData** — valori scelti dal suo proprietario | un **TigerTag** | ora un UID fisico è associato all'identità |
+| un **TigerData+** — un vero prodotto del catalogo | un **TigerTag+** | ora il chip porta l'ID prodotto del catalogo: *sempre identificato, sempre non firmato* |
+
+Quella seconda riga è tutto il vocabolario del `+` in una riga. La promozione
+cambia lo *stato* — da digitale a chip — e mai il significato del `+`. Solo la
+firma di un produttore certificato rende un chip un
+[TigerTag+ Certified](../products/tigertag-plus.md), e nessuna promozione ne
+produce uno.
+
+Né la promozione è una porta a senso unico. I chip non sono mai bloccati in
+scrittura: un chip promosso può essere cancellato da
+[Tiger NFC Connect](../products/tigertag-connect.md) o da Tiger Studio e
+riscritto ([il chip TigerTag](./tigertag-chip.md)). L'identità è il record; il
+chip è solo il posto in cui vive in questo momento.
 
 ---
 

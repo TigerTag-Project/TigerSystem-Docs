@@ -1,5 +1,5 @@
 ---
-sourceHash: 76ef763ccd1b41e1b5203fc1f2abe006e5e2b492e129510932ab728b6a57ae4e
+sourceHash: 386497c42994ff3a60f94f96843d530418f6734375457354bc08b66cd6927aa9
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -77,7 +77,7 @@ Quem pode dizer o quê quando um chip está à venda:
 
 Esta última distinção é toda a política de marcas, e é mais estreita do que parece. Dizer que o seu produto *fala com* o TigerTag é um facto sobre o seu produto, e mostrar o logótipo para o dizer é livre. Colocar a marca — logótipo ou nome — **num** chip de qualquer formato é uma afirmação sobre **quem o fez** — deixa de significar «isto funciona com o TigerTag» e passa a significar «isto *é* um TigerTag». Só esta segunda utilização exige autorização escrita. Veja [TRADEMARK.md](../../TRADEMARK.md).
 
-Foram produzidos mais de **2,5 milhões de chips TigerTag** — a maioria integrada de fábrica por marcas de filamento (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — com a Filforme, a Nanovia e outras em integração). Todas são [parceiros certificados](../certified-partners.md); essa página é o registo, e a única forma fiável de verificar que uma marca numa caixa é legítima.
+Foram produzidos mais de **2,5 milhões de chips TigerTag** — a maioria integrada de fábrica por marcas de filamento (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e outras em integração). Todas são [parceiros certificados](../certified-partners.md); essa página é o registo, e a única forma fiável de verificar que uma marca numa caixa é legítima.
 
 || | |
 |---|---|---|

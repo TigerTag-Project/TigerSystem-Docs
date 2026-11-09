@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -48,7 +48,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** ist das Protokoll *vor* dem Chip: dieselbe Identität, digital
@@ -85,6 +85,30 @@ Schritt). Und alle vier Zustände reisen als Dateien: Das
 [**`.ttag`-Austauschformat**](../developers/ttag-format.md) transportiert ein oder
 mehrere Bestandsmaterialien – TigerData, TigerData+, TigerTag oder TigerTag+ – auf
 einem USB-Stick, in einer Mail, zwischen Tools.
+
+## Aufwertung: vom Datensatz zum Chip
+
+Eine Spule *aufwerten* heißt, im Diagramm von links nach rechts zu gehen: Ein
+bestehender TigerData- oder TigerData+-Datensatz wird auf einen leeren NTAG-Chip
+geschrieben, und die Spule trägt ihre Identität nun selbst, offline.
+
+Was herauskommt, hängt nur davon ab, was hineinging:
+
+| Du wertest auf … | Du erhältst … | Weil |
+|---|---|---|
+| ein **TigerData** – Werte, die sein Besitzer gewählt hat | ein **TigerTag** | jetzt eine physische UID mit der Identität verbunden ist |
+| ein **TigerData+** – ein echtes Katalogprodukt | ein **TigerTag+** | der Chip jetzt die Produkt-ID aus dem Katalog trägt: *weiterhin identifiziert, weiterhin nicht signiert* |
+
+Diese zweite Zeile ist das ganze `+`-Vokabular in einer Zeile. Die Aufwertung
+ändert den *Zustand* – digital zu Chip – und nie die Bedeutung des `+`. Nur die
+Signatur eines zertifizierten Herstellers macht einen Chip zu einem
+[TigerTag+ Certified](../products/tigertag-plus.md), und keine Aufwertung
+erzeugt einen.
+
+Eine Einbahnstraße ist die Aufwertung auch nicht. Chips sind nie schreibgesperrt:
+Ein aufgewerteter Chip kann aus [Tiger NFC Connect](../products/tigertag-connect.md)
+oder Tiger Studio gelöscht und neu beschrieben werden ([der TigerTag-Chip](./tigertag-chip.md)).
+Die Identität ist der Datensatz; der Chip ist nur der Ort, an dem sie gerade lebt.
 
 ---
 

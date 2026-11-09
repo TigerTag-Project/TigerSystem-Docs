@@ -1,5 +1,5 @@
 ---
-sourceHash: a2788a5364e611177c9b1b011d762345b26e5a8fd204e75a6b2b8beed634955c
+sourceHash: bbc5e9975e29d36151f72d68e741b2688c5f2a46503d71f8f73aae13a8b74ce6
 sourcePath: docs/compatibility/opentag3d.md
 ---
 
@@ -66,6 +66,6 @@ na ten format. To to samo stanowisko, jakie zajmujemy wobec
 
 ---
 
-**◀ Poprzednia:** [OpenSpool](./openspool.md) · **▲ [Spis dokumentacji](../../README.md)** · **Następna ▶** [Dla deweloperów](../developers/README.md)
+**◀ Poprzednia:** [OpenSpool](./openspool.md) · **▲ [Spis dokumentacji](../../README.md)** · **Następna ▶** [Porównanie formatów tagów szpul](./tag-formats.md)
 
 **Zobacz też:** [Web API](../developers/web-api.md), [TigerTag+ Certified](../products/tigertag-plus-certified.md)

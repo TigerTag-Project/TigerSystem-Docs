@@ -1,5 +1,5 @@
 ---
-sourceHash: 8d781b9acd818ce14d286d503bd6329dd7e9b7e3279e4efc05b290f6845d8591
+sourceHash: 62f0dbe3c583f7f4f9624b611932c6626178466d95056f1c32b259c965a35f14
 sourcePath: docs/vision/team.md
 ---
 
@@ -36,8 +36,8 @@ Benoit 在 2023 年创办了 TigerTag，那时正值 Formnext 展会之后，专
 ## 还有并肩奋斗的每一个人
 
 - **工厂合作伙伴**，他们选择了开放芯片而不是围墙花园——
- Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D——Filforme、Nanovia 以及
- 更多厂商正在集成中。
+ Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D、Filforme、Lotactree、Smart3DPT、
+ Nanovia——还有更多厂商正在集成中。
 - **独立开发者**，他们自行采用了这套协议——
  OpenRFID、Spooly Tracker、Snapmaker U1 社区固件
  （[第三方集成](../developers/integrations.md)）。

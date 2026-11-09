@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -46,7 +46,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** es el protocolo *antes* del chip: la misma identidad, almacenada
@@ -81,6 +81,31 @@ Y los cuatro estados viajan como archivos: el
 [**formato de intercambio `.ttag`**](../developers/ttag-format.md) transporta uno o
 más materiales del inventario (TigerData, TigerData+, TigerTag o TigerTag+) en una
 memoria USB, en un correo, entre herramientas.
+
+## Promoción: de un registro a un chip
+
+*Promover* una bobina es pasar de la izquierda del diagrama a la derecha: un
+registro TigerData o TigerData+ existente se escribe en un chip NTAG virgen, y
+la bobina pasa a llevar su identidad ella misma, sin conexión.
+
+Lo que sale depende solo de lo que entró:
+
+| Promueves… | Obtienes… | Porque |
+|---|---|---|
+| un **TigerData**: valores que eligió su propietario | un **TigerTag** | ahora hay un UID físico asociado a la identidad |
+| un **TigerData+**: un producto real del catálogo | un **TigerTag+** | el chip lleva ahora el ID de producto del catálogo: *sigue identificado, sigue sin firmar* |
+
+Esa segunda fila es todo el vocabulario del `+` en una línea. La promoción
+cambia el *estado* (de digital a chip) y nunca el significado del `+`. Solo la
+firma de un fabricante certificado convierte un chip en un
+[TigerTag+ Certified](../products/tigertag-plus.md), y ninguna promoción
+produce uno.
+
+Tampoco es la promoción una puerta de un solo sentido. Los chips nunca se
+bloquean contra escritura: un chip promovido puede borrarse desde
+[Tiger NFC Connect](../products/tigertag-connect.md) o Tiger Studio y volver a
+escribirse ([el chip TigerTag](./tigertag-chip.md)). La identidad es el
+registro; el chip es solo donde vive ahora mismo.
 
 ---
 

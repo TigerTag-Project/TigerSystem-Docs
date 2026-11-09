@@ -1,5 +1,5 @@
 ---
-sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
+sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -34,8 +34,8 @@ flowchart TB
  vanuit een browser.
 - **Verlanglijsten** — openbare en alleen-voor-vrienden, beide in gebruik.
 - **Vriendcodes en uitnodigingen** — voeg elkaar toe als vrienden vanaf het web.
-- **Links naar openbare lijsten** — deel een alleen-lezen inventaris of verlanglijst als
- `https://tigersystem.io/list/<token>`; wie kijkt heeft geen app en geen
+- **Links naar openbare lijsten** — deel een lijst alleen-lezen als
+ `https://tigersystem.io/wishlist/<token>`; wie kijkt heeft geen app en geen
  account nodig.
 - **Materiaalcatalogus en referentiedatabase** (`/materials`, `/database`) —
  blader door de gedeelde catalogus waartegen elke app oplost.
@@ -45,6 +45,40 @@ flowchart TB
  `/press`) — het B2B-verhaal, verwijzingen voor integratie, mediamateriaal.
 - **Goodies** (`/goodies`) — de officiële pet en polo. Er een kopen is een van
  de manieren om [het project te steunen](../support.md).
+
+## Een link naar een openbare lijst, in de praktijk
+
+Een link naar een openbare lijst is `https://tigersystem.io/wishlist/<token>`.
+Drie dingen om te weten voordat je er ergens een plakt:
+
+- **Het token is de hele sleutel.** Iedereen die de link heeft, opent de lijst —
+  geen account, geen app, niets te bewijzen. Behandel hem als een wachtwoord dat
+  je bewust deelt: prima voor een forumbericht of een vriend, niet voor een lijst
+  waarvan je het erg zou vinden als hij verder wordt gekopieerd.
+- **Een lijst openbaar maken is wat de link aanmaakt.** In de app maakt het op
+  *openbaar* zetten van een lijst het token aan en publiceert het een kopie van
+  de lijst; hem weer op privé zetten verwijdert die kopie en het token. Maak je
+  hem opnieuw openbaar, dan krijgt hij een **nieuw** token, dus een eerder
+  uitgedeelde link komt niet terug tot leven. TigerHub toont alleen wat de app
+  publiceert.
+- **Alleen-lezen, en de pagina zegt wie de lijst deelde.** Wie kijkt, ziet die
+  ene lijst — de items, en de gelegenheid of het bericht als je er een hebt
+  ingesteld — nooit je inventaris of je andere lijsten. De pagina toont wel je
+  **weergavenaam**, je **links naar sociale media** en een knop *toevoegen als
+  vriend* die je **ontdekkingscode** bevat.
+
+Een link is een van twee manieren om te delen; de andere is een vriend:
+
+| | Link naar openbare lijst | Vriend |
+|---|---|---|
+| Wie ziet het | iedereen met de link | één persoon die je hebt geaccepteerd |
+| Account nodig | nee | ja |
+| Hoe | een lijst openbaar maken | ontdekkingscodes uitwisselen |
+| Ongedaan maken | de lijst privé maken | de vriend verwijderen |
+
+De vriendenkant wordt hier alleen samengevat om naast de link te staan; de
+regels voor verzoeken en verwijderen, en de handhaving van beide op de server,
+horen bij [Inventaris en cloudsynchronisatie](../concepts/inventory-and-cloud-sync.md).
 
 ## TigerHub is niet de database
 
@@ -59,7 +93,7 @@ en het TigerSystem-account allemaal op dezelfde gegevens samenwerken. TigerHub i
 
 | Met | Hoe |
 |---|---|
-| Tiger Studio / Connect | Deellinks genereren en intrekken, vriendenuitnodigingen versturen |
+| Tiger Studio / Connect | Een lijst openbaar of privé maken — wat de link aanmaakt of verwijdert — en vriendenuitnodigingen versturen |
 | Firebase (accountdatabase) | Bron van de gepubliceerde gegevens |
 | Bezoekers | Gewone browser, geen account nodig |
 

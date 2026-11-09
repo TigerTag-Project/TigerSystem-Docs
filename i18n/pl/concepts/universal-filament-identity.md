@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -46,7 +46,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** to protokół *przed* chipem: ta sama tożsamość przechowywana
@@ -61,7 +61,7 @@ flowchart LR
  materiał, temperatury, średnicę, SKU i EAN, prosto ze źródła. Dostajesz je,
  wybierając produkt zamiast go opisywać.
  >To **nie jest** TigerTag+ i nigdy się za niego nie podaje: brak chipa, brak UID.
- >Plus oznacza *zidentyfikowany*, a nie *certyfikowany*. Dla deweloperów: szpula
+ >Znak `+` oznacza *zidentyfikowany*, a nie *certyfikowany*. Dla deweloperów: szpula
  >jest TigerData+, gdy jest bezchipowa **i** niesie prawdziwy identyfikator
  >produktu — ta para jest definicją i jest odzwierciedlona w rekordzie jako
  >`protocol: "TigerData+"`, abyś mógł ją odczytać bezpośrednio. Zobacz
@@ -69,7 +69,7 @@ flowchart LR
 - W chwili, gdy te dane zostają **zapisane do chipa NFC**, stają się
  **TigerTag**: z tożsamością zostaje wreszcie **powiązany fizyczny UID**.
 - Zapisz do tego chipa **produkt z katalogu** zamiast wartości wpisanych ręcznie,
- a będzie to [**TigerTag+**](../products/tigertag-plus.md) — ten sam plus co w
+ a będzie to [**TigerTag+**](../products/tigertag-plus.md) — ten sam `+` co w
  TigerData+, to samo znaczenie: *zidentyfikowany*. Podpisany przez certyfikowanego
  producenta staje się **TigerTag+ Certified**. W obu przypadkach chip pozostaje
  w 100 % odczytywalny offline.
@@ -80,6 +80,31 @@ Wszystkie cztery stany podróżują też jako pliki:
 [**format wymiany `.ttag`**](../developers/ttag-format.md) niesie jeden lub
 więcej materiałów magazynowych — TigerData, TigerData+, TigerTag lub TigerTag+ —
 na pendrive'ie, w e-mailu, między narzędziami.
+
+## Promocja: od rekordu do chipa
+
+*Promowanie* szpuli to przejście z lewej strony diagramu na prawą: istniejący
+rekord TigerData lub TigerData+ zostaje zapisany na czystym chipie NTAG, a
+szpula od tej pory sama niesie swoją tożsamość, offline.
+
+To, co wychodzi, zależy wyłącznie od tego, co weszło:
+
+| Promujesz… | Otrzymujesz… | Ponieważ |
+|---|---|---|
+| **TigerData** — wartości wybrane przez właściciela | **TigerTag** | z tożsamością powiązany jest teraz fizyczny UID |
+| **TigerData+** — prawdziwy produkt z katalogu | **TigerTag+** | chip niesie teraz ID produktu z katalogu: *nadal zidentyfikowany, nadal niepodpisany* |
+
+Ten drugi wiersz to całe słownictwo `+` w jednej linii. Promocja zmienia *stan*
+— z cyfrowego na chip — i nigdy znaczenia `+`. Tylko podpis certyfikowanego
+producenta czyni z chipa
+[TigerTag+ Certified](../products/tigertag-plus.md), a żadna promocja go nie
+wytwarza.
+
+Promocja nie jest też drogą w jedną stronę. Chipy nigdy nie są blokowane przed
+zapisem: promowany chip można wymazać z poziomu
+[Tiger NFC Connect](../products/tigertag-connect.md) lub Tiger Studio i zapisać
+ponownie ([chip TigerTag](./tigertag-chip.md)). Tożsamością jest rekord; chip to
+tylko miejsce, w którym ona teraz mieszka.
 
 ---
 

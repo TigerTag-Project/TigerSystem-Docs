@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -52,7 +52,7 @@ Dois formatos, para duas situações. O **autocolante individual** vai em qualqu
 **NTAG213, 215 ou 216 — redondo, 25 mm** é a recomendação. O protocolo está deliberadamente otimizado para caber no pequeno NTAG213 (144 bytes); os 215/216 funcionam de forma idêntica, com espaço por usar. Outras formas também funcionam, mas o redondo de 25 mm é o formato em torno do qual foram concebidos os leitores e os suportes do ecossistema.
 
 **Que marcas de filamento enviam TigerTag de fábrica?**
-Foram produzidos mais de 2,5 milhões de chips — fazendo do TigerTag **o protocolo RFID de terceiros mais implantado do mundo**; a maioria é integrada de fábrica por marcas de filamento terceiras — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D — estando a Filforme, a Nanovia e outras em integração.
+Foram produzidos mais de 2,5 milhões de chips — fazendo do TigerTag **o protocolo RFID de terceiros mais implantado do mundo**; a maioria é integrada de fábrica por marcas de filamento terceiras — Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e outras em integração.
 
 **Como chega um chip a uma bobina?**
 Cola-se — e há **dois por bobina, em lados opostos**. É deliberado: as impressoras partilham muitas vezes um leitor RFID entre dois slots, pelo que um chip tem de ficar virado para o leitor seja qual for o lado em que a bobina está; pode ler à mão sem virar a bobina; pode lê-la sem a tirar do slot; e se um chip falhar o outro continua a responder. Bónus: cada bobina vazia dá-lhe dois chips reutilizáveis. Ver [porquê dois chips](../concepts/tigertag-chip.md).
@@ -186,7 +186,7 @@ Certifique-se de que a impressora está na mesma LAN, em modo LAN quando aplicá
 ## Programadores
 
 **Alguém construiu realmente sobre o TigerTag?**
-Sim — e independentemente de nós: o [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) (conjunto de ferramentas RFID multifabricante da comunidade) lê TigerTags; o [Spooly Tracker](https://spoolytracker.com/) (plataforma de inventário, web + móvel) identifica bobinas com TigerTags; e o [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware) faz da U1 **a primeira impressora que lê TigerTags nativamente**. Ver [integrações de terceiros](../developers/integrations.md).
+Sim — e independentemente de nós: o [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) (conjunto de ferramentas RFID multifabricante da comunidade) lê TigerTags; o [Spooly Tracker](https://spoolytracker.com/) (plataforma de inventário, web + móvel) identifica bobinas com TigerTags; e o [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware) faz da U1 **a primeira impressora que lê TigerTags nativamente**, e o [COSMOS](https://github.com/OpenCentauri/cosmos) faz o mesmo na Elegoo Centauri Carbon, com o leitor NFC integrado no seu Canvas. Ver [integrações de terceiros](../developers/integrations.md).
 
 **Posso construir a minha própria aplicação sobre o TigerTag?**
 Sim, sem autorização: especificação aberta do chip, [SDKs](../developers/sdks.md) (JS e Python) e uma [superfície de conta documentada](../developers/account-api.md) com exemplos funcionais para ESP32 / Home Assistant / Spoolman.
@@ -203,7 +203,7 @@ Não — é o padrão normal do Firebase. Toda a imposição é feita do lado do
 ## Fabricantes
 
 **Somos uma marca de filamento — como enviamos bobinas etiquetadas com TigerTag?**
-Rapidamente: uma linha de produção pode estar a funcionar com TigerTag em **apenas 5 dias**, a um custo muito baixo, com cada chip escrito em **cerca de 1 segundo** — comprovado com mais de 2,5 milhões de chips já expedidos pela Rosa3D, eSun, Sunlu, Landu, Jamg He e R3D. E cada marca que adere reforça o argumento coletivo para que os fabricantes de impressoras leiam o TigerTag nativamente. Leia [Para fabricantes de filamento](../vision/for-filament-manufacturers.md) e depois contacte **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
+Rapidamente: uma linha de produção pode estar a funcionar com TigerTag em **apenas 5 dias**, a um custo muito baixo, com cada chip escrito em **cerca de 1 segundo** — comprovado com mais de 2,5 milhões de chips já expedidos pela Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree e Smart3DPT. E cada marca que adere reforça o argumento coletivo para que os fabricantes de impressoras leiam o TigerTag nativamente. Leia [Para fabricantes de filamento](../vision/for-filament-manufacturers.md) e depois contacte **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
 
 **O meu produto pode tornar-se «TigerTag Certified»?**
 Depende de que lado de uma linha se encontra — e a maioria dos produtos está do lado livre.

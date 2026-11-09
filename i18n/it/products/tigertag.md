@@ -1,5 +1,5 @@
 ---
-sourceHash: 76ef763ccd1b41e1b5203fc1f2abe006e5e2b492e129510932ab728b6a57ae4e
+sourceHash: 386497c42994ff3a60f94f96843d530418f6734375457354bc08b66cd6927aa9
 sourcePath: docs/products/tigertag.md
 ---
 
@@ -100,8 +100,8 @@ e comincia a significare «questo *è* un TigerTag». Solo questo secondo uso ri
 scritta. Vedi [TRADEMARK.md](../../TRADEMARK.md).
 
 Sono stati prodotti più di **2,5 milioni di chip TigerTag** — la maggior parte integrati
-in fabbrica dai marchi di filamento (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D —
-con Filforme, Nanovia e altri in corso di integrazione). Tutti sono
+in fabbrica dai marchi di filamento (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D,
+Filforme, Lotactree, Smart3DPT, Nanovia — e altri in corso di integrazione). Tutti sono
 [partner certificati](../certified-partners.md); quella pagina è il registro, e
 l'unico modo autorevole per verificare che un marchio su una scatola sia legittimo.
 

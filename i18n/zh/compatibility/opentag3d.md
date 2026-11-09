@@ -1,5 +1,5 @@
 ---
-sourceHash: a2788a5364e611177c9b1b011d762345b26e5a8fd204e75a6b2b8beed634955c
+sourceHash: bbc5e9975e29d36151f72d68e741b2688c5f2a46503d71f8f73aae13a8b74ce6
 sourcePath: docs/compatibility/opentag3d.md
 ---
 
@@ -58,6 +58,6 @@ TigerTag 芯片**从不写锁定**。如果你更喜欢 OpenTag3D——或任何
 
 ---
 
-**◀ 上一页：** [OpenSpool](./openspool.md) · **▲ [文档索引](../../README.md)** · **下一页 ▶** [开发者](../developers/README.md)
+**◀ 上一页：** [OpenSpool](./openspool.md) · **▲ [文档索引](../../README.md)** · **下一页 ▶** [线轴标签格式对比](./tag-formats.md)
 
 **另见：** [Web API](../developers/web-api.md)、[TigerTag+ Certified](../products/tigertag-plus-certified.md)

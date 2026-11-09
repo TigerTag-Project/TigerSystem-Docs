@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -48,7 +48,7 @@ sourcePath: docs/vision/why-tigersystem.md
 
 这个选择源于我们在中国不断追问的一个问题：*“RFID 读卡器在哪里？”* 每个人都回答：*“在 Bambu Lab 里。”* 而我们说：错了。在 Bambu Lab，读卡器**在 AMS 里，而不在打印机里**——机器根本检测不到第三方线轴。**RFID 读卡器在你的口袋里。** 在每一部手机里，随时可用——而你甚至并不知道。
 
-说实话：自己把这一切都做出来，从来不是最初的计划。**已生产超过 250 万枚 TigerTag NFC 芯片——使 TigerTag 成为全球部署最广的第三方 RFID 协议**——其中大部分由第三方耗材品牌在工厂集成（Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D——Filforme、Nanovia 等也正在集成），还有一小部分是创客买来在家给线轴贴标签的。我们天真地以为，社区会自己想出各种用途：每卷线轴上都有一个开放的、有文档的 NFC 身份，似乎是一个显而易见的游乐场。
+说实话：自己把这一切都做出来，从来不是最初的计划。**已生产超过 250 万枚 TigerTag NFC 芯片——使 TigerTag 成为全球部署最广的第三方 RFID 协议**——其中大部分由第三方耗材品牌在工厂集成（Rosa3D、eSun、Sunlu、Landu、Jamg He、R3D、Filforme、Lotactree、Smart3DPT、Nanovia——还有更多正在集成），还有一小部分是创客买来在家给线轴贴标签的。我们天真地以为，社区会自己想出各种用途：每卷线轴上都有一个开放的、有文档的 NFC 身份，似乎是一个显而易见的游乐场。
 
 它并没有发生。尽管部署规模如此之大，却没有任何社区接手这个课题；没有人觉得值得围绕这个协议去构建集成。我们曾希望别人会接手——他们没有。于是我们自己做了，尽管这并不是我们最初的目标：我们开始**自己设想各种用途**，以展示一个**以用户而不是打印机为中心的、用于材料识别的开源 NFC 协议**的潜力——并为终于接过这条线索的人留下可运行的示例。
 
@@ -56,7 +56,8 @@ sourcePath: docs/vision/why-tigersystem.md
 [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) 读取 TigerTag，
 [Spooly Tracker](https://spoolytracker.com/) 把它的线轴识别建立在它们之上，而 Snapmaker U1 的
 [社区扩展固件](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-**在打印机本身上原生**读取它们——见
+**在打印机本身上原生**读取它们，[COSMOS](https://github.com/OpenCentauri/cosmos) 在 Elegoo Centauri Carbon
+上也是如此——见
 [第三方集成](../developers/integrations.md)。
 
 ## 有意为之的沙盒

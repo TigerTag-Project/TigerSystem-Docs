@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -92,8 +92,8 @@ Honestamente: construir tudo isso nós mesmos nunca foi o plano inicial. **Mais
 de 2,5 milhões de chips NFC TigerTag foram produzidos — fazendo do TigerTag o
 protocolo RFID de terceiros mais implantado do mundo** — a maioria deles
 integrada de fábrica por marcas de filamento de terceiros (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — com Filforme, Nanovia e outras em processo de
-integração), além de uma parcela menor
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — e
+outras em processo de integração), além de uma parcela menor
 comprada por makers para etiquetar bobinas em casa. Presumimos ingenuamente que a comunidade
 imaginaria os usos por conta própria: uma identidade NFC aberta e documentada em cada
 bobina parecia um parquinho óbvio.
@@ -111,7 +111,8 @@ o [OpenRFID](https://github.com/suchmememanyskill/OpenRFID) lê TigerTags,
 o [Spooly Tracker](https://spoolytracker.com/) construiu sua identificação de bobinas
 sobre eles, e o
 [firmware estendido da comunidade](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware) da Snapmaker U1
-os lê **nativamente na própria impressora** — veja as
+os lê **nativamente na própria impressora**, como o
+[COSMOS](https://github.com/OpenCentauri/cosmos) faz na Elegoo Centauri Carbon — veja as
 [integrações de terceiros](../developers/integrations.md).
 
 ## Um ambiente de testes, de propósito

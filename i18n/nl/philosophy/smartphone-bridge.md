@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -34,13 +34,24 @@ inventaris:
 
 ## Native RFID versus de brug
 
-Sommige printers lezen tags native (hun eigen, gesloten formaat); de meeste lezen
-helemaal niets. De brug maakt de mogelijkheden van de printer irrelevant:
+Sommige printers lezen tags native — meestal hun eigen, gesloten formaat,
+soms TigerTag zelf; de meeste lezen helemaal niets. De brug maakt de
+mogelijkheden van de printer irrelevant:
 
 | Pad | Vereist | Werkt met |
 |---|---|---|
-| **Native RFID** | Een printer die de vergrendelde tag van die fabrikant leest | Slechts één merk |
+| **Native RFID — tag van de fabrikant** | Een printer die de vergrendelde tag van die fabrikant leest | Slechts één merk |
+| **Native RFID — TigerTag** | Een machine waarvan de eigen firmware TigerTag leest — zeldzaam, en tot nu toe door de community gebouwd | Elk merk, zonder app ertussen |
 | **Smartphonebrug** | Elke NFC-telefoon | **Elke printer**, elk merk, zelfs volledig offline machines |
+
+De middelste rij is niet van ons, en hij is nieuw. De uitgebreide firmware van de
+community maakt van de [Snapmaker U1](../compatibility/snapmaker.md) de eerste
+printer die een TigerTag op de machine zelf leest; en de **BT-AMS-C**, een lezer
+met vier slots die op een AMS van Bambu Lab wordt gemonteerd, stuurt
+TigerTag-gegevens rechtstreeks naar de BMCU van de printer
+([hardware van derden](../compatibility/third-party-hardware.md)). Beide blijven
+uitzonderingen — en dat is een argument voor de brug, niet ertegen: die hoefde
+er nooit op te wachten.
 
 Met de brug bereikt de filamentdata de printer via
 [de printerintegraties van Tiger Studio](../compatibility/README.md) (zes merken

@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -57,7 +57,7 @@ TigerTag, który wie dokładnie, *jakim produktem* jest. Zamiast wartości, któ
 wpisał, niesie **identyfikator produktu z oficjalnego katalogu** — marka, kolor,
 materiał, temperatury, średnica, SKU, EAN — plus opcjonalne metadane wzbogacające,
 które mogą się poprawiać po zapisaniu chipa. Chip pozostaje **w 100 % offline**:
-wszystko, co potrzebne do druku, nadal jest na nim. Plus oznacza *zidentyfikowany*, a nie
+wszystko, co potrzebne do druku, nadal jest na nim. Znak `+` oznacza *zidentyfikowany*, a nie
 *certyfikowany*.
 
 **A TigerTag+ Certified?**
@@ -68,7 +68,7 @@ certyfikowany producent może go **wystawić**, więc sklonowany tag nie przecho
 [TigerTag+](../products/tigertag-plus.md).
 
 **Czy mogę zarchiwizować chip na swoim koncie?**
-Tak, i jest to funkcja oddzielna od plusa. Tiger Studio może zapisać dokładną zawartość chipa,
+Tak, i jest to funkcja oddzielna od znaku `+`. Tiger Studio może zapisać dokładną zawartość chipa,
 powiązaną z jego fizycznym UID, i później przeprogramować go z powrotem — przydatne,
 jeśli chip zostanie przepisany lub uszkodzony, i ważne **tylko na oryginalnym chipie**.
 Posiadanie kopii zapasowej nie czyni chipa TigerTag+.
@@ -108,7 +108,8 @@ to format, wokół którego zaprojektowano czytniki i uchwyty ekosystemu.
 Wyprodukowano ponad 2,5 miliona chipów — co czyni TigerTag **najbardziej
 rozpowszechnionym protokołem RFID firm trzecich na świecie**; większość jest zintegrowana w
 fabryce przez marki filamentu z zewnątrz — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D — a Filforme, Nanovia i kolejne są w trakcie integracji.
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — a kolejne są w trakcie
+integracji.
 
 **Jak chip trafia na szpulę?**
 Przykleja się — i są **dwa na szpuli, po przeciwnych stronach**. To
@@ -349,7 +350,9 @@ wielodostawcowy zestaw narzędzi RFID) odczytuje TigerTagi;
 [Spooly Tracker](https://spoolytracker.com/) (platforma magazynowa, web +
 mobilna) identyfikuje szpule za pomocą TigerTagów; a
 [rozszerzony firmware Snapmaker U1](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-czyni z U1 **pierwszą drukarkę, która odczytuje TigerTagi natywnie**. Zob.
+czyni z U1 **pierwszą drukarkę, która odczytuje TigerTagi natywnie**, a
+[COSMOS](https://github.com/OpenCentauri/cosmos) robi to samo na Elegoo Centauri Carbon, za pomocą
+czytnika NFC wbudowanego w jej Canvas. Zob.
 [integracje firm trzecich](../developers/integrations.md).
 
 **Czy mogę zbudować własną aplikację na TigerTag?**
@@ -378,7 +381,7 @@ bezpieczeństwa; klient może dotknąć tylko danych własnego użytkownika.
 Szybko: linia produkcyjna może ruszyć z TigerTag w **nawet
 5 dni**, bardzo tanio, z zapisem każdego chipa w **około
 1 sekundę** — co potwierdza ponad 2,5 miliona chipów już dostarczonych przez
-Rosa3D, eSun, Sunlu, Landu, Jamg He i R3D. A każda marka, która dołącza, wzmacnia zbiorowy argument
+Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree i Smart3DPT. A każda marka, która dołącza, wzmacnia zbiorowy argument
 za tym, by producenci drukarek odczytywali TigerTag natywnie. Przeczytaj
 [Dla producentów filamentu](../vision/for-filament-manufacturers.md), a potem
 napisz na **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.

@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -34,14 +34,24 @@ El teléfono hace de **puente** entre la bobina física y el inventario digital:
 
 ## RFID nativo frente al puente
 
-Algunas impresoras leen etiquetas de forma nativa (en su propio formato
-propietario); la mayoría no lee nada. El puente hace irrelevantes las
-capacidades de la impresora:
+Algunas impresoras leen etiquetas de forma nativa: normalmente en su propio
+formato propietario, de vez en cuando TigerTag mismo; la mayoría no lee nada. El
+puente hace irrelevantes las capacidades de la impresora:
 
 | Vía | Requiere | Funciona con |
 |---|---|---|
-| **RFID nativo** | Una impresora que lea la etiqueta bloqueada de ese fabricante | Una sola marca |
+| **RFID nativo — etiqueta del fabricante** | Una impresora que lea la etiqueta bloqueada de ese fabricante | Una sola marca |
+| **RFID nativo — TigerTag** | Una máquina cuyo propio firmware lee TigerTag: algo raro y, hasta ahora, obra de la comunidad | Todas las marcas, sin aplicación de por medio |
 | **Puente smartphone** | Cualquier teléfono NFC | **Todas las impresoras**, de cualquier marca, incluso máquinas totalmente sin conexión |
+
+La fila del medio no es nuestra, y es reciente. El firmware ampliado de la
+comunidad convierte a la [Snapmaker U1](../compatibility/snapmaker.md) en la
+primera impresora que lee un TigerTag en la propia máquina; y el **BT-AMS-C**, un
+lector de cuatro ranuras que se monta sobre un AMS de Bambu Lab, envía los datos
+TigerTag directamente a la BMCU de la impresora
+([hardware de terceros](../compatibility/third-party-hardware.md)). Ambos siguen
+siendo excepciones, y eso es un argumento a favor del puente, no en su contra:
+nunca tuvo que esperarlos.
 
 Con el puente, los datos del filamento llegan a la impresora a través de las
 [integraciones de impresoras de Tiger Studio](../compatibility/README.md) (seis

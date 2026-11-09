@@ -1,5 +1,5 @@
 ---
-sourceHash: cb19118f5e46d0c5e473f54203faefcd68e0d63d44df65395c86a415d8cfa58d
+sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -26,12 +26,31 @@ flowchart TB
 - **A sua conta na web** (`/account`) — inicie sessão na sua conta TigerSystem a partir de um navegador.
 - **Listas de desejos** — públicas e só para amigos, ambas disponíveis.
 - **Códigos de amigo e convites** — adicionem-se mutuamente como amigos a partir da web.
-- **Ligações de listas públicas** — partilhe um inventário ou uma lista de desejos só de leitura como `https://tigersystem.io/list/<token>`; quem a vê não precisa de aplicação nem de conta.
+- **Ligações de listas públicas** — partilhe uma lista só de leitura como `https://tigersystem.io/wishlist/<token>`; quem a vê não precisa de aplicação nem de conta.
 - **Catálogo de materiais e base de dados de referência** (`/materials`, `/database`) — explore o catálogo partilhado com que todas as aplicações trabalham.
 - **Impressoras e funcionalidades** (`/printers`, `/features`) — o que funciona com o quê.
 - **Modelos 3D** (`/models`) — modelos imprimíveis (o TigerPOD e companhia).
 - **Para fabricantes, programadores e imprensa** (`/manufacturers`, `/developers`, `/press`) — a história B2B, indicações de integração, recursos de media.
 - **Brindes** (`/goodies`) — o boné e a polo oficiais. Comprar um é uma das formas de [apoiar o projeto](../support.md).
+
+## Uma ligação de lista pública, na prática
+
+Uma ligação de lista pública é `https://tigersystem.io/wishlist/<token>`. Três coisas a saber antes de colar uma em algum lado:
+
+- **O token é a chave inteira.** Quem tiver a ligação abre a lista — sem conta, sem aplicação, nada a provar. Trate-a como uma palavra-passe que decidiu partilhar: serve para uma publicação num fórum ou para um amigo, não para uma lista que não gostaria de ver copiada mais adiante.
+- **Tornar uma lista pública é o que cria a ligação.** Na aplicação, definir uma lista como *pública* gera o seu token e publica uma cópia da lista; voltar a defini-la como privada apaga essa cópia e o token. Se a tornar pública outra vez, recebe um token **novo**, pelo que uma ligação distribuída antes não volta a funcionar. O TigerHub apenas mostra o que a aplicação publica.
+- **Só de leitura, e diz quem a partilhou.** Quem a vê vê apenas essa lista — os seus itens, e a ocasião ou a mensagem, se tiver definido uma — nunca o seu inventário nem as suas outras listas. A página mostra, no entanto, o seu **nome de apresentação**, as suas **ligações para redes sociais** e um botão *adicionar como amigo* que transporta o seu **código de descoberta**.
+
+Uma ligação é uma de duas formas de partilhar; a outra é um amigo:
+
+| | Ligação de lista pública | Amigo |
+|---|---|---|
+| Quem a vê | qualquer pessoa com a ligação | uma pessoa que aceitou |
+| Precisa de conta | não | sim |
+| Como | tornar uma lista pública | trocar códigos de descoberta |
+| Desfazer | tornar a lista privada | remover o amigo |
+
+A parte dos amigos é resumida aqui apenas para ficar ao lado da ligação; as regras de pedido e de remoção, e a sua aplicação do lado do servidor, pertencem a [Inventário e sincronização na nuvem](../concepts/inventory-and-cloud-sync.md).
 
 ## O TigerHub não é a base de dados
 
@@ -41,7 +60,7 @@ As contas de utilizador e os dados por trás de todas as aplicações vivem no *
 
 | Com | Como |
 |---|---|
-| Tiger Studio / Connect | Gerar e revogar ligações de partilha, enviar convites de amizade |
+| Tiger Studio / Connect | Tornar uma lista pública ou privada — o que cria ou apaga a sua ligação — e enviar convites de amizade |
 | Firebase (base de dados da conta) | Fonte dos dados publicados |
 | Visitantes | Navegador simples, sem necessidade de conta |
 

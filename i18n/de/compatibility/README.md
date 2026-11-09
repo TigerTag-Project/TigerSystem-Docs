@@ -1,5 +1,5 @@
 ---
-sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
+sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -29,7 +29,7 @@ voneinander unabhängige Achsen:
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** – HTTP + IFS | – (die Maschinen haben kein RFID-Lesegerät) | – | TigerTag fügt NFC hinzu, ohne Zusatzkosten |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Live** – MQTTS-LAN + Cloud, ACE | Mifare Ultralight | Keine | Spezifikation dokumentiert |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** – Moonraker-WebSocket + 4 Slots | Mifare Classic 1K | HKDF + RSA-2048-Signatur | Spezifikation dokumentiert |
-| [Klipper](./klipper.md) | Noch nicht (Fundament vorhanden) | n. z. | n. z. | n. z. |
+| [Klipper](./klipper.md) | **Live (Beta)** – Moonraker + Happy Hare / AFC | n. z. | n. z. | n. z. |
 | [OpenSpool](./openspool.md) | n. z. (Tag-Standard, kein Drucker) | NFC Type 2, NDEF JSON | Keine – offener Standard | Spezifikation dokumentiert |
 | Qidi | Nicht integriert | Mifare Classic 1K | Standardschlüssel | [Spezifikation dokumentiert](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -38,6 +38,11 @@ voneinander unabhängige Achsen:
 > werden im Tiger-Studio-Repository unter
 > [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors)
 > gepflegt – sie werden hier verlinkt, nicht dupliziert.
+
+## Tag-Formate im Vergleich
+
+TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab und Creality CFS,
+Wert für Wert und mit Quellen: **[Spulen-Tag-Formate im Vergleich](./tag-formats.md)**.
 
 ## Jenseits der Drucker
 

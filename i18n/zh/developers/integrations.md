@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f9124180c40a232c7aab51fda782a891af83baafbcf03c27d697b0ccfcff594
+sourceHash: f283703d11787d5928096fe85013ad132ac596d2e2898ee65ac2adbfbb60d0ef
 sourcePath: docs/developers/integrations.md
 ---
 
@@ -22,6 +22,13 @@ sourcePath: docs/developers/integrations.md
 摄像头串流、指标监控……还有 RFID 方面的好东西）。**借助它，Snapmaker U1
 能原生读取 TigerTag——成为第一台在机器本身上读取 TigerTag 的打印机。** 正是集体行动
 所瞄准的未来，经由社区提前到来。
+
+## COSMOS——Elegoo Centauri Carbon 固件（OpenCentauri）
+
+**[github.com/OpenCentauri/cosmos](https://github.com/OpenCentauri/cosmos)**
+——一款独立的、GPL-3.0 许可的社区固件，适用于 Elegoo Centauri Carbon（用 Yocto 构建的主线 Linux，
+Klipper / Kalico）。它的 Canvas RFID 模块驱动**内置于 Canvas 的 NFC 读卡器**——即这台打印机的多色单元——
+并用 OpenRFID 解码芯片：**Centauri Carbon 用自己的读卡器读取 TigerTag**，无需额外硬件。
 
 ## Spooly Tracker
 

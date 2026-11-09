@@ -1,5 +1,5 @@
 ---
-sourceHash: d588bae17f96b64547bcb21f7dcdda48bb127a18afb1bd80fef89579c926a651
+sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -33,13 +33,23 @@ Telefon pełni rolę **mostu** między fizyczną szpulą a cyfrowym magazynem:
 
 ## Natywny RFID a most
 
-Niektóre drukarki odczytują tagi natywnie (we własnym, własnościowym formacie); większość nie
-odczytuje niczego. Most sprawia, że możliwości drukarki przestają mieć znaczenie:
+Niektóre drukarki odczytują tagi natywnie — zwykle we własnym, własnościowym
+formacie, czasem sam TigerTag; większość nie odczytuje niczego. Most sprawia, że
+możliwości drukarki przestają mieć znaczenie:
 
 | Ścieżka | Wymaga | Działa z |
 |---|---|---|
-| **Natywny RFID** | Drukarki odczytującej zablokowany tag danego producenta | Tylko jedna marka |
+| **Natywny RFID — tag producenta** | Drukarki odczytującej zablokowany tag danego producenta | Tylko jedna marka |
+| **Natywny RFID — TigerTag** | Maszyny, której własny firmware odczytuje TigerTag — rzadkość, jak dotąd tworzona przez społeczność | Każda marka, bez aplikacji po drodze |
 | **Most ze smartfonem** | Dowolnego telefonu z NFC | **Każda drukarka**, każda marka, nawet maszyny w pełni offline |
+
+Środkowy wiersz nie jest nasz i jest świeży. Rozszerzony firmware społeczności
+czyni z [Snapmakera U1](../compatibility/snapmaker.md) pierwszą drukarkę, która
+odczytuje TigerTag na samej maszynie; a **BT-AMS-C**, czterogniazdowy czytnik
+montowany na AMS firmy Bambu Lab, wysyła dane TigerTag prosto do BMCU drukarki
+([sprzęt firm trzecich](../compatibility/third-party-hardware.md)). Oba
+przypadki pozostają wyjątkami — co jest argumentem za mostem, a nie przeciw
+niemu: nigdy nie musiał na nie czekać.
 
 Dzięki mostowi dane filamentu docierają do drukarki przez
 [integracje drukarek Tiger Studio](../compatibility/README.md) (dziś działa

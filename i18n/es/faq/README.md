@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -110,8 +110,8 @@ soportes del ecosistema.
 **¿Qué marcas de filamento envían TigerTag de fábrica?**
 Se han producido más de 2,5 millones de chips, lo que convierte a TigerTag en **el
 protocolo RFID de terceros más desplegado del mundo**; la mayoría los integran en
-fábrica marcas de filamento de terceros (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D),
-y Filforme, Nanovia y otras se están integrando.
+fábrica marcas de filamento de terceros (Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D,
+Filforme, Lotactree, Smart3DPT, Nanovia), y otras se están integrando.
 
 **¿Cómo llega un chip a una bobina?**
 Se pega, y hay **dos por bobina, en lados opuestos**. Es deliberado: las impresoras
@@ -361,8 +361,9 @@ multifabricante de la comunidad) lee TigerTags;
 [Spooly Tracker](https://spoolytracker.com/) (plataforma de inventario, web +
 móvil) identifica bobinas con TigerTags; y el
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-convierte a la U1 en **la primera impresora que lee TigerTags de forma nativa**.
-Véanse las [integraciones de terceros](../developers/integrations.md).
+convierte a la U1 en **la primera impresora que lee TigerTags de forma nativa**, y
+[COSMOS](https://github.com/OpenCentauri/cosmos) hace lo mismo en la Elegoo Centauri Carbon, con
+el lector NFC integrado en su Canvas. Véanse las [integraciones de terceros](../developers/integrations.md).
 
 **¿Puedo construir mi propia aplicación sobre TigerTag?**
 Sí, sin permiso: especificación abierta del chip, [SDK](../developers/sdks.md) (JS y
@@ -391,7 +392,7 @@ propio usuario.
 Rápido: una línea de producción puede estar funcionando con TigerTag en **tan solo
 5 días**, a muy bajo coste, con cada chip escrito en **aproximadamente 1 segundo**,
 demostrado con más de 2,5 millones de chips ya enviados por Rosa3D, eSun, Sunlu,
-Landu, Jamg He y R3D. Y cada marca que se une refuerza el argumento colectivo para
+Landu, Jamg He, R3D, Filforme, Lotactree y Smart3DPT. Y cada marca que se une refuerza el argumento colectivo para
 que los fabricantes de impresoras lean TigerTag de forma nativa. Lee
 [Para fabricantes de filamento](../vision/for-filament-manufacturers.md) y luego
 escribe a **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.

@@ -1,5 +1,5 @@
 ---
-sourceHash: 7d07c5df827c946751008349f73b7f696c2a6b497ecc08cb7bd6b9628d5ad2a8
+sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -46,7 +46,7 @@ flowchart LR
   TTP["TigerTag+<br/>the chip carries a real catalogue product<br/>(still 100% offline; signed = TigerTag+ Certified)"]
   TD -- "pick it from the catalogue" --> TDP
   TD -- "write to a chip" --> TT -- "pick a catalogue product" --> TTP
-  TDP -- "write to a chip" --> TT
+  TDP -- "write to a chip" --> TTP
 ```
 
 - **TigerData** — это протокол *до* чипа: та же идентичность, хранимая
@@ -80,6 +80,30 @@ TigerData может навсегда остаться цифровой или �
 [**обмена `.ttag`**](../developers/ttag-format.md) переносит один или
 несколько материалов инвентаря — TigerData, TigerData+, TigerTag или TigerTag+ — на USB-
 накопителе, в письме, между инструментами.
+
+## Повышение: от записи к чипу
+
+*Повысить* катушку — значит перейти в схеме слева направо: существующая запись
+TigerData или TigerData+ записывается на чистый чип NTAG, и с этого момента
+катушка сама несёт свою идентичность, офлайн.
+
+Что получится на выходе, зависит только от того, что было на входе:
+
+| Вы повышаете… | Вы получаете… | Потому что |
+|---|---|---|
+| **TigerData** — значения, выбранные владельцем | **TigerTag** | теперь с идентичностью связан физический UID |
+| **TigerData+** — реальный продукт из каталога | **TigerTag+** | чип теперь несёт ID продукта из каталога: *по-прежнему идентифицирован, по-прежнему не подписан* |
+
+Эта вторая строка — весь словарь `+` в одной строке. Повышение меняет
+*состояние* — цифровое на чип — и никогда не меняет смысл `+`. Только подпись
+сертифицированного производителя делает чип
+[TigerTag+ Certified](../products/tigertag-plus.md), и никакое повышение его не
+создаёт.
+
+И повышение — не дверь в одну сторону. Чипы никогда не блокируются от записи:
+повышенный чип можно стереть из [Tiger NFC Connect](../products/tigertag-connect.md)
+или Tiger Studio и записать заново ([чип TigerTag](./tigertag-chip.md)).
+Идентичность — это запись; чип — лишь то место, где она живёт сейчас.
 
 ---
 

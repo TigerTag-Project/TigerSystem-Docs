@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -47,18 +47,16 @@ eingeführt ist**, nicht wie gut der Partner ist.
 | **[Sunlu](https://www.sunlu.com)** | **Silber** – auf Anfrage integriert | Versieht Spulen auf Anfrage mit TigerTag+. |
 | **[Landu](https://www.landu3d.com)** | **Silber** | Versieht Spulen auf Anfrage mit TigerTag+. |
 | **[JamgHE](https://www.jamghe.com)** | **Silber** | Versieht Spulen auf Anfrage mit TigerTag+. |
+| **[Filforme](https://www.filforme.com)** | **Silber** | Versieht Spulen auf Anfrage mit TigerTag+. |
+| **[Lotactree](https://www.lotactree.com)** | **Silber** | Versieht Spulen auf Anfrage mit TigerTag+. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silber** | Versieht Spulen auf Anfrage mit TigerTag+. |
+| **[Nanovia](https://nanovia.tech)** | **In Produktion** | Liefert ab seiner Produktionslinie Spulen mit TigerTag aus. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Rosa3D-Filamentbox mit der TigerTag-Marke" /> | <img src="./assets/box-esun-cutout.png" alt="eSun-Filamentbox mit der TigerTag-Marke" /> | <img src="./assets/box-sunlu-cutout.png" alt="Sunlu-Filamentbox mit der TigerTag-Marke" /> |
 
 *Verkaufsverpackungen mit der Marke – im Laden gekauft, nicht gestellt.*
-
-## Integration in Arbeit
-
-**[Nanovia](https://nanovia.tech)** und **[Filforme](https://www.filforme.com)**
-integrieren derzeit TigerTag+. Sie liefern **noch nicht aus** und werden hier
-genannt, weil sie im Programm sind – nicht, um Verfügbarkeit zu suggerieren.
 
 ## Eine Marke selbst prüfen
 

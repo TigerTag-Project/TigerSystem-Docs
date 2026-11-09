@@ -1,5 +1,5 @@
 ---
-sourceHash: b7ae6d6d22dd6018a90d8d2b1a76fba0e5eca8f36eb88077de357dfa32ece126
+sourceHash: 8db9baa4de17f72cc00c5c0faa0214ab0de261b8563aeac39ced959ee416aed1
 sourcePath: docs/products/tigerscale.md
 ---
 
@@ -158,6 +158,12 @@ La distinta base completa con i costi si trova nel
 **Nessuna porta COM rilevata per l'ESP32-S3 nel [web installer](https://tigertag-project.github.io/Tiger-Scale-V3/)?**
 
 Potrebbe mancare un driver per il tuo sistema. [Segui la guida all'installazione del driver](../tutorials/tigerscale-serial-port-driver.md).
+
+**Un peso bloccato a 0 g o negativo, una lettura che deriva, lettori non
+rilevati, WiFi perso dopo un nuovo flash?**
+
+Il repository della bilancia tiene l'elenco completo, sintomo per sintomo:
+[risoluzione dei problemi di Tiger-Scale-V3](https://github.com/TigerTag-Project/Tiger-Scale-V3/blob/main/docs/TROUBLESHOOTING.md).
 
 ## Da fabbricare e da vendere
 

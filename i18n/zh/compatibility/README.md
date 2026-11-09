@@ -1,5 +1,5 @@
 ---
-sourceHash: a12992e7b500e2dde8a21443c09a157093fbf40e589c4ad4dc960c7acde2ce6f
+sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -26,7 +26,7 @@ TigerSystem 如何与各个打印机生态协同工作。两条相互独立的�
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **已上线**——HTTP + IFS | —（机器没有 RFID 读卡器） | — | TigerTag 为其加入 NFC，零成本 |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **已上线**——MQTTS 局域网 + 云，ACE | Mifare Ultralight | 无 | 规范已记录 |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **已上线**——Moonraker WebSocket + 4 个槽位 | Mifare Classic 1K | HKDF + RSA-2048 签名 | 规范已记录 |
-| [Klipper](./klipper.md) | 尚未（已有基础工作） | 不适用 | 不适用 | 不适用 |
+| [Klipper](./klipper.md) | **已上线（beta）**——Moonraker + Happy Hare / AFC | 不适用 | 不适用 | 不适用 |
 | [OpenSpool](./openspool.md) | 不适用（是标签标准，不是打印机） | NFC Type 2，NDEF JSON | 无——开放标准 | 规范已记录 |
 | Qidi | 未集成 | Mifare Classic 1K | 默认密钥 | [规范已记录](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -35,6 +35,11 @@ TigerSystem 如何与各个打印机生态协同工作。两条相互独立的�
 > 维护在 Tiger Studio 仓库的
 > [`docs/rfid-vendors/`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/tree/main/docs/rfid-vendors)
 > 下——这里只提供链接，不重复收录。
+
+## 标签格式并排对比
+
+TigerTag、OpenPrintTag、OpenTag3D、OpenSpool、Bambu Lab 和 Creality CFS，逐项数字并附来源：
+**[线轴标签格式对比](./tag-formats.md)**。
 
 ## 不止打印机
 

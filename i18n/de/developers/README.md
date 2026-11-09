@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -83,6 +83,7 @@ wird. Vollständige Richtlinie, Zertifizierungsstufen und Marken-Assets:
 | TigerTag-Chips lesen/schreiben | [SDKs](./sdks.md) |
 | Bestände als Dateien austauschen | [Das `.ttag`-Format](./ttag-format.md) |
 | Die Farbe einer Spule so zeigen wie jede andere App | [Das Material-Farbmuster](./material-swatch.md) – und sein [Live-Referenz-Renderer](./material-swatch-playground.html) |
+| Eine chiplose Spulen-ID erzeugen, das QR-Etikett einer Spule drucken oder zurücklesen | [Spulen-IDs und QR-Links](./spool-ids-and-qr-links.md) |
 | Mit dem Cloud-Bestand des Nutzers synchronisieren | [Account-API & Integration](./account-api.md) |
 | Die Nutzdaten des Chips verstehen | [Der TigerTag-Chip](../concepts/tigertag-chip.md) |
 

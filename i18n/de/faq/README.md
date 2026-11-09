@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -112,7 +112,7 @@ entworfen sind.
 Über 2,5 Millionen Chips wurden produziert – das macht TigerTag zum **am weitesten
 verbreiteten RFID-Protokoll eines Drittanbieters der Welt**; die meisten werden ab
 Werk von Filamentmarken Dritter integriert – Rosa3D, eSun, Sunlu, Landu, Jamg He,
-R3D –, mit Filforme, Nanovia und weiteren in Integration.
+R3D, Filforme, Lotactree, Smart3DPT, Nanovia –, und weitere sind in Integration.
 
 **Wie kommt ein Chip auf eine Spule?**
 Er wird aufgeklebt – und es gibt **zwei pro Spule, auf gegenüberliegenden Seiten**.
@@ -362,7 +362,9 @@ Community für viele Hersteller) liest TigerTags;
 [Spooly Tracker](https://spoolytracker.com/) (Bestandsplattform, Web + mobil)
 identifiziert Spulen mit TigerTags; und die
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-macht den U1 zum **ersten Drucker, der TigerTags nativ liest**. Siehe
+macht den U1 zum **ersten Drucker, der TigerTags nativ liest**, und
+[COSMOS](https://github.com/OpenCentauri/cosmos) tut dasselbe auf dem Elegoo Centauri Carbon, mit
+dem im Canvas eingebauten NFC-Lesegerät. Siehe
 [Integrationen von Drittanbietern](../developers/integrations.md).
 
 **Kann ich meine eigene App auf TigerTag aufbauen?**
@@ -393,7 +395,7 @@ Nutzers zugreifen.
 Schnell: Eine Produktionslinie kann mit TigerTag in **nur 5 Tagen** laufen, zu sehr
 geringen Kosten, wobei jeder Chip in **etwa 1 Sekunde** geschrieben wird – bewährt
 mit mehr als 2,5 Millionen bereits ausgelieferten Chips von Rosa3D, eSun, Sunlu,
-Landu, Jamg He und R3D. Und jede Marke, die dazukommt, stärkt das gemeinsame
+Landu, Jamg He, R3D, Filforme, Lotactree und Smart3DPT. Und jede Marke, die dazukommt, stärkt das gemeinsame
 Argument für Druckerhersteller, TigerTag nativ zu lesen. Lies
 [Für Filamenthersteller](../vision/for-filament-manufacturers.md) und melde dich dann
 unter **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
