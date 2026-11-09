@@ -1,5 +1,5 @@
 ---
-sourceHash: 07bbf83b8b1dfd9a00446b83543f71140225dfcba504fe8d1c858d333cbe7879
+sourceHash: b25377e9303c4e7fc2753a4264c19fd63dbc588d4578aaf1b8f25ee09e788d96
 sourcePath: docs/hall-of-fame.md
 ---
 
@@ -22,18 +22,20 @@ réclamation.
 
 | Qui | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 85 | 64 | 4 |
-| **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 1 | 11 | 9 |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 96 | 69 | 4 |
+| **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 5 | 11 | 9 |
 | **[@suchmememanyskill](https://github.com/suchmememanyskill)** | 39 | — | — |
 | **[@RP3D-S](https://github.com/RP3D-S)** | 2 | 6 | 1 |
 | **[@ennisj](https://github.com/ennisj)** | 21 | — | — |
-| **[@storm8488](https://github.com/storm8488)** | 9 | 1 | — |
 | **[@ijord](https://github.com/ijord)** | — | 2 | — |
+| **[@BastiMila](https://github.com/BastiMila)** | — | 2 | — |
+| **[@storm8488](https://github.com/storm8488)** | 9 | — | — |
 | **[@physicsG](https://github.com/physicsG)** | 1 | — | 2 |
+| **[@dumdumbee](https://github.com/dumdumbee)** | — | — | 2 |
 | **[@sjordan0228](https://github.com/sjordan0228)** | — | — | 2 |
+| **[@craidos-beep](https://github.com/craidos-beep)** | — | 1 | — |
 | **[@clauzet-rgb](https://github.com/clauzet-rgb)** | — | 1 | — |
 | **[@TrueFurina](https://github.com/TrueFurina)** | — | 1 | — |
-| **[@BastiMila](https://github.com/BastiMila)** | — | 1 | — |
 | **[@sancho0410](https://github.com/sancho0410)** | — | 1 | — |
 | **[@hitman4274](https://github.com/hitman4274)** | — | — | 1 |
 | **[@neonlyte54-alt](https://github.com/neonlyte54-alt)** | — | — | 1 |
@@ -45,8 +47,10 @@ réclamation.
 | **[@elphield](https://github.com/elphield)** | — | — | 1 |
 | **[@Exsilium122](https://github.com/Exsilium122)** | — | — | 1 |
 | **[@jbast1224](https://github.com/jbast1224)** | — | — | 1 |
+| **[@juditech3D](https://github.com/juditech3D)** | — | — | 1 |
 | **[@wintry](https://github.com/wintry)** | — | — | 1 |
 | **[@lacouelle](https://github.com/lacouelle)** | — | — | 1 |
+| **[@Atome3D](https://github.com/Atome3D)** | 2 | — | — |
 | **[@thekakester](https://github.com/thekakester)** | 1 | — | — |
 | **[@liberodark](https://github.com/liberodark)** | 1 | — | — |
 | **[@yanshay](https://github.com/yanshay)** | 1 | — | — |
