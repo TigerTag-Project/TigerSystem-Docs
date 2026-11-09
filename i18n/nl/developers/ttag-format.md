@@ -128,6 +128,7 @@ gedeelde lijst wordt nooit gewijzigd).
 Een generator die de lege spoel kent, schrijft beide velden. Een die hem niet
 kent, laat ze weg in plaats van te gokken: Tiger Studio zet dan de eigen
 container van het merk, of vraagt het wanneer er meerdere of geen zijn.
+
 ## Mediatype
 
 Het canonieke mediatype is **`application/vnd.tigertag.ttag+json`** — het is

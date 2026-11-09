@@ -127,6 +127,7 @@ modyfikowana).
 Generator, który zna pustą szpulę, zapisuje oba pola. Taki, który jej nie zna,
 pomija je zamiast zgadywać: Tiger Studio ustawia wtedy własny pojemnik marki
 albo pyta, gdy jest ich kilka lub nie ma żadnego.
+
 ## Typ nośnika
 
 Kanoniczny typ nośnika to **`application/vnd.tigertag.ttag+json`** — ma

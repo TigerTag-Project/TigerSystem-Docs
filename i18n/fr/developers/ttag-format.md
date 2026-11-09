@@ -131,6 +131,7 @@ partagée n'est jamais modifiée).
 Un générateur qui connaît la bobine vide écrit les deux champs. Celui qui ne la
 connaît pas les omet plutôt que de deviner : Tiger Studio pose alors le
 contenant propre à la marque, ou demande quand il y en a plusieurs ou aucun.
+
 ## Type de média
 
 Le type de média canonique est **`application/vnd.tigertag.ttag+json`** — il

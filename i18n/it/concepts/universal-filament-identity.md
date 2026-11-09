@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -80,6 +80,32 @@ tutti e quattro gli stati viaggiano come file: il
 [**formato di scambio `.ttag`**](../developers/ttag-format.md) trasporta uno o
 più materiali di inventario — TigerData, TigerData+, TigerTag o TigerTag+ — su una chiavetta
 USB, in una e-mail, tra strumenti.
+
+## Il record e il chip
+
+I quattro stati qui sopra sono stati del **record**. La
+[guida RFID](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)
+elenca invece tipi di tag, e quelli descrivono il **chip**: ciò che è scritto
+sul silicio, letto offline, senza account. Sono due assi, non due versioni
+della stessa lista, e nessuno dei due è sbagliato.
+
+Cosa trova un lettore sul chip, per ogni stato:
+
+| Stato del record | Sul chip |
+|---|---|
+| **TigerData**, **TigerData+** | niente: non c'è ancora un chip |
+| **TigerTag** | `ID TigerTag` `0x5BF59264`, e `ID Product` `0xFFFFFFFF` (nessuno) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97`, e un `ID Product` del catalogo |
+| **TigerTag+ Certified** | lo stesso di un TigerTag+, più una firma valida nelle pagine `0x18`–`0x27` |
+
+Un TigerTag+ porta lo stesso id di tipo, firmato o no. Per sapere se un chip è
+un TigerTag+ Certified, un lettore verifica la firma; l'id di tipo non può
+dirlo.
+
+L'asse del chip ha un valore senza alcun record dietro: **TigerTag Init**
+(`0x6C41A2E1`). Contrassegna un chip vergine preparato per ricevere una
+scrittura. Sul filamento non è ancora stato deciso nulla, quindi non c'è alcun
+record che possa trovarsi in uno stato, e non è un quinto.
 
 ## Promozione: da un record a un chip
 

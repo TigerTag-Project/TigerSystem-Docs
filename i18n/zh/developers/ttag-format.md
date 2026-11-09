@@ -111,6 +111,7 @@ sourcePath: docs/developers/ttag-format.md
 
 知道空线盘的生成器会写入这两个字段。不知道的生成器应省略它们，而不是猜测：
 Tiger Studio 随后会设置该品牌自己的容器，或在有多个、或一个都没有时询问。
+
 ## 媒体类型
 
 规范的媒体类型是 **`application/vnd.tigertag.ttag+json`**——

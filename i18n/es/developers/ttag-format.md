@@ -127,6 +127,7 @@ puede corregir el peso de un contenedor para sus propias bobinas (guardado en
 Un generador que conoce la bobina vacía escribe los dos campos. Uno que no la
 conoce los omite en lugar de adivinar: Tiger Studio pone entonces el contenedor
 propio de la marca, o pregunta cuando hay varios o ninguno.
+
 ## Tipo de medio
 
 El tipo de medio canónico es **`application/vnd.tigertag.ttag+json`**: importa

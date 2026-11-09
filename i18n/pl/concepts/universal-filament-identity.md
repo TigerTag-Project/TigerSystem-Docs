@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -80,6 +80,32 @@ Wszystkie cztery stany podróżują też jako pliki:
 [**format wymiany `.ttag`**](../developers/ttag-format.md) niesie jeden lub
 więcej materiałów magazynowych — TigerData, TigerData+, TigerTag lub TigerTag+ —
 na pendrive'ie, w e-mailu, między narzędziami.
+
+## Rekord i chip
+
+Cztery stany powyżej to stany **rekordu**.
+[Przewodnik RFID](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)
+wymienia zamiast tego typy tagów, a one opisują **chip**: to, co zapisano w
+krzemie, odczytywane offline, bez konta. To dwie osie, a nie dwie wersje
+jednej listy, i żadna z nich nie jest błędna.
+
+Co czytnik znajduje na chipie dla każdego stanu:
+
+| Stan rekordu | Na chipie |
+|---|---|
+| **TigerData**, **TigerData+** | nic: chipa jeszcze nie ma |
+| **TigerTag** | `ID TigerTag` `0x5BF59264` oraz `ID Product` `0xFFFFFFFF` (brak) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97` oraz `ID Product` z katalogu |
+| **TigerTag+ Certified** | to samo co TigerTag+, plus ważny podpis na stronach `0x18`–`0x27` |
+
+TigerTag+ ma ten sam identyfikator typu, podpisany czy nie. Aby wiedzieć, czy
+chip jest TigerTag+ Certified, czytnik weryfikuje podpis; identyfikator typu
+tego nie powie.
+
+Oś chipa ma jedną wartość, za którą nie stoi żaden rekord: **TigerTag Init**
+(`0x6C41A2E1`). Oznacza pusty chip przygotowany do zapisu. O filamencie nic
+jeszcze nie postanowiono, więc nie ma rekordu, który mógłby być w jakimkolwiek
+stanie, i nie jest to stan piąty.
 
 ## Promocja: od rekordu do chipa
 

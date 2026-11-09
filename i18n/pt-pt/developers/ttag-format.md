@@ -87,6 +87,7 @@ Os ids são cadeias de uma lista fixa distribuída com o Tiger Studio, [`data/co
 `container_weight` é um **instantâneo** tirado quando o recipiente foi escolhido, não uma consulta. Um registo mantém o seu valor quando a lista muda, e uma conta pode corrigir o peso de um recipiente para as suas próprias bobinas (guardado em `users/{uid}/containerOverrides/{id}`; a lista partilhada nunca é modificada).
 
 Um gerador que conhece a bobina vazia escreve os dois campos. Um que não a conhece omite-os em vez de adivinhar: o Tiger Studio define então o recipiente próprio da marca, ou pergunta quando há vários ou nenhum.
+
 ## Tipo de media
 
 O tipo de media de referência é **`application/vnd.tigertag.ttag+json`** — importa quando um `.ttag` é **servido por http(s)** (o `Content-Type` que um playground web, uma CDN ou um alojamento de coleções de marca deve enviar). O `application/json` também é aceite. Um ficheiro em disco não traz MIME — é identificado pela extensão `.ttag` e, de forma autoritativa, pelo seu conteúdo: os importadores **validam pelo conteúdo** (`format`/`kind`/`version`), nunca apenas pelo cabeçalho MIME ou pela extensão do ficheiro.

@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -85,6 +85,33 @@ de façon atomique** quand vous le décidez (Tiger Studio le fait en une seule
 [**format d'échange `.ttag`**](../developers/ttag-format.md) transporte un ou
 plusieurs matériaux d'inventaire — TigerData, TigerData+, TigerTag ou TigerTag+ —
 sur une clé USB, dans un mail, d'un outil à l'autre.
+
+## L'enregistrement et la puce
+
+Les quatre états ci-dessus sont des états de l'**enregistrement**. Le
+[guide RFID](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)
+liste plutôt des types de tag, et ceux-là décrivent la **puce** : ce qui est
+écrit sur le silicium, lu hors ligne, sans compte. Ce sont deux axes, pas deux
+versions d'une même liste, et aucun des deux n'a tort.
+
+Ce qu'un lecteur trouve sur la puce, pour chaque état :
+
+| État de l'enregistrement | Sur la puce |
+|---|---|
+| **TigerData**, **TigerData+** | rien : il n'y a pas encore de puce |
+| **TigerTag** | `ID TigerTag` `0x5BF59264`, et `ID Product` `0xFFFFFFFF` (aucun) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97`, et un `ID Product` du catalogue |
+| **TigerTag+ Certified** | la même chose qu'un TigerTag+, plus une signature valide dans les pages `0x18`–`0x27` |
+
+Un TigerTag+ porte le même identifiant de type, signé ou non. Pour savoir si
+une puce est un TigerTag+ Certified, un lecteur vérifie la signature ;
+l'identifiant de type ne peut pas le dire.
+
+L'axe de la puce a une valeur sans aucun enregistrement derrière :
+**TigerTag Init** (`0x6C41A2E1`). Elle marque une puce vierge préparée pour
+recevoir une écriture. Rien n'est encore décidé sur le filament, il n'y a donc
+aucun enregistrement qui puisse être dans un état, et ce n'en est pas un
+cinquième.
 
 ## La promotion : de l'enregistrement à la puce
 

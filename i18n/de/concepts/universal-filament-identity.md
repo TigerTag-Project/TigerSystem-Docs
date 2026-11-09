@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -85,6 +85,33 @@ Schritt). Und alle vier Zustände reisen als Dateien: Das
 [**`.ttag`-Austauschformat**](../developers/ttag-format.md) transportiert ein oder
 mehrere Bestandsmaterialien – TigerData, TigerData+, TigerTag oder TigerTag+ – auf
 einem USB-Stick, in einer Mail, zwischen Tools.
+
+## Der Datensatz und der Chip
+
+Die vier Zustände oben sind Zustände des **Datensatzes**. Der
+[RFID-Leitfaden](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)
+listet stattdessen Tag-Typen auf, und die beschreiben den **Chip**: was auf dem
+Silizium steht, offline gelesen, ohne Konto. Das sind zwei Achsen, nicht zwei
+Fassungen derselben Liste, und keine von beiden ist falsch.
+
+Was ein Lesegerät für jeden Zustand auf dem Chip findet:
+
+| Zustand des Datensatzes | Auf dem Chip |
+|---|---|
+| **TigerData**, **TigerData+** | nichts: Es gibt noch keinen Chip |
+| **TigerTag** | `ID TigerTag` `0x5BF59264` und `ID Product` `0xFFFFFFFF` (keine) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97` und eine `ID Product` aus dem Katalog |
+| **TigerTag+ Certified** | dasselbe wie ein TigerTag+, plus eine gültige Signatur in den Seiten `0x18`–`0x27` |
+
+Ein TigerTag+ trägt dieselbe Typ-ID, ob signiert oder nicht. Ob ein Chip ein
+TigerTag+ Certified ist, prüft ein Lesegerät an der Signatur; die Typ-ID kann
+es nicht sagen.
+
+Die Chip-Achse hat einen Wert ohne Datensatz dahinter: **TigerTag Init**
+(`0x6C41A2E1`). Er markiert einen leeren Chip, der für einen Schreibvorgang
+vorbereitet ist. Über das Filament ist noch nichts entschieden, also gibt es
+keinen Datensatz, der in irgendeinem Zustand sein könnte, und es ist kein
+fünfter.
 
 ## Aufwertung: vom Datensatz zum Chip
 

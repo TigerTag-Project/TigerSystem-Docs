@@ -128,6 +128,7 @@ non viene mai modificato).
 Un generatore che conosce la bobina vuota scrive entrambi i campi. Uno che non
 la conosce li omette invece di indovinare: Tiger Studio imposta allora il
 contenitore proprio del marchio, o chiede quando ce ne sono diversi o nessuno.
+
 ## Tipo di media
 
 Il tipo di media canonico è **`application/vnd.tigertag.ttag+json`**: conta

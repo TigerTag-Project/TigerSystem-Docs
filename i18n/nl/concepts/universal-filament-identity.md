@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -80,6 +80,32 @@ alle vier de toestanden reizen als bestanden: het
 [**`.ttag`-uitwisselingsformaat**](../developers/ttag-format.md) bevat een of
 meer inventarismaterialen — TigerData, TigerData+, TigerTag of TigerTag+ — op een USB-
 stick, in een e-mail, tussen tools.
+
+## Het record en de chip
+
+De vier toestanden hierboven zijn toestanden van het **record**. De
+[RFID-gids](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)
+somt in plaats daarvan tagtypes op, en die beschrijven de **chip**: wat er op
+het silicium staat, offline gelezen, zonder account. Het zijn twee assen, geen
+twee versies van één lijst, en geen van beide is fout.
+
+Wat een lezer voor elke toestand op de chip vindt:
+
+| Toestand van het record | Op de chip |
+|---|---|
+| **TigerData**, **TigerData+** | niets: er is nog geen chip |
+| **TigerTag** | `ID TigerTag` `0x5BF59264`, en `ID Product` `0xFFFFFFFF` (geen) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97`, en een `ID Product` uit de catalogus |
+| **TigerTag+ Certified** | hetzelfde als een TigerTag+, plus een geldige handtekening in de pagina's `0x18`–`0x27` |
+
+Een TigerTag+ draagt dezelfde type-id, of hij nu ondertekend is of niet. Of een
+chip een TigerTag+ Certified is, controleert een lezer aan de handtekening; de
+type-id kan het niet zeggen.
+
+De chip-as heeft één waarde zonder record erachter: **TigerTag Init**
+(`0x6C41A2E1`). Die markeert een lege chip die klaar is om beschreven te
+worden. Over het filament is nog niets beslist, dus er is geen record dat in
+een toestand kan zijn, en het is geen vijfde.
 
 ## Promotie: van een record naar een chip
 

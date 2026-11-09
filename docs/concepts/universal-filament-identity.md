@@ -76,6 +76,32 @@ all four states travel as files: the
 more inventory materials — TigerData, TigerData+, TigerTag or TigerTag+ — on a USB
 stick, in a mail, between tools.
 
+## The record and the chip
+
+The four states above are states of the **record**. The
+[RFID guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)
+lists tag types instead, and those describe the **chip**: what is written on
+the silicon, read offline with no account. They are two axes, not two
+versions of one list, and neither is wrong.
+
+What a reader finds on the chip, for each state:
+
+| Record state | On the chip |
+|---|---|
+| **TigerData**, **TigerData+** | nothing: there is no chip yet |
+| **TigerTag** | `ID TigerTag` `0x5BF59264`, and `ID Product` `0xFFFFFFFF` (none) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97`, and a catalogue `ID Product` |
+| **TigerTag+ Certified** | the same as a TigerTag+, plus a valid signature in pages `0x18`–`0x27` |
+
+A TigerTag+ carries the same type id whether it is signed or not. To know
+whether a chip is a TigerTag+ Certified, a reader verifies the signature; the
+type id cannot tell.
+
+The chip axis has one value with no record behind it: **TigerTag Init**
+(`0x6C41A2E1`). It marks a blank chip prepared to receive a write. Nothing
+about the filament has been decided yet, so there is no record to be in any
+state, and it is not a fifth one.
+
 ## Promotion: from a record to a chip
 
 *Promoting* a spool is the move from the left of the diagram to the right: an

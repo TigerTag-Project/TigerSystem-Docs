@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -53,6 +53,23 @@ flowchart LR
 - Escreva nesse chip um **produto do catálogo** em vez de valores escritos à mão e é um [**TigerTag+**](../products/tigertag-plus.md) — o mesmo `+` do TigerData+, com o mesmo significado: *identificado*. Assinado por um fabricante certificado, torna-se um **TigerTag+ Certified**. Em qualquer dos casos, o chip continua legível a 100 % offline.
 
 Um TigerData pode ficar digital para sempre, ou ser **promovido a um chip real de forma atómica** quando estiver pronto (o Tiger Studio fá-lo num só passo). E os quatro estados viajam como ficheiros: o [**formato de intercâmbio `.ttag`**](../developers/ttag-format.md) transporta um ou mais materiais do inventário — TigerData, TigerData+, TigerTag ou TigerTag+ — numa unidade USB, num e-mail, entre ferramentas.
+
+## O registo e o chip
+
+Os quatro estados acima são estados do **registo**. O [guia RFID](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types) lista antes tipos de tag, e esses descrevem o **chip**: o que está escrito no silício, lido offline, sem conta. São dois eixos, não duas versões da mesma lista, e nenhum dos dois está errado.
+
+O que um leitor encontra no chip, para cada estado:
+
+| Estado do registo | No chip |
+|---|---|
+| **TigerData**, **TigerData+** | nada: ainda não há chip |
+| **TigerTag** | `ID TigerTag` `0x5BF59264`, e `ID Product` `0xFFFFFFFF` (nenhum) |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97`, e um `ID Product` do catálogo |
+| **TigerTag+ Certified** | o mesmo que um TigerTag+, mais uma assinatura válida nas páginas `0x18`–`0x27` |
+
+Um TigerTag+ tem o mesmo id de tipo, assinado ou não. Para saber se um chip é um TigerTag+ Certified, um leitor verifica a assinatura; o id de tipo não o consegue dizer.
+
+O eixo do chip tem um valor sem nenhum registo por trás: **TigerTag Init** (`0x6C41A2E1`). Marca um chip virgem preparado para receber uma escrita. Ainda nada foi decidido sobre o filamento, por isso não há registo que possa estar num estado, e não é um quinto.
 
 ## Promoção: de um registo a um chip
 

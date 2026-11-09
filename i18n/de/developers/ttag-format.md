@@ -129,6 +129,7 @@ wird nie verändert).
 Ein Generator, der die leere Spule kennt, schreibt beide Felder. Einer, der sie
 nicht kennt, lässt sie weg, statt zu raten: Tiger Studio setzt dann den
 markeneigenen Behälter oder fragt nach, wenn es mehrere oder keinen gibt.
+
 ## Medientyp
 
 Der kanonische Medientyp ist **`application/vnd.tigertag.ttag+json`** – er zählt

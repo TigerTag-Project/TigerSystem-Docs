@@ -128,6 +128,7 @@ nunca é modificada).
 Um gerador que conhece o carretel vazio grava os dois campos. Um que não
 conhece os omite em vez de adivinhar: o Tiger Studio então define o recipiente
 próprio da marca, ou pergunta quando há vários ou nenhum.
+
 ## Tipo de mídia
 
 O tipo de mídia oficial é **`application/vnd.tigertag.ttag+json`** — ele

@@ -1,5 +1,5 @@
 ---
-sourceHash: 52a14d86d0445a358494a73709282db8ccebdcbc0de1a6ab85075007031d63cb
+sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -68,6 +68,28 @@ TigerData 可以永远保持数字形式，也可以在你准备好时**原子�
 （Tiger Studio 一步即可完成）。并且这四种状态都能以文件形式流转：
 [**`.ttag` 交换格式**](../developers/ttag-format.md)可以在 U 盘上、邮件中、工具之间，
 携带一个或多个库存材料——TigerData、TigerData+、TigerTag 或 TigerTag+。
+
+## 记录与芯片
+
+上面的四种状态是**记录**的状态。[RFID 指南](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#three-tag-types)列出的则是标签类型，
+它们描述的是**芯片**：写在硅片上的内容，离线读取，无需账户。这是两条轴，
+不是同一份列表的两个版本，两者都没有错。
+
+对每种状态，读取器在芯片上看到的内容：
+
+| 记录状态 | 芯片上 |
+|---|---|
+| **TigerData**、**TigerData+** | 什么都没有：还没有芯片 |
+| **TigerTag** | `ID TigerTag` `0x5BF59264`，以及 `ID Product` `0xFFFFFFFF`（无） |
+| **TigerTag+** | `ID TigerTag` `0xBC0FCB97`，以及一个目录中的 `ID Product` |
+| **TigerTag+ Certified** | 与 TigerTag+ 相同，另加第 `0x18`–`0x27` 页中的有效签名 |
+
+无论是否签名，TigerTag+ 都带有同一个类型 id。要判断芯片是否为 TigerTag+ Certified，
+读取器需验证签名；类型 id 无法说明这一点。
+
+芯片这条轴上有一个值，背后没有任何记录：**TigerTag Init**（`0x6C41A2E1`）。
+它标记一枚已准备好接受写入的空白芯片。关于耗材还什么都没有确定，所以不存在
+处于任何状态的记录，它也不是第五种状态。
 
 ## 升级：从记录到芯片
 
