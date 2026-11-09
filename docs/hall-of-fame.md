@@ -14,7 +14,7 @@ contribution, not a complaint.
 
 | Who | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 96 | 69 | 4 |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 99 | 69 | 4 |
 | **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 5 | 11 | 9 |
 | **[@suchmememanyskill](https://github.com/suchmememanyskill)** | 39 | — | — |
 | **[@RP3D-S](https://github.com/RP3D-S)** | 2 | 6 | 1 |

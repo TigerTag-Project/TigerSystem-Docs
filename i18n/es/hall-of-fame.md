@@ -1,5 +1,5 @@
 ---
-sourceHash: b25377e9303c4e7fc2753a4264c19fd63dbc588d4578aaf1b8f25ee09e788d96
+sourceHash: 8be313a644a9fc2dcd3ffd8e7ddc706a2abee521a2fbe30a352b3bd114e72c26
 sourcePath: docs/hall-of-fame.md
 ---
 
@@ -20,7 +20,7 @@ queja.
 
 | Quién | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 96 | 69 | 4 |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 99 | 69 | 4 |
 | **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 5 | 11 | 9 |
 | **[@suchmememanyskill](https://github.com/suchmememanyskill)** | 39 | — | — |
 | **[@RP3D-S](https://github.com/RP3D-S)** | 2 | 6 | 1 |
