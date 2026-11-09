@@ -29,8 +29,8 @@ flowchart TB
  account from a browser.
 - **Wishlists** — public ones and friends-only ones, both deployed.
 - **Friend codes & invitations** — add each other as friends from the web.
-- **Public list links** — share a read-only inventory or wishlist as
- `https://tigersystem.io/list/<token>`; the viewer needs no app and no
+- **Public list links** — share a list read-only as
+ `https://tigersystem.io/wishlist/<token>`; the viewer needs no app and no
  account.
 - **Material catalogue & reference database** (`/materials`, `/database`) —
  browse the shared catalogue every app resolves against.
@@ -43,20 +43,23 @@ flowchart TB
 
 ## A public list link, in practice
 
-A public list link is `https://tigersystem.io/list/<token>`. Three things to
+A public list link is `https://tigersystem.io/wishlist/<token>`. Three things to
 know before you paste one somewhere:
 
 - **The token is the whole key.** Anyone holding the link opens the list — no
   account, no app, nothing to prove. Treat it like a password you chose to
   share: fine for a forum post or a friend, not for a list you would mind
   seeing copied further.
-- **It is made and unmade from the apps, not from the website.** Tiger Studio
-  and Tiger NFC Connect generate and revoke share links (see *Interactions*
-  below); TigerHub only renders what they publish. Revoking is how you
-  withdraw a list; publishing it again afterwards produces a **new** token,
-  so a link handed out earlier is not revived by it.
-- **Read-only, and only that list.** The viewer sees the list you published
-  and nothing else from your account. Wishlists are shared the same way.
+- **Making a list public is what creates the link.** In the app, setting a
+  list to *public* mints its token and publishes a copy of the list; setting
+  it back to private deletes that copy and the token. Make it public again and
+  it gets a **new** token, so a link handed out earlier is not revived.
+  TigerHub only renders what the app publishes.
+- **Read-only, and it says who shared it.** The viewer sees that one list —
+  its items, and the occasion or message if you set one — never your inventory
+  or your other lists. The page does show your **display name**, your **social
+  links**, and an *add as a friend* button that carries your **discovery
+  code**.
 
 A link is one of two ways to share; the other is a friend:
 
@@ -64,8 +67,8 @@ A link is one of two ways to share; the other is a friend:
 |---|---|---|
 | Who sees it | anyone with the link | one person you accepted |
 | Needs an account | no | yes |
-| How | generate a link in the apps | exchange discovery codes |
-| Undo | revoke the link | remove the friend |
+| How | make a list public | exchange discovery codes |
+| Undo | make the list private | remove the friend |
 
 The friend half is summarised here only to sit beside the link; the request
 and removal rules, and the server-side enforcement of both, belong to
@@ -84,7 +87,7 @@ and the TigerSystem account all interoperate on the same data. TigerHub is the
 
 | With | How |
 |---|---|
-| Tiger Studio / Connect | Generate & revoke share links, send friend invites |
+| Tiger Studio / Connect | Make a list public or private — which creates or deletes its link — and send friend invites |
 | Firebase (account database) | Source of the published data |
 | Visitors | Plain browser, no account needed |
 

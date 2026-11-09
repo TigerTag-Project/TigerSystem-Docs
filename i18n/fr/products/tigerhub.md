@@ -1,5 +1,5 @@
 ---
-sourceHash: d45e89c2c7d78d29cde40e360b79944fe16e2d6691bd0411d0ea79299082efde
+sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -36,9 +36,8 @@ flowchart TB
 - **Listes de souhaits** — publiques ou réservées aux amis, les deux déployées.
 - **Codes d'ami et invitations** — ajoutez-vous mutuellement comme amis depuis
  le web.
-- **Liens de listes publiques** — partagez un inventaire ou une liste de
- souhaits en lecture seule sous la forme
- `https://tigersystem.io/list/<token>` ; le visiteur n'a besoin ni
+- **Liens de listes publiques** — partagez une liste en lecture seule sous la
+ forme `https://tigersystem.io/wishlist/<token>` ; le visiteur n'a besoin ni
  d'application ni de compte.
 - **Catalogue de matières et base de référence** (`/materials`, `/database`) —
  parcourez le catalogue partagé auquel toutes les applications se réfèrent.
@@ -53,22 +52,24 @@ flowchart TB
 
 ## Un lien de liste publique, en pratique
 
-Un lien de liste publique a la forme `https://tigersystem.io/list/<token>`.
+Un lien de liste publique a la forme `https://tigersystem.io/wishlist/<token>`.
 Trois choses à savoir avant d'en coller un quelque part :
 
 - **Le token est toute la clé.** Quiconque détient le lien ouvre la liste —
   sans compte, sans application, sans rien à prouver. Traitez-le comme un mot
   de passe que vous avez choisi de partager : parfait pour un forum ou un ami,
   pas pour une liste que vous n'aimeriez pas voir recopiée plus loin.
-- **Il se crée et se retire depuis les applications, pas depuis le site.**
-  Tiger Studio et Tiger NFC Connect génèrent et révoquent les liens de partage
-  (voir *Interactions* ci-dessous) ; TigerHub ne fait qu'afficher ce qu'elles
-  publient. Révoquer, c'est ainsi qu'on retire une liste ; la republier ensuite
-  produit un **nouveau** token, si bien qu'un lien distribué auparavant n'en
-  est pas ressuscité.
-- **En lecture seule, et cette liste seulement.** Le visiteur voit la liste
-  que vous avez publiée et rien d'autre de votre compte. Les listes de souhaits
-  se partagent de la même façon.
+- **C'est rendre une liste publique qui crée le lien.** Dans l'application,
+  passer une liste en *publique* génère son token et publie une copie de la
+  liste ; la repasser en privée supprime cette copie et le token. Rendez-la de
+  nouveau publique et elle reçoit un **nouveau** token, si bien qu'un lien
+  distribué auparavant n'est pas ressuscité. TigerHub ne fait qu'afficher ce
+  que l'application publie.
+- **En lecture seule, et elle dit qui l'a partagée.** Le visiteur voit cette
+  liste — ses articles, et l'occasion ou le message si vous en avez mis un —
+  jamais votre inventaire ni vos autres listes. La page affiche en revanche
+  votre **nom**, vos **liens sociaux**, et un bouton *ajouter en ami* qui
+  porte votre **code de découverte**.
 
 Un lien est l'une des deux façons de partager ; l'autre, c'est un ami :
 
@@ -76,8 +77,8 @@ Un lien est l'une des deux façons de partager ; l'autre, c'est un ami :
 |---|---|---|
 | Qui la voit | quiconque a le lien | une personne que vous avez acceptée |
 | Compte nécessaire | non | oui |
-| Comment | générer un lien dans les applications | échanger des codes de découverte |
-| Annuler | révoquer le lien | retirer l'ami |
+| Comment | rendre une liste publique | échanger des codes de découverte |
+| Annuler | repasser la liste en privée | retirer l'ami |
 
 La moitié « ami » n'est résumée ici que pour tenir à côté du lien ; les règles
 de demande et de retrait, et leur application côté serveur, appartiennent à
@@ -97,7 +98,7 @@ web** bâtie par-dessus. Voir
 
 | Avec | Comment |
 |---|---|
-| Tiger Studio / Connect | Générer et révoquer des liens de partage, envoyer des invitations d'ami |
+| Tiger Studio / Connect | Rendre une liste publique ou privée — ce qui crée ou supprime son lien — et envoyer des invitations d'ami |
 | Firebase (base de données des comptes) | Source des données publiées |
 | Visiteurs | Simple navigateur, aucun compte nécessaire |
 
