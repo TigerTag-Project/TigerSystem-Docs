@@ -1,5 +1,5 @@
 ---
-sourceHash: beecc5a8fd10c5bcb1afbc024042672e1ead68965d4c142e07cd519fde103730
+sourceHash: e990082baacc939388cf16d9fb5b43a8f843aa1d494e391412ec2f29b307209e
 sourcePath: docs/certified-partners.md
 ---
 
@@ -47,6 +47,10 @@ partenaire**, pas la qualité du partenaire.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — intégré à la demande | Tague les bobines en TigerTag+ à la demande. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Tague les bobines en TigerTag+ à la demande. |
+| **[Nanovia](https://nanovia.tech)** | **En production** | Livre des bobines tagguées TigerTag depuis sa ligne de production. |
 
 || | |
 |---|---|---|
@@ -54,13 +58,6 @@ partenaire**, pas la qualité du partenaire.
 
 *Des boîtes du commerce portant la marque — achetées en boutique, pas mises en
 scène.*
-
-## Intégration en cours
-
-**[Nanovia](https://nanovia.tech)** et
-**[Filforme](https://www.filforme.com)** intègrent actuellement TigerTag+. Ils
-ne sont **pas encore en production**, et figurent ici parce qu'ils sont dans le
-programme — pas pour laisser croire à une disponibilité.
 
 ## Vérifier une marque soi-même
 

@@ -41,18 +41,16 @@ production**, not how good the partner is.
 | **[Sunlu](https://www.sunlu.com)** | **Silver** — integrated on request | Tags spools with TigerTag+ on request. |
 | **[Landu](https://www.landu3d.com)** | **Silver** | Tags spools with TigerTag+ on request. |
 | **[JamgHE](https://www.jamghe.com)** | **Silver** | Tags spools with TigerTag+ on request. |
+| **[Filforme](https://www.filforme.com)** | **Silver** | Tags spools with TigerTag+ on request. |
+| **[Lotactree](https://www.lotactree.com)** | **Silver** | Tags spools with TigerTag+ on request. |
+| **[Smart3DPT](https://smart3d.pt)** | **Silver** | Tags spools with TigerTag+ on request. |
+| **[Nanovia](https://nanovia.tech)** | **In production** | Ships TigerTag-tagged spools from its production line. |
 
 || | |
 |---|---|---|
 | <img src="./assets/box-rosa3d-cutout.png" alt="Rosa3D filament box carrying the TigerTag mark" /> | <img src="./assets/box-esun-cutout.png" alt="eSun filament box carrying the TigerTag mark" /> | <img src="./assets/box-sunlu-cutout.png" alt="Sunlu filament box carrying the TigerTag mark" /> |
 
 *Retail boxes carrying the mark — bought in a shop, not staged.*
-
-## Integration in progress
-
-**[Nanovia](https://nanovia.tech)** and **[Filforme](https://www.filforme.com)**
-are currently integrating TigerTag+. They are **not yet shipping**, and are
-listed here because they are in the programme — not to imply availability.
 
 ## Checking a mark yourself
 

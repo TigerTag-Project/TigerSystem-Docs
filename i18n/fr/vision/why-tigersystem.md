@@ -1,5 +1,5 @@
 ---
-sourceHash: 41cc4260975408514f69a1b2d61294c1a71723db05cddb913c0f599e1dade5b0
+sourceHash: d37ed3c943f32aa40cbd7b6a72f2d0c9acccd892461d279223c8cdb49ca9ee47
 sourcePath: docs/vision/why-tigersystem.md
 ---
 
@@ -98,8 +98,8 @@ Honnêtement : construire tout cela nous-mêmes n'a jamais été le plan de dép
 **Plus de 2,5 millions de puces NFC TigerTag ont été produites — ce qui fait de
 TigerTag le protocole RFID tiers le plus déployé au monde** — la plupart
 intégrées en usine par des marques de filament tierces (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — Filforme, Nanovia et d'autres étant en cours
-d'intégration), auxquelles s'ajoute une part plus modeste
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — d'autres
+étant en cours d'intégration), auxquelles s'ajoute une part plus modeste
 achetée par des makers pour étiqueter leurs bobines chez eux. Nous avons
 naïvement supposé que la communauté imaginerait les usages d'elle-même : une
 identité NFC ouverte et documentée sur chaque bobine ressemblait à un terrain
@@ -120,7 +120,8 @@ Et cela commence à arriver :
 [Spooly Tracker](https://spoolytracker.com/) a bâti son identification de
 bobines dessus, et le
 [firmware étendu communautaire](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-du Snapmaker U1 les lit **nativement sur l'imprimante elle-même** — voir les
+du Snapmaker U1 les lit **nativement sur l'imprimante elle-même**, comme
+[COSMOS](https://github.com/OpenCentauri/cosmos) sur l'Elegoo Centauri Carbon — voir les
 [intégrations tierces](../developers/integrations.md).
 
 ## Un bac à sable, volontairement

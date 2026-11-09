@@ -87,8 +87,8 @@ Honestly: building all of this ourselves was never the initial plan. **More
 than 2.5 million TigerTag NFC chips have been produced — making TigerTag the
 most deployed third-party RFID protocol in the world** — most of them
 integrated at the factory by third-party filament brands (Rosa3D, eSun,
-Sunlu, Landu, Jamg He, R3D — with Filforme, Nanovia and more being
-integrated), plus a smaller share
+Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — and
+more being integrated), plus a smaller share
 bought by makers to tag spools at home. We naively assumed the community
 would imagine the uses on its own: an open, documented NFC identity on every
 spool felt like an obvious playground.
@@ -106,7 +106,8 @@ And it is starting to happen:
 [Spooly Tracker](https://spoolytracker.com/) built its spool identification
 on them, and the Snapmaker U1's
 [community extended firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-reads them **natively on the printer itself** — see
+reads them **natively on the printer itself**, as
+[COSMOS](https://github.com/OpenCentauri/cosmos) does on the Elegoo Centauri Carbon — see
 [third-party integrations](../developers/integrations.md).
 
 ## A sandbox, on purpose

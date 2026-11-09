@@ -71,6 +71,7 @@ and brand assets: [TRADEMARK.md](https://github.com/TigerTag-Project/TigerTag-RF
 | Read/write TigerTag chips | [SDKs](./sdks.md) |
 | Exchange inventories as files | [The `.ttag` format](./ttag-format.md) |
 | Show a spool's colour the way every other app does | [The material swatch](./material-swatch.md) — and its [live reference renderer](./material-swatch-playground.html) |
+| Mint a chipless spool id, print a spool's QR label or read one back | [Spool ids and QR links](./spool-ids-and-qr-links.md) |
 | Sync with the user's cloud inventory | [Account API & integration](./account-api.md) |
 | Understand the chip payload | [The TigerTag chip](../concepts/tigertag-chip.md) |
 

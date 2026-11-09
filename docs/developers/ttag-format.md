@@ -145,7 +145,8 @@ http(s) link, or drag-and-drop anywhere on the window.
 |---|---|---|
 | Intent | Same account / a genuine restore | Adopting someone else's materials |
 | Record ids | Kept — written **verbatim** under the original ids | **New** ids — each record becomes a fresh chipless `TigerData_` spool owned by the importer |
-| TigerTag+ status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless, so `id_product` is **unset**, which is what makes it not a TigerTag+; `id_tigertag` removed and `rfidBackup:false` follow from having no chip; backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
+| Chip status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless: `id_tigertag` removed, `rfidBackup:false`, backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
+| Product | Kept | **Kept** when `id_product` is a real catalogue id (not `0`, not `0xFFFFFFFF`), so a TigerData+ stays a TigerData+ and a TigerTag+ arrives as the TigerData+ of the same product; anything else is set to `0xFFFFFFFF` (unset). Before Tiger Studio v2.51.1 it was always unset, so a TigerData+ arrived as a plain TigerData |
 | Weight | As recorded | Reset to full capacity |
 | Twins | As recorded | `twin_tag_uid` remapped through the new ids |
 

@@ -17,8 +17,8 @@ proprietary ones, without the walled garden.
 and, today, the only viable open smart-spool solution shipping at scale: an
 open, standard, agnostic, cross-platform protocol with more than
 **2.5 million chips already produced** and integrated at the factory by brands
-like Rosa3D, eSun, Sunlu, Landu, Jamg He and R3D — with Filforme and
-Nanovia being integrated.
+like Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree and
+Smart3DPT and Nanovia.
 
 ## Factory integration: days, not months
 
@@ -86,11 +86,10 @@ is Gold: scale the volumes and make the commitment public.
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…and more being integrated —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), and
-others on the way.
+…and on the production line too —
+[Nanovia](https://nanovia.tech) — with others on the way.
 
 **Want your logo on this ladder — and bigger?** A production line runs
 TigerTag in as little as 5 days:

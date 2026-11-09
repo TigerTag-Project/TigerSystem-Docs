@@ -30,13 +30,23 @@ inventory:
 
 ## Native RFID vs the bridge
 
-Some printers read tags natively (their own proprietary format); most read
-nothing at all. The bridge makes the printer's capabilities irrelevant:
+Some printers read tags natively — usually their own proprietary format,
+occasionally TigerTag itself; most read nothing at all. The bridge makes the
+printer's capabilities irrelevant:
 
 | Path | Requires | Works with |
 |---|---|---|
-| **Native RFID** | A printer that reads that vendor's locked tag | One brand only |
+| **Native RFID — vendor tag** | A printer that reads that vendor's locked tag | One brand only |
+| **Native RFID — TigerTag** | A machine whose own firmware reads TigerTag — rare, and community-built so far | Every brand, no app in the loop |
 | **Smartphone bridge** | Any NFC phone | **Every printer**, every brand, even fully offline machines |
+
+The middle row is not ours, and it is recent. The community's extended
+firmware makes the [Snapmaker U1](../compatibility/snapmaker.md) the first
+printer to read a TigerTag on the machine itself; and the **BT-AMS-C**, a
+four-slot reader that mounts on a Bambu Lab AMS, sends TigerTag data straight
+to the printer's BMCU ([third-party hardware](../compatibility/third-party-hardware.md)).
+Both stay exceptions — which is the argument for the bridge, not against it:
+it never had to wait for them.
 
 With the bridge, filament data reaches the printer through
 [Tiger Studio's printer integrations](../compatibility/README.md) (six brands

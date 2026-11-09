@@ -1,5 +1,5 @@
 ---
-sourceHash: 551d534fd3d554ae4db42c43701bf66647afcbe1ff812f7264bb1ff79aff43a8
+sourceHash: 3598aeee32fa56da8f804e9dbcc02863095ed99fa203be86621bbd158bf74dc3
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -157,7 +157,8 @@ la fenêtre.
 |---|---|---|
 | Intention | Même compte / une véritable restauration | Adoption des matériaux de quelqu'un d'autre |
 | Identifiants d'enregistrement | Conservés — écrits **tels quels** sous les identifiants d'origine | **Nouveaux** identifiants — chaque enregistrement devient une bobine `TigerData_` neuve et sans puce, appartenant à celui qui importe |
-| Statut TigerTag+ | Conservé — chaque sauvegarde `rfidList` est restaurée | Perdu — la copie est sans puce, donc `id_product` est **vidé**, et c'est cela qui fait qu'elle n'est pas un TigerTag+ ; `id_tigertag` retiré et `rfidBackup:false` découlent de l'absence de puce ; les sauvegardes sont écartées (un dump signé est lié à une puce que celui qui importe ne possède pas) |
+| Statut de la puce | Conservé — chaque sauvegarde `rfidList` est restaurée | Perdu — la copie est sans puce : `id_tigertag` retiré, `rfidBackup:false`, sauvegardes écartées (un dump signé est lié à une puce que celui qui importe ne possède pas) |
+| Produit | Conservé | **Conservé** quand `id_product` est un vrai identifiant du catalogue (ni `0`, ni `0xFFFFFFFF`) : un TigerData+ reste un TigerData+ et un TigerTag+ arrive comme le TigerData+ du même produit ; sinon il passe à `0xFFFFFFFF` (non défini). Avant Tiger Studio v2.51.1, il était toujours vidé : un TigerData+ arrivait comme un simple TigerData |
 | Poids | Tel qu'enregistré | Remis à la capacité pleine |
 | Jumeaux | Tels qu'enregistrés | `twin_tag_uid` réaffecté aux nouveaux identifiants |
 

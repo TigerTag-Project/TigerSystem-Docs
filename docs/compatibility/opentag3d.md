@@ -59,6 +59,6 @@ spool belongs to whoever bought it.
 
 ---
 
-**◀ Previous:** [OpenSpool](./openspool.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Developers](../developers/README.md)
+**◀ Previous:** [OpenSpool](./openspool.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Spool tag formats compared](./tag-formats.md)
 
 **Related:** [The Web API](../developers/web-api.md), [TigerTag+ Certified](../products/tigertag-plus-certified.md)

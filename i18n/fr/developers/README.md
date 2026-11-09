@@ -1,5 +1,5 @@
 ---
-sourceHash: 88f0499b9f2d256540c7d6eeb20351af9670b38bde5f3f53b982955732a3ea85
+sourceHash: 2f376f490a35c0635da4b68885f13e53ba9b6f03f84eca56a03345de260d8baa
 sourcePath: docs/developers/README.md
 ---
 
@@ -83,6 +83,7 @@ Politique complète, paliers de certification et éléments de marque :
 | Lire et écrire des puces TigerTag | [SDK](./sdks.md) |
 | Échanger des inventaires sous forme de fichiers | [Le format `.ttag`](./ttag-format.md) |
 | Afficher la couleur d'une bobine comme le font toutes les autres applications | [La pastille de matière](./material-swatch.md) — et son [moteur de rendu de référence en direct](./material-swatch-playground.html) |
+| Créer l'identifiant d'une bobine sans puce, imprimer l'étiquette QR d'une bobine ou la relire | [Identifiants de bobine et liens QR](./spool-ids-and-qr-links.md) |
 | Synchroniser avec l'inventaire cloud de l'utilisateur | [API compte et intégration](./account-api.md) |
 | Comprendre la charge utile de la puce | [La puce TigerTag](../concepts/tigertag-chip.md) |
 

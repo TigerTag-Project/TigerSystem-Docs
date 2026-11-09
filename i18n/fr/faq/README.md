@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f876cd701e3692f8e9b66f35cfc032195693364d95193890da2415f8891c601
+sourceHash: 330b407d27d694c4ba885a1b36d46f3b1470147007651a81ecce2d19fc5f827b
 sourcePath: docs/faq/README.md
 ---
 
@@ -121,7 +121,8 @@ duquel les lecteurs et les supports de l'écosystème sont conçus.
 Plus de 2,5 millions de puces ont été produites — ce qui fait de TigerTag **le
 protocole RFID tiers le plus déployé au monde** ; la plupart sont intégrées à
 l'usine par des marques de filament tierces — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D — avec Filforme, Nanovia et d'autres en cours d'intégration.
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — et d'autres en
+cours d'intégration.
 
 **Comment une puce se retrouve-t-elle sur une bobine ?**
 Elle se colle — et il y en a **deux par bobine, sur des faces opposées**. C'est
@@ -392,7 +393,9 @@ multiconstructeurs communautaire) lit les TigerTags ;
 [Spooly Tracker](https://spoolytracker.com/) (plateforme d'inventaire, web +
 mobile) identifie les bobines grâce aux TigerTags ; et le
 [firmware étendu pour Snapmaker U1](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-fait de la U1 **la première imprimante qui lit nativement les TigerTags**. Voir
+fait de la U1 **la première imprimante qui lit nativement les TigerTags**, et
+[COSMOS](https://github.com/OpenCentauri/cosmos) fait de même sur l'Elegoo Centauri Carbon, avec le
+lecteur NFC intégré à son Canvas. Voir
 [intégrations tierces](../developers/integrations.md).
 
 **Puis-je construire ma propre application sur TigerTag ?**
@@ -428,7 +431,8 @@ TigerTag ?**
 Rapidement : une ligne de production peut être opérationnelle avec TigerTag en
 **5 jours à peine**, pour un coût très faible, avec chaque puce écrite en
 **environ 1 seconde** — c'est prouvé par plus de 2,5 millions de puces déjà
-expédiées par Rosa3D, eSun, Sunlu, Landu, Jamg He et R3D. Et chaque marque qui
+expédiées par Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree et
+Smart3DPT. Et chaque marque qui
 rejoint le mouvement renforce l'argument collectif pour que les fabricants
 d'imprimantes lisent TigerTag nativement. Lisez
 [Pour les fabricants de filament](../vision/for-filament-manufacturers.md),

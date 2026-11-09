@@ -1,5 +1,5 @@
 ---
-sourceHash: ef13355489b35402ee82fc635649662840132ff6c63fdb890e84200f8ac7c23e
+sourceHash: 901736ed112d875a7b0ccdd1aaa59dbe2f5cc86b4801e2b9472866e7033c8a73
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -23,8 +23,8 @@ plus intelligentes que les propriétaires, sans le jardin clos.
 jour, la seule solution ouverte de bobine intelligente réellement viable et
 diffusée à grande échelle : un protocole ouvert, standard, agnostique et
 multiplateforme, avec plus de **2,5 millions de puces déjà produites** et
-intégrées en usine par des marques comme Rosa3D, eSun, Sunlu, Landu, Jamg He
-et R3D — Filforme et Nanovia étant en cours d'intégration.
+intégrées en usine par des marques comme Rosa3D, eSun, Sunlu, Landu, Jamg He,
+R3D, Filforme, Lotactree, Smart3DPT et Nanovia.
 
 ## Intégration en usine : des jours, pas des mois
 
@@ -97,11 +97,10 @@ l'engagement public.
 
 <a href="https://www.sunlu.com"><img src="../assets/partners/sunlu.svg" height="22" alt="Sunlu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.landustore.com"><img src="../assets/partners/landu.svg" height="20" alt="Landu" /></a>&nbsp;&nbsp;<img src="../assets/icons/dot.svg" width="10" alt="" />&nbsp;&nbsp;<a href="https://www.jamghe.com"><img src="../assets/partners/jamghe.svg" height="24" alt="Jamg He" /></a>
 
-**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)**
+**[Sunlu](https://www.sunlu.com)** · **[Landu](https://www.landustore.com)** · **[Jamg He](https://www.jamghe.com)** · **[Filforme](https://www.filforme.com)** · **[Lotactree](https://www.lotactree.com)** · **[Smart3DPT](https://smart3d.pt)**
 
-…et d'autres en cours d'intégration —
-[Filforme](https://www.filforme.com), [Nanovia](https://nanovia.tech), et
-d'autres encore à venir.
+…et sur la ligne de production aussi —
+[Nanovia](https://nanovia.tech) — et d'autres encore à venir.
 
 **Vous voulez votre logo sur cette échelle — et en plus grand ?** Une ligne de
 production tourne sous TigerTag en 5 jours seulement :

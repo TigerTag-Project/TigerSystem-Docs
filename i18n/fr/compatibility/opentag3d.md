@@ -1,5 +1,5 @@
 ---
-sourceHash: a2788a5364e611177c9b1b011d762345b26e5a8fd204e75a6b2b8beed634955c
+sourceHash: bbc5e9975e29d36151f72d68e741b2688c5f2a46503d71f8f73aae13a8b74ce6
 sourcePath: docs/compatibility/opentag3d.md
 ---
 
@@ -69,6 +69,6 @@ qui l'a achetée.
 
 ---
 
-**◀ Précédent :** [OpenSpool](./openspool.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Développeurs](../developers/README.md)
+**◀ Précédent :** [OpenSpool](./openspool.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Formats de puce comparés](./tag-formats.md)
 
 **Voir aussi :** [L'API Web](../developers/web-api.md), [TigerTag+ Certified](../products/tigertag-plus-certified.md)

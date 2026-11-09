@@ -50,6 +50,7 @@ export const sidebar = [
     { slug: 'compatibility/klipper' },
     { slug: 'compatibility/openspool' },
     { slug: 'compatibility/opentag3d' },
+    { slug: 'compatibility/tag-formats', label: 'Spool tag formats compared', translations: { fr: 'Formats de puce comparés' } },
     { slug: 'compatibility/third-party-hardware' },
   ]),
 
@@ -69,6 +70,7 @@ export const sidebar = [
     { slug: 'developers/sdks' },
     { slug: 'developers/ttag-format' },
     { slug: 'developers/material-swatch' },
+    { slug: 'developers/spool-ids-and-qr-links' },
     { slug: 'developers/account-api' },
     { slug: 'developers/web-api' },
     { slug: 'developers/integrations' },

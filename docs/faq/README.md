@@ -103,7 +103,8 @@ round is the format the ecosystem's readers and holders are designed around.
 More than 2.5 million chips have been produced — making TigerTag **the most
 deployed third-party RFID protocol in the world**; most are integrated at the
 factory by third-party filament brands — Rosa3D, eSun, Sunlu, Landu,
-Jamg He, R3D — with Filforme, Nanovia and more being integrated.
+Jamg He, R3D, Filforme, Lotactree, Smart3DPT, Nanovia — and more being
+integrated.
 
 **How does a chip get on a spool?**
 It sticks on — and there are **two per spool, on opposite sides**. That's
@@ -345,7 +346,9 @@ multi-vendor RFID toolkit) reads TigerTags;
 [Spooly Tracker](https://spoolytracker.com/) (inventory platform, web +
 mobile) identifies spools with TigerTags; and the
 [Snapmaker U1 Extended Firmware](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware)
-makes the U1 **the first printer that reads TigerTags natively**. See
+makes the U1 **the first printer that reads TigerTags natively**, and
+[COSMOS](https://github.com/OpenCentauri/cosmos) does the same on the Elegoo Centauri Carbon, with
+the NFC reader built into its Canvas. See
 [third-party integrations](../developers/integrations.md).
 
 **Can I build my own app on TigerTag?**
@@ -375,7 +378,7 @@ security rules; a client can only touch its own user's data.
 Quickly: a production line can be up and running with TigerTag in **as
 little as 5 days**, at very low cost, with each chip written in **about
 1 second** — proven with more than 2.5 million chips already shipped by
-Rosa3D, eSun, Sunlu, Landu, Jamg He and R3D. And every brand that joins strengthens the collective case for
+Rosa3D, eSun, Sunlu, Landu, Jamg He, R3D, Filforme, Lotactree and Smart3DPT. And every brand that joins strengthens the collective case for
 printer manufacturers to read TigerTag natively. Read
 [For filament manufacturers](../vision/for-filament-manufacturers.md), then
 reach out at **[tigertag@tigertag.io](mailto:tigertag@tigertag.io)**.
