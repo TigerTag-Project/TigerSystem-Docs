@@ -1,5 +1,5 @@
 ---
-sourceHash: 829cf32bbbd2016bcc0a4b75b42d7f753ed3418deba803cb0c60653d61a31ae0
+sourceHash: c09c5afef4d243eaec69621e3e6966b8f3e13a1d528a82c57f0f90962104eeac
 sourcePath: docs/tutorials/README.md
 ---
 
@@ -13,15 +13,27 @@ sourcePath: docs/tutorials/README.md
  NTAG 芯片、你的手机、免费应用：写入、贴上，搞定。免费，在
  家操作，100 % 离线。
 
-> **TODO：** 计划中的更多教程：
->
-> - 设置 TigerScale 并校准容器重量
-> - 制作并接线 TigerPOD 读卡器支架
-> - 与好友分享你的库存
-> - 在 Tiger Studio 中连接你的第一台打印机
+### 将打印机连接到 Tiger Studio
 
-在这些教程出现之前，请参考各产品自己仓库中的实用指南——
-从 [Tiger Studio README](https://github.com/TigerTag-Project/TigerTag-Studio-Manager#readme) 开始。
+- [Bambu Lab A1 系列：切换到局域网模式](./bambu-lab-a1-series.md)
+- [Bambu Lab P1 系列：切换到局域网模式](./bambu-lab-p1-series.md)
+- [Bambu Lab X1 / X1E / H2 / P2 系列：切换到局域网模式](./bambu-lab-x1-h2-p2-series.md)
+- [Elegoo Centauri Carbon 2：切换到局域网模式](./elegoo-cc2-lan-mode.md)
+- [FlashForge：连接教程](./flashforge-connection-tutorial.md)
+
+### TigerScale
+
+- [让 COM 端口出现，以便烧录 TigerScale V3](./tigerscale-serial-port-driver.md)
+
+### Tiger Studio
+
+- [如何发送请求](./send-a-request.md)
+
+## 计划中
+
+- **安装 TigerScale 并校准容器重量**：在此之前，请参阅 [TigerScale](../products/tigerscale.md)。
+- **搭建并接线 TigerPOD 读卡器支架**：在此之前，请参阅 [TigerPOD](../products/tigerpod.md)。
+- **与朋友共享你的库存**：在此之前，请参阅[库存与云同步](../concepts/inventory-and-cloud-sync.md)。
 
 ---
 

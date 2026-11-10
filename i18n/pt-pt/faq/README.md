@@ -1,5 +1,5 @@
 ---
-sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
+sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
 sourcePath: docs/faq/README.md
 ---
 
@@ -73,7 +73,7 @@ Em utilização normal, não foram comunicadas falhas de chips no terreno — in
 Um instantâneo portátil e offline de uma ou mais das suas bobinas — a unidade para fazer cópias de segurança, transportar numa unidade USB e partilhar os seus filamentos. Exporte uma bobina ou uma seleção inteira a partir do Tiger Studio; importe com pré-visualização completa e a escolha entre *Restaurar* (mesma conta) e *Importar* (adotar como bobinas novas). Especificação completa: [o formato `.ttag`](../developers/ttag-format.md).
 
 **Posso usar o TigerSystem sem nenhum chip?**
-Sim — é o **TigerData**: os mesmos dados do protocolo em forma puramente digital, sem chip, sem UID. A identidade vive no seu inventário (ou em qualquer lugar digital) e comporta-se como qualquer outra bobina. Escreva-a mais tarde num chip NFC — de forma atómica, quando estiver pronto — e torna-se um TigerTag, com um UID físico finalmente associado. Ver [Uma identidade, três estados](../concepts/universal-filament-identity.md).
+Sim — é o **TigerData**: os mesmos dados do protocolo em forma puramente digital, sem chip, sem UID. A identidade vive no seu inventário (ou em qualquer lugar digital) e comporta-se como qualquer outra bobina. Escreva-a mais tarde num chip NFC — de forma atómica, quando estiver pronto — e torna-se um TigerTag, com um UID físico finalmente associado. Ver [Uma identidade, quatro estados](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (computador)
 

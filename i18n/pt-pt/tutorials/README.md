@@ -1,5 +1,5 @@
 ---
-sourceHash: 829cf32bbbd2016bcc0a4b75b42d7f753ed3418deba803cb0c60653d61a31ae0
+sourceHash: c09c5afef4d243eaec69621e3e6966b8f3e13a1d528a82c57f0f90962104eeac
 sourcePath: docs/tutorials/README.md
 ---
 
@@ -11,14 +11,27 @@ Guias passo a passo, orientados para um objetivo, destinados aos utilizadores fi
 
 - **[A sua primeira bobina inteligente em 2 minutos](./first-smart-spool.md)** — um chip NTAG virgem, o seu telemóvel, a aplicação gratuita: programe, cole, pronto. Gratuito, em casa, 100 % offline.
 
-> **TODO:** mais tutoriais previstos:
->
-> - Configurar a TigerScale e calibrar o peso dos recipientes
-> - Construir e ligar um suporte de leitor TigerPOD
-> - Partilhar o seu inventário com um amigo
-> - Ligar a sua primeira impressora no Tiger Studio
+### Ligar uma impressora ao Tiger Studio
 
-Até estes tutoriais existirem, aplicam-se os guias práticos do repositório de cada produto — comece pelo [README do Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager#readme).
+- [Série Bambu Lab A1: mudar para o modo LAN](./bambu-lab-a1-series.md)
+- [Série Bambu Lab P1: mudar para o modo LAN](./bambu-lab-p1-series.md)
+- [Séries Bambu Lab X1 / X1E / H2 / P2: mudar para o modo LAN](./bambu-lab-x1-h2-p2-series.md)
+- [Elegoo Centauri Carbon 2: mudar para o modo LAN](./elegoo-cc2-lan-mode.md)
+- [FlashForge: tutorial de ligação](./flashforge-connection-tutorial.md)
+
+### TigerScale
+
+- [Fazer aparecer a porta COM para gravar a TigerScale V3](./tigerscale-serial-port-driver.md)
+
+### Tiger Studio
+
+- [Como enviar um pedido](./send-a-request.md)
+
+## Previstos
+
+- **Instalar uma TigerScale e calibrar o peso dos recipientes**: entretanto, veja [TigerScale](../products/tigerscale.md).
+- **Montar e ligar um suporte leitor TigerPOD**: entretanto, veja [TigerPOD](../products/tigerpod.md).
+- **Partilhar o seu inventário com um amigo**: entretanto, veja [inventário e sincronização na nuvem](../concepts/inventory-and-cloud-sync.md).
 
 ---
 

@@ -14,13 +14,16 @@ Task-oriented how-to guides (shorter and more targeted than
 - **[Connect an AI assistant to your account](./connect-an-ai-assistant.md)** —
   let Claude, ChatGPT or any MCP client read your spools, racks and printers,
   and cut it off from your account.
+- **[Filament materials guide](./filament-materials-guide.md)** — 21 materials under their TigerTag names and ids: strength, chemical, heat, impact and UV resistance, temperatures, drying and density.
 
-> **TODO:** more guides planned:
->
-> - How to buy / encode TigerTag chips
-> - How to promote a chipless (digital) spool to a real chip
-> - How to migrate an existing spreadsheet inventory into your TigerSystem account
-> - How to publish a public list link on TigerHub
+## Planned
+
+Until these guides are written, the answer is already on another page:
+
+- **Buying and writing TigerTag chips**: [where to buy them](../products/tigertag.md), then [your first smart spool](../tutorials/first-smart-spool.md).
+- **Promoting a chipless spool to a real chip**: [universal filament identity](../concepts/universal-filament-identity.md), which explains promotion.
+- **Publishing a public list link on TigerHub**: [TigerHub](../products/tigerhub.md).
+- **Moving a spreadsheet inventory into your account**: not covered yet.
 
 ---
 

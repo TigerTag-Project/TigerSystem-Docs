@@ -1,5 +1,5 @@
 ---
-sourceHash: 68fa84317057cd1f92cf2ac7131611c49eaf880607f0e20eede9ae2fae93db9a
+sourceHash: 3d3da9810cce0db33f72c8e05a5c40d86c71eb6c4c6078c06d400f2e6fdc8081
 sourcePath: docs/roadmap/README.md
 ---
 
@@ -63,7 +63,7 @@ Ogólne, niedatowane zamierzenia (szczegóły są przy każdym produkcie):
 | Produkt | Gdzie |
 |---|---|
 | Tiger Studio | [`ROADMAP.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/ROADMAP.md) w repozytorium aplikacji — pogrupowany według dziedzin, z uwagami o rozmiarze i ryzyku |
-| Pozostałe produkty | > **TODO:** opublikować publiczne mapy drogowe w miarę otwierania repozytoriów |
+| Pozostałe produkty | na razie brak publicznej mapy drogowej: plany każdego produktu pojawiają się w issues i wydaniach jego własnego repozytorium ([repozytoria](../developers/repositories.md)) |
 
 > **Uwaga:** ta strona określa kierunek, a nie zobowiązania ani daty.
 

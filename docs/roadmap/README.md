@@ -58,7 +58,7 @@ High-level, non-dated intentions (details live per product):
 | Product | Where |
 |---|---|
 | Tiger Studio | [`ROADMAP.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/ROADMAP.md) in the app repo — grouped by domain, with sizing and risk notes |
-| Other products | > **TODO:** publish public roadmaps as the repos open up |
+| Other products | no public roadmap yet: each product's plans show up in its own repository's issues and releases ([repositories](../developers/repositories.md)) |
 
 > **Note:** this page states direction, not commitments or dates.
 

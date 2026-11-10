@@ -1,5 +1,5 @@
 ---
-sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
+sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
 sourcePath: docs/faq/README.md
 ---
 
@@ -158,7 +158,7 @@ chip, sem UID. A identidade vive no seu inventário (ou em qualquer lugar digita
 se comporta como qualquer outra bobina. Grave-a em um chip NFC depois — de forma atômica,
 quando estiver pronto — e ela se torna um TigerTag, com um UID físico finalmente
 associado. Veja
-[Uma identidade, três estados](../concepts/universal-filament-identity.md).
+[Uma identidade, quatro estados](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (desktop)
 

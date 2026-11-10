@@ -1,5 +1,5 @@
 ---
-sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
+sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
 sourcePath: docs/faq/README.md
 ---
 
@@ -161,7 +161,7 @@ Lotactree, Smart3DPT, Nanovia, — а другие находятся в про�
 виде) и ведёт себя как любая другая катушка. Запишите её на NFC-чип позже —
 атомарно, когда будете готовы, — и она станет TigerTag с наконец привязанным
 физическим UID. См.
-[Одна идентичность, три состояния](../concepts/universal-filament-identity.md).
+[Одна идентичность, четыре состояния](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (настольное приложение)
 

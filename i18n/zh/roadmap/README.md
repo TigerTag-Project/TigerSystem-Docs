@@ -1,5 +1,5 @@
 ---
-sourceHash: 68fa84317057cd1f92cf2ac7131611c49eaf880607f0e20eede9ae2fae93db9a
+sourceHash: 3d3da9810cce0db33f72c8e05a5c40d86c71eb6c4c6078c06d400f2e6fdc8081
 sourcePath: docs/roadmap/README.md
 ---
 
@@ -47,7 +47,7 @@ sourcePath: docs/roadmap/README.md
 | 产品 | 位置 |
 |---|---|
 | Tiger Studio | 应用仓库中的 [`ROADMAP.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/ROADMAP.md)——按领域分组，附有规模和风险说明 |
-| 其他产品 | > **TODO：** 随着各仓库开放，发布公开的路线图 |
+| 其他产品 | 尚无公开路线图：每个产品的计划会出现在其自身仓库的 issues 和发布中（[仓库](../developers/repositories.md)） |
 
 > **说明：** 本页陈述的是方向，不是承诺或日期。
 

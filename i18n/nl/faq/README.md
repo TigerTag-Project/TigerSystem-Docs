@@ -1,5 +1,5 @@
 ---
-sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
+sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
 sourcePath: docs/faq/README.md
 ---
 
@@ -158,7 +158,7 @@ chip, geen UID. De identiteit leeft in je inventaris (of overal waar het digitaa
 gedraagt zich als elke andere spoel. Schrijf hem later in een NFC-chip — atomair,
 wanneer je er klaar voor bent — en het wordt een TigerTag, waaraan eindelijk een fysieke UID
 is gekoppeld. Zie
-[Eén identiteit, drie toestanden](../concepts/universal-filament-identity.md).
+[Eén identiteit, vier toestanden](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (desktop)
 

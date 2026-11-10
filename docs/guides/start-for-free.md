@@ -83,4 +83,4 @@ lists the ways — including the ones that cost nothing.
 
 ---
 
-**▲ [Documentation index](../../README.md)** · **Related:** [One identity, three states](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Support the project](../support.md)
+**▲ [Documentation index](../../README.md)** · **Related:** [One identity, four states](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Support the project](../support.md)

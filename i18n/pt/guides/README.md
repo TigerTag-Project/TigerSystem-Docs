@@ -1,5 +1,5 @@
 ---
-sourceHash: e520cc8d5e0ea7a5ba261b8c2c9261030411eef1123d7c81b9f024868cb0c127
+sourceHash: 2f09f7abce7bd3d7e7daf24fde1c746bcd538facbb34ed7ac768a7a6e28b03a0
 sourcePath: docs/guides/README.md
 ---
 
@@ -18,13 +18,16 @@ Guias práticos orientados a tarefas (mais curtos e mais direcionados que os
 - **[Conecte um assistente de IA à sua conta](./connect-an-ai-assistant.md)** —
   deixe o Claude, o ChatGPT ou qualquer cliente MCP ler suas bobinas, racks e impressoras,
   e corte o acesso à sua conta quando quiser.
+- **[Guia de materiais de filamento](./filament-materials-guide.md)** — 21 materiais com o nome e o ID do TigerTag: resistência mecânica, química, ao calor, ao impacto e aos UV, temperaturas, secagem e densidade.
 
-> **TODO:** mais guias planejados:
->
-> - Como comprar / codificar chips TigerTag
-> - Como promover uma bobina sem chip (digital) a um chip de verdade
-> - Como migrar um inventário de planilha para sua conta TigerSystem
-> - Como publicar um link de lista pública no TigerHub
+## Previstos
+
+Enquanto estes guias não forem escritos, a resposta já está em outra página:
+
+- **Comprar e gravar chips TigerTag**: [onde comprá-los](../products/tigertag.md) e depois [seu primeiro carretel inteligente](../tutorials/first-smart-spool.md).
+- **Promover um carretel sem chip a um chip real**: [identidade universal do filamento](../concepts/universal-filament-identity.md), que explica a promoção.
+- **Publicar um link de lista pública no TigerHub**: [TigerHub](../products/tigerhub.md).
+- **Levar um inventário de uma planilha para a sua conta**: ainda não coberto.
 
 ---
 

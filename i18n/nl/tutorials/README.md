@@ -1,5 +1,5 @@
 ---
-sourceHash: 829cf32bbbd2016bcc0a4b75b42d7f753ed3418deba803cb0c60653d61a31ae0
+sourceHash: c09c5afef4d243eaec69621e3e6966b8f3e13a1d528a82c57f0f90962104eeac
 sourcePath: docs/tutorials/README.md
 ---
 
@@ -13,15 +13,27 @@ Stapsgewijze, doelgerichte handleidingen voor eindgebruikers.
  NTAG-chip, je telefoon, de gratis app: programmeren, plakken, klaar. Gratis, thuis,
  100 % offline.
 
-> **TODO:** meer tutorials gepland:
->
-> - TigerScale instellen en containergewichten kalibreren
-> - Een TigerPOD-lezerstandaard bouwen en bekabelen
-> - Je inventaris delen met een vriend
-> - Je eerste printer verbinden in Tiger Studio
+### Een printer met Tiger Studio verbinden
 
-Zolang deze er niet zijn, gelden de praktische handleidingen in de eigen repository van elk product —
-begin met de [README van Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager#readme).
+- [Bambu Lab A1-serie: overschakelen naar LAN-modus](./bambu-lab-a1-series.md)
+- [Bambu Lab P1-serie: overschakelen naar LAN-modus](./bambu-lab-p1-series.md)
+- [Bambu Lab X1 / X1E / H2 / P2-serie: overschakelen naar LAN-modus](./bambu-lab-x1-h2-p2-series.md)
+- [Elegoo Centauri Carbon 2: overschakelen naar LAN-modus](./elegoo-cc2-lan-mode.md)
+- [FlashForge: verbindingstutorial](./flashforge-connection-tutorial.md)
+
+### TigerScale
+
+- [Zorgen dat de COM-poort verschijnt om de TigerScale V3 te flashen](./tigerscale-serial-port-driver.md)
+
+### Tiger Studio
+
+- [Een verzoek versturen](./send-a-request.md)
+
+## Gepland
+
+- **Een TigerScale instellen en containergewichten kalibreren**: zie tot dan [TigerScale](../products/tigerscale.md).
+- **Een TigerPOD-lezerstandaard bouwen en bedraden**: zie tot dan [TigerPOD](../products/tigerpod.md).
+- **Je inventaris delen met een vriend**: zie tot dan [inventaris en cloudsynchronisatie](../concepts/inventory-and-cloud-sync.md).
 
 ---
 

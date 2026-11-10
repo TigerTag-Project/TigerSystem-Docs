@@ -1,5 +1,5 @@
 ---
-sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
+sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
 sourcePath: docs/faq/README.md
 ---
 
@@ -178,7 +178,7 @@ n'importe où sous forme numérique) et se comporte comme n'importe quelle autre
 bobine. Écrivez-la plus tard dans une puce NFC — d'un seul geste, quand vous
 êtes prêt — et elle devient un TigerTag, avec un UID physique enfin associé.
 Voir
-[Une identité, trois états](../concepts/universal-filament-identity.md).
+[Une identité, quatre états](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (ordinateur)
 

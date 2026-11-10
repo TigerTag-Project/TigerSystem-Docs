@@ -1,5 +1,5 @@
 ---
-sourceHash: 829cf32bbbd2016bcc0a4b75b42d7f753ed3418deba803cb0c60653d61a31ae0
+sourceHash: c09c5afef4d243eaec69621e3e6966b8f3e13a1d528a82c57f0f90962104eeac
 sourcePath: docs/tutorials/README.md
 ---
 
@@ -13,15 +13,27 @@ sourcePath: docs/tutorials/README.md
  чип NTAG, ваш телефон и бесплатное приложение: запрограммировали, наклеили,
  готово. Бесплатно, дома, 100 % офлайн.
 
-> **TODO:** запланированы другие руководства:
->
-> - Настройка TigerScale и калибровка веса контейнеров
-> - Сборка и подключение подставки-считывателя TigerPOD
-> - Как поделиться инвентарём с другом
-> - Подключение первого принтера в Tiger Studio
+### Подключение принтера к Tiger Studio
 
-Пока их нет, действуют практические руководства из репозитория каждого продукта —
-начните с [README Tiger Studio](https://github.com/TigerTag-Project/TigerTag-Studio-Manager#readme).
+- [Bambu Lab серии A1: переключение в режим LAN](./bambu-lab-a1-series.md)
+- [Bambu Lab серии P1: переключение в режим LAN](./bambu-lab-p1-series.md)
+- [Bambu Lab серии X1 / X1E / H2 / P2: переключение в режим LAN](./bambu-lab-x1-h2-p2-series.md)
+- [Elegoo Centauri Carbon 2: переключение в режим LAN](./elegoo-cc2-lan-mode.md)
+- [FlashForge: руководство по подключению](./flashforge-connection-tutorial.md)
+
+### TigerScale
+
+- [Как заставить COM-порт появиться для прошивки TigerScale V3](./tigerscale-serial-port-driver.md)
+
+### Tiger Studio
+
+- [Как отправить запрос](./send-a-request.md)
+
+## Запланировано
+
+- **Настройка TigerScale и калибровка веса контейнеров**: пока см. [TigerScale](../products/tigerscale.md).
+- **Сборка и подключение подставки-считывателя TigerPOD**: пока см. [TigerPOD](../products/tigerpod.md).
+- **Как поделиться инвентарём с другом**: пока см. [инвентарь и облачная синхронизация](../concepts/inventory-and-cloud-sync.md).
 
 ---
 

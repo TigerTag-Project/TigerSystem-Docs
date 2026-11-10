@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -19,7 +19,7 @@ sourcePath: docs/glossary.md
 | **TigerTag** | 一枚携带开放的 144 字节 TigerTag 负载的标准 NTAG NFC 芯片——线轴的身份，任何东西都能读取。见 [TigerTag](./products/tigertag.md)。 |
 | **TigerTag+** | 其身份携带**来自官方产品库的产品 ID** 的 TigerTag，外加由 Web API 元数据提供的可选补充数据。芯片依然可以 100% 离线读取。`+` 的意思是*已识别*，而不是*已认证*。见 [TigerTag+](./products/tigertag-plus.md)。 |
 | **TigerTag+ Certified** | 另外还携带一个加密**签名**的 TigerTag+，由持有该认证及其签名工具的制造商写入。验证它免费且可离线进行；签发它则是认证所授予的权利。 |
-| **TigerData** | 同样的身份，但完全没有芯片：协议的数据以纯数字形式存在，没有 UID，可随时升级为真正的芯片。见 [一种身份，三种状态](./concepts/universal-filament-identity.md)。 |
+| **TigerData** | 同样的身份，但完全没有芯片：协议的数据以纯数字形式存在，没有 UID，可随时升级为真正的芯片。见 [一种身份，四种状态](./concepts/universal-filament-identity.md)。 |
 | **TigerData+** | 携带官方产品库中真实产品的无芯片线轴——精确的品牌、颜色、材料、温度、直径、SKU 和 EAN——而不是手工输入的值。`+` 的意思是*已识别*，而不是*已认证*。 |
 | **Official** | 由 TigerSystem 自己制造——两种形态的芯片，以及[产品](./products/README.md)中的应用和硬件。这是对来源的陈述，而不是被授予的标记：TigerSystem 不认证自己。 |
 | **TigerTag Compatible** | 免费层级：任何与 TigerTag 芯片*对话*的东西——读卡器、应用、打印机、切片软件、工具。实现它、声明它，或在应用、文档或商店页面中展示标志，都无需许可。它同样涵盖 **TigerTag+**：验证签名免费、可离线、不受限制。它唯一从不包含的词是*认证*。 |

@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ het volledige verhaal beheert.
 | **TigerTag** | Een standaard NTAG-NFC-chip met de open TigerTag-payload van 144 bytes — de identiteit van een spoel, door alles te lezen. Zie [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | Een TigerTag waarvan de identiteit een **product-ID uit de officiële catalogus** draagt, plus optionele verrijkingsgegevens die door de metadata van de Web API worden aangeboden. De chip blijft 100% offline leesbaar. De `+` betekent *geïdentificeerd*, niet *gecertificeerd*. Zie [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Een TigerTag+ die ook een cryptografische **handtekening** draagt, geschreven door een fabrikant die de certificering en de ondertekeningstools bezit. Er een verifiëren is gratis en offline; er een uitgeven is wat certificering toekent. |
-| **TigerData** | Dezelfde identiteit zonder enige chip: de gegevens van het protocol in puur digitale vorm, geen UID, op elk moment te promoveren naar een echte chip. Zie [Eén identiteit, drie staten](./concepts/universal-filament-identity.md). |
+| **TigerData** | Dezelfde identiteit zonder enige chip: de gegevens van het protocol in puur digitale vorm, geen UID, op elk moment te promoveren naar een echte chip. Zie [Eén identiteit, vier toestanden](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Een spoel zonder chip die een echt product uit de officiële catalogus draagt — exact merk, kleur, materiaal, temperaturen, diameter, SKU en EAN — in plaats van met de hand getypte waarden. De `+` betekent *geïdentificeerd*, niet *gecertificeerd*. |
 | **Officieel** | Door TigerSystem zelf gemaakt — de chips in beide vormfactoren, en de apps en hardware in [Producten](./products/README.md). Een verklaring van herkomst, geen merkteken dat wordt verleend: TigerSystem certificeert zichzelf niet. |
 | **TigerTag Compatible** | Het gratis niveau: alles wat met TigerTag-chips *praat* — lezers, apps, printers, slicers, tools. Geen toestemming nodig om het te implementeren, het te zeggen of het logo te tonen in een app, documentatie of winkelvermelding. Het omvat ook **TigerTag+**: een handtekening verifiëren is gratis, offline en onbeperkt. Het ene woord dat het nooit omvat is *gecertificeerd*. |

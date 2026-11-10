@@ -1,5 +1,5 @@
 ---
-sourceHash: e520cc8d5e0ea7a5ba261b8c2c9261030411eef1123d7c81b9f024868cb0c127
+sourceHash: 2f09f7abce7bd3d7e7daf24fde1c746bcd538facbb34ed7ac768a7a6e28b03a0
 sourcePath: docs/guides/README.md
 ---
 
@@ -19,13 +19,16 @@ Krótkie instrukcje ukierunkowane na zadanie (bardziej zwięzłe i celowane niż
 - **[Połącz asystenta AI ze swoim kontem](./connect-an-ai-assistant.md)** —
   pozwól Claude, ChatGPT lub dowolnemu klientowi MCP czytać twoje szpule, regały i drukarki
   oraz odetnij go od konta.
+- **[Przewodnik po materiałach filamentowych](./filament-materials-guide.md)** — 21 materiałów pod ich nazwami i identyfikatorami TigerTag: wytrzymałość, odporność chemiczna, na ciepło, uderzenia i UV, temperatury, suszenie i gęstość.
 
-> **TODO:** planowane kolejne przewodniki:
->
-> - Jak kupić / zakodować chipy TigerTag
-> - Jak zamienić szpulę bez chipa (cyfrową) w szpulę z prawdziwym chipem
-> - Jak przenieść istniejący magazyn z arkusza kalkulacyjnego na konto TigerSystem
-> - Jak opublikować publiczny link do listy w TigerHub
+## Planowane
+
+Zanim te poradniki powstaną, odpowiedź jest już na innej stronie:
+
+- **Kupowanie i zapisywanie chipów TigerTag**: [gdzie je kupić](../products/tigertag.md), a potem [twoja pierwsza inteligentna szpula](../tutorials/first-smart-spool.md).
+- **Awans szpuli bez chipa do prawdziwego chipa**: [uniwersalna tożsamość filamentu](../concepts/universal-filament-identity.md), gdzie wyjaśniono awans.
+- **Publikowanie publicznego linku do listy w TigerHub**: [TigerHub](../products/tigerhub.md).
+- **Przeniesienie inwentarza z arkusza kalkulacyjnego na konto**: jeszcze nie opisane.
 
 ---
 

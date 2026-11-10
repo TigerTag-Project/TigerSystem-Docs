@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ renvoie vers la page qui en détient l'explication complète.
 | **TigerTag** | Une puce NFC NTAG standard portant la charge utile TigerTag ouverte de 144 octets — l'identité d'une bobine, lisible par n'importe quoi. Voir [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | Un TigerTag dont l'identité porte un **identifiant produit issu du catalogue officiel**, plus des données d'enrichissement facultatives servies par l'API Web. La puce reste lisible à 100 % hors ligne. Le `+` signifie *identifié*, pas *certifié*. Voir [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Un TigerTag+ qui porte en plus une **signature** cryptographique, écrite par un fabricant détenteur de la certification et de ses outils de signature. La vérifier est gratuit et hors ligne ; en émettre une est précisément ce que la certification accorde. |
-| **TigerData** | La même identité, sans aucune puce : les données du protocole sous forme purement numérique, sans UID, promouvable en puce réelle à tout moment. Voir [Une identité, trois états](./concepts/universal-filament-identity.md). |
+| **TigerData** | La même identité, sans aucune puce : les données du protocole sous forme purement numérique, sans UID, promouvable en puce réelle à tout moment. Voir [Une identité, quatre états](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Une bobine sans puce qui porte un vrai produit du catalogue officiel — marque, couleur, matière, températures, diamètre, SKU et EAN exacts — plutôt que des valeurs saisies à la main. Le `+` signifie *identifié*, pas *certifié*. |
 | **Officiel** | Fabriqué par TigerSystem lui-même — les puces dans les deux formats, ainsi que les applications et le matériel présentés dans [Produits](./products/README.md). Une indication d'origine, pas une marque qui s'accorde : TigerSystem ne se certifie pas lui-même. |
 | **TigerTag Compatible** | Le niveau gratuit : tout ce qui *dialogue avec* les puces TigerTag — lecteurs, applications, imprimantes, trancheurs, outils. Aucune autorisation n'est nécessaire pour l'implémenter, pour le dire, ou pour afficher le logo dans une application, une documentation ou une fiche boutique. Cela couvre **TigerTag+** aussi : vérifier une signature est gratuit, hors ligne et sans restriction. Le seul mot que cela n'inclut jamais est *certifié*. |

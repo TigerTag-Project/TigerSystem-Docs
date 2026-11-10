@@ -1,5 +1,5 @@
 ---
-sourceHash: e520cc8d5e0ea7a5ba261b8c2c9261030411eef1123d7c81b9f024868cb0c127
+sourceHash: 2f09f7abce7bd3d7e7daf24fde1c746bcd538facbb34ed7ac768a7a6e28b03a0
 sourcePath: docs/guides/README.md
 ---
 
@@ -19,13 +19,16 @@ Aufgabenorientierte How-to-Anleitungen (kürzer und gezielter als die
 - **[Einen KI-Assistenten mit deinem Konto verbinden](./connect-an-ai-assistant.md)** –
   Claude, ChatGPT oder jeden MCP-Client deine Spulen, Racks und Drucker lesen
   lassen und ihm den Zugriff auf dein Konto wieder entziehen.
+- **[Leitfaden zu Filamentmaterialien](./filament-materials-guide.md)** — 21 Materialien unter ihren TigerTag-Namen und -IDs: Festigkeit, Chemikalien-, Hitze-, Schlag- und UV-Beständigkeit, Temperaturen, Trocknung und Dichte.
 
-> **TODO:** weitere Anleitungen sind geplant:
->
-> - TigerTag-Chips kaufen / codieren
-> - Eine chiplose (digitale) Spule zu einem echten Chip aufwerten
-> - Einen bestehenden Tabellen-Bestand in dein TigerSystem-Konto übernehmen
-> - Einen öffentlichen Listenlink auf TigerHub veröffentlichen
+## Geplant
+
+Bis diese Guides geschrieben sind, steht die Antwort schon auf einer anderen Seite:
+
+- **TigerTag-Chips kaufen und beschreiben**: [wo man sie kauft](../products/tigertag.md), dann [Ihre erste smarte Spule](../tutorials/first-smart-spool.md).
+- **Eine Spule ohne Chip auf einen echten Chip aufwerten**: [universelle Filamentidentität](../concepts/universal-filament-identity.md), wo die Aufwertung erklärt ist.
+- **Einen öffentlichen Listenlink auf TigerHub veröffentlichen**: [TigerHub](../products/tigerhub.md).
+- **Ein Inventar aus einer Tabelle ins Konto übernehmen**: noch nicht behandelt.
 
 ---
 

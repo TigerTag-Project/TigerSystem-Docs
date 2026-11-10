@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -17,7 +17,7 @@ Todos os termos que esta documentação usa sem os explicar. As definições sã
 | **TigerTag** | Um chip NFC NTAG padrão com o payload aberto TigerTag de 144 bytes — a identidade de uma bobina, legível por qualquer coisa. Ver [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | Um TigerTag cuja identidade leva um **ID de produto do catálogo oficial**, mais dados de enriquecimento opcionais servidos pelos metadados da Web API. O chip continua legível a 100 % offline. O `+` significa *identificado*, não *certificado*. Ver [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Um TigerTag+ que leva também uma **assinatura** criptográfica, escrita por um fabricante que detém a certificação e as respetivas ferramentas de assinatura. Verificar uma é gratuito e offline; emitir uma é o que a certificação concede. |
-| **TigerData** | A mesma identidade sem chip nenhum: os dados do protocolo em forma puramente digital, sem UID, promovíveis a um chip real em qualquer altura. Ver [Uma identidade, três estados](./concepts/universal-filament-identity.md). |
+| **TigerData** | A mesma identidade sem chip nenhum: os dados do protocolo em forma puramente digital, sem UID, promovíveis a um chip real em qualquer altura. Ver [Uma identidade, quatro estados](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Uma bobina sem chip que leva um produto real do catálogo oficial — marca, cor, material, temperaturas, diâmetro, SKU e EAN exatos — em vez de valores escritos à mão. O `+` significa *identificado*, não *certificado*. |
 | **Oficial** | Feito pelo próprio TigerSystem — os chips nos dois formatos, e as aplicações e o hardware em [Produtos](./products/README.md). Uma declaração de origem, não uma marca que se concede: o TigerSystem não se certifica a si próprio. |
 | **TigerTag Compatible** | O nível gratuito: tudo o que *comunica com* chips TigerTag — leitores, aplicações, impressoras, slicers, ferramentas. Não é preciso autorização para o implementar, para o dizer ou para mostrar o logótipo numa aplicação, na documentação ou na página de uma loja. Abrange também o **TigerTag+**: verificar uma assinatura é gratuito, offline e sem restrições. A única palavra que nunca inclui é *certificado*. |

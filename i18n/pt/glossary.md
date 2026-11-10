@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ detém a história completa.
 | **TigerTag** | Um chip NFC NTAG padrão que carrega o payload aberto de 144 bytes do TigerTag — a identidade de uma bobina, legível por qualquer coisa. Veja [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | Um TigerTag cuja identidade carrega um **id de produto do catálogo oficial**, além de dados de enriquecimento opcionais servidos pelos metadados da Web API. O chip continua 100% legível offline. O `+` significa *identificado*, não *certificado*. Veja [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Um TigerTag+ que também carrega uma **assinatura** criptográfica, gravada por um fabricante que detém a certificação e as suas ferramentas de assinatura. Verificar uma é gratuito e offline; emitir uma é o que a certificação concede. |
-| **TigerData** | A mesma identidade sem nenhum chip: os dados do protocolo em forma puramente digital, sem UID, promovível a um chip real a qualquer momento. Veja [Uma identidade, três estados](./concepts/universal-filament-identity.md). |
+| **TigerData** | A mesma identidade sem nenhum chip: os dados do protocolo em forma puramente digital, sem UID, promovível a um chip real a qualquer momento. Veja [Uma identidade, quatro estados](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Uma bobina sem chip que carrega um produto real do catálogo oficial — marca, cor, material, temperaturas, diâmetro, SKU e EAN exatos — em vez de valores digitados à mão. O `+` significa *identificado*, não *certificado*. |
 | **Official** | Feito pelo próprio TigerSystem — os chips nos dois formatos, e os aplicativos e o hardware em [Produtos](./products/README.md). Uma declaração de origem, não uma marca que se concede: o TigerSystem não se certifica a si mesmo. |
 | **TigerTag Compatible** | O nível gratuito: tudo o que *conversa com* chips TigerTag — leitores, aplicativos, impressoras, fatiadores, ferramentas. Nenhuma permissão é necessária para implementá-lo, para dizê-lo ou para exibir o logotipo em um aplicativo, na documentação ou em um anúncio de loja. Cobre também o **TigerTag+**: verificar uma assinatura é gratuito, offline e sem restrições. A única palavra que ele nunca inclui é *certified*. |

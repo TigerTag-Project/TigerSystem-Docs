@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ opisuje całą historię.
 | **TigerTag** | Standardowy chip NFC NTAG z otwartym, 144-bajtowym ładunkiem TigerTag — tożsamością szpuli, czytelną dla czegokolwiek. Zob. [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | TigerTag, którego tożsamość niesie **identyfikator produktu z oficjalnego katalogu**, plus opcjonalne dane wzbogacające udostępniane przez metadane Web API. Chip nadal da się w 100 % odczytać offline. Znak `+` oznacza *zidentyfikowany*, a nie *certyfikowany*. Zob. [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | TigerTag+, który niesie także kryptograficzny **podpis**, zapisany przez producenta posiadającego certyfikację i jej narzędzia podpisujące. Weryfikacja jest darmowa i offline; wystawianie to przywilej certyfikacji. |
-| **TigerData** | Ta sama tożsamość bez żadnego chipa: dane protokołu w czysto cyfrowej postaci, bez UID, z możliwością awansu do prawdziwego chipa w dowolnej chwili. Zob. [Jedna tożsamość, trzy stany](./concepts/universal-filament-identity.md). |
+| **TigerData** | Ta sama tożsamość bez żadnego chipa: dane protokołu w czysto cyfrowej postaci, bez UID, z możliwością awansu do prawdziwego chipa w dowolnej chwili. Zob. [Jedna tożsamość, cztery stany](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Szpula bez chipa, która niesie prawdziwy produkt z oficjalnego katalogu — dokładną markę, kolor, materiał, temperatury, średnicę, SKU i EAN — zamiast wartości wpisanych ręcznie. Znak `+` oznacza *zidentyfikowany*, a nie *certyfikowany*. |
 | **Official** | Wykonane przez sam TigerSystem — chipy w obu formatach oraz aplikacje i sprzęt w [Produktach](./products/README.md). Oświadczenie o pochodzeniu, a nie przyznawany znak: TigerSystem sam siebie nie certyfikuje. |
 | **TigerTag Compatible** | Poziom darmowy: wszystko, co *komunikuje się z* chipami TigerTag — czytniki, aplikacje, drukarki, slicery, narzędzia. Nie potrzeba pozwolenia, by to zaimplementować, tak powiedzieć ani pokazać logo w aplikacji, dokumentacji czy ofercie sklepu. Obejmuje także **TigerTag+**: weryfikacja podpisu jest darmowa, offline i bez ograniczeń. Jedno słowo, którego nigdy nie obejmuje, to *certyfikowany*. |

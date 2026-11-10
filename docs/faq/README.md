@@ -153,7 +153,7 @@ chip, no UID. The identity lives in your inventory (or anywhere digital) and
 behaves like any other spool. Write it into an NFC chip later — atomically,
 when you're ready — and it becomes a TigerTag, with a physical UID finally
 associated. See
-[One identity, three states](../concepts/universal-filament-identity.md).
+[One identity, four states](../concepts/universal-filament-identity.md).
 
 ## Tiger Studio (desktop)
 

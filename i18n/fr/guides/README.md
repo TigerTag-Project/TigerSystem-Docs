@@ -1,5 +1,5 @@
 ---
-sourceHash: e520cc8d5e0ea7a5ba261b8c2c9261030411eef1123d7c81b9f024868cb0c127
+sourceHash: 2f09f7abce7bd3d7e7daf24fde1c746bcd538facbb34ed7ac768a7a6e28b03a0
 sourcePath: docs/guides/README.md
 ---
 
@@ -19,13 +19,16 @@ Guides pratiques orientés tâche (plus courts et plus ciblés que les
 - **[Connecter un assistant IA à votre compte](./connect-an-ai-assistant.md)** —
   laisser Claude, ChatGPT ou tout client MCP lire vos bobines, racks et
   imprimantes, et lui couper l'accès depuis votre compte.
+- **[Guide des matériaux filament](./filament-materials-guide.md)** — 21 matières sous leur nom et leur identifiant TigerTag : solidité, résistance chimique, à la chaleur, aux chocs et aux UV, températures, séchage et densité.
 
-> **TODO :** d'autres guides prévus :
->
-> - Comment acheter / encoder des puces TigerTag
-> - Comment promouvoir une bobine sans puce (numérique) en puce réelle
-> - Comment migrer un inventaire tenu dans un tableur vers votre compte TigerSystem
-> - Comment publier un lien de liste publique sur TigerHub
+## Prévus
+
+En attendant que ces guides soient écrits, la réponse se trouve déjà sur une autre page :
+
+- **Acheter et écrire des puces TigerTag** : [où les acheter](../products/tigertag.md), puis [votre première bobine intelligente](../tutorials/first-smart-spool.md).
+- **Promouvoir une bobine sans puce en vraie puce** : [l'identité universelle du filament](../concepts/universal-filament-identity.md), qui explique la promotion.
+- **Publier un lien de liste publique sur TigerHub** : [TigerHub](../products/tigerhub.md).
+- **Transférer un inventaire tenu dans un tableur vers votre compte** : pas encore traité.
 
 ---
 

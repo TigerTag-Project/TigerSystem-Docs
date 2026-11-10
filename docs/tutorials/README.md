@@ -8,15 +8,27 @@ Step-by-step, goal-oriented walkthroughs for end users.
  NTAG chip, your phone, the free app: program it, stick it, done. Free, at
  home, 100 % offline.
 
-> **TODO:** more tutorials planned:
->
-> - Setting up TigerScale and calibrating container weights
-> - Building and wiring a TigerPOD reader stand
-> - Sharing your inventory with a friend
-> - Connecting your first printer in Tiger Studio
+### Connect a printer to Tiger Studio
 
-Until these exist, the practical guides in each product's own repository apply —
-start with the [Tiger Studio README](https://github.com/TigerTag-Project/TigerTag-Studio-Manager#readme).
+- [Bambu Lab A1 series: switch to LAN mode](./bambu-lab-a1-series.md)
+- [Bambu Lab P1 series: switch to LAN mode](./bambu-lab-p1-series.md)
+- [Bambu Lab X1 / X1E / H2 / P2 series: switch to LAN mode](./bambu-lab-x1-h2-p2-series.md)
+- [Elegoo Centauri Carbon 2: switch to LAN mode](./elegoo-cc2-lan-mode.md)
+- [FlashForge: connection tutorial](./flashforge-connection-tutorial.md)
+
+### TigerScale
+
+- [Getting the COM port to show up to flash the TigerScale V3](./tigerscale-serial-port-driver.md)
+
+### Tiger Studio
+
+- [How to send a request](./send-a-request.md)
+
+## Planned
+
+- **Setting up a TigerScale and calibrating container weights**: until then, see [TigerScale](../products/tigerscale.md).
+- **Building and wiring a TigerPOD reader stand**: until then, see [TigerPOD](../products/tigerpod.md).
+- **Sharing your inventory with a friend**: until then, see [inventory and cloud sync](../concepts/inventory-and-cloud-sync.md).
 
 ---
 

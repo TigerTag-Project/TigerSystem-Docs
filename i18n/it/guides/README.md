@@ -1,5 +1,5 @@
 ---
-sourceHash: e520cc8d5e0ea7a5ba261b8c2c9261030411eef1123d7c81b9f024868cb0c127
+sourceHash: 2f09f7abce7bd3d7e7daf24fde1c746bcd538facbb34ed7ac768a7a6e28b03a0
 sourcePath: docs/guides/README.md
 ---
 
@@ -19,13 +19,16 @@ Guide pratiche orientate a un compito (più brevi e mirate dei
 - **[Collega un assistente IA al tuo account](./connect-an-ai-assistant.md)** —
   lascia che Claude, ChatGPT o qualsiasi client MCP legga le tue bobine, i tuoi rack e le tue stampanti,
   e scollegalo dal tuo account.
+- **[Guida ai materiali per filamento](./filament-materials-guide.md)** — 21 materiali con il loro nome e id TigerTag: resistenza meccanica, chimica, al calore, agli urti e ai raggi UV, temperature, essiccazione e densità.
 
-> **TODO:** altre guide in programma:
->
-> - Come acquistare / codificare i chip TigerTag
-> - Come trasformare una bobina senza chip (digitale) in una con un vero chip
-> - Come migrare l'inventario di un foglio di calcolo nel tuo account TigerSystem
-> - Come pubblicare un link pubblico a una lista su TigerHub
+## Previsti
+
+Finché queste guide non saranno scritte, la risposta si trova già in un'altra pagina:
+
+- **Comprare e scrivere chip TigerTag**: [dove comprarli](../products/tigertag.md), poi [la tua prima bobina intelligente](../tutorials/first-smart-spool.md).
+- **Promuovere una bobina senza chip a un chip reale**: [identità universale del filamento](../concepts/universal-filament-identity.md), che spiega la promozione.
+- **Pubblicare un link a una lista pubblica su TigerHub**: [TigerHub](../products/tigerhub.md).
+- **Trasferire nel tuo account un inventario tenuto in un foglio di calcolo**: non ancora trattato.
 
 ---
 

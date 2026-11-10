@@ -1,5 +1,5 @@
 ---
-sourceHash: 8c5b4fcdbce004114a8e1e147e96abbd0014bb63b773145542ff69b29456ce98
+sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -88,4 +88,4 @@ elenca i modi — compresi quelli che non costano nulla.
 
 ---
 
-**▲ [Indice della documentazione](../../README.md)** · **Vedi anche:** [Una sola identità, tre stati](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Sostieni il progetto](../support.md)
+**▲ [Indice della documentazione](../../README.md)** · **Vedi anche:** [Una sola identità, quattro stati](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Sostieni il progetto](../support.md)

@@ -1,5 +1,5 @@
 ---
-sourceHash: e520cc8d5e0ea7a5ba261b8c2c9261030411eef1123d7c81b9f024868cb0c127
+sourceHash: 2f09f7abce7bd3d7e7daf24fde1c746bcd538facbb34ed7ac768a7a6e28b03a0
 sourcePath: docs/guides/README.md
 ---
 
@@ -19,13 +19,16 @@ Taakgerichte how-to-handleidingen (korter en gerichter dan de
 - **[Een AI-assistent met je account verbinden](./connect-an-ai-assistant.md)** —
   laat Claude, ChatGPT of een andere MCP-client je spoelen, racks en printers lezen,
   en sluit hem weer af van je account.
+- **[Gids voor filamentmaterialen](./filament-materials-guide.md)** — 21 materialen onder hun TigerTag-naam en -id: sterkte, chemische, hitte-, slag- en UV-bestendigheid, temperaturen, drogen en dichtheid.
 
-> **TODO:** meer handleidingen gepland:
->
-> - TigerTag-chips kopen / coderen
-> - Een chiploze (digitale) spoel opwaarderen naar een echte chip
-> - Een bestaande spreadsheetinventaris naar je TigerSystem-account migreren
-> - Een openbare lijstlink op TigerHub publiceren
+## Gepland
+
+Tot deze gidsen geschreven zijn, staat het antwoord al op een andere pagina:
+
+- **TigerTag-chips kopen en beschrijven**: [waar je ze koopt](../products/tigertag.md), daarna [je eerste slimme spoel](../tutorials/first-smart-spool.md).
+- **Een spoel zonder chip promoveren naar een echte chip**: [universele filamentidentiteit](../concepts/universal-filament-identity.md), waar promotie wordt uitgelegd.
+- **Een openbare lijstlink publiceren op TigerHub**: [TigerHub](../products/tigerhub.md).
+- **Een inventaris uit een spreadsheet naar je account overzetten**: nog niet behandeld.
 
 ---
 

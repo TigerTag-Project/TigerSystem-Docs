@@ -1,5 +1,5 @@
 ---
-sourceHash: a23036b449cbf0de4d9f84db6b0ad820d4fc29585e233516d1c6db507e00d7a7
+sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
 sourcePath: docs/faq/README.md
 ---
 
@@ -126,7 +126,7 @@ Jamg He、R3D、Filforme、Lotactree、Smart3DPT、Nanovia——还有更多品�
 可以——这就是 **TigerData**：同样的协议数据，纯数字形式，无芯片，无 UID。
 身份保存在你的库存中（或任何数字位置），表现得与其他线轴无异。
 稍后在你准备好时，把它原子地写入 NFC 芯片——它就成为 TigerTag，终于有了关联的实体 UID。参见
-[一个身份，三种状态](../concepts/universal-filament-identity.md)。
+[一个身份，四种状态](../concepts/universal-filament-identity.md)。
 
 ## Tiger Studio（桌面端）
 

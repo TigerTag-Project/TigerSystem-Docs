@@ -1,5 +1,5 @@
 ---
-sourceHash: 68fa84317057cd1f92cf2ac7131611c49eaf880607f0e20eede9ae2fae93db9a
+sourceHash: 3d3da9810cce0db33f72c8e05a5c40d86c71eb6c4c6078c06d400f2e6fdc8081
 sourcePath: docs/roadmap/README.md
 ---
 
@@ -63,7 +63,7 @@ Intenções de alto nível, sem datas (os detalhes ficam em cada produto):
 | Produto | Onde |
 |---|---|
 | Tiger Studio | [`ROADMAP.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/ROADMAP.md) no repositório do aplicativo — agrupado por domínio, com notas de dimensionamento e risco |
-| Outros produtos | > **TODO:** publicar roteiros públicos à medida que os repositórios forem abertos |
+| Outros produtos | ainda sem roteiro público: os planos de cada produto aparecem nas issues e versões do seu próprio repositório ([repositórios](../developers/repositories.md)) |
 
 > **Nota:** esta página declara uma direção, não compromissos nem datas.
 

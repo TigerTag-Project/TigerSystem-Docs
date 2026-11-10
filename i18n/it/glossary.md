@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ ne racconta la storia completa.
 | **TigerTag** | Un chip NFC NTAG standard che porta il payload aperto TigerTag di 144 byte — l'identità di una bobina, leggibile da qualsiasi cosa. Vedi [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | Un TigerTag la cui identità porta un **ID prodotto del catalogo ufficiale**, più dati di arricchimento facoltativi forniti dai metadati della Web API. Il chip resta leggibile al 100% offline. Il `+` significa *identificato*, non *certificato*. Vedi [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Un TigerTag+ che porta anche una **firma** crittografica, scritta da un produttore che detiene la certificazione e i relativi strumenti di firma. Verificarne una è gratuito e offline; emetterne una è ciò che la certificazione concede. |
-| **TigerData** | La stessa identità senza alcun chip: i dati del protocollo in forma puramente digitale, senza UID, promuovibile a chip reale in qualsiasi momento. Vedi [Una sola identità, tre stati](./concepts/universal-filament-identity.md). |
+| **TigerData** | La stessa identità senza alcun chip: i dati del protocollo in forma puramente digitale, senza UID, promuovibile a chip reale in qualsiasi momento. Vedi [Una sola identità, quattro stati](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Una bobina senza chip che porta un vero prodotto del catalogo ufficiale — marca, colore, materiale, temperature, diametro, SKU ed EAN esatti — invece di valori digitati a mano. Il `+` significa *identificato*, non *certificato*. |
 | **Official** | Realizzato da TigerSystem stesso — i chip in entrambi i formati, e le app e l'hardware in [Prodotti](./products/README.md). Un'indicazione di provenienza, non un marchio che si concede: TigerSystem non certifica se stesso. |
 | **TigerTag Compatible** | Il livello gratuito: tutto ciò che *dialoga con* i chip TigerTag — lettori, app, stampanti, slicer, strumenti. Non serve alcun permesso per implementarlo, per dichiararlo o per mostrare il logo in un'app, in una documentazione o in una scheda di negozio. Copre anche **TigerTag+**: verificare una firma è gratuito, offline e senza restrizioni. L'unica parola che non include mai è *certificato*. |

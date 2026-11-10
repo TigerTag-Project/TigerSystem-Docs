@@ -1,5 +1,5 @@
 ---
-sourceHash: 68fa84317057cd1f92cf2ac7131611c49eaf880607f0e20eede9ae2fae93db9a
+sourceHash: 3d3da9810cce0db33f72c8e05a5c40d86c71eb6c4c6078c06d400f2e6fdc8081
 sourcePath: docs/roadmap/README.md
 ---
 
@@ -63,7 +63,7 @@ Globale intenties zonder data (de details staan per product):
 | Product | Waar |
 |---|---|
 | Tiger Studio | [`ROADMAP.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/ROADMAP.md) in de app-repository — gegroepeerd per domein, met inschattingen van omvang en risico |
-| Overige producten | > **TODO:** openbare roadmaps publiceren zodra de repositories opengaan |
+| Overige producten | nog geen openbare roadmap: de plannen van elk product verschijnen in de issues en releases van zijn eigen repository ([repositories](../developers/repositories.md)) |
 
 > **Let op:** deze pagina geeft een richting aan, geen toezeggingen of data.
 

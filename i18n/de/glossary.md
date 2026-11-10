@@ -1,5 +1,5 @@
 ---
-sourceHash: de1e41d015a6b6a290899b3e62d4bb3cb6a664370340d4ea6b4b25e3f149058e
+sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ ganze Geschichte erzählt.
 | **TigerTag** | Ein handelsüblicher NTAG-NFC-Chip mit der offenen 144-Byte-TigerTag-Payload – die Identität einer Spule, von allem lesbar. Siehe [TigerTag](./products/tigertag.md). |
 | **TigerTag+** | Ein TigerTag, dessen Identität eine **Produkt-ID aus dem offiziellen Katalog** trägt, plus optionale Anreicherungsdaten, die über die Metadaten der Web-API bereitgestellt werden. Der Chip bleibt zu 100 % offline lesbar. Das `+` bedeutet *identifiziert*, nicht *zertifiziert*. Siehe [TigerTag+](./products/tigertag-plus.md). |
 | **TigerTag+ Certified** | Ein TigerTag+, der zusätzlich eine kryptografische **Signatur** trägt, geschrieben von einem Hersteller, der die Zertifizierung und ihre Signierwerkzeuge besitzt. Das Prüfen ist kostenlos und offline; das Ausstellen ist, was die Zertifizierung gewährt. |
-| **TigerData** | Dieselbe Identität ganz ohne Chip: die Daten des Protokolls in rein digitaler Form, ohne UID, jederzeit zu einem echten Chip aufwertbar. Siehe [Eine Identität, drei Zustände](./concepts/universal-filament-identity.md). |
+| **TigerData** | Dieselbe Identität ganz ohne Chip: die Daten des Protokolls in rein digitaler Form, ohne UID, jederzeit zu einem echten Chip aufwertbar. Siehe [Eine Identität, vier Zustände](./concepts/universal-filament-identity.md). |
 | **TigerData+** | Eine chiplose Spule, die ein echtes Produkt aus dem offiziellen Katalog trägt – genaue Marke, Farbe, Material, Temperaturen, Durchmesser, SKU und EAN – statt von Hand eingetippter Werte. Das `+` bedeutet *identifiziert*, nicht *zertifiziert*. |
 | **Offiziell** | Von TigerSystem selbst gemacht – die Chips in beiden Bauformen sowie die Apps und die Hardware unter [Produkte](./products/README.md). Eine Herkunftsangabe, kein Zeichen, das vergeben wird: TigerSystem zertifiziert sich nicht selbst. |
 | **TigerTag Compatible** | Die kostenlose Stufe: alles, was mit TigerTag-Chips *spricht* – Lesegeräte, Apps, Drucker, Slicer, Werkzeuge. Keine Erlaubnis nötig, um es umzusetzen, es zu sagen oder das Logo in einer App, einer Dokumentation oder einem Store-Eintrag zu zeigen. Es deckt auch **TigerTag+** ab: Das Prüfen einer Signatur ist kostenlos, offline und uneingeschränkt. Das eine Wort, das es nie einschließt, ist *zertifiziert*. |
