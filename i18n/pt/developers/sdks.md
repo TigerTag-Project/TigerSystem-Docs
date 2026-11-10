@@ -1,5 +1,5 @@
 ---
-sourceHash: 442ad60629425e6204e63477c4fca050cf440f131defb1307e50fea7c1944670
+sourceHash: 78a273b10943b107e10bbd727392279a149ca7f949239abddcefb18b682ba5db
 sourcePath: docs/developers/sdks.md
 ---
 
@@ -87,6 +87,10 @@ spool = TigerTag.create(
 )
 data = spool.to_bytes()            # 80 bytes
 ```
+
+Para conferir o que o seu código grava, cole o hexadecimal de `toBytes()` ou
+`to_bytes()` no [playground](https://tigersystem.io/playground): ele decodifica o chip campo a campo, no
+navegador.
 
 Os dois exemplos rodam assim com `tigertag` 1.2.1 (npm) e 1.4.0 (PyPI). O
 resto da API (detalhes da assinatura, sincronização em nuvem do TigerTag+,

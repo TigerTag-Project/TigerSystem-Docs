@@ -184,6 +184,10 @@ This is a map, not the specification. The field-by-field table in the
 is normative: it gives the exact offset of every field and links every id
 table. A parser follows that table.
 
+To see this map filled in, the [playground](https://tigersystem.io/playground) builds a chip from a catalogue
+product or from fields you pick, or decodes the hex of a chip you have read, and
+shows every field with its bytes. It all runs in the browser.
+
 ## Reading and writing
 
 | Tool | Read | Write |

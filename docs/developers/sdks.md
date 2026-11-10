@@ -83,6 +83,10 @@ spool = TigerTag.create(
 data = spool.to_bytes()            # 80 bytes
 ```
 
+To check what your code writes, paste the hex of `toBytes()` or `to_bytes()`
+into the [playground](https://tigersystem.io/playground): it decodes the chip field by field, in the
+browser.
+
 Both examples run as shown with `tigertag` 1.2.1 (npm) and 1.4.0 (PyPI).
 The rest of the API (signature details, TigerTag+ cloud sync, patching a
 chip, the CLI) is in each SDK's README, which is canonical:

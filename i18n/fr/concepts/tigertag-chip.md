@@ -1,5 +1,5 @@
 ---
-sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
+sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -197,6 +197,11 @@ C'est une carte, pas la spécification. Le tableau champ par champ du
 [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
 fait foi : il donne le décalage exact de chaque champ et renvoie vers chaque
 table d'identifiants. Un parseur suit ce tableau.
+
+Pour voir cette carte remplie, le [playground](https://tigersystem.io/playground) construit une puce à
+partir d'un produit du catalogue ou des champs que vous choisissez, ou décode
+l'hexadécimal d'une puce que vous avez lue, et montre chaque champ avec ses
+octets. Tout se passe dans le navigateur.
 
 ## Lecture et écriture
 

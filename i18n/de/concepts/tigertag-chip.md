@@ -1,5 +1,5 @@
 ---
-sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
+sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -193,6 +193,11 @@ Das ist eine Übersicht, nicht die Spezifikation. Maßgeblich ist die Feldtabell
 [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format):
 Sie nennt den genauen Offset jedes Felds und verweist auf jede ID-Tabelle. Ein
 Parser folgt dieser Tabelle.
+
+Um diese Übersicht ausgefüllt zu sehen, baut der [Playground](https://tigersystem.io/playground) einen Chip aus
+einem Katalogprodukt oder aus Feldern Ihrer Wahl, oder er dekodiert das Hex
+eines gelesenen Chips, und zeigt jedes Feld mit seinen Bytes. Alles läuft im
+Browser.
 
 ## Lesen und Schreiben
 

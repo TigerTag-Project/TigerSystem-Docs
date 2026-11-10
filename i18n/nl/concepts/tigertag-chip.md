@@ -1,5 +1,5 @@
 ---
-sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
+sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -188,6 +188,11 @@ Dit is een overzicht, niet de specificatie. De veldtabel in de
 [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
 is bindend: die geeft de exacte offset van elk veld en verwijst naar elke
 id-tabel. Een parser volgt die tabel.
+
+Om dit overzicht ingevuld te zien, bouwt de [playground](https://tigersystem.io/playground) een chip uit een
+catalogusproduct of uit velden die je kiest, of decodeert hij de hex van een chip
+die je hebt gelezen, en toont hij elk veld met zijn bytes. Alles draait in de
+browser.
 
 ## Lezen en schrijven
 

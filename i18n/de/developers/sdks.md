@@ -1,5 +1,5 @@
 ---
-sourceHash: 442ad60629425e6204e63477c4fca050cf440f131defb1307e50fea7c1944670
+sourceHash: 78a273b10943b107e10bbd727392279a149ca7f949239abddcefb18b682ba5db
 sourcePath: docs/developers/sdks.md
 ---
 
@@ -89,6 +89,10 @@ spool = TigerTag.create(
 )
 data = spool.to_bytes()            # 80 bytes
 ```
+
+Um zu prüfen, was Ihr Code schreibt, fügen Sie das Hex von `toBytes()` oder
+`to_bytes()` in den [Playground](https://tigersystem.io/playground) ein: Er dekodiert den Chip Feld für
+Feld, im Browser.
 
 Beide Beispiele laufen so mit `tigertag` 1.2.1 (npm) und 1.4.0 (PyPI). Der
 Rest der API (Signaturdetails, Cloud-Sync für TigerTag+, Chip-Patches, CLI)

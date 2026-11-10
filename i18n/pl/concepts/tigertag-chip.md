@@ -1,5 +1,5 @@
 ---
-sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
+sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -185,6 +185,10 @@ To jest mapa, nie specyfikacja. Wiążąca jest tabela pól w
 [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format):
 podaje dokładny offset każdego pola i odsyła do każdej tabeli identyfikatorów.
 Parser trzyma się tej tabeli.
+
+Aby zobaczyć tę mapę wypełnioną, [playground](https://tigersystem.io/playground) buduje chip z
+produktu z katalogu lub z wybranych pól albo dekoduje hex odczytanego chipa i
+pokazuje każde pole wraz z jego bajtami. Wszystko działa w przeglądarce.
 
 ## Odczyt i zapis
 

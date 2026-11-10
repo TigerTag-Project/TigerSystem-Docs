@@ -1,5 +1,5 @@
 ---
-sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
+sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -120,6 +120,11 @@ Isto é um mapa, não a especificação. A tabela campo a campo do
 [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
 é a referência: indica o deslocamento exato de cada campo e remete para cada
 tabela de IDs. Um parser segue essa tabela.
+
+Para ver este mapa preenchido, o [playground](https://tigersystem.io/playground) constrói um chip a partir de um
+produto do catálogo ou dos campos que escolher, ou descodifica o hexadecimal de
+um chip que tenha lido, e mostra cada campo com os seus bytes. Tudo funciona no
+navegador.
 
 ## Leitura e escrita
 
