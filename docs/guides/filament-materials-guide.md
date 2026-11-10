@@ -101,7 +101,7 @@ added on top of the base material — see
 | Chemical resistance | <span class="ts-tag ts-tag--ok">OK</span> water, alcohols, dilute acids, salts<br/><span class="ts-tag ts-tag--danger">POOR</span> chlorinated solvents, concentrated ketones |
 | Heat resistance | ~70–80 °C |
 | Impact resistance | Good |
-| UV resistance | Excellent |
+| UV resistance | Good |
 | Nozzle temp | 220–270 °C |
 | Bed temp | 70–75 °C |
 | Drying | 70 °C · 8 h |
@@ -125,7 +125,7 @@ added on top of the base material — see
 | Chemical resistance | <span class="ts-tag ts-tag--ok">OK</span> water, alcohols, dilute acids, salts<br/><span class="ts-tag ts-tag--danger">POOR</span> chlorinated solvents, concentrated ketones |
 | Heat resistance | ~70–80 °C |
 | Impact resistance | Good |
-| UV resistance | Excellent |
+| UV resistance | Good |
 | Nozzle temp | 220–270 °C |
 | Bed temp | 70–75 °C |
 | Drying | 70 °C · 8 h |
@@ -243,7 +243,7 @@ added on top of the base material — see
 |---|---|
 | TigerTag material | `ASA` · id 12844 |
 | Overview | Like ABS but built for the outdoors (UV, weather). |
-| Strength /10 | 10 |
+| Strength /10 | 8 (same as ABS) |
 | Chemical resistance | <span class="ts-tag ts-tag--ok">OK</span> rain, salt, alcohols<br/><span class="ts-tag ts-tag--danger">POOR</span> acetone, strong acids |
 | Heat resistance | ~95–100 °C |
 | Impact resistance | Excellent |

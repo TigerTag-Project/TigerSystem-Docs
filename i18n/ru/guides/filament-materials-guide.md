@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -106,7 +106,7 @@ sourcePath: docs/guides/filament-materials-guide.md
 | Химическая стойкость | <span class="ts-tag ts-tag--ok">OK</span> вода, спирты, разбавленные кислоты, соли<br/><span class="ts-tag ts-tag--danger">POOR</span> хлорированные растворители, концентрированные кетоны |
 | Термостойкость | ~70–80 °C |
 | Ударопрочность | Хорошая |
-| Стойкость к УФ | Отличная |
+| Стойкость к УФ | Хорошая |
 | Температура сопла | 220–270 °C |
 | Температура стола | 70–75 °C |
 | Сушка | 70 °C · 8 ч |
@@ -130,7 +130,7 @@ sourcePath: docs/guides/filament-materials-guide.md
 | Химическая стойкость | <span class="ts-tag ts-tag--ok">OK</span> вода, спирты, разбавленные кислоты, соли<br/><span class="ts-tag ts-tag--danger">POOR</span> хлорированные растворители, концентрированные кетоны |
 | Термостойкость | ~70–80 °C |
 | Ударопрочность | Хорошая |
-| Стойкость к УФ | Отличная |
+| Стойкость к УФ | Хорошая |
 | Температура сопла | 220–270 °C |
 | Температура стола | 70–75 °C |
 | Сушка | 70 °C · 8 ч |
@@ -248,7 +248,7 @@ sourcePath: docs/guides/filament-materials-guide.md
 |---|---|
 | Материал TigerTag | `ASA` · id 12844 |
 | Обзор | Как ABS, но создан для улицы (УФ, погода). |
-| Прочность /10 | 10 |
+| Прочность /10 | 8 (как у ABS) |
 | Химическая стойкость | <span class="ts-tag ts-tag--ok">OK</span> дождь, соль, спирты<br/><span class="ts-tag ts-tag--danger">POOR</span> ацетон, сильные кислоты |
 | Термостойкость | ~95–100 °C |
 | Ударопрочность | Отличная |

@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -103,7 +103,7 @@ TigerTag 携带其制造商的确切数值，并以这些数值为准。
 | 耐化学性 | <span class="ts-tag ts-tag--ok">良好</span> 水、醇类、稀酸、盐类<br/><span class="ts-tag ts-tag--danger">较差</span> 氯化溶剂、浓酮类 |
 | 耐热性 | ~70–80 °C |
 | 耐冲击性 | 好 |
-| 耐紫外线 | 极好 |
+| 耐紫外线 | 好 |
 | 喷嘴温度 | 220–270 °C |
 | 热床温度 | 70–75 °C |
 | 干燥 | 70 °C · 8 小时 |
@@ -127,7 +127,7 @@ TigerTag 携带其制造商的确切数值，并以这些数值为准。
 | 耐化学性 | <span class="ts-tag ts-tag--ok">良好</span> 水、醇类、稀酸、盐类<br/><span class="ts-tag ts-tag--danger">较差</span> 氯化溶剂、浓酮类 |
 | 耐热性 | ~70–80 °C |
 | 耐冲击性 | 好 |
-| 耐紫外线 | 极好 |
+| 耐紫外线 | 好 |
 | 喷嘴温度 | 220–270 °C |
 | 热床温度 | 70–75 °C |
 | 干燥 | 70 °C · 8 小时 |
@@ -245,7 +245,7 @@ TigerTag 携带其制造商的确切数值，并以这些数值为准。
 |---|---|
 | TigerTag 材料 | `ASA` · id 12844 |
 | 概述 | 类似 ABS，但为户外（紫外线、气候）而生。 |
-| 强度 /10 | 10 |
+| 强度 /10 | 8（与 ABS 相同） |
 | 耐化学性 | <span class="ts-tag ts-tag--ok">良好</span> 雨水、盐、醇类<br/><span class="ts-tag ts-tag--danger">较差</span> 丙酮、强酸 |
 | 耐热性 | ~95–100 °C |
 | 耐冲击性 | 极好 |

@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -106,7 +106,7 @@ aggiunti sopra il materiale di base — vedi
 | Resistenza chimica | <span class="ts-tag ts-tag--ok">OK</span> acqua, alcoli, acidi diluiti, sali<br/><span class="ts-tag ts-tag--danger">SCARSA</span> solventi clorurati, chetoni concentrati |
 | Resistenza al calore | ~70–80 °C |
 | Resistenza agli urti | Buona |
-| Resistenza ai raggi UV | Eccellente |
+| Resistenza ai raggi UV | Buona |
 | Temp. ugello | 220–270 °C |
 | Temp. piano | 70–75 °C |
 | Essiccazione | 70 °C · 8 h |
@@ -130,7 +130,7 @@ aggiunti sopra il materiale di base — vedi
 | Resistenza chimica | <span class="ts-tag ts-tag--ok">OK</span> acqua, alcoli, acidi diluiti, sali<br/><span class="ts-tag ts-tag--danger">SCARSA</span> solventi clorurati, chetoni concentrati |
 | Resistenza al calore | ~70–80 °C |
 | Resistenza agli urti | Buona |
-| Resistenza ai raggi UV | Eccellente |
+| Resistenza ai raggi UV | Buona |
 | Temp. ugello | 220–270 °C |
 | Temp. piano | 70–75 °C |
 | Essiccazione | 70 °C · 8 h |
@@ -248,7 +248,7 @@ aggiunti sopra il materiale di base — vedi
 |---|---|
 | Materiale TigerTag | `ASA` · id 12844 |
 | Panoramica | Come l'ABS ma pensato per l'esterno (UV, intemperie). |
-| Resistenza /10 | 10 |
+| Resistenza /10 | 8 (come l'ABS) |
 | Resistenza chimica | <span class="ts-tag ts-tag--ok">OK</span> pioggia, sale, alcoli<br/><span class="ts-tag ts-tag--danger">SCARSA</span> acetone, acidi forti |
 | Resistenza al calore | ~95–100 °C |
 | Resistenza agli urti | Eccellente |

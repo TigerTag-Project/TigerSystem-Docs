@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -107,7 +107,7 @@ au matériau de base — voir
 | Résistance chimique | <span class="ts-tag ts-tag--ok">OK</span> eau, alcools, acides dilués, sels<br/><span class="ts-tag ts-tag--danger">KO</span> solvants chlorés, cétones concentrées |
 | Résist. chaleur | ~70–80 °C |
 | Résist. chocs | Bonne |
-| Résist. UV | Excellente |
+| Résist. UV | Bonne |
 | Temp. buse | 220–270 °C |
 | Temp. plateau | 70–75 °C |
 | Séchage | 70 °C · 8 h |
@@ -131,7 +131,7 @@ au matériau de base — voir
 | Résistance chimique | <span class="ts-tag ts-tag--ok">OK</span> eau, alcools, acides dilués, sels<br/><span class="ts-tag ts-tag--danger">KO</span> solvants chlorés, cétones concentrées |
 | Résist. chaleur | ~70–80 °C |
 | Résist. chocs | Bonne |
-| Résist. UV | Excellente |
+| Résist. UV | Bonne |
 | Temp. buse | 220–270 °C |
 | Temp. plateau | 70–75 °C |
 | Séchage | 70 °C · 8 h |
@@ -249,7 +249,7 @@ au matériau de base — voir
 |---|---|
 | Matériau TigerTag | `ASA` · id 12844 |
 | Particularité | Comme l'ABS mais pensé pour l'extérieur (UV, intempéries). |
-| Solidité /10 | 10 |
+| Solidité /10 | 8 (identique à l'ABS) |
 | Résistance chimique | <span class="ts-tag ts-tag--ok">OK</span> pluie, sels, alcools<br/><span class="ts-tag ts-tag--danger">KO</span> acétone, acides forts |
 | Résist. chaleur | ~95–100 °C |
 | Résist. chocs | Excellente |

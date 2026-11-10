@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -106,7 +106,7 @@ dodawanymi do materiału bazowego — zob.
 | Odporność chemiczna | <span class="ts-tag ts-tag--ok">OK</span> woda, alkohole, rozcieńczone kwasy, sole<br/><span class="ts-tag ts-tag--danger">SŁABO</span> rozpuszczalniki chlorowane, stężone ketony |
 | Odporność na ciepło | ~70–80 °C |
 | Odporność na uderzenia | Dobra |
-| Odporność na UV | Doskonała |
+| Odporność na UV | Dobra |
 | Temp. dyszy | 220–270 °C |
 | Temp. stołu | 70–75 °C |
 | Suszenie | 70 °C · 8 h |
@@ -130,7 +130,7 @@ dodawanymi do materiału bazowego — zob.
 | Odporność chemiczna | <span class="ts-tag ts-tag--ok">OK</span> woda, alkohole, rozcieńczone kwasy, sole<br/><span class="ts-tag ts-tag--danger">SŁABO</span> rozpuszczalniki chlorowane, stężone ketony |
 | Odporność na ciepło | ~70–80 °C |
 | Odporność na uderzenia | Dobra |
-| Odporność na UV | Doskonała |
+| Odporność na UV | Dobra |
 | Temp. dyszy | 220–270 °C |
 | Temp. stołu | 70–75 °C |
 | Suszenie | 70 °C · 8 h |
@@ -248,7 +248,7 @@ dodawanymi do materiału bazowego — zob.
 |---|---|
 | Materiał TigerTag | `ASA` · id 12844 |
 | Przegląd | Jak ABS, ale stworzony do pracy na zewnątrz (UV, pogoda). |
-| Wytrzymałość /10 | 10 |
+| Wytrzymałość /10 | 8 (tak jak ABS) |
 | Odporność chemiczna | <span class="ts-tag ts-tag--ok">OK</span> deszcz, sól, alkohole<br/><span class="ts-tag ts-tag--danger">SŁABO</span> aceton, mocne kwasy |
 | Odporność na ciepło | ~95–100 °C |
 | Odporność na uderzenia | Doskonała |

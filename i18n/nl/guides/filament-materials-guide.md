@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -106,7 +106,7 @@ bovenop het basismateriaal toegevoegd — zie
 | Chemische bestendigheid | <span class="ts-tag ts-tag--ok">OK</span> water, alcoholen, verdunde zuren, zouten<br/><span class="ts-tag ts-tag--danger">SLECHT</span> gechloreerde oplosmiddelen, geconcentreerde ketonen |
 | Hittebestendigheid | ~70–80 °C |
 | Slagvastheid | Goed |
-| Uv-bestendigheid | Uitstekend |
+| Uv-bestendigheid | Goed |
 | Nozzletemperatuur | 220–270 °C |
 | Bedtemperatuur | 70–75 °C |
 | Drogen | 70 °C · 8 u |
@@ -130,7 +130,7 @@ bovenop het basismateriaal toegevoegd — zie
 | Chemische bestendigheid | <span class="ts-tag ts-tag--ok">OK</span> water, alcoholen, verdunde zuren, zouten<br/><span class="ts-tag ts-tag--danger">SLECHT</span> gechloreerde oplosmiddelen, geconcentreerde ketonen |
 | Hittebestendigheid | ~70–80 °C |
 | Slagvastheid | Goed |
-| Uv-bestendigheid | Uitstekend |
+| Uv-bestendigheid | Goed |
 | Nozzletemperatuur | 220–270 °C |
 | Bedtemperatuur | 70–75 °C |
 | Drogen | 70 °C · 8 u |
@@ -248,7 +248,7 @@ bovenop het basismateriaal toegevoegd — zie
 |---|---|
 | TigerTag-materiaal | `ASA` · id 12844 |
 | Overzicht | Zoals ABS maar gebouwd voor buiten (uv, weer). |
-| Sterkte /10 | 10 |
+| Sterkte /10 | 8 (gelijk aan ABS) |
 | Chemische bestendigheid | <span class="ts-tag ts-tag--ok">OK</span> regen, zout, alcoholen<br/><span class="ts-tag ts-tag--danger">SLECHT</span> aceton, sterke zuren |
 | Hittebestendigheid | ~95–100 °C |
 | Slagvastheid | Uitstekend |

@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -106,7 +106,7 @@ die auf das Basismaterial aufgesetzt werden – siehe
 | Chemische Beständigkeit | <span class="ts-tag ts-tag--ok">OK</span> Wasser, Alkohole, verdünnte Säuren, Salze<br/><span class="ts-tag ts-tag--danger">SCHLECHT</span> chlorierte Lösungsmittel, konzentrierte Ketone |
 | Hitzebeständigkeit | ~70–80 °C |
 | Schlagfestigkeit | Gut |
-| UV-Beständigkeit | Ausgezeichnet |
+| UV-Beständigkeit | Gut |
 | Düsentemperatur | 220–270 °C |
 | Betttemperatur | 70–75 °C |
 | Trocknung | 70 °C · 8 h |
@@ -130,7 +130,7 @@ die auf das Basismaterial aufgesetzt werden – siehe
 | Chemische Beständigkeit | <span class="ts-tag ts-tag--ok">OK</span> Wasser, Alkohole, verdünnte Säuren, Salze<br/><span class="ts-tag ts-tag--danger">SCHLECHT</span> chlorierte Lösungsmittel, konzentrierte Ketone |
 | Hitzebeständigkeit | ~70–80 °C |
 | Schlagfestigkeit | Gut |
-| UV-Beständigkeit | Ausgezeichnet |
+| UV-Beständigkeit | Gut |
 | Düsentemperatur | 220–270 °C |
 | Betttemperatur | 70–75 °C |
 | Trocknung | 70 °C · 8 h |
@@ -248,7 +248,7 @@ die auf das Basismaterial aufgesetzt werden – siehe
 |---|---|
 | TigerTag-Material | `ASA` · ID 12844 |
 | Überblick | Wie ABS, aber für den Außeneinsatz gemacht (UV, Witterung). |
-| Festigkeit /10 | 10 |
+| Festigkeit /10 | 8 (wie ABS) |
 | Chemische Beständigkeit | <span class="ts-tag ts-tag--ok">OK</span> Regen, Salz, Alkohole<br/><span class="ts-tag ts-tag--danger">SCHLECHT</span> Aceton, starke Säuren |
 | Hitzebeständigkeit | ~95–100 °C |
 | Schlagfestigkeit | Ausgezeichnet |

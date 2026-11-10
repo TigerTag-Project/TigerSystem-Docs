@@ -1,5 +1,5 @@
 ---
-sourceHash: e5862ee1342ae90c0f611c8239c4b34958fb835dffae1e4f1f608c941c7a25f9
+sourceHash: 523ed86c04218e9fd4b3d044087a4f64103df5017b6ae258c84443a2243fcac2
 sourcePath: docs/guides/filament-materials-guide.md
 ---
 
@@ -105,7 +105,7 @@ acrescentados por cima do material de base — veja a
 | Resistência química | <span class="ts-tag ts-tag--ok">OK</span> água, álcoois, ácidos diluídos, sais<br/><span class="ts-tag ts-tag--danger">FRACA</span> solventes clorados, cetonas concentradas |
 | Resistência ao calor | ~70–80 °C |
 | Resistência ao impacto | Boa |
-| Resistência aos UV | Excelente |
+| Resistência aos UV | Boa |
 | Temp. do bocal | 220–270 °C |
 | Temp. da mesa | 70–75 °C |
 | Secagem | 70 °C · 8 h |
@@ -129,7 +129,7 @@ acrescentados por cima do material de base — veja a
 | Resistência química | <span class="ts-tag ts-tag--ok">OK</span> água, álcoois, ácidos diluídos, sais<br/><span class="ts-tag ts-tag--danger">FRACA</span> solventes clorados, cetonas concentradas |
 | Resistência ao calor | ~70–80 °C |
 | Resistência ao impacto | Boa |
-| Resistência aos UV | Excelente |
+| Resistência aos UV | Boa |
 | Temp. do bocal | 220–270 °C |
 | Temp. da mesa | 70–75 °C |
 | Secagem | 70 °C · 8 h |
@@ -247,7 +247,7 @@ acrescentados por cima do material de base — veja a
 |---|---|
 | Material TigerTag | `ASA` · id 12844 |
 | Visão geral | Como o ABS mas feito para o exterior (UV, intempéries). |
-| Resistência /10 | 10 |
+| Resistência /10 | 8 (igual ao ABS) |
 | Resistência química | <span class="ts-tag ts-tag--ok">OK</span> chuva, sal, álcoois<br/><span class="ts-tag ts-tag--danger">FRACA</span> acetona, ácidos fortes |
 | Resistência ao calor | ~95–100 °C |
 | Resistência ao impacto | Excelente |
