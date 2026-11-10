@@ -1,5 +1,5 @@
 ---
-sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
+sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -29,9 +29,15 @@ eenheden komen uit een **gedeelde referentiedatabase** die wordt aangeboden op `
 (gehost in hetzelfde Firebase-project als de accounts). Elke app lost dezelfde id's op naar dezelfde betekenis, zodat een
 chip die met de ene tool is gecodeerd, in elke andere identiek wordt gelezen.
 
-> **TODO:** link het openbare endpoint voor het bladeren door de database / het dumpformaat zodra de
-> RFID-gids dat documenteert. De referentiegegevens worden meegeleverd met Tiger Studio
-> (`assets/db/tigertag/`) en worden ververst vanaf de CDN.
+De tabellen worden twee keer gepubliceerd, en het zijn dezelfde tabellen. Het
+zijn JSON-bestanden in de map
+[`database/`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/tree/main/database)
+van de RFID-gids, vrij in te bouwen (CC0) en elke 6 uur vanuit de catalogus
+gesynchroniseerd. De publieke API levert ze ook, elk via een eigen endpoint
+([de lijst](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#reference-tables-ship-with-the-protocol--the-api-is-optional)).
+De bestanden zijn wat het protocol garandeert: ze lossen elke id op die een
+chip kan dragen, zonder netwerk en zonder account. Tiger Studio levert ze mee
+(`assets/db/tigertag/`) en ververst ze via het CDN.
 
 ## Eén identiteit, vier toestanden
 

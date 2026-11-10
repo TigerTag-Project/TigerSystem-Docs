@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -171,10 +171,28 @@ Die 144-Byte-Nutzdaten codieren die
 Material, Aspekt/Farbe, Typ, Durchmesser, Druckeinstellungen – als IDs, die gegen
 die gemeinsame Referenzdatenbank aufgelöst werden.
 
-> **TODO:** Byte-Layout der Felder. Die maßgebliche Spezifikation liegt im
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> diese Seite sollte sie zusammenfassen (Offsets, Versionierung, ID-Tabellen),
-> sobald sie dort final ist. **Offsets nie aus dem Gedächtnis hier dokumentieren.**
+Die Nutzdaten belegen die Seiten `0x04` bis `0x27` zu je 4 Bytes; jeder
+Mehrbyte-Wert ist Big-Endian:
+
+| Seiten | Bytes | Inhalt |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, der Chiptyp: TigerTag, TigerTag+ oder TigerTag Init |
+| `0x05` | 4 | `ID Product`: ein Katalogprodukt bei einem TigerTag+, `0xFFFFFFFF` bei einem TigerTag |
+| `0x06`–`0x07` | 8 | Material, zwei Aspekte, Typ, Durchmesser und Marke, als IDs der Referenzdatenbank |
+| `0x08` | 4 | Farbe 1, mit Alpha |
+| `0x09` | 4 | Menge bei der Herstellung und ihre Einheit |
+| `0x0A`–`0x0B` | 8 | Temperaturbereiche für Düse und Bett, Trocknungstemperatur und -dauer |
+| `0x0C` | 4 | Zeitstempel, zugleich die Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | Farben 2 und 3, Tag-Index und -Anzahl, ein reserviertes Byte |
+| `0x0F` | 4 | HueForge-TD, zwei reservierte Bytes |
+| `0x10`–`0x16` | 28 | freie Nachricht, UTF-8 |
+| `0x17` | 4 | Restmenge, von der Tiger Scale aktualisiert, ein reserviertes Byte |
+| `0x18`–`0x27` | 64 | die Signatur (`R` und `S`) bei einem TigerTag+ Certified; sonst frei |
+
+Das ist eine Übersicht, nicht die Spezifikation. Maßgeblich ist die Feldtabelle im
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format):
+Sie nennt den genauen Offset jedes Felds und verweist auf jede ID-Tabelle. Ein
+Parser folgt dieser Tabelle.
 
 ## Lesen und Schreiben
 

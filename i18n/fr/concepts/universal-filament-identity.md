@@ -1,5 +1,5 @@
 ---
-sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
+sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -30,10 +30,15 @@ partagée** servie sur `cdn.tigertag.io` (hébergée dans le même projet Fireba
 que les comptes). Chaque application résout les mêmes identifiants vers le même
 sens : une puce encodée par un outil se lit à l'identique dans tous les autres.
 
-> **TODO :** ajouter le lien vers le point d'accès public de consultation de la
-> base / le format d'export dès que le guide RFID le documentera. Les données de
-> référence sont livrées avec Tiger Studio (`assets/db/tigertag/`) et se
-> rafraîchissent depuis le CDN.
+Les tables sont publiées deux fois, et ce sont les mêmes. Ce sont des fichiers
+JSON dans le dossier
+[`database/`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/tree/main/database)
+du guide RFID, libres d'intégration (CC0) et synchronisés depuis le catalogue
+toutes les 6 heures. L'API publique les sert aussi, chacune à son propre point
+d'accès ([la liste](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#reference-tables-ship-with-the-protocol--the-api-is-optional)).
+Les fichiers sont ce que le protocole garantit : ils résolvent tout identifiant
+qu'une puce peut porter, sans réseau ni compte. Tiger Studio les embarque
+(`assets/db/tigertag/`) et les rafraîchit depuis le CDN.
 
 ## Une identité, quatre états
 

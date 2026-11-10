@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -175,10 +175,28 @@ de la bobine — marque, matière, aspect/couleur, type, diamètre, réglages
 d'impression — sous forme d'identifiants résolus dans la base de données de
 référence partagée.
 
-> **TODO :** disposition des champs au niveau octet. La spécification canonique
-> se trouve dans [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide) ;
-> cette page devra la résumer (décalages, versionnage, tables d'identifiants)
-> une fois qu'elle y sera figée. **Ne jamais documenter ici des décalages de mémoire.**
+La charge utile occupe les pages `0x04` à `0x27`, de 4 octets chacune ; toute
+valeur sur plusieurs octets est en big-endian :
+
+| Pages | Octets | Contenu |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, le type de puce : TigerTag, TigerTag+ ou TigerTag Init |
+| `0x05` | 4 | `ID Product` : un produit du catalogue sur un TigerTag+, `0xFFFFFFFF` sur un TigerTag |
+| `0x06`–`0x07` | 8 | matière, deux aspects, type, diamètre et marque, en identifiants de la base de référence |
+| `0x08` | 4 | couleur 1, avec alpha |
+| `0x09` | 4 | quantité à la fabrication, et son unité |
+| `0x0A`–`0x0B` | 8 | plages de température buse et plateau, température et durée de séchage |
+| `0x0C` | 4 | horodatage, qui sert aussi de Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | couleurs 2 et 3, index et nombre de tags, un octet réservé |
+| `0x0F` | 4 | TD HueForge, deux octets réservés |
+| `0x10`–`0x16` | 28 | message libre, UTF-8 |
+| `0x17` | 4 | quantité restante, mise à jour par Tiger Scale, un octet réservé |
+| `0x18`–`0x27` | 64 | la signature (`R` et `S`) sur un TigerTag+ Certified ; libre sinon |
+
+C'est une carte, pas la spécification. Le tableau champ par champ du
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+fait foi : il donne le décalage exact de chaque champ et renvoie vers chaque
+table d'identifiants. Un parseur suit ce tableau.
 
 ## Lecture et écriture
 

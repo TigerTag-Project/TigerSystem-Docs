@@ -1,5 +1,5 @@
 ---
-sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
+sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -27,8 +27,12 @@ TigerTag 芯片赋予线轴一个**通用身份**：一份单一、开放的记�
 **共享参考数据库**（托管在与账号相同的 Firebase 项目中）。
 每个应用都把相同的 ID 解析为相同的含义，因此一个工具写入的芯片在其他所有工具中读出来都完全一致。
 
-> **TODO：** 待 RFID 指南记录公开数据库浏览端点 / 转储格式后，在此添加链接。
-> 参考数据随 Tiger Studio 一同打包（`assets/db/tigertag/`），并从 CDN 刷新。
+这些表发布了两次，而且是同一批表。它们是 RFID 指南
+[`database/`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/tree/main/database)
+文件夹中的 JSON 文件，可自由嵌入（CC0），每 6 小时从目录同步一次。公开 API 也提供这些表，每张表都有自己的端点
+（[列表](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#reference-tables-ship-with-the-protocol--the-api-is-optional)）。
+协议保证的是这些文件：无需网络、无需账户，它们就能解析芯片可能携带的每一个 ID。Tiger Studio 随附这些文件
+（`assets/db/tigertag/`），并从 CDN 刷新。
 
 ## 一个身份，四种状态
 

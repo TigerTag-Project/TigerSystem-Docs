@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -164,10 +164,28 @@ Il payload da 144 byte codifica l'[identità universale](./universal-filament-id
 della bobina — marca, materiale, aspetto/colore, tipo, diametro, impostazioni di stampa — come ID risolti sul
 database di riferimento condiviso.
 
-> **TODO:** struttura dei campi a livello di byte. La specifica canonica risiede in
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> questa pagina dovrebbe riassumerla (offset, versioni, tabelle di ID) una volta
-> finalizzata lì. **Non documentare mai qui gli offset a memoria.**
+Il payload occupa le pagine da `0x04` a `0x27`, di 4 byte ciascuna; ogni
+valore su più byte è in big-endian:
+
+| Pagine | Byte | Contenuto |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, il tipo di chip: TigerTag, TigerTag+ o TigerTag Init |
+| `0x05` | 4 | `ID Product`: un prodotto del catalogo su un TigerTag+, `0xFFFFFFFF` su un TigerTag |
+| `0x06`–`0x07` | 8 | materiale, due aspetti, tipo, diametro e marca, come id del database di riferimento |
+| `0x08` | 4 | colore 1, con alfa |
+| `0x09` | 4 | quantità alla produzione e relativa unità |
+| `0x0A`–`0x0B` | 8 | intervalli di temperatura di ugello e piatto, temperatura e durata di essiccazione |
+| `0x0C` | 4 | timestamp, che è anche il Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | colori 2 e 3, indice e numero di tag, un byte riservato |
+| `0x0F` | 4 | TD HueForge, due byte riservati |
+| `0x10`–`0x16` | 28 | messaggio libero, UTF-8 |
+| `0x17` | 4 | quantità rimanente, aggiornata da Tiger Scale, un byte riservato |
+| `0x18`–`0x27` | 64 | la firma (`R` e `S`) su un TigerTag+ Certified; altrimenti libere |
+
+Questa è una mappa, non la specifica. Fa fede la tabella campo per campo del
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format):
+indica l'offset esatto di ogni campo e rimanda a ogni tabella di id. Un parser
+segue quella tabella.
 
 ## Lettura e scrittura
 

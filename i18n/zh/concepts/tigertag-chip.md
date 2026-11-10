@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -135,9 +135,26 @@ sourcePath: docs/concepts/tigertag-chip.md
 144 字节的载荷编码了线轴的[通用身份](./universal-filament-identity.md)——
 品牌、材料、外观/颜色、类型、直径、打印设置——以 id 的形式，对照共享参考数据库解析。
 
-> **TODO：** 字节级字段布局。权威规范位于
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)；
-> 一旦那里定稿，本页应对其进行摘要（偏移、版本、ID 表）。**绝不要凭记忆在这里记录偏移量。**
+有效载荷占据页 `0x04` 至 `0x27`，每页 4 个字节；所有多字节值均为大端序（big-endian）：
+
+| 页 | 字节 | 内容 |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`，芯片类型：TigerTag、TigerTag+ 或 TigerTag Init |
+| `0x05` | 4 | `ID Product`：TigerTag+ 上为目录产品，TigerTag 上为 `0xFFFFFFFF` |
+| `0x06`–`0x07` | 8 | 材料、两个外观、类型、直径和品牌，均为参考数据库中的 ID |
+| `0x08` | 4 | 颜色 1，含 alpha |
+| `0x09` | 4 | 出厂数量及其单位 |
+| `0x0A`–`0x0B` | 8 | 喷嘴和热床温度范围、干燥温度和时长 |
+| `0x0C` | 4 | 时间戳，同时也是 Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | 颜色 2 和 3、标签序号和数量、一个保留字节 |
+| `0x0F` | 4 | HueForge TD、两个保留字节 |
+| `0x10`–`0x16` | 28 | 自定义消息，UTF-8 |
+| `0x17` | 4 | 剩余数量，由 Tiger Scale 更新，一个保留字节 |
+| `0x18`–`0x27` | 64 | TigerTag+ Certified 上为签名（`R` 和 `S`）；否则空闲 |
+
+这是一张示意图，而不是规范。以
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+中的逐字段表格为准：它给出每个字段的精确偏移，并链接到每一张 ID 表。解析器应遵循该表格。
 
 ## 读取与写入
 

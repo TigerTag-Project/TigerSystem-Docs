@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -98,7 +98,28 @@ Os chips vendidos em separado saem **virgens**, com ou sem logótipo. Não é um
 
 O payload de 144 bytes codifica a [identidade universal](./universal-filament-identity.md) da bobina — marca, material, aspeto/cor, tipo, diâmetro, definições de impressão — como IDs resolvidos face à base de dados de referência partilhada.
 
-> **TODO:** disposição dos campos ao nível do byte. A especificação de referência vive no [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide); esta página deve resumi-la (deslocamentos, versões, tabelas de IDs) quando estiver finalizada lá. **Nunca documentar aqui deslocamentos de memória.**
+O payload ocupa as páginas `0x04` a `0x27`, de 4 bytes cada; todos os
+valores de vários bytes estão em big-endian:
+
+| Páginas | Bytes | Conteúdo |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, o tipo de chip: TigerTag, TigerTag+ ou TigerTag Init |
+| `0x05` | 4 | `ID Product`: um produto do catálogo num TigerTag+, `0xFFFFFFFF` num TigerTag |
+| `0x06`–`0x07` | 8 | material, dois aspetos, tipo, diâmetro e marca, como IDs da base de dados de referência |
+| `0x08` | 4 | cor 1, com alfa |
+| `0x09` | 4 | quantidade no fabrico e a respetiva unidade |
+| `0x0A`–`0x0B` | 8 | intervalos de temperatura do bico e da base, temperatura e tempo de secagem |
+| `0x0C` | 4 | marca temporal, que é também o Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | cores 2 e 3, índice e número de tags, um byte reservado |
+| `0x0F` | 4 | TD do HueForge, dois bytes reservados |
+| `0x10`–`0x16` | 28 | mensagem livre, UTF-8 |
+| `0x17` | 4 | quantidade restante, atualizada pela Tiger Scale, um byte reservado |
+| `0x18`–`0x27` | 64 | a assinatura (`R` e `S`) num TigerTag+ Certified; caso contrário, livres |
+
+Isto é um mapa, não a especificação. A tabela campo a campo do
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+é a referência: indica o deslocamento exato de cada campo e remete para cada
+tabela de IDs. Um parser segue essa tabela.
 
 ## Leitura e escrita
 

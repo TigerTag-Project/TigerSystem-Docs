@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -166,10 +166,28 @@ O payload de 144 bytes codifica a
 aspecto/cor, tipo, diâmetro, configurações de impressão — como IDs resolvidos no
 banco de dados de referência compartilhado.
 
-> **TODO:** layout dos campos em nível de byte. A especificação oficial está no
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> esta página deve resumi-la (offsets, versionamento, tabelas de IDs) assim que
-> estiver finalizada lá. **Nunca documente offsets aqui de memória.**
+O payload ocupa as páginas `0x04` a `0x27`, de 4 bytes cada; todo valor
+de vários bytes é big-endian:
+
+| Páginas | Bytes | Conteúdo |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, o tipo de chip: TigerTag, TigerTag+ ou TigerTag Init |
+| `0x05` | 4 | `ID Product`: um produto do catálogo em um TigerTag+, `0xFFFFFFFF` em um TigerTag |
+| `0x06`–`0x07` | 8 | material, dois aspectos, tipo, diâmetro e marca, como IDs do banco de referência |
+| `0x08` | 4 | cor 1, com alfa |
+| `0x09` | 4 | quantidade na fabricação e sua unidade |
+| `0x0A`–`0x0B` | 8 | faixas de temperatura do bico e da mesa, temperatura e tempo de secagem |
+| `0x0C` | 4 | carimbo de data/hora, que também é o Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | cores 2 e 3, índice e número de tags, um byte reservado |
+| `0x0F` | 4 | TD do HueForge, dois bytes reservados |
+| `0x10`–`0x16` | 28 | mensagem livre, UTF-8 |
+| `0x17` | 4 | quantidade restante, atualizada pela Tiger Scale, um byte reservado |
+| `0x18`–`0x27` | 64 | a assinatura (`R` e `S`) em um TigerTag+ Certified; caso contrário, livres |
+
+Isto é um mapa, não a especificação. A tabela campo a campo do
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+é normativa: ela dá o offset exato de cada campo e aponta para cada tabela de
+IDs. Um parser segue essa tabela.
 
 ## Leitura e gravação
 

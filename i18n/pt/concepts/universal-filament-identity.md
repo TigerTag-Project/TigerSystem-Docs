@@ -1,5 +1,5 @@
 ---
-sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
+sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -29,9 +29,15 @@ unidades vêm de um **banco de dados de referência compartilhado** servido em `
 (hospedado no mesmo projeto Firebase das contas). Todo aplicativo resolve os mesmos IDs para o mesmo significado, de modo que um
 chip codificado por uma ferramenta é lido de forma idêntica em todas as outras.
 
-> **TODO:** vincular o endpoint público de navegação do banco de dados / o formato de exportação assim que
-> o guia RFID o documentar. Os dados de referência vêm incluídos no Tiger Studio
-> (`assets/db/tigertag/`) e são atualizados a partir da CDN.
+As tabelas são publicadas duas vezes, e são as mesmas tabelas. São arquivos JSON
+na pasta
+[`database/`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/tree/main/database)
+do guia RFID, livres para incorporar (CC0) e sincronizados a partir do catálogo
+a cada 6 horas. A API pública também as serve, cada uma com seu próprio endpoint
+([a lista](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#reference-tables-ship-with-the-protocol--the-api-is-optional)).
+Os arquivos são o que o protocolo garante: resolvem todo ID que um chip pode
+levar, sem rede e sem conta. O Tiger Studio os inclui
+(`assets/db/tigertag/`) e os atualiza a partir do CDN.
 
 ## Uma identidade, quatro estados
 

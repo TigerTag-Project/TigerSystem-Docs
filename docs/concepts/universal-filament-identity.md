@@ -24,9 +24,15 @@ units come from a **shared reference database** served at `cdn.tigertag.io`
 (hosted in the same Firebase project as the accounts). Every app resolves the same IDs to the same meaning, so a
 chip encoded by one tool reads identically in every other.
 
-> **TODO:** link the public database browsing endpoint / dump format once the
-> RFID guide documents it. The reference data ships bundled with Tiger Studio
-> (`assets/db/tigertag/`) and refreshes from the CDN.
+The tables are published twice, and they are the same tables. They are JSON
+files in the RFID guide's
+[`database/`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/tree/main/database)
+folder, free to embed (CC0) and synced from the catalogue every 6 hours. They
+are also served by the public API, each with its own endpoint
+([the list](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#reference-tables-ship-with-the-protocol--the-api-is-optional)).
+The files are what the protocol guarantees: they resolve every id a chip can
+carry with no network and no account. Tiger Studio ships them bundled
+(`assets/db/tigertag/`) and refreshes them from the CDN.
 
 ## One identity, four states
 

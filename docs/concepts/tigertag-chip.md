@@ -161,10 +161,28 @@ The 144-byte payload encodes the spool's
 aspect/color, type, diameter, print settings — as IDs resolved against the
 shared reference database.
 
-> **TODO:** byte-level field layout. The canonical specification lives in
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> this page should summarize it (offsets, versioning, ID tables) once
-> finalized there. **Never document offsets here from memory.**
+The payload fills pages `0x04` to `0x27`, 4 bytes each, with every
+multi-byte value in big-endian:
+
+| Pages | Bytes | What they hold |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, the chip type: TigerTag, TigerTag+ or TigerTag Init |
+| `0x05` | 4 | `ID Product`: a catalogue product on a TigerTag+, `0xFFFFFFFF` on a TigerTag |
+| `0x06`–`0x07` | 8 | material, two aspects, type, diameter and brand, as reference database ids |
+| `0x08` | 4 | color 1, with alpha |
+| `0x09` | 4 | quantity at manufacture, and its unit |
+| `0x0A`–`0x0B` | 8 | nozzle and bed temperature ranges, drying temperature and time |
+| `0x0C` | 4 | timestamp, which is also the Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | colors 2 and 3, the tag index and count, one reserved byte |
+| `0x0F` | 4 | HueForge TD, two reserved bytes |
+| `0x10`–`0x16` | 28 | custom message, UTF-8 |
+| `0x17` | 4 | quantity left, updated by Tiger Scale, one reserved byte |
+| `0x18`–`0x27` | 64 | the signature (`R` and `S`) on a TigerTag+ Certified; otherwise free |
+
+This is a map, not the specification. The field-by-field table in the
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+is normative: it gives the exact offset of every field and links every id
+table. A parser follows that table.
 
 ## Reading and writing
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -167,10 +167,28 @@ La carga útil de 144 bytes codifica la
 material, aspecto/color, tipo, diámetro, ajustes de impresión) como ids resueltos
 contra la base de datos de referencia compartida.
 
-> **TODO:** disposición de los campos byte a byte. La especificación canónica vive
-> en [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> esta página debería resumirla (desplazamientos, versiones, tablas de ids) cuando
-> esté finalizada allí. **No documentes nunca aquí desplazamientos de memoria.**
+La carga útil ocupa las páginas `0x04` a `0x27`, de 4 bytes cada una; todo
+valor de varios bytes va en big-endian:
+
+| Páginas | Bytes | Contenido |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, el tipo de chip: TigerTag, TigerTag+ o TigerTag Init |
+| `0x05` | 4 | `ID Product`: un producto del catálogo en un TigerTag+, `0xFFFFFFFF` en un TigerTag |
+| `0x06`–`0x07` | 8 | material, dos aspectos, tipo, diámetro y marca, como ids de la base de referencia |
+| `0x08` | 4 | color 1, con alfa |
+| `0x09` | 4 | cantidad de fabricación y su unidad |
+| `0x0A`–`0x0B` | 8 | rangos de temperatura de boquilla y cama, temperatura y tiempo de secado |
+| `0x0C` | 4 | marca de tiempo, que también es el Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | colores 2 y 3, índice y número de tags, un byte reservado |
+| `0x0F` | 4 | TD de HueForge, dos bytes reservados |
+| `0x10`–`0x16` | 28 | mensaje libre, UTF-8 |
+| `0x17` | 4 | cantidad restante, actualizada por Tiger Scale, un byte reservado |
+| `0x18`–`0x27` | 64 | la firma (`R` y `S`) en un TigerTag+ Certified; libre en otro caso |
+
+Esto es un mapa, no la especificación. La tabla campo por campo del
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+es normativa: da el desplazamiento exacto de cada campo y enlaza cada tabla de
+ids. Un parser sigue esa tabla.
 
 ## Lectura y escritura
 

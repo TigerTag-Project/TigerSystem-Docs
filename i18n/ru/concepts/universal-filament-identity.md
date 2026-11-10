@@ -1,5 +1,5 @@
 ---
-sourceHash: 91d553189f12a3505a08517cad04952ae9beb92f494c171860a5199147622175
+sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -29,9 +29,14 @@ sourcePath: docs/concepts/universal-filament-identity.md
 (в том же проекте Firebase, что и аккаунты). Все приложения разрешают одни и те же ID в одно и то же значение, поэтому
 чип, закодированный одним инструментом, читается одинаково в любом другом.
 
-> **TODO:** добавить ссылку на публичную точку просмотра базы данных / формат дампа, когда
-> он будет описан в руководстве по RFID. Справочные данные поставляются в составе Tiger Studio
-> (`assets/db/tigertag/`) и обновляются из CDN.
+Таблицы публикуются дважды, и это одни и те же таблицы. Это JSON-файлы в папке
+[`database/`](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/tree/main/database)
+RFID-руководства: их можно свободно встраивать (CC0), а синхронизируются они с
+каталогом каждые 6 часов. Их также отдаёт публичный API, каждую через свой
+эндпоинт ([список](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#reference-tables-ship-with-the-protocol--the-api-is-optional)).
+Гарантирует протокол именно файлы: они разрешают любой ID, который может нести
+чип, без сети и без аккаунта. Tiger Studio поставляет их в комплекте
+(`assets/db/tigertag/`) и обновляет из CDN.
 
 ## Одна идентичность, четыре состояния
 

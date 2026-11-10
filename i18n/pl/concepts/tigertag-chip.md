@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -163,10 +163,28 @@ i dlatego protokół nigdy nie zależy od kupowania czegokolwiek.
 materiał, aspekt/kolor, typ, średnicę, ustawienia druku — jako identyfikatory
 rozwiązywane względem wspólnej bazy referencyjnej.
 
-> **TODO:** układ pól na poziomie bajtów. Wiążąca specyfikacja znajduje się w
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> ta strona powinna ją podsumować (offsety, wersjonowanie, tabele identyfikatorów)
-> po sfinalizowaniu tam. **Nigdy nie dokumentuj tutaj offsetów z pamięci.**
+Ładunek zajmuje strony od `0x04` do `0x27`, po 4 bajty każda; każda
+wartość wielobajtowa jest zapisana w big-endian:
+
+| Strony | Bajty | Zawartość |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, typ chipa: TigerTag, TigerTag+ lub TigerTag Init |
+| `0x05` | 4 | `ID Product`: produkt z katalogu na TigerTag+, `0xFFFFFFFF` na TigerTag |
+| `0x06`–`0x07` | 8 | materiał, dwa aspekty, typ, średnica i marka, jako identyfikatory z bazy referencyjnej |
+| `0x08` | 4 | kolor 1, z kanałem alfa |
+| `0x09` | 4 | ilość przy produkcji i jej jednostka |
+| `0x0A`–`0x0B` | 8 | zakresy temperatury dyszy i stołu, temperatura i czas suszenia |
+| `0x0C` | 4 | znacznik czasu, który jest też Twin Tag ID |
+| `0x0D`–`0x0E` | 8 | kolory 2 i 3, indeks i liczba tagów, jeden bajt zarezerwowany |
+| `0x0F` | 4 | TD HueForge, dwa bajty zarezerwowane |
+| `0x10`–`0x16` | 28 | dowolna wiadomość, UTF-8 |
+| `0x17` | 4 | pozostała ilość, aktualizowana przez Tiger Scale, jeden bajt zarezerwowany |
+| `0x18`–`0x27` | 64 | podpis (`R` i `S`) na TigerTag+ Certified; w przeciwnym razie wolne |
+
+To jest mapa, nie specyfikacja. Wiążąca jest tabela pól w
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format):
+podaje dokładny offset każdego pola i odsyła do każdej tabeli identyfikatorów.
+Parser trzyma się tej tabeli.
 
 ## Odczyt i zapis
 

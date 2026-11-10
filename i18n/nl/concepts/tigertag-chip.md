@@ -1,5 +1,5 @@
 ---
-sourceHash: 64b34d2f406da778544e6820ff66230f1ac8a92eedaa2d5a5a70337ce0a025e8
+sourceHash: ba348b03d60cc85812ec315cd808baee450bfd9e1eeef61fe74efb8f74550ab1
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -166,10 +166,28 @@ De payload van 144 bytes codeert de
 uiterlijk/kleur, type, diameter, printinstellingen — als id's die worden opgelost via de
 gedeelde referentiedatabase.
 
-> **TODO:** veldindeling op byteniveau. De gezaghebbende specificatie staat in
-> [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide);
-> deze pagina moet die samenvatten (offsets, versiebeheer, id-tabellen) zodra ze
-> daar definitief is. **Documenteer hier nooit offsets uit het hoofd.**
+De payload beslaat de pagina's `0x04` tot `0x27`, elk 4 bytes; elke
+waarde van meerdere bytes is big-endian:
+
+| Pagina's | Bytes | Inhoud |
+|---|---|---|
+| `0x04` | 4 | `ID TigerTag`, het chiptype: TigerTag, TigerTag+ of TigerTag Init |
+| `0x05` | 4 | `ID Product`: een catalogusproduct op een TigerTag+, `0xFFFFFFFF` op een TigerTag |
+| `0x06`–`0x07` | 8 | materiaal, twee aspecten, type, diameter en merk, als id's uit de referentiedatabase |
+| `0x08` | 4 | kleur 1, met alfa |
+| `0x09` | 4 | hoeveelheid bij productie, en de eenheid |
+| `0x0A`–`0x0B` | 8 | temperatuurbereiken voor nozzle en bed, droogtemperatuur en -tijd |
+| `0x0C` | 4 | tijdstempel, die ook de Twin Tag ID is |
+| `0x0D`–`0x0E` | 8 | kleuren 2 en 3, tag-index en -aantal, één gereserveerde byte |
+| `0x0F` | 4 | HueForge-TD, twee gereserveerde bytes |
+| `0x10`–`0x16` | 28 | vrij bericht, UTF-8 |
+| `0x17` | 4 | resterende hoeveelheid, bijgewerkt door Tiger Scale, één gereserveerde byte |
+| `0x18`–`0x27` | 64 | de handtekening (`R` en `S`) op een TigerTag+ Certified; anders vrij |
+
+Dit is een overzicht, niet de specificatie. De veldtabel in de
+[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
+is bindend: die geeft de exacte offset van elk veld en verwijst naar elke
+id-tabel. Een parser volgt die tabel.
 
 ## Lezen en schrijven
 
