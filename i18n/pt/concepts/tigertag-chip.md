@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -51,8 +51,8 @@ detalhe mais inteligente do formato:
 - **Liberdade para integradores.** Um fabricante de secadores de filamento simplesmente coloca o leitor onde
  couber — à esquerda ou à direita em um secador de uma bobina, entre as duas bobinas em um
  de duas — e sempre funciona.
-- **Redundância.** Se um chip parar de responder, o outro ainda identifica a
- bobina — e serve para consertar o quebrado.
+- **Redundância.** Se um chip parar de responder, o outro continua
+ identificando o carretel, então nada se perde enquanto você o substitui (veja abaixo).
 - **Colheita em dobro.** No fim da vida, cada quilo de filamento impresso
  deixa para você **dois chips NTAG reutilizáveis** para projetos DIY
  ([zero lixo eletrônico](../philosophy/second-life.md)).
@@ -143,6 +143,25 @@ Dois detalhes que surpreendem as pessoas:
  ([segunda vida](../philosophy/second-life.md)).
 
 Onde conseguir um: veja [comprar os chips](../products/tigertag.md).
+
+## Quando um chip morre ou perde seus dados
+
+O chip que sobrou continua identificando o carretel. O que fazer depende do
+que aconteceu:
+
+| O que aconteceu | O que fazer | A assinatura |
+|---|---|---|
+| **Um chip morreu ou se perdeu** | Procure o filamento no catálogo, pelo [Tiger NFC Connect](../products/tigertag-connect.md) ou pelo [Tiger Studio](../products/tiger-studio.md), e grave-o em dois chips na mesma sessão: *Dual NFC* no celular, ou o [TigerPOD](../products/tigerpod.md). Use dois chips novos, ou apague o que sobrou e reutilize-o como um dos dois | perdida: os chips continuam levando o produto do catálogo, então são TigerTag+ e funcionam igual, mas não são mais TigerTag+ Certified |
+| **Os chips ainda respondem, mas os dados foram apagados ou danificados** | **Restaurar TigerTag+**, na caixa de ferramentas do carretel no Tiger Studio, com os chips no TigerPOD: cada chip é regravado a partir do seu backup | mantida: os chips voltam exatamente como saíram da fábrica |
+| **Nenhum chip à mão** | **Imprimir etiqueta** a partir do carretel no Tiger Studio: um QR code que abre o carretel | — |
+
+Um chip novo não pode simplesmente se juntar ao que sobrou: um par se forma no
+momento da gravação, então os dois chips são sempre gravados juntos
+([quando dois chips são lidos como dois carretéis](../guides/twin-tag-pair.md)).
+
+A assinatura se perde em chips novos porque assina o UID próprio de cada chip,
+então não pode passar para outro. **Restaurar TigerTag+** precisa de um backup:
+o Tiger Studio faz backup de um TigerTag+ na primeira vez que o lê.
 
 ## Codificado na fábrica, ou virgem na sua mão
 

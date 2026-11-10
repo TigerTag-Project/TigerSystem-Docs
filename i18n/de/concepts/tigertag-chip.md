@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -53,8 +53,8 @@ aber das klügste Detail des Formats:
  Lesegerät einfach dorthin, wo es passt – links oder rechts bei einem
  Ein-Spulen-Trockner, zwischen die zwei Spulen bei einem Doppel-Trockner – und es
  funktioniert immer.
-- **Redundanz.** Antwortet ein Chip nicht mehr, identifiziert der andere die Spule
- weiterhin – und dient dazu, den defekten zu reparieren.
+- **Redundanz.** Antwortet ein Chip nicht mehr, identifiziert der andere die
+ Spule weiterhin, sodass nichts verloren geht, während Sie ihn ersetzen (siehe unten).
 - **Doppelte Ausbeute.** Am Lebensende bleiben dir von jedem Kilo gedrucktem
  Filament **zwei wiederverwendbare NTAG-Chips** für DIY-Projekte
  ([null Elektroschrott](../philosophy/second-life.md)).
@@ -148,6 +148,26 @@ Zwei Details, die Leute überraschen:
  ([Second Life](../philosophy/second-life.md)).
 
 Wo du einen bekommst: siehe [Chips kaufen](../products/tigertag.md).
+
+## Wenn ein Chip ausfällt oder seine Daten verliert
+
+Der verbleibende Chip identifiziert die Spule weiter. Was als Nächstes zu tun
+ist, hängt davon ab, was passiert ist:
+
+| Was passiert ist | Was zu tun ist | Die Signatur |
+|---|---|---|
+| **Ein Chip ist defekt oder verloren** | Suchen Sie das Filament im Katalog, in [Tiger NFC Connect](../products/tigertag-connect.md) oder [Tiger Studio](../products/tiger-studio.md), und schreiben Sie es in einer Sitzung auf zwei Chips: *Dual NFC* am Telefon oder der [TigerPOD](../products/tigerpod.md). Nehmen Sie zwei neue Chips, oder löschen Sie den verbliebenen und verwenden Sie ihn als einen der beiden | verloren: Die Chips tragen weiter das Katalogprodukt, sind also TigerTag+ und funktionieren gleich, aber kein TigerTag+ Certified mehr |
+| **Die Chips antworten noch, aber ihre Daten wurden gelöscht oder beschädigt** | **TigerTag+ wiederherstellen**, in der Werkzeugleiste der Spule in Tiger Studio, mit den Chips auf dem TigerPOD: Jeder Chip wird aus seiner Sicherung zurückgeschrieben | erhalten: Die Chips sind genau wie ab Werk |
+| **Kein Chip zur Hand** | **Etikett drucken** bei der Spule in Tiger Studio: ein QR-Code, der die Spule öffnet | — |
+
+Ein neuer Chip kann sich nicht einfach dem verbliebenen anschließen: Ein Paar
+entsteht beim Schreiben, daher werden die beiden Chips immer zusammen
+geschrieben ([wenn zwei Chips als zwei Spulen gelesen werden](../guides/twin-tag-pair.md)).
+
+Auf neuen Chips geht die Signatur verloren, weil sie die eigene UID jedes Chips
+signiert und nicht auf einen anderen Chip übertragen werden kann. **TigerTag+
+wiederherstellen** braucht eine Sicherung: Tiger Studio sichert einen TigerTag+
+beim ersten Lesen.
 
 ## Ab Werk codiert oder leer in deiner Hand
 

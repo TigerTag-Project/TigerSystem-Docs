@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -52,7 +52,7 @@ najmądrzejszym szczegółem formatu:
  czytnik tam, gdzie pasuje — z lewej lub z prawej w suszarce jednoszpulowej,
  między dwiema szpulami w podwójnej — i zawsze działa.
 - **Redundancja.** Jeśli jeden chip przestanie odpowiadać, drugi nadal
- identyfikuje szpulę — i służy do naprawy uszkodzonego.
+ identyfikuje szpulę, więc nic nie ginie, gdy go wymieniasz (zobacz niżej).
 - **Podwójne żniwo.** Po zużyciu każdy kilogram wydrukowanego filamentu
  zostawia ci **dwa chipy NTAG do ponownego użycia** w projektach DIY
  ([zero elektrośmieci](../philosophy/second-life.md)).
@@ -141,6 +141,25 @@ Dwa szczegóły, które ludzi zaskakują:
  ([drugie życie](../philosophy/second-life.md)).
 
 Gdzie go zdobyć: zobacz [zakup chipów](../products/tigertag.md).
+
+## Gdy chip przestaje działać lub traci dane
+
+Ocalały chip nadal identyfikuje szpulę. Co dalej, zależy od tego, co się
+stało:
+
+| Co się stało | Co zrobić | Podpis |
+|---|---|---|
+| **Chip nie działa lub zaginął** | Znajdź filament w katalogu, w [Tiger NFC Connect](../products/tigertag-connect.md) lub [Tiger Studio](../products/tiger-studio.md), i zapisz go na dwóch chipach w jednej sesji: *Dual NFC* w telefonie albo [TigerPOD](../products/tigerpod.md). Użyj dwóch nowych chipów albo wyczyść ocalały i użyj go jako jednego z dwóch | utracony: chipy nadal niosą produkt z katalogu, więc są TigerTag+ i działają tak samo, ale nie są już TigerTag+ Certified |
+| **Chipy nadal odpowiadają, ale ich dane zostały wymazane lub uszkodzone** | **Przywróć TigerTag+** w przyborniku szpuli w Tiger Studio, z chipami na TigerPOD: każdy chip jest zapisywany ponownie z kopii zapasowej | zachowany: chipy wracają dokładnie takie, jakie wyszły z fabryki |
+| **Brak chipa pod ręką** | **Wydrukuj etykietę** ze szpuli w Tiger Studio: kod QR, który otwiera szpulę | — |
+
+Nowy chip nie może po prostu dołączyć do ocalałego: para powstaje w chwili
+zapisu, więc oba chipy zapisuje się zawsze razem
+([gdy dwa chipy czytają się jako dwie szpule](../guides/twin-tag-pair.md)).
+
+Na nowych chipach podpis przepada, bo podpisuje własny UID każdego chipa i nie
+może przejść na inny. **Przywróć TigerTag+** wymaga kopii zapasowej: Tiger
+Studio robi kopię TigerTag+ przy pierwszym odczycie.
 
 ## Zakodowany w fabryce albo czysty w twojej dłoni
 

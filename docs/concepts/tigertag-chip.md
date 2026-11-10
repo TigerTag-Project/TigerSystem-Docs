@@ -46,8 +46,8 @@ the smartest detail of the format:
 - **Integrator freedom.** A filament-dryer maker just puts the reader wherever
  fits — left or right for a single-spool dryer, between the two spools for a
  dual — and it always works.
-- **Redundancy.** If one chip stops answering, the other still identifies the
- spool — and serves to repair the broken one.
+- **Redundancy.** If one chip stops answering, the other still identifies
+ the spool, so nothing is lost while you replace it (see below).
 - **Double the harvest.** At end of life, every kilo of filament printed
  leaves you **two reusable NTAG chips** for DIY projects
  ([zero e-waste](../philosophy/second-life.md)).
@@ -138,6 +138,25 @@ Two details that surprise people:
  ([second life](../philosophy/second-life.md)).
 
 Where to get one: see [buying the chips](../products/tigertag.md).
+
+## When a chip dies or loses its data
+
+The surviving chip keeps identifying the spool. What you do next depends on
+what happened:
+
+| What happened | What to do | The signature |
+|---|---|---|
+| **A chip is dead, or lost** | Find the filament in the catalogue, from [Tiger NFC Connect](../products/tigertag-connect.md) or [Tiger Studio](../products/tiger-studio.md), and write it onto two chips in one session: *Dual NFC* on the phone, or the [TigerPOD](../products/tigerpod.md). Use two new chips, or erase the survivor and reuse it as one of the two | lost: the chips still carry the catalogue product, so they are a TigerTag+ and work the same, but no longer a TigerTag+ Certified |
+| **The chips still answer, but their data was wiped or damaged** | **Restore TigerTag+**, in the spool's toolbox in Tiger Studio, with the chips on the TigerPOD: each chip is written back from its backup | kept: the chips come back exactly as they left the factory |
+| **No chip to hand** | **Print a label** from the spool in Tiger Studio: a QR code that opens the spool | — |
+
+A new chip cannot simply join the survivor: a pair is made at write time, so
+the two chips are always written together
+([when two chips read as two spools](../guides/twin-tag-pair.md)).
+
+The signature is lost on new chips because it signs each chip's own UID, so
+it cannot move to another chip. **Restore TigerTag+** needs a backup: Tiger
+Studio backs up a TigerTag+ the first time it reads it.
 
 ## Encoded at the factory, or blank in your hand
 

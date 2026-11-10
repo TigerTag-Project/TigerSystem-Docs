@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -51,8 +51,8 @@ eigenlijk het slimste detail van het formaat:
 - **Vrijheid voor integrators.** Een fabrikant van filamentdrogers plaatst de lezer gewoon waar
  het past — links of rechts voor een droger met één spoel, tussen de twee spoelen voor een
  dubbele — en het werkt altijd.
-- **Redundantie.** Als één chip niet meer antwoordt, identificeert de andere de
- spoel nog steeds — en dient hij om de kapotte te herstellen.
+- **Redundantie.** Als een chip niet meer antwoordt, identificeert de andere de
+ spoel nog steeds, dus er gaat niets verloren terwijl je hem vervangt (zie hieronder).
 - **Dubbele oogst.** Aan het einde van de levensduur laat elk kilo geprint filament
  **twee herbruikbare NTAG-chips** achter voor doe-het-zelfprojecten
  ([nul e-afval](../philosophy/second-life.md)).
@@ -143,6 +143,26 @@ Twee details die mensen verrassen:
  ([tweede leven](../philosophy/second-life.md)).
 
 Waar je er een kunt krijgen: zie [de chips kopen](../products/tigertag.md).
+
+## Als een chip stukgaat of zijn gegevens verliest
+
+De overgebleven chip blijft de spoel identificeren. Wat je daarna doet, hangt
+af van wat er is gebeurd:
+
+| Wat er gebeurde | Wat te doen | De handtekening |
+|---|---|---|
+| **Een chip is kapot of kwijt** | Zoek het filament op in de catalogus, vanuit [Tiger NFC Connect](../products/tigertag-connect.md) of [Tiger Studio](../products/tiger-studio.md), en schrijf het in één sessie naar twee chips: *Dual NFC* op de telefoon, of de [TigerPOD](../products/tigerpod.md). Gebruik twee nieuwe chips, of wis de overgebleven chip en gebruik hem als een van de twee | verloren: de chips dragen nog steeds het catalogusproduct, dus het zijn TigerTag+ die hetzelfde werken, maar geen TigerTag+ Certified meer |
+| **De chips antwoorden nog, maar hun gegevens zijn gewist of beschadigd** | **TigerTag+ herstellen**, in de gereedschapskist van de spoel in Tiger Studio, met de chips op de TigerPOD: elke chip wordt teruggeschreven vanuit zijn back-up | behouden: de chips zijn weer precies zoals ze uit de fabriek kwamen |
+| **Geen chip bij de hand** | **Etiket afdrukken** vanuit de spoel in Tiger Studio: een QR-code die de spoel opent | — |
+
+Een nieuwe chip kan zich niet zomaar bij de overgebleven chip voegen: een paar
+ontstaat bij het schrijven, dus de twee chips worden altijd samen geschreven
+([als twee chips als twee spoelen worden gelezen](../guides/twin-tag-pair.md)).
+
+Op nieuwe chips gaat de handtekening verloren, omdat die de eigen UID van elke
+chip ondertekent en dus niet naar een andere chip kan. **TigerTag+ herstellen**
+heeft een back-up nodig: Tiger Studio maakt een back-up van een TigerTag+ de
+eerste keer dat het die leest.
 
 ## In de fabriek gecodeerd, of blanco in je hand
 

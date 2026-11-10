@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -51,8 +51,8 @@ más inteligente del formato:
 - **Libertad para los integradores.** El fabricante de un secador de filamento
  coloca el lector donde le convenga (a izquierda o derecha en un secador de una
  bobina, entre las dos bobinas en uno doble) y siempre funciona.
-- **Redundancia.** Si un chip deja de responder, el otro sigue identificando la
- bobina y sirve para reparar el averiado.
+- **Redundancia.** Si un chip deja de responder, el otro sigue identificando
+ la bobina, así que no se pierde nada mientras lo sustituyes (ver más abajo).
 - **Doble cosecha.** Al final de su vida útil, cada kilo de filamento impreso te
  deja **dos chips NTAG reutilizables** para proyectos DIY
  ([cero residuos electrónicos](../philosophy/second-life.md)).
@@ -144,6 +144,25 @@ Dos detalles que sorprenden:
  ([segunda vida](../philosophy/second-life.md)).
 
 Dónde conseguir uno: véase [comprar los chips](../products/tigertag.md).
+
+## Cuando un chip muere o pierde sus datos
+
+El chip que sobrevive sigue identificando la bobina. Lo que hay que hacer
+depende de lo que ha pasado:
+
+| Qué ha pasado | Qué hacer | La firma |
+|---|---|---|
+| **Un chip está muerto o perdido** | Busca el filamento en el catálogo, desde [Tiger NFC Connect](../products/tigertag-connect.md) o [Tiger Studio](../products/tiger-studio.md), y escríbelo en dos chips en una sola sesión: *Dual NFC* en el teléfono, o el [TigerPOD](../products/tigerpod.md). Usa dos chips nuevos, o borra el superviviente y reutilízalo como uno de los dos | perdida: los chips siguen llevando el producto del catálogo, así que son TigerTag+ y funcionan igual, pero ya no son TigerTag+ Certified |
+| **Los chips aún responden, pero sus datos se borraron o dañaron** | **Restaurar TigerTag+**, en la caja de herramientas de la bobina en Tiger Studio, con los chips en el TigerPOD: cada chip se reescribe desde su copia de seguridad | conservada: los chips vuelven exactamente como salieron de fábrica |
+| **Ningún chip a mano** | **Imprimir etiqueta** desde la bobina en Tiger Studio: un código QR que abre la bobina | — |
+
+Un chip nuevo no puede unirse sin más al superviviente: un par se forma al
+escribir, así que los dos chips se escriben siempre juntos
+([cuando dos chips se leen como dos bobinas](../guides/twin-tag-pair.md)).
+
+La firma se pierde en chips nuevos porque firma el UID propio de cada chip, así
+que no puede pasar a otro. **Restaurar TigerTag+** necesita una copia de
+seguridad: Tiger Studio guarda una copia de un TigerTag+ la primera vez que lo lee.
 
 ## Codificado de fábrica, o en blanco en tu mano
 

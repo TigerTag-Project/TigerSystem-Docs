@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -33,7 +33,7 @@ Dois chips, em lados opostos da bobina — parece redundante, mas é na verdade 
 - **Sem andar à procura do chip quando lê à mão.** Num [TigerPOD](../products/tigerpod.md) ou com o telemóvel, nunca precisa de descobrir qual das faces tem o chip: pegue na bobina como pegar, há já um do lado certo para o que está a fazer.
 - **Leitura no sítio.** Uma bobina montada num AMS Lite, na lateral de uma Elegoo Centauri Carbon ou de uma FlashForge pode ser lida sem a retirar.
 - **Liberdade para os integradores.** Um fabricante de secadores de filamento põe o leitor onde couber — à esquerda ou à direita num secador de uma bobina, entre as duas bobinas num secador duplo — e funciona sempre.
-- **Redundância.** Se um chip deixar de responder, o outro continua a identificar a bobina — e serve para reparar o avariado.
+- **Redundância.** Se um chip deixar de responder, o outro continua a identificar a bobina, pelo que nada se perde enquanto o substitui (ver abaixo).
 - **Colheita a dobrar.** No fim de vida, cada quilo de filamento impresso deixa-lhe **dois chips NTAG reutilizáveis** para projetos DIY ([zero lixo eletrónico](../philosophy/second-life.md)).
 
 Alguns detalhes de implementação:
@@ -82,6 +82,26 @@ Dois detalhes que surpreendem as pessoas:
 - **Sai de lá e é reutilizável.** Quando a recarga acaba, recupere o suporte com os seus dois chips, apague-os a partir do [Tiger NFC Connect](../products/tigertag-connect.md) ou do [Tiger Studio](../products/tiger-studio.md) e use-o de novo — noutra bobina ou em qualquer outro projeto NDEF. O filamento vendido com uma Recarga TigerTag deixa-lhe o suporte, não lixo ([segunda vida](../philosophy/second-life.md)).
 
 Onde obter um: ver [comprar os chips](../products/tigertag.md).
+
+## Quando um chip morre ou perde os dados
+
+O chip que resta continua a identificar a bobina. O que fazer depende do que
+aconteceu:
+
+| O que aconteceu | O que fazer | A assinatura |
+|---|---|---|
+| **Um chip morreu ou perdeu-se** | Procure o filamento no catálogo, no [Tiger NFC Connect](../products/tigertag-connect.md) ou no [Tiger Studio](../products/tiger-studio.md), e escreva-o em dois chips na mesma sessão: *Dual NFC* no telemóvel, ou o [TigerPOD](../products/tigerpod.md). Use dois chips novos, ou apague o que resta e reutilize-o como um dos dois | perdida: os chips continuam a conter o produto do catálogo, por isso são TigerTag+ e funcionam da mesma forma, mas já não são TigerTag+ Certified |
+| **Os chips ainda respondem, mas os dados foram apagados ou danificados** | **Restaurar TigerTag+**, na caixa de ferramentas da bobina no Tiger Studio, com os chips no TigerPOD: cada chip é reescrito a partir da sua cópia de segurança | mantida: os chips voltam exatamente como saíram da fábrica |
+| **Nenhum chip à mão** | **Imprimir etiqueta** a partir da bobina no Tiger Studio: um código QR que abre a bobina | — |
+
+Um chip novo não pode simplesmente juntar-se ao que resta: um par forma-se no
+momento da escrita, por isso os dois chips são sempre escritos em conjunto
+([quando dois chips são lidos como duas bobinas](../guides/twin-tag-pair.md)).
+
+A assinatura perde-se em chips novos porque assina o UID próprio de cada chip,
+pelo que não pode passar para outro. **Restaurar TigerTag+** precisa de uma
+cópia de segurança: o Tiger Studio guarda uma cópia de um TigerTag+ da primeira
+vez que o lê.
 
 ## Codificado de fábrica, ou virgem na sua mão
 

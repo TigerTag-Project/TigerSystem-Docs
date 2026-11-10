@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -55,8 +55,8 @@ en réalité le détail le plus astucieux du format :
  simplement le lecteur là où cela tombe bien — à gauche ou à droite pour un
  sécheur mono-bobine, entre les deux bobines pour un modèle double — et cela
  fonctionne à tous les coups.
-- **Redondance.** Si une puce cesse de répondre, l'autre identifie toujours la
- bobine — et sert à réparer celle qui est hors service.
+- **Redondance.** Si une puce ne répond plus, l'autre identifie toujours la
+ bobine : rien n'est perdu pendant que vous la remplacez (voir plus bas).
 - **Récolte doublée.** En fin de vie, chaque kilo de filament imprimé vous
  laisse **deux puces NTAG réutilisables** pour vos projets DIY
  ([zéro déchet électronique](../philosophy/second-life.md)).
@@ -152,6 +152,26 @@ Deux détails qui surprennent :
  ([seconde vie](../philosophy/second-life.md)).
 
 Où s'en procurer : voir [acheter les puces](../products/tigertag.md).
+
+## Quand une puce meurt ou perd ses données
+
+La puce survivante continue d'identifier la bobine. La suite dépend de ce qui
+s'est passé :
+
+| Ce qui s'est passé | Que faire | La signature |
+|---|---|---|
+| **Une puce est morte, ou perdue** | Cherchez le filament dans le catalogue, depuis [Tiger NFC Connect](../products/tigertag-connect.md) ou [Tiger Studio](../products/tiger-studio.md), et écrivez-le sur deux puces dans la même session : *Dual NFC* sur le téléphone, ou le [TigerPOD](../products/tigerpod.md). Prenez deux puces neuves, ou effacez la survivante et réutilisez-la comme l'une des deux | perdue : les puces portent toujours le produit du catalogue, ce sont donc des TigerTag+ qui fonctionnent pareil, mais plus des TigerTag+ Certified |
+| **Les puces répondent encore, mais leurs données ont été effacées ou abîmées** | **Restaurer le TigerTag+**, dans la boîte à outils de la bobine dans Tiger Studio, les puces sur le TigerPOD : chaque puce est réécrite depuis sa sauvegarde | conservée : les puces reviennent exactement comme en sortie d'usine |
+| **Pas de puce sous la main** | **Imprimer l'étiquette** depuis la bobine dans Tiger Studio : un QR code qui ouvre la bobine | — |
+
+Une puce neuve ne peut pas simplement rejoindre la survivante : une paire se
+fait au moment de l'écriture, donc les deux puces s'écrivent toujours ensemble
+([quand deux puces se lisent comme deux bobines](../guides/twin-tag-pair.md)).
+
+La signature est perdue sur des puces neuves parce qu'elle signe l'UID propre
+à chaque puce : elle ne peut pas passer sur une autre. **Restaurer le
+TigerTag+** demande une sauvegarde : Tiger Studio sauvegarde un TigerTag+ la
+première fois qu'il le lit.
 
 ## Encodée à l'usine, ou vierge entre vos mains
 

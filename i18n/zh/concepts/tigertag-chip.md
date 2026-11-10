@@ -1,5 +1,5 @@
 ---
-sourceHash: eb98b668febe81444aaf5213b5a458a0a716327471fbb98b5c40bcd19ce623ae
+sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -41,7 +41,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 - **原位扫描。** 装在 AMS Lite、Elegoo Centauri Carbon 侧面或 FlashForge 上的线轴，无需取出即可扫描。
 - **集成者自由。** 耗材干燥箱制造商只需把读卡器放在合适的地方——
  单线轴干燥箱放在左侧或右侧，双线轴的放在两个线轴之间——就总能正常工作。
-- **冗余。** 如果一枚芯片不再应答，另一枚仍能识别线轴——并可用来修复损坏的那枚。
+- **冗余。** 如果一枚芯片不再应答，另一枚仍能识别线轴，因此在更换期间不会丢失任何信息（见下文）。
 - **双倍收获。** 寿命终结时，每打印一公斤耗材，
  你就得到**两枚可重复使用的 NTAG 芯片**，可用于 DIY 项目
  （[零电子垃圾](../philosophy/second-life.md)）。
@@ -116,6 +116,20 @@ sourcePath: docs/concepts/tigertag-chip.md
  （[第二次生命](../philosophy/second-life.md)）。
 
 从哪里获取：参见[购买芯片](../products/tigertag.md)。
+
+## 当芯片损坏或丢失数据时
+
+幸存的芯片会继续识别线轴。接下来怎么做，取决于发生了什么：
+
+| 发生了什么 | 怎么做 | 签名 |
+|---|---|---|
+| **一枚芯片损坏或丢失** | 在 [Tiger NFC Connect](../products/tigertag-connect.md) 或 [Tiger Studio](../products/tiger-studio.md) 中从目录找到该耗材，并在同一次会话中写入两枚芯片：手机上用 *Dual NFC*，或使用 [TigerPOD](../products/tigerpod.md)。可以用两枚新芯片，也可以擦除幸存的芯片，把它当作其中一枚重新使用 | 丢失：芯片仍带有目录产品，因此是 TigerTag+，功能完全相同，但不再是 TigerTag+ Certified |
+| **芯片仍能应答，但数据被擦除或损坏** | 在 Tiger Studio 中线轴的工具箱里使用 **恢复 TigerTag+**，芯片放在 TigerPOD 上：每枚芯片都会从其备份中写回 | 保留：芯片会恢复到出厂时的原样 |
+| **手边没有芯片** | 在 Tiger Studio 中从线轴 **打印标签**：一个可打开该线轴的二维码 | — |
+
+新芯片不能直接加入幸存的芯片：配对是在写入时形成的，所以两枚芯片总是一起写入（[当两枚芯片被读作两卷线轴时](../guides/twin-tag-pair.md)）。
+
+在新芯片上签名会丢失，因为签名针对的是每枚芯片自己的 UID，无法转移到另一枚芯片上。**恢复 TigerTag+** 需要备份：Tiger Studio 在第一次读取 TigerTag+ 时会备份它。
 
 ## 工厂预写入，或手中的空白芯片
 
