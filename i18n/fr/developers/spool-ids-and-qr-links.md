@@ -1,5 +1,5 @@
 ---
-sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
+sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -373,10 +373,12 @@ nuancier, d'une étagère ou d'un showroom.
   pas de série) ;
 - le nom de la couleur et son ou ses codes hex (`#F2D066`, jusqu'à trois sur les
   gabarits larges) ;
-- sur une étiquette de bobine, le protocole de la bobine en haut à droite, dans
-  une pastille cernée : `TigerTag+` dès que sa référence est un produit du
-  catalogue (un vrai `id_product`), sinon `TigerTag`, `TigerData` ou `TigerData+` ;
-  une étiquette produit (filament) porte toujours `TigerTag+` ;
+- sur une étiquette de bobine, le nom de l'étiquette en haut à droite, dans une
+  pastille cernée : `TigerQR+` quand sa référence est un produit du catalogue (un
+  vrai `id_product`) ou une puce TigerTag+, sinon `TigerQR` (une puce TigerTag
+  sans produit donne donc `TigerQR`) ; une étiquette produit (filament) porte
+  toujours `TigerQR+`. Comme pour TigerTag et TigerTag+, le `+` veut dire lié au
+  catalogue. La pastille ne dit pas si la bobine a une puce ;
 - jusqu'à **quatre cases de valeurs**, choisies par l'utilisateur parmi : plage
   de buse, plage de plateau, séchage (température · durée), TD, diamètre ;
 - le QR code.

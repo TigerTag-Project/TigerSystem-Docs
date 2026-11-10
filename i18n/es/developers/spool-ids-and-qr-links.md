@@ -1,5 +1,5 @@
 ---
-sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
+sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -364,10 +364,11 @@ una muestra, un estante o un showroom.
 - la marca, donde iría el logotipo de un fabricante (los logotipos de fabricante llegarán más adelante);
 - la serie en blanco sobre una barra negra (`PLA Rainbow`; el material cuando no hay serie);
 - el nombre del color, y su(s) código(s) hexadecimal(es) (`#F2D066`, hasta tres en las plantillas anchas);
-- en una etiqueta de bobina, el protocolo de la bobina en la esquina superior derecha, como una píldora contorneada:
-  `TigerTag+` siempre que su referencia sea un producto del catálogo (un `id_product` real),
-  si no, `TigerTag`, `TigerData` o `TigerData+`; una etiqueta de producto (filamento) lleva
-  siempre `TigerTag+`;
+- en una etiqueta de bobina, el nombre de la etiqueta en la esquina superior derecha, como una píldora contorneada:
+  `TigerQR+` cuando su referencia es un producto del catálogo (un `id_product` real) o un
+  chip TigerTag+, si no, `TigerQR` (así, un chip TigerTag sin producto da `TigerQR`); una
+  etiqueta de producto (filamento) lleva siempre `TigerQR+`. Como en TigerTag y TigerTag+,
+  el `+` significa vinculado al catálogo. La píldora no dice si la bobina tiene chip;
 - hasta **cuatro casillas de valores**, elegidas por el usuario entre: rango de boquilla, rango de cama,
   secado (temperatura · tiempo), TD, diámetro;
 - el código QR.

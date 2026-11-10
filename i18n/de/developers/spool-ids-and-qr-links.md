@@ -1,5 +1,5 @@
 ---
-sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
+sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -365,10 +365,12 @@ Produkt für alle: Es ist das für ein Farbmuster, ein Regal oder einen Showroom
 - die Marke, dort, wo ein Herstellerlogo hingehören würde (Herstellerlogos kommen später);
 - die Serie in Weiß auf einem schwarzen Balken (`PLA Rainbow`; das Material, wenn es keine Serie gibt);
 - den Farbnamen und seine(n) Hex-Code(s) (`#F2D066`, bis zu drei auf den breiten Vorlagen);
-- auf einem Spulenetikett das Protokoll der Spule in der oberen rechten Ecke, als umrandete Pille:
-  `TigerTag+`, sobald ihre Referenz ein Katalogprodukt ist (eine echte `id_product`),
-  sonst `TigerTag`, `TigerData` oder `TigerData+`; ein Produkt-(Filament-)Etikett trägt
-  immer `TigerTag+`;
+- auf einem Spulenetikett der Name des Etiketts in der oberen rechten Ecke, als umrandete Pille:
+  `TigerQR+`, wenn ihre Referenz ein Katalogprodukt (eine echte `id_product`) oder ein
+  TigerTag+-Chip ist, sonst `TigerQR` (ein TigerTag-Chip ohne Produkt ergibt also
+  `TigerQR`); ein Produkt-(Filament-)Etikett trägt immer `TigerQR+`. Wie bei TigerTag
+  und TigerTag+ bedeutet das `+`: mit dem Katalog verknüpft. Die Pille sagt nicht, ob
+  die Spule einen Chip hat;
 - bis zu **vier Wertefelder**, vom Nutzer gewählt aus: Düsenbereich, Druckbettbereich,
   Trocknung (Temperatur · Dauer), TD, Durchmesser;
 - den QR-Code.

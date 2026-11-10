@@ -1,5 +1,5 @@
 ---
-sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
+sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -358,10 +358,12 @@ voor iedereen: het is het label voor een kleurstaal, een schap of een showroom.
 - het merk, waar een fabrikantenlogo zou komen (fabrikantenlogo's komen later);
 - de serie in wit op een zwarte balk (`PLA Rainbow`; het materiaal als er geen serie is);
 - de kleurnaam, en de hexcode(s) (`#F2D066`, tot drie op de brede sjablonen);
-- op een spoellabel het protocol van de spoel in de rechterbovenhoek, als omlijnde pil:
-  `TigerTag+` zodra de referentie een catalogusproduct is (een echt `id_product`),
-  anders `TigerTag`, `TigerData` of `TigerData+`; een product-(filament)label draagt
-  altijd `TigerTag+`;
+- op een spoellabel de naam van het label in de rechterbovenhoek, als omlijnde pil:
+  `TigerQR+` als de referentie een catalogusproduct (een echt `id_product`) of een
+  TigerTag+-chip is, anders `TigerQR` (een TigerTag-chip zonder product geeft dus
+  `TigerQR`); een product-(filament)label draagt altijd `TigerQR+`. Net als bij TigerTag
+  en TigerTag+ betekent de `+`: gekoppeld aan de catalogus. De pil zegt niet of de spoel
+  een chip heeft;
 - tot **vier waardevakken**, door de gebruiker gekozen uit: nozzlebereik, bedbereik,
   drogen (temperatuur · tijd), TD, diameter;
 - de QR-code.

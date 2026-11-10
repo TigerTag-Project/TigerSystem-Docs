@@ -1,5 +1,5 @@
 ---
-sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
+sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -262,10 +262,10 @@ https://qr.tigertag.io/p/<id_product>
 - 品牌，位于制造商标志的位置（制造商标志稍后推出）；
 - 黑色横条上的白色系列名（`PLA Rainbow`；没有系列时为材料）；
 - 颜色名称及其十六进制代码（`#F2D066`，宽模板上最多三个）；
-- 在线轴标签上，线轴的协议位于右上角，以描边胶囊形式显示：
-  只要其引用是产品库产品（真实的 `id_product`）就是 `TigerTag+`，
-  否则为 `TigerTag`、`TigerData` 或 `TigerData+`；产品（耗材）标签始终
-  显示 `TigerTag+`；
+- 在线轴标签上，标签名称位于右上角，以描边胶囊形式显示：
+  当其引用是产品库产品（真实的 `id_product`）或 TigerTag+ 芯片时为 `TigerQR+`，
+  否则为 `TigerQR`（因此没有产品的 TigerTag 芯片显示 `TigerQR`）；产品（耗材）标签始终
+  显示 `TigerQR+`。与 TigerTag 和 TigerTag+ 一样，`+` 表示已关联产品库。胶囊不表明线轴是否有芯片；
 - 最多**四个数值栏**，由用户从以下选项中选择：喷嘴温度范围、热床温度范围、
   干燥（温度 · 时长）、TD、直径；
 - 二维码。

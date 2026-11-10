@@ -1,5 +1,5 @@
 ---
-sourceHash: bbdf69421abaee7725f7305f1447d7321fd2a6cd1861f4569bd5adbe88e7d828
+sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -357,10 +357,11 @@ dla wszystkich: to ona służy do próbnika, półki lub showroomu.
 - markę, tam gdzie byłoby logo producenta (logotypy producentów pojawią się później);
 - serię białym tekstem na czarnym pasku (`PLA Rainbow`; materiał, gdy nie ma serii);
 - nazwę koloru i jego kod(y) szesnastkowe (`#F2D066`, do trzech na szerokich szablonach);
-- na etykiecie szpuli protokół szpuli w prawym górnym rogu, jako obrysowaną pigułkę:
-  `TigerTag+`, ilekroć jej odniesieniem jest produkt z katalogu (prawdziwy `id_product`),
-  w przeciwnym razie `TigerTag`, `TigerData` lub `TigerData+`; etykieta produktu (filamentu)
-  zawsze niesie `TigerTag+`;
+- na etykiecie szpuli nazwa etykiety w prawym górnym rogu, jako obrysowana pigułka:
+  `TigerQR+`, gdy jej odniesieniem jest produkt z katalogu (prawdziwy `id_product`) lub
+  chip TigerTag+, w przeciwnym razie `TigerQR` (chip TigerTag bez produktu daje więc
+  `TigerQR`); etykieta produktu (filamentu) zawsze niesie `TigerQR+`. Jak w TigerTag
+  i TigerTag+, `+` oznacza powiązanie z katalogiem. Pigułka nie mówi, czy szpula ma chip;
 - do **czterech pól wartości**, wybieranych przez użytkownika spośród: zakresu dyszy, zakresu łoża,
   suszenia (temperatura · czas), TD, średnicy;
 - kod QR.

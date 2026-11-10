@@ -335,10 +335,12 @@ for everyone: it is the one for a swatch, a shelf or a showroom.
 - the brand, where a maker logo would go (maker logos come later);
 - the series in white on a black bar (`PLA Rainbow`; the material when there is no series);
 - the colour name, and its hex code(s) (`#F2D066`, up to three on the wide templates);
-- on a spool label, the spool's protocol in the top-right corner, as an outlined pill:
-  `TigerTag+` whenever its reference is a catalogue product (a real `id_product`),
-  else `TigerTag`, `TigerData` or `TigerData+`; a product (filament) label always
-  carries `TigerTag+`;
+- on a spool label, the label's name in the top-right corner, as an outlined pill:
+  `TigerQR+` when its reference is a catalogue product (a real `id_product`) or a
+  TigerTag+ chip, else `TigerQR` (so a TigerTag chip with no product gives
+  `TigerQR`); a product (filament) label always carries `TigerQR+`. As with
+  TigerTag and TigerTag+, the `+` means linked to the catalogue. The pill does not
+  say whether the spool has a chip;
 - up to **four value slots**, chosen by the user among: nozzle range, bed range,
   drying (temperature · time), TD, diameter;
 - the QR code.
