@@ -1,5 +1,5 @@
 ---
-sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
+sourceHash: 27444f945a927973e57cd59c875c9dad41b748d476f0ff4d72224db2aac71368
 sourcePath: docs/glossary.md
 ---
 
@@ -27,7 +27,7 @@ het volledige verhaal beheert.
 | **Officieel** | Door TigerSystem zelf gemaakt — de chips in beide vormfactoren, en de apps en hardware in [Producten](./products/README.md). Een verklaring van herkomst, geen merkteken dat wordt verleend: TigerSystem certificeert zichzelf niet. |
 | **TigerTag Compatible** | Het gratis niveau: alles wat met TigerTag-chips *praat* — lezers, apps, printers, slicers, tools. Geen toestemming nodig om het te implementeren, het te zeggen of het logo te tonen in een app, documentatie of winkelvermelding. Het omvat ook **TigerTag+**: een handtekening verifiëren is gratis, offline en onbeperkt. Het ene woord dat het nooit omvat is *gecertificeerd*. |
 | **TigerTag Certified** | Het geauditeerde niveau, open voor alles wat een derde partij bouwt — een apparaat, een applicatie, filament, een inlay, een drager — zodra het een audit tegen de eisen doorstaat. Verleend in plaats van geclaimd, vermeld in het register van gecertificeerden, en intrekbaar. Komt in twee reikwijdtes, **TigerTag Certified** en **TigerTag+ Certified**. Gecertificeerde partners mogen het merkteken **op het product** aanbrengen en TigerTag+-handtekeningen uitgeven. Zie [Documentatie voor ontwikkelaars](./developers/README.md) en de [certificeringscriteria](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). |
-| **Tiger NFC Connect** | De mobiele app (iOS/Android) — tik om te lezen, tik om te schrijven, blader door de catalogus. Eerder “TigerTag RFID Connect”. Zie [Tiger NFC Connect](./products/tigertag-connect.md). |
+| **Tiger NFC Connect** | De mobiele app (iOS/Android) — tik om te lezen, tik om te schrijven, blader door de catalogus. Eerder “TigerTag RFID Connect”. Zie [Tiger NFC Connect](./products/tiger-nfc-connect.md). |
 | **Tiger Studio** | De open-source desktop-app (Windows/macOS/Linux) — inventaris, racks, sensoren en printerkoppelingen. Zie [Tiger Studio](./products/tiger-studio.md). |
 | **TigerHub** | Het webthuis van het ecosysteem op `tigersystem.io` — etalage, verlanglijsten, vriendcodes, openbaar delen van lijsten. Zie [TigerHub](./products/tigerhub.md). |
 | **TigerPOD** | De 3D-printbare lezerstandaard met dubbele NFC — gratis STL. Zie [TigerPOD](./products/tigerpod.md). |

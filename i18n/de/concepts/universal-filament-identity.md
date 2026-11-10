@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -138,7 +138,7 @@ Signatur eines zertifizierten Herstellers macht einen Chip zu einem
 erzeugt einen.
 
 Eine Einbahnstraße ist die Aufwertung auch nicht. Chips sind nie schreibgesperrt:
-Ein aufgewerteter Chip kann aus [Tiger NFC Connect](../products/tigertag-connect.md)
+Ein aufgewerteter Chip kann aus [Tiger NFC Connect](../products/tiger-nfc-connect.md)
 oder Tiger Studio gelöscht und neu beschrieben werden ([der TigerTag-Chip](./tigertag-chip.md)).
 Die Identität ist der Datensatz; der Chip ist nur der Ort, an dem sie gerade lebt.
 

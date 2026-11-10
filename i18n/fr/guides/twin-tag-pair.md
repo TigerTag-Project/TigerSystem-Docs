@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -41,7 +41,7 @@ Effacez les deux puces, puis écrivez-les ensemble dans une seule session :
 
 | | Comment la paire est écrite | Idéal pour |
 |---|---|---|
-| **Téléphone** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC* : un formulaire, puis puce 1/2 et 2/2 dans la même session | une bobine, sans matériel |
+| **Téléphone** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC* : un formulaire, puis puce 1/2 et 2/2 dans la même session | une bobine, sans matériel |
 | **Bureau, deux lecteurs** — [TigerPOD](../products/tigerpod.md) | les deux puces d'un coup, en une passe | une étagère, un lot |
 | **Bureau, un seul lecteur** | impossible en une passe — c'est ainsi que le problème a été créé | — |
 

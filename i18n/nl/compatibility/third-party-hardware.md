@@ -1,5 +1,5 @@
 ---
-sourceHash: a05c4e52f6cae3704b4e16e2b3d1b6d55653145391a9bdd6f31630c6821c91ab
+sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -13,8 +13,8 @@ apparatuur aansluiten.
 | Apparaat | Maker | Wat het doet | Werkt met |
 |---|---|---|---|
 | **ACR122U** NFC-lezer | ACS | USB NFC-lezer/-schrijver — scan een chip en de spoel opent automatisch; begeleid schrijven met UID-controle. Twee ervan vormen een [TigerPOD](../products/tigerpod.md) | [Tiger Studio](../products/tiger-studio.md) |
-| **TD-1** filamentanalyzer | [AJAX-3D](https://ajax-3d.com) | Doe-het-zelfbouwpakket — meet de **Transmission Distance** van een filament (de HueForge- / Full Spectrum-printwaarde) + kleur (RGB, 1–3 slots, indicatief) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
-| **TD1s** filamentanalyzer | [AJAX-3D](https://ajax-3d.com) | Dezelfde apparaatfamilie, kant-en-klaar gemonteerd en direct bruikbaar | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
+| **TD-1** filamentanalyzer | [AJAX-3D](https://ajax-3d.com) | Doe-het-zelfbouwpakket — meet de **Transmission Distance** van een filament (de HueForge- / Full Spectrum-printwaarde) + kleur (RGB, 1–3 slots, indicatief) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
+| **TD1s** filamentanalyzer | [AJAX-3D](https://ajax-3d.com) | Dezelfde apparaatfamilie, kant-en-klaar gemonteerd en direct bruikbaar | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | **DYMO M-serie** USB-weegschalen (M5, M10, M25…) | DYMO | Standaard USB-“HID Scale”-apparaten — live gewicht in het profiel van de spoel ([protocoldetails](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Elke HID Scale-conforme USB-weegschaal** | elk | Hetzelfde standaardprotocol als de DYMO M-serie (HID-gebruikspagina `0x8D`) — het merk maakt niet uit | [Tiger Studio](../products/tiger-studio.md) |
 | **Elke blanco NTAG213/215/216-chip** | elk | Het verbruiksartikel zelf — overal te koop, werkt identiek ([welke chip?](../../docs/faq/README.md)) | Alles |

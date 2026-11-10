@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
+sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
 sourcePath: docs/faq/README.md
 ---
 
@@ -43,7 +43,7 @@ Sim, e é uma funcionalidade separada do `+`. O Tiger Studio pode guardar o cont
 Duas respostas igualmente válidas. Os chips oficiais com a marca TigerTag estão em **[tigertag.io](https://tigertag.io)** e em distribuidores oficiais (atualmente a [Atome3D](https://atome3d.com), com mais a juntar-se em breve) — comprá-los ajuda a apoiar a I&D. Mas **qualquer chip NTAG virgem e barato** da Amazon, do AliExpress ou da loja da sua zona funciona de forma idêntica, e isso é deliberado: nada é bloqueado, o protocolo é que importa.
 
 **Os chips que compro chegam com dados?**
-Não — os **chips vendidos em separado saem virgens**, tenham ou não o logótipo TigerTag. É você que escreve a identidade do filamento, no [Tiger NFC Connect](../products/tigertag-connect.md) ou no [Tiger Studio](../products/tiger-studio.md); demora cerca de um minuto na primeira vez. Os chips que chegam **já codificados** são os integrados na fábrica, dentro de filamento das marcas parceiras. Comprar um chip e comprar filamento etiquetado são duas coisas diferentes.
+Não — os **chips vendidos em separado saem virgens**, tenham ou não o logótipo TigerTag. É você que escreve a identidade do filamento, no [Tiger NFC Connect](../products/tiger-nfc-connect.md) ou no [Tiger Studio](../products/tiger-studio.md); demora cerca de um minuto na primeira vez. Os chips que chegam **já codificados** são os integrados na fábrica, dentro de filamento das marcas parceiras. Comprar um chip e comprar filamento etiquetado são duas coisas diferentes.
 
 **Que formato devo comprar — autocolante ou suporte de recarga?**
 Dois formatos, para duas situações. O **autocolante individual** vai em qualquer bobina que já tenha. A **versão de recarga** foi pensada para [recargas](../philosophy/second-life.md) sem bobina: cola-se dentro do **núcleo de cartão** antes de montar a recarga numa masterspool reutilizável, de modo que o chip viaja com o filamento e não com a bobina — o mesmo sítio onde a fábrica o põe.

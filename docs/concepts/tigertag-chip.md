@@ -131,7 +131,7 @@ Two details that surprise people:
  cardboard core** and cannot move — the glue has nothing left to do.
 - **It comes back out, and it is reusable.** When the refill is finished,
  recover the carrier with its two chips, erase them from
- [Tiger NFC Connect](../products/tigertag-connect.md) or
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) or
  [Tiger Studio](../products/tiger-studio.md), and use it again — on another
  spool, or for any other NDEF project. Filament sold with a TigerTag Refill
  leaves you the carrier, not waste
@@ -146,7 +146,7 @@ what happened:
 
 | What happened | What to do | The signature |
 |---|---|---|
-| **A chip is dead, or lost** | Find the filament in the catalogue, from [Tiger NFC Connect](../products/tigertag-connect.md) or [Tiger Studio](../products/tiger-studio.md), and write it onto two chips in one session: *Dual NFC* on the phone, or the [TigerPOD](../products/tigerpod.md). Use two new chips, or erase the survivor and reuse it as one of the two | lost: the chips still carry the catalogue product, so they are a TigerTag+ and work the same, but no longer a TigerTag+ Certified |
+| **A chip is dead, or lost** | Find the filament in the catalogue, from [Tiger NFC Connect](../products/tiger-nfc-connect.md) or [Tiger Studio](../products/tiger-studio.md), and write it onto two chips in one session: *Dual NFC* on the phone, or the [TigerPOD](../products/tigerpod.md). Use two new chips, or erase the survivor and reuse it as one of the two | lost: the chips still carry the catalogue product, so they are a TigerTag+ and work the same, but no longer a TigerTag+ Certified |
 | **The chips still answer, but their data was wiped or damaged** | **Restore TigerTag+**, in the spool's toolbox in Tiger Studio, with the chips on the TigerPOD: each chip is written back from its backup | kept: the chips come back exactly as they left the factory |
 | **No chip to hand** | **Print a label** from the spool in Tiger Studio: a QR code that opens the spool | — |
 
@@ -211,7 +211,7 @@ shows every field with its bytes. It all runs in the browser.
 
 | Tool | Read | Write |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (mobile NFC) | tap the chip — the spool opens on the phone | tap **Make** and tap again to write; **Dual NFC** writes a spool's two chips in one session |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (mobile NFC) | tap the chip — the spool opens on the phone | tap **Make** and tap again to write; **Dual NFC** writes a spool's two chips in one session |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | auto-opens the spool on scan | guided, UID-checked write |
 | [JS SDK](../developers/sdks.md) (`tigertag` on npm) | decodes the 144-byte payload | encodes a new payload |
 | [Python SDK](../developers/sdks.md) | decodes the payload; `tigertag[verify]` also checks the signature | encodes a new payload |

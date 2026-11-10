@@ -1,5 +1,5 @@
 ---
-sourceHash: e35244386df439d1c2c49dc5f9e8f384ea5b8f2bc1dfe8b8e90b4a7c73b8e5bd
+sourceHash: f90597a9ffbb090b5dae06a58d1af28155c5496eb62c3bfede99775be802e696
 sourcePath: docs/products/tigertag-plus-certified.md
 ---
 
@@ -68,6 +68,6 @@ TigerTag su un chip di qualsiasi formato, su un carrier, su una bobina o sulla s
 
 ---
 
-**◀ Precedente:** [TigerTag+](./tigertag-plus.md) · **▲ [Indice della documentazione](../../README.md)** · **Successivo ▶** [Tiger NFC Connect](./tigertag-connect.md)
+**◀ Precedente:** [TigerTag+](./tigertag-plus.md) · **▲ [Indice della documentazione](../../README.md)** · **Successivo ▶** [Tiger NFC Connect](./tiger-nfc-connect.md)
 
 **Vedi anche:** [Il chip TigerTag](../concepts/tigertag-chip.md), [Partner certificati](../certified-partners.md), [Documentazione per sviluppatori](../developers/README.md)

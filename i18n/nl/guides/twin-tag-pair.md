@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -38,7 +38,7 @@ Wis beide chips en schrijf ze daarna samen in één sessie:
 
 | | Hoe het paar wordt geschreven | Het best voor |
 |---|---|---|
-| **Telefoon** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: één formulier, daarna chip 1/2 en 2/2 in dezelfde sessie | één spoel, geen hardware |
+| **Telefoon** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: één formulier, daarna chip 1/2 en 2/2 in dezelfde sessie | één spoel, geen hardware |
 | **Desktop, twee lezers** — [TigerPOD](../products/tigerpod.md) | beide chips tegelijk, in één ronde | een plank, een batch |
 | **Desktop, één lezer** | niet mogelijk in één ronde — zo is het probleem ontstaan | — |
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: a549faf0df069b54cdac8a81deef9e3530aeba894481fbe468d9feb397db22ba
+sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -31,7 +31,7 @@ flowchart TB
 | Couche | Rôle | Documentation de référence |
 |---|---|---|
 | **Puce TigerTag** | Identité ouverte et transportable de la bobine physique | [Format de la puce](../concepts/tigertag-chip.md) |
-| **Tiger NFC Connect** | Le pont smartphone : scanner, encoder, parcourir | [Page produit](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | Le pont smartphone : scanner, encoder, parcourir | [Page produit](../products/tiger-nfc-connect.md) |
 | **Firebase** | Une base de données partagée — comptes, inventaire, synchronisation ; le point d'interopérabilité du bac à sable | [Inventaire et synchronisation cloud](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | La maison web de l'écosystème : vitrine, listes d'envies, amis, partage | [Page produit](../products/tigerhub.md) |
 | **Tiger Studio** | L'établi de bureau : inventaire, racks, capteurs, imprimantes | [Page produit](../products/tiger-studio.md) |

@@ -1,5 +1,5 @@
 ---
-sourceHash: 9b2a6c672e2d601fbe11882999e431d8483267caef4c132191c45643eedd78bb
+sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -74,6 +74,6 @@ Electron + 原生 JS，无打包工具。打印机连接直接使用各厂商的
 
 ---
 
-**◀ 上一页：** [Tiger NFC Connect](./tigertag-connect.md) · **▲ [文档索引](../../README.md)** · **下一页 ▶** [TigerHub](./tigerhub.md)
+**◀ 上一页：** [Tiger NFC Connect](./tiger-nfc-connect.md) · **▲ [文档索引](../../README.md)** · **下一页 ▶** [TigerHub](./tigerhub.md)
 
 **另见：** [兼容性](../compatibility/README.md)、[架构](../architecture/overview.md)

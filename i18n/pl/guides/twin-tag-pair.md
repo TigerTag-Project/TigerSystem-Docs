@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -37,7 +37,7 @@ Wymaż oba chipy, a potem zapisz je razem w jednej sesji:
 
 | | Jak zapisuje się parę | Najlepsze do |
 |---|---|---|
-| **Telefon** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: jeden formularz, potem chip 1/2 i 2/2 w tej samej sesji | jednej szpuli, bez sprzętu |
+| **Telefon** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: jeden formularz, potem chip 1/2 i 2/2 w tej samej sesji | jednej szpuli, bez sprzętu |
 | **Desktop, dwa czytniki** — [TigerPOD](../products/tigerpod.md) | oba chipy naraz, w jednym przebiegu | półki, partii |
 | **Desktop, jeden czytnik** | niemożliwe w jednym przebiegu — tak powstał ten problem | — |
 

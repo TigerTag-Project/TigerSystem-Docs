@@ -1,5 +1,5 @@
 ---
-sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
+sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -70,4 +70,4 @@ kostenlos** ([der Fall FlashForge](../compatibility/flashforge.md)).
 
 **◀ Zurück:** [Offenes Ökosystem](./open-ecosystem.md) · **▲ [Dokumentationsindex](../../README.md)** · **Weiter ▶** [Second-Life-Ablauf](./second-life.md)
 
-**Siehe auch:** [Tiger NFC Connect](../products/tigertag-connect.md), [Architekturübersicht](../architecture/overview.md)
+**Siehe auch:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Architekturübersicht](../architecture/overview.md)

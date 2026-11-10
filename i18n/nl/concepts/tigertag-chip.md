@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -136,7 +136,7 @@ Twee details die mensen verrassen:
  kartonnen kern** en kan hij niet bewegen — de lijm hoeft niets meer te doen.
 - **Hij komt er weer uit en is herbruikbaar.** Als de refill op is,
  haal je de drager met zijn twee chips terug, wis je ze vanuit
- [Tiger NFC Connect](../products/tigertag-connect.md) of
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) of
  [Tiger Studio](../products/tiger-studio.md), en gebruik je hem opnieuw — op een andere
  spoel, of voor elk ander NDEF-project. Filament dat met een TigerTag Refill wordt verkocht
  laat je de drager na, geen afval
@@ -151,7 +151,7 @@ af van wat er is gebeurd:
 
 | Wat er gebeurde | Wat te doen | De handtekening |
 |---|---|---|
-| **Een chip is kapot of kwijt** | Zoek het filament op in de catalogus, vanuit [Tiger NFC Connect](../products/tigertag-connect.md) of [Tiger Studio](../products/tiger-studio.md), en schrijf het in één sessie naar twee chips: *Dual NFC* op de telefoon, of de [TigerPOD](../products/tigerpod.md). Gebruik twee nieuwe chips, of wis de overgebleven chip en gebruik hem als een van de twee | verloren: de chips dragen nog steeds het catalogusproduct, dus het zijn TigerTag+ die hetzelfde werken, maar geen TigerTag+ Certified meer |
+| **Een chip is kapot of kwijt** | Zoek het filament op in de catalogus, vanuit [Tiger NFC Connect](../products/tiger-nfc-connect.md) of [Tiger Studio](../products/tiger-studio.md), en schrijf het in één sessie naar twee chips: *Dual NFC* op de telefoon, of de [TigerPOD](../products/tigerpod.md). Gebruik twee nieuwe chips, of wis de overgebleven chip en gebruik hem als een van de twee | verloren: de chips dragen nog steeds het catalogusproduct, dus het zijn TigerTag+ die hetzelfde werken, maar geen TigerTag+ Certified meer |
 | **De chips antwoorden nog, maar hun gegevens zijn gewist of beschadigd** | **TigerTag+ herstellen**, in de gereedschapskist van de spoel in Tiger Studio, met de chips op de TigerPOD: elke chip wordt teruggeschreven vanuit zijn back-up | behouden: de chips zijn weer precies zoals ze uit de fabriek kwamen |
 | **Geen chip bij de hand** | **Etiket afdrukken** vanuit de spoel in Tiger Studio: een QR-code die de spoel opent | — |
 
@@ -218,7 +218,7 @@ browser.
 
 | Tool | Lezen | Schrijven |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (mobiele NFC) | tik op de chip — de spoel opent op de telefoon | tik op **Make** en tik opnieuw om te schrijven; **Dual NFC** schrijft de twee chips van een spoel in één sessie |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (mobiele NFC) | tik op de chip — de spoel opent op de telefoon | tik op **Make** en tik opnieuw om te schrijven; **Dual NFC** schrijft de twee chips van een spoel in één sessie |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | opent de spoel automatisch bij het scannen | begeleid schrijven met UID-controle |
 | [JS SDK](../developers/sdks.md) (`tigertag` op npm) | decodeert de payload van 144 bytes | codeert een nieuwe payload |
 | [Python SDK](../developers/sdks.md) | decodeert de payload; `tigertag[verify]` controleert ook de handtekening | codeert een nieuwe payload |

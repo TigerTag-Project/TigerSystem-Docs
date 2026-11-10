@@ -128,7 +128,7 @@ manufacturer's signature makes a chip a
 one.
 
 Nor is promotion a one-way door. Chips are never write-locked: a promoted chip
-can be erased from [Tiger NFC Connect](../products/tigertag-connect.md) or
+can be erased from [Tiger NFC Connect](../products/tiger-nfc-connect.md) or
 Tiger Studio and written again ([the TigerTag chip](./tigertag-chip.md)). The
 identity is the record; the chip is only where it lives right now.
 

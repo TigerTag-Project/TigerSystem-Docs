@@ -1,5 +1,5 @@
 ---
-sourceHash: a05c4e52f6cae3704b4e16e2b3d1b6d55653145391a9bdd6f31630c6821c91ab
+sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -13,8 +13,8 @@ mesure que d'autres makers y branchent leur matériel.
 | Appareil | Fabricant | Ce qu'il fait | Compatible avec |
 |---|---|---|---|
 | Lecteur NFC **ACR122U** | ACS | Lecteur/graveur NFC USB — scannez une puce et la bobine s'ouvre toute seule ; écritures guidées, avec contrôle de l'UID. Deux d'entre eux animent un [TigerPOD](../products/tigerpod.md) | [Tiger Studio](../products/tiger-studio.md) |
-| Analyseur de filament **TD-1** | [AJAX-3D](https://ajax-3d.com) | Montage DIY — mesure la **Transmission Distance** d'un filament (la valeur utilisée par HueForge / l'impression Full Spectrum) + la couleur (RGB, 1 à 3 emplacements, à titre indicatif) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
-| Analyseur de filament **TD1s** | [AJAX-3D](https://ajax-3d.com) | Même famille d'appareils, pré-assemblé et prêt à l'emploi | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
+| Analyseur de filament **TD-1** | [AJAX-3D](https://ajax-3d.com) | Montage DIY — mesure la **Transmission Distance** d'un filament (la valeur utilisée par HueForge / l'impression Full Spectrum) + la couleur (RGB, 1 à 3 emplacements, à titre indicatif) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
+| Analyseur de filament **TD1s** | [AJAX-3D](https://ajax-3d.com) | Même famille d'appareils, pré-assemblé et prêt à l'emploi | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | Balances USB **DYMO série M** (M5, M10, M25…) | DYMO | Appareils USB standard « HID Scale » — le poids en direct dans le profil de la bobine ([détails du protocole](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Toute balance USB conforme HID Scale** | indifférent | Même protocole standard que la série M de DYMO (page d'usage HID `0x8D`) — la marque n'a aucune importance | [Tiger Studio](../products/tiger-studio.md) |
 | **Toute puce NTAG213/215/216 vierge** | indifférent | Le consommable lui-même — acheté n'importe où, il fonctionne à l'identique ([quelle puce ?](../../docs/faq/README.md)) | Tout |

@@ -1,5 +1,5 @@
 ---
-sourceHash: e35244386df439d1c2c49dc5f9e8f384ea5b8f2bc1dfe8b8e90b4a7c73b8e5bd
+sourceHash: f90597a9ffbb090b5dae06a58d1af28155c5496eb62c3bfede99775be802e696
 sourcePath: docs/products/tigertag-plus-certified.md
 ---
 
@@ -68,6 +68,6 @@ dla twórców z tej strony.
 
 ---
 
-**◀ Poprzednia:** [TigerTag+](./tigertag-plus.md) · **▲ [Spis dokumentacji](../../README.md)** · **Następna ▶** [Tiger NFC Connect (aplikacja mobilna)](./tigertag-connect.md)
+**◀ Poprzednia:** [TigerTag+](./tigertag-plus.md) · **▲ [Spis dokumentacji](../../README.md)** · **Następna ▶** [Tiger NFC Connect (aplikacja mobilna)](./tiger-nfc-connect.md)
 
 **Zobacz też:** [Chip TigerTag (format RFID/NFC)](../concepts/tigertag-chip.md), [Certyfikowani partnerzy](../certified-partners.md), [Dokumentacja dla deweloperów](../developers/README.md)

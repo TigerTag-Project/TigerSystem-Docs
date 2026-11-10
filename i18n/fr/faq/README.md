@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
+sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
 sourcePath: docs/faq/README.md
 ---
 
@@ -96,7 +96,7 @@ compte.
 **Les puces que j'achète arrivent-elles avec des données dessus ?**
 Non — **les puces vendues seules sont livrées vierges**, qu'elles portent le
 logo TigerTag ou non. Vous écrivez vous-même l'identité du filament, dans
-[Tiger NFC Connect](../products/tigertag-connect.md) ou
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) ou
 [Tiger Studio](../products/tiger-studio.md) ; cela prend environ une minute la
 première fois. Les puces qui arrivent **déjà encodées** sont celles intégrées
 à l'usine, à l'intérieur du filament des marques partenaires. Acheter une puce

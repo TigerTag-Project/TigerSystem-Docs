@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -133,7 +133,7 @@ wytwarza.
 
 Promocja nie jest też drogą w jedną stronę. Chipy nigdy nie są blokowane przed
 zapisem: promowany chip można wymazać z poziomu
-[Tiger NFC Connect](../products/tigertag-connect.md) lub Tiger Studio i zapisać
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) lub Tiger Studio i zapisać
 ponownie ([chip TigerTag](./tigertag-chip.md)). Tożsamością jest rekord; chip to
 tylko miejsce, w którym ona teraz mieszka.
 

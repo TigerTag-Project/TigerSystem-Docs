@@ -1,5 +1,5 @@
 ---
-sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
+sourceHash: b9bc4e4c2249a77cee57a986a99d87ea22bc2f297ea85cf8f6401f12dd218e52
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -51,7 +51,7 @@ dabei geht nichts verloren. Der Chip ist der Komfort, nie die Voraussetzung.
 
 ## Das Lesegerät ist dein Handy
 
-Jedes aktuelle Smartphone hat ein NFC-Lesegerät eingebaut. **[Tiger NFC Connect](../products/tigertag-connect.md)**
+Jedes aktuelle Smartphone hat ein NFC-Lesegerät eingebaut. **[Tiger NFC Connect](../products/tiger-nfc-connect.md)**
 ist auf iOS und Android kostenlos, und **[Tiger Studio](../products/tiger-studio.md)**
 ist kostenlos und quelloffen (MIT) unter Windows, macOS und Linux. Mit beiden liest
 du Chips, schreibst Chips und verwaltest den Bestand – ohne ein einziges eigenes
@@ -91,4 +91,4 @@ nichts kosten.
 
 ---
 
-**▲ [Dokumentationsindex](../../README.md)** · **Siehe auch:** [Eine Identität, vier Zustände](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Das Projekt unterstützen](../support.md)
+**▲ [Dokumentationsindex](../../README.md)** · **Siehe auch:** [Eine Identität, vier Zustände](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Das Projekt unterstützen](../support.md)

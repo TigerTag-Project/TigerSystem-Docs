@@ -31,6 +31,14 @@ export default defineConfig({
         `/${code}/developers/account-api/`,
       ]),
     ),
+    // The mobile app is Tiger NFC Connect; its page kept the old file name until #13.
+    '/products/tigertag-connect': '/products/tiger-nfc-connect/',
+    ...Object.fromEntries(
+      LOCALES.filter((code) => code !== DEFAULT_LOCALE).map((code) => [
+        `/${code}/products/tigertag-connect`,
+        `/${code}/products/tiger-nfc-connect/`,
+      ]),
+    ),
   },
 
   integrations: [

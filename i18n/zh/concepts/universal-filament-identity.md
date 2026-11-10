@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -112,7 +112,7 @@ NTAG 芯片，从此线轴自己携带自己的身份，离线可用。
 任何升级都不会产生它。
 
 升级也不是一扇单向门。芯片从不写锁定：升级后的芯片可以在
-[Tiger NFC Connect](../products/tigertag-connect.md) 或 Tiger Studio 中擦除并重新写入
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) 或 Tiger Studio 中擦除并重新写入
 （[TigerTag 芯片](./tigertag-chip.md)）。身份就是那条记录；芯片只是它此刻所在的地方。
 
 ---

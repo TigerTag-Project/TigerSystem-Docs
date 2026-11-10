@@ -1,5 +1,5 @@
 ---
-sourceHash: 37a445006eb2c4ef8f8d29eea59fa1c4199f333ab1295e69fb6595f1cdb85d51
+sourceHash: f787ab835cd6a0761d139df621b1c9918dda678a3790454304c18585b1f54cf9
 sourcePath: docs/products/README.md
 ---
 
@@ -32,7 +32,7 @@ funzionando; diventa **TigerTag Certified** solo quando TigerSystem lo concede
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | Il chip virtuale — l'identità in forma digitale, nessun chip necessario, aggiornabile in qualsiasi momento | Concetto |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Chip RFID/NFC aperto + standard per l'identità della bobina | Hardware + specifica |
 | <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | Un TigerTag che porta un ID prodotto del catalogo e un arricchimento facoltativo — ancora 100% offline; firmato, è un TigerTag+ Certified | Hardware + specifica |
-| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | App mobile (iOS/Android) — scansiona, codifica, sfoglia | App |
+| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tiger-nfc-connect.md) | App mobile (iOS/Android) — scansiona, codifica, sfoglia | App |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | App desktop — inventario, rack, sensori, stampanti | App |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | La casa web dell'ecosistema — vetrina, liste dei desideri, amici e condivisione su `tigersystem.io` | Web |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | Supporto con doppio lettore NFC stampabile in 3D | Hardware |

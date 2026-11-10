@@ -1,5 +1,5 @@
 ---
-sourceHash: a549faf0df069b54cdac8a81deef9e3530aeba894481fbe468d9feb397db22ba
+sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -31,7 +31,7 @@ flowchart TB
 | Laag | Rol | Basisdocumentatie |
 |---|---|---|
 | **TigerTag-chip** | Draagbare, open identiteit van de fysieke spoel | [Chipformaat](../concepts/tigertag-chip.md) |
-| **Tiger NFC Connect** | De smartphonebrug: scannen, coderen, bladeren | [Productpagina](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | De smartphonebrug: scannen, coderen, bladeren | [Productpagina](../products/tiger-nfc-connect.md) |
 | **Firebase** | Eén gedeelde database — accounts, inventaris, synchronisatie; het interoperabiliteitspunt van de zandbak | [Inventaris en cloudsynchronisatie](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | Het webhuis van het ecosysteem: etalage, verlanglijstjes, vrienden, delen | [Productpagina](../products/tigerhub.md) |
 | **Tiger Studio** | Desktopwerkbank: inventaris, racks, sensoren, printers | [Productpagina](../products/tiger-studio.md) |

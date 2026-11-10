@@ -1,5 +1,5 @@
 ---
-sourceHash: 37a445006eb2c4ef8f8d29eea59fa1c4199f333ab1295e69fb6595f1cdb85d51
+sourceHash: f787ab835cd6a0761d139df621b1c9918dda678a3790454304c18585b1f54cf9
 sourcePath: docs/products/README.md
 ---
 
@@ -32,7 +32,7 @@ te werken; het wordt pas **TigerTag Certified** als TigerSystem dat toekent
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | De virtuele chip — de identiteit in digitale vorm, geen chip nodig, op elk moment te upgraden | Concept |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Open RFID/NFC-chip + standaard voor spoelidentiteit | Hardware + specificatie |
 | <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | Een TigerTag met een catalogusproduct-ID en optionele verrijking — nog steeds 100% offline; ondertekend is het TigerTag+ Certified | Hardware + specificatie |
-| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | Mobiele app (iOS/Android) — scannen, coderen, bladeren | App |
+| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tiger-nfc-connect.md) | Mobiele app (iOS/Android) — scannen, coderen, bladeren | App |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | Desktop-app — inventaris, racks, sensoren, printers | App |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | De webthuis van het ecosysteem — etalage, verlanglijsten, vrienden en delen op `tigersystem.io` | Web |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | 3D-printbare lezerstandaard met dubbele NFC | Hardware |

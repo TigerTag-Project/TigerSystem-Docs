@@ -1,5 +1,5 @@
 ---
-sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
+sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -67,4 +67,4 @@ de gebruiker** ([het FlashForge-geval](../compatibility/flashforge.md)).
 
 **◀ Vorige:** [Open ecosysteem](./open-ecosystem.md) · **▲ [Documentatie-index](../../README.md)** · **Volgende ▶** [Second Life-workflow](./second-life.md)
 
-**Zie ook:** [Tiger NFC Connect](../products/tigertag-connect.md), [Architectuuroverzicht](../architecture/overview.md)
+**Zie ook:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Architectuuroverzicht](../architecture/overview.md)

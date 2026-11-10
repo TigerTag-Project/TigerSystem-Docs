@@ -1,5 +1,5 @@
 ---
-sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
+sourceHash: 27444f945a927973e57cd59c875c9dad41b748d476f0ff4d72224db2aac71368
 sourcePath: docs/glossary.md
 ---
 
@@ -27,7 +27,7 @@ opisuje całą historię.
 | **Official** | Wykonane przez sam TigerSystem — chipy w obu formatach oraz aplikacje i sprzęt w [Produktach](./products/README.md). Oświadczenie o pochodzeniu, a nie przyznawany znak: TigerSystem sam siebie nie certyfikuje. |
 | **TigerTag Compatible** | Poziom darmowy: wszystko, co *komunikuje się z* chipami TigerTag — czytniki, aplikacje, drukarki, slicery, narzędzia. Nie potrzeba pozwolenia, by to zaimplementować, tak powiedzieć ani pokazać logo w aplikacji, dokumentacji czy ofercie sklepu. Obejmuje także **TigerTag+**: weryfikacja podpisu jest darmowa, offline i bez ograniczeń. Jedno słowo, którego nigdy nie obejmuje, to *certyfikowany*. |
 | **TigerTag Certified** | Poziom audytowany, otwarty dla wszystkiego, co zbuduje osoba trzecia — urządzenia, aplikacji, filamentu, inlaya, nośnika — po przejściu audytu względem wymagań. Przyznawany, a nie deklarowany, wpisany do rejestru certyfikowanych i możliwy do wycofania. Występuje w dwóch zakresach: **TigerTag Certified** i **TigerTag+ Certified**. Certyfikowani partnerzy mogą umieszczać znak **na produkcie** i wystawiać podpisy TigerTag+. Zob. [Dokumentacja dla deweloperów](./developers/README.md) i [kryteria certyfikacji](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). |
-| **Tiger NFC Connect** | Aplikacja mobilna (iOS/Android) — dotknij, by odczytać, dotknij, by zapisać, przeglądaj katalog. Dawniej „TigerTag RFID Connect”. Zob. [Tiger NFC Connect](./products/tigertag-connect.md). |
+| **Tiger NFC Connect** | Aplikacja mobilna (iOS/Android) — dotknij, by odczytać, dotknij, by zapisać, przeglądaj katalog. Dawniej „TigerTag RFID Connect”. Zob. [Tiger NFC Connect](./products/tiger-nfc-connect.md). |
 | **Tiger Studio** | Otwartoźródłowa aplikacja desktopowa (Windows/macOS/Linux) — magazyn, regały, czujniki i połączenia z drukarkami. Zob. [Tiger Studio](./products/tiger-studio.md). |
 | **TigerHub** | Webowy dom ekosystemu pod adresem `tigersystem.io` — wizytówka, listy życzeń, kody znajomych, publiczne udostępnianie list. Zob. [TigerHub](./products/tigerhub.md). |
 | **TigerPOD** | Drukowany w 3D stojak na dwa czytniki NFC — darmowy plik STL. Zob. [TigerPOD](./products/tigerpod.md). |

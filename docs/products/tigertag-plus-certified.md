@@ -64,6 +64,6 @@ authorized for the makers on that page.
 
 ---
 
-**◀ Previous:** [TigerTag+](./tigertag-plus.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Tiger NFC Connect](./tigertag-connect.md)
+**◀ Previous:** [TigerTag+](./tigertag-plus.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Tiger NFC Connect](./tiger-nfc-connect.md)
 
 **Related:** [The TigerTag chip](../concepts/tigertag-chip.md), [Certified partners](../certified-partners.md), [Developer documentation](../developers/README.md)

@@ -1,5 +1,5 @@
 ---
-sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
+sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -65,4 +65,4 @@ nowa funkcja, dodana do cudzych maszyn, **całkowicie za darmo dla użytkownika*
 
 **◀ Poprzednia:** [Otwarty ekosystem](./open-ecosystem.md) · **▲ [Spis dokumentacji](../../README.md)** · **Następna ▶** [Przepływ pracy Second Life](./second-life.md)
 
-**Zobacz też:** [Tiger NFC Connect](../products/tigertag-connect.md), [Przegląd architektury](../architecture/overview.md)
+**Zobacz też:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Przegląd architektury](../architecture/overview.md)

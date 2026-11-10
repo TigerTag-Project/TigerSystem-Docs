@@ -79,7 +79,7 @@ nothing is blocked, the protocol is the point.
 **Do the chips I buy arrive with data on them?**
 No — **chips sold on their own ship blank**, whether they carry the TigerTag
 logo or not. You write the filament's identity yourself, in
-[Tiger NFC Connect](../products/tigertag-connect.md) or
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) or
 [Tiger Studio](../products/tiger-studio.md); that takes about a minute the
 first time. The chips that arrive **already encoded** are the ones integrated
 at the factory, inside filament from the partner brands. Buying a chip and

@@ -1,5 +1,5 @@
 ---
-sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
+sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -71,4 +71,4 @@ quelqu'un d'autre, **totalement gratuite pour l'utilisateur**
 
 **◀ Précédent :** [Écosystème ouvert](./open-ecosystem.md) · **▲ [Index de la documentation](../../README.md)** · **Suivant ▶** [Le flux Seconde vie](./second-life.md)
 
-**Voir aussi :** [Tiger NFC Connect](../products/tigertag-connect.md), [Vue d'ensemble de l'architecture](../architecture/overview.md)
+**Voir aussi :** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Vue d'ensemble de l'architecture](../architecture/overview.md)

@@ -1,5 +1,5 @@
 ---
-sourceHash: a549faf0df069b54cdac8a81deef9e3530aeba894481fbe468d9feb397db22ba
+sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -31,7 +31,7 @@ flowchart TB
 | Capa | Función | Documentación de referencia |
 |---|---|---|
 | **Chip TigerTag** | Identidad portátil y abierta de la bobina física | [Formato del chip](../concepts/tigertag-chip.md) |
-| **Tiger NFC Connect** | El puente con el smartphone: escanear, codificar, explorar | [Página del producto](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | El puente con el smartphone: escanear, codificar, explorar | [Página del producto](../products/tiger-nfc-connect.md) |
 | **Firebase** | Una base de datos compartida: cuentas, inventario, sincronización; el punto de interoperabilidad del entorno de pruebas | [Inventario y sincronización en la nube](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | La casa web del ecosistema: escaparate, listas de deseos, amigos, uso compartido | [Página del producto](../products/tigerhub.md) |
 | **Tiger Studio** | Banco de trabajo de escritorio: inventario, racks, sensores, impresoras | [Página del producto](../products/tiger-studio.md) |

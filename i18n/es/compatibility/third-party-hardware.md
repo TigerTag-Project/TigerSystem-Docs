@@ -1,5 +1,5 @@
 ---
-sourceHash: a05c4e52f6cae3704b4e16e2b3d1b6d55653145391a9bdd6f31630c6821c91ab
+sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -13,8 +13,8 @@ fabricantes conecten sus equipos.
 | Dispositivo | Fabricante | Qué hace | Funciona con |
 |---|---|---|---|
 | Lector NFC **ACR122U** | ACS | Lector/escritor NFC USB: escaneas un chip y la bobina se abre sola; escrituras guiadas y verificadas por UID. Dos de ellos alimentan un [TigerPOD](../products/tigerpod.md) | [Tiger Studio](../products/tiger-studio.md) |
-| Analizador de filamento **TD-1** | [AJAX-3D](https://ajax-3d.com) | Montaje DIY: mide la **Transmission Distance** del filamento (el valor de impresión HueForge / Full Spectrum) + color (RGB, 1–3 ranuras, orientativo) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
-| Analizador de filamento **TD1s** | [AJAX-3D](https://ajax-3d.com) | La misma familia de dispositivos, premontado y listo para usar | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
+| Analizador de filamento **TD-1** | [AJAX-3D](https://ajax-3d.com) | Montaje DIY: mide la **Transmission Distance** del filamento (el valor de impresión HueForge / Full Spectrum) + color (RGB, 1–3 ranuras, orientativo) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
+| Analizador de filamento **TD1s** | [AJAX-3D](https://ajax-3d.com) | La misma familia de dispositivos, premontado y listo para usar | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | Básculas USB **DYMO serie M** (M5, M10, M25…) | DYMO | Dispositivos USB estándar «HID Scale»: peso en vivo en el perfil de la bobina ([detalles del protocolo](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Cualquier báscula USB compatible con HID Scale** | cualquiera | El mismo protocolo estándar que la serie M de DYMO (página de uso HID `0x8D`): la marca no importa | [Tiger Studio](../products/tiger-studio.md) |
 | **Cualquier chip NTAG213/215/216 en blanco** | cualquiera | El propio consumible: se compra en cualquier sitio y funciona igual ([¿qué chip?](../../docs/faq/README.md)) | Todo |

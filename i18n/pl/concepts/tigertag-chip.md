@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -134,7 +134,7 @@ Dwa szczegóły, które ludzi zaskakują:
  może się ruszyć — klej nie ma już nic do roboty.
 - **Wraca na zewnątrz i nadaje się do ponownego użycia.** Gdy refill się
  skończy, odzyskaj nośnik z jego dwoma chipami, wymaż je z
- [Tiger NFC Connect](../products/tigertag-connect.md) lub
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) lub
  [Tiger Studio](../products/tiger-studio.md) i użyj ponownie — na innej
  szpuli albo do dowolnego innego projektu NDEF. Filament sprzedawany z
  TigerTag Refill zostawia ci nośnik, a nie odpad
@@ -149,7 +149,7 @@ stało:
 
 | Co się stało | Co zrobić | Podpis |
 |---|---|---|
-| **Chip nie działa lub zaginął** | Znajdź filament w katalogu, w [Tiger NFC Connect](../products/tigertag-connect.md) lub [Tiger Studio](../products/tiger-studio.md), i zapisz go na dwóch chipach w jednej sesji: *Dual NFC* w telefonie albo [TigerPOD](../products/tigerpod.md). Użyj dwóch nowych chipów albo wyczyść ocalały i użyj go jako jednego z dwóch | utracony: chipy nadal niosą produkt z katalogu, więc są TigerTag+ i działają tak samo, ale nie są już TigerTag+ Certified |
+| **Chip nie działa lub zaginął** | Znajdź filament w katalogu, w [Tiger NFC Connect](../products/tiger-nfc-connect.md) lub [Tiger Studio](../products/tiger-studio.md), i zapisz go na dwóch chipach w jednej sesji: *Dual NFC* w telefonie albo [TigerPOD](../products/tigerpod.md). Użyj dwóch nowych chipów albo wyczyść ocalały i użyj go jako jednego z dwóch | utracony: chipy nadal niosą produkt z katalogu, więc są TigerTag+ i działają tak samo, ale nie są już TigerTag+ Certified |
 | **Chipy nadal odpowiadają, ale ich dane zostały wymazane lub uszkodzone** | **Przywróć TigerTag+** w przyborniku szpuli w Tiger Studio, z chipami na TigerPOD: każdy chip jest zapisywany ponownie z kopii zapasowej | zachowany: chipy wracają dokładnie takie, jakie wyszły z fabryki |
 | **Brak chipa pod ręką** | **Wydrukuj etykietę** ze szpuli w Tiger Studio: kod QR, który otwiera szpulę | — |
 
@@ -213,7 +213,7 @@ pokazuje każde pole wraz z jego bajtami. Wszystko działa w przeglądarce.
 
 | Narzędzie | Odczyt | Zapis |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (mobilny NFC) | dotknij chipa — szpula otwiera się w telefonie | dotknij **Make** i dotknij ponownie, by zapisać; **Dual NFC** zapisuje oba chipy szpuli w jednej sesji |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (mobilny NFC) | dotknij chipa — szpula otwiera się w telefonie | dotknij **Make** i dotknij ponownie, by zapisać; **Dual NFC** zapisuje oba chipy szpuli w jednej sesji |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | automatycznie otwiera szpulę po zeskanowaniu | zapis z przewodnikiem, z kontrolą UID |
 | [SDK JS](../developers/sdks.md) (`tigertag` w npm) | dekoduje 144-bajtowy ładunek | koduje nowy ładunek |
 | [SDK Python](../developers/sdks.md) | dekoduje ładunek; `tigertag[verify]` sprawdza także podpis | koduje nowy ładunek |

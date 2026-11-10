@@ -1,5 +1,5 @@
 ---
-sourceHash: 37a445006eb2c4ef8f8d29eea59fa1c4199f333ab1295e69fb6595f1cdb85d51
+sourceHash: f787ab835cd6a0761d139df621b1c9918dda678a3790454304c18585b1f54cf9
 sourcePath: docs/products/README.md
 ---
 
@@ -35,7 +35,7 @@ accorde ([politique de marque](../../TRADEMARK.md)).
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | La puce virtuelle — l'identité sous forme numérique, sans puce, évolutive à tout moment | Concept |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Puce RFID/NFC ouverte + standard d'identité de bobine | Matériel + spécification |
 | <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | Un TigerTag portant un identifiant produit du catalogue et un enrichissement optionnel — toujours 100% hors ligne ; signé, c'est un TigerTag+ Certified | Matériel + spécification |
-| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | Application mobile (iOS/Android) — scanner, encoder, parcourir | Application |
+| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tiger-nfc-connect.md) | Application mobile (iOS/Android) — scanner, encoder, parcourir | Application |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | Application de bureau — inventaire, racks, capteurs, imprimantes | Application |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | La maison web de l'écosystème — vitrine, listes d'envies, amis et partage sur `tigersystem.io` | Web |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | Support de lecteur NFC double, imprimable en 3D | Matériel |

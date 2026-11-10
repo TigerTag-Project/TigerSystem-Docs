@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -134,7 +134,7 @@ um.
 
 A promoção também não é uma porta de mão única. Os chips nunca são bloqueados
 contra gravação: um chip promovido pode ser apagado pelo
-[Tiger NFC Connect](../products/tigertag-connect.md) ou pelo Tiger Studio e
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) ou pelo Tiger Studio e
 gravado de novo ([o chip TigerTag](./tigertag-chip.md)). A identidade é o
 registro; o chip é só onde ela mora agora.
 

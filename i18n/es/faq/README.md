@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
+sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
 sourcePath: docs/faq/README.md
 ---
 
@@ -86,7 +86,7 @@ bloqueado, el protocolo es lo importante.
 **¿Los chips que compro llegan con datos?**
 No: los **chips que se venden por separado se entregan en blanco**, lleven o no el
 logotipo de TigerTag. La identidad del filamento la escribes tú, en
-[Tiger NFC Connect](../products/tigertag-connect.md) o en
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) o en
 [Tiger Studio](../products/tiger-studio.md); la primera vez lleva aproximadamente un
 minuto. Los chips que llegan **ya codificados** son los integrados en fábrica,
 dentro de filamento de las marcas socias. Comprar un chip y comprar filamento

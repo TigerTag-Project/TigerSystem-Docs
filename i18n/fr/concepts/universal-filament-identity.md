@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -139,7 +139,7 @@ produit un.
 
 La promotion n'est pas non plus un aller simple. Les puces ne sont jamais
 verrouillées en écriture : une puce promue peut être effacée depuis
-[Tiger NFC Connect](../products/tigertag-connect.md) ou Tiger Studio, puis
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) ou Tiger Studio, puis
 réécrite ([la puce TigerTag](./tigertag-chip.md)). L'identité, c'est
 l'enregistrement ; la puce n'est que l'endroit où elle vit en ce moment.
 

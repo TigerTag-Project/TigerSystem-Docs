@@ -1,5 +1,5 @@
 ---
-sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
+sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -64,4 +64,4 @@ flowchart LR
 
 **◀ Назад:** [Открытая экосистема](./open-ecosystem.md) · **▲ [Оглавление документации](../../README.md)** · **Далее ▶** [Процесс «Вторая жизнь»](./second-life.md)
 
-**См. также:** [Tiger NFC Connect](../products/tigertag-connect.md), [Обзор архитектуры](../architecture/overview.md)
+**См. также:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Обзор архитектуры](../architecture/overview.md)

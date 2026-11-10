@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -27,7 +27,7 @@ Apague os dois chips e grave-os juntos numa única sessão:
 
 | | Como o par é gravado | Ideal para |
 |---|---|---|
-| **Telemóvel** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: um formulário, depois o chip 1/2 e 2/2 na mesma sessão | uma bobina, sem hardware |
+| **Telemóvel** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: um formulário, depois o chip 1/2 e 2/2 na mesma sessão | uma bobina, sem hardware |
 | **Computador, dois leitores** — [TigerPOD](../products/tigerpod.md) | os dois chips ao mesmo tempo, numa só passagem | uma prateleira, um lote |
 | **Computador, um leitor** | não é possível numa só passagem — foi assim que o problema foi criado | — |
 

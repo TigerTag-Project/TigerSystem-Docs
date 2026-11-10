@@ -1,5 +1,5 @@
 ---
-sourceHash: e35244386df439d1c2c49dc5f9e8f384ea5b8f2bc1dfe8b8e90b4a7c73b8e5bd
+sourceHash: f90597a9ffbb090b5dae06a58d1af28155c5496eb62c3bfede99775be802e696
 sourcePath: docs/products/tigertag-plus-certified.md
 ---
 
@@ -69,6 +69,6 @@ toegestaan voor de makers op die pagina.
 
 ---
 
-**◀ Vorige:** [TigerTag+](./tigertag-plus.md) · **▲ [Documentatie-index](../../README.md)** · **Volgende ▶** [Tiger NFC Connect](./tigertag-connect.md)
+**◀ Vorige:** [TigerTag+](./tigertag-plus.md) · **▲ [Documentatie-index](../../README.md)** · **Volgende ▶** [Tiger NFC Connect](./tiger-nfc-connect.md)
 
 **Zie ook:** [De TigerTag-chip](../concepts/tigertag-chip.md), [Gecertificeerde partners](../certified-partners.md), [Documentatie voor ontwikkelaars](../developers/README.md)

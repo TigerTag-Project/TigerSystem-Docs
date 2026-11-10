@@ -1,5 +1,5 @@
 ---
-sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
+sourceHash: 27444f945a927973e57cd59c875c9dad41b748d476f0ff4d72224db2aac71368
 sourcePath: docs/glossary.md
 ---
 
@@ -27,7 +27,7 @@ cuenta la historia completa.
 | **Oficial** | Hecho por el propio TigerSystem: los chips en ambos formatos, y las aplicaciones y el hardware de [Productos](./products/README.md). Una declaración de origen, no una marca que se conceda: TigerSystem no se certifica a sí mismo. |
 | **TigerTag Compatible** | El nivel libre: todo lo que *habla con* chips TigerTag (lectores, aplicaciones, impresoras, slicers, herramientas). No hace falta permiso para implementarlo, para decirlo ni para mostrar el logotipo en una aplicación, documentación o ficha de tienda. Cubre también **TigerTag+**: verificar una firma es gratis, sin conexión y sin restricciones. La única palabra que nunca incluye es *certificado*. |
 | **TigerTag Certified** | El nivel auditado, abierto a todo lo que construya un tercero (un dispositivo, una aplicación, filamento, un inlay, un soporte) una vez supera una auditoría frente a los requisitos. Se concede en lugar de reclamarse, figura en el registro de certificados y puede retirarse. Tiene dos ámbitos, **TigerTag Certified** y **TigerTag+ Certified**. Los socios certificados pueden aplicar la marca **en el producto** y emitir firmas TigerTag+. Véanse la [documentación para desarrolladores](./developers/README.md) y los [criterios de certificación](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). |
-| **Tiger NFC Connect** | La aplicación móvil (iOS/Android): toca para leer, toca para escribir, explora el catálogo. Antes «TigerTag RFID Connect». Véase [Tiger NFC Connect](./products/tigertag-connect.md). |
+| **Tiger NFC Connect** | La aplicación móvil (iOS/Android): toca para leer, toca para escribir, explora el catálogo. Antes «TigerTag RFID Connect». Véase [Tiger NFC Connect](./products/tiger-nfc-connect.md). |
 | **Tiger Studio** | La aplicación de escritorio de código abierto (Windows/macOS/Linux): inventario, racks, sensores y enlaces con las impresoras. Véase [Tiger Studio](./products/tiger-studio.md). |
 | **TigerHub** | La casa web del ecosistema en `tigersystem.io`: escaparate, listas de deseos, códigos de amigo, uso compartido de listas públicas. Véase [TigerHub](./products/tigerhub.md). |
 | **TigerPOD** | El soporte lector NFC doble imprimible en 3D: STL gratuito. Véase [TigerPOD](./products/tigerpod.md). |

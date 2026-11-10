@@ -1,6 +1,6 @@
 ---
 sourceHash: 3da48e740e0e62472387887f8e83c3e77deadaa57be744842e4eecabd8df8fbc
-sourcePath: docs/products/tigertag-connect.md
+sourcePath: docs/products/tiger-nfc-connect.md
 ---
 
 # Tiger NFC Connect (aplicação móvel)

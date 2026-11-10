@@ -1,5 +1,5 @@
 ---
-sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
+sourceHash: b9bc4e4c2249a77cee57a986a99d87ea22bc2f297ea85cf8f6401f12dd218e52
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -47,7 +47,7 @@ TigerPOD, TigerScale, катушка. Они хорошо выглядят на 
 
 ## Считыватель — ваш телефон
 
-В каждом современном смартфоне есть NFC-считыватель. **[Tiger NFC Connect](../products/tigertag-connect.md)**
+В каждом современном смартфоне есть NFC-считыватель. **[Tiger NFC Connect](../products/tiger-nfc-connect.md)**
 бесплатен на iOS и Android, а **[Tiger Studio](../products/tiger-studio.md)**
 бесплатен и имеет открытый исходный код (MIT) на Windows, macOS и Linux. Вместе они позволяют
 читать чипы, записывать чипы и управлять инвентарём — без единого специального
@@ -84,4 +84,4 @@ MIT: печатный корпус, прошивка, заливаемая из 
 
 ---
 
-**▲ [Оглавление документации](../../README.md)** · **См. также:** [Одна идентичность, четыре состояния](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Поддержать проект](../support.md)
+**▲ [Оглавление документации](../../README.md)** · **См. также:** [Одна идентичность, четыре состояния](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Поддержать проект](../support.md)

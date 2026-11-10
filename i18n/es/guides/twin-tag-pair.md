@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -38,7 +38,7 @@ Borra ambos chips y escríbelos juntos en una única sesión:
 
 | | Cómo se escribe la pareja | Ideal para |
 |---|---|---|
-| **Teléfono** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: un formulario, luego el chip 1/2 y el 2/2 en la misma sesión | una bobina, sin hardware |
+| **Teléfono** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: un formulario, luego el chip 1/2 y el 2/2 en la misma sesión | una bobina, sin hardware |
 | **Escritorio, dos lectores** — [TigerPOD](../products/tigerpod.md) | ambos chips a la vez, en una pasada | una estantería, un lote |
 | **Escritorio, un lector** | imposible en una sola pasada: así es como se creó el problema | — |
 

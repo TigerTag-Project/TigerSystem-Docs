@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -41,7 +41,7 @@ Lösche beide Chips und schreibe sie dann zusammen in einer einzigen Sitzung:
 
 | | Wie das Paar geschrieben wird | Am besten für |
 |---|---|---|
-| **Handy** – [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: ein Formular, dann Chip 1/2 und 2/2 in derselben Sitzung | eine Spule, keine Hardware |
+| **Handy** – [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: ein Formular, dann Chip 1/2 und 2/2 in derselben Sitzung | eine Spule, keine Hardware |
 | **Desktop, zwei Lesegeräte** – [TigerPOD](../products/tigerpod.md) | beide Chips gleichzeitig, in einem Durchgang | ein Regal, eine Charge |
 | **Desktop, ein Lesegerät** | in einem Durchgang nicht möglich – so ist das Problem entstanden | – |
 

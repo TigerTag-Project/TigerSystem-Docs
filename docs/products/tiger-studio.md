@@ -75,6 +75,6 @@ maintained in the app repo (`renderer/printers/<brand>/PROTOCOL.md`).
 
 ---
 
-**◀ Previous:** [Tiger NFC Connect](./tigertag-connect.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerHub](./tigerhub.md)
+**◀ Previous:** [Tiger NFC Connect](./tiger-nfc-connect.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [TigerHub](./tigerhub.md)
 
 **Related:** [Compatibility](../compatibility/README.md), [Architecture](../architecture/overview.md)

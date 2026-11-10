@@ -1,5 +1,5 @@
 ---
-sourceHash: a549faf0df069b54cdac8a81deef9e3530aeba894481fbe468d9feb397db22ba
+sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -31,7 +31,7 @@ flowchart TB
 | Слой | Роль | Канонические документы |
 |---|---|---|
 | **Чип TigerTag** | Переносимая открытая идентичность физической катушки | [Формат чипа](../concepts/tigertag-chip.md) |
-| **Tiger NFC Connect** | Смартфон-мост: сканирование, кодирование, просмотр | [Страница продукта](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | Смартфон-мост: сканирование, кодирование, просмотр | [Страница продукта](../products/tiger-nfc-connect.md) |
 | **Firebase** | Единая общая база данных — аккаунты, инвентарь, синхронизация; точка взаимодействия песочницы | [Инвентарь и облачная синхронизация](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | Веб-дом экосистемы: витрина, списки желаний, друзья, обмен | [Страница продукта](../products/tigerhub.md) |
 | **Tiger Studio** | Настольный верстак: инвентарь, стеллажи, датчики, принтеры | [Страница продукта](../products/tiger-studio.md) |

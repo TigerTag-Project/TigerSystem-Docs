@@ -8,8 +8,8 @@ their gear in.
 | Device | Maker | What it does | Works with |
 |---|---|---|---|
 | **ACR122U** NFC reader | ACS | USB NFC reader/writer — scan a chip and the spool auto-opens; guided, UID-checked writes. Two of them power a [TigerPOD](../products/tigerpod.md) | [Tiger Studio](../products/tiger-studio.md) |
-| **TD-1** filament analyzer | [AJAX-3D](https://ajax-3d.com) | DIY build — measures a filament's **Transmission Distance** (the HueForge / Full Spectrum printing value) + color (RGB, 1–3 slots, indicative) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
-| **TD1s** filament analyzer | [AJAX-3D](https://ajax-3d.com) | Same device family, pre-assembled and ready out of the box | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
+| **TD-1** filament analyzer | [AJAX-3D](https://ajax-3d.com) | DIY build — measures a filament's **Transmission Distance** (the HueForge / Full Spectrum printing value) + color (RGB, 1–3 slots, indicative) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
+| **TD1s** filament analyzer | [AJAX-3D](https://ajax-3d.com) | Same device family, pre-assembled and ready out of the box | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | **DYMO M series** USB scales (M5, M10, M25…) | DYMO | Standard USB "HID Scale" devices — live weight into the spool's profile ([protocol details](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Any HID Scale-compliant USB scale** | any | Same standard protocol as the DYMO M series (HID usage page `0x8D`) — brand doesn't matter | [Tiger Studio](../products/tiger-studio.md) |
 | **Any blank NTAG213/215/216 chip** | any | The consumable itself — bought anywhere, works identically ([which chip?](../../docs/faq/README.md)) | Everything |

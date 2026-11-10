@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -92,7 +92,7 @@ O que sai depende apenas do que entrou:
 
 Essa segunda linha é todo o vocabulário do `+` numa só linha. A promoção muda o *estado* — de digital para chip — e nunca o significado do `+`. Só a assinatura de um fabricante certificado faz de um chip um [TigerTag+ Certified](../products/tigertag-plus.md), e nenhuma promoção produz um.
 
-A promoção também não é uma porta de sentido único. Os chips nunca ficam bloqueados contra escrita: um chip promovido pode ser apagado a partir do [Tiger NFC Connect](../products/tigertag-connect.md) ou do Tiger Studio e escrito de novo ([o chip TigerTag](./tigertag-chip.md)). A identidade é o registo; o chip é apenas o sítio onde ela vive neste momento.
+A promoção também não é uma porta de sentido único. Os chips nunca ficam bloqueados contra escrita: um chip promovido pode ser apagado a partir do [Tiger NFC Connect](../products/tiger-nfc-connect.md) ou do Tiger Studio e escrito de novo ([o chip TigerTag](./tigertag-chip.md)). A identidade é o registo; o chip é apenas o sítio onde ela vive neste momento.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -37,7 +37,7 @@ sourcePath: docs/guides/twin-tag-pair.md
 
 | | Как записывается пара | Лучше всего для |
 |---|---|---|
-| **Телефон** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: одна форма, затем чип 1/2 и 2/2 в одном сеансе | одна катушка, без оборудования |
+| **Телефон** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: одна форма, затем чип 1/2 и 2/2 в одном сеансе | одна катушка, без оборудования |
 | **Настольный ПК, два считывателя** — [TigerPOD](../products/tigerpod.md) | оба чипа сразу, за один проход | полка, партия |
 | **Настольный ПК, один считыватель** | за один проход невозможно — именно так возникла проблема | — |
 

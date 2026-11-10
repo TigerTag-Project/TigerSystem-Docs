@@ -1,5 +1,5 @@
 ---
-sourceHash: a05c4e52f6cae3704b4e16e2b3d1b6d55653145391a9bdd6f31630c6821c91ab
+sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -13,8 +13,8 @@ die Entwicklung voranschreitet und immer mehr Maker ihr Equipment anbinden.
 | Gerät | Hersteller | Was es tut | Funktioniert mit |
 |---|---|---|---|
 | **ACR122U**-NFC-Lesegerät | ACS | USB-NFC-Lesegerät/-Schreibgerät – Chip scannen, und die Spule öffnet sich automatisch; geführtes Schreiben mit UID-Prüfung. Zwei davon treiben einen [TigerPOD](../products/tigerpod.md) an | [Tiger Studio](../products/tiger-studio.md) |
-| **TD-1**-Filament-Analysegerät | [AJAX-3D](https://ajax-3d.com) | Selbstbau – misst die **Transmission Distance** eines Filaments (der Wert für HueForge / Full-Spectrum-Druck) + Farbe (RGB, 1–3 Slots, Richtwert) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
-| **TD1s**-Filament-Analysegerät | [AJAX-3D](https://ajax-3d.com) | Dieselbe Gerätefamilie, fertig montiert und sofort einsatzbereit | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md) (USB-C) |
+| **TD-1**-Filament-Analysegerät | [AJAX-3D](https://ajax-3d.com) | Selbstbau – misst die **Transmission Distance** eines Filaments (der Wert für HueForge / Full-Spectrum-Druck) + Farbe (RGB, 1–3 Slots, Richtwert) | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
+| **TD1s**-Filament-Analysegerät | [AJAX-3D](https://ajax-3d.com) | Dieselbe Gerätefamilie, fertig montiert und sofort einsatzbereit | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | **DYMO-M-Serie**-USB-Waagen (M5, M10, M25 …) | DYMO | Standardmäßige USB-„HID-Waagen“ – Live-Gewicht direkt ins Profil der Spule ([Protokolldetails](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Jede HID-Scale-konforme USB-Waage** | beliebig | Dasselbe Standardprotokoll wie die DYMO-M-Serie (HID-Usage-Page `0x8D`) – die Marke spielt keine Rolle | [Tiger Studio](../products/tiger-studio.md) |
 | **Jeder leere NTAG213/215/216-Chip** | beliebig | Das Verbrauchsmaterial selbst – überall zu kaufen, funktioniert identisch ([welcher Chip?](../../docs/faq/README.md)) | Alles |

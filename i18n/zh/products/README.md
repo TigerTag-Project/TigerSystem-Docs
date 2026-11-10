@@ -1,5 +1,5 @@
 ---
-sourceHash: 37a445006eb2c4ef8f8d29eea59fa1c4199f333ab1295e69fb6595f1cdb85d51
+sourceHash: f787ab835cd6a0761d139df621b1c9918dda678a3790454304c18585b1f54cf9
 sourcePath: docs/products/README.md
 ---
 
@@ -28,7 +28,7 @@ TigerSystem 生态系统，每个产品一页。
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | 虚拟芯片——数字形式的身份，无需芯片，随时可升级 | 概念 |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | 开放的 RFID/NFC 芯片 + 线轴身份标准 | 硬件 + 规范 |
 | <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | 携带产品库产品 ID 和可选补充数据的 TigerTag——依然 100% 离线；加上签名，即为 TigerTag+ Certified | 硬件 + 规范 |
-| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | 移动应用（iOS/Android）——扫描、编码、浏览 | 应用 |
+| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tiger-nfc-connect.md) | 移动应用（iOS/Android）——扫描、编码、浏览 | 应用 |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | 桌面应用——库存、货架、传感器、打印机 | 应用 |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | 生态系统的网络主页——展示、心愿单、好友与分享，位于 `tigersystem.io` | 网站 |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | 可 3D 打印的双 NFC 读卡器支架 | 硬件 |

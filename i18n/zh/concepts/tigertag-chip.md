@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -109,7 +109,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 - **粘贴是可选的。** 3M 胶只是用来在你处理和存放补充装时固定载体。
  一旦补充装装到主线盘上，载体就**被楔在主线盘与纸芯之间**，无法移动——胶就没有用武之地了。
 - **它能取出来，并且可重复使用。** 补充装用完后，
- 取回带有两枚芯片的载体，从 [Tiger NFC Connect](../products/tigertag-connect.md)
+ 取回带有两枚芯片的载体，从 [Tiger NFC Connect](../products/tiger-nfc-connect.md)
  或 [Tiger Studio](../products/tiger-studio.md) 中擦除它们，然后再次使用——
  用在另一卷线轴上，或用于任何其他 NDEF 项目。
  随 TigerTag 补充装出售的耗材留给你的是载体，而不是垃圾
@@ -123,7 +123,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 
 | 发生了什么 | 怎么做 | 签名 |
 |---|---|---|
-| **一枚芯片损坏或丢失** | 在 [Tiger NFC Connect](../products/tigertag-connect.md) 或 [Tiger Studio](../products/tiger-studio.md) 中从目录找到该耗材，并在同一次会话中写入两枚芯片：手机上用 *Dual NFC*，或使用 [TigerPOD](../products/tigerpod.md)。可以用两枚新芯片，也可以擦除幸存的芯片，把它当作其中一枚重新使用 | 丢失：芯片仍带有目录产品，因此是 TigerTag+，功能完全相同，但不再是 TigerTag+ Certified |
+| **一枚芯片损坏或丢失** | 在 [Tiger NFC Connect](../products/tiger-nfc-connect.md) 或 [Tiger Studio](../products/tiger-studio.md) 中从目录找到该耗材，并在同一次会话中写入两枚芯片：手机上用 *Dual NFC*，或使用 [TigerPOD](../products/tigerpod.md)。可以用两枚新芯片，也可以擦除幸存的芯片，把它当作其中一枚重新使用 | 丢失：芯片仍带有目录产品，因此是 TigerTag+，功能完全相同，但不再是 TigerTag+ Certified |
 | **芯片仍能应答，但数据被擦除或损坏** | 在 Tiger Studio 中线轴的工具箱里使用 **恢复 TigerTag+**，芯片放在 TigerPOD 上：每枚芯片都会从其备份中写回 | 保留：芯片会恢复到出厂时的原样 |
 | **手边没有芯片** | 在 Tiger Studio 中从线轴 **打印标签**：一个可打开该线轴的二维码 | — |
 
@@ -176,7 +176,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 
 | 工具 | 读取 | 写入 |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md)（移动 NFC） | 轻触芯片——线轴在手机上打开 | 点击 **Make** 再轻触一次即可写入；**Dual NFC** 在一次会话中写入线轴的两枚芯片 |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md)（移动 NFC） | 轻触芯片——线轴在手机上打开 | 点击 **Make** 再轻触一次即可写入；**Dual NFC** 在一次会话中写入线轴的两枚芯片 |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | 扫描时自动打开线轴 | 带引导、核对 UID 的写入 |
 | [JS SDK](../developers/sdks.md)（npm 上的 `tigertag`） | 解码 144 字节载荷 | 编码新的载荷 |
 | [Python SDK](../developers/sdks.md) | 解码载荷；`tigertag[verify]` 还会校验签名 | 编码新的载荷 |

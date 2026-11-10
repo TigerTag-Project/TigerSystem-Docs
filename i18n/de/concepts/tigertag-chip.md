@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -141,7 +141,7 @@ Zwei Details, die Leute überraschen:
  nicht bewegen – der Kleber hat dann nichts mehr zu tun.
 - **Er kommt wieder heraus, und er ist wiederverwendbar.** Ist der Refill
  aufgebraucht, nimm den Carrier mit seinen zwei Chips heraus, lösche sie über
- [Tiger NFC Connect](../products/tigertag-connect.md) oder
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) oder
  [Tiger Studio](../products/tiger-studio.md) und verwende ihn erneut – auf einer
  anderen Spule oder für ein beliebiges anderes NDEF-Projekt. Filament, das mit
  einem TigerTag Refill verkauft wird, hinterlässt dir den Carrier, keinen Abfall
@@ -156,7 +156,7 @@ ist, hängt davon ab, was passiert ist:
 
 | Was passiert ist | Was zu tun ist | Die Signatur |
 |---|---|---|
-| **Ein Chip ist defekt oder verloren** | Suchen Sie das Filament im Katalog, in [Tiger NFC Connect](../products/tigertag-connect.md) oder [Tiger Studio](../products/tiger-studio.md), und schreiben Sie es in einer Sitzung auf zwei Chips: *Dual NFC* am Telefon oder der [TigerPOD](../products/tigerpod.md). Nehmen Sie zwei neue Chips, oder löschen Sie den verbliebenen und verwenden Sie ihn als einen der beiden | verloren: Die Chips tragen weiter das Katalogprodukt, sind also TigerTag+ und funktionieren gleich, aber kein TigerTag+ Certified mehr |
+| **Ein Chip ist defekt oder verloren** | Suchen Sie das Filament im Katalog, in [Tiger NFC Connect](../products/tiger-nfc-connect.md) oder [Tiger Studio](../products/tiger-studio.md), und schreiben Sie es in einer Sitzung auf zwei Chips: *Dual NFC* am Telefon oder der [TigerPOD](../products/tigerpod.md). Nehmen Sie zwei neue Chips, oder löschen Sie den verbliebenen und verwenden Sie ihn als einen der beiden | verloren: Die Chips tragen weiter das Katalogprodukt, sind also TigerTag+ und funktionieren gleich, aber kein TigerTag+ Certified mehr |
 | **Die Chips antworten noch, aber ihre Daten wurden gelöscht oder beschädigt** | **TigerTag+ wiederherstellen**, in der Werkzeugleiste der Spule in Tiger Studio, mit den Chips auf dem TigerPOD: Jeder Chip wird aus seiner Sicherung zurückgeschrieben | erhalten: Die Chips sind genau wie ab Werk |
 | **Kein Chip zur Hand** | **Etikett drucken** bei der Spule in Tiger Studio: ein QR-Code, der die Spule öffnet | — |
 
@@ -223,7 +223,7 @@ Browser.
 
 | Tool | Lesen | Schreiben |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (mobiles NFC) | den Chip antippen – die Spule öffnet sich auf dem Handy | **Make** antippen und zum Schreiben erneut antippen; **Dual NFC** schreibt beide Chips einer Spule in einer Sitzung |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (mobiles NFC) | den Chip antippen – die Spule öffnet sich auf dem Handy | **Make** antippen und zum Schreiben erneut antippen; **Dual NFC** schreibt beide Chips einer Spule in einer Sitzung |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | öffnet die Spule beim Scannen automatisch | geführtes Schreiben mit UID-Prüfung |
 | [JS-SDK](../developers/sdks.md) (`tigertag` auf npm) | dekodiert die 144-Byte-Nutzdaten | codiert neue Nutzdaten |
 | [Python-SDK](../developers/sdks.md) | dekodiert die Nutzdaten; `tigertag[verify]` prüft auch die Signatur | codiert neue Nutzdaten |

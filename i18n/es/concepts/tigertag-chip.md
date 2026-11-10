@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -137,7 +137,7 @@ Dos detalles que sorprenden:
  puede mover: el pegamento ya no tiene nada que hacer.
 - **Vuelve a salir y es reutilizable.** Cuando se acaba el refill, recupera el
  soporte con sus dos chips, bórralos desde
- [Tiger NFC Connect](../products/tigertag-connect.md) o
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) o
  [Tiger Studio](../products/tiger-studio.md) y úsalo de nuevo, en otra bobina o
  para cualquier otro proyecto NDEF. El filamento vendido con un TigerTag Refill te
  deja el soporte, no un residuo
@@ -152,7 +152,7 @@ depende de lo que ha pasado:
 
 | Qué ha pasado | Qué hacer | La firma |
 |---|---|---|
-| **Un chip está muerto o perdido** | Busca el filamento en el catálogo, desde [Tiger NFC Connect](../products/tigertag-connect.md) o [Tiger Studio](../products/tiger-studio.md), y escríbelo en dos chips en una sola sesión: *Dual NFC* en el teléfono, o el [TigerPOD](../products/tigerpod.md). Usa dos chips nuevos, o borra el superviviente y reutilízalo como uno de los dos | perdida: los chips siguen llevando el producto del catálogo, así que son TigerTag+ y funcionan igual, pero ya no son TigerTag+ Certified |
+| **Un chip está muerto o perdido** | Busca el filamento en el catálogo, desde [Tiger NFC Connect](../products/tiger-nfc-connect.md) o [Tiger Studio](../products/tiger-studio.md), y escríbelo en dos chips en una sola sesión: *Dual NFC* en el teléfono, o el [TigerPOD](../products/tigerpod.md). Usa dos chips nuevos, o borra el superviviente y reutilízalo como uno de los dos | perdida: los chips siguen llevando el producto del catálogo, así que son TigerTag+ y funcionan igual, pero ya no son TigerTag+ Certified |
 | **Los chips aún responden, pero sus datos se borraron o dañaron** | **Restaurar TigerTag+**, en la caja de herramientas de la bobina en Tiger Studio, con los chips en el TigerPOD: cada chip se reescribe desde su copia de seguridad | conservada: los chips vuelven exactamente como salieron de fábrica |
 | **Ningún chip a mano** | **Imprimir etiqueta** desde la bobina en Tiger Studio: un código QR que abre la bobina | — |
 
@@ -218,7 +218,7 @@ el navegador.
 
 | Herramienta | Lectura | Escritura |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (NFC móvil) | toca el chip: la bobina se abre en el teléfono | toca **Make** y vuelve a tocar para escribir; **Dual NFC** escribe los dos chips de una bobina en una sesión |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (NFC móvil) | toca el chip: la bobina se abre en el teléfono | toca **Make** y vuelve a tocar para escribir; **Dual NFC** escribe los dos chips de una bobina en una sesión |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | abre la bobina automáticamente al escanear | escritura guiada, verificada por UID |
 | [SDK de JS](../developers/sdks.md) (`tigertag` en npm) | decodifica la carga útil de 144 bytes | codifica una carga útil nueva |
 | [SDK de Python](../developers/sdks.md) | decodifica la carga útil; `tigertag[verify]` comprueba además la firma | codifica una carga útil nueva |

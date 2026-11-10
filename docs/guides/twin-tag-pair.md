@@ -33,7 +33,7 @@ Erase both chips, then write them together in a single session:
 
 | | How the pair is written | Best for |
 |---|---|---|
-| **Phone** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*: one form, then chip 1/2 and 2/2 in the same session | one spool, no hardware |
+| **Phone** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*: one form, then chip 1/2 and 2/2 in the same session | one spool, no hardware |
 | **Desktop, two readers** — [TigerPOD](../products/tigerpod.md) | both chips at once, in one pass | a shelf, a batch |
 | **Desktop, one reader** | not possible in one pass — this is how the problem was created | — |
 

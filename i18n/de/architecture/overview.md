@@ -1,5 +1,5 @@
 ---
-sourceHash: a549faf0df069b54cdac8a81deef9e3530aeba894481fbe468d9feb397db22ba
+sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -31,7 +31,7 @@ flowchart TB
 | Schicht | Rolle | Maßgebliche Doku |
 |---|---|---|
 | **TigerTag-Chip** | Tragbare, offene Identität der physischen Spule | [Chip-Format](../concepts/tigertag-chip.md) |
-| **Tiger NFC Connect** | Die Smartphone-Brücke: scannen, codieren, durchstöbern | [Produktseite](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | Die Smartphone-Brücke: scannen, codieren, durchstöbern | [Produktseite](../products/tiger-nfc-connect.md) |
 | **Firebase** | Eine gemeinsame Datenbank – Konten, Bestand, Sync; der Interoperabilitätspunkt der Sandbox | [Bestand & Cloud-Sync](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | Die Web-Heimat des Ökosystems: Schaufenster, Wunschlisten, Freunde, Teilen | [Produktseite](../products/tigerhub.md) |
 | **Tiger Studio** | Desktop-Werkbank: Bestand, Racks, Sensoren, Drucker | [Produktseite](../products/tiger-studio.md) |

@@ -1,5 +1,5 @@
 ---
-sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
+sourceHash: 27444f945a927973e57cd59c875c9dad41b748d476f0ff4d72224db2aac71368
 sourcePath: docs/glossary.md
 ---
 
@@ -22,7 +22,7 @@ Todos os termos que esta documentação usa sem os explicar. As definições sã
 | **Oficial** | Feito pelo próprio TigerSystem — os chips nos dois formatos, e as aplicações e o hardware em [Produtos](./products/README.md). Uma declaração de origem, não uma marca que se concede: o TigerSystem não se certifica a si próprio. |
 | **TigerTag Compatible** | O nível gratuito: tudo o que *comunica com* chips TigerTag — leitores, aplicações, impressoras, slicers, ferramentas. Não é preciso autorização para o implementar, para o dizer ou para mostrar o logótipo numa aplicação, na documentação ou na página de uma loja. Abrange também o **TigerTag+**: verificar uma assinatura é gratuito, offline e sem restrições. A única palavra que nunca inclui é *certificado*. |
 | **TigerTag Certified** | O nível auditado, aberto a tudo o que um terceiro construa — um dispositivo, uma aplicação, filamento, um inlay, um suporte — depois de passar numa auditoria face aos requisitos. Concedido em vez de reivindicado, listado no registo de certificados e retirável. Existe em dois âmbitos, **TigerTag Certified** e **TigerTag+ Certified**. Os parceiros certificados podem aplicar a marca **no produto** e emitir assinaturas TigerTag+. Ver [Documentação para programadores](./developers/README.md) e os [critérios de certificação](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md). |
-| **Tiger NFC Connect** | A aplicação móvel (iOS/Android) — toque para ler, toque para escrever, navegue no catálogo. Anteriormente «TigerTag RFID Connect». Ver [Tiger NFC Connect](./products/tigertag-connect.md). |
+| **Tiger NFC Connect** | A aplicação móvel (iOS/Android) — toque para ler, toque para escrever, navegue no catálogo. Anteriormente «TigerTag RFID Connect». Ver [Tiger NFC Connect](./products/tiger-nfc-connect.md). |
 | **Tiger Studio** | A aplicação de computador de código aberto (Windows/macOS/Linux) — inventário, racks, sensores e ligações a impressoras. Ver [Tiger Studio](./products/tiger-studio.md). |
 | **TigerHub** | A casa web do ecossistema em `tigersystem.io` — montra, listas de desejos, códigos de amigo, partilha pública de listas. Ver [TigerHub](./products/tigerhub.md). |
 | **TigerPOD** | O suporte de dois leitores NFC imprimível em 3D — STL gratuito. Ver [TigerPOD](./products/tigerpod.md). |

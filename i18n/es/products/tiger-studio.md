@@ -1,5 +1,5 @@
 ---
-sourceHash: 9b2a6c672e2d601fbe11882999e431d8483267caef4c132191c45643eedd78bb
+sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -83,6 +83,6 @@ las notas de protocolo por marca se mantienen en el repositorio de la aplicació
 
 ---
 
-**◀ Anterior:** [Tiger NFC Connect](./tigertag-connect.md) · **▲ [Índice de la documentación](../../README.md)** · **Siguiente ▶** [TigerHub](./tigerhub.md)
+**◀ Anterior:** [Tiger NFC Connect](./tiger-nfc-connect.md) · **▲ [Índice de la documentación](../../README.md)** · **Siguiente ▶** [TigerHub](./tigerhub.md)
 
 **Véase también:** [Compatibilidad](../compatibility/README.md), [Arquitectura](../architecture/overview.md)

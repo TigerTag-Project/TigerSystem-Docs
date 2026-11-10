@@ -1,5 +1,5 @@
 ---
-sourceHash: 6f8896d0576b865d67ea9ac9210a2ef2bb3fe75b5617b90d3b2323c963c9b40f
+sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
 sourcePath: docs/faq/README.md
 ---
 
@@ -71,7 +71,7 @@ sourcePath: docs/faq/README.md
 
 **买到的芯片上自带数据吗？**
 没有——**单独出售的芯片出厂时是空白的**，无论是否带有 TigerTag 标志。
-你自己在 [Tiger NFC Connect](../products/tigertag-connect.md) 或
+你自己在 [Tiger NFC Connect](../products/tiger-nfc-connect.md) 或
 [Tiger Studio](../products/tiger-studio.md) 中写入耗材的身份；第一次大约需要一分钟。
 **已经写好**才到手的芯片，是在工厂里集成于合作品牌耗材之中的那些。
 购买芯片和购买已贴标签的耗材是两回事。

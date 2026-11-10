@@ -1,5 +1,5 @@
 ---
-sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
+sourceHash: b9bc4e4c2249a77cee57a986a99d87ea22bc2f297ea85cf8f6401f12dd218e52
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -51,7 +51,7 @@ de voorwaarde.
 
 ## De lezer is je telefoon
 
-Elke recente smartphone heeft een NFC-lezer. **[Tiger NFC Connect](../products/tigertag-connect.md)**
+Elke recente smartphone heeft een NFC-lezer. **[Tiger NFC Connect](../products/tiger-nfc-connect.md)**
 is gratis op iOS en Android, en **[Tiger Studio](../products/tiger-studio.md)**
 is gratis en open source (MIT) op Windows, macOS en Linux. Samen lees je
 chips, schrijf je chips en beheer je de inventaris — zonder één speciale
@@ -88,4 +88,4 @@ de manieren — ook de manieren die niets kosten.
 
 ---
 
-**▲ [Documentatie-index](../../README.md)** · **Zie ook:** [Eén identiteit, vier toestanden](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Het project steunen](../support.md)
+**▲ [Documentatie-index](../../README.md)** · **Zie ook:** [Eén identiteit, vier toestanden](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Het project steunen](../support.md)

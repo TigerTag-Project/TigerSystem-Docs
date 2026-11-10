@@ -1,5 +1,5 @@
 ---
-sourceHash: 44060fa4b69619d8c65b0470739cd8dca67478114abed214bd55e5864e39510e
+sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -63,4 +63,4 @@ flowchart LR
 
 **◀ 上一页：** [开放生态](./open-ecosystem.md) · **▲ [文档索引](../../README.md)** · **下一页 ▶** [第二次生命工作流](./second-life.md)
 
-**另见：** [Tiger NFC Connect](../products/tigertag-connect.md)、[架构概览](../architecture/overview.md)
+**另见：** [Tiger NFC Connect](../products/tiger-nfc-connect.md)、[架构概览](../architecture/overview.md)

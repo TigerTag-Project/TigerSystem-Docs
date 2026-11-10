@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -134,7 +134,7 @@ levert er een op.
 
 Promotie is ook geen deur die maar één kant op gaat. Chips worden nooit tegen
 schrijven vergrendeld: een gepromoveerde chip kan vanuit
-[Tiger NFC Connect](../products/tigertag-connect.md) of Tiger Studio worden
+[Tiger NFC Connect](../products/tiger-nfc-connect.md) of Tiger Studio worden
 gewist en opnieuw beschreven ([de TigerTag-chip](./tigertag-chip.md)). De
 identiteit is het record; de chip is alleen de plek waar ze nu woont.
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
+sourceHash: b9bc4e4c2249a77cee57a986a99d87ea22bc2f297ea85cf8f6401f12dd218e52
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -34,7 +34,7 @@ TigerSystem 中你能*看见*的部分是实体的：一枚芯片、一台 Tiger
 
 ## 读卡器就是你的手机
 
-每部近年的智能手机都内置 NFC 读卡器。**[Tiger NFC Connect](../products/tigertag-connect.md)** 在 iOS 和 Android 上免费，**[Tiger Studio](../products/tiger-studio.md)** 在 Windows、macOS 和 Linux 上免费且开源（MIT）。有了这两者，你就能读取芯片、写入芯片并管理库存——桌上不需要任何一台专用读卡器。
+每部近年的智能手机都内置 NFC 读卡器。**[Tiger NFC Connect](../products/tiger-nfc-connect.md)** 在 iOS 和 Android 上免费，**[Tiger Studio](../products/tiger-studio.md)** 在 Windows、macOS 和 Linux 上免费且开源（MIT）。有了这两者，你就能读取芯片、写入芯片并管理库存——桌上不需要任何一台专用读卡器。
 
 ## 手动称重
 
@@ -54,4 +54,4 @@ TigerSystem 中你能*看见*的部分是实体的：一枚芯片、一台 Tiger
 
 ---
 
-**▲ [文档索引](../../README.md)** · **另见：** [一种身份，四种状态](../concepts/universal-filament-identity.md)、[Tiger NFC Connect](../products/tigertag-connect.md)、[支持本项目](../support.md)
+**▲ [文档索引](../../README.md)** · **另见：** [一种身份，四种状态](../concepts/universal-filament-identity.md)、[Tiger NFC Connect](../products/tiger-nfc-connect.md)、[支持本项目](../support.md)

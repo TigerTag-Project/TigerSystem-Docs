@@ -29,7 +29,7 @@ export const sidebar = [
     { slug: 'products/tigertag' },
     { slug: 'products/tigertag-plus' },
     { slug: 'products/tigertag-plus-certified' },
-    { slug: 'products/tigertag-connect' },
+    { slug: 'products/tiger-nfc-connect' },
     { slug: 'products/tiger-studio' },
     { slug: 'products/tigerhub' },
     { slug: 'products/tigerpod' },

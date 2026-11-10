@@ -1,5 +1,5 @@
 ---
-sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
+sourceHash: b9bc4e4c2249a77cee57a986a99d87ea22bc2f297ea85cf8f6401f12dd218e52
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -51,7 +51,7 @@ il prerequisito.
 
 ## Il lettore è il tuo telefono
 
-Ogni smartphone recente ha un lettore NFC. **[Tiger NFC Connect](../products/tigertag-connect.md)**
+Ogni smartphone recente ha un lettore NFC. **[Tiger NFC Connect](../products/tiger-nfc-connect.md)**
 è gratuita su iOS e Android, e **[Tiger Studio](../products/tiger-studio.md)**
 è gratuito e open source (MIT) su Windows, macOS e Linux. Con le due
 leggi i chip, scrivi i chip e gestisci l'inventario — senza un solo lettore
@@ -88,4 +88,4 @@ elenca i modi — compresi quelli che non costano nulla.
 
 ---
 
-**▲ [Indice della documentazione](../../README.md)** · **Vedi anche:** [Una sola identità, quattro stati](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Sostieni il progetto](../support.md)
+**▲ [Indice della documentazione](../../README.md)** · **Vedi anche:** [Una sola identità, quattro stati](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Sostieni il progetto](../support.md)

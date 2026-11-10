@@ -1,5 +1,5 @@
 ---
-sourceHash: e35244386df439d1c2c49dc5f9e8f384ea5b8f2bc1dfe8b8e90b4a7c73b8e5bd
+sourceHash: f90597a9ffbb090b5dae06a58d1af28155c5496eb62c3bfede99775be802e696
 sourcePath: docs/products/tigertag-plus-certified.md
 ---
 
@@ -68,6 +68,6 @@ flowchart LR
 
 ---
 
-**◀ Назад:** [TigerTag+](./tigertag-plus.md) · **▲ [Оглавление документации](../../README.md)** · **Далее ▶** [Tiger NFC Connect](./tigertag-connect.md)
+**◀ Назад:** [TigerTag+](./tigertag-plus.md) · **▲ [Оглавление документации](../../README.md)** · **Далее ▶** [Tiger NFC Connect](./tiger-nfc-connect.md)
 
 **См. также:** [Чип TigerTag](../concepts/tigertag-chip.md), [Сертифицированные партнёры](../certified-partners.md), [Документация для разработчиков](../developers/README.md)

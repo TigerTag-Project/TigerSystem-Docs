@@ -1,5 +1,5 @@
 ---
-sourceHash: a5c219d635112ead3e5a03a876dc4d54f10bdb97b5596dc3f337272ae6e9b5d4
+sourceHash: 40f918d5f539378388129526b6f3ac0d73214444447d0fca0c3935533fbb589d
 sourcePath: docs/concepts/universal-filament-identity.md
 ---
 
@@ -132,7 +132,7 @@ TigerData или TigerData+ записывается на чистый чип NT
 создаёт.
 
 И повышение — не дверь в одну сторону. Чипы никогда не блокируются от записи:
-повышенный чип можно стереть из [Tiger NFC Connect](../products/tigertag-connect.md)
+повышенный чип можно стереть из [Tiger NFC Connect](../products/tiger-nfc-connect.md)
 или Tiger Studio и записать заново ([чип TigerTag](./tigertag-chip.md)).
 Идентичность — это запись; чип — лишь то место, где она живёт сейчас.
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 37a445006eb2c4ef8f8d29eea59fa1c4199f333ab1295e69fb6595f1cdb85d51
+sourceHash: f787ab835cd6a0761d139df621b1c9918dda678a3790454304c18585b1f54cf9
 sourcePath: docs/products/README.md
 ---
 
@@ -32,7 +32,7 @@ TigerPOD, Tiger NFC Connect) намеренно **не заявлены как �
 | <img src="../assets/icons/tigerdata.svg" width="18" alt="" /> [TigerData](../concepts/universal-filament-identity.md) | Виртуальный чип — идентичность в цифровом виде, чип не нужен, можно перевести в чип в любой момент | Концепция |
 | <img src="../assets/icons/tigertag.svg" width="18" alt="" /> [TigerTag](./tigertag.md) | Открытый чип RFID/NFC + стандарт идентичности катушки | Оборудование + спецификация |
 | <img src="../assets/icons/tigertag-plus.svg" width="18" alt="" /> [TigerTag+](./tigertag-plus.md) | TigerTag с идентификатором продукта из каталога и необязательным обогащением — по-прежнему 100 % офлайн; будучи подписанным, это TigerTag+ Certified | Оборудование + спецификация |
-| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tigertag-connect.md) | Мобильное приложение (iOS/Android) — сканирование, кодирование, просмотр | Приложение |
+| <img src="../assets/icons/connect.svg" width="18" alt="" /> [Tiger NFC Connect](./tiger-nfc-connect.md) | Мобильное приложение (iOS/Android) — сканирование, кодирование, просмотр | Приложение |
 | <img src="../assets/icons/studio.svg" width="18" alt="" /> [Tiger Studio](./tiger-studio.md) | Настольное приложение — инвентарь, стеллажи, датчики, принтеры | Приложение |
 | <img src="../assets/icons/tigerhub.svg" width="18" alt="" /> [TigerHub](./tigerhub.md) | Веб-дом экосистемы — витрина, списки желаний, друзья и обмен на `tigersystem.io` | Веб |
 | <img src="../assets/icons/tigerpod.svg" width="18" alt="" /> [TigerPOD](./tigerpod.md) | Печатаемая на 3D-принтере подставка с двумя NFC-считывателями | Оборудование |

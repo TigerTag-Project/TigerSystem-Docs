@@ -1,5 +1,5 @@
 ---
-sourceHash: a549faf0df069b54cdac8a81deef9e3530aeba894481fbe468d9feb397db22ba
+sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -31,7 +31,7 @@ flowchart TB
 | 层 | 作用 | 权威文档 |
 |---|---|---|
 | **TigerTag 芯片** | 实体线轴可携带的开放身份 | [芯片格式](../concepts/tigertag-chip.md) |
-| **Tiger NFC Connect** | 智能手机桥接：扫描、写入、浏览 | [产品页面](../products/tigertag-connect.md) |
+| **Tiger NFC Connect** | 智能手机桥接：扫描、写入、浏览 | [产品页面](../products/tiger-nfc-connect.md) |
 | **Firebase** | 一个共享数据库——账号、库存、同步；沙盒的互操作点 | [库存与云同步](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | 生态系统的网站门户：展示、心愿单、好友、分享 | [产品页面](../products/tigerhub.md) |
 | **Tiger Studio** | 桌面工作台：库存、货架、传感器、打印机 | [产品页面](../products/tiger-studio.md) |

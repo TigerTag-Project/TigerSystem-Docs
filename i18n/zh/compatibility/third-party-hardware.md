@@ -1,5 +1,5 @@
 ---
-sourceHash: a05c4e52f6cae3704b4e16e2b3d1b6d55653145391a9bdd6f31630c6821c91ab
+sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -11,8 +11,8 @@ sourcePath: docs/compatibility/third-party-hardware.md
 | 设备 | 制造商 | 功能 | 适用于 |
 |---|---|---|---|
 | **ACR122U** NFC 读卡器 | ACS | USB NFC 读写器——扫描芯片，线轴自动打开；带引导、核对 UID 的写入。两个这样的读卡器驱动一台 [TigerPOD](../products/tigerpod.md) | [Tiger Studio](../products/tiger-studio.md) |
-| **TD-1** 耗材分析仪 | [AJAX-3D](https://ajax-3d.com) | DIY 自制——测量耗材的**透射距离**（HueForge / Full Spectrum 打印所用的数值）+ 颜色（RGB，1–3 个槽位，仅供参考） | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md)（USB-C） |
-| **TD1s** 耗材分析仪 | [AJAX-3D](https://ajax-3d.com) | 同一设备系列，预先组装，开箱即用 | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tigertag-connect.md)（USB-C） |
+| **TD-1** 耗材分析仪 | [AJAX-3D](https://ajax-3d.com) | DIY 自制——测量耗材的**透射距离**（HueForge / Full Spectrum 打印所用的数值）+ 颜色（RGB，1–3 个槽位，仅供参考） | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md)（USB-C） |
+| **TD1s** 耗材分析仪 | [AJAX-3D](https://ajax-3d.com) | 同一设备系列，预先组装，开箱即用 | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md)（USB-C） |
 | **DYMO M 系列** USB 秤（M5、M10、M25…） | DYMO | 标准 USB“HID Scale”设备——实时重量写入线轴资料（[协议详情](../products/tigerscale.md)） | [Tiger Studio](../products/tiger-studio.md) |
 | **任何符合 HID Scale 标准的 USB 秤** | 任意 | 与 DYMO M 系列相同的标准协议（HID 用途页 `0x8D`）——品牌无关紧要 | [Tiger Studio](../products/tiger-studio.md) |
 | **任何空白 NTAG213/215/216 芯片** | 任意 | 耗材本身——随处可买，效果完全相同（[选哪种芯片？](../../docs/faq/README.md)） | 所有 |

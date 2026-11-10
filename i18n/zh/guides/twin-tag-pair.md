@@ -1,5 +1,5 @@
 ---
-sourceHash: bc1109bce033235ce112674dbf1775284562458c70d4ec2f6514e1bf5a144bd5
+sourceHash: af4b7e262a3473ee00f78614c8bc21819b9ee5fb231767ee2ea890f58a06b2dd
 sourcePath: docs/guides/twin-tag-pair.md
 ---
 
@@ -28,7 +28,7 @@ sourcePath: docs/guides/twin-tag-pair.md
 
 | | 一对芯片如何写入 | 最适合 |
 |---|---|---|
-| **手机** — [Tiger NFC Connect](../products/tigertag-connect.md) | *Dual NFC*：填一张表单，然后在同一次会话中写入第 1/2 枚和第 2/2 枚芯片 | 一卷线轴，无需硬件 |
+| **手机** — [Tiger NFC Connect](../products/tiger-nfc-connect.md) | *Dual NFC*：填一张表单，然后在同一次会话中写入第 1/2 枚和第 2/2 枚芯片 | 一卷线轴，无需硬件 |
 | **桌面，两台读卡器** — [TigerPOD](../products/tigerpod.md) | 两枚芯片同时一次写入 | 一整层货架、一批线轴 |
 | **桌面，一台读卡器** | 无法一次写完——问题正是这样产生的 | — |
 

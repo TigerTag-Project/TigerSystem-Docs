@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -135,7 +135,7 @@ sourcePath: docs/concepts/tigertag-chip.md
  картонной втулкой** и не может сдвинуться — клею делать больше нечего.
 - **Его можно извлечь и использовать снова.** Когда рефил закончился,
  достаньте носитель с двумя чипами, сотрите их из
- [Tiger NFC Connect](../products/tigertag-connect.md) или
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) или
  [Tiger Studio](../products/tiger-studio.md) и используйте снова — на другой
  катушке или для любого другого проекта NDEF. Филамент, проданный с TigerTag Refill,
  оставляет вам носитель, а не отходы
@@ -150,7 +150,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 
 | Что случилось | Что делать | Подпись |
 |---|---|---|
-| **Чип не работает или потерян** | Найдите филамент в каталоге — в [Tiger NFC Connect](../products/tigertag-connect.md) или [Tiger Studio](../products/tiger-studio.md) — и запишите его на два чипа за один сеанс: *Dual NFC* на телефоне или [TigerPOD](../products/tigerpod.md). Возьмите два новых чипа или сотрите уцелевший и используйте его как один из двух | теряется: чипы по-прежнему несут продукт из каталога, поэтому это TigerTag+ и они работают так же, но уже не TigerTag+ Certified |
+| **Чип не работает или потерян** | Найдите филамент в каталоге — в [Tiger NFC Connect](../products/tiger-nfc-connect.md) или [Tiger Studio](../products/tiger-studio.md) — и запишите его на два чипа за один сеанс: *Dual NFC* на телефоне или [TigerPOD](../products/tigerpod.md). Возьмите два новых чипа или сотрите уцелевший и используйте его как один из двух | теряется: чипы по-прежнему несут продукт из каталога, поэтому это TigerTag+ и они работают так же, но уже не TigerTag+ Certified |
 | **Чипы ещё отвечают, но их данные стёрты или повреждены** | **Восстановить TigerTag+** в панели инструментов катушки в Tiger Studio, с чипами на TigerPOD: каждый чип перезаписывается из своей резервной копии | сохраняется: чипы возвращаются в точности такими, какими вышли с завода |
 | **Чипа под рукой нет** | **Напечатать этикетку** из катушки в Tiger Studio: QR-код, который открывает катушку | — |
 
@@ -214,7 +214,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 
 | Инструмент | Чтение | Запись |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (мобильный NFC) | коснитесь чипа — катушка откроется на телефоне | нажмите **Make** и коснитесь снова для записи; **Dual NFC** записывает два чипа катушки за один сеанс |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (мобильный NFC) | коснитесь чипа — катушка откроется на телефоне | нажмите **Make** и коснитесь снова для записи; **Dual NFC** записывает два чипа катушки за один сеанс |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | автоматически открывает катушку при сканировании | управляемая запись с проверкой UID |
 | [SDK для JS](../developers/sdks.md) (`tigertag` в npm) | декодирует 144-байтную нагрузку | кодирует новую нагрузку |
 | [SDK для Python](../developers/sdks.md) | декодирует нагрузку; `tigertag[verify]` также проверяет подпись | кодирует новую нагрузку |

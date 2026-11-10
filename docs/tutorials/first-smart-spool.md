@@ -73,4 +73,4 @@ never automatic.
 
 ---
 
-**▲ [Documentation index](../../README.md)** · **Related:** [Tiger NFC Connect](../products/tigertag-connect.md), [The TigerTag chip](../concepts/tigertag-chip.md), [FAQ](../faq/README.md)
+**▲ [Documentation index](../../README.md)** · **Related:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [The TigerTag chip](../concepts/tigertag-chip.md), [FAQ](../faq/README.md)

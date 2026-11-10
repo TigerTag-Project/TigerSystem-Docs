@@ -1,5 +1,5 @@
 ---
-sourceHash: b28699b1ffe29a8197a36d00c7662d7a3930211c20f3d4e28aab3ac33abd11e8
+sourceHash: 27444f945a927973e57cd59c875c9dad41b748d476f0ff4d72224db2aac71368
 sourcePath: docs/glossary.md
 ---
 
@@ -24,7 +24,7 @@ sourcePath: docs/glossary.md
 | **Official** | 由 TigerSystem 自己制造——两种形态的芯片，以及[产品](./products/README.md)中的应用和硬件。这是对来源的陈述，而不是被授予的标记：TigerSystem 不认证自己。 |
 | **TigerTag Compatible** | 免费层级：任何与 TigerTag 芯片*对话*的东西——读卡器、应用、打印机、切片软件、工具。实现它、声明它，或在应用、文档或商店页面中展示标志，都无需许可。它同样涵盖 **TigerTag+**：验证签名免费、可离线、不受限制。它唯一从不包含的词是*认证*。 |
 | **TigerTag Certified** | 经过审核的层级，向第三方构建的任何东西开放——设备、应用、耗材、嵌体、载体——只要通过对照要求进行的审核。是被授予而不是自行声明的，列入认证登记册，并且可以被撤销。分为两个范围：**TigerTag Certified** 和 **TigerTag+ Certified**。认证合作伙伴可以将该标记用于**产品上**，并签发 TigerTag+ 签名。见[开发者文档](./developers/README.md)和[认证标准](https://github.com/TigerTag-Project/TigerTag-RFID-Guide/blob/main/CERTIFICATION.md)。 |
-| **Tiger NFC Connect** | 移动应用（iOS/Android）——轻触读取、轻触写入、浏览产品库。前身为“TigerTag RFID Connect”。见 [Tiger NFC Connect](./products/tigertag-connect.md)。 |
+| **Tiger NFC Connect** | 移动应用（iOS/Android）——轻触读取、轻触写入、浏览产品库。前身为“TigerTag RFID Connect”。见 [Tiger NFC Connect](./products/tiger-nfc-connect.md)。 |
 | **Tiger Studio** | 开源桌面应用（Windows/macOS/Linux）——库存、货架、传感器和打印机连接。见 [Tiger Studio](./products/tiger-studio.md)。 |
 | **TigerHub** | 生态系统在 `tigersystem.io` 的网络主页——展示、心愿单、好友代码、公开列表分享。见 [TigerHub](./products/tigerhub.md)。 |
 | **TigerPOD** | 可 3D 打印的双 NFC 读卡器支架——免费 STL。见 [TigerPOD](./products/tigerpod.md)。 |

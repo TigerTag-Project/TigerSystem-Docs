@@ -1,5 +1,5 @@
 ---
-sourceHash: 753177831a2577ac01ace40f8f49b6cf943aaf385d6b6c4107fcbd9d8660d0f2
+sourceHash: 7bb6dbb4efb816e836950f465cc62df5ef6eca1a0c8de04e7fb9820c26114c48
 sourcePath: docs/tutorials/first-smart-spool.md
 ---
 
@@ -78,4 +78,4 @@ elección explícita, nunca automática.
 
 ---
 
-**▲ [Índice de la documentación](../../README.md)** · **Véase también:** [Tiger NFC Connect](../products/tigertag-connect.md), [El chip TigerTag](../concepts/tigertag-chip.md), [Preguntas frecuentes](../faq/README.md)
+**▲ [Índice de la documentación](../../README.md)** · **Véase también:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [El chip TigerTag](../concepts/tigertag-chip.md), [Preguntas frecuentes](../faq/README.md)

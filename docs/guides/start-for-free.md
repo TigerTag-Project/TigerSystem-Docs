@@ -46,7 +46,7 @@ the prerequisite.
 
 ## The reader is your phone
 
-Every recent smartphone has an NFC reader in it. **[Tiger NFC Connect](../products/tigertag-connect.md)**
+Every recent smartphone has an NFC reader in it. **[Tiger NFC Connect](../products/tiger-nfc-connect.md)**
 is free on iOS and Android, and **[Tiger Studio](../products/tiger-studio.md)**
 is free and open source (MIT) on Windows, macOS and Linux. Between them you
 read chips, write chips, and manage the inventory — without a single dedicated
@@ -83,4 +83,4 @@ lists the ways — including the ones that cost nothing.
 
 ---
 
-**▲ [Documentation index](../../README.md)** · **Related:** [One identity, four states](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Support the project](../support.md)
+**▲ [Documentation index](../../README.md)** · **Related:** [One identity, four states](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Support the project](../support.md)

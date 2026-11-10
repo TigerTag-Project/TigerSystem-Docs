@@ -1,5 +1,5 @@
 ---
-sourceHash: 4065a0b500f9ddf83112df19144515a99bdd2f92002b6825f75721fe418969d5
+sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -145,7 +145,7 @@ Deux détails qui surprennent :
  faire.
 - **Il ressort, et il se réutilise.** Quand la recharge est terminée,
  récupérez le support avec ses deux puces, effacez-les depuis
- [Tiger NFC Connect](../products/tigertag-connect.md) ou
+ [Tiger NFC Connect](../products/tiger-nfc-connect.md) ou
  [Tiger Studio](../products/tiger-studio.md), et resservez-vous-en — sur une
  autre bobine, ou pour tout autre projet NDEF. Un filament vendu avec un
  TigerTag Refill vous laisse le support, pas un déchet
@@ -160,7 +160,7 @@ s'est passé :
 
 | Ce qui s'est passé | Que faire | La signature |
 |---|---|---|
-| **Une puce est morte, ou perdue** | Cherchez le filament dans le catalogue, depuis [Tiger NFC Connect](../products/tigertag-connect.md) ou [Tiger Studio](../products/tiger-studio.md), et écrivez-le sur deux puces dans la même session : *Dual NFC* sur le téléphone, ou le [TigerPOD](../products/tigerpod.md). Prenez deux puces neuves, ou effacez la survivante et réutilisez-la comme l'une des deux | perdue : les puces portent toujours le produit du catalogue, ce sont donc des TigerTag+ qui fonctionnent pareil, mais plus des TigerTag+ Certified |
+| **Une puce est morte, ou perdue** | Cherchez le filament dans le catalogue, depuis [Tiger NFC Connect](../products/tiger-nfc-connect.md) ou [Tiger Studio](../products/tiger-studio.md), et écrivez-le sur deux puces dans la même session : *Dual NFC* sur le téléphone, ou le [TigerPOD](../products/tigerpod.md). Prenez deux puces neuves, ou effacez la survivante et réutilisez-la comme l'une des deux | perdue : les puces portent toujours le produit du catalogue, ce sont donc des TigerTag+ qui fonctionnent pareil, mais plus des TigerTag+ Certified |
 | **Les puces répondent encore, mais leurs données ont été effacées ou abîmées** | **Restaurer le TigerTag+**, dans la boîte à outils de la bobine dans Tiger Studio, les puces sur le TigerPOD : chaque puce est réécrite depuis sa sauvegarde | conservée : les puces reviennent exactement comme en sortie d'usine |
 | **Pas de puce sous la main** | **Imprimer l'étiquette** depuis la bobine dans Tiger Studio : un QR code qui ouvre la bobine | — |
 
@@ -227,7 +227,7 @@ octets. Tout se passe dans le navigateur.
 
 | Outil | Lecture | Écriture |
 |---|---|---|
-| [Tiger NFC Connect](../products/tigertag-connect.md) (NFC mobile) | approchez la puce — la bobine s'ouvre sur le téléphone | appuyez sur **Make** puis approchez à nouveau ; **Dual NFC** écrit les deux puces d'une bobine en une session |
+| [Tiger NFC Connect](../products/tiger-nfc-connect.md) (NFC mobile) | approchez la puce — la bobine s'ouvre sur le téléphone | appuyez sur **Make** puis approchez à nouveau ; **Dual NFC** écrit les deux puces d'une bobine en une session |
 | [Tiger Studio](../products/tiger-studio.md) + ACR122U/TigerPOD | ouvre automatiquement la bobine au scan | écriture guidée, avec vérification de l'UID |
 | [SDK JS](../developers/sdks.md) (`tigertag` sur npm) | décode la charge utile de 144 octets | encode une nouvelle charge utile |
 | [SDK Python](../developers/sdks.md) | décode la charge utile ; `tigertag[verify]` vérifie aussi la signature | encode une nouvelle charge utile |

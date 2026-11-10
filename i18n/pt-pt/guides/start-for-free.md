@@ -1,5 +1,5 @@
 ---
-sourceHash: f98f29ac1b668da1b91c85798442215510672125656970ad22fb6755aa16a5ba
+sourceHash: b9bc4e4c2249a77cee57a986a99d87ea22bc2f297ea85cf8f6401f12dd218e52
 sourcePath: docs/guides/start-for-free.md
 ---
 
@@ -34,7 +34,7 @@ Uma bobina digital pode ser [promovida a um chip real](../concepts/universal-fil
 
 ## O leitor é o seu telemóvel
 
-Todos os smartphones recentes têm um leitor NFC. O **[Tiger NFC Connect](../products/tigertag-connect.md)** é gratuito em iOS e Android, e o **[Tiger Studio](../products/tiger-studio.md)** é gratuito e de código aberto (MIT) em Windows, macOS e Linux. Entre os dois, lê chips, escreve chips e gere o inventário — sem um único leitor dedicado na secretária.
+Todos os smartphones recentes têm um leitor NFC. O **[Tiger NFC Connect](../products/tiger-nfc-connect.md)** é gratuito em iOS e Android, e o **[Tiger Studio](../products/tiger-studio.md)** é gratuito e de código aberto (MIT) em Windows, macOS e Linux. Entre os dois, lê chips, escreve chips e gere o inventário — sem um único leitor dedicado na secretária.
 
 ## O peso, à mão
 
@@ -54,4 +54,4 @@ E se mesmo assim preferir ajudar, [apoiar o projeto](../support.md) lista as for
 
 ---
 
-**▲ [Índice da documentação](../../README.md)** · **Ver também:** [Uma identidade, quatro estados](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tigertag-connect.md), [Apoiar o projeto](../support.md)
+**▲ [Índice da documentação](../../README.md)** · **Ver também:** [Uma identidade, quatro estados](../concepts/universal-filament-identity.md), [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Apoiar o projeto](../support.md)

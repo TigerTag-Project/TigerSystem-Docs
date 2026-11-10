@@ -62,4 +62,4 @@ the user** ([the FlashForge case](../compatibility/flashforge.md)).
 
 **◀ Previous:** [Open ecosystem](./open-ecosystem.md) · **▲ [Documentation index](../../README.md)** · **Next ▶** [Second Life workflow](./second-life.md)
 
-**Related:** [Tiger NFC Connect](../products/tigertag-connect.md), [Architecture overview](../architecture/overview.md)
+**Related:** [Tiger NFC Connect](../products/tiger-nfc-connect.md), [Architecture overview](../architecture/overview.md)
