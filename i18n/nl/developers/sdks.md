@@ -1,5 +1,5 @@
 ---
-sourceHash: 19ce9f2af8d9561b6298fb076ca9ac4da141671c3caafc2201c393e1f19938a2
+sourceHash: 442ad60629425e6204e63477c4fca050cf440f131defb1307e50fea7c1944670
 sourcePath: docs/developers/sdks.md
 ---
 
@@ -30,9 +30,69 @@ pip install tigertag[sync]    # + requests (database auto-update)
 pip install tigertag[verify]   # + cryptography (ECDSA signature check)
 ```
 
-> **TODO:** minimale parse-/encode-codevoorbeelden voor beide SDK's — importeer ze uit
-> de README van elke SDK zodra die stabiel is, of link er rechtstreeks naar. Herhaal hier geen API-
-> signaturen (risico op afwijking); de README van elke SDK is leidend.
+## Een chip lezen en schrijven
+
+Beide SDK's werken op dezelfde manier. Om te lezen geef je de UID van de chip
+en zijn pagina's vanaf `0x04` door, zoals je NFC-SDK ze teruggeeft. Om te
+schrijven bouw je een tag uit zijn velden en schrijf je de 80 bytes die hij
+teruggeeft naar de pagina's `0x04`–`0x17`. De id's komen uit de
+[referentietabellen](../concepts/universal-filament-identity.md); het voorbeeld is een spoel van 1 kg rode Rosa3D
+PLA, 1,75 mm.
+
+### JavaScript
+
+```js
+const { TigerTag } = require('tigertag');
+
+// Read
+const tag = TigerTag.fromPages(uid, payload);
+console.log(tag.pretty());
+console.log(String(tag.verify()));   // VALID / NOT SIGNED / INVALID
+
+// Write
+const spool = TigerTag.create({
+  uid,
+  idType: 142,          // Filament
+  idMaterial: 38219,    // PLA
+  idBrand: 19961,       // Rosa3D
+  idAspect1: 104,       // Basic
+  idDiameter: 56,       // 1.75 mm
+  color1R: 255, color1G: 0, color1B: 0, color1A: 255,
+  measure: 1000, idUnit: 21,   // 1000 g
+  nozzleTempMin: 195, nozzleTempMax: 230,
+});
+const bytes = spool.toBytes();   // 80 bytes
+```
+
+### Python
+
+```python
+from tigertag import TigerTag
+
+# Read
+tag = TigerTag.from_pages(uid, payload)
+print(tag.pretty())
+print(tag.verify())                # VALID / NOT SIGNED / INVALID
+
+# Write
+spool = TigerTag.create(
+    uid=uid,
+    id_type=142,          # Filament
+    id_material=38219,    # PLA
+    id_brand=19961,       # Rosa3D
+    id_aspect_1=104,      # Basic
+    id_diameter=56,       # 1.75 mm
+    color1_r=255, color1_g=0, color1_b=0, color1_a=255,
+    measure=1000, id_unit=21,    # 1000 g
+    nozzle_temp_min=195, nozzle_temp_max=230,
+)
+data = spool.to_bytes()            # 80 bytes
+```
+
+Beide voorbeelden werken zo met `tigertag` 1.2.1 (npm) en 1.4.0 (PyPI). De
+rest van de API (details van de handtekening, cloudsync voor TigerTag+, een chip
+patchen, de CLI) staat in de README van elke SDK, die leidend is:
+[JavaScript](https://github.com/TigerTag-Project/TigerTag-SDK-JS#readme) · [Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python#readme).
 
 ## Wat de SDK's je geven
 

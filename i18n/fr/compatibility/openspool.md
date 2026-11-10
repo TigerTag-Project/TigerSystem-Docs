@@ -1,5 +1,5 @@
 ---
-sourceHash: 81ee1b494fc9fc36fd8d7ec7337fb8d13ee657814c5dfe3b99cb3ed353fd2d7a
+sourceHash: 2aa30864cfb206820e96297f6e331f24ff62e73727f540f12585f2c57cd43347
 sourcePath: docs/compatibility/openspool.md
 ---
 
@@ -36,9 +36,43 @@ dans
 [`docs/rfid-vendors/openspool.md`](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/openspool.md),
 dans le cadre de la lecture RFID multi-fournisseurs prévue dans Tiger Studio.
 
-> **TODO :** décider et documenter la correspondance d'import (champs JSON
-> OpenSpool → identifiants de référence TigerTag) lorsque la prise en charge
-> de la lecture sera livrée.
+### Correspondance d'import : OpenSpool → TigerData
+
+C'est la correspondance que le lecteur OpenSpool de Tiger Studio appliquera.
+Lire un tag OpenSpool crée un **TigerData** : un enregistrement sans puce, avec
+un nouveau `TigerData_<id>`. La puce OpenSpool n'est pas une puce TigerTag, et
+un tag OpenSpool ne désigne aucun produit du catalogue : l'enregistrement n'est
+donc jamais un TigerData+. Écrit plus tard sur une puce TigerTag, il devient un
+TigerTag, comme tout TigerData.
+
+Un tag n'est OpenSpool que si son JSON porte `"protocol": "openspool"`. Ses
+champs sont alors résolus avec les [tables de référence](../concepts/universal-filament-identity.md) :
+
+| OpenSpool | TigerData | Règle |
+|---|---|---|
+| `brand` | `id_brand` | cherchée par son nom dans `id_brand.json`, sans tenir compte de la casse ; absente ou inconnue → `Generic` (65535) |
+| `type`, `subtype` | `id_material` | cherchée dans `id_material.json`, sans tenir compte de la casse, dans cet ordre : `type-subtype` (`PLA` + `CF` → `PLA-CF`), `type subtype` (`PLA` + `Silk` → `PLA Silk`), puis `type` seul. `NYLON` se lit `PA` (59328). Un type absent ou inconnu est demandé |
+| `subtype`, si la matière ne l'a pas utilisé | `id_aspect1` | l'aspect de ce nom dans `id_aspect.json` (`Matte` se lit `Matt`, 247), sinon `Basic` (104) ; un sous-type qui ne correspond à rien est gardé dans le `message` de l'enregistrement |
+| `color_hex`, `alpha` | `color_r`, `color_g`, `color_b`, `color_a` | recopiées ; OpenSpool ne porte qu'une couleur |
+| `diameter` | `id_diameter` | `1.75` → 56, `2.85` → 221 ; absent → 1,75, la valeur par défaut d'OpenSpool ; toute autre valeur est demandée |
+| `weight` | `measure`, `id_measure_unit` | en grammes, unité `g` (21) ; absent → 1000, la valeur par défaut d'OpenSpool. La bobine part pleine : `weight_available` = `weight` |
+| `min_temp`, `max_temp` | buse min et max (`data2`, `data3`) | recopiées ; quand les deux valent `0` (absentes), les valeurs recommandées de la matière. `max_temp` inférieure à `min_temp` : le tag est refusé, comme dans OpenRFID |
+| — | température et durée de séchage, plateau min et max (`data4`–`data7`) | les valeurs `recommended` de la matière dans `id_material.json` |
+| — | `id_type` | Filament (142) |
+| — | `id_aspect2` | None (255) |
+| — | `id_product` | `0xFFFFFFFF` : aucun produit du catalogue |
+| — | `timestamp` | l'heure de l'import |
+
+Deux règles diffèrent volontairement du lecteur d'OpenRFID :
+
+- **Les valeurs de plateau et de séchage viennent de la base de référence
+ TigerTag**, et non du tableau à cinq lignes d'OpenRFID (PLA, PETG, ABS, TPU,
+ NYLON, et zéro pour tout autre type). Ce sont celles que Tiger Studio remplit
+ quand on choisit la même matière à la main, et elles existent pour les 113
+ matières.
+- **La matière n'est jamais devinée.** OpenRFID lit un type absent comme du
+ PLA. Une mauvaise matière donne de mauvaises températures : l'import demande
+ donc plutôt.
 
 ---
 
