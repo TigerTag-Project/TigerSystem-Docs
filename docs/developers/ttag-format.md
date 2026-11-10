@@ -22,7 +22,7 @@ A `.ttag` file is a single **UTF-8 JSON** document:
  "exportedAt": "2026-07-24T00:00:00.000Z",
  "exportedBy": "<owner uid>",
  "records": [ /* inventory documents, verbatim */ ],
- "rfidBackups": { "<chipUid>": { /* signed factory dump */ } }
+ "rfidBackups": { "<chipUid>": { /* chip content from its first read */ } }
 }
 ```
 
@@ -33,7 +33,7 @@ A `.ttag` file is a single **UTF-8 JSON** document:
 | `exportedAt` | Export time, **ISO 8601 string** (e.g. `"2026-07-24T00:00:00.000Z"`) |
 | `exportedBy` | Exporting owner's uid — **a UX hint for choosing the import mode ONLY, never a security boundary** |
 | `records[]` | Inventory documents, carried **verbatim** |
-| `rfidBackups` | *Optional.* Keyed by chip UID; present only for TigerTag+ (certified) spools — the signed factory dump used to restore the chip |
+| `rfidBackups` | *Optional.* Keyed by chip UID; present only for chips that have a backup — the chip's content as Tiger Studio first read it from a TigerTag+ (signature included on a TigerTag+ Certified), used to restore the chip |
 
 **`records[]` are the Firestore inventory documents, verbatim** — exactly
 `users/{uid}/inventory/{spoolId}` as documented in the
@@ -41,7 +41,7 @@ A `.ttag` file is a single **UTF-8 JSON** document:
 (use it as the field dictionary). Three nuances:
 
 - **Fields are sparse** — a field is only written when present on the doc:
- `twin_tag_uid` only on twins, `rfidBackup: true` only on TigerTag+,
+ `twin_tag_uid` only on twins, `rfidBackup: true` only on a chip that has a backup,
  `id_product` only when known, and so on.
 - **URL fields are attacker-controlled** — `LinkTDS`, `LinkMSDS`,
  `LinkYoutube`, `LinkREACH`, `LinkROHS`, `LinkFOOD` and `url_img*` are
@@ -59,7 +59,7 @@ At **file level**:
 | `format` = `"tigertag"`, `kind` = `"ttag"`, `version` ≤ 1 | **Required** — missing or mismatched = the file is rejected |
 | `records[]`, non-empty | **Required** — an empty file is rejected |
 | `exportedAt`, `exportedBy` | Informative (`exportedBy` is a UX hint only) |
-| `rfidBackups` | Optional — present only when TigerTag+ spools are included |
+| `rfidBackups` | Optional — present only when chips with a backup are included |
 
 At **record level**:
 
@@ -69,7 +69,7 @@ At **record level**:
 | Core identity (present on every well-formed record) | `id_material`, `id_type`, `id_aspect1`, `id_tigertag` — resolved against the shared reference database |
 | Capacity | Normalized from `measure` + `id_unit`: **`measure_gr` in grams for solids** (e.g. `measure: 1` + kg → `measure_gr: 1000`) and **`measure_ml` in milliliters for liquids** (resins). Generators may provide `measure` + `id_unit`; the normalized value is the canonical stored one |
 | Common optional | color fields (`color_r/g/b`, `online_color_list`…), `weight_available`, `container_id` / `container_weight`, display strings (`material`, `series`, `color_name`), `TD`, `tags`, `sku` / `barcode`, `Link*`, `url_img*` |
-| Conditional | `twin_tag_uid` (twins only — reciprocal within the file) · `tag_index` / `tag_count` (chip-backed records only — chip *i* of *n* read from chip byte +39, TigerTag protocol v2.2; one nibble each, `0` = unknown; never on a chipless record) · `rfidBackup: true` **plus** a matching `rfidBackups` entry (TigerTag+ only) · `id_product` (known catalogue products only) |
+| Conditional | `twin_tag_uid` (twins only — reciprocal within the file) · `tag_index` / `tag_count` (chip-backed records only — chip *i* of *n* read from chip byte +39, TigerTag protocol v2.2; one nibble each, `0` = unknown; never on a chipless record) · `rfidBackup: true` **plus** a matching `rfidBackups` entry (chips with a backup only) · `id_product` (known catalogue products only) |
 | Carried but ignored on import | `rack`, `rack_id`, `level`, `position` |
 
 For any edge case not covered here, the **Tiger Studio importer is the
@@ -148,7 +148,11 @@ and import:
 |---|---|
 | **TigerData** (fully digital, no chip) | The record itself |
 | **TigerTag** (a written chip) | The record itself |
-| **TigerTag+** (certified chip) | The record **plus** its signed factory dump in `rfidBackups` |
+| **TigerTag+** (signed or not) | The record **plus** the chip's backup in `rfidBackups` |
+
+Tiger Studio takes the backup the first time it reads a TigerTag+ chip, signed
+or not, and never overwrites it. On a TigerTag+ Certified the backup holds the
+signature, so a restored chip is still Certified.
 
 ## Export
 
@@ -178,7 +182,7 @@ http(s) link, or drag-and-drop anywhere on the window.
 |---|---|---|
 | Intent | Same account / a genuine restore | Adopting someone else's materials |
 | Record ids | Kept — written **verbatim** under the original ids | **New** ids — each record becomes a fresh chipless `TigerData_` spool owned by the importer |
-| Chip status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless: `id_tigertag` removed, `rfidBackup:false`, backups discarded (a signed dump is bound to a chip the importer doesn't hold) |
+| Chip status | Kept — each `rfidList` backup restored | Dropped — the copy is chipless: `id_tigertag` removed, `rfidBackup:false`, backups discarded (a backup belongs to a chip the importer doesn't hold) |
 | Product | Kept | **Kept** when `id_product` is a real catalogue id (not `0`, not `0xFFFFFFFF`), so a TigerData+ stays a TigerData+ and a TigerTag+ arrives as the TigerData+ of the same product; anything else is set to `0xFFFFFFFF` (unset). Before Tiger Studio v2.51.1 it was always unset, so a TigerData+ arrived as a plain TigerData |
 | Weight | As recorded | Reset to full capacity |
 | Twins | As recorded | `twin_tag_uid` remapped through the new ids |
@@ -297,8 +301,8 @@ A faithful, anonymized multi-selection export — one TigerData, one twin pair
 
 Reading the example: the first record is chipless (a `TigerData_` id); the
 next two are a twin pair — same material, reciprocal `twin_tag_uid`, always
-exported together; the last is a TigerTag+ (`rfidBackup: true`) whose signed
-factory dump sits in `rfidBackups` under its chip UID.
+exported together; the last is a TigerTag+ (`rfidBackup: true`) whose
+backup sits in `rfidBackups` under its chip UID.
 
 ## Security / trust model
 

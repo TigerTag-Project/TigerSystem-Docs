@@ -1,5 +1,5 @@
 ---
-sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
+sourceHash: a2b898dd98b87258ab52f535f8234c80ae6826a98e66fe816ab06b60999020b1
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -28,7 +28,7 @@ Un fichier `.ttag` est un unique document **JSON UTF-8** :
  "exportedAt": "2026-07-24T00:00:00.000Z",
  "exportedBy": "<owner uid>",
  "records": [ /* inventory documents, verbatim */ ],
- "rfidBackups": { "<chipUid>": { /* signed factory dump */ } }
+ "rfidBackups": { "<chipUid>": { /* chip content from its first read */ } }
 }
 ```
 
@@ -39,7 +39,7 @@ Un fichier `.ttag` est un unique document **JSON UTF-8** :
 | `exportedAt` | Date de l'export, **chaîne ISO 8601** (par ex. `"2026-07-24T00:00:00.000Z"`) |
 | `exportedBy` | uid du propriétaire exportateur — **une aide à l'interface pour choisir le mode d'import UNIQUEMENT, jamais une frontière de sécurité** |
 | `records[]` | Documents d'inventaire, repris **tels quels** |
-| `rfidBackups` | *Facultatif.* Indexé par UID de puce ; présent uniquement pour les bobines TigerTag+ (certifiées) — le dump d'usine signé qui sert à restaurer la puce |
+| `rfidBackups` | *Facultatif.* Indexé par UID de puce ; présent uniquement pour les puces qui ont une sauvegarde — le contenu de la puce tel que Tiger Studio l'a lu la première fois sur un TigerTag+ (signature comprise sur un TigerTag+ Certified), qui sert à restaurer la puce |
 
 **Les `records[]` sont les documents d'inventaire Firestore, tels quels** —
 exactement `users/{uid}/inventory/{spoolId}` tels que décrits dans le
@@ -48,7 +48,7 @@ exactement `users/{uid}/inventory/{spoolId}` tels que décrits dans le
 
 - **Les champs sont épars** — un champ n'est écrit que s'il est présent sur le
   document : `twin_tag_uid` seulement sur les jumeaux, `rfidBackup: true`
-  seulement sur les TigerTag+, `id_product` seulement s'il est connu, etc.
+  seulement sur une puce qui a une sauvegarde, `id_product` seulement s'il est connu, etc.
 - **Les champs d'URL sont sous contrôle d'un attaquant potentiel** — `LinkTDS`,
   `LinkMSDS`, `LinkYoutube`, `LinkREACH`, `LinkROHS`, `LinkFOOD` et `url_img*`
   sont assainis à l'import : tout schéma autre que http(s) est supprimé.
@@ -65,7 +65,7 @@ Au **niveau du fichier** :
 | `format` = `"tigertag"`, `kind` = `"ttag"`, `version` ≤ 1 | **Obligatoire** — absent ou incohérent = fichier rejeté |
 | `records[]`, non vide | **Obligatoire** — un fichier vide est rejeté |
 | `exportedAt`, `exportedBy` | Informatif (`exportedBy` n'est qu'une aide à l'interface) |
-| `rfidBackups` | Facultatif — présent uniquement lorsque des bobines TigerTag+ sont incluses |
+| `rfidBackups` | Facultatif — présent uniquement lorsque des puces avec une sauvegarde sont incluses |
 
 Au **niveau de l'enregistrement** :
 
@@ -75,7 +75,7 @@ Au **niveau de l'enregistrement** :
 | Identité de base (présente sur tout enregistrement bien formé) | `id_material`, `id_type`, `id_aspect1`, `id_tigertag` — résolus contre la base de référence partagée |
 | Capacité | Normalisée à partir de `measure` + `id_unit` : **`measure_gr` en grammes pour les solides** (par ex. `measure: 1` + kg → `measure_gr: 1000`) et **`measure_ml` en millilitres pour les liquides** (résines). Les générateurs peuvent fournir `measure` + `id_unit` ; c'est la valeur normalisée qui fait foi une fois stockée |
 | Facultatifs courants | champs de couleur (`color_r/g/b`, `online_color_list`…), `weight_available`, `container_id` / `container_weight`, chaînes d'affichage (`material`, `series`, `color_name`), `TD`, `tags`, `sku` / `barcode`, `Link*`, `url_img*` |
-| Conditionnels | `twin_tag_uid` (jumeaux uniquement — réciproque à l'intérieur du fichier) · `tag_index` / `tag_count` (enregistrements avec puce uniquement — puce *i* sur *n* lue à l'octet +39 de la puce, protocole TigerTag v2.2 ; un quartet chacun, `0` = inconnu ; jamais sur un enregistrement sans puce) · `rfidBackup: true` **plus** une entrée `rfidBackups` correspondante (TigerTag+ uniquement) · `id_product` (produits connus du catalogue uniquement) |
+| Conditionnels | `twin_tag_uid` (jumeaux uniquement — réciproque à l'intérieur du fichier) · `tag_index` / `tag_count` (enregistrements avec puce uniquement — puce *i* sur *n* lue à l'octet +39 de la puce, protocole TigerTag v2.2 ; un quartet chacun, `0` = inconnu ; jamais sur un enregistrement sans puce) · `rfidBackup: true` **plus** une entrée `rfidBackups` correspondante (puces avec une sauvegarde uniquement) · `id_product` (produits connus du catalogue uniquement) |
 | Transportés mais ignorés à l'import | `rack`, `rack_id`, `level`, `position` |
 
 Pour tout cas limite non traité ici, **l'importateur de Tiger Studio fait office
@@ -158,7 +158,11 @@ s'exportent et s'importent :
 |---|---|
 | **TigerData** (entièrement numérique, sans puce) | L'enregistrement lui-même |
 | **TigerTag** (une puce écrite) | L'enregistrement lui-même |
-| **TigerTag+** (puce certifiée) | L'enregistrement **plus** son dump d'usine signé dans `rfidBackups` |
+| **TigerTag+** (signé ou non) | L'enregistrement **plus** la sauvegarde de la puce dans `rfidBackups` |
+
+Tiger Studio fait la sauvegarde la première fois qu'il lit une puce TigerTag+,
+signée ou non, et ne l'écrase jamais. Sur un TigerTag+ Certified, la sauvegarde
+contient la signature : une puce restaurée reste donc Certified.
 
 ## Export
 
@@ -191,7 +195,7 @@ la fenêtre.
 |---|---|---|
 | Intention | Même compte / une véritable restauration | Adoption des matériaux de quelqu'un d'autre |
 | Identifiants d'enregistrement | Conservés — écrits **tels quels** sous les identifiants d'origine | **Nouveaux** identifiants — chaque enregistrement devient une bobine `TigerData_` neuve et sans puce, appartenant à celui qui importe |
-| Statut de la puce | Conservé — chaque sauvegarde `rfidList` est restaurée | Perdu — la copie est sans puce : `id_tigertag` retiré, `rfidBackup:false`, sauvegardes écartées (un dump signé est lié à une puce que celui qui importe ne possède pas) |
+| Statut de la puce | Conservé — chaque sauvegarde `rfidList` est restaurée | Perdu — la copie est sans puce : `id_tigertag` retiré, `rfidBackup:false`, sauvegardes écartées (une sauvegarde appartient à une puce que celui qui importe ne possède pas) |
 | Produit | Conservé | **Conservé** quand `id_product` est un vrai identifiant du catalogue (ni `0`, ni `0xFFFFFFFF`) : un TigerData+ reste un TigerData+ et un TigerTag+ arrive comme le TigerData+ du même produit ; sinon il passe à `0xFFFFFFFF` (non défini). Avant Tiger Studio v2.51.1, il était toujours vidé : un TigerData+ arrivait comme un simple TigerData |
 | Poids | Tel qu'enregistré | Remis à la capacité pleine |
 | Jumeaux | Tels qu'enregistrés | `twin_tag_uid` réaffecté aux nouveaux identifiants |
@@ -317,7 +321,7 @@ jumeaux (`twin_tag_uid` réciproque), un TigerTag+ dont le contenu de puce est s
 Lecture de l'exemple : le premier enregistrement est sans puce (un identifiant
 `TigerData_`) ; les deux suivants forment une paire de jumeaux — même matériau,
 `twin_tag_uid` réciproque, toujours exportés ensemble ; le dernier est un
-TigerTag+ (`rfidBackup: true`) dont le dump d'usine signé se trouve dans
+TigerTag+ (`rfidBackup: true`) dont la sauvegarde se trouve dans
 `rfidBackups`, sous l'UID de sa puce.
 
 ## Modèle de sécurité et de confiance

@@ -1,5 +1,5 @@
 ---
-sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
+sourceHash: a2b898dd98b87258ab52f535f8234c80ae6826a98e66fe816ab06b60999020b1
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -24,7 +24,7 @@ sourcePath: docs/developers/ttag-format.md
  "exportedAt": "2026-07-24T00:00:00.000Z",
  "exportedBy": "<owner uid>",
  "records": [ /* inventory documents, verbatim */ ],
- "rfidBackups": { "<chipUid>": { /* signed factory dump */ } }
+ "rfidBackups": { "<chipUid>": { /* chip content from its first read */ } }
 }
 ```
 
@@ -35,14 +35,14 @@ sourcePath: docs/developers/ttag-format.md
 | `exportedAt` | 导出时间，**ISO 8601 字符串**（例如 `"2026-07-24T00:00:00.000Z"`） |
 | `exportedBy` | 导出所有者的 uid——**仅作为选择导入模式的体验提示，绝不是安全边界** |
 | `records[]` | 库存文档，**原样**携带 |
-| `rfidBackups` | *可选。* 以芯片 UID 为键；仅存在于 TigerTag+（已认证）线轴——用于恢复芯片的已签名出厂转储 |
+| `rfidBackups` | *可选。* 以芯片 UID 为键；仅存在于有备份的芯片——Tiger Studio 第一次从 TigerTag+ 读取到的芯片内容（TigerTag+ Certified 包含签名），用于恢复芯片 |
 
 **`records[]` 是 Firestore 库存文档，原样携带**——正是
 [权威数据模型](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/blob/main/docs/03-data-model.md)
 中记录的 `users/{uid}/inventory/{spoolId}`（把它当作字段字典使用）。三点细微说明：
 
 - **字段是稀疏的**——只有文档上存在某字段时才会写入：
- `twin_tag_uid` 仅用于孪生，`rfidBackup: true` 仅用于 TigerTag+，
+ `twin_tag_uid` 仅用于孪生，`rfidBackup: true` 仅用于有备份的芯片，
  `id_product` 仅在已知时写入，等等。
 - **URL 字段由攻击者控制**——`LinkTDS`、`LinkMSDS`、
  `LinkYoutube`、`LinkREACH`、`LinkROHS`、`LinkFOOD` 和 `url_img*` 在导入时会被清理：
@@ -59,7 +59,7 @@ sourcePath: docs/developers/ttag-format.md
 | `format` = `"tigertag"`、`kind` = `"ttag"`、`version` ≤ 1 | **必填**——缺失或不匹配 = 文件被拒绝 |
 | `records[]`，非空 | **必填**——空文件会被拒绝 |
 | `exportedAt`、`exportedBy` | 信息性（`exportedBy` 仅为体验提示） |
-| `rfidBackups` | 可选——仅在包含 TigerTag+ 线轴时存在 |
+| `rfidBackups` | 可选——仅在包含有备份的芯片时存在 |
 
 **记录级**：
 
@@ -69,7 +69,7 @@ sourcePath: docs/developers/ttag-format.md
 | 核心身份（每条格式正确的记录都有） | `id_material`、`id_type`、`id_aspect1`、`id_tigertag`——对照共享参考数据库解析 |
 | 容量 | 由 `measure` + `id_unit` 归一化得到：固体为以克计的 **`measure_gr`**（例如 `measure: 1` + kg → `measure_gr: 1000`），液体（树脂）为以毫升计的 **`measure_ml`**。生成器可以提供 `measure` + `id_unit`；归一化后的值才是规范的存储值 |
 | 常见可选 | 颜色字段（`color_r/g/b`、`online_color_list` 等）、`weight_available`、`container_id` / `container_weight`、显示字符串（`material`、`series`、`color_name`）、`TD`、`tags`、`sku` / `barcode`、`Link*`、`url_img*` |
-| 有条件 | `twin_tag_uid`（仅孪生——在文件内相互指向）· `tag_index` / `tag_count`（仅限有芯片支撑的记录——n 枚中的第 i 枚芯片，读取自芯片字节 +39，TigerTag 协议 v2.2；各占一个半字节，`0` = 未知；绝不出现在无芯片记录上）· `rfidBackup: true` **加上**匹配的 `rfidBackups` 条目（仅 TigerTag+）· `id_product`（仅已知的产品库产品） |
+| 有条件 | `twin_tag_uid`（仅孪生——在文件内相互指向）· `tag_index` / `tag_count`（仅限有芯片支撑的记录——n 枚中的第 i 枚芯片，读取自芯片字节 +39，TigerTag 协议 v2.2；各占一个半字节，`0` = 未知；绝不出现在无芯片记录上）· `rfidBackup: true` **加上**匹配的 `rfidBackups` 条目（仅限有备份的芯片）· `id_product`（仅已知的产品库产品） |
 | 随文件携带但导入时忽略 | `rack`、`rack_id`、`level`、`position` |
 
 对于此处未涵盖的任何边缘情形，**以 Tiger Studio 导入器为参考实现**——
@@ -134,7 +134,10 @@ Tiger Studio 随后会设置该品牌自己的容器，或在有多个、或一�
 |---|---|
 | **TigerData**（完全数字化，无芯片） | 记录本身 |
 | **TigerTag**（已写入的芯片） | 记录本身 |
-| **TigerTag+**（已认证的芯片） | 记录**加上**其位于 `rfidBackups` 中的已签名出厂转储 |
+| **TigerTag+**（无论是否签名） | 记录**加上**位于 `rfidBackups` 中的芯片备份 |
+
+Tiger Studio 在第一次读取 TigerTag+ 芯片时制作备份，无论是否签名，且从不覆盖它。
+在 TigerTag+ Certified 上，备份包含签名，因此恢复后的芯片仍然是 Certified。
 
 ## 导出
 
@@ -160,7 +163,7 @@ Tiger Studio 随后会设置该品牌自己的容器，或在有多个、或一�
 |---|---|---|
 | 意图 | 同一账号 / 真正的恢复 | 采用他人的材料 |
 | 记录 id | 保留——以原始 id **原样**写入 | **新** id——每条记录成为导入者拥有的全新无芯片 `TigerData_` 线轴 |
-| 芯片状态 | 保留——每个 `rfidList` 备份都被恢复 | 丢弃——副本是无芯片的：`id_tigertag` 被移除，`rfidBackup:false`，备份被丢弃（已签名的转储绑定于导入者并不持有的芯片） |
+| 芯片状态 | 保留——每个 `rfidList` 备份都被恢复 | 丢弃——副本是无芯片的：`id_tigertag` 被移除，`rfidBackup:false`，备份被丢弃（备份属于导入者并不持有的芯片） |
 | 产品 | 保留 | 当 `id_product` 是真实的产品库 id（不是 `0`，也不是 `0xFFFFFFFF`）时**保留**，因此 TigerData+ 仍是 TigerData+，TigerTag+ 则作为同一产品的 TigerData+ 到达；其他任何值都设为 `0xFFFFFFFF`（未设置）。在 Tiger Studio v2.51.1 之前，它总是未设置，所以 TigerData+ 会作为普通 TigerData 到达 |
 | 重量 | 按记录 | 重置为满容量 |
 | 孪生 | 按记录 | `twin_tag_uid` 通过新 id 重新映射 |
@@ -275,7 +278,7 @@ TigerTag+。无芯片的记录（`uid` 以 `TigerData_` 或旧版 `CLOUD_` 开�
 
 解读示例：第一条记录是无芯片的（`TigerData_` id）；接下来两条是一对孪生——
 同一种材料，相互指向的 `twin_tag_uid`，始终一起导出；
-最后一条是 TigerTag+（`rfidBackup: true`），其已签名的出厂转储位于 `rfidBackups` 中，以其芯片 UID 为键。
+最后一条是 TigerTag+（`rfidBackup: true`），其备份位于 `rfidBackups` 中，以其芯片 UID 为键。
 
 ## 安全 / 信任模型
 

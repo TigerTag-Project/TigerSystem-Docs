@@ -1,5 +1,5 @@
 ---
-sourceHash: fa644ad426378c66b3be7c3a1a494a12ec2e25e0680b3cdfeb8ccffe9fb6ca28
+sourceHash: a2b898dd98b87258ab52f535f8234c80ae6826a98e66fe816ab06b60999020b1
 sourcePath: docs/developers/ttag-format.md
 ---
 
@@ -21,7 +21,7 @@ Um ficheiro `.ttag` é um único documento **JSON em UTF-8**:
  "exportedAt": "2026-07-24T00:00:00.000Z",
  "exportedBy": "<owner uid>",
  "records": [ /* inventory documents, verbatim */ ],
- "rfidBackups": { "<chipUid>": { /* signed factory dump */ } }
+ "rfidBackups": { "<chipUid>": { /* chip content from its first read */ } }
 }
 ```
 
@@ -32,11 +32,11 @@ Um ficheiro `.ttag` é um único documento **JSON em UTF-8**:
 | `exportedAt` | Hora de exportação, **cadeia ISO 8601** (p. ex. `"2026-07-24T00:00:00.000Z"`) |
 | `exportedBy` | Uid do proprietário que exportou — **uma indicação de UX para escolher o modo de importação APENAS, nunca uma fronteira de segurança** |
 | `records[]` | Documentos do inventário, transportados **tal e qual** |
-| `rfidBackups` | *Opcional.* Indexado pelo UID do chip; presente apenas para bobinas TigerTag+ (certificadas) — o dump de fábrica assinado usado para restaurar o chip |
+| `rfidBackups` | *Opcional.* Indexado pelo UID do chip; presente apenas para chips que têm uma cópia de segurança — o conteúdo do chip tal como o Tiger Studio o leu pela primeira vez de um TigerTag+ (assinatura incluída num TigerTag+ Certified), usado para restaurar o chip |
 
 **Os `records[]` são os documentos de inventário do Firestore, tal e qual** — exatamente `users/{uid}/inventory/{spoolId}`, como documentado no [modelo de dados de referência](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration/blob/main/docs/03-data-model.md) (use-o como dicionário de campos). Três nuances:
 
-- **Os campos são esparsos** — um campo só é escrito quando existe no documento: `twin_tag_uid` apenas em gémeos, `rfidBackup: true` apenas em TigerTag+, `id_product` apenas quando conhecido, e assim por diante.
+- **Os campos são esparsos** — um campo só é escrito quando existe no documento: `twin_tag_uid` apenas em gémeos, `rfidBackup: true` apenas num chip com cópia de segurança, `id_product` apenas quando conhecido, e assim por diante.
 - **Os campos de URL são controlados por um atacante** — `LinkTDS`, `LinkMSDS`, `LinkYoutube`, `LinkREACH`, `LinkROHS`, `LinkFOOD` e `url_img*` são higienizados na importação: qualquer esquema que não seja http(s) é descartado.
 - **A colocação em racks viaja mas não se aplica** — `rack`, `rack_id`, `level`, `position` podem aparecer no ficheiro mas não têm significado na importação (uma bobina importada não herda o rack de quem exportou).
 
@@ -49,7 +49,7 @@ Ao **nível do ficheiro**:
 | `format` = `"tigertag"`, `kind` = `"ttag"`, `version` ≤ 1 | **Obrigatório** — em falta ou diferente = o ficheiro é rejeitado |
 | `records[]`, não vazio | **Obrigatório** — um ficheiro vazio é rejeitado |
 | `exportedAt`, `exportedBy` | Informativos (`exportedBy` é apenas uma indicação de UX) |
-| `rfidBackups` | Opcional — presente apenas quando há bobinas TigerTag+ incluídas |
+| `rfidBackups` | Opcional — presente apenas quando há chips com cópia de segurança incluídos |
 
 Ao **nível do registo**:
 
@@ -59,7 +59,7 @@ Ao **nível do registo**:
 | Identidade principal (presente em todos os registos bem formados) | `id_material`, `id_type`, `id_aspect1`, `id_tigertag` — resolvidos face à base de dados de referência partilhada |
 | Capacidade | Normalizada a partir de `measure` + `id_unit`: **`measure_gr` em gramas para sólidos** (p. ex. `measure: 1` + kg → `measure_gr: 1000`) e **`measure_ml` em mililitros para líquidos** (resinas). Os geradores podem fornecer `measure` + `id_unit`; o valor normalizado é o canónico guardado |
 | Opcionais comuns | campos de cor (`color_r/g/b`, `online_color_list`…), `weight_available`, `container_id` / `container_weight`, cadeias de apresentação (`material`, `series`, `color_name`), `TD`, `tags`, `sku` / `barcode`, `Link*`, `url_img*` |
-| Condicionais | `twin_tag_uid` (apenas gémeos — recíproco dentro do ficheiro) · `tag_index` / `tag_count` (apenas registos com chip — chip *i* de *n* lido do byte +39 do chip, protocolo TigerTag v2.2; um nibble cada, `0` = desconhecido; nunca num registo sem chip) · `rfidBackup: true` **mais** uma entrada `rfidBackups` correspondente (apenas TigerTag+) · `id_product` (apenas produtos de catálogo conhecidos) |
+| Condicionais | `twin_tag_uid` (apenas gémeos — recíproco dentro do ficheiro) · `tag_index` / `tag_count` (apenas registos com chip — chip *i* de *n* lido do byte +39 do chip, protocolo TigerTag v2.2; um nibble cada, `0` = desconhecido; nunca num registo sem chip) · `rfidBackup: true` **mais** uma entrada `rfidBackups` correspondente (apenas chips com cópia de segurança) · `id_product` (apenas produtos de catálogo conhecidos) |
 | Transportados mas ignorados na importação | `rack`, `rack_id`, `level`, `position` |
 
 Para qualquer caso limite não coberto aqui, o **importador do Tiger Studio é a implementação de referência** — os geradores de terceiros devem visar registos que um Studio de origem aceite.
@@ -104,7 +104,9 @@ Os três [níveis de bobina](../concepts/universal-filament-identity.md) exporta
 |---|---|
 | **TigerData** (totalmente digital, sem chip) | O próprio registo |
 | **TigerTag** (um chip escrito) | O próprio registo |
-| **TigerTag+** (chip certificado) | O registo **mais** o seu dump de fábrica assinado em `rfidBackups` |
+| **TigerTag+** (assinado ou não) | O registo **mais** a cópia de segurança do chip em `rfidBackups` |
+
+O Tiger Studio faz a cópia de segurança na primeira vez que lê um chip TigerTag+, assinado ou não, e nunca a substitui. Num TigerTag+ Certified a cópia contém a assinatura, por isso um chip restaurado continua Certified.
 
 ## Exportação
 
@@ -125,7 +127,7 @@ O importador aceita **vários ficheiros `.ttag` de uma só vez**: navegue, cole 
 |---|---|---|
 | Intenção | Mesma conta / um restauro genuíno | Adotar materiais de outra pessoa |
 | Ids dos registos | Mantidos — escritos **tal e qual** sob os ids originais | Ids **novos** — cada registo torna-se uma nova bobina `TigerData_` sem chip, pertencente a quem importa |
-| Estado do chip | Mantido — cada cópia de segurança `rfidList` é restaurada | Descartado — a cópia não tem chip: `id_tigertag` removido, `rfidBackup:false`, as cópias de segurança são descartadas (um dump assinado está ligado a um chip que quem importa não tem) |
+| Estado do chip | Mantido — cada cópia de segurança `rfidList` é restaurada | Descartado — a cópia não tem chip: `id_tigertag` removido, `rfidBackup:false`, as cópias de segurança são descartadas (uma cópia de segurança pertence a um chip que quem importa não tem) |
 | Produto | Mantido | **Mantido** quando `id_product` é um id real do catálogo (nem `0`, nem `0xFFFFFFFF`), pelo que um TigerData+ continua a ser um TigerData+ e um TigerTag+ chega como o TigerData+ do mesmo produto; qualquer outro valor passa a `0xFFFFFFFF` (por definir). Antes do Tiger Studio v2.51.1 ficava sempre por definir, pelo que um TigerData+ chegava como um simples TigerData |
 | Peso | Como registado | Reposto na capacidade total |
 | Gémeos | Como registado | `twin_tag_uid` remapeado através dos novos ids |
@@ -224,7 +226,7 @@ Uma exportação de seleção múltipla fiel e anonimizada — um TigerData, um 
 }
 ```
 
-Lendo o exemplo: o primeiro registo não tem chip (um id `TigerData_`); os dois seguintes são um par de gémeos — mesmo material, `twin_tag_uid` recíproco, exportados sempre em conjunto; o último é um TigerTag+ (`rfidBackup: true`) cujo dump de fábrica assinado está em `rfidBackups` sob o UID do seu chip.
+Lendo o exemplo: o primeiro registo não tem chip (um id `TigerData_`); os dois seguintes são um par de gémeos — mesmo material, `twin_tag_uid` recíproco, exportados sempre em conjunto; o último é um TigerTag+ (`rfidBackup: true`) cuja cópia de segurança está em `rfidBackups` sob o UID do seu chip.
 
 ## Modelo de segurança / confiança
 
