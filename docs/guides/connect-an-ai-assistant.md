@@ -1,7 +1,7 @@
 # Connect an AI assistant to your account
 
 Ask Claude or ChatGPT "how much PETG do I have left?" and get the answer from
-your own inventory. The TigerSystem connector lets an AI assistant **read** your
+your own inventory. The TigerSystem.io connector lets an AI assistant **read** your
 TigerSystem account — nothing more. It is the same idea as the local server in Tiger
 Studio, but hosted: it works from the web, from a phone, and without Studio
 running.
@@ -32,11 +32,11 @@ e-mail — are never returned, whatever it asks.
 ## Claude (web, desktop, mobile)
 
 1. **Settings → Connectors → Add custom connector.**
-2. Name it `TigerSystem`, paste the address above, leave the advanced OAuth fields
+2. Name it `TigerSystem.io`, paste the address above, leave the advanced OAuth fields
    empty, and add it.
 3. Click **Connect**. You land on tigersystem.io: sign in, check that the page
    says the answers go to claude.ai, and click **Allow**.
-4. In a conversation, switch the TigerSystem connector on from the tools menu and
+4. In a conversation, switch the TigerSystem.io connector on from the tools menu and
    ask your question.
 
 ## ChatGPT
@@ -45,7 +45,7 @@ Custom connectors need **developer mode** (a paid plan; on Business plans, an
 admin enables it).
 
 1. **Settings → Apps & Connectors → Advanced settings → Developer mode** on.
-2. **Create** a connector: name `TigerSystem`, the address above, authentication
+2. **Create** a connector: name `TigerSystem.io`, the address above, authentication
    **OAuth**, no client ID or secret.
 3. Sign in on tigersystem.io and click **Allow**.
 4. In a new chat, enable the connector and ask.
@@ -55,9 +55,9 @@ admin enables it).
 Custom connectors need a **paid Grok plan**.
 
 1. Open **grok.com/connectors → New Connector → Custom**.
-2. Name it `TigerSystem` and paste the address above.
+2. Name it `TigerSystem.io` and paste the address above.
 3. Sign in on tigersystem.io and click **Allow**.
-4. In a conversation, switch the TigerSystem connector on and ask.
+4. In a conversation, switch the TigerSystem.io connector on and ask.
 
 ## Le Chat (Mistral)
 
@@ -65,7 +65,7 @@ Custom connectors are added by an **administrator** — on a personal account,
 that is you.
 
 1. **Connectors → Add Connector → Custom MCP Connector.**
-2. Name it `TigerSystem` and paste the address above; Le Chat detects the
+2. Name it `TigerSystem.io` and paste the address above; Le Chat detects the
    sign-in method (OAuth) by itself.
 3. Sign in on tigersystem.io and click **Allow**.
 4. In a conversation, enable the connector and ask.

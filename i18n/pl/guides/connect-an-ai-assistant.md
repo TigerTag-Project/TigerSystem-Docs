@@ -1,12 +1,12 @@
 ---
-sourceHash: b9c190202ceb9ed447ea794e9e369fdf15a51affa538edaca35cb7f3eb145c0e
+sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
 # Połącz asystenta AI ze swoim kontem
 
 Zapytaj Claude lub ChatGPT „ile PETG mi zostało?” i otrzymaj odpowiedź z własnego
-magazynu. Konektor TigerSystem pozwala asystentowi AI **czytać** twoje konto
+magazynu. Konektor TigerSystem.io pozwala asystentowi AI **czytać** twoje konto
 TigerSystem — nic więcej. To ten sam pomysł co lokalny serwer w Tiger
 Studio, tylko hostowany: działa z przeglądarki, z telefonu i bez uruchomionego
 Studio.
@@ -36,11 +36,11 @@ e-mail — nigdy nie są zwracane, o cokolwiek poprosi.
 ## Claude (web, desktop, mobile)
 
 1. **Ustawienia → Konektory → Dodaj własny konektor.**
-2. Nazwij go `TigerSystem`, wklej powyższy adres, pozostaw zaawansowane pola OAuth
+2. Nazwij go `TigerSystem.io`, wklej powyższy adres, pozostaw zaawansowane pola OAuth
    puste i dodaj.
 3. Kliknij **Połącz**. Trafisz na tigersystem.io: zaloguj się, sprawdź, czy strona
    informuje, że odpowiedzi trafiają do claude.ai, i kliknij **Zezwól**.
-4. W rozmowie włącz konektor TigerSystem z menu narzędzi i
+4. W rozmowie włącz konektor TigerSystem.io z menu narzędzi i
    zadaj pytanie.
 
 ## ChatGPT
@@ -49,7 +49,7 @@ Własne konektory wymagają **trybu dewelopera** (płatny plan; w planach Busine
 włącza go administrator).
 
 1. **Ustawienia → Aplikacje i konektory → Ustawienia zaawansowane → Tryb dewelopera** włączony.
-2. **Utwórz** konektor: nazwa `TigerSystem`, powyższy adres, uwierzytelnianie
+2. **Utwórz** konektor: nazwa `TigerSystem.io`, powyższy adres, uwierzytelnianie
    **OAuth**, bez identyfikatora klienta ani sekretu.
 3. Zaloguj się na tigersystem.io i kliknij **Zezwól**.
 4. W nowym czacie włącz konektor i zadaj pytanie.
@@ -59,9 +59,9 @@ włącza go administrator).
 Własne konektory wymagają **płatnego planu Grok**.
 
 1. Otwórz **grok.com/connectors → New Connector → Custom**.
-2. Nazwij go `TigerSystem` i wklej powyższy adres.
+2. Nazwij go `TigerSystem.io` i wklej powyższy adres.
 3. Zaloguj się na tigersystem.io i kliknij **Zezwól**.
-4. W rozmowie włącz konektor TigerSystem i zadaj pytanie.
+4. W rozmowie włącz konektor TigerSystem.io i zadaj pytanie.
 
 ## Le Chat (Mistral)
 
@@ -69,7 +69,7 @@ Własne konektory dodaje **administrator** — na koncie osobistym
 to ty.
 
 1. **Connectors → Add Connector → Custom MCP Connector.**
-2. Nazwij go `TigerSystem` i wklej powyższy adres; Le Chat sam wykrywa
+2. Nazwij go `TigerSystem.io` i wklej powyższy adres; Le Chat sam wykrywa
    metodę logowania (OAuth).
 3. Zaloguj się na tigersystem.io i kliknij **Zezwól**.
 4. W rozmowie włącz konektor i zadaj pytanie.

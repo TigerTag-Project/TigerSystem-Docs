@@ -1,11 +1,11 @@
 ---
-sourceHash: b9c190202ceb9ed447ea794e9e369fdf15a51affa538edaca35cb7f3eb145c0e
+sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
 # 将 AI 助手连接到你的账号
 
-问 Claude 或 ChatGPT“我还剩多少 PETG？”，答案直接来自你自己的库存。TigerSystem 连接器让 AI 助手**读取**你的 TigerSystem 账号——仅此而已。它和 Tiger Studio 中的本地服务器是同一个思路，只不过托管在云端：可以在网页、手机上使用，也无需运行 Studio。
+问 Claude 或 ChatGPT“我还剩多少 PETG？”，答案直接来自你自己的库存。TigerSystem.io 连接器让 AI 助手**读取**你的 TigerSystem 账号——仅此而已。它和 Tiger Studio 中的本地服务器是同一个思路，只不过托管在云端：可以在网页、手机上使用，也无需运行 Studio。
 
 **连接器的地址：**
 
@@ -27,16 +27,16 @@ https://mcp.tigersystem.io/mcp
 ## Claude（网页、桌面、移动端）
 
 1. **设置 → 连接器 → 添加自定义连接器。**
-2. 将其命名为 `TigerSystem`，粘贴上面的地址，高级 OAuth 字段留空，然后添加。
+2. 将其命名为 `TigerSystem.io`，粘贴上面的地址，高级 OAuth 字段留空，然后添加。
 3. 点击**连接**。你会进入 tigersystem.io：登录，确认页面说明答案将发送到 claude.ai，然后点击**允许**。
-4. 在对话中，从工具菜单里打开 TigerSystem 连接器，然后提出你的问题。
+4. 在对话中，从工具菜单里打开 TigerSystem.io 连接器，然后提出你的问题。
 
 ## ChatGPT
 
 自定义连接器需要**开发者模式**（付费方案；Business 方案需由管理员启用）。
 
 1. 打开 **设置 → 应用与连接器 → 高级设置 → 开发者模式**。
-2. **创建**连接器：名称 `TigerSystem`，地址同上，认证方式选 **OAuth**，不填客户端 ID 或密钥。
+2. **创建**连接器：名称 `TigerSystem.io`，地址同上，认证方式选 **OAuth**，不填客户端 ID 或密钥。
 3. 在 tigersystem.io 登录并点击**允许**。
 4. 在新的对话中启用该连接器并提问。
 
@@ -45,16 +45,16 @@ https://mcp.tigersystem.io/mcp
 自定义连接器需要**付费的 Grok 方案**。
 
 1. 打开 **grok.com/connectors → New Connector → Custom**。
-2. 将其命名为 `TigerSystem` 并粘贴上面的地址。
+2. 将其命名为 `TigerSystem.io` 并粘贴上面的地址。
 3. 在 tigersystem.io 登录并点击**允许**。
-4. 在对话中打开 TigerSystem 连接器并提问。
+4. 在对话中打开 TigerSystem.io 连接器并提问。
 
 ## Le Chat（Mistral）
 
 自定义连接器由**管理员**添加——在个人账号上，管理员就是你自己。
 
 1. **Connectors → Add Connector → Custom MCP Connector。**
-2. 将其命名为 `TigerSystem` 并粘贴上面的地址；Le Chat 会自动识别登录方式（OAuth）。
+2. 将其命名为 `TigerSystem.io` 并粘贴上面的地址；Le Chat 会自动识别登录方式（OAuth）。
 3. 在 tigersystem.io 登录并点击**允许**。
 4. 在对话中启用该连接器并提问。
 

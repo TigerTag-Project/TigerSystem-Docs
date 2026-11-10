@@ -1,12 +1,12 @@
 ---
-sourceHash: b9c190202ceb9ed447ea794e9e369fdf15a51affa538edaca35cb7f3eb145c0e
+sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
 # Conecte um assistente de IA à sua conta
 
 Pergunte ao Claude ou ao ChatGPT "quanto PETG ainda tenho?" e receba a resposta do
-seu próprio inventário. O conector do TigerSystem permite que um assistente de IA **leia** a sua
+seu próprio inventário. O conector TigerSystem.io permite que um assistente de IA **leia** a sua
 conta TigerSystem — nada além disso. É a mesma ideia do servidor local do Tiger
 Studio, mas hospedada: funciona pela web, pelo celular e sem o Studio
 em execução.
@@ -37,11 +37,11 @@ e-mail — nunca são retornadas, não importa o que ele peça.
 ## Claude (web, desktop, celular)
 
 1. **Settings → Connectors → Add custom connector.**
-2. Dê o nome `TigerSystem`, cole o endereço acima, deixe os campos avançados de OAuth
+2. Dê o nome `TigerSystem.io`, cole o endereço acima, deixe os campos avançados de OAuth
    vazios e adicione.
 3. Clique em **Connect**. Você chega ao tigersystem.io: entre, confira se a página
    diz que as respostas vão para o claude.ai e clique em **Allow**.
-4. Em uma conversa, ative o conector TigerSystem no menu de ferramentas e
+4. Em uma conversa, ative o conector TigerSystem.io no menu de ferramentas e
    faça a sua pergunta.
 
 ## ChatGPT
@@ -50,7 +50,7 @@ Os conectores personalizados exigem o **modo desenvolvedor** (um plano pago; nos
 administrador o ativa).
 
 1. **Settings → Apps & Connectors → Advanced settings → Developer mode** ativado.
-2. **Create** um conector: nome `TigerSystem`, o endereço acima, autenticação
+2. **Create** um conector: nome `TigerSystem.io`, o endereço acima, autenticação
    **OAuth**, sem ID de cliente nem segredo.
 3. Entre no tigersystem.io e clique em **Allow**.
 4. Em uma nova conversa, ative o conector e pergunte.
@@ -60,9 +60,9 @@ administrador o ativa).
 Os conectores personalizados exigem um **plano pago do Grok**.
 
 1. Abra **grok.com/connectors → New Connector → Custom**.
-2. Dê o nome `TigerSystem` e cole o endereço acima.
+2. Dê o nome `TigerSystem.io` e cole o endereço acima.
 3. Entre no tigersystem.io e clique em **Allow**.
-4. Em uma conversa, ative o conector TigerSystem e pergunte.
+4. Em uma conversa, ative o conector TigerSystem.io e pergunte.
 
 ## Le Chat (Mistral)
 
@@ -70,7 +70,7 @@ Os conectores personalizados são adicionados por um **administrador** — em um
 é você.
 
 1. **Connectors → Add Connector → Custom MCP Connector.**
-2. Dê o nome `TigerSystem` e cole o endereço acima; o Le Chat detecta sozinho
+2. Dê o nome `TigerSystem.io` e cole o endereço acima; o Le Chat detecta sozinho
    o método de login (OAuth).
 3. Entre no tigersystem.io e clique em **Allow**.
 4. Em uma conversa, ative o conector e pergunte.
