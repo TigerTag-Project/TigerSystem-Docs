@@ -854,3 +854,92 @@
   border-radius: 50%;
   box-shadow: 0 0 0 3px var(--ts-orange);
 }
+
+/* Home hero — the same device stage as tigersystem.io's hero (TigerTag_Hub,
+   features/hero/HeroDevices.module.css), each device its own layer from
+   docs/assets/hero/: a 1120×580 stage where the iMac and the iPhone float above
+   a floor shadow that tightens as they rise, the Tiger Touch plays its screen,
+   and the TigerPOD Mini stands on the desk and turns over into a TigerScale,
+   then a TigerSpool, and back. The stage is wide, so the hero gives it half
+   the row instead of Starlight's 4/11. */
+@media (min-width: 50rem) {
+  .hero:has(.ts-hero-devices) { grid-template-columns: 1fr 1fr; }
+  .hero > .hero-html:has(.ts-hero-devices) { width: min(100%, 40rem); }
+}
+.hero > .hero-html:has(.ts-hero-devices) { width: min(100%, 36rem); }
+
+.ts-hero-devices {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1120 / 580;
+  user-select: none;
+  animation: ts-hd-enter 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+/* Ember glow behind the devices. */
+.ts-hero-devices::before {
+  content: "";
+  position: absolute;
+  inset: 15% 7.5%;
+  border-radius: 50%;
+  filter: blur(48px);
+  background: radial-gradient(circle, rgb(230 53 43 / 42%) 0%, rgb(255 122 24 / 20%) 45%, rgb(230 53 43 / 0%) 72%);
+  pointer-events: none;
+  animation: ts-hd-glow 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.ts-hd-item { position: absolute; }
+.ts-hd-item img { display: block; width: 100%; max-width: none; height: auto; -webkit-user-drag: none; }
+.ts-hd-float { position: relative; z-index: 1; animation: ts-hd-float 3.6s ease-in-out infinite alternate; }
+.ts-hd-floats::after {
+  content: ""; position: absolute; bottom: -3%; height: 7%; left: 8%; right: 8%;
+  background: radial-gradient(closest-side, rgb(0 0 0 / 55%), transparent);
+  animation: ts-hd-shadow 3.6s ease-in-out infinite alternate;
+}
+.ts-hd-imac  { left: 23%;    top: 9.66%;  width: 53.91%; }
+.ts-hd-floats.ts-hd-imac::after { left: 22%; right: 22%; bottom: -1%; height: 5%; }
+.ts-hd-imac .ts-hd-float, .ts-hd-imac::after { animation-duration: 4.4s; }
+.ts-hd-phone { left: 72.1%;  top: 58.55%; width: 9.61%;  z-index: 2; }
+.ts-hd-phone .ts-hd-float, .ts-hd-phone::after { animation-duration: 3.9s; animation-delay: -2.3s; }
+.ts-hd-pod   { left: 12.93%; top: 50.5%;  width: 16.27%; z-index: 2; }
+/* The Tiger Touch is short, so it rises a bigger share of its height; its two
+   stand feet are cut away along the case's bottom edge. */
+.ts-hd-touch { left: 52.5%;  top: 72%;    width: 15.8%;  z-index: 2; }
+.ts-hd-floats.ts-hd-touch::after { left: 14%; right: 14%; bottom: 1%; height: 6%; }
+.ts-hd-touch .ts-hd-float { animation-name: ts-hd-float-touch; clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 75% 91.13%,
+  68.4% 90.86%, 68.4% 100%, 24.8% 100%, 24.8% 82.67%, 18.6% 80.49%, 18.6% 100%, 0 100%); }
+.ts-hd-touch .ts-hd-float, .ts-hd-touch::after { animation-duration: 4.1s; animation-delay: -0.8s; }
+@keyframes ts-hd-float  { from { transform: translateY(0); } to { transform: translateY(-2.2%); } }
+@keyframes ts-hd-float-touch { from { transform: translateY(0); } to { transform: translateY(-7%); } }
+@keyframes ts-hd-shadow { from { transform: scaleX(1); opacity: 1; } to { transform: scaleX(0.86); opacity: 0.7; } }
+@keyframes ts-hd-enter { from { opacity: 0; transform: translateY(48px) scale(0.94) rotate(-1.5deg); } to { opacity: 1; transform: none; } }
+@keyframes ts-hd-glow  { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: none; } }
+
+/* The reader turns over, each device held ~4 s (13.5 s round). The three
+   images are laid so their spools coincide and each turns around the spool's
+   hub; a waiting face is hidden so the jump from 180° back to -180° never shows. */
+.ts-hd-face { transform-origin: 66.7% 50%; backface-visibility: hidden; animation: ts-hd-face1 13.5s ease-in-out infinite; }
+.ts-hd-face.ts-hd-face-scale { position: absolute; left: -4.67%; top: 0; width: 106.8%; animation-name: ts-hd-face2;
+  transform: perspective(900px) rotateY(-180deg); opacity: 0; }
+.ts-hd-face.ts-hd-face-spool { position: absolute; left: 1.78%; top: -0.75%; width: 107.9%; animation-name: ts-hd-face3;
+  transform-origin: 60.2% 50%; transform: perspective(900px) rotateY(-180deg); opacity: 0; }
+@keyframes ts-hd-face1 {
+  0%, 27.8% { transform: perspective(900px) rotateY(0); opacity: 1; }
+  33.3% { transform: perspective(900px) rotateY(180deg); opacity: 1; }
+  33.31%, 94.39% { transform: perspective(900px) rotateY(-180deg); opacity: 0; }
+  94.4% { transform: perspective(900px) rotateY(-180deg); opacity: 1; }
+  100% { transform: perspective(900px) rotateY(0); opacity: 1; } }
+@keyframes ts-hd-face2 {
+  0%, 27.79% { transform: perspective(900px) rotateY(-180deg); opacity: 0; }
+  27.8% { transform: perspective(900px) rotateY(-180deg); opacity: 1; }
+  33.3%, 61.1% { transform: perspective(900px) rotateY(0); opacity: 1; }
+  66.7% { transform: perspective(900px) rotateY(180deg); opacity: 1; }
+  66.71%, 100% { transform: perspective(900px) rotateY(-180deg); opacity: 0; } }
+@keyframes ts-hd-face3 {
+  0%, 61.09% { transform: perspective(900px) rotateY(-180deg); opacity: 0; }
+  61.1% { transform: perspective(900px) rotateY(-180deg); opacity: 1; }
+  66.7%, 94.4% { transform: perspective(900px) rotateY(0); opacity: 1; }
+  100% { transform: perspective(900px) rotateY(180deg); opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-hero-devices, .ts-hero-devices::before, .ts-hd-float, .ts-hd-floats::after, .ts-hd-face { animation: none; }
+  .ts-hd-face.ts-hd-face-scale, .ts-hd-face.ts-hd-face-spool { display: none; }
+}

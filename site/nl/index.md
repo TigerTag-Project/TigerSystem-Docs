@@ -10,7 +10,16 @@ hero:
   tagline: "Jouw filament, eindelijk slim – en eindelijk van jou. Eén kleine open NFC-chip, en een spoel kan zich eindelijk zelf voorstellen."
   image:
     html: |
-      <img src="/assets/hero-tigersystem-ecosystem.png" alt="Tiger Studio op een computer, een TigerPOD-lezer met een getagde spoel en de mobiele app" width="720" height="480" />
+      <div class="ts-hero-devices" role="img" aria-label="Tiger Studio op een computer, een TigerPOD-lezer met een getagde spoel en de mobiele app">
+        <div class="ts-hd-item ts-hd-floats ts-hd-imac"><img class="ts-hd-float" src="/assets/hero/imac-studio.webp" alt="" width="1253" height="995" /></div>
+        <div class="ts-hd-item ts-hd-pod">
+          <img class="ts-hd-face" src="/assets/hero/tigerpod-mini.webp" alt="" width="450" height="665" />
+          <img class="ts-hd-face ts-hd-face-scale" src="/assets/hero/tigerscale.webp" alt="" width="420" height="611" />
+          <img class="ts-hd-face ts-hd-face-spool" src="/assets/hero/tigerspool.webp" alt="" width="420" height="511" />
+        </div>
+        <div class="ts-hd-item ts-hd-floats ts-hd-touch"><img class="ts-hd-float" src="/assets/hero/tigertouch-tour.webp" alt="" width="1000" height="733" /></div>
+        <div class="ts-hd-item ts-hd-floats ts-hd-phone"><img class="ts-hd-float" src="/assets/hero/iphone-connect.webp" alt="" width="704" height="1427" /></div>
+      </div>
   actions:
     - text: "Jouw eerste slimme spoel"
       link: /nl/tutorials/first-smart-spool/

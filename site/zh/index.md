@@ -10,7 +10,16 @@ hero:
   tagline: "你的耗材，终于变聪明了——也终于属于你了。一枚小小的开放 NFC 芯片，线轴终于可以自我介绍。"
   image:
     html: |
-      <img src="/assets/hero-tigersystem-ecosystem.png" alt="桌面上的 Tiger Studio、托着贴有标签线轴的 TigerPOD 读卡器，以及手机应用" width="720" height="480" />
+      <div class="ts-hero-devices" role="img" aria-label="桌面上的 Tiger Studio、托着贴有标签线轴的 TigerPOD 读卡器，以及手机应用">
+        <div class="ts-hd-item ts-hd-floats ts-hd-imac"><img class="ts-hd-float" src="/assets/hero/imac-studio.webp" alt="" width="1253" height="995" /></div>
+        <div class="ts-hd-item ts-hd-pod">
+          <img class="ts-hd-face" src="/assets/hero/tigerpod-mini.webp" alt="" width="450" height="665" />
+          <img class="ts-hd-face ts-hd-face-scale" src="/assets/hero/tigerscale.webp" alt="" width="420" height="611" />
+          <img class="ts-hd-face ts-hd-face-spool" src="/assets/hero/tigerspool.webp" alt="" width="420" height="511" />
+        </div>
+        <div class="ts-hd-item ts-hd-floats ts-hd-touch"><img class="ts-hd-float" src="/assets/hero/tigertouch-tour.webp" alt="" width="1000" height="733" /></div>
+        <div class="ts-hd-item ts-hd-floats ts-hd-phone"><img class="ts-hd-float" src="/assets/hero/iphone-connect.webp" alt="" width="704" height="1427" /></div>
+      </div>
   actions:
     - text: "你的第一卷智能线轴"
       link: /zh/tutorials/first-smart-spool/

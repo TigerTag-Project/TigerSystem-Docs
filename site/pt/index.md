@@ -10,7 +10,16 @@ hero:
   tagline: "Seu filamento, finalmente inteligente — e finalmente seu. Um pequeno chip NFC aberto, e uma bobina finalmente pode se apresentar sozinha."
   image:
     html: |
-      <img src="/assets/hero-tigersystem-ecosystem.png" alt="O Tiger Studio em um computador, um leitor TigerPOD com uma bobina etiquetada e o aplicativo para celular" width="720" height="480" />
+      <div class="ts-hero-devices" role="img" aria-label="O Tiger Studio em um computador, um leitor TigerPOD com uma bobina etiquetada e o aplicativo para celular">
+        <div class="ts-hd-item ts-hd-floats ts-hd-imac"><img class="ts-hd-float" src="/assets/hero/imac-studio.webp" alt="" width="1253" height="995" /></div>
+        <div class="ts-hd-item ts-hd-pod">
+          <img class="ts-hd-face" src="/assets/hero/tigerpod-mini.webp" alt="" width="450" height="665" />
+          <img class="ts-hd-face ts-hd-face-scale" src="/assets/hero/tigerscale.webp" alt="" width="420" height="611" />
+          <img class="ts-hd-face ts-hd-face-spool" src="/assets/hero/tigerspool.webp" alt="" width="420" height="511" />
+        </div>
+        <div class="ts-hd-item ts-hd-floats ts-hd-touch"><img class="ts-hd-float" src="/assets/hero/tigertouch-tour.webp" alt="" width="1000" height="733" /></div>
+        <div class="ts-hd-item ts-hd-floats ts-hd-phone"><img class="ts-hd-float" src="/assets/hero/iphone-connect.webp" alt="" width="704" height="1427" /></div>
+      </div>
   actions:
     - text: "Sua primeira bobina inteligente"
       link: /pt/tutorials/first-smart-spool/
