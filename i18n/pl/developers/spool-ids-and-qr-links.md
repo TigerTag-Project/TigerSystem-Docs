@@ -1,5 +1,5 @@
 ---
-sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
+sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -131,7 +131,7 @@ kształtu:
 | 10 cyfr | `TigerData_<10 digits>` |
 | 14 znaków szesnastkowych | UID, wielkimi literami |
 | 13 znaków szesnastkowych zaczynających się od `4` | obcięty UID NTAG: `0` + 13 znaków ([reguła naprawy](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 znaków szesnastkowych (postać drukowana) lub dziesiętny `id_product` | produkt — [sekcja 5](#5-linki-produktów) |
+| `p/` + `id_product`: 10 cyfr dziesiętnych (postać drukowana) lub 8 znaków szesnastkowych (starsze etykiety) | produkt — [sekcja 5](#5-linki-produktów) |
 
 Końcówka `.JSON` lub `.TTAG` prosi o odpowiedź dla narzędzi — [sekcja 6](#6-odpowiedzi-json-i-ttag).
 
@@ -267,14 +267,16 @@ własny link, na opakowanie, półkę w sklepie, showroom lub drukowany katalog:
 https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` zapisuje się **szesnastkowo, zawsze 8 znaków**, małymi
-  literami, uzupełniony zerami: 4 bajty tak, jak leżą na chipie, aby firmware
-  lub czytnik NFC budował link bez konwersji. Przykład: produkt `2855882328`
-  → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modułów.
-- Forma dziesiętna zostaje tam, gdzie ludzie widzą liczbę — w katalogu
-  (`tigersystem.io/<lang>/catalog/2855882328`), w kodzie kreskowym Code 128 — i nigdy nie jest drukowana w linku `qr.tigertag.io`, choć czytnik akceptuje ją tam również (patrz niżej).
-- Identyfikator, którego nie ma lub już nie ma w katalogu — `p/00000000` i
-  `p/ffffffff` („brak produktu”, nigdy nie drukowane), nieznany identyfikator,
+- `<id_product>` zapisuje się **dziesiętnie, zawsze na 10 cyfrach**, z zerami
+  na początku: `id_product` nigdy nie ma więcej niż 10 cyfr (największy to
+  `4294967295`). Przykłady: produkt `2855882328` →
+  `https://qr.tigertag.io/p/2855882328`; produkt `10303748` →
+  `https://qr.tigertag.io/p/0010303748`. **29 × 29** modułów.
+- Etykiety wydrukowane wcześniej mają starszą postać, `id_product` w **8
+  małych znakach szesnastkowych** (`p/aa394e58`); pozostaje ona czytelna na zawsze
+  (patrz niżej).
+- Identyfikator, którego nie ma lub już nie ma w katalogu — `p/0000000000` i
+  `p/4294967295` („brak produktu”, nigdy nie drukowane), nieznany identyfikator,
   produkt zarchiwizowany, usunięty lub scalony — otwiera **jedną stronę
   „zapomnianego produktu”**: tego filamentu nie ma już w katalogu, z
   wyszukiwarką. Jeden status dla wszystkich, `404` (zarówno strona, jak i
@@ -289,27 +291,19 @@ https://qr.tigertag.io/p/<id_product>
 
 ### Odczyt linku produktu
 
-Link produktu jest zawsze **drukowany** szesnastkowo. Przy **odczycie** działa też
-dziesiętny `id_product`: `p/2673739332` otwiera ten sam produkt co
-`p/9f5e0644`. To, co następuje po `p/`, odczytuje się tak, bez względu na
-wielkość liter:
+Poprawnie zbudowany link produktu ma jedną z dwóch długości, więc nigdy nie może
+zostać źle odczytany:
 
-1. 8 znaków `0-9` / `a-f` z co najmniej jedną literą → szesnastkowo.
-2. Dokładnie 8 cyfr → najpierw szesnastkowo, bo taką postać ma każda
-   wydrukowana etykieta; jeśli tego produktu nie ma w katalogu, serwer odczytuje
-   je ponownie dziesiętnie. Czytnik offline zachowuje oba odczyty i bierze ten,
-   który zna jego katalog.
-3. Od 1 do 10 cyfr innej długości → dziesiętnie, gdy wartość jest mniejsza niż
-   2³² (`p/2673739332` = `p/9f5e0644`); powyżej link jest nieznany.
-4. `0` i `4294967295` w obu postaciach (`p/00000000`, `p/ffffffff`)
-   oznaczają „brak produktu” (`404`).
-5. Końcówki `.json` i `.ttag` działają w obu postaciach, bez względu na
-   wielkość liter.
+1. **10 cyfr** → dziesiętnie (`p/2673739332`, `p/0010303748`).
+2. **8 znaków** `0-9` / `a-f` → szesnastkowo, starsza postać drukowana, nadal
+   akceptowana (`p/9f5e0644` otwiera ten sam produkt co `p/2673739332`).
 
-Dlaczego najpierw szesnastkowo przy 8 cyfrach: 442 prawdziwe produkty mają
-dziesiętny identyfikator z 8 cyfr. Dziś żaden z dwóch odczytów nie trafia na inny
-produkt, ale odczyt najpierw szesnastkowy gwarantuje, że każda wydrukowana
-etykieta otwiera własny produkt.
+W ramach tolerancji, bez gwarancji, liczba dziesiętna wpisana ręcznie o innej
+długości jest odczytywana dziesiętnie, z wyjątkiem dokładnie 8 cyfr: te są
+odczytywane najpierw szesnastkowo, potem dziesiętnie, jeśli taki produkt nie
+istnieje. Wartość powyżej `4294967295` to nieznany link. `0` i `4294967295`
+w dowolnej postaci oznaczają „brak produktu” (`404`). Końcówki `.json` i `.ttag`
+działają w każdej postaci, bez względu na wielkość liter.
 
 ### Strona, którą otwiera
 
@@ -336,8 +330,8 @@ właściciel dostaje szpulę, każdy inny jej produkt.
 
 | Link | Właściciel (`Authorization: Bearer <Firebase ID token>`) | Każdy inny (niezalogowany, inne konto, znajomy) |
 |---|---|---|
-| `…/p/aa394e58.json` | rekord produktu | to samo |
-| `…/p/aa394e58.ttag` | produkt jako plik `.ttag` | to samo |
+| `…/p/2855882328.json` | rekord produktu | to samo |
+| `…/p/2855882328.ttag` | produkt jako plik `.ttag` | to samo |
 | `…/04ab12cd3e4f80.json` | szpula | `303` → `…/p/<id_product>.json`; brak produktu z katalogu (TigerData, TigerTag twórcy) → `404` |
 | `…/04ab12cd3e4f80.ttag` | szpula jako plik `.ttag` | `303` → `…/p/<id_product>.ttag`; brak produktu z katalogu → `404` |
 

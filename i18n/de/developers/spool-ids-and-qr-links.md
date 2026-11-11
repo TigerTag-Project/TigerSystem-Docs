@@ -1,5 +1,5 @@
 ---
-sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
+sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -133,7 +133,7 @@ auf:
 | 10 Ziffern | `TigerData_<10 digits>` |
 | 14 Hex-Zeichen | die UID, in Großbuchstaben |
 | 13 Hex-Zeichen, beginnend mit `4` | eine abgeschnittene NTAG-UID: `0` + die 13 Zeichen ([Reparaturregel](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 Hex-Zeichen (gedruckte Form) oder die dezimale `id_product` | ein Produkt – [Abschnitt 5](#5-produktlinks) |
+| `p/` + die `id_product`: 10 Dezimalziffern (gedruckte Form) oder 8 Hex-Zeichen (ältere Etiketten) | ein Produkt – [Abschnitt 5](#5-produktlinks) |
 
 Eine Endung `.JSON` oder `.TTAG` fordert die Antwort für Tools an – [Abschnitt 6](#6-json--und-ttag-antworten).
 
@@ -275,15 +275,16 @@ gedruckten Katalog:
 https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` wird **hexadezimal, immer mit 8 Zeichen** geschrieben, in
-  Kleinbuchstaben, mit Nullen aufgefüllt: die 4 Bytes so, wie sie auf dem Chip
-  liegen, sodass eine Firmware oder ein NFC-Lesegerät den Link ohne Umrechnung
-  baut. Beispiel: Produkt `2855882328` → `https://qr.tigertag.io/p/aa394e58`,
-  **29 × 29** Module.
-- Die Dezimalform bleibt dort, wo Menschen die Zahl sehen – im Katalog
-  (`tigersystem.io/<lang>/catalog/2855882328`), in einem Code-128-Barcode – und wird nie in einen `qr.tigertag.io`-Link gedruckt, auch wenn ein Leser sie dort ebenfalls annimmt (siehe unten).
-- Eine ID, die nicht oder nicht mehr im Katalog ist – `p/00000000` und
-  `p/ffffffff` („kein Produkt“, nie gedruckt), eine unbekannte ID, ein
+- `<id_product>` wird **dezimal, immer mit 10 Ziffern** geschrieben, vorne mit
+  Nullen aufgefüllt: Eine `id_product` hat nie mehr als 10 Ziffern (die größte
+  ist `4294967295`). Beispiele: Produkt `2855882328` →
+  `https://qr.tigertag.io/p/2855882328`; Produkt `10303748` →
+  `https://qr.tigertag.io/p/0010303748`. **29 × 29** Module.
+- Früher gedruckte Etiketten tragen die ältere Form, die `id_product` in **8
+  hexadezimalen Kleinbuchstaben-Zeichen** (`p/aa394e58`); sie bleibt für immer
+  lesbar (siehe unten).
+- Eine ID, die nicht oder nicht mehr im Katalog ist – `p/0000000000` und
+  `p/4294967295` („kein Produkt“, nie gedruckt), eine unbekannte ID, ein
   archiviertes, gelöschtes oder zusammengeführtes Produkt –, öffnet **eine
   einzige „vergessenes Produkt“-Seite**: Dieses Filament ist nicht mehr im
   Katalog, mit der Suche. Ein einziger Status für alle, `404` (die Seite und die
@@ -300,27 +301,19 @@ https://qr.tigertag.io/p/<id_product>
 
 ### Einen Produktlink lesen
 
-Ein Produktlink wird immer hexadezimal **gedruckt**. Beim **Lesen** funktioniert
-auch die dezimale `id_product`: `p/2673739332` öffnet dasselbe Produkt wie
-`p/9f5e0644`. Was auf `p/` folgt, wird so gelesen, ohne Rücksicht auf
-Groß- und Kleinschreibung:
+Ein korrekt gebildeter Produktlink hat eine von zwei Längen und kann daher nie
+falsch gelesen werden:
 
-1. 8 Zeichen `0-9` / `a-f` mit mindestens einem Buchstaben → hexadezimal.
-2. Genau 8 Ziffern → zuerst hexadezimal, denn das ist die Form jedes gedruckten
-   Etiketts; ist dieses Produkt nicht im Katalog, liest der Server sie noch
-   einmal dezimal. Ein Offline-Leser behält beide Lesarten und nimmt die, die
-   sein Katalog kennt.
-3. 1 bis 10 Ziffern anderer Länge → dezimal, wenn der Wert unter 2³² liegt
-   (`p/2673739332` = `p/9f5e0644`); darüber ist der Link unbekannt.
-4. `0` und `4294967295` bedeuten in beiden Formen (`p/00000000`,
-   `p/ffffffff`) „kein Produkt“ (`404`).
-5. Die Endungen `.json` und `.ttag` funktionieren bei beiden Formen, in
-   beliebiger Schreibweise.
+1. **10 Ziffern** → dezimal (`p/2673739332`, `p/0010303748`).
+2. **8 Zeichen** `0-9` / `a-f` → hexadezimal, die ältere gedruckte Form, weiterhin
+   angenommen (`p/9f5e0644` öffnet dasselbe Produkt wie `p/2673739332`).
 
-Warum bei 8 Ziffern zuerst hexadezimal: 442 echte Produkte haben eine dezimale
-ID mit 8 Ziffern. Heute landet keine der beiden Lesarten bei einem anderen
-Produkt, aber das hexadezimale Lesen zuerst sorgt dafür, dass jedes gedruckte
-Etikett sein eigenes Produkt öffnet.
+Als Toleranz, ohne Garantie, wird eine von Hand getippte Dezimalzahl anderer
+Länge dezimal gelesen, außer genau 8 Ziffern: Diese werden zuerst hexadezimal
+gelesen, dann dezimal, wenn es dieses Produkt nicht gibt. Ein Wert über
+`4294967295` ist ein unbekannter Link. `0` und `4294967295` bedeuten in jeder
+Form „kein Produkt“ (`404`). Die Endungen `.json` und `.ttag` funktionieren bei
+jeder Form, in beliebiger Schreibweise.
 
 ### Die Seite, die er öffnet
 
@@ -346,8 +339,8 @@ Besitzer bekommt die Spule, jeder andere ihr Produkt.
 
 | Link | Der Besitzer (`Authorization: Bearer <Firebase ID token>`) | Jeder andere (nicht angemeldet, ein anderes Konto, ein Freund) |
 |---|---|---|
-| `…/p/aa394e58.json` | der Produktdatensatz | dasselbe |
-| `…/p/aa394e58.ttag` | das Produkt als `.ttag`-Datei | dasselbe |
+| `…/p/2855882328.json` | der Produktdatensatz | dasselbe |
+| `…/p/2855882328.ttag` | das Produkt als `.ttag`-Datei | dasselbe |
 | `…/04ab12cd3e4f80.json` | die Spule | `303` → `…/p/<id_product>.json`; kein Katalogprodukt (ein TigerData, ein Maker-TigerTag) → `404` |
 | `…/04ab12cd3e4f80.ttag` | die Spule als `.ttag`-Datei | `303` → `…/p/<id_product>.ttag`; kein Katalogprodukt → `404` |
 

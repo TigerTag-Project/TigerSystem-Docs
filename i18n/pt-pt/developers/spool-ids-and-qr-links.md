@@ -1,5 +1,5 @@
 ---
-sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
+sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -92,7 +92,7 @@ Os leitores extraem o id da ligação **offline**: uma aplicação que lê uma e
 | 10 algarismos | `TigerData_<10 digits>` |
 | 14 caracteres hexadecimais | o UID, em maiúsculas |
 | 13 caracteres hexadecimais a começar por `4` | um UID NTAG truncado: `0` + os 13 caracteres ([regra de reparação](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 caracteres hexadecimais (forma impressa), ou o `id_product` decimal | um produto — [secção 5](#5-ligações-de-produto) |
+| `p/` + o `id_product`: 10 algarismos decimais (forma impressa) ou 8 caracteres hexadecimais (etiquetas antigas) | um produto — [secção 5](#5-ligações-de-produto) |
 
 Uma terminação `.JSON` ou `.TTAG` pede a resposta para ferramentas — [secção 6](#6-respostas-json-e-ttag).
 
@@ -154,23 +154,20 @@ Um produto — um filamento do catálogo, seja quem for o dono de uma bobina del
 https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` é escrito em **hexadecimal, sempre com 8 caracteres**, em minúsculas, completado com zeros: os 4 bytes tal como estão no chip, para que um firmware ou um leitor NFC construa a ligação sem conversão. Exemplo: produto `2855882328` → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** módulos.
-- A forma decimal fica onde as pessoas veem o número — o catálogo (`tigersystem.io/<lang>/catalog/2855882328`), um código de barras Code 128 — e nunca é impressa numa ligação `qr.tigertag.io`, embora um leitor também a aceite aí (ver abaixo).
-- Um id que não está, ou já não está, no catálogo — `p/00000000` e `p/ffffffff` («sem produto», nunca impressos), um id desconhecido, um produto arquivado, eliminado ou fundido — abre **uma única página de «produto esquecido»**: este filamento já não está no catálogo, com a pesquisa. Um só estado para todos, `404` (a página e as respostas `.json` / `.ttag` da mesma forma): a razão pela qual um produto desapareceu não interessa a quem lê. Um `id_product` nunca é atribuído a outro produto: uma etiqueta já colada nunca pode abrir o filamento errado.
+- `<id_product>` é escrito em **decimal, sempre com 10 algarismos**, completado com zeros à esquerda: um `id_product` nunca passa de 10 algarismos (o maior é `4294967295`). Exemplos: produto `2855882328` → `https://qr.tigertag.io/p/2855882328`; produto `10303748` → `https://qr.tigertag.io/p/0010303748`. **29 × 29** módulos.
+- As etiquetas impressas antes têm a forma anterior, o `id_product` em **8 caracteres hexadecimais** minúsculos (`p/aa394e58`); continua legível para sempre (ver abaixo).
+- Um id que não está, ou já não está, no catálogo — `p/0000000000` e `p/4294967295` («sem produto», nunca impressos), um id desconhecido, um produto arquivado, eliminado ou fundido — abre **uma única página de «produto esquecido»**: este filamento já não está no catálogo, com a pesquisa. Um só estado para todos, `404` (a página e as respostas `.json` / `.ttag` da mesma forma): a razão pela qual um produto desapareceu não interessa a quem lê. Um `id_product` nunca é atribuído a outro produto: uma etiqueta já colada nunca pode abrir o filamento errado.
 - As ligações são servidas pelo **Hub** (`tigersystem.io`): `qr.tigertag.io` aponta para ele. A página é a página de catálogo do Hub (abaixo); as respostas `.JSON` e `.TTAG` são rotas da API do Hub que leem o catálogo (em cache).
 - Uma etiqueta de bobina nunca repete o seu produto: a ligação da bobina já conduz a ele ([secção 3](#resolver-a-bobina)).
 
 ### Ler uma ligação de produto
 
-Uma ligação de produto é sempre **impressa** em hexadecimal. Na **leitura**, o `id_product` decimal também funciona: `p/2673739332` abre o mesmo produto que `p/9f5e0644`. O que vem depois de `p/` lê-se assim, sem distinguir maiúsculas de minúsculas:
+Uma ligação de produto bem formada tem um de dois comprimentos, pelo que nunca pode ser mal lida:
 
-1. 8 caracteres `0-9` / `a-f` com pelo menos uma letra → hexadecimal.
-2. Exatamente 8 algarismos → primeiro hexadecimal, porque é a forma de qualquer etiqueta impressa; se esse produto não estiver no catálogo, o servidor volta a lê-lo em decimal. Um leitor sem ligação guarda as duas leituras e fica com a que o seu catálogo conhece.
-3. De 1 a 10 algarismos de outro comprimento → decimal, quando o valor é inferior a 2³² (`p/2673739332` = `p/9f5e0644`); acima disso, a ligação é desconhecida.
-4. `0` e `4294967295`, em qualquer das formas (`p/00000000`, `p/ffffffff`), significam «sem produto» (`404`).
-5. As terminações `.json` e `.ttag` funcionam nas duas formas, sem distinguir maiúsculas de minúsculas.
+1. **10 algarismos** → decimal (`p/2673739332`, `p/0010303748`).
+2. **8 caracteres** `0-9` / `a-f` → hexadecimal, a forma impressa anterior, ainda aceite (`p/9f5e0644` abre o mesmo produto que `p/2673739332`).
 
-Porquê primeiro hexadecimal com 8 algarismos: 442 produtos reais têm um id decimal de 8 algarismos. Hoje nenhuma das duas leituras cai noutro produto, mas ler primeiro em hexadecimal garante que cada etiqueta impressa abre o seu próprio produto.
+Como tolerância, sem garantia, um decimal escrito à mão com outro comprimento é lido em decimal, exceto exatamente 8 algarismos: esses são lidos primeiro em hexadecimal, depois em decimal se esse produto não existir. Um valor acima de `4294967295` é uma ligação desconhecida. `0` e `4294967295`, em qualquer forma, significam «sem produto» (`404`). As terminações `.json` e `.ttag` funcionam em todas as formas, sem distinguir maiúsculas de minúsculas.
 
 ### A página que abre
 
@@ -186,8 +183,8 @@ A mesma lógica que uma leitura ([resolver a bobina](#resolver-a-bobina)): o don
 
 | Ligação | O dono (`Authorization: Bearer <Firebase ID token>`) | Qualquer outra pessoa (sem sessão iniciada, outra conta, um amigo) |
 |---|---|---|
-| `…/p/aa394e58.json` | o registo do produto | o mesmo |
-| `…/p/aa394e58.ttag` | o produto como ficheiro `.ttag` | o mesmo |
+| `…/p/2855882328.json` | o registo do produto | o mesmo |
+| `…/p/2855882328.ttag` | o produto como ficheiro `.ttag` | o mesmo |
 | `…/04ab12cd3e4f80.json` | a bobina | `303` → `…/p/<id_product>.json`; sem produto do catálogo (um TigerData, um TigerTag de maker) → `404` |
 | `…/04ab12cd3e4f80.ttag` | a bobina como ficheiro `.ttag` | `303` → `…/p/<id_product>.ttag`; sem produto do catálogo → `404` |
 

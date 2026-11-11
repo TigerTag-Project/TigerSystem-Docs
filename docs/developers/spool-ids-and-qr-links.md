@@ -122,7 +122,7 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 10 digits | `TigerData_<10 digits>` |
 | 14 hex characters | the UID, uppercased |
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 hex characters (as printed), or the decimal `id_product` | a product — [section 5](#5-product-links) |
+| `p/` + the `id_product`: 10 decimal digits (as printed) or 8 hex characters (older labels) | a product — [section 5](#5-product-links) |
 
 A `.JSON` or `.TTAG` ending asks for the answer for tools — [section 6](#6-json-and-ttag-answers).
 
@@ -250,14 +250,16 @@ own link, for packaging, a shop shelf, a showroom or a printed catalogue:
 https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` is written in **hexadecimal, always 8 characters**, lowercase,
-  zero-padded: the 4 bytes as they sit on the chip, so a firmware or an NFC
-  reader builds the link without converting. Example: product `2855882328`
-  → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
-- The decimal form stays where people see the number — the catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and is never printed in a `qr.tigertag.io` link, though a reader accepts it there too (below).
-- An id that is not, or no longer, in the catalogue — `p/00000000` and
-  `p/ffffffff` ("no product", never printed), an unknown id, a product archived,
+- `<id_product>` is written in **decimal, always 10 digits**, zero-padded: an
+  `id_product` never has more than 10 digits (the largest is `4294967295`).
+  Examples: product `2855882328` → `https://qr.tigertag.io/p/2855882328`;
+  product `10303748` → `https://qr.tigertag.io/p/0010303748`. **29 × 29**
+  modules.
+- Labels printed before carry the older form, the `id_product` in **8
+  lowercase hexadecimal characters** (`p/aa394e58`); it stays readable for good
+  (below).
+- An id that is not, or no longer, in the catalogue — `p/0000000000` and
+  `p/4294967295` ("no product", never printed), an unknown id, a product archived,
   deleted or merged — opens **one "forgotten product" page**: this filament is no
   longer in the catalogue, with the search. One status for all of them, `404`
   (the page and the `.json` / `.ttag` answers alike): why a product went does not
@@ -272,24 +274,17 @@ https://qr.tigertag.io/p/<id_product>
 
 ### Reading a product link
 
-A product link is always **printed** in hexadecimal. When **reading** one, the
-decimal `id_product` works too: `p/2673739332` opens the same product as
-`p/9f5e0644`. What follows `p/` is read like this, in any case:
+A well-formed product link has one of two lengths, so it can never be misread:
 
-1. 8 characters `0-9` / `a-f` with at least one letter → hexadecimal.
-2. Exactly 8 digits → hexadecimal first, since that is the shape of every printed
-   label; if that product is not in the catalogue, the server reads it again as
-   decimal. An offline reader keeps both readings and takes the one its
-   catalogue knows.
-3. 1 to 10 digits of any other length → decimal, when the value is below 2³²
-   (`p/2673739332` = `p/9f5e0644`); above that, the link is unknown.
-4. `0` and `4294967295`, in either form (`p/00000000`, `p/ffffffff`), mean
-   "no product" (`404`).
-5. The `.json` and `.ttag` endings work on both forms, in any case.
+1. **10 digits** → decimal (`p/2673739332`, `p/0010303748`).
+2. **8 characters** `0-9` / `a-f` → hexadecimal, the older printed form, still
+   accepted (`p/9f5e0644` opens the same product as `p/2673739332`).
 
-Why hexadecimal first for 8 digits: 442 real products have an 8-digit decimal
-id. Today neither reading of them lands on another product, but reading
-hexadecimal first keeps every printed label opening its own product.
+As a tolerance, with no guarantee, a decimal typed by hand at another length is
+read as decimal, except exactly 8 digits: those are read as hexadecimal first,
+then as decimal if that product does not exist. A value above `4294967295` is an
+unknown link. `0` and `4294967295`, in any form, mean "no product" (`404`).
+The `.json` and `.ttag` endings work on every form, in any case.
 
 ### The page it opens
 
@@ -314,8 +309,8 @@ owner gets the spool, anyone else its product.
 
 | Link | The owner (`Authorization: Bearer <Firebase ID token>`) | Anyone else (not signed in, another account, a friend) |
 |---|---|---|
-| `…/p/aa394e58.json` | the product record | the same |
-| `…/p/aa394e58.ttag` | the product as a `.ttag` file | the same |
+| `…/p/2855882328.json` | the product record | the same |
+| `…/p/2855882328.ttag` | the product as a `.ttag` file | the same |
 | `…/04ab12cd3e4f80.json` | the spool | `303` → `…/p/<id_product>.json`; no catalogue product (a TigerData, a maker TigerTag) → `404` |
 | `…/04ab12cd3e4f80.ttag` | the spool as a `.ttag` file | `303` → `…/p/<id_product>.ttag`; no catalogue product → `404` |
 

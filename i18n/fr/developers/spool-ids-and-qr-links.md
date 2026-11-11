@@ -1,5 +1,5 @@
 ---
-sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
+sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -138,7 +138,7 @@ tenir compte de la casse, ignorent un `/` final, et le résolvent par sa forme :
 | 10 chiffres | `TigerData_<10 chiffres>` |
 | 14 caractères hexadécimaux | l'UID, en majuscules |
 | 13 caractères hexadécimaux commençant par `4` | un UID NTAG tronqué : `0` + les 13 caractères ([règle de réparation](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 caractères hexadécimaux (forme imprimée), ou l'`id_product` décimal | un produit — [section 5](#5-liens-produit) |
+| `p/` + l'`id_product` : 10 chiffres décimaux (forme imprimée) ou 8 caractères hexadécimaux (anciennes étiquettes) | un produit — [section 5](#5-liens-produit) |
 
 Une fin en `.JSON` ou `.TTAG` demande la réponse pour les outils — [section 6](#6-réponses-json-et-ttag).
 
@@ -278,15 +278,16 @@ magasin, un showroom ou un catalogue imprimé :
 https://qr.tigertag.io/p/<id_product>
 ```
 
-- `<id_product>` est écrit en **hexadécimal, toujours sur 8 caractères**, en
-  minuscules, complété par des zéros : les 4 octets tels qu'ils sont sur la
-  puce, pour qu'un firmware ou un lecteur NFC construise le lien sans
-  conversion. Exemple : le produit `2855882328` →
-  `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
-- La forme décimale reste là où les gens voient le numéro — le catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), un code-barres Code 128 — et n'est jamais imprimée dans un lien `qr.tigertag.io`, même si un lecteur l'y accepte aussi (voir plus bas).
-- Un identifiant qui n'est pas, ou plus, au catalogue — `p/00000000` et
-  `p/ffffffff` (« pas de produit », jamais imprimés), un identifiant inconnu, un
+- `<id_product>` s'écrit en **décimal, toujours sur 10 chiffres**, complété par
+  des zéros devant : un `id_product` ne dépasse jamais 10 chiffres (le plus grand
+  est `4294967295`). Exemples : produit `2855882328` →
+  `https://qr.tigertag.io/p/2855882328` ; produit `10303748` →
+  `https://qr.tigertag.io/p/0010303748`. **29 × 29** modules.
+- Les étiquettes imprimées auparavant portent l'ancienne forme, l'`id_product`
+  en **8 caractères hexadécimaux** minuscules (`p/aa394e58`) ; elle reste lisible
+  pour toujours (voir plus bas).
+- Un identifiant qui n'est pas, ou plus, au catalogue — `p/0000000000` et
+  `p/4294967295` (« pas de produit », jamais imprimés), un identifiant inconnu, un
   produit archivé, supprimé ou fusionné — ouvre **une seule page « produit
   oublié »** : ce filament n'est plus au catalogue, avec la recherche. Un seul
   statut pour tous, `404` (la page comme les réponses `.json` / `.ttag`) :
@@ -301,26 +302,19 @@ https://qr.tigertag.io/p/<id_product>
 
 ### Lire un lien produit
 
-Un lien produit est toujours **imprimé** en hexadécimal. À la **lecture**,
-l'`id_product` décimal marche aussi : `p/2673739332` ouvre le même produit que
-`p/9f5e0644`. Ce qui suit `p/` se lit ainsi, sans distinction de casse :
+Un lien produit bien formé a l'une de deux longueurs, donc il ne peut jamais être
+mal lu :
 
-1. 8 caractères `0-9` / `a-f` avec au moins une lettre → hexadécimal.
-2. Exactement 8 chiffres → hexadécimal d'abord, car c'est la forme de toute
-   étiquette imprimée ; si ce produit n'est pas au catalogue, le serveur le relit
-   en décimal. Un lecteur hors ligne garde les deux lectures et prend celle que
-   son catalogue connaît.
-3. 1 à 10 chiffres d'une autre longueur → décimal, quand la valeur est
-   inférieure à 2³² (`p/2673739332` = `p/9f5e0644`) ; au-delà, le lien est inconnu.
-4. `0` et `4294967295`, sous l'une ou l'autre forme (`p/00000000`,
-   `p/ffffffff`), veulent dire « pas de produit » (`404`).
-5. Les terminaisons `.json` et `.ttag` marchent sur les deux formes, sans
-   distinction de casse.
+1. **10 chiffres** → décimal (`p/2673739332`, `p/0010303748`).
+2. **8 caractères** `0-9` / `a-f` → hexadécimal, l'ancienne forme imprimée,
+   toujours acceptée (`p/9f5e0644` ouvre le même produit que `p/2673739332`).
 
-Pourquoi l'hexadécimal d'abord pour 8 chiffres : 442 produits réels ont un id
-décimal à 8 chiffres. Aujourd'hui, aucune des deux lectures ne tombe sur un autre
-produit, mais lire d'abord en hexadécimal garantit que chaque étiquette imprimée
-ouvre bien son produit.
+En tolérance, sans garantie, un décimal tapé à la main avec une autre longueur
+est lu en décimal, sauf exactement 8 chiffres : ceux-là sont lus d'abord en
+hexadécimal, puis en décimal si ce produit n'existe pas. Une valeur au-delà de
+`4294967295` est un lien inconnu. `0` et `4294967295`, sous n'importe quelle
+forme, veulent dire « pas de produit » (`404`). Les terminaisons `.json` et
+`.ttag` marchent sur toutes les formes, sans distinction de casse.
 
 ### La page qu'il ouvre
 
@@ -348,8 +342,8 @@ propriétaire obtient la bobine, toute autre personne son produit.
 
 | Lien | Le propriétaire (`Authorization: Bearer <jeton d'identité Firebase>`) | Toute autre personne (non connectée, un autre compte, un ami) |
 |---|---|---|
-| `…/p/aa394e58.json` | la fiche produit | pareil |
-| `…/p/aa394e58.ttag` | le produit en fichier `.ttag` | pareil |
+| `…/p/2855882328.json` | la fiche produit | pareil |
+| `…/p/2855882328.ttag` | le produit en fichier `.ttag` | pareil |
 | `…/04ab12cd3e4f80.json` | la bobine | `303` → `…/p/<id_product>.json` ; pas de produit du catalogue (une TigerData, une TigerTag maker) → `404` |
 | `…/04ab12cd3e4f80.ttag` | la bobine en fichier `.ttag` | `303` → `…/p/<id_product>.ttag` ; pas de produit du catalogue → `404` |
 
