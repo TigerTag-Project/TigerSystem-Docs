@@ -1,5 +1,5 @@
 ---
-sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
+sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -45,9 +45,9 @@ publiczne.
   właścicielowi; pozostali dostają `303` do `.json` / `.ttag` produktu.
 - **Link do produktu** jest publiczny, bez logowania: strona katalogu, jego
   dane ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) i plik ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
-- Wielkość liter w id i w końcówce `.json` / `.ttag` nie ma znaczenia.
+- Wielkość liter w linkach nie ma znaczenia.
 - Aby udostępnić szpulę lub produkt, udostępnij ten krótki link: to on jest
-  drukowany na etykietach i każda aplikacja go odczytuje.
+  drukowany na etykietach i każda aplikacja go odczytuje. Udostępniony link może zaczynać się od języka (`qr.tigertag.io/fr/p/2673739332`): strona otwiera się wtedy w tym języku dla wszystkich. Drukowane etykiety nigdy go nie zawierają.
 
 Reszta tej strony to sama umowa.
 
@@ -191,6 +191,28 @@ nowszej wersji: czytnik to komunikuje („zaktualizuj aplikację”), zamiast zg
 błąd. Każdy inny rodzaj obiektu dostaje własny folder, literę i `/` (`p/` dla
 produktu, później `r/` dla regału), więc nigdy nie może kolidować z już
 wydrukowanymi linkami szpul.
+
+### Prefiks języka
+
+Udostępniony link może nieść przed ścieżką język osoby, która go udostępnia.
+*(2026-11-11.)*
+
+```
+https://qr.tigertag.io/<lang>/<spool id>
+https://qr.tigertag.io/<lang>/p/<id_product>
+```
+
+`<lang>` to jeden z `en`, `fr`, `de`, `es`, `it`, `zh`, `pt`, `pt-pt`, `pl`,
+`ru`, `nl`, zapisany małymi literami; wielkość liter przy odczycie nie ma
+znaczenia.
+
+- Strona otwiera się wtedy w tym języku dla wszystkich, łącznie z robotami
+  podglądu linków: `/fr/p/2673739332` → `tigersystem.io/fr/catalog/2673739332`.
+- Bez prefiksu decyduje język przeglądarki odwiedzającego.
+- Nieznany prefiks daje `404`.
+- **Drukowane etykiety nigdy nie mają prefiksu**: pozostają neutralne
+  językowo. Dodają go tylko przyciski Udostępnij (dziś tigersystem.io, Tiger
+  Studio w następnej wersji).
 
 ### Odnajdywanie szpuli
 
@@ -349,7 +371,7 @@ działają w każdej postaci, bez względu na wielkość liter.
 ### Strona, którą otwiera
 
 `p/…` przekierowuje (`302`) do **istniejącej strony katalogu** produktu,
-`tigersystem.io/<lang>/catalog/<id_product in decimal>`, w języku telefonu. Nie
+`tigersystem.io/<lang>/catalog/<id_product in decimal>`, w języku linku ([prefiks języka](#prefiks-języka)), a bez niego w języku telefonu. Nie
 ma osobnej strony skanu: strona katalogu jest budowana **z myślą przede
 wszystkim o telefonie** (responsywna), bo większość jej odwiedzin pochodzi ze
 skanu — zdjęcie i próbka koloru, marka, materiał i nazwa koloru na górze,
@@ -443,7 +465,7 @@ Dziewięć szablonów, w typowych rozmiarach i układach etykiet szpul:
 | Vertical compact | 25 × 40 mm | marka, pasek, kolor, hex, linia, duży QR poniżej — bez pól |
 | Tylko QR | 25 × 30 mm | pigułka TigerQR / TigerQR+ wyśrodkowana u góry, pod nią QR 20 mm — nic więcej, bez pól |
 
-Tylko QR jest postanowiony (2026-11-11), ale jeszcze niewydany: pojawi się w następnej wersji Tiger Studio i w następnej aktualizacji tigersystem.io.
+Tylko QR jest postanowiony (2026-11-11) i dostępny na tigersystem.io; do Tiger Studio trafi w jego następnej wersji.
 
 Każdy szablon to jeden plik SVG rozplanowany w dziesiątych częściach milimetra i
 skalowany do punktów drukarki. Kod QR wypełnia to samo pole co na typowych

@@ -1,5 +1,5 @@
 ---
-sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
+sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -45,10 +45,9 @@ Arancione: privato, solo per il proprietario della bobina; verde: pubblico.
   verso il `.json` / `.ttag` del prodotto.
 - **Un link di prodotto** è pubblico, senza accesso: la pagina del catalogo, i
   suoi dati ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) e il suo file ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
-- L'id e la terminazione `.json` / `.ttag` si leggono in maiuscolo o in
-  minuscolo.
+- I link si leggono in maiuscolo o in minuscolo.
 - Per condividere una bobina o un prodotto, condividi questo link breve: è
-  quello stampato sulle etichette, e ogni app lo legge.
+  quello stampato sulle etichette, e ogni app lo legge. Un link condiviso può iniziare con una lingua (`qr.tigertag.io/fr/p/2673739332`): la pagina si apre allora in quella lingua per tutti. Le etichette stampate non la riportano mai.
 
 Il resto di questa pagina è il contratto vero e proprio.
 
@@ -194,6 +193,28 @@ un'etichetta di una versione più recente: il lettore lo dice («aggiorna l'app�
 invece di fallire. Ogni altro tipo di oggetto ha la propria cartella, una lettera
 e una `/` (`p/` per un prodotto, più avanti `r/` per un rack), così non può mai
 entrare in conflitto con i link di bobina già stampati.
+
+### Prefisso di lingua
+
+Un link condiviso può portare la lingua di chi lo condivide prima del percorso.
+*(2026-11-11.)*
+
+```
+https://qr.tigertag.io/<lang>/<spool id>
+https://qr.tigertag.io/<lang>/p/<id_product>
+```
+
+`<lang>` è uno tra `en`, `fr`, `de`, `es`, `it`, `zh`, `pt`, `pt-pt`, `pl`,
+`ru`, `nl`, scritto in minuscolo e letto in maiuscolo o minuscolo.
+
+- La pagina si apre allora in quella lingua per tutti, compresi i crawler
+  delle anteprime dei link: `/fr/p/2673739332` →
+  `tigersystem.io/fr/catalog/2673739332`.
+- Senza prefisso decide la lingua del browser del visitatore.
+- Un prefisso sconosciuto dà un `404`.
+- **Le etichette stampate non portano mai un prefisso**: restano neutre rispetto
+  alla lingua. Solo i pulsanti Condividi lo aggiungono (tigersystem.io oggi,
+  Tiger Studio con la sua prossima versione).
 
 ### Risolvere la bobina
 
@@ -357,8 +378,7 @@ funzionano su tutte le forme, senza distinzione tra maiuscole e minuscole.
 ### La pagina che apre
 
 `p/…` reindirizza (`302`) alla **pagina del catalogo esistente** del prodotto,
-`tigersystem.io/<lang>/catalog/<id_product in decimal>`, nella lingua del
-telefono. Non c'è una pagina di scansione separata: la pagina del catalogo è
+`tigersystem.io/<lang>/catalog/<id_product in decimal>`, nella lingua del link ([prefisso di lingua](#prefisso-di-lingua)), altrimenti in quella del telefono. Non c'è una pagina di scansione separata: la pagina del catalogo è
 pensata **prima per il telefono** (responsive), dato che la maggior parte delle
 sue visite arriva da una scansione — foto e campione di colore, marca, materiale
 e nome del colore in alto, le impostazioni di stampa leggibili a colpo d'occhio,
@@ -453,7 +473,7 @@ Nove modelli, le dimensioni e le impaginazioni comuni delle etichette per bobine
 | Vertical compact | 25 × 40 mm | marca, barra, colore, hex, una riga, QR grande sotto — nessuna casella |
 | Solo QR | 25 × 30 mm | la pillola TigerQR / TigerQR+ centrata in alto, un QR da 20 mm sotto — nient'altro, nessuna casella |
 
-Solo QR è deciso (2026-11-11) ma non ancora rilasciato: arriva con la prossima versione di Tiger Studio e il prossimo aggiornamento di tigersystem.io.
+Solo QR è deciso (2026-11-11) e disponibile su tigersystem.io; arriva in Tiger Studio con la sua prossima versione.
 
 Ogni modello è un SVG impaginato in decimi di millimetro e scalato sui punti
 della stampante. Il codice QR riempie lo stesso riquadro delle comuni etichette

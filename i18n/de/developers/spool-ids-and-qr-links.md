@@ -1,5 +1,5 @@
 ---
-sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
+sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -45,10 +45,9 @@ Orange ist privat, nur für den Besitzer der Spule; Grün ist öffentlich.
   `.ttag` des Produkts.
 - **Ein Produkt-Link** ist öffentlich, ohne Anmeldung: die Katalogseite, seine
   Daten ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) und seine Datei ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
-- Bei der ID und der Endung `.json` / `.ttag` spielt Groß- und Kleinschreibung
-  keine Rolle.
+- Bei Links spielt Groß- und Kleinschreibung keine Rolle.
 - Um eine Spule oder ein Produkt zu teilen, teile diesen kurzen Link: Er steht
-  auf den Etiketten, und jede App liest ihn.
+  auf den Etiketten, und jede App liest ihn. Ein geteilter Link kann mit einer Sprache beginnen (`qr.tigertag.io/fr/p/2673739332`): Die Seite öffnet sich dann für alle in dieser Sprache. Gedruckte Etiketten tragen nie eine.
 
 Der Rest dieser Seite ist der Vertrag selbst.
 
@@ -194,6 +193,27 @@ Version: Der Leser sagt das („aktualisiere die App“), statt zu scheitern. Je
 andere Art von Ding erhält einen eigenen Ordner, einen Buchstaben und ein `/`
 (`p/` für ein Produkt, später `r/` für ein Rack), sodass sie nie mit bereits
 gedruckten Spulenlinks kollidieren kann.
+
+### Sprachpräfix
+
+Ein geteilter Link kann vor dem Pfad die Sprache der teilenden Person tragen.
+*(2026-11-11.)*
+
+```
+https://qr.tigertag.io/<lang>/<spool id>
+https://qr.tigertag.io/<lang>/p/<id_product>
+```
+
+`<lang>` ist eines von `en`, `fr`, `de`, `es`, `it`, `zh`, `pt`, `pt-pt`, `pl`,
+`ru`, `nl`, kleingeschrieben und in beliebiger Schreibweise gelesen.
+
+- Die Seite öffnet sich dann für alle in dieser Sprache, Link-Vorschau-Crawler
+  eingeschlossen: `/fr/p/2673739332` → `tigersystem.io/fr/catalog/2673739332`.
+- Ohne Präfix entscheidet die Browsersprache des Besuchers.
+- Ein unbekanntes Präfix ergibt ein `404`.
+- **Gedruckte Etiketten tragen nie ein Präfix**: Sie bleiben sprachneutral. Nur
+  die Teilen-Buttons fügen eines hinzu (heute tigersystem.io, Tiger Studio mit
+  seiner nächsten Version).
 
 ### Die Spule auflösen
 
@@ -360,8 +380,7 @@ jeder Form, in beliebiger Schreibweise.
 ### Die Seite, die er öffnet
 
 `p/…` leitet (`302`) zur **bestehenden Katalogseite** des Produkts weiter,
-`tigersystem.io/<lang>/catalog/<id_product in decimal>`, in der Sprache des
-Handys. Es gibt keine eigene Scan-Seite: Die Katalogseite ist **zuerst für das
+`tigersystem.io/<lang>/catalog/<id_product in decimal>`, in der Sprache des Links ([Sprachpräfix](#sprachpräfix)), sonst in der Sprache des Handys. Es gibt keine eigene Scan-Seite: Die Katalogseite ist **zuerst für das
 Handy** gebaut (responsiv), da die meisten ihrer Besuche von einem Scan kommen –
 Foto und Farbmuster, Marke, Material und Farbname oben, die Druckeinstellungen
 auf einen Blick lesbar, dann der Rest der Seite.
@@ -452,7 +471,7 @@ Neun Vorlagen, die gängigen Größen und Layouts von Spulenetiketten:
 | Vertical compact | 25 × 40 mm | Marke, Balken, Farbe, Hex, eine Linie, großer QR darunter – keine Felder |
 | Nur QR | 25 × 30 mm | die Pille TigerQR / TigerQR+ oben mittig, darunter ein QR von 20 mm – sonst nichts, keine Felder |
 
-Nur QR ist beschlossen (2026-11-11), aber noch nicht veröffentlicht: Die Vorlage kommt mit der nächsten Version von Tiger Studio und dem nächsten Update von tigersystem.io.
+Nur QR ist beschlossen (2026-11-11) und auf tigersystem.io verfügbar; in Tiger Studio kommt die Vorlage mit der nächsten Version.
 
 Jede Vorlage ist ein SVG, angelegt in Zehntelmillimetern und auf die Punkte des
 Druckers skaliert. Der QR-Code füllt dasselbe Feld wie auf den gängigen

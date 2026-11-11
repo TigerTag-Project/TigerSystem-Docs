@@ -39,9 +39,9 @@ Orange is private to the spool's owner; green is public.
   owner only; anyone else gets a `303` to the product's `.json` / `.ttag`.
 - **A product link** is public, no sign-in: the catalogue page, its data
   ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) and its file ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
-- The id and the `.json` / `.ttag` ending are read in any case.
+- Links are read in any case.
 - To share a spool or a product, share this short link: it is the one printed
-  on labels, and every app reads it.
+  on labels, and every app reads it. A shared link may start with a language (`qr.tigertag.io/fr/p/2673739332`): the page then opens in that language for everyone. Printed labels never carry one.
 
 The rest of this page is the contract itself.
 
@@ -179,6 +179,26 @@ printed. Any **other shape** is a label from a newer version: the reader says so
 ("update the app") instead of failing. Every other kind of thing gets its own
 folder, a letter and a `/` (`p/` for a product, later `r/` for a rack), so it can
 never clash with spool links already printed.
+
+### Language prefix
+
+A shared link may carry the sharer's language before the path. *(2026-11-11.)*
+
+```
+https://qr.tigertag.io/<lang>/<spool id>
+https://qr.tigertag.io/<lang>/p/<id_product>
+```
+
+`<lang>` is one of `en`, `fr`, `de`, `es`, `it`, `zh`, `pt`, `pt-pt`, `pl`,
+`ru`, `nl`, written lowercase and read in any case.
+
+- The page then opens in that language for everyone, link-preview crawlers
+  included: `/fr/p/2673739332` → `tigersystem.io/fr/catalog/2673739332`.
+- Without a prefix, the visitor's browser language decides.
+- An unknown prefix is a `404`.
+- **Printed labels never carry a prefix**: they stay language-neutral. Only
+  Share buttons add one (tigersystem.io today, Tiger Studio with its next
+  release).
 
 ### Resolving the spool
 
@@ -329,8 +349,7 @@ The `.json` and `.ttag` endings work on every form, in any case.
 ### The page it opens
 
 `p/…` redirects (`302`) to the product's **existing catalogue page**,
-`tigersystem.io/<lang>/catalog/<id_product in decimal>`, in the phone's
-language. There is no separate scan page: the catalogue page is built
+`tigersystem.io/<lang>/catalog/<id_product in decimal>`, in the link's language ([language prefix](#language-prefix)), else the phone's language. There is no separate scan page: the catalogue page is built
 **phone-first** (responsive), since most of its visits come from a scan — photo
 and colour swatch, brand, material and colour name at the top, the print
 settings readable at a glance, then the rest of the page.
@@ -419,7 +438,7 @@ Nine templates, the common spool-label sizes and layouts:
 | Vertical compact | 25 × 40 mm | brand, bar, colour, hex, a rule, big QR below — no slots |
 | QR only | 25 × 30 mm | the TigerQR / TigerQR+ pill centred at the top, a 20 mm QR below — nothing else, no slots |
 
-QR only is decided (2026-11-11) but not released yet: it comes with the next Tiger Studio release and the next tigersystem.io update.
+QR only is decided (2026-11-11) and live on tigersystem.io; it comes to Tiger Studio with its next release.
 
 Each template is one SVG laid out in tenths of a millimetre and scaled to the
 printer's dots. The QR code fills the same box as on the common spool labels

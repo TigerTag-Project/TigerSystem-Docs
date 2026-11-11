@@ -1,5 +1,5 @@
 ---
-sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
+sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -42,9 +42,9 @@ Laranja é privado, só para o dono da bobina; verde é público.
   `.json` / `.ttag` do produto.
 - **Uma ligação de produto** é pública, sem sessão iniciada: a página do
   catálogo, os seus dados ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) e o seu ficheiro ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
-- O id e a terminação `.json` / `.ttag` são lidos em maiúsculas ou minúsculas.
+- As ligações são lidas em maiúsculas ou minúsculas.
 - Para partilhar uma bobina ou um produto, partilhe esta ligação curta: é a que
-  vem impressa nas etiquetas, e todas as aplicações a leem.
+  vem impressa nas etiquetas, e todas as aplicações a leem. Uma ligação partilhada pode começar por uma língua (`qr.tigertag.io/fr/p/2673739332`): a página abre então nessa língua para todos. As etiquetas impressas nunca a incluem.
 
 O resto desta página é o contrato propriamente dito.
 
@@ -141,6 +141,28 @@ As aplicações **escrevem** a forma curta acima, mas os leitores também **acei
 
 Um UID pode ser composto só por algarismos, mas tem 14 caracteres, nunca 17 ou 10, pelo que o comprimento decide sempre. Nenhum id decimal antigo chega a um leitor, já que nenhum é alguma vez impresso. Qualquer **outra forma** é uma etiqueta de uma versão mais recente: o leitor di-lo («atualize a aplicação») em vez de falhar. Qualquer outro tipo de coisa tem a sua própria pasta, uma letra e uma `/` (`p/` para um produto, mais tarde `r/` para um rack), pelo que nunca pode colidir com ligações de bobina já impressas.
 
+### Prefixo de língua
+
+Uma ligação partilhada pode trazer a língua de quem a partilha antes do
+caminho. *(2026-11-11.)*
+
+```
+https://qr.tigertag.io/<lang>/<spool id>
+https://qr.tigertag.io/<lang>/p/<id_product>
+```
+
+`<lang>` é um de `en`, `fr`, `de`, `es`, `it`, `zh`, `pt`, `pt-pt`, `pl`,
+`ru`, `nl`, escrito em minúsculas e lido em maiúsculas ou minúsculas.
+
+- A página abre então nessa língua para todos, incluindo os robôs de
+  pré-visualização de ligações: `/fr/p/2673739332` →
+  `tigersystem.io/fr/catalog/2673739332`.
+- Sem prefixo, decide a língua do navegador do visitante.
+- Um prefixo desconhecido dá `404`.
+- **As etiquetas impressas nunca levam prefixo**: mantêm-se neutras quanto à
+  língua. Só os botões Partilhar o acrescentam (tigersystem.io hoje, Tiger
+  Studio na próxima versão).
+
 ### Resolver a bobina
 
 1. Procure o id **no próprio inventário do visitante com sessão iniciada**.
@@ -212,7 +234,7 @@ Como tolerância, sem garantia, um decimal escrito à mão com outro comprimento
 
 ### A página que abre
 
-`p/…` redireciona (`302`) para a **página de catálogo existente** do produto, `tigersystem.io/<lang>/catalog/<id_product in decimal>`, na língua do telemóvel. Não há uma página de leitura à parte: a página de catálogo é concebida **primeiro para o telemóvel** (responsiva), já que a maioria das suas visitas vem de uma leitura — fotografia e amostra de cor, marca, material e nome da cor no topo, as definições de impressão legíveis num relance, depois o resto da página.
+`p/…` redireciona (`302`) para a **página de catálogo existente** do produto, `tigersystem.io/<lang>/catalog/<id_product in decimal>`, na língua da ligação ([prefixo de língua](#prefixo-de-língua)), senão na do telemóvel. Não há uma página de leitura à parte: a página de catálogo é concebida **primeiro para o telemóvel** (responsiva), já que a maioria das suas visitas vem de uma leitura — fotografia e amostra de cor, marca, material e nome da cor no topo, as definições de impressão legíveis num relance, depois o resto da página.
 
 ## 6. Respostas JSON e .TTAG
 
@@ -275,7 +297,7 @@ Nove modelos, os tamanhos e disposições habituais das etiquetas de bobina:
 | Vertical compact | 25 × 40 mm | marca, barra, cor, hex, um traço, QR grande por baixo — sem campos |
 | Só QR | 25 × 30 mm | a pílula TigerQR / TigerQR+ centrada no topo, um QR de 20 mm por baixo — nada mais, sem campos |
 
-Só QR está decidido (2026-11-11), mas ainda não foi lançado: chega com a próxima versão do Tiger Studio e a próxima atualização do tigersystem.io.
+Só QR está decidido (2026-11-11) e disponível no tigersystem.io; chega ao Tiger Studio na próxima versão.
 
 Cada modelo é um SVG paginado em décimas de milímetro e escalado para os pontos da impressora. O código QR ocupa a mesma caixa que nas etiquetas de bobina habituais (≈ 14 mm no Classic), com um número inteiro de pontos da impressora por módulo: o mais próximo, arredondado para cima quando isso fica dentro de 6 % da caixa. As margens brancas da etiqueta são a sua zona de silêncio. A 203 dpi, um código de 29 × 29 tem 4 pontos por módulo no Classic (≈ 14,5 mm).
 

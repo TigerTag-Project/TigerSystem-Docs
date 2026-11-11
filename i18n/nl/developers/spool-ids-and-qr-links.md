@@ -1,5 +1,5 @@
 ---
-sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
+sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -45,10 +45,9 @@ Oranje is privé, alleen voor de eigenaar van de spoel; groen is openbaar.
   van het product.
 - **Een productlink** is openbaar, zonder inloggen: de catalogus­pagina, de
   gegevens ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) en het bestand ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
-- De id en de extensie `.json` / `.ttag` worden in hoofd- en kleine letters
-  gelezen.
+- Links worden in hoofd- en kleine letters gelezen.
 - Deel een spoel of een product met deze korte link: die staat op de labels, en
-  elke app leest hem.
+  elke app leest hem. Een gedeelde link kan met een taal beginnen (`qr.tigertag.io/fr/p/2673739332`): de pagina opent dan voor iedereen in die taal. Gedrukte labels dragen er nooit een.
 
 De rest van deze pagina is het contract zelf.
 
@@ -192,6 +191,26 @@ nieuwere versie: de lezer zegt dat („werk de app bij”) in plaats van te fale
 Elk ander soort ding krijgt een eigen map, een letter en een `/` (`p/` voor een
 product, later `r/` voor een rack), zodat het nooit kan botsen met spoellinks die
 al geprint zijn.
+
+### Taalvoorvoegsel
+
+Een gedeelde link kan vóór het pad de taal van de deler dragen. *(2026-11-11.)*
+
+```
+https://qr.tigertag.io/<lang>/<spool id>
+https://qr.tigertag.io/<lang>/p/<id_product>
+```
+
+`<lang>` is een van `en`, `fr`, `de`, `es`, `it`, `zh`, `pt`, `pt-pt`, `pl`,
+`ru`, `nl`, in kleine letters geschreven en in hoofd- en kleine letters gelezen.
+
+- De pagina opent dan voor iedereen in die taal, ook voor crawlers van
+  linkvoorbeelden: `/fr/p/2673739332` → `tigersystem.io/fr/catalog/2673739332`.
+- Zonder voorvoegsel beslist de browsertaal van de bezoeker.
+- Een onbekend voorvoegsel geeft een `404`.
+- **Gedrukte labels dragen nooit een voorvoegsel**: ze blijven taalneutraal.
+  Alleen de Delen-knoppen voegen er een toe (vandaag tigersystem.io, Tiger
+  Studio met zijn volgende versie).
 
 ### De spoel opzoeken
 
@@ -353,8 +372,7 @@ ongeacht hoofdletters.
 ### De pagina die hij opent
 
 `p/…` verwijst (`302`) door naar de **bestaande cataloguspagina** van het
-product, `tigersystem.io/<lang>/catalog/<id_product in decimal>`, in de taal van
-de telefoon. Er is geen aparte scanpagina: de cataloguspagina is **eerst voor de
+product, `tigersystem.io/<lang>/catalog/<id_product in decimal>`, in de taal van de link ([taalvoorvoegsel](#taalvoorvoegsel)), anders in die van de telefoon. Er is geen aparte scanpagina: de cataloguspagina is **eerst voor de
 telefoon** gebouwd (responsief), omdat de meeste bezoeken van een scan komen —
 foto en kleurstaal, merk, materiaal en kleurnaam bovenaan, de printinstellingen
 in één oogopslag leesbaar, daarna de rest van de pagina.
@@ -446,7 +464,7 @@ Negen sjablonen, de gangbare formaten en indelingen van spoellabels:
 | Vertical compact | 25 × 40 mm | merk, balk, kleur, hex, een lijn, grote QR eronder — geen vakken |
 | Alleen QR | 25 × 30 mm | de pil TigerQR / TigerQR+ bovenaan gecentreerd, een QR van 20 mm eronder — verder niets, geen vakken |
 
-Alleen QR is besloten (2026-11-11) maar nog niet uitgebracht: het komt met de volgende versie van Tiger Studio en de volgende update van tigersystem.io.
+Alleen QR is besloten (2026-11-11) en staat live op tigersystem.io; in Tiger Studio komt het met de volgende versie.
 
 Elk sjabloon is één SVG, opgemaakt in tienden van een millimeter en geschaald
 naar de punten van de printer. De QR-code vult hetzelfde vak als op de gangbare
