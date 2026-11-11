@@ -1,5 +1,5 @@
 ---
-sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
+sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -9,6 +9,47 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 > этом контракте. Открытые вопросы перечислены в конце; решение любого из них
 > меняет только то, что в нём названо. Разделы с пометкой **Предложено** ещё не
 > ратифицированы: не стройте на них ничего, пока они не будут ратифицированы.
+
+## Коротко
+
+QR-код TigerTag содержит одну короткую ссылку, `https://qr.tigertag.io/<path>`.
+Путь говорит, что она открывает:
+
+```mermaid
+flowchart TD
+  QR["QR scanned<br/>qr.tigertag.io/#lt;path#gt;"]
+  QR -- "/#lt;14 hex#gt;" --> CHIP["Spool with a chip<br/>TigerTag / TigerTag+"]
+  QR -- "/#lt;10 or 17 digits#gt;" --> DATA["Spool without a chip<br/>TigerData / TigerData+"]
+  QR -- "/p/#lt;10 digits#gt;" --> PROD["Catalogue product, public<br/>page · .json · .ttag"]
+  CHIP --> OWNER{"Spool: is the owner<br/>signed in?"}
+  DATA --> OWNER
+  OWNER -- "yes" --> SPOOL["Their spool<br/>page · .json · .ttag"]
+  OWNER -- "no" --> OTHER["The product and the owner's name<br/>.json / .ttag: 303 to /p/"]
+  classDef private fill:#f08c0022,stroke:#f08c00,stroke-width:2px
+  classDef public fill:#2f9e4422,stroke:#2f9e44,stroke-width:2px
+  class CHIP,DATA,OWNER,SPOOL private
+  class PROD,OTHER public
+```
+
+Оранжевым отмечено личное, только для владельца катушки; зелёным —
+общедоступное.
+
+| QR-код на | Путь | Пример |
+|---|---|---|
+| катушке с чипом (TigerTag / TigerTag+) | UID чипа в шестнадцатеричном виде, 14 символов, печатается строчными буквами; UID парного чипа открывает ту же катушку | [qr.tigertag.io/1d33dbda0d1080](https://qr.tigertag.io/1d33dbda0d1080) |
+| катушке без чипа (TigerData / TigerData+) | id без префикса `TigerData_`: 10 или 17 цифр; длинная форма (`TigerData_6130922252`, `tigerdata-…`) тоже работает | [qr.tigertag.io/6130922252](https://qr.tigertag.io/6130922252) |
+| продукте (TigerQR+) | `p/` + `id_product` в десятичном виде, всегда 10 цифр, дополненный нулями (`p/0010303748`); старые этикетки с 8 шестнадцатеричными символами (`p/9f5e0644`) по-прежнему открываются | [qr.tigertag.io/p/2673739332](https://qr.tigertag.io/p/2673739332) |
+
+- **Ссылка на катушку:** владелец, войдя в аккаунт, видит свою катушку; все
+  остальные видят продукт и имя владельца. `.json` и `.ttag` отдают катушку
+  только владельцу; остальные получают `303` на `.json` / `.ttag` продукта.
+- **Ссылка на продукт** общедоступна, без входа: страница каталога, его данные
+  ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) и файл ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
+- Регистр букв в id и в окончании `.json` / `.ttag` не важен.
+- Чтобы поделиться катушкой или продуктом, делитесь этой короткой ссылкой:
+  именно она печатается на этикетках, и её читает любое приложение.
+
+Остальная часть страницы — сам контракт.
 
 Правила, которым следует каждое приложение TigerSystem:
 

@@ -1,11 +1,52 @@
 ---
-sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
+sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
 # Ids de bobina e ligações QR
 
 > **Ratificado a 2026-11-05 — ainda não implementado.** As aplicações baseiam-se neste contrato. Os pontos ainda em aberto estão enumerados no fim; resolver um deles muda apenas aquilo que ele nomeia. As secções marcadas como **Proposta** ainda não estão ratificadas: não construa sobre elas antes de o estarem.
+
+## Explicação rápida
+
+Um código QR TigerTag contém uma única ligação curta,
+`https://qr.tigertag.io/<path>`. O caminho diz o que abre:
+
+```mermaid
+flowchart TD
+  QR["QR scanned<br/>qr.tigertag.io/#lt;path#gt;"]
+  QR -- "/#lt;14 hex#gt;" --> CHIP["Spool with a chip<br/>TigerTag / TigerTag+"]
+  QR -- "/#lt;10 or 17 digits#gt;" --> DATA["Spool without a chip<br/>TigerData / TigerData+"]
+  QR -- "/p/#lt;10 digits#gt;" --> PROD["Catalogue product, public<br/>page · .json · .ttag"]
+  CHIP --> OWNER{"Spool: is the owner<br/>signed in?"}
+  DATA --> OWNER
+  OWNER -- "yes" --> SPOOL["Their spool<br/>page · .json · .ttag"]
+  OWNER -- "no" --> OTHER["The product and the owner's name<br/>.json / .ttag: 303 to /p/"]
+  classDef private fill:#f08c0022,stroke:#f08c00,stroke-width:2px
+  classDef public fill:#2f9e4422,stroke:#2f9e44,stroke-width:2px
+  class CHIP,DATA,OWNER,SPOOL private
+  class PROD,OTHER public
+```
+
+Laranja é privado, só para o dono da bobina; verde é público.
+
+| Código QR em | Caminho | Exemplo |
+|---|---|---|
+| uma bobina com chip (TigerTag / TigerTag+) | o UID do chip em hexadecimal, 14 caracteres, impresso em minúsculas; o UID do chip gémeo abre a mesma bobina | [qr.tigertag.io/1d33dbda0d1080](https://qr.tigertag.io/1d33dbda0d1080) |
+| uma bobina sem chip (TigerData / TigerData+) | o id sem o prefixo `TigerData_`: 10 ou 17 algarismos; a forma longa (`TigerData_6130922252`, `tigerdata-…`) também funciona | [qr.tigertag.io/6130922252](https://qr.tigertag.io/6130922252) |
+| um produto (TigerQR+) | `p/` + o `id_product` em decimal, sempre 10 algarismos, completado com zeros (`p/0010303748`); as etiquetas antigas com 8 caracteres hexadecimais (`p/9f5e0644`) continuam a abrir | [qr.tigertag.io/p/2673739332](https://qr.tigertag.io/p/2673739332) |
+
+- **Uma ligação de bobina:** o dono, com sessão iniciada, vê a própria bobina;
+  qualquer outra pessoa vê o produto e o nome do dono. `.json` e `.ttag`
+  entregam a bobina apenas ao dono; os restantes recebem um `303` para o
+  `.json` / `.ttag` do produto.
+- **Uma ligação de produto** é pública, sem sessão iniciada: a página do
+  catálogo, os seus dados ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) e o seu ficheiro ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
+- O id e a terminação `.json` / `.ttag` são lidos em maiúsculas ou minúsculas.
+- Para partilhar uma bobina ou um produto, partilhe esta ligação curta: é a que
+  vem impressa nas etiquetas, e todas as aplicações a leem.
+
+O resto desta página é o contrato propriamente dito.
 
 As regras que todas as aplicações TigerSystem seguem:
 

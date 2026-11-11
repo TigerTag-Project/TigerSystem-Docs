@@ -5,6 +5,46 @@
 > it names. Sections marked **Proposed** are not ratified yet: do not build on
 > them before they are.
 
+## Quick explanation
+
+A TigerTag QR code holds one short link, `https://qr.tigertag.io/<path>`. The
+path says what it opens:
+
+```mermaid
+flowchart TD
+  QR["QR scanned<br/>qr.tigertag.io/#lt;path#gt;"]
+  QR -- "/#lt;14 hex#gt;" --> CHIP["Spool with a chip<br/>TigerTag / TigerTag+"]
+  QR -- "/#lt;10 or 17 digits#gt;" --> DATA["Spool without a chip<br/>TigerData / TigerData+"]
+  QR -- "/p/#lt;10 digits#gt;" --> PROD["Catalogue product, public<br/>page · .json · .ttag"]
+  CHIP --> OWNER{"Spool: is the owner<br/>signed in?"}
+  DATA --> OWNER
+  OWNER -- "yes" --> SPOOL["Their spool<br/>page · .json · .ttag"]
+  OWNER -- "no" --> OTHER["The product and the owner's name<br/>.json / .ttag: 303 to /p/"]
+  classDef private fill:#f08c0022,stroke:#f08c00,stroke-width:2px
+  classDef public fill:#2f9e4422,stroke:#2f9e44,stroke-width:2px
+  class CHIP,DATA,OWNER,SPOOL private
+  class PROD,OTHER public
+```
+
+Orange is private to the spool's owner; green is public.
+
+| QR code on | Path | Example |
+|---|---|---|
+| a spool with a chip (TigerTag / TigerTag+) | the chip UID in hex, 14 characters, printed lowercase; the twin chip's UID opens the same spool | [qr.tigertag.io/1d33dbda0d1080](https://qr.tigertag.io/1d33dbda0d1080) |
+| a spool without a chip (TigerData / TigerData+) | the id without its `TigerData_` prefix: 10 or 17 digits; the long form (`TigerData_6130922252`, `tigerdata-…`) works too | [qr.tigertag.io/6130922252](https://qr.tigertag.io/6130922252) |
+| a product (TigerQR+) | `p/` + the `id_product` in decimal, always 10 digits, zero-padded (`p/0010303748`); older labels with 8 hex characters (`p/9f5e0644`) still open | [qr.tigertag.io/p/2673739332](https://qr.tigertag.io/p/2673739332) |
+
+- **A spool link:** the owner, signed in, sees their spool; anyone else sees
+  the product and the owner's name. `.json` and `.ttag` give the spool to its
+  owner only; anyone else gets a `303` to the product's `.json` / `.ttag`.
+- **A product link** is public, no sign-in: the catalogue page, its data
+  ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) and its file ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
+- The id and the `.json` / `.ttag` ending are read in any case.
+- To share a spool or a product, share this short link: it is the one printed
+  on labels, and every app reads it.
+
+The rest of this page is the contract itself.
+
 The rules every TigerSystem app follows:
 
 1. how a **chipless spool** (TigerData / TigerData+) gets its id;

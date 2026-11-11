@@ -1,5 +1,5 @@
 ---
-sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
+sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -7,6 +7,41 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 
 > **已于 2026-11-05 批准——尚未实现。** 各应用都以这份约定为基础。仍未决定的问题列在文末；
 > 解决其中一个，只会改变它所指明的内容。标为**提议**的章节尚未批准：在它们获批之前，不要以其为基础进行构建。
+
+## 简要说明
+
+TigerTag 二维码只包含一个短链接：`https://qr.tigertag.io/<path>`。路径决定它打开什么：
+
+```mermaid
+flowchart TD
+  QR["QR scanned<br/>qr.tigertag.io/#lt;path#gt;"]
+  QR -- "/#lt;14 hex#gt;" --> CHIP["Spool with a chip<br/>TigerTag / TigerTag+"]
+  QR -- "/#lt;10 or 17 digits#gt;" --> DATA["Spool without a chip<br/>TigerData / TigerData+"]
+  QR -- "/p/#lt;10 digits#gt;" --> PROD["Catalogue product, public<br/>page · .json · .ttag"]
+  CHIP --> OWNER{"Spool: is the owner<br/>signed in?"}
+  DATA --> OWNER
+  OWNER -- "yes" --> SPOOL["Their spool<br/>page · .json · .ttag"]
+  OWNER -- "no" --> OTHER["The product and the owner's name<br/>.json / .ttag: 303 to /p/"]
+  classDef private fill:#f08c0022,stroke:#f08c00,stroke-width:2px
+  classDef public fill:#2f9e4422,stroke:#2f9e44,stroke-width:2px
+  class CHIP,DATA,OWNER,SPOOL private
+  class PROD,OTHER public
+```
+
+橙色表示私有，仅线轴的主人可见；绿色表示公开。
+
+| 二维码所在 | 路径 | 示例 |
+|---|---|---|
+| 带芯片的线轴（TigerTag / TigerTag+） | 芯片 UID 的十六进制形式，14 个字符，以小写打印；孪生芯片的 UID 打开同一个线轴 | [qr.tigertag.io/1d33dbda0d1080](https://qr.tigertag.io/1d33dbda0d1080) |
+| 无芯片的线轴（TigerData / TigerData+） | 去掉 `TigerData_` 前缀的 id：10 位或 17 位数字；长格式（`TigerData_6130922252`、`tigerdata-…`）同样可用 | [qr.tigertag.io/6130922252](https://qr.tigertag.io/6130922252) |
+| 产品（TigerQR+） | `p/` + 十进制的 `id_product`，始终 10 位，不足补零（`p/0010303748`）；旧标签上的 8 位十六进制（`p/9f5e0644`）仍可打开 | [qr.tigertag.io/p/2673739332](https://qr.tigertag.io/p/2673739332) |
+
+- **线轴链接：** 已登录的主人看到自己的线轴；其他任何人看到产品和主人的名字。`.json` 和 `.ttag` 只把线轴返回给主人；其他人收到 `303`，转到产品的 `.json` / `.ttag`。
+- **产品链接**公开，无需登录：目录页面、数据（[`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)）和文件（[`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)）。
+- id 和 `.json` / `.ttag` 后缀不区分大小写。
+- 分享线轴或产品时，请分享这个短链接：标签上印的就是它，所有应用都能读取。
+
+本页其余部分是约定本身。
 
 每个 TigerSystem 应用都遵循的规则：
 

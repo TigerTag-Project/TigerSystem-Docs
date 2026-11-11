@@ -1,5 +1,5 @@
 ---
-sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
+sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -9,6 +9,48 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 > contract. De punten die nog openstaan, staan aan het eind; als er een wordt
 > beslecht, verandert alleen wat dat punt noemt. Secties gemarkeerd als
 > **Voorgesteld** zijn nog niet geratificeerd: bouw er niet op voordat ze dat zijn.
+
+## Snelle uitleg
+
+Een TigerTag-QR-code bevat één korte link, `https://qr.tigertag.io/<path>`. Het
+pad zegt wat hij opent:
+
+```mermaid
+flowchart TD
+  QR["QR scanned<br/>qr.tigertag.io/#lt;path#gt;"]
+  QR -- "/#lt;14 hex#gt;" --> CHIP["Spool with a chip<br/>TigerTag / TigerTag+"]
+  QR -- "/#lt;10 or 17 digits#gt;" --> DATA["Spool without a chip<br/>TigerData / TigerData+"]
+  QR -- "/p/#lt;10 digits#gt;" --> PROD["Catalogue product, public<br/>page · .json · .ttag"]
+  CHIP --> OWNER{"Spool: is the owner<br/>signed in?"}
+  DATA --> OWNER
+  OWNER -- "yes" --> SPOOL["Their spool<br/>page · .json · .ttag"]
+  OWNER -- "no" --> OTHER["The product and the owner's name<br/>.json / .ttag: 303 to /p/"]
+  classDef private fill:#f08c0022,stroke:#f08c00,stroke-width:2px
+  classDef public fill:#2f9e4422,stroke:#2f9e44,stroke-width:2px
+  class CHIP,DATA,OWNER,SPOOL private
+  class PROD,OTHER public
+```
+
+Oranje is privé, alleen voor de eigenaar van de spoel; groen is openbaar.
+
+| QR-code op | Pad | Voorbeeld |
+|---|---|---|
+| een spoel met chip (TigerTag / TigerTag+) | de UID van de chip in hex, 14 tekens, in kleine letters gedrukt; de UID van de tweelingchip opent dezelfde spoel | [qr.tigertag.io/1d33dbda0d1080](https://qr.tigertag.io/1d33dbda0d1080) |
+| een spoel zonder chip (TigerData / TigerData+) | de id zonder het voorvoegsel `TigerData_`: 10 of 17 cijfers; de lange vorm (`TigerData_6130922252`, `tigerdata-…`) werkt ook | [qr.tigertag.io/6130922252](https://qr.tigertag.io/6130922252) |
+| een product (TigerQR+) | `p/` + de `id_product` decimaal, altijd 10 cijfers, aangevuld met nullen (`p/0010303748`); oudere labels met 8 hex-tekens (`p/9f5e0644`) openen nog steeds | [qr.tigertag.io/p/2673739332](https://qr.tigertag.io/p/2673739332) |
+
+- **Een spoellink:** de eigenaar ziet, ingelogd, de spoel zelf; ieder ander
+  ziet het product en de naam van de eigenaar. `.json` en `.ttag` geven de spoel
+  alleen aan de eigenaar; anderen krijgen een `303` naar de `.json` / `.ttag`
+  van het product.
+- **Een productlink** is openbaar, zonder inloggen: de catalogus­pagina, de
+  gegevens ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) en het bestand ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
+- De id en de extensie `.json` / `.ttag` worden in hoofd- en kleine letters
+  gelezen.
+- Deel een spoel of een product met deze korte link: die staat op de labels, en
+  elke app leest hem.
+
+De rest van deze pagina is het contract zelf.
 
 De regels die elke TigerSystem-app volgt:
 

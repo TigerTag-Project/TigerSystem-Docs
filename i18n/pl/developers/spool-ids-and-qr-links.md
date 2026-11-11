@@ -1,5 +1,5 @@
 ---
-sourceHash: 5cd04007f2ce9dc26c3a14e48e06a56af6df7239cd54e6eb2895241d69d789e5
+sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -9,6 +9,47 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 > się na tej umowie. Punkty wciąż otwarte są wymienione na końcu; rozstrzygnięcie
 > jednego zmienia tylko to, co on wskazuje. Sekcje oznaczone jako **Propozycja**
 > nie są jeszcze ratyfikowane: nie należy na nich budować, zanim nie zostaną.
+
+## W skrócie
+
+Kod QR TigerTag zawiera jeden krótki link, `https://qr.tigertag.io/<path>`.
+Ścieżka mówi, co otwiera:
+
+```mermaid
+flowchart TD
+  QR["QR scanned<br/>qr.tigertag.io/#lt;path#gt;"]
+  QR -- "/#lt;14 hex#gt;" --> CHIP["Spool with a chip<br/>TigerTag / TigerTag+"]
+  QR -- "/#lt;10 or 17 digits#gt;" --> DATA["Spool without a chip<br/>TigerData / TigerData+"]
+  QR -- "/p/#lt;10 digits#gt;" --> PROD["Catalogue product, public<br/>page · .json · .ttag"]
+  CHIP --> OWNER{"Spool: is the owner<br/>signed in?"}
+  DATA --> OWNER
+  OWNER -- "yes" --> SPOOL["Their spool<br/>page · .json · .ttag"]
+  OWNER -- "no" --> OTHER["The product and the owner's name<br/>.json / .ttag: 303 to /p/"]
+  classDef private fill:#f08c0022,stroke:#f08c00,stroke-width:2px
+  classDef public fill:#2f9e4422,stroke:#2f9e44,stroke-width:2px
+  class CHIP,DATA,OWNER,SPOOL private
+  class PROD,OTHER public
+```
+
+Pomarańczowy oznacza prywatne, tylko dla właściciela szpuli; zielony —
+publiczne.
+
+| Kod QR na | Ścieżka | Przykład |
+|---|---|---|
+| szpuli z chipem (TigerTag / TigerTag+) | UID chipu szesnastkowo, 14 znaków, drukowany małymi literami; UID bliźniaczego chipu otwiera tę samą szpulę | [qr.tigertag.io/1d33dbda0d1080](https://qr.tigertag.io/1d33dbda0d1080) |
+| szpuli bez chipu (TigerData / TigerData+) | id bez prefiksu `TigerData_`: 10 lub 17 cyfr; forma długa (`TigerData_6130922252`, `tigerdata-…`) też działa | [qr.tigertag.io/6130922252](https://qr.tigertag.io/6130922252) |
+| produkcie (TigerQR+) | `p/` + `id_product` dziesiętnie, zawsze 10 cyfr, uzupełnione zerami (`p/0010303748`); starsze etykiety z 8 znakami szesnastkowymi (`p/9f5e0644`) nadal się otwierają | [qr.tigertag.io/p/2673739332](https://qr.tigertag.io/p/2673739332) |
+
+- **Link do szpuli:** zalogowany właściciel widzi swoją szpulę; każdy inny
+  widzi produkt i nazwę właściciela. `.json` i `.ttag` zwracają szpulę tylko
+  właścicielowi; pozostali dostają `303` do `.json` / `.ttag` produktu.
+- **Link do produktu** jest publiczny, bez logowania: strona katalogu, jego
+  dane ([`p/2673739332.json`](https://qr.tigertag.io/p/2673739332.json)) i plik ([`p/2673739332.ttag`](https://qr.tigertag.io/p/2673739332.ttag)).
+- Wielkość liter w id i w końcówce `.json` / `.ttag` nie ma znaczenia.
+- Aby udostępnić szpulę lub produkt, udostępnij ten krótki link: to on jest
+  drukowany na etykietach i każda aplikacja go odczytuje.
+
+Reszta tej strony to sama umowa.
 
 Zasady, których przestrzega każda aplikacja TigerSystem:
 
