@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -447,7 +447,7 @@ le propriétaire. Rien en clair à côté du QR code ([section 3](#3-liens-qr)).
 
 ### Gabarits
 
-Huit gabarits, les tailles et mises en page courantes des étiquettes de bobine :
+Neuf gabarits, les tailles et mises en page courantes des étiquettes de bobine :
 
 | Gabarit | Taille (largeur × hauteur) | Mise en page |
 |---|---|---|
@@ -459,6 +459,9 @@ Huit gabarits, les tailles et mises en page courantes des étiquettes de bobine 
 | Vertical | 30 × 40 mm | marque, barre, couleur en grand, hex, un filet, cases empilées à gauche, QR en bas à droite |
 | Vertical gras | 30 × 40 mm | marque, barre pleine largeur, couleur, un filet, QR centré dessous — sans cases |
 | Vertical compact | 25 × 40 mm | marque, barre, couleur, hex, un filet, grand QR dessous — sans cases |
+| QR seul | 25 × 30 mm | la pastille TigerQR / TigerQR+ centrée en haut, un QR de 20 mm dessous — rien d'autre, sans cases |
+
+QR seul est décidé (2026-11-11) mais pas encore sorti : il arrive avec la prochaine version de Tiger Studio et la prochaine mise à jour de tigersystem.io.
 
 Chaque gabarit est un SVG mis en page en dixièmes de millimètre puis mis à
 l'échelle des points de l'imprimante. Le QR code remplit le même cadre que sur

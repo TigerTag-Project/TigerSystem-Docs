@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -435,7 +435,7 @@ propietario. Nada en claro junto al código QR ([sección 3](#3-enlaces-qr)).
 
 ### Plantillas
 
-Ocho plantillas, los tamaños y diseños habituales de etiquetas de bobina:
+Nueve plantillas, los tamaños y diseños habituales de etiquetas de bobina:
 
 | Plantilla | Tamaño (ancho × alto) | Diseño |
 |---|---|---|
@@ -447,6 +447,9 @@ Ocho plantillas, los tamaños y diseños habituales de etiquetas de bobina:
 | Vertical | 30 × 40 mm | marca, barra, color en grande, hex, una línea, casillas apiladas a la izquierda, QR abajo a la derecha |
 | Vertical bold | 30 × 40 mm | marca, barra a todo el ancho, color, una línea, QR centrado debajo; sin casillas |
 | Vertical compact | 25 × 40 mm | marca, barra, color, hex, una línea, QR grande debajo; sin casillas |
+| Solo QR | 25 × 30 mm | la píldora TigerQR / TigerQR+ centrada arriba, un QR de 20 mm debajo; nada más, sin casillas |
+
+Solo QR está decidida (2026-11-11) pero aún no publicada: llega con la próxima versión de Tiger Studio y la próxima actualización de tigersystem.io.
 
 Cada plantilla es un SVG maquetado en décimas de milímetro y escalado a los
 puntos de la impresora. El código QR ocupa el mismo recuadro que en las etiquetas

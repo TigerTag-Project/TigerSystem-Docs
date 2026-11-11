@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -429,7 +429,7 @@ właściciel. Nic jawnie obok kodu QR ([sekcja 3](#3-linki-qr)).
 
 ### Szablony
 
-Osiem szablonów, w typowych rozmiarach i układach etykiet szpul:
+Dziewięć szablonów, w typowych rozmiarach i układach etykiet szpul:
 
 | Szablon | Rozmiar (szerokość × wysokość) | Układ |
 |---|---|---|
@@ -441,6 +441,9 @@ Osiem szablonów, w typowych rozmiarach i układach etykiet szpul:
 | Vertical | 30 × 40 mm | marka, pasek, duży kolor, hex, linia, pola ułożone po lewej, QR w prawym dolnym rogu |
 | Vertical bold | 30 × 40 mm | marka, pasek na całą szerokość, kolor, linia, QR wyśrodkowany poniżej — bez pól |
 | Vertical compact | 25 × 40 mm | marka, pasek, kolor, hex, linia, duży QR poniżej — bez pól |
+| Tylko QR | 25 × 30 mm | pigułka TigerQR / TigerQR+ wyśrodkowana u góry, pod nią QR 20 mm — nic więcej, bez pól |
+
+Tylko QR jest postanowiony (2026-11-11), ale jeszcze niewydany: pojawi się w następnej wersji Tiger Studio i w następnej aktualizacji tigersystem.io.
 
 Każdy szablon to jeden plik SVG rozplanowany w dziesiątych częściach milimetra i
 skalowany do punktów drukarki. Kod QR wypełnia to samo pole co na typowych

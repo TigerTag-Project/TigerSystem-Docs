@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -438,7 +438,7 @@ Besitzer. Nichts im Klartext neben dem QR-Code ([Abschnitt 3](#3-qr-links)).
 
 ### Vorlagen
 
-Acht Vorlagen, die gängigen Größen und Layouts von Spulenetiketten:
+Neun Vorlagen, die gängigen Größen und Layouts von Spulenetiketten:
 
 | Vorlage | Größe (Breite × Höhe) | Layout |
 |---|---|---|
@@ -450,6 +450,9 @@ Acht Vorlagen, die gängigen Größen und Layouts von Spulenetiketten:
 | Vertical | 30 × 40 mm | Marke, Balken, Farbe groß, Hex, eine Linie, Felder links gestapelt, QR unten rechts |
 | Vertical bold | 30 × 40 mm | Marke, Balken über die ganze Breite, Farbe, eine Linie, QR zentriert darunter – keine Felder |
 | Vertical compact | 25 × 40 mm | Marke, Balken, Farbe, Hex, eine Linie, großer QR darunter – keine Felder |
+| Nur QR | 25 × 30 mm | die Pille TigerQR / TigerQR+ oben mittig, darunter ein QR von 20 mm – sonst nichts, keine Felder |
+
+Nur QR ist beschlossen (2026-11-11), aber noch nicht veröffentlicht: Die Vorlage kommt mit der nächsten Version von Tiger Studio und dem nächsten Update von tigersystem.io.
 
 Jede Vorlage ist ein SVG, angelegt in Zehntelmillimetern und auf die Punkte des
 Druckers skaliert. Der QR-Code füllt dasselbe Feld wie auf den gängigen

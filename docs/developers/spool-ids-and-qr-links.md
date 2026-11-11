@@ -405,7 +405,7 @@ owner. Nothing in clear next to the QR code ([section 3](#3-qr-links)).
 
 ### Templates
 
-Eight templates, the common spool-label sizes and layouts:
+Nine templates, the common spool-label sizes and layouts:
 
 | Template | Size (width × height) | Layout |
 |---|---|---|
@@ -417,6 +417,9 @@ Eight templates, the common spool-label sizes and layouts:
 | Vertical | 30 × 40 mm | brand, bar, colour large, hex, a rule, slots stacked left, QR bottom right |
 | Vertical bold | 30 × 40 mm | brand, full-width bar, colour, a rule, QR centred below — no slots |
 | Vertical compact | 25 × 40 mm | brand, bar, colour, hex, a rule, big QR below — no slots |
+| QR only | 25 × 30 mm | the TigerQR / TigerQR+ pill centred at the top, a 20 mm QR below — nothing else, no slots |
+
+QR only is decided (2026-11-11) but not released yet: it comes with the next Tiger Studio release and the next tigersystem.io update.
 
 Each template is one SVG laid out in tenths of a millimetre and scaled to the
 printer's dots. The QR code fills the same box as on the common spool labels

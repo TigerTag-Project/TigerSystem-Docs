@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -261,7 +261,7 @@ Apenas o que não muda: nunca o peso restante, a nota, o rack ou o dono. Nada em
 
 ### Modelos
 
-Oito modelos, os tamanhos e disposições habituais das etiquetas de bobina:
+Nove modelos, os tamanhos e disposições habituais das etiquetas de bobina:
 
 | Modelo | Tamanho (largura × altura) | Disposição |
 |---|---|---|
@@ -273,6 +273,9 @@ Oito modelos, os tamanhos e disposições habituais das etiquetas de bobina:
 | Vertical | 30 × 40 mm | marca, barra, cor em grande, hex, um traço, campos empilhados à esquerda, QR no canto inferior direito |
 | Vertical bold | 30 × 40 mm | marca, barra a toda a largura, cor, um traço, QR centrado por baixo — sem campos |
 | Vertical compact | 25 × 40 mm | marca, barra, cor, hex, um traço, QR grande por baixo — sem campos |
+| Só QR | 25 × 30 mm | a pílula TigerQR / TigerQR+ centrada no topo, um QR de 20 mm por baixo — nada mais, sem campos |
+
+Só QR está decidido (2026-11-11), mas ainda não foi lançado: chega com a próxima versão do Tiger Studio e a próxima atualização do tigersystem.io.
 
 Cada modelo é um SVG paginado em décimas de milímetro e escalado para os pontos da impressora. O código QR ocupa a mesma caixa que nas etiquetas de bobina habituais (≈ 14 mm no Classic), com um número inteiro de pontos da impressora por módulo: o mais próximo, arredondado para cima quando isso fica dentro de 6 % da caixa. As margens brancas da etiqueta são a sua zona de silêncio. A 203 dpi, um código de 29 × 29 tem 4 pontos por módulo no Classic (≈ 14,5 mm).
 

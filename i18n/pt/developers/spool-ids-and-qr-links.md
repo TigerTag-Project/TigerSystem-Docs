@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -427,7 +427,7 @@ texto legível ao lado do código QR ([seção 3](#3-links-qr)).
 
 ### Modelos
 
-Oito modelos, os tamanhos e layouts comuns de etiquetas de bobina:
+Nove modelos, os tamanhos e layouts comuns de etiquetas de bobina:
 
 | Modelo | Tamanho (largura × altura) | Layout |
 |---|---|---|
@@ -439,6 +439,9 @@ Oito modelos, os tamanhos e layouts comuns de etiquetas de bobina:
 | Vertical | 30 × 40 mm | marca, barra, cor em tamanho grande, hex, um traço, campos empilhados à esquerda, QR no canto inferior direito |
 | Vertical bold | 30 × 40 mm | marca, barra na largura toda, cor, um traço, QR centralizado abaixo — sem campos |
 | Vertical compact | 25 × 40 mm | marca, barra, cor, hex, um traço, QR grande abaixo — sem campos |
+| Só QR | 25 × 30 mm | a pílula TigerQR / TigerQR+ centralizada no topo, um QR de 20 mm abaixo — nada mais, sem campos |
+
+Só QR está decidido (2026-11-11), mas ainda não foi lançado: chega com a próxima versão do Tiger Studio e a próxima atualização do tigersystem.io.
 
 Cada modelo é um SVG diagramado em décimos de milímetro e escalado para os pontos
 da impressora. O código QR ocupa a mesma caixa das etiquetas de bobina comuns

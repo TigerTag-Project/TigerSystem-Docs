@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -315,7 +315,7 @@ https://qr.tigertag.io/p/<id_product>
 
 ### 模板
 
-八个模板，涵盖常见的线轴标签尺寸和版式：
+九个模板，涵盖常见的线轴标签尺寸和版式：
 
 | 模板 | 尺寸（宽 × 高） | 版式 |
 |---|---|---|
@@ -327,6 +327,9 @@ https://qr.tigertag.io/p/<id_product>
 | Vertical | 30 × 40 mm | 品牌、横条、大字颜色、十六进制、一条分隔线、数值栏在左侧堆叠、二维码在右下 |
 | Vertical bold | 30 × 40 mm | 品牌、通栏横条、颜色、一条分隔线、二维码居中在下方——无数值栏 |
 | Vertical compact | 25 × 40 mm | 品牌、横条、颜色、十六进制、一条分隔线、大二维码在下方——无数值栏 |
+| 仅二维码 | 25 × 30 mm | TigerQR / TigerQR+ 胶囊居中位于顶部，下方为 20 mm 二维码——别无其他，无数值栏 |
+
+仅二维码已于 2026-11-11 决定，但尚未发布：它将随下一个 Tiger Studio 版本和下一次 tigersystem.io 更新推出。
 
 每个模板都是一个以十分之一毫米为单位排版、再缩放到打印机点阵的 SVG。二维码填充的方框与常见线轴标签相同
 （Classic 上约 14 mm），每个模块占整数个打印机点：取最接近的值，若向上取整后仍在方框的 6 % 以内则向上取整。

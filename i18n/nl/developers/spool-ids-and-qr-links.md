@@ -1,5 +1,5 @@
 ---
-sourceHash: 5e564b9f19585b0bc4b423eb582924f4812c1ed92d5f21c3d204a20eb049d839
+sourceHash: 370b7013b394850ea1d6b97f8c4527ded7c9cc0d6d301825977ae686a419c648
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -432,7 +432,7 @@ de eigenaar. Niets in leesbare tekst naast de QR-code ([sectie 3](#3-qr-links)).
 
 ### Sjablonen
 
-Acht sjablonen, de gangbare formaten en indelingen van spoellabels:
+Negen sjablonen, de gangbare formaten en indelingen van spoellabels:
 
 | Sjabloon | Formaat (breedte × hoogte) | Indeling |
 |---|---|---|
@@ -444,6 +444,9 @@ Acht sjablonen, de gangbare formaten en indelingen van spoellabels:
 | Vertical | 30 × 40 mm | merk, balk, kleur groot, hex, een lijn, vakken links gestapeld, QR rechtsonder |
 | Vertical bold | 30 × 40 mm | merk, balk over de volle breedte, kleur, een lijn, QR gecentreerd eronder — geen vakken |
 | Vertical compact | 25 × 40 mm | merk, balk, kleur, hex, een lijn, grote QR eronder — geen vakken |
+| Alleen QR | 25 × 30 mm | de pil TigerQR / TigerQR+ bovenaan gecentreerd, een QR van 20 mm eronder — verder niets, geen vakken |
+
+Alleen QR is besloten (2026-11-11) maar nog niet uitgebracht: het komt met de volgende versie van Tiger Studio en de volgende update van tigersystem.io.
 
 Elk sjabloon is één SVG, opgemaakt in tienden van een millimeter en geschaald
 naar de punten van de printer. De QR-code vult hetzelfde vak als op de gangbare
