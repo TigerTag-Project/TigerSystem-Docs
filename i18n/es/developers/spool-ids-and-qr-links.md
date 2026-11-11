@@ -1,5 +1,5 @@
 ---
-sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
+sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -9,6 +9,14 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 > este contrato. Los puntos todavía abiertos se enumeran al final; resolver uno
 > cambia solo lo que nombra. Las secciones marcadas como **Propuesto** aún no
 > están ratificadas: no construyas sobre ellas antes de que lo estén.
+
+> **Referencia pública:** el repositorio [TigerQR-Label](https://github.com/TigerTag-Project/TigerQR-Label) contiene las
+> especificaciones de enlaces y etiquetas de este contrato (`spec/links.md`,
+> `spec/labels.md`), los vectores de prueba (`test-vectors/links.json`), el
+> código de referencia que ejecuta `qr.tigertag.io` (`src/parse.ts`,
+> `src/links.ts`) y las nueve etiquetas de ejemplo. Documentación en
+> CC-BY-4.0, código en Apache-2.0. Compruebe un lector con los vectores de
+> prueba.
 
 ## Explicación rápida
 

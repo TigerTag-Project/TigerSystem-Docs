@@ -1,5 +1,5 @@
 ---
-sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
+sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -9,6 +9,13 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 > этом контракте. Открытые вопросы перечислены в конце; решение любого из них
 > меняет только то, что в нём названо. Разделы с пометкой **Предложено** ещё не
 > ратифицированы: не стройте на них ничего, пока они не будут ратифицированы.
+
+> **Публичный эталон:** репозиторий [TigerQR-Label](https://github.com/TigerTag-Project/TigerQR-Label) содержит
+> спецификации ссылок и этикеток этого контракта (`spec/links.md`,
+> `spec/labels.md`), тестовые векторы (`test-vectors/links.json`), эталонный
+> код, который выполняет `qr.tigertag.io` (`src/parse.ts`, `src/links.ts`),
+> и девять примеров этикеток. Документация — CC-BY-4.0, код — Apache-2.0.
+> Проверяйте считыватель на тестовых векторах.
 
 ## Коротко
 

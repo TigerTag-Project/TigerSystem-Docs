@@ -1,5 +1,5 @@
 ---
-sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
+sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -7,6 +7,8 @@ sourcePath: docs/developers/spool-ids-and-qr-links.md
 
 > **已于 2026-11-05 批准——尚未实现。** 各应用都以这份约定为基础。仍未决定的问题列在文末；
 > 解决其中一个，只会改变它所指明的内容。标为**提议**的章节尚未批准：在它们获批之前，不要以其为基础进行构建。
+
+> **公开参考：**[TigerQR-Label](https://github.com/TigerTag-Project/TigerQR-Label) 仓库包含本契约的链接与标签规范（`spec/links.md`、`spec/labels.md`）、测试向量（`test-vectors/links.json`）、`qr.tigertag.io` 运行的参考代码（`src/parse.ts`、`src/links.ts`）以及九个示例标签。文档采用 CC-BY-4.0，代码采用 Apache-2.0。请用测试向量检验读取器。
 
 ## 简要说明
 

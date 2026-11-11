@@ -5,6 +5,13 @@
 > it names. Sections marked **Proposed** are not ratified yet: do not build on
 > them before they are.
 
+> **Public reference:** the [TigerQR-Label](https://github.com/TigerTag-Project/TigerQR-Label) repository holds this
+> contract's link and label specs (`spec/links.md`, `spec/labels.md`), the
+> test vectors (`test-vectors/links.json`), the reference code that
+> `qr.tigertag.io` runs (`src/parse.ts`, `src/links.ts`) and the nine
+> example labels. Docs CC-BY-4.0, code Apache-2.0. Check a reader against the
+> test vectors.
+
 ## Quick explanation
 
 A TigerTag QR code holds one short link, `https://qr.tigertag.io/<path>`. The
