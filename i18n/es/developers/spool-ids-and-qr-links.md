@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -211,8 +211,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Sin prefijo, decide el idioma del navegador del visitante.
 - Un prefijo desconocido da un `404`.
 - **Las etiquetas impresas nunca llevan prefijo**: siguen siendo neutras en
-  idioma. Solo los botones Compartir lo añaden (tigersystem.io hoy, Tiger Studio
-  con su próxima versión).
+  idioma. Solo los botones Compartir lo añaden (tigersystem.io y Tiger Studio).
 
 **Los lectores lo quitan.** Un lector que recibe un enlace (el campo para pegar de Studio, el escáner o el campo para pegar de la app móvil, cualquier lector de terceros) quita primero un `<lang>/` inicial, sin distinguir mayúsculas y minúsculas, y luego lee el resto como arriba: `qr.tigertag.io/fr/p/2673739332` abre el mismo producto que `qr.tigertag.io/p/2673739332`. Un lector nunca imprime ni guarda el prefijo: una etiqueta o una exportación hecha a partir de un enlace compartido lleva el enlace sin prefijo. El enlace compartido es `qr.tigertag.io/fr/p/2673739332`; el código QR siempre contiene `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -471,8 +470,6 @@ Nueve plantillas, los tamaños y diseños habituales de etiquetas de bobina:
 | Vertical bold | 30 × 40 mm | marca, barra a todo el ancho, color, una línea, QR centrado debajo; sin casillas |
 | Vertical compact | 25 × 40 mm | marca, barra, color, hex, una línea, QR grande debajo; sin casillas |
 | Solo QR | 25 × 30 mm | la píldora TigerQR / TigerQR+ centrada arriba, un QR de 20 mm debajo; nada más, sin casillas |
-
-Solo QR está decidida (2026-11-11) y disponible en tigersystem.io; llega a Tiger Studio con su próxima versión.
 
 Cada plantilla es un SVG maquetado en décimas de milímetro y escalado a los
 puntos de la impresora. El código QR ocupa el mismo recuadro que en las etiquetas

@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -213,8 +213,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Senza prefisso decide la lingua del browser del visitatore.
 - Un prefisso sconosciuto dà un `404`.
 - **Le etichette stampate non portano mai un prefisso**: restano neutre rispetto
-  alla lingua. Solo i pulsanti Condividi lo aggiungono (tigersystem.io oggi,
-  Tiger Studio con la sua prossima versione).
+  alla lingua. Solo i pulsanti Condividi lo aggiungono (tigersystem.io e Tiger Studio).
 
 **I lettori lo tolgono.** Un lettore che riceve un link (il campo incolla di Studio, lo scanner o il campo incolla dell'app mobile, qualsiasi lettore di terzi) toglie prima un `<lang>/` iniziale, senza distinguere maiuscole e minuscole, poi legge il resto come sopra: `qr.tigertag.io/fr/p/2673739332` apre lo stesso prodotto di `qr.tigertag.io/p/2673739332`. Un lettore non stampa né salva mai il prefisso: un'etichetta o un'esportazione fatta da un link condiviso riporta il link senza prefisso. Il link condiviso è `qr.tigertag.io/fr/p/2673739332`; il codice QR contiene sempre `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -474,8 +473,6 @@ Nove modelli, le dimensioni e le impaginazioni comuni delle etichette per bobine
 | Vertical bold | 30 × 40 mm | marca, barra a tutta larghezza, colore, una riga, QR centrato sotto — nessuna casella |
 | Vertical compact | 25 × 40 mm | marca, barra, colore, hex, una riga, QR grande sotto — nessuna casella |
 | Solo QR | 25 × 30 mm | la pillola TigerQR / TigerQR+ centrata in alto, un QR da 20 mm sotto — nient'altro, nessuna casella |
-
-Solo QR è deciso (2026-11-11) e disponibile su tigersystem.io; arriva in Tiger Studio con la sua prossima versione.
 
 Ogni modello è un SVG impaginato in decimi di millimetro e scalato sui punti
 della stampante. Il codice QR riempie lo stesso riquadro delle comuni etichette

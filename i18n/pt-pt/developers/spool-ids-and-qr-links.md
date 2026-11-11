@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -160,8 +160,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Sem prefixo, decide a língua do navegador do visitante.
 - Um prefixo desconhecido dá `404`.
 - **As etiquetas impressas nunca levam prefixo**: mantêm-se neutras quanto à
-  língua. Só os botões Partilhar o acrescentam (tigersystem.io hoje, Tiger
-  Studio na próxima versão).
+  língua. Só os botões Partilhar o acrescentam (tigersystem.io e Tiger Studio).
 
 **Os leitores removem-no.** Um leitor que recebe uma ligação (o campo de colar do Studio, o leitor ou o campo de colar da aplicação móvel, qualquer leitor de terceiros) remove primeiro um `<lang>/` inicial, sem distinguir maiúsculas de minúsculas, e depois lê o resto como acima: `qr.tigertag.io/fr/p/2673739332` abre o mesmo produto que `qr.tigertag.io/p/2673739332`. Um leitor nunca imprime nem guarda o prefixo: uma etiqueta ou exportação feita a partir de uma ligação partilhada leva a ligação sem prefixo. A ligação partilhada é `qr.tigertag.io/fr/p/2673739332`; o código QR contém sempre `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -298,8 +297,6 @@ Nove modelos, os tamanhos e disposições habituais das etiquetas de bobina:
 | Vertical bold | 30 × 40 mm | marca, barra a toda a largura, cor, um traço, QR centrado por baixo — sem campos |
 | Vertical compact | 25 × 40 mm | marca, barra, cor, hex, um traço, QR grande por baixo — sem campos |
 | Só QR | 25 × 30 mm | a pílula TigerQR / TigerQR+ centrada no topo, um QR de 20 mm por baixo — nada mais, sem campos |
-
-Só QR está decidido (2026-11-11) e disponível no tigersystem.io; chega ao Tiger Studio na próxima versão.
 
 Cada modelo é um SVG paginado em décimas de milímetro e escalado para os pontos da impressora. O código QR ocupa a mesma caixa que nas etiquetas de bobina habituais (≈ 14 mm no Classic), com um número inteiro de pontos da impressora por módulo: o mais próximo, arredondado para cima quando isso fica dentro de 6 % da caixa. As margens brancas da etiqueta são a sua zona de silêncio. A 203 dpi, um código de 29 × 29 tem 4 pontos por módulo no Classic (≈ 14,5 mm).
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -209,8 +209,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Zonder voorvoegsel beslist de browsertaal van de bezoeker.
 - Een onbekend voorvoegsel geeft een `404`.
 - **Gedrukte labels dragen nooit een voorvoegsel**: ze blijven taalneutraal.
-  Alleen de Delen-knoppen voegen er een toe (vandaag tigersystem.io, Tiger
-  Studio met zijn volgende versie).
+  Alleen de Delen-knoppen voegen er een toe (tigersystem.io en Tiger Studio).
 
 **Lezers halen het weg.** Een lezer die een link krijgt (het plakveld in Studio, de scanner of het plakveld van de mobiele app, elke lezer van derden) haalt eerst één `<lang>/` vooraan weg, ongeacht hoofd- of kleine letters, en leest de rest dan zoals hierboven: `qr.tigertag.io/fr/p/2673739332` opent hetzelfde product als `qr.tigertag.io/p/2673739332`. Een lezer drukt of bewaart het voorvoegsel nooit: een label of export gemaakt van een gedeelde link draagt de kale link. De gedeelde link is `qr.tigertag.io/fr/p/2673739332`; de QR-code bevat altijd `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -465,8 +464,6 @@ Negen sjablonen, de gangbare formaten en indelingen van spoellabels:
 | Vertical bold | 30 × 40 mm | merk, balk over de volle breedte, kleur, een lijn, QR gecentreerd eronder — geen vakken |
 | Vertical compact | 25 × 40 mm | merk, balk, kleur, hex, een lijn, grote QR eronder — geen vakken |
 | Alleen QR | 25 × 30 mm | de pil TigerQR / TigerQR+ bovenaan gecentreerd, een QR van 20 mm eronder — verder niets, geen vakken |
-
-Alleen QR is besloten (2026-11-11) en staat live op tigersystem.io; in Tiger Studio komt het met de volgende versie.
 
 Elk sjabloon is één SVG, opgemaakt in tienden van een millimeter en geschaald
 naar de punten van de printer. De QR-code vult hetzelfde vak als op de gangbare

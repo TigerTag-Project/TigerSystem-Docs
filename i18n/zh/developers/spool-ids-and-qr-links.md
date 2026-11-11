@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -166,7 +166,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - 页面随后对所有人都以该语言打开，包括链接预览爬虫：`/fr/p/2673739332` → `tigersystem.io/fr/catalog/2673739332`。
 - 没有前缀时，由访问者浏览器的语言决定。
 - 未知前缀返回 `404`。
-- **打印的标签从不带前缀**：它们保持语言中立。只有分享按钮会加上前缀（目前是 tigersystem.io，Tiger Studio 将在下一个版本中加入）。
+- **打印的标签从不带前缀**：它们保持语言中立。只有分享按钮会加上前缀（tigersystem.io 和 Tiger Studio）。
 
 **读取方会去掉它。** 拿到链接的读取方（Studio 的粘贴框、移动应用的扫描器或粘贴框、任何第三方读取方）先去掉开头的一个 `<lang>/`（不区分大小写），再按上文解析其余部分：`qr.tigertag.io/fr/p/2673739332` 打开的产品与 `qr.tigertag.io/p/2673739332` 相同。读取方从不打印或保存前缀：由分享链接生成的标签或导出内容带的是不含前缀的链接。分享链接是 `qr.tigertag.io/fr/p/2673739332`；二维码里始终是 `qr.tigertag.io/p/2673739332`。*（2026-11-11。）*
 
@@ -346,8 +346,6 @@ https://qr.tigertag.io/p/<id_product>
 | Vertical bold | 30 × 40 mm | 品牌、通栏横条、颜色、一条分隔线、二维码居中在下方——无数值栏 |
 | Vertical compact | 25 × 40 mm | 品牌、横条、颜色、十六进制、一条分隔线、大二维码在下方——无数值栏 |
 | 仅二维码 | 25 × 30 mm | TigerQR / TigerQR+ 胶囊居中位于顶部，下方为 20 mm 二维码——别无其他，无数值栏 |
-
-仅二维码已于 2026-11-11 决定，并已在 tigersystem.io 上线；Tiger Studio 将在下一个版本中推出。
 
 每个模板都是一个以十分之一毫米为单位排版、再缩放到打印机点阵的 SVG。二维码填充的方框与常见线轴标签相同
 （Classic 上约 14 mm），每个模块占整数个打印机点：取最接近的值，若向上取整后仍在方框的 6 % 以内则向上取整。

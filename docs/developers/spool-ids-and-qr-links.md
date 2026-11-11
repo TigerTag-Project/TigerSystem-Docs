@@ -197,8 +197,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Without a prefix, the visitor's browser language decides.
 - An unknown prefix is a `404`.
 - **Printed labels never carry a prefix**: they stay language-neutral. Only
-  Share buttons add one (tigersystem.io today, Tiger Studio with its next
-  release).
+  Share buttons add one (tigersystem.io and Tiger Studio).
 
 **Readers strip it.** A reader handed a link (Studio's paste box, the mobile app's scanner or paste box, any third-party reader) first drops one leading `<lang>/`, matched in any case, then resolves the rest as above: `qr.tigertag.io/fr/p/2673739332` opens the same product as `qr.tigertag.io/p/2673739332`. A reader never prints or stores the prefix: a label or an export made from a shared link carries the bare link. The shared link is `qr.tigertag.io/fr/p/2673739332`; the QR code always holds `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -439,8 +438,6 @@ Nine templates, the common spool-label sizes and layouts:
 | Vertical bold | 30 × 40 mm | brand, full-width bar, colour, a rule, QR centred below — no slots |
 | Vertical compact | 25 × 40 mm | brand, bar, colour, hex, a rule, big QR below — no slots |
 | QR only | 25 × 30 mm | the TigerQR / TigerQR+ pill centred at the top, a 20 mm QR below — nothing else, no slots |
-
-QR only is decided (2026-11-11) and live on tigersystem.io; it comes to Tiger Studio with its next release.
 
 Each template is one SVG laid out in tenths of a millimetre and scaled to the
 printer's dots. The QR code fills the same box as on the common spool labels

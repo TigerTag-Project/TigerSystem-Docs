@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -212,8 +212,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Ohne Präfix entscheidet die Browsersprache des Besuchers.
 - Ein unbekanntes Präfix ergibt ein `404`.
 - **Gedruckte Etiketten tragen nie ein Präfix**: Sie bleiben sprachneutral. Nur
-  die Teilen-Buttons fügen eines hinzu (heute tigersystem.io, Tiger Studio mit
-  seiner nächsten Version).
+  die Teilen-Buttons fügen eines hinzu (tigersystem.io und Tiger Studio).
 
 **Leser entfernen es.** Ein Leser, der einen Link erhält (das Einfügefeld in Studio, der Scanner oder das Einfügefeld der mobilen App, jeder Leser von Dritten), entfernt zuerst ein führendes `<lang>/`, unabhängig von Groß- und Kleinschreibung, und liest den Rest dann wie oben: `qr.tigertag.io/fr/p/2673739332` öffnet dasselbe Produkt wie `qr.tigertag.io/p/2673739332`. Ein Leser druckt oder speichert das Präfix nie: Ein Etikett oder Export aus einem geteilten Link trägt den Link ohne Präfix. Der geteilte Link ist `qr.tigertag.io/fr/p/2673739332`; der QR-Code enthält immer `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -472,8 +471,6 @@ Neun Vorlagen, die gängigen Größen und Layouts von Spulenetiketten:
 | Vertical bold | 30 × 40 mm | Marke, Balken über die ganze Breite, Farbe, eine Linie, QR zentriert darunter – keine Felder |
 | Vertical compact | 25 × 40 mm | Marke, Balken, Farbe, Hex, eine Linie, großer QR darunter – keine Felder |
 | Nur QR | 25 × 30 mm | die Pille TigerQR / TigerQR+ oben mittig, darunter ein QR von 20 mm – sonst nichts, keine Felder |
-
-Nur QR ist beschlossen (2026-11-11) und auf tigersystem.io verfügbar; in Tiger Studio kommt die Vorlage mit der nächsten Version.
 
 Jede Vorlage ist ein SVG, angelegt in Zehntelmillimetern und auf die Punkte des
 Druckers skaliert. Der QR-Code füllt dasselbe Feld wie auf den gängigen

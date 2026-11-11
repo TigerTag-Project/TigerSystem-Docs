@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -208,8 +208,7 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - Sem prefixo, decide o idioma do navegador do visitante.
 - Um prefixo desconhecido dá `404`.
 - **Etiquetas impressas nunca trazem prefixo**: continuam neutras quanto ao
-  idioma. Só os botões Compartilhar o adicionam (tigersystem.io hoje, Tiger
-  Studio na próxima versão).
+  idioma. Só os botões Compartilhar o adicionam (tigersystem.io e Tiger Studio).
 
 **Os leitores o removem.** Um leitor que recebe um link (o campo de colar do Studio, o scanner ou o campo de colar do app móvel, qualquer leitor de terceiros) remove primeiro um `<lang>/` inicial, sem diferenciar maiúsculas de minúsculas, e depois lê o resto como acima: `qr.tigertag.io/fr/p/2673739332` abre o mesmo produto que `qr.tigertag.io/p/2673739332`. Um leitor nunca imprime nem guarda o prefixo: uma etiqueta ou exportação feita a partir de um link compartilhado traz o link sem prefixo. O link compartilhado é `qr.tigertag.io/fr/p/2673739332`; o código QR sempre contém `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -463,8 +462,6 @@ Nove modelos, os tamanhos e layouts comuns de etiquetas de bobina:
 | Vertical bold | 30 × 40 mm | marca, barra na largura toda, cor, um traço, QR centralizado abaixo — sem campos |
 | Vertical compact | 25 × 40 mm | marca, barra, cor, hex, um traço, QR grande abaixo — sem campos |
 | Só QR | 25 × 30 mm | a pílula TigerQR / TigerQR+ centralizada no topo, um QR de 20 mm abaixo — nada mais, sem campos |
-
-Só QR está decidido (2026-11-11) e disponível no tigersystem.io; chega ao Tiger Studio na próxima versão.
 
 Cada modelo é um SVG diagramado em décimos de milímetro e escalado para os pontos
 da impressora. O código QR ocupa a mesma caixa das etiquetas de bobina comuns

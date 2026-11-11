@@ -1,5 +1,5 @@
 ---
-sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
+sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -211,8 +211,7 @@ znaczenia.
 - Bez prefiksu decyduje język przeglądarki odwiedzającego.
 - Nieznany prefiks daje `404`.
 - **Drukowane etykiety nigdy nie mają prefiksu**: pozostają neutralne
-  językowo. Dodają go tylko przyciski Udostępnij (dziś tigersystem.io, Tiger
-  Studio w następnej wersji).
+  językowo. Dodają go tylko przyciski Udostępnij (tigersystem.io i Tiger Studio).
 
 **Czytniki go usuwają.** Czytnik, który dostaje link (pole wklejania w Studio, skaner lub pole wklejania aplikacji mobilnej, dowolny czytnik zewnętrzny), najpierw usuwa jeden początkowy `<lang>/`, bez względu na wielkość liter, a potem odczytuje resztę jak wyżej: `qr.tigertag.io/fr/p/2673739332` otwiera ten sam produkt co `qr.tigertag.io/p/2673739332`. Czytnik nigdy nie drukuje ani nie zapisuje prefiksu: etykieta lub eksport z udostępnionego linku zawiera link bez prefiksu. Udostępniany link to `qr.tigertag.io/fr/p/2673739332`; kod QR zawsze zawiera `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
@@ -466,8 +465,6 @@ Dziewięć szablonów, w typowych rozmiarach i układach etykiet szpul:
 | Vertical bold | 30 × 40 mm | marka, pasek na całą szerokość, kolor, linia, QR wyśrodkowany poniżej — bez pól |
 | Vertical compact | 25 × 40 mm | marka, pasek, kolor, hex, linia, duży QR poniżej — bez pól |
 | Tylko QR | 25 × 30 mm | pigułka TigerQR / TigerQR+ wyśrodkowana u góry, pod nią QR 20 mm — nic więcej, bez pól |
-
-Tylko QR jest postanowiony (2026-11-11) i dostępny na tigersystem.io; do Tiger Studio trafi w jego następnej wersji.
 
 Każdy szablon to jeden plik SVG rozplanowany w dziesiątych częściach milimetra i
 skalowany do punktów drukarki. Kod QR wypełnia to samo pole co na typowych
