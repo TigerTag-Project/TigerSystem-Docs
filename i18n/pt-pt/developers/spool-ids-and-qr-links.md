@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -304,6 +304,7 @@ Cada modelo é um SVG paginado em décimas de milímetro e escalado para os pont
 
 - **PDF**, **PNG** (à resolução da impressora) e **SVG**, para que qualquer impressora funcione, através da sua própria aplicação se for preciso;
 - a impressão direta em impressoras de etiquetas (Brother QL, Niimbot, Phomemo) virá mais tarde, impressora a impressora, com os mesmos modelos.
+- para os experimentar, o [playground TigerQR](https://tigersystem.io/playground-tigerqr) gera a etiqueta TigerQR+ de um produto do catálogo em cada modelo, em PNG (203 ou 300 dpi) e SVG.
 
 ## Pontos em aberto
 

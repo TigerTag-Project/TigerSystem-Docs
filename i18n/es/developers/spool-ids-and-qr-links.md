@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -485,6 +485,7 @@ silencio. A 203 dpi, un código de 29 × 29 tiene 4 puntos por módulo en la Cla
   cualquier impresora, a través de su propia aplicación si hace falta;
 - la impresión directa en impresoras de etiquetas (Brother QL, Niimbot, Phomemo)
   llegará más adelante, impresora por impresora, con las mismas plantillas.
+- para probarlas, el [playground de TigerQR](https://tigersystem.io/playground-tigerqr) genera la etiqueta TigerQR+ de un producto del catálogo en cada plantilla, en PNG (203 o 300 dpi) y SVG.
 
 ## Puntos abiertos
 

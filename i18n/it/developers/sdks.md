@@ -1,5 +1,5 @@
 ---
-sourceHash: 78a273b10943b107e10bbd727392279a149ca7f949239abddcefb18b682ba5db
+sourceHash: a907d2b3c8f6691d3cf0622da7203cc0fd523fec84b2e43dbda88c857ae0a5d8
 sourcePath: docs/developers/sdks.md
 ---
 
@@ -89,7 +89,7 @@ data = spool.to_bytes()            # 80 bytes
 ```
 
 Per controllare cosa scrive il tuo codice, incolla l'esadecimale di
-`toBytes()` o `to_bytes()` nel [playground](https://tigersystem.io/playground): decodifica il chip campo
+`toBytes()` o `to_bytes()` nel [playground](https://tigersystem.io/playground-tigertag): decodifica il chip campo
 per campo, nel browser.
 
 Entrambi gli esempi funzionano così con `tigertag` 1.2.1 (npm) e 1.4.0

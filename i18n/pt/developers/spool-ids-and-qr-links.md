@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -476,6 +476,7 @@ margens brancas da etiqueta são a sua zona de silêncio. A 203 dpi, um código 
   impressora funcione, pelo próprio aplicativo dela se for preciso;
 - a impressão direta em impressoras de etiquetas (Brother QL, Niimbot, Phomemo)
   virá depois, impressora por impressora, com os mesmos modelos.
+- para testá-los, o [playground TigerQR](https://tigersystem.io/playground-tigerqr) gera a etiqueta TigerQR+ de um produto do catálogo em cada modelo, em PNG (203 ou 300 dpi) e SVG.
 
 ## Pontos em aberto
 

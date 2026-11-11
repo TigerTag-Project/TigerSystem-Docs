@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -487,6 +487,7 @@ riquadro. I margini bianchi dell'etichetta sono la sua zona di rispetto. A
   qualsiasi stampante, se necessario tramite la sua app;
 - la stampa diretta sulle stampanti per etichette (Brother QL, Niimbot, Phomemo)
   arriverà più avanti, stampante per stampante, con gli stessi modelli.
+- per provarli, il [playground TigerQR](https://tigersystem.io/playground-tigerqr) crea l'etichetta TigerQR+ di un prodotto del catalogo in ogni modello, in PNG (203 o 300 dpi) e SVG.
 
 ## Punti aperti
 

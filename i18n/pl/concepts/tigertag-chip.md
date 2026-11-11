@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -205,7 +205,7 @@ To jest mapa, nie specyfikacja. Wiążąca jest tabela pól w
 podaje dokładny offset każdego pola i odsyła do każdej tabeli identyfikatorów.
 Parser trzyma się tej tabeli.
 
-Aby zobaczyć tę mapę wypełnioną, [playground](https://tigersystem.io/playground) buduje chip z
+Aby zobaczyć tę mapę wypełnioną, [playground](https://tigersystem.io/playground-tigertag) buduje chip z
 produktu z katalogu lub z wybranych pól albo dekoduje hex odczytanego chipa i
 pokazuje każde pole wraz z jego bajtami. Wszystko działa w przeglądarce.
 

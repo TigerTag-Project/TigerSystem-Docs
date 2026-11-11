@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -170,7 +170,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 [TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide#2-data-structure--tigertag-binary-format)
 中的逐字段表格为准：它给出每个字段的精确偏移，并链接到每一张 ID 表。解析器应遵循该表格。
 
-想看到这张示意图填入实际数据，可以使用 [playground](https://tigersystem.io/playground)：它可以根据目录产品或你选择的字段构建一张芯片，也可以解码你读取到的芯片的十六进制内容，并显示每个字段及其字节。一切都在浏览器中运行。
+想看到这张示意图填入实际数据，可以使用 [playground](https://tigersystem.io/playground-tigertag)：它可以根据目录产品或你选择的字段构建一张芯片，也可以解码你读取到的芯片的十六进制内容，并显示每个字段及其字节。一切都在浏览器中运行。
 
 ## 读取与写入
 

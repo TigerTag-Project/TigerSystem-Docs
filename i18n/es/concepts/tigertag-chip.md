@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -209,7 +209,7 @@ Esto es un mapa, no la especificación. La tabla campo por campo del
 es normativa: da el desplazamiento exacto de cada campo y enlaza cada tabla de
 ids. Un parser sigue esa tabla.
 
-Para ver este mapa relleno, el [playground](https://tigersystem.io/playground) construye un chip a partir de
+Para ver este mapa relleno, el [playground](https://tigersystem.io/playground-tigertag) construye un chip a partir de
 un producto del catálogo o de los campos que elijas, o decodifica el hexadecimal
 de un chip que hayas leído, y muestra cada campo con sus bytes. Todo funciona en
 el navegador.

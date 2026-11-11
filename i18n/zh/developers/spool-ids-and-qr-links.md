@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -355,6 +355,7 @@ https://qr.tigertag.io/p/<id_product>
 
 - **PDF**、**PNG**（按打印机分辨率）和 **SVG**，因此任何打印机都能使用，必要时通过其自带的应用；
 - 直接打印到标签打印机（Brother QL、Niimbot、Phomemo）稍后推出，逐台适配，使用相同的模板。
+- 想试用这些模板，[TigerQR playground](https://tigersystem.io/playground-tigerqr) 可为产品库中的产品生成每个模板的 TigerQR+ 标签，提供 PNG（203 或 300 dpi）和 SVG。
 
 ## 待定事项
 

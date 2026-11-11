@@ -452,6 +452,7 @@ Classic (≈ 14.5 mm).
   works, through its own app if need be;
 - direct printing to label printers (Brother QL, Niimbot, Phomemo) comes later,
   printer by printer, with the same templates.
+- to try them, the [TigerQR playground](https://tigersystem.io/playground-tigerqr) makes a catalogue product's TigerQR+ label in every template, as PNG (203 or 300 dpi) and SVG.
 
 ## Open points
 

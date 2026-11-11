@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -209,7 +209,7 @@ Dit is een overzicht, niet de specificatie. De veldtabel in de
 is bindend: die geeft de exacte offset van elk veld en verwijst naar elke
 id-tabel. Een parser volgt die tabel.
 
-Om dit overzicht ingevuld te zien, bouwt de [playground](https://tigersystem.io/playground) een chip uit een
+Om dit overzicht ingevuld te zien, bouwt de [playground](https://tigersystem.io/playground-tigertag) een chip uit een
 catalogusproduct of uit velden die je kiest, of decodeert hij de hex van een chip
 die je hebt gelezen, en toont hij elk veld met zijn bytes. Alles draait in de
 browser.

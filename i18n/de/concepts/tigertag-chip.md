@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -214,7 +214,7 @@ Das ist eine Übersicht, nicht die Spezifikation. Maßgeblich ist die Feldtabell
 Sie nennt den genauen Offset jedes Felds und verweist auf jede ID-Tabelle. Ein
 Parser folgt dieser Tabelle.
 
-Um diese Übersicht ausgefüllt zu sehen, baut der [Playground](https://tigersystem.io/playground) einen Chip aus
+Um diese Übersicht ausgefüllt zu sehen, baut der [Playground](https://tigersystem.io/playground-tigertag) einen Chip aus
 einem Katalogprodukt oder aus Feldern Ihrer Wahl, oder er dekodiert das Hex
 eines gelesenen Chips, und zeigt jedes Feld mit seinen Bytes. Alles läuft im
 Browser.

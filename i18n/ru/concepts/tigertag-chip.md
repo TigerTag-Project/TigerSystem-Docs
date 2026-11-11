@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -206,7 +206,7 @@ sourcePath: docs/concepts/tigertag-chip.md
 в ней указано точное смещение каждого поля и ссылки на все таблицы ID. Парсер
 следует этой таблице.
 
-Чтобы увидеть эту карту заполненной, [playground](https://tigersystem.io/playground) собирает чип из
+Чтобы увидеть эту карту заполненной, [playground](https://tigersystem.io/playground-tigertag) собирает чип из
 продукта каталога или из выбранных вами полей либо декодирует hex считанного
 чипа и показывает каждое поле с его байтами. Всё работает в браузере.
 

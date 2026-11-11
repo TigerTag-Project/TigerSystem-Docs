@@ -1,5 +1,5 @@
 ---
-sourceHash: 24e6e0d267085533dedb6ff1d2fae0828af6c01f87c5ff2011ae85b9526c8792
+sourceHash: 4883ce5a0c792789833fe5a7626adaf7d9ec21c91d88333d9906fc567749f0fc
 sourcePath: docs/concepts/tigertag-chip.md
 ---
 
@@ -218,7 +218,7 @@ C'est une carte, pas la spécification. Le tableau champ par champ du
 fait foi : il donne le décalage exact de chaque champ et renvoie vers chaque
 table d'identifiants. Un parseur suit ce tableau.
 
-Pour voir cette carte remplie, le [playground](https://tigersystem.io/playground) construit une puce à
+Pour voir cette carte remplie, le [playground](https://tigersystem.io/playground-tigertag) construit une puce à
 partir d'un produit du catalogue ou des champs que vous choisissez, ou décode
 l'hexadécimal d'une puce que vous avez lue, et montre chaque champ avec ses
 octets. Tout se passe dans le navigateur.

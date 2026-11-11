@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -478,6 +478,7 @@ https://qr.tigertag.io/p/<id_product>
   принтер — при необходимости через его собственное приложение;
 - прямая печать на принтерах этикеток (Brother QL, Niimbot, Phomemo) появится
   позже, принтер за принтером, с теми же шаблонами.
+- чтобы их попробовать, [playground TigerQR](https://tigersystem.io/playground-tigerqr) делает этикетку TigerQR+ продукта из каталога в каждом шаблоне, в PNG (203 или 300 dpi) и SVG.
 
 ## Открытые вопросы
 

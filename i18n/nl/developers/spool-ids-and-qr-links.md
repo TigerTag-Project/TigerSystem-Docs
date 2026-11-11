@@ -1,5 +1,5 @@
 ---
-sourceHash: 42128e8f340693100366e63d2ac0e7a14f01b9d96c2ef7dc2e593f1f4b25bfdc
+sourceHash: bc80efe0970e4f1ae3f6adf82d92f1d82bdcd513cd78a06d38da9af8ee592893
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -478,6 +478,7 @@ code van 29 × 29 op de Classic 4 punten per module (≈ 14,5 mm).
   printer werkt, desnoods via zijn eigen app;
 - direct printen naar labelprinters (Brother QL, Niimbot, Phomemo) komt later,
   printer voor printer, met dezelfde sjablonen.
+- om ze uit te proberen maakt de [TigerQR-playground](https://tigersystem.io/playground-tigerqr) het TigerQR+-label van een catalogusproduct in elk sjabloon, als PNG (203 of 300 dpi) en SVG.
 
 ## Open punten
 
