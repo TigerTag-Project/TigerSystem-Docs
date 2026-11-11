@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -210,6 +210,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - **Etiquetas impressas nunca trazem prefixo**: continuam neutras quanto ao
   idioma. Só os botões Compartilhar o adicionam (tigersystem.io hoje, Tiger
   Studio na próxima versão).
+
+**Os leitores o removem.** Um leitor que recebe um link (o campo de colar do Studio, o scanner ou o campo de colar do app móvel, qualquer leitor de terceiros) remove primeiro um `<lang>/` inicial, sem diferenciar maiúsculas de minúsculas, e depois lê o resto como acima: `qr.tigertag.io/fr/p/2673739332` abre o mesmo produto que `qr.tigertag.io/p/2673739332`. Um leitor nunca imprime nem guarda o prefixo: uma etiqueta ou exportação feita a partir de um link compartilhado traz o link sem prefixo. O link compartilhado é `qr.tigertag.io/fr/p/2673739332`; o código QR sempre contém `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
 ### Resolver a bobina
 

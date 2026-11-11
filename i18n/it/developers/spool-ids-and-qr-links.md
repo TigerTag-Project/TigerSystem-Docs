@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -215,6 +215,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - **Le etichette stampate non portano mai un prefisso**: restano neutre rispetto
   alla lingua. Solo i pulsanti Condividi lo aggiungono (tigersystem.io oggi,
   Tiger Studio con la sua prossima versione).
+
+**I lettori lo tolgono.** Un lettore che riceve un link (il campo incolla di Studio, lo scanner o il campo incolla dell'app mobile, qualsiasi lettore di terzi) toglie prima un `<lang>/` iniziale, senza distinguere maiuscole e minuscole, poi legge il resto come sopra: `qr.tigertag.io/fr/p/2673739332` apre lo stesso prodotto di `qr.tigertag.io/p/2673739332`. Un lettore non stampa né salva mai il prefisso: un'etichetta o un'esportazione fatta da un link condiviso riporta il link senza prefisso. Il link condiviso è `qr.tigertag.io/fr/p/2673739332`; il codice QR contiene sempre `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
 ### Risolvere la bobina
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -167,6 +167,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - 没有前缀时，由访问者浏览器的语言决定。
 - 未知前缀返回 `404`。
 - **打印的标签从不带前缀**：它们保持语言中立。只有分享按钮会加上前缀（目前是 tigersystem.io，Tiger Studio 将在下一个版本中加入）。
+
+**读取方会去掉它。** 拿到链接的读取方（Studio 的粘贴框、移动应用的扫描器或粘贴框、任何第三方读取方）先去掉开头的一个 `<lang>/`（不区分大小写），再按上文解析其余部分：`qr.tigertag.io/fr/p/2673739332` 打开的产品与 `qr.tigertag.io/p/2673739332` 相同。读取方从不打印或保存前缀：由分享链接生成的标签或导出内容带的是不含前缀的链接。分享链接是 `qr.tigertag.io/fr/p/2673739332`；二维码里始终是 `qr.tigertag.io/p/2673739332`。*（2026-11-11。）*
 
 ### 解析线轴
 

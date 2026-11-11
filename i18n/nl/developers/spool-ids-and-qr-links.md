@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -211,6 +211,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - **Gedrukte labels dragen nooit een voorvoegsel**: ze blijven taalneutraal.
   Alleen de Delen-knoppen voegen er een toe (vandaag tigersystem.io, Tiger
   Studio met zijn volgende versie).
+
+**Lezers halen het weg.** Een lezer die een link krijgt (het plakveld in Studio, de scanner of het plakveld van de mobiele app, elke lezer van derden) haalt eerst één `<lang>/` vooraan weg, ongeacht hoofd- of kleine letters, en leest de rest dan zoals hierboven: `qr.tigertag.io/fr/p/2673739332` opent hetzelfde product als `qr.tigertag.io/p/2673739332`. Een lezer drukt of bewaart het voorvoegsel nooit: een label of export gemaakt van een gedeelde link draagt de kale link. De gedeelde link is `qr.tigertag.io/fr/p/2673739332`; de QR-code bevat altijd `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
 ### De spoel opzoeken
 

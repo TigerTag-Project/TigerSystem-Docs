@@ -200,6 +200,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
   Share buttons add one (tigersystem.io today, Tiger Studio with its next
   release).
 
+**Readers strip it.** A reader handed a link (Studio's paste box, the mobile app's scanner or paste box, any third-party reader) first drops one leading `<lang>/`, matched in any case, then resolves the rest as above: `qr.tigertag.io/fr/p/2673739332` opens the same product as `qr.tigertag.io/p/2673739332`. A reader never prints or stores the prefix: a label or an export made from a shared link carries the bare link. The shared link is `qr.tigertag.io/fr/p/2673739332`; the QR code always holds `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
+
 ### Resolving the spool
 
 1. Look the id up **in the signed-in viewer's own inventory**.

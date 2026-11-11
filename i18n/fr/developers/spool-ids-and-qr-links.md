@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -221,6 +221,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - **Les étiquettes imprimées ne portent jamais de préfixe** : elles restent
   neutres en langue. Seuls les boutons Partager en ajoutent un (tigersystem.io
   aujourd'hui, Tiger Studio avec sa prochaine version).
+
+**Les lecteurs l'enlèvent.** Un lecteur à qui l'on donne un lien (la zone de collage de Studio, le scanner ou la zone de collage de l'app mobile, tout lecteur tiers) retire d'abord un `<lang>/` en tête, reconnu en majuscules comme en minuscules, puis lit le reste comme ci-dessus : `qr.tigertag.io/fr/p/2673739332` ouvre le même produit que `qr.tigertag.io/p/2673739332`. Un lecteur n'imprime ni n'enregistre jamais le préfixe : une étiquette ou un export fait depuis un lien partagé porte le lien nu. Le lien partagé est `qr.tigertag.io/fr/p/2673739332` ; le QR code contient toujours `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
 ### Retrouver la bobine
 

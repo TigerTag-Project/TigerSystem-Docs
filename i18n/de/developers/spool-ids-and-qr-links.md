@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -214,6 +214,8 @@ https://qr.tigertag.io/<lang>/p/<id_product>
 - **Gedruckte Etiketten tragen nie ein Präfix**: Sie bleiben sprachneutral. Nur
   die Teilen-Buttons fügen eines hinzu (heute tigersystem.io, Tiger Studio mit
   seiner nächsten Version).
+
+**Leser entfernen es.** Ein Leser, der einen Link erhält (das Einfügefeld in Studio, der Scanner oder das Einfügefeld der mobilen App, jeder Leser von Dritten), entfernt zuerst ein führendes `<lang>/`, unabhängig von Groß- und Kleinschreibung, und liest den Rest dann wie oben: `qr.tigertag.io/fr/p/2673739332` öffnet dasselbe Produkt wie `qr.tigertag.io/p/2673739332`. Ein Leser druckt oder speichert das Präfix nie: Ein Etikett oder Export aus einem geteilten Link trägt den Link ohne Präfix. Der geteilte Link ist `qr.tigertag.io/fr/p/2673739332`; der QR-Code enthält immer `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
 ### Die Spule auflösen
 

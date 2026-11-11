@@ -1,5 +1,5 @@
 ---
-sourceHash: 8f3729a58b750a5ca05bad05ccb548d713f943b3d6a0998081b4964be6a60e11
+sourceHash: 4346ea482dd22fa02ae6605194d55e61bef9d97d70ecddeb8fe51412e4817943
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -213,6 +213,8 @@ znaczenia.
 - **Drukowane etykiety nigdy nie mają prefiksu**: pozostają neutralne
   językowo. Dodają go tylko przyciski Udostępnij (dziś tigersystem.io, Tiger
   Studio w następnej wersji).
+
+**Czytniki go usuwają.** Czytnik, który dostaje link (pole wklejania w Studio, skaner lub pole wklejania aplikacji mobilnej, dowolny czytnik zewnętrzny), najpierw usuwa jeden początkowy `<lang>/`, bez względu na wielkość liter, a potem odczytuje resztę jak wyżej: `qr.tigertag.io/fr/p/2673739332` otwiera ten sam produkt co `qr.tigertag.io/p/2673739332`. Czytnik nigdy nie drukuje ani nie zapisuje prefiksu: etykieta lub eksport z udostępnionego linku zawiera link bez prefiksu. Udostępniany link to `qr.tigertag.io/fr/p/2673739332`; kod QR zawsze zawiera `qr.tigertag.io/p/2673739332`. *(2026-11-11.)*
 
 ### Odnajdywanie szpuli
 
