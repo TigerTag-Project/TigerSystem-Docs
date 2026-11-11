@@ -1,5 +1,5 @@
 ---
-sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
+sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -130,7 +130,7 @@ minúsculas, ignoram uma `/` final e o resolvem pelo seu formato:
 | 10 dígitos | `TigerData_<10 digits>` |
 | 14 caracteres hexadecimais | o UID, em maiúsculas |
 | 13 caracteres hexadecimais começando com `4` | um UID NTAG truncado: `0` + os 13 caracteres ([regra de reparo](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 caracteres hexadecimais | um produto — [seção 5](#5-links-de-produto) |
+| `p/` + 8 caracteres hexadecimais (forma impressa), ou o `id_product` decimal | um produto — [seção 5](#5-links-de-produto) |
 
 Uma terminação `.JSON` ou `.TTAG` pede a resposta para ferramentas — [seção 6](#6-respostas-json-e-ttag).
 
@@ -272,8 +272,7 @@ https://qr.tigertag.io/p/<id_product>
   firmware ou um leitor NFC monte o link sem conversão. Exemplo: produto
   `2855882328` → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** módulos.
 - A forma decimal fica onde as pessoas veem o número — o catálogo
-  (`tigersystem.io/<lang>/catalog/2855882328`), um código de barras Code 128 — e
-  nunca entra em um link `qr.tigertag.io`.
+  (`tigersystem.io/<lang>/catalog/2855882328`), um código de barras Code 128 — e nunca é impressa em um link `qr.tigertag.io`, embora um leitor também a aceite ali (veja abaixo).
 - Um id que não está, ou não está mais, no catálogo — `p/00000000` e
   `p/ffffffff` (“sem produto”, nunca impressos), um id desconhecido, um produto
   arquivado, excluído ou mesclado — abre **uma única página de “produto
@@ -287,6 +286,30 @@ https://qr.tigertag.io/p/<id_product>
   `.JSON` e `.TTAG` são rotas da API do Hub que leem o catálogo (em cache).
 - Uma etiqueta de bobina nunca repete o seu produto: o link da bobina já leva a
   ele ([seção 3](#resolver-a-bobina)).
+
+### Ler um link de produto
+
+Um link de produto é sempre **impresso** em hexadecimal. Na **leitura**, o
+`id_product` decimal também funciona: `p/2673739332` abre o mesmo produto que
+`p/9f5e0644`. O que vem depois de `p/` é lido assim, sem diferenciar
+maiúsculas de minúsculas:
+
+1. 8 caracteres `0-9` / `a-f` com pelo menos uma letra → hexadecimal.
+2. Exatamente 8 dígitos → primeiro hexadecimal, porque é a forma de toda
+   etiqueta impressa; se esse produto não estiver no catálogo, o servidor o lê
+   de novo em decimal. Um leitor offline guarda as duas leituras e fica com a
+   que o seu catálogo conhece.
+3. De 1 a 10 dígitos de outro comprimento → decimal, quando o valor é menor que
+   2³² (`p/2673739332` = `p/9f5e0644`); acima disso, o link é desconhecido.
+4. `0` e `4294967295`, em qualquer das formas (`p/00000000`,
+   `p/ffffffff`), significam "sem produto" (`404`).
+5. As terminações `.json` e `.ttag` funcionam nas duas formas, sem
+   diferenciar maiúsculas de minúsculas.
+
+Por que primeiro hexadecimal com 8 dígitos: 442 produtos reais têm um id decimal
+de 8 dígitos. Hoje nenhuma das duas leituras cai em outro produto, mas ler
+primeiro em hexadecimal garante que cada etiqueta impressa abra o seu próprio
+produto.
 
 ### A página que ele abre
 

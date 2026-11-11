@@ -1,5 +1,5 @@
 ---
-sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
+sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -133,7 +133,7 @@ e minuscole, ignorano una `/` finale e lo risolvono in base alla sua forma:
 | 10 cifre | `TigerData_<10 digits>` |
 | 14 caratteri esadecimali | l'UID, in maiuscolo |
 | 13 caratteri esadecimali che iniziano con `4` | un UID NTAG troncato: `0` + i 13 caratteri ([regola di riparazione](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 caratteri esadecimali | un prodotto — [sezione 5](#5-link-dei-prodotti) |
+| `p/` + 8 caratteri esadecimali (forma stampata), o l'`id_product` decimale | un prodotto — [sezione 5](#5-link-dei-prodotti) |
 
 Una terminazione `.JSON` o `.TTAG` chiede la risposta per gli strumenti — [sezione 6](#6-risposte-json-e-ttag).
 
@@ -279,8 +279,7 @@ https://qr.tigertag.io/p/<id_product>
   prodotto `2855882328` → `https://qr.tigertag.io/p/aa394e58`, **29 × 29**
   moduli.
 - La forma decimale resta dove le persone vedono il numero — il catalogo
-  (`tigersystem.io/<lang>/catalog/2855882328`), un codice a barre Code 128 — e
-  non entra mai in un link `qr.tigertag.io`.
+  (`tigersystem.io/<lang>/catalog/2855882328`), un codice a barre Code 128 — e non viene mai stampata in un link `qr.tigertag.io`, anche se un lettore la accetta anche lì (vedi sotto).
 - Un id che non è, o non è più, nel catalogo — `p/00000000` e `p/ffffffff`
   («nessun prodotto», mai stampati), un id sconosciuto, un prodotto archiviato,
   eliminato o unito — apre **un'unica pagina di «prodotto dimenticato»**: questo
@@ -295,6 +294,29 @@ https://qr.tigertag.io/p/<id_product>
   cache).
 - Un'etichetta di bobina non ripete mai il suo prodotto: il link della bobina vi
   conduce già ([sezione 3](#risolvere-la-bobina)).
+
+### Leggere un link di prodotto
+
+Un link di prodotto è sempre **stampato** in esadecimale. In **lettura** funziona
+anche l'`id_product` decimale: `p/2673739332` apre lo stesso prodotto di
+`p/9f5e0644`. Ciò che segue `p/` si legge così, senza distinzione tra
+maiuscole e minuscole:
+
+1. 8 caratteri `0-9` / `a-f` con almeno una lettera → esadecimale.
+2. Esattamente 8 cifre → prima esadecimale, perché è la forma di ogni etichetta
+   stampata; se quel prodotto non è nel catalogo, il server lo rilegge in
+   decimale. Un lettore offline tiene entrambe le letture e prende quella che il
+   suo catalogo conosce.
+3. Da 1 a 10 cifre di un'altra lunghezza → decimale, quando il valore è sotto
+   2³² (`p/2673739332` = `p/9f5e0644`); oltre, il link è sconosciuto.
+4. `0` e `4294967295`, in entrambe le forme (`p/00000000`, `p/ffffffff`),
+   significano «nessun prodotto» (`404`).
+5. Le terminazioni `.json` e `.ttag` funzionano su entrambe le forme, senza
+   distinzione tra maiuscole e minuscole.
+
+Perché prima l'esadecimale con 8 cifre: 442 prodotti reali hanno un id decimale
+di 8 cifre. Oggi nessuna delle due letture porta a un altro prodotto, ma leggere
+prima in esadecimale garantisce che ogni etichetta stampata apra il suo prodotto.
 
 ### La pagina che apre
 

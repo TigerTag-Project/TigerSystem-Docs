@@ -1,5 +1,5 @@
 ---
-sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
+sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -131,7 +131,7 @@ kleine letters, negeren een afsluitende `/` en lossen het op naar zijn vorm:
 | 10 cijfers | `TigerData_<10 digits>` |
 | 14 hextekens | de UID, in hoofdletters |
 | 13 hextekens die beginnen met `4` | een afgekapte NTAG-UID: `0` + de 13 tekens ([herstelregel](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 hextekens | een product — [sectie 5](#5-productlinks) |
+| `p/` + 8 hextekens (gedrukte vorm), of de decimale `id_product` | een product — [sectie 5](#5-productlinks) |
 
 Een uitgang `.JSON` of `.TTAG` vraagt om het antwoord voor tools — [sectie 6](#6-json--en-ttag-antwoorden).
 
@@ -274,8 +274,7 @@ https://qr.tigertag.io/p/<id_product>
   firmware of een NFC-lezer de link zonder omrekenen bouwt. Voorbeeld: product
   `2855882328` → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
 - De decimale vorm blijft waar mensen het getal zien — de catalogus
-  (`tigersystem.io/<lang>/catalog/2855882328`), een Code 128-barcode — en komt
-  nooit in een `qr.tigertag.io`-link.
+  (`tigersystem.io/<lang>/catalog/2855882328`), een Code 128-barcode — en wordt nooit in een `qr.tigertag.io`-link gedrukt, al accepteert een lezer hem daar ook (zie hieronder).
 - Een id dat niet, of niet meer, in de catalogus staat — `p/00000000` en
   `p/ffffffff` („geen product”, nooit geprint), een onbekend id, een
   gearchiveerd, verwijderd of samengevoegd product — opent **één enkele pagina
@@ -290,6 +289,29 @@ https://qr.tigertag.io/p/<id_product>
   (gecachet).
 - Een spoellabel herhaalt nooit zijn product: de spoellink leidt er al naartoe
   ([sectie 3](#de-spoel-opzoeken)).
+
+### Een productlink lezen
+
+Een productlink wordt altijd hexadecimaal **gedrukt**. Bij het **lezen** werkt
+ook de decimale `id_product`: `p/2673739332` opent hetzelfde product als
+`p/9f5e0644`. Wat na `p/` komt, wordt zo gelezen, ongeacht hoofdletters:
+
+1. 8 tekens `0-9` / `a-f` met minstens één letter → hexadecimaal.
+2. Precies 8 cijfers → eerst hexadecimaal, want dat is de vorm van elk gedrukt
+   label; staat dat product niet in de catalogus, dan leest de server het
+   opnieuw als decimaal. Een offline lezer houdt beide lezingen en neemt de
+   lezing die zijn catalogus kent.
+3. 1 tot 10 cijfers van een andere lengte → decimaal, als de waarde onder 2³²
+   ligt (`p/2673739332` = `p/9f5e0644`); daarboven is de link onbekend.
+4. `0` en `4294967295` betekenen in beide vormen (`p/00000000`,
+   `p/ffffffff`) "geen product" (`404`).
+5. De uitgangen `.json` en `.ttag` werken op beide vormen, ongeacht
+   hoofdletters.
+
+Waarom eerst hexadecimaal bij 8 cijfers: 442 echte producten hebben een decimale
+id van 8 cijfers. Vandaag komt geen van beide lezingen bij een ander product uit,
+maar eerst hexadecimaal lezen zorgt ervoor dat elk gedrukt label zijn eigen
+product opent.
 
 ### De pagina die hij opent
 

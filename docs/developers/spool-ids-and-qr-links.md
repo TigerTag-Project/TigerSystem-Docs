@@ -122,7 +122,7 @@ needs the website. They read the path case-insensitively, ignore a trailing
 | 10 digits | `TigerData_<10 digits>` |
 | 14 hex characters | the UID, uppercased |
 | 13 hex characters starting with `4` | a truncated NTAG UID: `0` + the 13 characters ([repair rule](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 hex characters | a product — [section 5](#5-product-links) |
+| `p/` + 8 hex characters (as printed), or the decimal `id_product` | a product — [section 5](#5-product-links) |
 
 A `.JSON` or `.TTAG` ending asks for the answer for tools — [section 6](#6-json-and-ttag-answers).
 
@@ -255,8 +255,7 @@ https://qr.tigertag.io/p/<id_product>
   reader builds the link without converting. Example: product `2855882328`
   → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modules.
 - The decimal form stays where people see the number — the catalogue
-  (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and never
-  goes into a `qr.tigertag.io` link.
+  (`tigersystem.io/<lang>/catalog/2855882328`), a Code 128 barcode — and is never printed in a `qr.tigertag.io` link, though a reader accepts it there too (below).
 - An id that is not, or no longer, in the catalogue — `p/00000000` and
   `p/ffffffff` ("no product", never printed), an unknown id, a product archived,
   deleted or merged — opens **one "forgotten product" page**: this filament is no
@@ -270,6 +269,27 @@ https://qr.tigertag.io/p/<id_product>
   (cached).
 - A spool label never repeats its product: the spool link already leads to it
   ([section 3](#resolving-the-spool)).
+
+### Reading a product link
+
+A product link is always **printed** in hexadecimal. When **reading** one, the
+decimal `id_product` works too: `p/2673739332` opens the same product as
+`p/9f5e0644`. What follows `p/` is read like this, in any case:
+
+1. 8 characters `0-9` / `a-f` with at least one letter → hexadecimal.
+2. Exactly 8 digits → hexadecimal first, since that is the shape of every printed
+   label; if that product is not in the catalogue, the server reads it again as
+   decimal. An offline reader keeps both readings and takes the one its
+   catalogue knows.
+3. 1 to 10 digits of any other length → decimal, when the value is below 2³²
+   (`p/2673739332` = `p/9f5e0644`); above that, the link is unknown.
+4. `0` and `4294967295`, in either form (`p/00000000`, `p/ffffffff`), mean
+   "no product" (`404`).
+5. The `.json` and `.ttag` endings work on both forms, in any case.
+
+Why hexadecimal first for 8 digits: 442 real products have an 8-digit decimal
+id. Today neither reading of them lands on another product, but reading
+hexadecimal first keeps every printed label opening its own product.
 
 ### The page it opens
 

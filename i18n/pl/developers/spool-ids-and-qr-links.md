@@ -1,5 +1,5 @@
 ---
-sourceHash: ec444b4414fc4527f1fb6601c3d44674c5d4fe522a1f72217fb72c92d715eebe
+sourceHash: eab1adc3f872d4b5582c9b4268b736ced3e4e09c765932e0c738f989d8097836
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -131,7 +131,7 @@ kształtu:
 | 10 cyfr | `TigerData_<10 digits>` |
 | 14 znaków szesnastkowych | UID, wielkimi literami |
 | 13 znaków szesnastkowych zaczynających się od `4` | obcięty UID NTAG: `0` + 13 znaków ([reguła naprawy](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/issues/146)) |
-| `p/` + 8 znaków szesnastkowych | produkt — [sekcja 5](#5-linki-produktów) |
+| `p/` + 8 znaków szesnastkowych (postać drukowana) lub dziesiętny `id_product` | produkt — [sekcja 5](#5-linki-produktów) |
 
 Końcówka `.JSON` lub `.TTAG` prosi o odpowiedź dla narzędzi — [sekcja 6](#6-odpowiedzi-json-i-ttag).
 
@@ -272,8 +272,7 @@ https://qr.tigertag.io/p/<id_product>
   lub czytnik NFC budował link bez konwersji. Przykład: produkt `2855882328`
   → `https://qr.tigertag.io/p/aa394e58`, **29 × 29** modułów.
 - Forma dziesiętna zostaje tam, gdzie ludzie widzą liczbę — w katalogu
-  (`tigersystem.io/<lang>/catalog/2855882328`), w kodzie kreskowym Code 128 — i
-  nigdy nie trafia do linku `qr.tigertag.io`.
+  (`tigersystem.io/<lang>/catalog/2855882328`), w kodzie kreskowym Code 128 — i nigdy nie jest drukowana w linku `qr.tigertag.io`, choć czytnik akceptuje ją tam również (patrz niżej).
 - Identyfikator, którego nie ma lub już nie ma w katalogu — `p/00000000` i
   `p/ffffffff` („brak produktu”, nigdy nie drukowane), nieznany identyfikator,
   produkt zarchiwizowany, usunięty lub scalony — otwiera **jedną stronę
@@ -287,6 +286,30 @@ https://qr.tigertag.io/p/<id_product>
   `.TTAG` to trasy API Huba, które czytają katalog (z pamięci podręcznej).
 - Etykieta szpuli nigdy nie powtarza swojego produktu: link szpuli już do niego
   prowadzi ([sekcja 3](#odnajdywanie-szpuli)).
+
+### Odczyt linku produktu
+
+Link produktu jest zawsze **drukowany** szesnastkowo. Przy **odczycie** działa też
+dziesiętny `id_product`: `p/2673739332` otwiera ten sam produkt co
+`p/9f5e0644`. To, co następuje po `p/`, odczytuje się tak, bez względu na
+wielkość liter:
+
+1. 8 znaków `0-9` / `a-f` z co najmniej jedną literą → szesnastkowo.
+2. Dokładnie 8 cyfr → najpierw szesnastkowo, bo taką postać ma każda
+   wydrukowana etykieta; jeśli tego produktu nie ma w katalogu, serwer odczytuje
+   je ponownie dziesiętnie. Czytnik offline zachowuje oba odczyty i bierze ten,
+   który zna jego katalog.
+3. Od 1 do 10 cyfr innej długości → dziesiętnie, gdy wartość jest mniejsza niż
+   2³² (`p/2673739332` = `p/9f5e0644`); powyżej link jest nieznany.
+4. `0` i `4294967295` w obu postaciach (`p/00000000`, `p/ffffffff`)
+   oznaczają „brak produktu” (`404`).
+5. Końcówki `.json` i `.ttag` działają w obu postaciach, bez względu na
+   wielkość liter.
+
+Dlaczego najpierw szesnastkowo przy 8 cyfrach: 442 prawdziwe produkty mają
+dziesiętny identyfikator z 8 cyfr. Dziś żaden z dwóch odczytów nie trafia na inny
+produkt, ale odczyt najpierw szesnastkowy gwarantuje, że każda wydrukowana
+etykieta otwiera własny produkt.
 
 ### Strona, którą otwiera
 
