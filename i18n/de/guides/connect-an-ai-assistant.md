@@ -1,5 +1,5 @@
 ---
-sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
+sourceHash: ce7797639f045c9154227cdd8686b647e174f7ddf43143ca72b59c143690f412
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
@@ -7,7 +7,7 @@ sourcePath: docs/guides/connect-an-ai-assistant.md
 
 Frag Claude oder ChatGPT „Wie viel PETG habe ich noch?“ und bekomme die Antwort aus
 deinem eigenen Bestand. Der TigerSystem.io-Connector lässt einen KI-Assistenten dein
-TigerSystem-Konto **lesen** – nicht mehr. Es ist dieselbe Idee wie der lokale Server in
+TigerSystem-Konto lesen und, wenn du es erlaubst, darin Änderungen vornehmen. Es ist dieselbe Idee wie der lokale Server in
 Tiger Studio, aber gehostet: Er funktioniert vom Web, vom Handy und ohne laufendes
 Studio.
 
@@ -21,6 +21,11 @@ Er spricht MCP (Model Context Protocol), den offenen Standard, mit dem Assistent
 externe Tools erreichen. Jeder Assistent, der Remote-MCP-Server mit OAuth unterstützt,
 kann ihn nutzen.
 
+**Für Mitglieder der TigerSquad.** Der Connector, Lesen inbegriffen, ist ein
+Vorteil der [TigerSquad](../tigersquad.md), und der Beitritt ist kostenlos. Außerhalb der
+TigerSquad antwortet der Assistent, dass es ein TigerSquad-Vorteil ist; der
+Zugang kommt zurück, sobald du beitrittst.
+
 ## Was der Assistent lesen kann
 
 - deine Spulen: Marke, Material, Farben, Restgewicht, Temperaturen, wo jede
@@ -29,10 +34,36 @@ kann ihn nutzen.
 - deine Drucker und deine TigerScales – **nie deren Zugangscodes oder Passwörter**;
 - was deine Freunde mit dir teilen (ihre Spulen, Racks und Wunschlisten).
 
-Er **kann nichts ändern**: Jedes Tool ist schreibgeschützt. Er liest als du, unter
+Er liest nur, es sei denn, du gibst ihm Lesen und Schreiben (siehe unten). Er liest als du, unter
 denselben Zugriffsregeln wie die Apps, sodass er nie ein anderes Konto sehen kann.
 Zugangsdaten – Zugangscodes von Druckern, Cloud-Logins, dein privater Schlüssel, deine
 E-Mail – werden nie zurückgegeben, was er auch verlangt.
+
+## Nur lesen, oder lesen und schreiben
+
+Wenn du einen Assistenten verbindest, fragt die Seite von tigersystem.io nach
+seinem Zugang: **Nur lesen** (Standard) oder **Lesen und schreiben**. Später
+änderst du ihn unter **tigersystem.io → dein Konto → Data → Connected
+assistants** oder in Tiger Studio unter **Zugriffe verwalten**. Nach dem Wechsel
+zu Lesen und schreiben aktualisiere den Connector im Assistenten oder verbinde
+ihn neu, damit er seine neuen Tools sieht.
+
+Mit Lesen und schreiben kann der Assistent:
+
+- Gewicht, Notiz, TD und Tags einer Spule ändern und sie in ein Rack einräumen;
+- Preis, Kauflink, Mindestbestand, SKU / EAN und Links eines Produkts ändern;
+- Spulen aus dem Katalog hinzufügen;
+- ein Rack anlegen und eines umbenennen;
+- seine Änderungen auflisten und jede davon rückgängig machen.
+
+Er löscht nie etwas: Eine leere Spule geht auf 0 g. Jede Änderung wird 30 Tage
+in einem Verlauf aufbewahrt und kann rückgängig gemacht werden. Notiz und TD
+stehen auch auf dem Chip, die Spule braucht danach also ein Neuschreiben ihres
+Chips.
+
+Grenzen: 20 Spulen pro Anfrage; pro Tag (UTC) 100 neue Spulen, 5 neue Racks und
+insgesamt 500 Änderungen, der Assistent von Tiger Studio und die Online-Assistenten
+zusammen gezählt, rückgängig gemachte Änderungen inbegriffen.
 
 ## Claude (Web, Desktop, Mobil)
 

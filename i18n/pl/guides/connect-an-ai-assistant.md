@@ -1,13 +1,13 @@
 ---
-sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
+sourceHash: ce7797639f045c9154227cdd8686b647e174f7ddf43143ca72b59c143690f412
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
 # Połącz asystenta AI ze swoim kontem
 
 Zapytaj Claude lub ChatGPT „ile PETG mi zostało?” i otrzymaj odpowiedź z własnego
-magazynu. Konektor TigerSystem.io pozwala asystentowi AI **czytać** twoje konto
-TigerSystem — nic więcej. To ten sam pomysł co lokalny serwer w Tiger
+magazynu. Konektor TigerSystem.io pozwala asystentowi AI czytać twoje konto
+TigerSystem i, jeśli na to pozwolisz, wprowadzać w nim zmiany. To ten sam pomysł co lokalny serwer w Tiger
 Studio, tylko hostowany: działa z przeglądarki, z telefonu i bez uruchomionego
 Studio.
 
@@ -20,6 +20,10 @@ https://mcp.tigersystem.io/mcp
 Mówi protokołem MCP (Model Context Protocol), otwartym standardem, którym asystenci
 sięgają po zewnętrzne narzędzia. Korzystać z niego może każdy asystent obsługujący zdalne serwery MCP z OAuth.
 
+**Dla członków TigerSquad.** Konektor, łącznie z odczytem, jest przywilejem
+[TigerSquad](../tigersquad.md), a dołączenie jest bezpłatne. Poza TigerSquad asystent
+odpowiada, że to przywilej TigerSquad; dostęp wraca, gdy tylko dołączysz.
+
 ## Co asystent może czytać
 
 - twoje szpule: marka, materiał, kolory, pozostała masa, temperatury, miejsce
@@ -28,10 +32,34 @@ sięgają po zewnętrzne narzędzia. Korzystać z niego może każdy asystent ob
 - twoje drukarki i wagi TigerScale — **nigdy ich kodów dostępu ani haseł**;
 - to, co znajomi ci udostępniają (ich szpule, regały i listy życzeń).
 
-**Nie może niczego zmieniać**: każde narzędzie jest tylko do odczytu. Czyta jako ty, na tych samych
+Tylko czyta, chyba że dasz mu odczyt i zapis (patrz niżej). Czyta jako ty, na tych samych
 zasadach dostępu co aplikacje, więc nigdy nie zobaczy innego konta.
 Dane uwierzytelniające — kody dostępu do drukarek, loginy do chmury, twój klucz prywatny, twój
 e-mail — nigdy nie są zwracane, o cokolwiek poprosi.
+
+## Tylko odczyt, albo odczyt i zapis
+
+Gdy łączysz asystenta, strona tigersystem.io pyta o jego dostęp: **Tylko odczyt**
+(domyślnie) albo **Odczyt i zapis**. Aby zmienić go później:
+**tigersystem.io → twoje konto → Dane → Połączeni asystenci** albo w Tiger
+Studio **Zarządzaj dostępem**. Po przejściu na odczyt i zapis odśwież konektor
+w asystencie lub połącz go ponownie, aby zobaczył nowe narzędzia.
+
+Z odczytem i zapisem asystent może:
+
+- zmienić masę, notatkę, TD i tagi szpuli oraz odłożyć ją na regał;
+- zmienić cenę, link zakupu, minimalny stan, SKU / EAN i linki produktu;
+- dodać szpule z katalogu;
+- utworzyć regał i zmienić nazwę regału;
+- wypisać zmiany, które wprowadził, i cofnąć dowolną z nich.
+
+Nigdy niczego nie usuwa: zużyta szpula przechodzi na 0 g. Każda zmiana jest
+przechowywana w historii przez 30 dni i można ją cofnąć. Notatka i TD są też
+zapisywane na chipie, więc szpula wymaga potem ponownego zapisania chipa.
+
+Limity: 20 szpul na prośbę; dziennie (UTC) 100 nowych szpul, 5 nowych regałów
+i łącznie 500 zmian, liczonych razem dla asystenta Tiger Studio i asystentów
+online, łącznie ze zmianami cofniętymi.
 
 ## Claude (web, desktop, mobile)
 

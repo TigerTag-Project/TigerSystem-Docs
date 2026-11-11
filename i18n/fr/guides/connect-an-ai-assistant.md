@@ -1,5 +1,5 @@
 ---
-sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
+sourceHash: ce7797639f045c9154227cdd8686b647e174f7ddf43143ca72b59c143690f412
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
@@ -7,7 +7,7 @@ sourcePath: docs/guides/connect-an-ai-assistant.md
 
 Demandez à Claude ou à ChatGPT « combien de PETG il me reste ? » et obtenez la
 réponse depuis votre propre inventaire. Le connecteur TigerSystem.io permet à un
-assistant IA de **lire** votre compte TigerSystem — rien de plus. C'est la même idée que le
+assistant IA de lire votre compte TigerSystem et, si vous l'autorisez, d'y faire des modifications. C'est la même idée que le
 serveur local de Tiger Studio, mais hébergée : ça marche depuis le web, depuis
 un téléphone, et sans que Studio soit ouvert.
 
@@ -21,6 +21,11 @@ Il parle MCP (Model Context Protocol), le standard ouvert que les assistants
 utilisent pour accéder à des outils externes. Tout assistant qui gère les
 serveurs MCP distants avec OAuth peut l'utiliser.
 
+**Réservé aux membres de la TigerSquad.** Le connecteur, lecture comprise, est
+un avantage [TigerSquad](../tigersquad.md), et l'adhésion est gratuite. Hors TigerSquad,
+l'assistant répond que c'est un avantage TigerSquad ; l'accès revient dès que
+vous la rejoignez.
+
 ## Ce que l'assistant peut lire
 
 - vos bobines : marque, matière, couleurs, poids restant, températures, et où
@@ -29,11 +34,36 @@ serveurs MCP distants avec OAuth peut l'utiliser.
 - vos imprimantes et vos TigerScales — **jamais leurs codes d'accès ni mots de passe** ;
 - ce que vos amis partagent avec vous (leurs bobines, racks et listes d'envies).
 
-Il **ne peut rien modifier** : chaque outil est en lecture seule. Il lit en
+Il ne fait que lire, sauf si vous lui donnez la lecture et l'écriture (voir plus bas). Il lit en
 votre nom, avec les mêmes règles d'accès que les apps, donc il ne voit jamais
 un autre compte. Les identifiants — codes d'accès des imprimantes, connexions
 cloud, votre clé privée, votre e-mail — ne sont jamais renvoyés, quoi qu'il
 demande.
+
+## Lecture seule, ou lecture et écriture
+
+Quand vous connectez un assistant, la page de tigersystem.io demande son accès :
+**Lecture seule** (par défaut) ou **Lecture et écriture**. Pour le changer
+ensuite : **tigersystem.io → votre compte → Données → Assistants connectés**, ou
+dans Tiger Studio, **Gérer les accès**. Après un passage en lecture et écriture,
+actualisez ou reconnectez le connecteur dans l'assistant pour qu'il voie ses
+nouveaux outils.
+
+En lecture et écriture, l'assistant peut :
+
+- changer le poids, la note, le TD et les tags d'une bobine, et la ranger dans un rack ;
+- modifier le prix, le lien d'achat, le stock minimum, le SKU / EAN et les liens d'un produit ;
+- ajouter des bobines depuis le catalogue ;
+- créer un rack, et en renommer un ;
+- lister les modifications qu'il a faites, et annuler n'importe laquelle.
+
+Il ne supprime jamais rien : une bobine finie passe à 0 g. Chaque modification
+est gardée 30 jours dans un historique et peut être annulée. La note et le TD
+sont aussi écrits sur la puce : la bobine demande alors de réécrire sa puce.
+
+Limites : 20 bobines par demande ; par jour (UTC), 100 nouvelles bobines,
+5 nouveaux racks et 500 modifications en tout, l'assistant de Tiger Studio et les
+assistants en ligne comptés ensemble, modifications annulées comprises.
 
 ## Claude (web, bureau, mobile)
 

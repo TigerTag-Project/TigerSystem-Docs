@@ -1,5 +1,5 @@
 ---
-sourceHash: e67e9a1f7c1b5875001868a32d82d49a6fc2fbfd789bf0823a07c43531d8eea4
+sourceHash: ce7797639f045c9154227cdd8686b647e174f7ddf43143ca72b59c143690f412
 sourcePath: docs/guides/connect-an-ai-assistant.md
 ---
 
@@ -7,7 +7,7 @@ sourcePath: docs/guides/connect-an-ai-assistant.md
 
 Vraag aan Claude of ChatGPT “hoeveel PETG heb ik nog?” en krijg het antwoord uit
 je eigen inventaris. Met de TigerSystem.io-connector kan een AI-assistent je
-TigerSystem-account **lezen** — meer niet. Het is hetzelfde idee als de lokale server in Tiger
+TigerSystem-account lezen en, als je dat toestaat, er wijzigingen in maken. Het is hetzelfde idee als de lokale server in Tiger
 Studio, maar dan gehost: hij werkt vanaf het web, vanaf een telefoon en zonder dat Studio
 draait.
 
@@ -21,6 +21,11 @@ Hij spreekt MCP (Model Context Protocol), de open standaard waarmee assistenten
 externe tools bereiken. Elke assistent die externe MCP-servers met OAuth
 ondersteunt, kan hem gebruiken.
 
+**Voor leden van de TigerSquad.** De connector, lezen inbegrepen, is een voordeel
+van de [TigerSquad](../tigersquad.md), en lid worden is gratis. Buiten de TigerSquad
+antwoordt de assistent dat het een TigerSquad-voordeel is; de toegang komt terug
+zodra je lid wordt.
+
 ## Wat de assistent kan lezen
 
 - je spoelen: merk, materiaal, kleuren, resterend gewicht, temperaturen, waar elke
@@ -29,10 +34,35 @@ ondersteunt, kan hem gebruiken.
 - je printers en je TigerScales — **nooit hun toegangscodes of wachtwoorden**;
 - wat je vrienden met je delen (hun spoelen, racks en verlanglijsten).
 
-Hij **kan niets wijzigen**: elke tool is alleen-lezen. Hij leest als jij, onder
+Hij leest alleen, tenzij je hem lezen en schrijven geeft (zie hieronder). Hij leest als jij, onder
 dezelfde toegangsregels als de apps, dus hij kan nooit een ander account zien.
 Inloggegevens — toegangscodes van printers, cloudlogins, je privésleutel, je
 e-mailadres — worden nooit teruggegeven, wat hij ook vraagt.
+
+## Alleen lezen, of lezen en schrijven
+
+Als je een assistent koppelt, vraagt de pagina van tigersystem.io om zijn
+toegang: **Alleen lezen** (standaard) of **Lezen en schrijven**. Later wijzigen:
+**tigersystem.io → je account → Data → Connected assistants**, of in Tiger
+Studio, **Toegang beheren**. Na de overstap naar lezen en schrijven ververs je de
+connector in de assistent of koppel je hem opnieuw, zodat hij zijn nieuwe tools
+ziet.
+
+Met lezen en schrijven kan de assistent:
+
+- het gewicht, de notitie, de TD en de tags van een spoel wijzigen, en hem in een rack zetten;
+- de prijs, de kooplink, de minimumvoorraad, de SKU / EAN en de links van een product wijzigen;
+- spoelen uit de catalogus toevoegen;
+- een rack aanmaken, en er een hernoemen;
+- de wijzigingen die hij maakte opsommen, en elke ervan ongedaan maken.
+
+Hij verwijdert nooit iets: een lege spoel gaat naar 0 g. Elke wijziging blijft 30
+dagen in een geschiedenis en kan ongedaan worden gemaakt. Notitie en TD staan ook
+op de chip, dus de spoel moet daarna zijn chip opnieuw laten schrijven.
+
+Limieten: 20 spoelen per verzoek; per dag (UTC) 100 nieuwe spoelen, 5 nieuwe
+racks en 500 wijzigingen in totaal, de assistent van Tiger Studio en de online
+assistenten samen geteld, ongedaan gemaakte wijzigingen inbegrepen.
 
 ## Claude (web, desktop, mobiel)
 

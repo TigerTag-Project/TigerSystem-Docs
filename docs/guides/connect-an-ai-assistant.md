@@ -1,8 +1,7 @@
 # Connect an AI assistant to your account
 
 Ask Claude or ChatGPT "how much PETG do I have left?" and get the answer from
-your own inventory. The TigerSystem.io connector lets an AI assistant **read** your
-TigerSystem account — nothing more. It is the same idea as the local server in Tiger
+your own inventory. The TigerSystem.io connector lets an AI assistant read your TigerSystem account and, if you allow it, make changes in it. It is the same idea as the local server in Tiger
 Studio, but hosted: it works from the web, from a phone, and without Studio
 running.
 
@@ -16,6 +15,10 @@ It speaks MCP (Model Context Protocol), the open standard assistants use to
 reach outside tools. Any assistant that supports remote MCP servers with OAuth
 can use it.
 
+**For TigerSquad members.** The connector, reading included, is a [TigerSquad](../tigersquad.md)
+perk, and joining is free. Outside the TigerSquad, the assistant answers that it
+is a TigerSquad perk; access comes back as soon as you join.
+
 ## What the assistant can read
 
 - your spools: brand, material, colours, weight left, temperatures, where each
@@ -24,10 +27,34 @@ can use it.
 - your printers and your TigerScales — **never their access codes or passwords**;
 - what your friends share with you (their spools, racks and wishlists).
 
-It **cannot change anything**: every tool is read-only. It reads as you, under
+It only reads, unless you give it read & write (see below). It reads as you, under
 the same access rules as the apps, so it can never see another account.
 Credentials — printer access codes, cloud logins, your private key, your
 e-mail — are never returned, whatever it asks.
+
+## Read only, or read & write
+
+When you connect an assistant, the tigersystem.io page asks for its access:
+**Read only** (the default) or **Read & write**. To change it later:
+**tigersystem.io → your account → Data → Connected assistants**, or in Tiger
+Studio, **Manage access**. After switching to read & write, refresh or reconnect
+the connector in the assistant so it sees its new tools.
+
+With read & write, the assistant can:
+
+- change a spool's weight, note, TD and tags, and store it in a rack;
+- change a product's price, buy link, minimum stock, SKU / EAN and links;
+- add spools from the catalogue;
+- create a rack, and rename one;
+- list the changes it made, and undo any of them.
+
+It never deletes anything: a finished spool goes to 0 g. Every change is kept in
+a history for 30 days and can be undone. A note and a TD are also written on the
+chip, so the spool then needs its chip rewritten.
+
+Limits: 20 spools per request; per day (UTC), 100 new spools, 5 new racks and 500
+changes in all, counting Tiger Studio's assistant and online assistants together,
+undone changes included.
 
 ## Claude (web, desktop, mobile)
 
