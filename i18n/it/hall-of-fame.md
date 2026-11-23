@@ -1,5 +1,5 @@
 ---
-sourceHash: 47d5e6779fc1d6b45289756ec8ee5cace2022c8c7ea1812d3c4a4502be3f0e24
+sourceHash: a837713d45bbe2152178f22acf811cb8e17a7fc1caed76811e97209288edb26c
 sourcePath: docs/hall-of-fame.md
 ---
 
@@ -19,7 +19,7 @@ contributo, non una lamentela.
 
 | Chi | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 104 | 77 | 5 |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 116 | 83 | 4 |
 | **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 5 | 11 | 9 |
 | **[@suchmememanyskill](https://github.com/suchmememanyskill)** | 39 | — | — |
 | **[@RP3D-S](https://github.com/RP3D-S)** | 2 | 6 | 1 |
@@ -28,12 +28,12 @@ contributo, non una lamentela.
 | **[@BastiMila](https://github.com/BastiMila)** | — | 2 | — |
 | **[@storm8488](https://github.com/storm8488)** | 9 | — | — |
 | **[@physicsG](https://github.com/physicsG)** | 1 | — | 2 |
+| **[@ehran](https://github.com/ehran)** | — | — | 2 |
 | **[@dumdumbee](https://github.com/dumdumbee)** | — | — | 2 |
 | **[@sjordan0228](https://github.com/sjordan0228)** | — | — | 2 |
 | **[@craidos-beep](https://github.com/craidos-beep)** | — | 1 | — |
 | **[@mickadu57](https://github.com/mickadu57)** | — | 1 | — |
 | **[@clauzet-rgb](https://github.com/clauzet-rgb)** | — | 1 | — |
-| **[@TrueFurina](https://github.com/TrueFurina)** | — | 1 | — |
 | **[@sancho0410](https://github.com/sancho0410)** | — | 1 | — |
 | **[@hitman4274](https://github.com/hitman4274)** | — | — | 1 |
 | **[@neonlyte54-alt](https://github.com/neonlyte54-alt)** | — | — | 1 |
@@ -43,11 +43,11 @@ contributo, non una lamentela.
 | **[@jlperez-lab](https://github.com/jlperez-lab)** | — | — | 1 |
 | **[@ehernandez0619-blip](https://github.com/ehernandez0619-blip)** | — | — | 1 |
 | **[@elphield](https://github.com/elphield)** | — | — | 1 |
+| **[@slasgouzes](https://github.com/slasgouzes)** | — | — | 1 |
+| **[@cindyoberle-jpg](https://github.com/cindyoberle-jpg)** | — | — | 1 |
 | **[@Exsilium122](https://github.com/Exsilium122)** | — | — | 1 |
 | **[@jbast1224](https://github.com/jbast1224)** | — | — | 1 |
-| **[@ehran](https://github.com/ehran)** | — | — | 1 |
 | **[@juditech3D](https://github.com/juditech3D)** | — | — | 1 |
-| **[@wintry](https://github.com/wintry)** | — | — | 1 |
 | **[@Atome3D](https://github.com/Atome3D)** | 2 | — | — |
 | **[@thekakester](https://github.com/thekakester)** | 1 | — | — |
 | **[@liberodark](https://github.com/liberodark)** | 1 | — | — |
