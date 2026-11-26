@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -86,9 +86,9 @@ volgende synchronisatie.
 
 ## Welke printers
 
-**De zes merken die Tiger Studio integreert zijn gedekt** — geschreven en getest
-op hardware. Dat is niet elke printer op de markt, en *“elke printer”*
-blijft het doel; het is elk merk waarmee dit ecosysteem vandaag praat:
+**Zes printermerken zijn via het LAN gedekt** — geschreven
+en getest op hardware. Dat zijn niet alle printers op de markt, en *"elke
+printer"* blijft het doel:
 
 | Merk | Firmware | Transport |
 |---|---|---|
@@ -97,7 +97,13 @@ blijft het doel; het is elk merk waarmee dit ecosysteem vandaag praat:
 | [Bambu Lab](../compatibility/bambu-lab.md) | geïmplementeerd, bewezen | MQTT over TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | geïmplementeerd, bewezen | Moonraker over WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | geïmplementeerd, lezen bewezen — schrijven nog niet bevestigd op een printer | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | geïmplementeerd, lezen bewezen — schrijven nog niet bevestigd; alleen LAN-modus | MQTT over TLS |
+| [Anycubic](../compatibility/anycubic.md) | geïmplementeerd, lezen bewezen — schrijven nog niet bevestigd; in LAN-modus (cloud: zie hieronder) | MQTT over TLS |
+
+Buiten het LAN: een Anycubic in cloudmodus wordt gelezen en beschreven (bewezen op
+een Kobra X), en Bambu Lab-printers via de cloud van Bambu zijn alleen-lezen
+(bewezen op een A1 en een X1C). Een Klipper-printer met AFC of Happy Hare is in
+de code voorzien, maar nog niet op een printer gedraaid. Prusa- en
+OctoPrint-printers worden nog niet ondersteund.
 
 Slotnamen volgen die van de printer zelf: `Ext.` en `1A`–`1D` bij Creality en
 FlashForge, `A1`–`A4` dan `B1`–`B4` bij Bambu Lab, `E1`–`E4` bij Snapmaker, `S1`–`S4` bij

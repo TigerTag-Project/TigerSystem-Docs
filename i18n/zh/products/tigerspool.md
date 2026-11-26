@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -62,7 +62,7 @@ TigerSpool 不是芯片写入器——那是桌面上 [TigerPOD](./tigerpod.md) 
 
 ## 支持哪些打印机
 
-**Tiger Studio 集成的六个品牌都已覆盖**——已编写，并已在硬件上测试。这并不是市场上的每一台打印机，*“任何打印机”*依然是目标；它是这个生态系统今天能对话的每一个品牌：
+**通过局域网已覆盖六个打印机品牌**——已编写，并已在硬件上测试。这并不是市场上的每一台打印机，*“任何打印机”*依然是目标：
 
 | 品牌 | 固件 | 传输方式 |
 |---|---|---|
@@ -71,7 +71,9 @@ TigerSpool 不是芯片写入器——那是桌面上 [TigerPOD](./tigerpod.md) 
 | [Bambu Lab](../compatibility/bambu-lab.md) | 已实现，已验证 | 基于 TLS 的 MQTT |
 | [Snapmaker](../compatibility/snapmaker.md) | 已实现，已验证 | 基于 WebSocket 的 Moonraker |
 | [Elegoo](../compatibility/elegoo.md) | 已实现，读取已验证——写入尚未在打印机上确认 | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | 已实现，读取已验证——写入尚未确认；仅限局域网模式 | 基于 TLS 的 MQTT |
+| [Anycubic](../compatibility/anycubic.md) | 已实现，读取已验证——写入尚未确认；局域网模式（云端：见下文） | 基于 TLS 的 MQTT |
+
+局域网之外：云端模式的 Anycubic 可读可写（已在 Kobra X 上验证），通过 Bambu 云端连接的 Bambu Lab 打印机仅可读取（已在 A1 和 X1C 上验证）。带 AFC 或 Happy Hare 的 Klipper 打印机已在代码中支持，但尚未在打印机上运行。Prusa 和 OctoPrint 打印机暂不支持。
 
 槽位名称沿用打印机自己的：Creality 和 FlashForge 上是 `Ext.` 和 `1A`–`1D`，Bambu Lab 上是 `A1`–`A4` 然后 `B1`–`B4`，Snapmaker 上是 `E1`–`E4`，Elegoo 的 Canvas 上是 `S1`–`S4`，Anycubic 上每个 ACE 单元一个字母——`A1`、`A2`……，第二个盒子则是 `B1`……
 

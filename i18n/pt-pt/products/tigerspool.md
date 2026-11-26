@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -61,7 +61,7 @@ Se saltar isto, a lista de impressoras na caixa fica **vazia**. Não é uma avar
 
 ## Que impressoras
 
-**As seis marcas que o Tiger Studio integra estão cobertas** — escritas e testadas em hardware. Não são todas as impressoras do mercado, e *«qualquer impressora»* continua a ser o objetivo; são todas as marcas com que este ecossistema fala hoje:
+**Seis marcas de impressoras estão cobertas pela LAN** — escritas e testadas em hardware. Não são todas as impressoras do mercado, e *«qualquer impressora»* continua a ser o objetivo:
 
 | Marca | Firmware | Transporte |
 |---|---|---|
@@ -70,7 +70,9 @@ Se saltar isto, a lista de impressoras na caixa fica **vazia**. Não é uma avar
 | [Bambu Lab](../compatibility/bambu-lab.md) | implementado, comprovado | MQTT sobre TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implementado, comprovado | Moonraker sobre WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | implementado, leitura comprovada — escrita ainda não confirmada numa impressora | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implementado, leitura comprovada — escrita ainda não confirmada; apenas modo LAN | MQTT sobre TLS |
+| [Anycubic](../compatibility/anycubic.md) | implementado, leitura comprovada — escrita ainda não confirmada; no modo LAN (nuvem: ver abaixo) | MQTT sobre TLS |
+
+Para além da LAN: uma Anycubic no modo nuvem é lida e escrita (comprovado numa Kobra X), e as impressoras Bambu Lab acedidas pela nuvem da Bambu são só de leitura (comprovado numa A1 e numa X1C). Uma impressora Klipper com AFC ou Happy Hare está prevista no código, mas ainda não correu numa impressora. As impressoras Prusa e OctoPrint ainda não são suportadas.
 
 Os nomes dos slots seguem os da própria impressora: `Ext.` e `1A`–`1D` na Creality e na FlashForge, `A1`–`A4` e depois `B1`–`B4` na Bambu Lab, `E1`–`E4` na Snapmaker, `S1`–`S4` no Canvas da Elegoo, e uma letra por unidade ACE na Anycubic — `A1`, `A2`… depois `B1`… para uma segunda caixa.
 

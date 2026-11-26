@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -86,9 +86,9 @@ próxima sincronização.
 
 ## Quais impressoras
 
-**As seis marcas que o Tiger Studio integra estão cobertas** — escritas e testadas
-em hardware. Isso não são todas as impressoras do mercado, e *“qualquer impressora”*
-continua sendo o objetivo; são todas as marcas com que este ecossistema conversa hoje:
+**Seis marcas de impressoras estão cobertas pela LAN** — escritas e
+testadas em hardware. Não são todas as impressoras do mercado, e *"qualquer
+impressora"* continua sendo o objetivo:
 
 | Marca | Firmware | Transporte |
 |---|---|---|
@@ -97,7 +97,13 @@ continua sendo o objetivo; são todas as marcas com que este ecossistema convers
 | [Bambu Lab](../compatibility/bambu-lab.md) | implementado, comprovado | MQTT sobre TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implementado, comprovado | Moonraker sobre WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | implementado, leitura comprovada — gravação ainda não confirmada em uma impressora | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implementado, leitura comprovada — gravação ainda não confirmada; somente modo LAN | MQTT sobre TLS |
+| [Anycubic](../compatibility/anycubic.md) | implementado, leitura comprovada — gravação ainda não confirmada; no modo LAN (nuvem: veja abaixo) | MQTT sobre TLS |
+
+Além da LAN: uma Anycubic no modo nuvem é lida e gravada (comprovado numa Kobra X),
+e as impressoras Bambu Lab acessadas pela nuvem da Bambu são só leitura
+(comprovado numa A1 e numa X1C). Uma impressora Klipper com AFC ou Happy Hare
+está prevista no código, mas ainda não rodou numa impressora. Impressoras Prusa e
+OctoPrint ainda não são compatíveis.
 
 Os nomes dos slots seguem os da própria impressora: `Ext.` e `1A`–`1D` na Creality e na
 FlashForge, `A1`–`A4` e depois `B1`–`B4` na Bambu Lab, `E1`–`E4` na Snapmaker, `S1`–`S4` no

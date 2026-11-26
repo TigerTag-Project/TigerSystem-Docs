@@ -81,9 +81,9 @@ the next sync.
 
 ## Which printers
 
-**The six brands Tiger Studio integrates are covered** — written, and tested
-on hardware. That is not every printer on the market, and *"any printer"*
-stays the goal; it is every brand this ecosystem speaks to today:
+**Six printer brands are covered over the LAN** — written, and
+tested on hardware. That is not every printer on the market, and *"any printer"*
+stays the goal:
 
 | Brand | Firmware | Transport |
 |---|---|---|
@@ -92,7 +92,13 @@ stays the goal; it is every brand this ecosystem speaks to today:
 | [Bambu Lab](../compatibility/bambu-lab.md) | implemented, proven | MQTT over TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implemented, proven | Moonraker over WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | implemented, reading proven — writing not yet confirmed on a printer | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implemented, reading proven — writing not yet confirmed; LAN mode only | MQTT over TLS |
+| [Anycubic](../compatibility/anycubic.md) | implemented, reading proven — writing not yet confirmed; in LAN mode (cloud: see below) | MQTT over TLS |
+
+Beyond the LAN: an Anycubic in cloud mode is read and written (proven on a
+Kobra X), and Bambu Lab printers reached through Bambu's cloud are read only
+(proven on an A1 and an X1C). A Klipper printer with AFC or Happy Hare is
+written for but not yet run on a printer. Prusa and OctoPrint printers are not
+supported yet.
 
 Slot names follow the printer's own: `Ext.` and `1A`–`1D` on Creality and
 FlashForge, `A1`–`A4` then `B1`–`B4` on Bambu Lab, `E1`–`E4` on Snapmaker, `S1`–`S4` on

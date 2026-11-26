@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -91,10 +91,9 @@ dans Tiger Studio et elle apparaît à la synchronisation suivante.
 
 ## Quelles imprimantes
 
-**Les six marques intégrées à Tiger Studio sont couvertes** — écrites, et
-testées sur matériel. Ce n'est pas toute imprimante du marché, et *« n'importe
-quelle imprimante »* reste l'objectif ; c'est toute marque à laquelle cet
-écosystème parle aujourd'hui :
+**Six marques d’imprimantes sont couvertes en réseau local** —
+écrites, et testées sur du matériel. Ce n'est pas toutes les imprimantes du
+marché, et *« n'importe quelle imprimante »* reste l'objectif :
 
 | Marque | Firmware | Transport |
 |---|---|---|
@@ -103,7 +102,14 @@ quelle imprimante »* reste l'objectif ; c'est toute marque à laquelle cet
 | [Bambu Lab](../compatibility/bambu-lab.md) | implémenté, éprouvé | MQTT sur TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implémenté, éprouvé | Moonraker sur WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | implémenté, lecture éprouvée — écriture pas encore confirmée sur une imprimante | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implémenté, lecture éprouvée — écriture pas encore confirmée ; mode LAN uniquement | MQTT sur TLS |
+| [Anycubic](../compatibility/anycubic.md) | implémenté, lecture éprouvée — écriture pas encore confirmée ; en mode LAN (cloud : voir plus bas) | MQTT sur TLS |
+
+Au-delà du réseau local : une Anycubic en mode cloud est lue et écrite (éprouvé
+sur une Kobra X), et les imprimantes Bambu Lab jointes par le cloud de Bambu sont
+en lecture seule (éprouvé sur une A1 et une X1C). Une imprimante Klipper avec AFC
+ou Happy Hare est prise en charge dans le code, mais pas encore testée sur une
+imprimante. Les imprimantes Prusa et OctoPrint ne sont pas encore prises en
+charge.
 
 Les noms d'emplacements suivent ceux de l'imprimante : `Ext.` et `1A`–`1D`
 chez Creality et FlashForge, `A1`–`A4` puis `B1`–`B4` chez Bambu Lab,

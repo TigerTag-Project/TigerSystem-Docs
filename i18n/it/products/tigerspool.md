@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -87,9 +87,9 @@ alla sincronizzazione successiva.
 
 ## Quali stampanti
 
-**Le sei marche che Tiger Studio integra sono coperte** — scritte e testate
-su hardware. Non sono tutte le stampanti sul mercato, e *«qualsiasi stampante»*
-resta l'obiettivo; sono tutte le marche con cui questo ecosistema parla oggi:
+**Sei marche di stampanti sono coperte in LAN** — scritte e
+testate sull'hardware. Non sono tutte le stampanti sul mercato, e *«qualsiasi
+stampante»* resta l'obiettivo:
 
 | Marca | Firmware | Trasporto |
 |---|---|---|
@@ -98,7 +98,13 @@ resta l'obiettivo; sono tutte le marche con cui questo ecosistema parla oggi:
 | [Bambu Lab](../compatibility/bambu-lab.md) | implementato, provato | MQTT su TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implementato, provato | Moonraker su WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | implementato, lettura provata — scrittura non ancora confermata su una stampante | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implementato, lettura provata — scrittura non ancora confermata; solo modalità LAN | MQTT su TLS |
+| [Anycubic](../compatibility/anycubic.md) | implementato, lettura provata — scrittura non ancora confermata; in modalità LAN (cloud: vedi sotto) | MQTT su TLS |
+
+Oltre la LAN: una Anycubic in modalità cloud viene letta e scritta (provato su una
+Kobra X), e le stampanti Bambu Lab raggiunte tramite il cloud di Bambu sono in
+sola lettura (provato su una A1 e una X1C). Una stampante Klipper con AFC o Happy
+Hare è prevista nel codice, ma non è ancora stata provata su una stampante. Le
+stampanti Prusa e OctoPrint non sono ancora supportate.
 
 I nomi degli slot seguono quelli della stampante: `Ext.` e `1A`–`1D` su Creality e
 FlashForge, da `A1` a `A4` poi da `B1` a `B4` su Bambu Lab, da `E1` a `E4` su Snapmaker, da `S1` a `S4` sul Canvas

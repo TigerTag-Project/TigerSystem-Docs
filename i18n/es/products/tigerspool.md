@@ -1,5 +1,5 @@
 ---
-sourceHash: 76258a57b63698b0cd3fca0c4be001547b3eec64a7cfeb6c390e6a0eb8fd9785
+sourceHash: b70129c8b091c89e40d4b12d5f7b50ac2ab60100db8d9cd64c4a69a9b926439b
 sourcePath: docs/products/tigerspool.md
 ---
 
@@ -85,9 +85,9 @@ sincronización.
 
 ## Qué impresoras
 
-**Las seis marcas que integra Tiger Studio están cubiertas**: escritas y probadas en
-hardware. No son todas las impresoras del mercado, y *«cualquier impresora»* sigue
-siendo el objetivo; son todas las marcas con las que este ecosistema habla hoy:
+**Seis marcas de impresoras están cubiertas por la LAN**: escritas
+y probadas en hardware. No son todas las impresoras del mercado, y *«cualquier
+impresora»* sigue siendo el objetivo:
 
 | Marca | Firmware | Transporte |
 |---|---|---|
@@ -96,7 +96,13 @@ siendo el objetivo; son todas las marcas con las que este ecosistema habla hoy:
 | [Bambu Lab](../compatibility/bambu-lab.md) | implementado, probado | MQTT sobre TLS |
 | [Snapmaker](../compatibility/snapmaker.md) | implementado, probado | Moonraker sobre WebSocket |
 | [Elegoo](../compatibility/elegoo.md) | implementado, lectura probada; escritura aún no confirmada en una impresora | MQTT |
-| [Anycubic](../compatibility/anycubic.md) | implementado, lectura probada; escritura aún no confirmada; solo modo LAN | MQTT sobre TLS |
+| [Anycubic](../compatibility/anycubic.md) | implementado, lectura probada; escritura aún no confirmada; en modo LAN (nube: ver más abajo) | MQTT sobre TLS |
+
+Más allá de la LAN: una Anycubic en modo nube se lee y se escribe (probado en una
+Kobra X), y las impresoras Bambu Lab alcanzadas a través de la nube de Bambu son
+de solo lectura (probado en una A1 y una X1C). Una impresora Klipper con AFC o
+Happy Hare está prevista en el código, pero aún no se ha probado en una
+impresora. Las impresoras Prusa y OctoPrint todavía no son compatibles.
 
 Los nombres de las ranuras siguen los de la impresora: `Ext.` y `1A`–`1D` en Creality
 y FlashForge, `A1`–`A4` y luego `B1`–`B4` en Bambu Lab, `E1`–`E4` en Snapmaker,
