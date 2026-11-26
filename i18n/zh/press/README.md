@@ -1,5 +1,5 @@
 ---
-sourceHash: 54e423dfba2d8a2e3dbed477ce0d4a428b6b5c740d7cdcbd9ee4a46a86b70d52
+sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
 sourcePath: docs/press/README.md
 ---
 
@@ -50,6 +50,10 @@ sourcePath: docs/press/README.md
 主视觉图：TigerSystem 的每一部分都围绕着一个开放协议。
 直接下载文件：[`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosystem.png)
 
+<img src="../assets/hero-ecosystem-devices.webp" width="100%" alt="并排摆放的 TigerPOD、电脑屏幕上的 Tiger Studio 和手机上的 Tiger NFC Connect" />
+
+透明背景上并排摆放的产品：TigerPOD、Tiger Studio 和 Tiger NFC Connect。
+
 ## TigerPOD
 
 || |
@@ -57,6 +61,8 @@ sourcePath: docs/press/README.md
 | <img src="../assets/tigerpod-grey.png" width="380" alt="一台灰色 TigerPOD，托着一卷红色耗材线轴" /> | <img src="../assets/tigerpod-with-spool.png" width="380" alt="一台蓝色 TigerPOD，托着一卷红色耗材线轴" /> |
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="彩虹色的 TigerPOD 阵容" />
+
+<img src="../assets/tigerpod-blue-red.png" width="380" alt="装着红色线轴的蓝色 TigerPOD，白底棚拍渲染图" />
 
 可 3D 打印的桌面线轴读卡器——灰色和蓝色渲染图，外加彩虹阵容横幅。与 Tiger Studio 配合使用的情形：
 [`tigerpod-in-studio.jpg`](../assets/tigerpod-in-studio.jpg)
@@ -72,6 +78,34 @@ ESP32-S3、3.5″ 彩色触摸屏、双 PN532 读卡器，因此[贴有孪生标
 
 更早的几代记录在[产品页面](../products/tigerscale.md)上；较旧的照片
 [`tigerscale-photo.jpg`](../assets/tigerscale-photo.jpg) 仅保留作存档用途——请不要用它来表现当前的产品。
+
+## TigerSpool
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerspool-with-spool.webp" alt="TigerSpool，开源 RFID 读卡器，上面放着一个线轴" /> | <img src="../assets/tigerspool-desk.webp" alt="桌上的 TigerSpool，上面放着一个透明线轴" /> | <img src="../assets/tigerspool-creality-k2.webp" alt="安装在 Creality K2 上的 TigerSpool" /> |
+
+把线轴的耗材信息发送到打印机料槽的开源 RFID 读卡器：ESP32-S3、NFC 读卡器、3D 打印外壳，MIT 许可。扫描后，屏幕会告诉你把线轴装到哪里：[`tigerspool-screen-sent.webp`](../assets/tigerspool-screen-sent.webp)。产品页面：[TigerSpool](../products/tigerspool.md)。
+
+## Tiger Touch
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigertouch-tour.webp" alt="BIGTREETECH Panda Touch 上的 Tiger Touch，动画导览" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch——账号下的所有打印机，列表视图" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch——一台 Snapmaker U1，实时状态" /> |
+
+适用于 BIGTREETECH Panda Touch 和 K-Touch 的免费开源固件：一块 7″ 触摸屏显示 TigerSystem 账号下的所有打印机，无需电脑。第一张图是动画 WebP；启动画面：[`tigertouch-splash.webp`](../assets/tigertouch-splash.webp)。产品页面：[Tiger Touch](../products/tigertouch.md)。
+
+## TigerQR 标签
+
+<img src="../assets/tigerqr-labels-hero.webp" width="100%" alt="为产品库中一款示例耗材生成的三张不同尺寸的 TigerQR+ 线轴标签，每张都带有二维码" />
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerqr-label-classic-40x30.webp" alt="TigerQR 标签 — Classic（默认）, 40 × 30 mm" /> | <img src="../assets/tigerqr-label-wide-50x30.webp" alt="TigerQR 标签 — Wide, 50 × 30 mm" /> | <img src="../assets/tigerqr-label-compact-40x25.webp" alt="TigerQR 标签 — Compact, 40 × 25 mm" /> |
+| <img src="../assets/tigerqr-label-slim-40x12.webp" alt="TigerQR 标签 — Slim, 40 × 12 mm" /> | <img src="../assets/tigerqr-label-slicer-40x30.webp" alt="TigerQR 标签 — Slicer-friendly, 40 × 30 mm" /> | <img src="../assets/tigerqr-label-qr-only-25x30.webp" alt="TigerQR 标签 — 仅二维码, 25 × 30 mm" /> |
+| <img src="../assets/tigerqr-label-vertical-30x40.webp" alt="TigerQR 标签 — Vertical, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-bold-30x40.webp" alt="TigerQR 标签 — Vertical bold, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-compact-25x40.webp" alt="TigerQR 标签 — Vertical compact, 25 × 40 mm" /> |
+
+打印的线轴标签：一个能打开线轴的二维码，共九个模板，从 40 × 12 mm 到 50 × 30 mm。扫描后拥有者手机上显示的内容：[线轴](../assets/tigerqr-phone-owner.webp)、[它的设置](../assets/tigerqr-phone-owner-settings.webp)。规范：[线轴 id 与二维码链接](../developers/spool-ids-and-qr-links.md)。
 
 ## 芯片与载体
 
@@ -96,7 +130,7 @@ ESP32-S3、3.5″ 彩色触摸屏、双 PN532 读卡器，因此[贴有孪生标
 
 ## 认证集成商——耗材制造商标志
 
-出厂即带 TigerTag 的耗材品牌，以矢量标志呈现。六家均为**认证合作伙伴**——即可以在产品上带有该标记的、经过审核的层级。完整的登记册，包括每家实际部署了什么，见[认证合作伙伴](../certified-partners.md)。
+出厂即带 TigerTag 的耗材品牌，以矢量标志呈现。共有十家，均为**认证合作伙伴**——即可以在产品上带有该标记的、经过审核的层级；本资料包收录了其中六家的标志。Filforme、Nanovia、Lotactree 和 Smart3DPT 及其实际部署情况，见[认证合作伙伴](../certified-partners.md)。
 
 **整条生产线全面集成**
 
@@ -130,9 +164,13 @@ ESP32-S3、3.5″ 彩色触摸屏、双 PN532 读卡器，因此[贴有孪生标
 
 ## 应用
 
+<img src="../assets/tiger-studio-imac.webp" width="100%" alt="iMac 上的 Tiger Studio" />
+
 || | |
 |---|---|---|
-| <img src="../assets/tiger-studio-inventory.jpg" height="290" alt="Tiger Studio——库存视图" /> | <img src="../assets/tiger-studio-printers.jpg" height="290" alt="Tiger Studio——打印机视图" /> | <img src="../assets/tiger-studio-rack.jpg" height="290" alt="Tiger Studio——存储货架视图" /> |
+| <img src="../assets/tiger-studio-inventory-2.png" alt="Tiger Studio——库存" /> | <img src="../assets/tiger-studio-printers-2.png" alt="Tiger Studio——打印机实时状态" /> | <img src="../assets/tiger-studio-camera-wall.png" alt="Tiger Studio——摄像头墙" /> |
+| <img src="../assets/tiger-studio-racks.webp" alt="Tiger Studio——一个料架，逐个线轴显示" /> | <img src="../assets/tiger-studio-racks-all.webp" alt="Tiger Studio——所有料架一览" /> | <img src="../assets/tiger-studio-web-browser.webp" alt="浏览器中的 Tiger Studio Web" /> |
+| <img src="../assets/tiger-studio-web-spool-details.webp" alt="Tiger Studio Web——线轴详情" /> | <img src="../assets/tiger-studio-web-favourites.webp" alt="Tiger Studio Web——收藏的耗材" /> | <img src="../assets/tiger-studio-web-colour-filter.webp" alt="Tiger Studio Web——按颜色筛选" /> |
 
 || | |
 |---|---|---|
@@ -140,7 +178,9 @@ ESP32-S3、3.5″ 彩色触摸屏、双 PN532 读卡器，因此[贴有孪生标
 
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="桌面端的 Tiger Studio 与移动端的 Tiger NFC Connect，同一个账号，同样的数据" />
 
-Tiger Studio（桌面端）和 Tiger NFC Connect（移动端）——截图和组合效果图。
+<img src="../assets/connect-iphone.webp" width="240" alt="iPhone 上的 Tiger NFC Connect" />
+
+Tiger Studio 2（桌面端，免费）和 Tiger Studio Web（浏览器中）：库存、打印机实时状态、摄像头墙、料架。Tiger NFC Connect（iOS 和 Android）用手机的 NFC 读取线轴。早期截图仍可供存档使用：[库存](../assets/tiger-studio-inventory.jpg)、[打印机](../assets/tiger-studio-printers.jpg)、[料架](../assets/tiger-studio-rack.jpg)。
 
 ## 真实的使用场景
 

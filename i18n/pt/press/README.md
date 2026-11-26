@@ -1,5 +1,5 @@
 ---
-sourceHash: 54e423dfba2d8a2e3dbed477ce0d4a428b6b5c740d7cdcbd9ee4a46a86b70d52
+sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
 sourcePath: docs/press/README.md
 ---
 
@@ -60,6 +60,10 @@ escuro.
 A imagem de herói: todas as peças do TigerSystem em torno de um protocolo aberto.
 Arquivo direto: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosystem.png)
 
+<img src="../assets/hero-ecosystem-devices.webp" width="100%" alt="Um TigerPOD, o Tiger Studio numa tela de computador e o Tiger NFC Connect num celular, lado a lado" />
+
+Os produtos lado a lado, em fundo transparente: TigerPOD, Tiger Studio e Tiger NFC Connect.
+
 ## TigerPOD
 
 || |
@@ -67,6 +71,8 @@ Arquivo direto: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ec
 | <img src="../assets/tigerpod-grey.png" width="380" alt="Um TigerPOD cinza segurando uma bobina de filamento vermelha" /> | <img src="../assets/tigerpod-with-spool.png" width="380" alt="Um TigerPOD azul segurando uma bobina de filamento vermelha" /> |
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="Linha de TigerPOD em cores do arco-íris" />
+
+<img src="../assets/tigerpod-blue-red.png" width="380" alt="Um TigerPOD azul com uma bobina vermelha, render de estúdio em fundo branco" />
 
 O leitor de bobinas de mesa imprimível em 3D — renders em cinza e azul, além do
 banner com a linha em cores do arco-íris. Em uso com o Tiger Studio:
@@ -89,6 +95,44 @@ As gerações anteriores estão documentadas na [página do produto](../products
 a foto mais antiga, [`tigerscale-photo.jpg`](../assets/tigerscale-photo.jpg), é
 mantida só para uso de arquivo — por favor, não a use para ilustrar o produto
 hoje.
+
+## TigerSpool
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerspool-with-spool.webp" alt="TigerSpool, o leitor RFID de código aberto, com uma bobina" /> | <img src="../assets/tigerspool-desk.webp" alt="Um TigerSpool numa mesa, com uma bobina transparente" /> | <img src="../assets/tigerspool-creality-k2.webp" alt="Um TigerSpool montado numa Creality K2" /> |
+
+O leitor RFID de código aberto que envia o filamento de uma bobina para o slot de uma
+impressora: ESP32-S3, leitor NFC, caixa impressa em 3D, MIT. Depois de um scan, a tela indica onde
+carregar a bobina: [`tigerspool-screen-sent.webp`](../assets/tigerspool-screen-sent.webp). Página do
+produto: [TigerSpool](../products/tigerspool.md).
+
+## Tiger Touch
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch num BIGTREETECH Panda Touch, tour animado" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — todas as impressoras da conta, em lista" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — uma Snapmaker U1, ao vivo" /> |
+
+Firmware livre e gratuito para o BIGTREETECH Panda Touch e o K-Touch: todas as impressoras de
+uma conta TigerSystem numa única tela sensível ao toque de 7″, sem computador. A primeira imagem é um
+WebP animado; tela inicial: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Página do
+produto: [Tiger Touch](../products/tigertouch.md).
+
+## Etiquetas TigerQR
+
+<img src="../assets/tigerqr-labels-hero.webp" width="100%" alt="Três etiquetas de bobina TigerQR+ de tamanhos diferentes para um filamento de exemplo do catálogo, cada uma com seu QR code" />
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerqr-label-classic-40x30.webp" alt="Etiqueta TigerQR — Classic (padrão), 40 × 30 mm" /> | <img src="../assets/tigerqr-label-wide-50x30.webp" alt="Etiqueta TigerQR — Wide, 50 × 30 mm" /> | <img src="../assets/tigerqr-label-compact-40x25.webp" alt="Etiqueta TigerQR — Compact, 40 × 25 mm" /> |
+| <img src="../assets/tigerqr-label-slim-40x12.webp" alt="Etiqueta TigerQR — Slim, 40 × 12 mm" /> | <img src="../assets/tigerqr-label-slicer-40x30.webp" alt="Etiqueta TigerQR — Slicer-friendly, 40 × 30 mm" /> | <img src="../assets/tigerqr-label-qr-only-25x30.webp" alt="Etiqueta TigerQR — Só QR, 25 × 30 mm" /> |
+| <img src="../assets/tigerqr-label-vertical-30x40.webp" alt="Etiqueta TigerQR — Vertical, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-bold-30x40.webp" alt="Etiqueta TigerQR — Vertical bold, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-compact-25x40.webp" alt="Etiqueta TigerQR — Vertical compact, 25 × 40 mm" /> |
+
+Etiquetas de bobina impressas: um QR code que abre a bobina, em nove modelos de 40 × 12 mm a
+50 × 30 mm. O que o celular do dono mostra depois de um scan:
+[a bobina](../assets/tigerqr-phone-owner.webp),
+[suas configurações](../assets/tigerqr-phone-owner-settings.webp). Especificação:
+[Ids de bobina e links QR](../developers/spool-ids-and-qr-links.md).
 
 ## O chip e o suporte
 
@@ -115,10 +159,10 @@ com seu chip NFC TigerTag — um por cor.
 
 ## Integradores certificados — logotipos de fabricantes de filamento
 
-As marcas de filamento que enviam TigerTag de fábrica, como logotipos vetoriais. Todas as
-seis são **parceiros certificados** — o nível auditado que pode levar a marca em um
-produto. O registro completo, com o que cada uma de fato implantou, está em
-[Parceiros certificados](../certified-partners.md).
+As marcas de filamento que enviam TigerTag de fábrica, em logotipos vetoriais. São dez, todas
+**parceiras certificadas**, o nível auditado que pode levar a marca num produto; este pacote traz os
+logotipos de seis delas. Filforme, Nanovia, Lotactree e Smart3DPT estão listadas, com o que cada uma
+realmente implantou, em [Parceiros certificados](../certified-partners.md).
 
 **Integrado em toda a linha de produção**
 
@@ -155,9 +199,13 @@ R3D.
 
 ## Os aplicativos
 
+<img src="../assets/tiger-studio-imac.webp" width="100%" alt="Tiger Studio num iMac" />
+
 || | |
 |---|---|---|
-| <img src="../assets/tiger-studio-inventory.jpg" height="290" alt="Tiger Studio — a visualização do inventário" /> | <img src="../assets/tiger-studio-printers.jpg" height="290" alt="Tiger Studio — a visualização das impressoras" /> | <img src="../assets/tiger-studio-rack.jpg" height="290" alt="Tiger Studio — a visualização do rack de armazenamento" /> |
+| <img src="../assets/tiger-studio-inventory-2.png" alt="Tiger Studio — o inventário" /> | <img src="../assets/tiger-studio-printers-2.png" alt="Tiger Studio — as impressoras, ao vivo" /> | <img src="../assets/tiger-studio-camera-wall.png" alt="Tiger Studio — a parede de câmeras" /> |
+| <img src="../assets/tiger-studio-racks.webp" alt="Tiger Studio — um rack, bobina por bobina" /> | <img src="../assets/tiger-studio-racks-all.webp" alt="Tiger Studio — todos os racks de uma vez" /> | <img src="../assets/tiger-studio-web-browser.webp" alt="Tiger Studio Web, no navegador" /> |
+| <img src="../assets/tiger-studio-web-spool-details.webp" alt="Tiger Studio Web — os detalhes de uma bobina" /> | <img src="../assets/tiger-studio-web-favourites.webp" alt="Tiger Studio Web — filamentos favoritos" /> | <img src="../assets/tiger-studio-web-colour-filter.webp" alt="Tiger Studio Web — filtro por cor" /> |
 
 || | |
 |---|---|---|
@@ -165,8 +213,13 @@ R3D.
 
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="O Tiger Studio no desktop e o Tiger NFC Connect no celular, mesma conta, mesmos dados" />
 
-Tiger Studio (desktop) e Tiger NFC Connect (celular) — capturas de tela e o
-mockup combinado.
+<img src="../assets/connect-iphone.webp" width="240" alt="Tiger NFC Connect num iPhone" />
+
+Tiger Studio 2 (computador, gratuito) e Tiger Studio Web (no navegador): inventário, impressoras
+ao vivo, parede de câmeras, racks. O Tiger NFC Connect (iOS e Android) lê uma bobina com o NFC do
+celular. As capturas anteriores continuam disponíveis para arquivo:
+[inventário](../assets/tiger-studio-inventory.jpg), [impressoras](../assets/tiger-studio-printers.jpg),
+[rack](../assets/tiger-studio-rack.jpg).
 
 ## Instalações reais
 

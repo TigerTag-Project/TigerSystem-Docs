@@ -1,5 +1,5 @@
 ---
-sourceHash: 54e423dfba2d8a2e3dbed477ce0d4a428b6b5c740d7cdcbd9ee4a46a86b70d52
+sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
 sourcePath: docs/press/README.md
 ---
 
@@ -61,6 +61,10 @@ sourcePath: docs/press/README.md
 Главное изображение: все части TigerSystem вокруг одного открытого протокола.
 Прямая ссылка на файл: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosystem.png)
 
+<img src="../assets/hero-ecosystem-devices.webp" width="100%" alt="TigerPOD, Tiger Studio на экране компьютера и Tiger NFC Connect на телефоне, рядом" />
+
+Продукты рядом, на прозрачном фоне: TigerPOD, Tiger Studio и Tiger NFC Connect.
+
 ## TigerPOD
 
 || |
@@ -68,6 +72,8 @@ sourcePath: docs/press/README.md
 | <img src="../assets/tigerpod-grey.png" width="380" alt="Серый TigerPOD с красной катушкой филамента" /> | <img src="../assets/tigerpod-with-spool.png" width="380" alt="Синий TigerPOD с красной катушкой филамента" /> |
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="Линейка TigerPOD в цветах радуги" />
+
+<img src="../assets/tigerpod-blue-red.png" width="380" alt="Синий TigerPOD с красной катушкой, студийный рендер на белом фоне" />
 
 Настольный считыватель катушек для 3D-печати — серый и синий рендеры, а также
 баннер с радужной линейкой. В работе с Tiger Studio:
@@ -90,6 +96,44 @@ ESP32-S3, цветной сенсорный экран 3,5″, два считы
 более старая фотография, [`tigerscale-photo.jpg`](../assets/tigerscale-photo.jpg),
 сохранена только для архива — пожалуйста, не используйте её сегодня для
 иллюстрации продукта.
+
+## TigerSpool
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerspool-with-spool.webp" alt="TigerSpool, RFID-считыватель с открытым кодом, с катушкой" /> | <img src="../assets/tigerspool-desk.webp" alt="TigerSpool на столе, на нём прозрачная катушка" /> | <img src="../assets/tigerspool-creality-k2.webp" alt="TigerSpool, установленный на Creality K2" /> |
+
+RFID-считыватель с открытым кодом, который отправляет филамент катушки в слот принтера:
+ESP32-S3, NFC-считыватель, корпус, напечатанный на 3D-принтере, MIT. После сканирования экран
+показывает, куда вставить катушку: [`tigerspool-screen-sent.webp`](../assets/tigerspool-screen-sent.webp).
+Страница продукта: [TigerSpool](../products/tigerspool.md).
+
+## Tiger Touch
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch на BIGTREETECH Panda Touch, анимированный обзор" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — все принтеры аккаунта списком" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — Snapmaker U1 в реальном времени" /> |
+
+Бесплатная прошивка с открытым кодом для BIGTREETECH Panda Touch и K-Touch: все принтеры
+аккаунта TigerSystem на одном 7″ сенсорном экране, без компьютера. Первое изображение — анимированный
+WebP; стартовый экран: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Страница
+продукта: [Tiger Touch](../products/tigertouch.md).
+
+## Этикетки TigerQR
+
+<img src="../assets/tigerqr-labels-hero.webp" width="100%" alt="Три этикетки катушки TigerQR+ разного размера для примерного филамента из каталога, у каждой свой QR-код" />
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerqr-label-classic-40x30.webp" alt="Этикетка TigerQR — Classic (по умолчанию), 40 × 30 mm" /> | <img src="../assets/tigerqr-label-wide-50x30.webp" alt="Этикетка TigerQR — Wide, 50 × 30 mm" /> | <img src="../assets/tigerqr-label-compact-40x25.webp" alt="Этикетка TigerQR — Compact, 40 × 25 mm" /> |
+| <img src="../assets/tigerqr-label-slim-40x12.webp" alt="Этикетка TigerQR — Slim, 40 × 12 mm" /> | <img src="../assets/tigerqr-label-slicer-40x30.webp" alt="Этикетка TigerQR — Slicer-friendly, 40 × 30 mm" /> | <img src="../assets/tigerqr-label-qr-only-25x30.webp" alt="Этикетка TigerQR — Только QR, 25 × 30 mm" /> |
+| <img src="../assets/tigerqr-label-vertical-30x40.webp" alt="Этикетка TigerQR — Vertical, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-bold-30x40.webp" alt="Этикетка TigerQR — Vertical bold, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-compact-25x40.webp" alt="Этикетка TigerQR — Vertical compact, 25 × 40 mm" /> |
+
+Печатные этикетки катушек: QR-код, который открывает катушку, в девяти шаблонах от 40 × 12 мм
+до 50 × 30 мм. Что показывает телефон владельца после сканирования:
+[катушка](../assets/tigerqr-phone-owner.webp),
+[её настройки](../assets/tigerqr-phone-owner-settings.webp). Спецификация:
+[Id катушек и QR-ссылки](../developers/spool-ids-and-qr-links.md).
 
 ## Чип и носитель
 
@@ -116,9 +160,10 @@ ESP32-S3, цветной сенсорный экран 3,5″, два считы
 
 ## Сертифицированные интеграторы — логотипы производителей филамента
 
-Бренды филамента, которые поставляют TigerTag с завода, в виде векторных логотипов. Все
-шесть — **сертифицированные партнёры**, прошедший аудит уровень, которому разрешено размещать знак на
-продукте. Полный реестр с указанием того, что каждый на самом деле внедрил, находится на странице
+Бренды филамента, которые поставляют TigerTag прямо с завода, в виде векторных логотипов. Их
+десять, все — **сертифицированные партнёры**, проверенный уровень, которому разрешено ставить знак на
+продукт; в этом наборе логотипы шести из них. Filforme, Nanovia, Lotactree и Smart3DPT перечислены,
+вместе с тем, что каждый реально внедрил, на странице
 [Сертифицированные партнёры](../certified-partners.md).
 
 **Интеграция на всей производственной линии**
@@ -156,9 +201,13 @@ R3D.
 
 ## Приложения
 
+<img src="../assets/tiger-studio-imac.webp" width="100%" alt="Tiger Studio на iMac" />
+
 || | |
 |---|---|---|
-| <img src="../assets/tiger-studio-inventory.jpg" height="290" alt="Tiger Studio — вид инвентаря" /> | <img src="../assets/tiger-studio-printers.jpg" height="290" alt="Tiger Studio — вид принтеров" /> | <img src="../assets/tiger-studio-rack.jpg" height="290" alt="Tiger Studio — вид стеллажа для хранения" /> |
+| <img src="../assets/tiger-studio-inventory-2.png" alt="Tiger Studio — инвентарь" /> | <img src="../assets/tiger-studio-printers-2.png" alt="Tiger Studio — принтеры в реальном времени" /> | <img src="../assets/tiger-studio-camera-wall.png" alt="Tiger Studio — стена камер" /> |
+| <img src="../assets/tiger-studio-racks.webp" alt="Tiger Studio — стеллаж, катушка за катушкой" /> | <img src="../assets/tiger-studio-racks-all.webp" alt="Tiger Studio — все стеллажи сразу" /> | <img src="../assets/tiger-studio-web-browser.webp" alt="Tiger Studio Web в браузере" /> |
+| <img src="../assets/tiger-studio-web-spool-details.webp" alt="Tiger Studio Web — подробности катушки" /> | <img src="../assets/tiger-studio-web-favourites.webp" alt="Tiger Studio Web — избранные филаменты" /> | <img src="../assets/tiger-studio-web-colour-filter.webp" alt="Tiger Studio Web — фильтр по цвету" /> |
 
 || | |
 |---|---|---|
@@ -166,8 +215,13 @@ R3D.
 
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio на компьютере и Tiger NFC Connect на телефоне, один аккаунт, одни и те же данные" />
 
-Tiger Studio (для компьютера) и Tiger NFC Connect (мобильное приложение) — скриншоты и
-общий макет.
+<img src="../assets/connect-iphone.webp" width="240" alt="Tiger NFC Connect на iPhone" />
+
+Tiger Studio 2 (для компьютера, бесплатно) и Tiger Studio Web (в браузере): инвентарь, принтеры
+в реальном времени, стена камер, стеллажи. Tiger NFC Connect (iOS и Android) считывает катушку через
+NFC телефона. Прежние скриншоты остаются доступны для архива:
+[инвентарь](../assets/tiger-studio-inventory.jpg), [принтеры](../assets/tiger-studio-printers.jpg),
+[стеллаж](../assets/tiger-studio-rack.jpg).
 
 ## Реальные установки
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 54e423dfba2d8a2e3dbed477ce0d4a428b6b5c740d7cdcbd9ee4a46a86b70d52
+sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
 sourcePath: docs/press/README.md
 ---
 
@@ -61,6 +61,10 @@ achtergrond.
 Het heldenbeeld: elk onderdeel van TigerSystem rond één open protocol.
 Direct bestand: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosystem.png)
 
+<img src="../assets/hero-ecosystem-devices.webp" width="100%" alt="Een TigerPOD, Tiger Studio op een computerscherm en Tiger NFC Connect op een telefoon, naast elkaar" />
+
+De producten naast elkaar, op een transparante achtergrond: TigerPOD, Tiger Studio en Tiger NFC Connect.
+
 ## TigerPOD
 
 || |
@@ -68,6 +72,8 @@ Direct bestand: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ec
 | <img src="../assets/tigerpod-grey.png" width="380" alt="Een grijze TigerPOD met een rode filamentspoel" /> | <img src="../assets/tigerpod-with-spool.png" width="380" alt="Een blauwe TigerPOD met een rode filamentspoel" /> |
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="TigerPOD-line-up in regenboogkleuren" />
+
+<img src="../assets/tigerpod-blue-red.png" width="380" alt="Een blauwe TigerPOD met een rode spoel, studiorender op wit" />
 
 De 3D-printbare spoellezer voor op het bureau — renders in grijs en blauw, plus de
 banner met de regenboog-line-up. In gebruik met Tiger Studio:
@@ -90,6 +96,44 @@ Eerdere generaties staan beschreven op [de productpagina](../products/tigerscale
 de oudere foto, [`tigerscale-photo.jpg`](../assets/tigerscale-photo.jpg), wordt
 alleen voor archiefgebruik bewaard — gebruik hem alsjeblieft niet om het product
 van vandaag te illustreren.
+
+## TigerSpool
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerspool-with-spool.webp" alt="TigerSpool, de opensource-RFID-lezer, met een spoel erop" /> | <img src="../assets/tigerspool-desk.webp" alt="Een TigerSpool op een bureau, met een transparante spoel erop" /> | <img src="../assets/tigerspool-creality-k2.webp" alt="Een TigerSpool gemonteerd op een Creality K2" /> |
+
+De opensource-RFID-lezer die het filament van een spoel naar het slot van een printer stuurt:
+ESP32-S3, NFC-lezer, 3D-geprinte behuizing, MIT. Na een scan toont het scherm waar de spoel geladen
+moet worden: [`tigerspool-screen-sent.webp`](../assets/tigerspool-screen-sent.webp). Productpagina:
+[TigerSpool](../products/tigerspool.md).
+
+## Tiger Touch
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch op een BIGTREETECH Panda Touch, geanimeerde rondleiding" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — alle printers van het account, als lijst" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — een Snapmaker U1, live" /> |
+
+Gratis opensource-firmware voor de BIGTREETECH Panda Touch en K-Touch: alle printers van een
+TigerSystem-account op één 7″-touchscreen, zonder computer. De eerste afbeelding is een geanimeerde
+WebP; startscherm: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Productpagina:
+[Tiger Touch](../products/tigertouch.md).
+
+## TigerQR-labels
+
+<img src="../assets/tigerqr-labels-hero.webp" width="100%" alt="Drie TigerQR+-spoellabels van verschillende formaten voor een voorbeeldfilament uit de catalogus, elk met zijn QR-code" />
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerqr-label-classic-40x30.webp" alt="TigerQR-label — Classic (standaard), 40 × 30 mm" /> | <img src="../assets/tigerqr-label-wide-50x30.webp" alt="TigerQR-label — Wide, 50 × 30 mm" /> | <img src="../assets/tigerqr-label-compact-40x25.webp" alt="TigerQR-label — Compact, 40 × 25 mm" /> |
+| <img src="../assets/tigerqr-label-slim-40x12.webp" alt="TigerQR-label — Slim, 40 × 12 mm" /> | <img src="../assets/tigerqr-label-slicer-40x30.webp" alt="TigerQR-label — Slicer-friendly, 40 × 30 mm" /> | <img src="../assets/tigerqr-label-qr-only-25x30.webp" alt="TigerQR-label — Alleen QR, 25 × 30 mm" /> |
+| <img src="../assets/tigerqr-label-vertical-30x40.webp" alt="TigerQR-label — Vertical, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-bold-30x40.webp" alt="TigerQR-label — Vertical bold, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-compact-25x40.webp" alt="TigerQR-label — Vertical compact, 25 × 40 mm" /> |
+
+Geprinte spoellabels: een QR-code die de spoel opent, in negen sjablonen van 40 × 12 mm tot
+50 × 30 mm. Wat de telefoon van de eigenaar na een scan toont:
+[de spoel](../assets/tigerqr-phone-owner.webp),
+[de instellingen](../assets/tigerqr-phone-owner-settings.webp). Specificatie:
+[Spoel-id's en QR-links](../developers/spool-ids-and-qr-links.md).
 
 ## De chip en de drager
 
@@ -116,10 +160,10 @@ zijn TigerTag-NFC-chip — één per kleur.
 
 ## Gecertificeerde integrators — logo’s van filamentfabrikanten
 
-De filamentmerken die TigerTag vanaf de fabriek meeleveren, als vectorlogo’s. Alle
-zes zijn **gecertificeerde partners** — het geauditeerde niveau dat het merkteken op een
-product mag voeren. Het volledige register, met wat elk daadwerkelijk heeft uitgerold, staat op
-[Gecertificeerde partners](../certified-partners.md).
+De filamentmerken die TigerTag af fabriek leveren, als vectorlogo's. Het zijn er tien, allemaal
+**gecertificeerde partners**, het gecontroleerde niveau dat het merkteken op een product mag dragen; dit
+pakket bevat de logo's van zes van hen. Filforme, Nanovia, Lotactree en Smart3DPT staan, met wat elk
+daadwerkelijk heeft ingezet, op [Gecertificeerde partners](../certified-partners.md).
 
 **Geïntegreerd over de hele productielijn**
 
@@ -156,9 +200,13 @@ R3D.
 
 ## De apps
 
+<img src="../assets/tiger-studio-imac.webp" width="100%" alt="Tiger Studio op een iMac" />
+
 || | |
 |---|---|---|
-| <img src="../assets/tiger-studio-inventory.jpg" height="290" alt="Tiger Studio — de inventarisweergave" /> | <img src="../assets/tiger-studio-printers.jpg" height="290" alt="Tiger Studio — de printerweergave" /> | <img src="../assets/tiger-studio-rack.jpg" height="290" alt="Tiger Studio — de weergave van het opslagrack" /> |
+| <img src="../assets/tiger-studio-inventory-2.png" alt="Tiger Studio — de inventaris" /> | <img src="../assets/tiger-studio-printers-2.png" alt="Tiger Studio — de printers, live" /> | <img src="../assets/tiger-studio-camera-wall.png" alt="Tiger Studio — de camerawand" /> |
+| <img src="../assets/tiger-studio-racks.webp" alt="Tiger Studio — een opslagrek, spoel voor spoel" /> | <img src="../assets/tiger-studio-racks-all.webp" alt="Tiger Studio — alle rekken tegelijk" /> | <img src="../assets/tiger-studio-web-browser.webp" alt="Tiger Studio Web, in de browser" /> |
+| <img src="../assets/tiger-studio-web-spool-details.webp" alt="Tiger Studio Web — de details van een spoel" /> | <img src="../assets/tiger-studio-web-favourites.webp" alt="Tiger Studio Web — favoriete filamenten" /> | <img src="../assets/tiger-studio-web-colour-filter.webp" alt="Tiger Studio Web — filteren op kleur" /> |
 
 || | |
 |---|---|---|
@@ -166,8 +214,13 @@ R3D.
 
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio op desktop en Tiger NFC Connect op mobiel, hetzelfde account, dezelfde gegevens" />
 
-Tiger Studio (desktop) en Tiger NFC Connect (mobiel) — schermafbeeldingen en de
-gecombineerde mockup.
+<img src="../assets/connect-iphone.webp" width="240" alt="Tiger NFC Connect op een iPhone" />
+
+Tiger Studio 2 (desktop, gratis) en Tiger Studio Web (in de browser): inventaris, printers live,
+camerawand, opslagrekken. Tiger NFC Connect (iOS en Android) leest een spoel met de NFC van de
+telefoon. De oudere screenshots blijven beschikbaar voor het archief:
+[inventaris](../assets/tiger-studio-inventory.jpg), [printers](../assets/tiger-studio-printers.jpg),
+[rek](../assets/tiger-studio-rack.jpg).
 
 ## Echte opstellingen
 

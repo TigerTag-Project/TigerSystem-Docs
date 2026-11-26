@@ -56,6 +56,10 @@ background.
 The hero visual: every piece of TigerSystem around one open protocol.
 Direct file: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosystem.png)
 
+<img src="../assets/hero-ecosystem-devices.webp" width="100%" alt="A TigerPOD, Tiger Studio on a desktop screen and Tiger NFC Connect on a phone, side by side" />
+
+The products side by side, on a transparent background: TigerPOD, Tiger Studio and Tiger NFC Connect.
+
 ## TigerPOD
 
 || |
@@ -63,6 +67,8 @@ Direct file: [`hero-tigersystem-ecosystem.png`](../assets/hero-tigersystem-ecosy
 | <img src="../assets/tigerpod-grey.png" width="380" alt="A grey TigerPOD holding a red filament spool" /> | <img src="../assets/tigerpod-with-spool.png" width="380" alt="A blue TigerPOD holding a red filament spool" /> |
 
 <img src="../assets/tigerpod-banner.png" width="100%" alt="TigerPOD line-up in rainbow colors" />
+
+<img src="../assets/tigerpod-blue-red.png" width="380" alt="A blue TigerPOD holding a red spool, studio render on white" />
 
 The 3D-printable desktop spool reader — grey and blue renders, plus the
 rainbow line-up banner. In use with Tiger Studio:
@@ -85,6 +91,44 @@ Earlier generations are documented on [the product page](../products/tigerscale.
 the older photo, [`tigerscale-photo.jpg`](../assets/tigerscale-photo.jpg), is
 kept for archive use only — please do not use it to illustrate the product
 today.
+
+## TigerSpool
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerspool-with-spool.webp" alt="TigerSpool, the open-source RFID reader, a spool on it" /> | <img src="../assets/tigerspool-desk.webp" alt="A TigerSpool on a desk, a transparent spool resting on it" /> | <img src="../assets/tigerspool-creality-k2.webp" alt="A TigerSpool mounted on a Creality K2" /> |
+
+The open-source RFID reader that sends a spool's filament to a printer's slot: ESP32-S3, NFC
+reader, 3D-printed case, MIT. After a scan, its screen says where to load the spool:
+[`tigerspool-screen-sent.webp`](../assets/tigerspool-screen-sent.webp). Product page:
+[TigerSpool](../products/tigerspool.md).
+
+## Tiger Touch
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch on a BIGTREETECH Panda Touch, animated tour" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — every printer of the account, as a list" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — a Snapmaker U1, live" /> |
+
+Free, open-source firmware for the BIGTREETECH Panda Touch and K-Touch: every printer of a
+TigerSystem account on one 7″ touchscreen, no computer. The first image is an animated WebP;
+start screen: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Product page:
+[Tiger Touch](../products/tigertouch.md).
+
+## TigerQR labels
+
+<img src="../assets/tigerqr-labels-hero.webp" width="100%" alt="Three TigerQR+ spool labels of different sizes for a sample catalogue filament, each with its QR code" />
+
+|| | |
+|---|---|---|
+| <img src="../assets/tigerqr-label-classic-40x30.webp" alt="TigerQR label — Classic (default), 40 × 30 mm" /> | <img src="../assets/tigerqr-label-wide-50x30.webp" alt="TigerQR label — Wide, 50 × 30 mm" /> | <img src="../assets/tigerqr-label-compact-40x25.webp" alt="TigerQR label — Compact, 40 × 25 mm" /> |
+| <img src="../assets/tigerqr-label-slim-40x12.webp" alt="TigerQR label — Slim, 40 × 12 mm" /> | <img src="../assets/tigerqr-label-slicer-40x30.webp" alt="TigerQR label — Slicer-friendly, 40 × 30 mm" /> | <img src="../assets/tigerqr-label-qr-only-25x30.webp" alt="TigerQR label — QR only, 25 × 30 mm" /> |
+| <img src="../assets/tigerqr-label-vertical-30x40.webp" alt="TigerQR label — Vertical, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-bold-30x40.webp" alt="TigerQR label — Vertical bold, 30 × 40 mm" /> | <img src="../assets/tigerqr-label-vertical-compact-25x40.webp" alt="TigerQR label — Vertical compact, 25 × 40 mm" /> |
+
+Printed spool labels: a QR code that opens the spool, in nine templates from 40 × 12 mm to
+50 × 30 mm. What the owner's phone shows after a scan:
+[the spool](../assets/tigerqr-phone-owner.webp),
+[its settings](../assets/tigerqr-phone-owner-settings.webp). Specification:
+[Spool ids and QR links](../developers/spool-ids-and-qr-links.md).
 
 ## The chip & the carrier
 
@@ -111,10 +155,10 @@ carrying its TigerTag NFC chip — one per color.
 
 ## Certified integrators — filament manufacturer logos
 
-The filament brands that ship TigerTag from the factory, as vector logos. All
-six are **certified partners** — the audited tier that may carry the mark on a
-product. The full registry, with what each has actually deployed, is on
-[Certified partners](../certified-partners.md).
+The filament brands that ship TigerTag from the factory, as vector logos. Ten brands do, all of
+them **certified partners**, the audited tier that may carry the mark on a product; this pack
+holds the logos of six of them. Filforme, Nanovia, Lotactree and Smart3DPT are listed, with what
+each has actually deployed, on [Certified partners](../certified-partners.md).
 
 **Integrated across the whole production line**
 
@@ -151,9 +195,13 @@ R3D.
 
 ## The apps
 
+<img src="../assets/tiger-studio-imac.webp" width="100%" alt="Tiger Studio on an iMac" />
+
 || | |
 |---|---|---|
-| <img src="../assets/tiger-studio-inventory.jpg" height="290" alt="Tiger Studio — the inventory view" /> | <img src="../assets/tiger-studio-printers.jpg" height="290" alt="Tiger Studio — the printers view" /> | <img src="../assets/tiger-studio-rack.jpg" height="290" alt="Tiger Studio — the storage rack view" /> |
+| <img src="../assets/tiger-studio-inventory-2.png" alt="Tiger Studio — the inventory" /> | <img src="../assets/tiger-studio-printers-2.png" alt="Tiger Studio — the printers, live" /> | <img src="../assets/tiger-studio-camera-wall.png" alt="Tiger Studio — the camera wall" /> |
+| <img src="../assets/tiger-studio-racks.webp" alt="Tiger Studio — a storage rack, spool by spool" /> | <img src="../assets/tiger-studio-racks-all.webp" alt="Tiger Studio — every rack at once" /> | <img src="../assets/tiger-studio-web-browser.webp" alt="Tiger Studio Web, in the browser" /> |
+| <img src="../assets/tiger-studio-web-spool-details.webp" alt="Tiger Studio Web — a spool's details" /> | <img src="../assets/tiger-studio-web-favourites.webp" alt="Tiger Studio Web — favourite filaments" /> | <img src="../assets/tiger-studio-web-colour-filter.webp" alt="Tiger Studio Web — filtering by colour" /> |
 
 || | |
 |---|---|---|
@@ -161,8 +209,13 @@ R3D.
 
 <img src="../assets/studio-and-connect-mockup.jpg" width="100%" alt="Tiger Studio on desktop and Tiger NFC Connect on mobile, same account, same data" />
 
-Tiger Studio (desktop) and Tiger NFC Connect (mobile) — screenshots and the
-combined mockup.
+<img src="../assets/connect-iphone.webp" width="240" alt="Tiger NFC Connect on an iPhone" />
+
+Tiger Studio 2 (desktop, free) and Tiger Studio Web (in the browser): inventory, live
+printers, camera wall, storage racks. Tiger NFC Connect (iOS and Android) reads a spool with the
+phone's NFC. The earlier screenshots stay available for archive use:
+[inventory](../assets/tiger-studio-inventory.jpg), [printers](../assets/tiger-studio-printers.jpg),
+[rack](../assets/tiger-studio-rack.jpg).
 
 ## Real setups
 
