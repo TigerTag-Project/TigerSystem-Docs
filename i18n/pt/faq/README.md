@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -172,8 +172,7 @@ Não — o aplicativo funciona sozinho. Um leitor ACR122U (ou um suporte
 e codificação de chips.
 
 **Quais impressoras ele consegue controlar?**
-Seis marcas ativas: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker —
-veja a [matriz de compatibilidade](../compatibility/README.md).
+Seis marcas ativas: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker; Prusa em beta, e qualquer impressora Klipper ou OctoPrint em beta — veja a [matriz de compatibilidade](../compatibility/README.md).
 
 ## Fatiadores e o fluxo de impressão
 
@@ -195,7 +194,7 @@ Hoje não. O chip carrega as configurações recomendadas do filamento
 
 **Tenho impressoras de três marcas diferentes. É um problema?**
 Pelo contrário — esse é o ponto. Uma única tabela de impressoras para toda a frota, com
-filtros de marca / estado / tag, seja qual for a mistura das seis marcas compatíveis.
+filtros de marca / estado / tag, seja qual for a mistura de impressoras compatíveis.
 
 ## TigerHub (a casa web do ecossistema)
 

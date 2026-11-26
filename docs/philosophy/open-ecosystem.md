@@ -23,7 +23,7 @@ destination**.
 Every product — [Tiger Studio](../products/tiger-studio.md), the mobile app,
 [TigerScale](../products/tigerscale.md), [TigerPOD](../products/tigerpod.md) —
 is a working demonstration of what open, documented technology makes possible
-once a spool can identify itself: live printer telemetry across six brands,
+once a spool can identify itself: live printer telemetry across seven brands plus Klipper and OctoPrint,
 physical rack mapping, sensors, shared inventories. Some of it will mature,
 some of it exists to prove a point, and all of it is readable, forkable and
 free to copy. Every product — current and future — is a **proof of concept**

@@ -1,5 +1,5 @@
 ---
-sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
+sourceHash: e37ac13e1150410ab06ef8cd09503fe830a4669ee98661ac36a83fadafc41e5e
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -29,7 +29,7 @@ Jedes Produkt – [Tiger Studio](../products/tiger-studio.md), die mobile App,
 [TigerScale](../products/tigerscale.md), [TigerPOD](../products/tigerpod.md) – ist
 eine funktionierende Demonstration dessen, was offene, dokumentierte Technik möglich
 macht, sobald sich eine Spule selbst identifizieren kann: Live-Drucker-Telemetrie über
-sechs Marken, physisches Rack-Mapping, Sensoren, geteilte Bestände. Manches davon wird
+sieben Marken plus Klipper und OctoPrint, physisches Rack-Mapping, Sensoren, geteilte Bestände. Manches davon wird
 reifen, manches existiert, um etwas zu beweisen, und alles ist les-, fork- und frei
 kopierbar. Jedes Produkt – heutiges und künftiges – ist ein **Proof of Concept** eines
 **quelloffenen, standardisierten, herstellerunabhängigen, plattformübergreifenden

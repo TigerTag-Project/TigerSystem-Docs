@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -27,7 +27,7 @@ flowchart TB
 ## Funciones — todas disponibles hoy
 
 - **Escaparate del ecosistema** — la página de inicio cuenta toda la historia: cómo
- funciona, las seis marcas de impresoras, los componentes y los tres niveles
+ funciona, las impresoras compatibles, los componentes y los tres niveles
  (TigerData — seguimiento solo por software · TigerTag — el chip sin conexión ·
  TigerTag+ — autenticidad verificada).
 - **Tu cuenta en la web** (`/account`) — inicia sesión en tu cuenta de TigerSystem

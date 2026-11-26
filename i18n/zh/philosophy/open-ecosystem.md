@@ -1,5 +1,5 @@
 ---
-sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
+sourceHash: e37ac13e1150410ab06ef8cd09503fe830a4669ee98661ac36a83fadafc41e5e
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -27,7 +27,7 @@ TigerSystem 的每一层都已公开——硬件、固件、SDK、应用、文�
 每一款产品——[Tiger Studio](../products/tiger-studio.md)、移动应用、
 [TigerScale](../products/tigerscale.md)、[TigerPOD](../products/tigerpod.md)——
 都是一次可运行的演示，展示一旦线轴能够自我识别，开放且有文档的技术能带来什么：
-横跨六个品牌的打印机实时遥测、实体货架映射、传感器、共享库存。
+横跨七个品牌以及 Klipper 和 OctoPrint 的打印机实时遥测、实体货架映射、传感器、共享库存。
 其中一些会逐渐成熟，一些只是为了证明某个观点，而所有这些都可读、可分叉、可自由复制。
 每一款产品——无论现在还是将来——都是一个**开源、标准、与厂商无关、跨平台协议**的**概念验证**：
 它唯一的任务就是展示潜力，让任何人都能把我们的集成工作当作灵感，去设想明天的功能。

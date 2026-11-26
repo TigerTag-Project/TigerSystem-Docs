@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -27,7 +27,7 @@ flowchart TB
 ## Funktionen – alle heute live
 
 - **Schaufenster des Ökosystems** – die Startseite erzählt die ganze Geschichte: wie es
- funktioniert, die sechs Druckermarken, die Komponenten und die drei Stufen
+ funktioniert, die unterstützten Drucker, die Komponenten und die drei Stufen
  (TigerData – reines Software-Tracking · TigerTag – der Offline-Chip · TigerTag+ –
  verifizierte Echtheit).
 - **Dein Konto im Web** (`/account`) – melde dich in einem Browser an deinem

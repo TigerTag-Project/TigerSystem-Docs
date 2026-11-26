@@ -1,5 +1,5 @@
 ---
-sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
+sourceHash: e37ac13e1150410ab06ef8cd09503fe830a4669ee98661ac36a83fadafc41e5e
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -28,7 +28,7 @@ bestemming**.
 Elk product — [Tiger Studio](../products/tiger-studio.md), de mobiele app,
 [TigerScale](../products/tigerscale.md), [TigerPOD](../products/tigerpod.md) —
 is een werkende demonstratie van wat open, gedocumenteerde technologie mogelijk maakt
-zodra een spoel zichzelf kan identificeren: live printertelemetrie over zes merken,
+zodra een spoel zichzelf kan identificeren: live printertelemetrie over zeven merken plus Klipper en OctoPrint,
 fysieke rackmapping, sensoren, gedeelde inventarissen. Een deel zal rijpen,
 een deel bestaat om iets te bewijzen, en alles is leesbaar, forkbaar en
 vrij te kopiëren. Elk product — huidig en toekomstig — is een **proof of concept**

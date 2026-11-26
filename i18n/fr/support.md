@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -76,7 +76,7 @@ Rien ici ne coûte d'argent, et une partie vaut plus que de l'argent.
 
 La chose la plus utile que quiconque ait jamais faite pour ce projet, c'est
 demander à un fabricant de filament pourquoi ses bobines ne sont pas taguées.
-Six marques expédient aujourd'hui du TigerTag depuis l'usine
+Dix marques expédient aujourd'hui du TigerTag depuis l'usine
 ([le registre](./certified-partners.md)) ; chacune a commencé par des clients
 qui posaient la question.
 

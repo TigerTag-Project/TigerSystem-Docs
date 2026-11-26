@@ -32,7 +32,7 @@ flowchart LR
   TD["TD1S"] --> ST
   ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
   SCALE["TigerScale"] --> CLOUD
-  ST -- "filament to slots" --> PRN["6 printer brands"]
+  ST -- "filament to slots" --> PRN["7 printer brands + Klipper, OctoPrint"]
   PRN -- "telemetry · cameras" --> ST
 ```
 
@@ -41,7 +41,7 @@ flowchart LR
 - **Inventory** — real-time Firestore sync, table/grid views, detail panel,
  weight tracking, container calibration, digital spools (TigerData) with
  atomic chip promotion.
-- **Printers** — live integrations for **6 brands** (telemetry, filament per
+- **Printers** — live integrations for **7 brands** plus any Klipper or OctoPrint printer (telemetry, filament per
  slot, job progress, cameras, and for some brands full control panels). See
  [compatibility](../compatibility/README.md).
 - **Racks** — drag-and-drop physical storage mapping.

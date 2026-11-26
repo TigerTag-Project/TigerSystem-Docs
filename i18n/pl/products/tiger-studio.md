@@ -1,5 +1,5 @@
 ---
-sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
+sourceHash: b059f1d3055ceb49617cdad9e853cbe813c2915aff34ca5c25c0d66af39b9108
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -37,7 +37,7 @@ flowchart LR
   TD["TD1S"] --> ST
   ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
   SCALE["TigerScale"] --> CLOUD
-  ST -- "filament to slots" --> PRN["6 printer brands"]
+  ST -- "filament to slots" --> PRN["7 printer brands + Klipper, OctoPrint"]
   PRN -- "telemetry · cameras" --> ST
 ```
 
@@ -46,7 +46,7 @@ flowchart LR
 - **Magazyn** — synchronizacja Firestore w czasie rzeczywistym, widoki tabeli/siatki, panel szczegółów,
  śledzenie masy, kalibracja pojemników, cyfrowe szpule (TigerData) z
  atomowym awansem do chipa.
-- **Drukarki** — integracje na żywo dla **6 marek** (telemetria, filament w każdym
+- **Drukarki** — integracje na żywo dla **7 marek** i każdej drukarki z Klipperem lub OctoPrint (telemetria, filament w każdym
  slocie, postęp zadania, kamery, a dla niektórych marek pełne panele sterowania). Zob.
  [zgodność](../compatibility/README.md).
 - **Regały** — mapowanie fizycznego przechowywania metodą przeciągnij i upuść.

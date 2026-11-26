@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -162,7 +162,7 @@ met TigerTag-chips op de spoel.*
 ## Wat je klanten op dag één krijgen
 
 Een spoel die zichzelf identificeert bij **elke NFC-telefoon**, een volledig inventaris-
-ecosysteem (mobiel, desktop, web), live integratie met zes printermerken,
+ecosysteem (mobiel, desktop, web), live integratie met zeven printermerken plus Klipper en OctoPrint,
 gewichtsregistratie, delen — een ervaring die **ver boven wat een gesloten
 omgeving van één fabrikant biedt** uitstijgt, en die werkt met elke printer die je
 klanten bezitten, niet alleen met die van één merk.

@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -57,8 +57,7 @@ Beide bleiben Ausnahmen – und das spricht für die Brücke, nicht gegen sie: S
 musste nie auf sie warten.
 
 Mit der Brücke erreichen die Filamentdaten den Drucker über die
-[Drucker-Integrationen von Tiger Studio](../compatibility/README.md) (sechs Marken
-heute live) – die Spule identifiziert sich gegenüber dem *System*, und das System
+[Drucker-Integrationen von Tiger Studio](../compatibility/README.md) (sieben Marken, dazu Klipper und OctoPrint) – die Spule identifiziert sich gegenüber dem *System*, und das System
 spricht mit der Maschine.
 
 Der Beweis am Beispiel: **FlashForge-Drucker haben gar kein RFID-Lesegerät** – und

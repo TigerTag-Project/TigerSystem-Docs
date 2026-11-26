@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -22,7 +22,7 @@ flowchart TB
 
 ## Funcionalidades — todas ativas hoje
 
-- **Montra do ecossistema** — a página inicial conta a história completa: como funciona, as seis marcas de impressoras, os componentes e os três níveis (TigerData — acompanhamento só por software · TigerTag — o chip offline · TigerTag+ — autenticidade verificada).
+- **Montra do ecossistema** — a página inicial conta a história completa: como funciona, as impressoras suportadas, os componentes e os três níveis (TigerData — acompanhamento só por software · TigerTag — o chip offline · TigerTag+ — autenticidade verificada).
 - **A sua conta na web** (`/account`) — inicie sessão na sua conta TigerSystem a partir de um navegador.
 - **Listas de desejos** — públicas e só para amigos, ambas disponíveis.
 - **Códigos de amigo e convites** — adicionem-se mutuamente como amigos a partir da web.

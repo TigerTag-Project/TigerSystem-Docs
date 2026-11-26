@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -69,7 +69,7 @@ Nic z poniższych nie kosztuje pieniędzy, a część jest warta więcej niż pi
 ## Zapytaj swoją markę filamentu
 
 Najbardziej użyteczną rzeczą, jaką ktokolwiek zrobił dla tego projektu, jest zapytanie
-producenta filamentu, dlaczego jego szpule nie są oznaczone. Sześć marek wysyła TigerTag
+producenta filamentu, dlaczego jego szpule nie są oznaczone. Dziesięć marek wysyła TigerTag
 z fabryki już dziś ([rejestr](./certified-partners.md)); każda
 zaczęła się od pytań klientów.
 

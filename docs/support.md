@@ -64,7 +64,7 @@ Nothing here costs money, and some of it is worth more than money.
 ## Ask your filament brand
 
 The single most useful thing anyone has ever done for this project is ask a
-filament manufacturer why their spools are not tagged. Six brands ship TigerTag
+filament manufacturer why their spools are not tagged. Ten brands ship TigerTag
 from the factory today ([the registry](./certified-partners.md)); each one
 started with customers asking.
 

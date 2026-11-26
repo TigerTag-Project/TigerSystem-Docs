@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -25,7 +25,7 @@ flowchart TB
 ## 功能——今天全部可用
 
 - **生态系统展示**——首页讲述完整的故事：它如何运作、
- 六个打印机品牌、各个组件，以及三个层级（TigerData——
+ 受支持的打印机、各个组件，以及三个层级（TigerData——
  纯软件跟踪 · TigerTag——离线芯片 · TigerTag+——经过验证的
  真实性）。
 - **你在网页上的账号**（`/account`）——在浏览器中登录你的 TigerSystem

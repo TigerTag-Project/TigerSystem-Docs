@@ -1,5 +1,5 @@
 ---
-sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
+sourceHash: cb54ec939dccad1647484e7edebc994ba24dab750c69edb865300622c09c870d
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -35,7 +35,7 @@ flowchart TB
 | **Firebase** | Una base de datos compartida: cuentas, inventario, sincronización; el punto de interoperabilidad del entorno de pruebas | [Inventario y sincronización en la nube](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | La casa web del ecosistema: escaparate, listas de deseos, amigos, uso compartido | [Página del producto](../products/tigerhub.md) |
 | **Tiger Studio** | Banco de trabajo de escritorio: inventario, racks, sensores, impresoras | [Página del producto](../products/tiger-studio.md) |
-| **Integraciones de impresoras** | Enlaces LAN en vivo con seis marcas de impresoras | [Compatibilidad](../compatibility/README.md) |
+| **Integraciones de impresoras** | Enlaces en vivo con siete marcas de impresoras, más Klipper y OctoPrint | [Compatibilidad](../compatibility/README.md) |
 | **API de terceros** | SDK + superficie de Firestore documentada para todo el mundo | [Desarrolladores](../developers/README.md) |
 
 ## El mapa completo: cada elemento y sus conexiones

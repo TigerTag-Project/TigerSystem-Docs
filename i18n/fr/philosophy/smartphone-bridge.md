@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -57,8 +57,7 @@ des exceptions — ce qui plaide pour le pont plutôt que contre lui : il n'a
 jamais eu à les attendre.
 
 Avec le pont, les données du filament atteignent l'imprimante via les
-[intégrations d'imprimantes de Tiger Studio](../compatibility/README.md) (six
-marques opérationnelles à ce jour) — la bobine se présente au *système*, et le
+[intégrations d'imprimantes de Tiger Studio](../compatibility/README.md) (sept marques, plus Klipper et OctoPrint) — la bobine se présente au *système*, et le
 système parle à la machine.
 
 La preuve par l'exemple : **les imprimantes FlashForge n'ont aucun lecteur

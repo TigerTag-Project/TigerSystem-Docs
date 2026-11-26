@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -54,8 +54,7 @@ uitzonderingen — en dat is een argument voor de brug, niet ertegen: die hoefde
 er nooit op te wachten.
 
 Met de brug bereikt de filamentdata de printer via
-[de printerintegraties van Tiger Studio](../compatibility/README.md) (zes merken
-vandaag live) — de spoel identificeert zich bij het *systeem*, en het systeem praat
+[de printerintegraties van Tiger Studio](../compatibility/README.md) (zeven merken, plus Klipper en OctoPrint) — de spoel identificeert zich bij het *systeem*, en het systeem praat
 met de machine.
 
 Het bewijs aan de hand van een voorbeeld: **FlashForge-printers hebben helemaal geen RFID-lezer**

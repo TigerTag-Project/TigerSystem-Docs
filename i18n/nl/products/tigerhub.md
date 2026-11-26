@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -27,7 +27,7 @@ flowchart TB
 ## Functies — allemaal vandaag live
 
 - **Etalage van het ecosysteem** — de homepage vertelt het hele verhaal: hoe het werkt,
- de zes printermerken, de componenten en de drie niveaus (TigerData —
+ de ondersteunde printers, de componenten en de drie niveaus (TigerData —
  alleen-software-tracking · TigerTag — de offline chip · TigerTag+ — geverifieerde
  echtheid).
 - **Je account op het web** (`/account`) — log in op je TigerSystem-account

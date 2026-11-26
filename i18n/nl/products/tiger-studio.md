@@ -1,5 +1,5 @@
 ---
-sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
+sourceHash: b059f1d3055ceb49617cdad9e853cbe813c2915aff34ca5c25c0d66af39b9108
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -37,7 +37,7 @@ flowchart LR
   TD["TD1S"] --> ST
   ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
   SCALE["TigerScale"] --> CLOUD
-  ST -- "filament to slots" --> PRN["6 printer brands"]
+  ST -- "filament to slots" --> PRN["7 printer brands + Klipper, OctoPrint"]
   PRN -- "telemetry · cameras" --> ST
 ```
 
@@ -46,7 +46,7 @@ flowchart LR
 - **Inventaris** — realtime Firestore-synchronisatie, tabel- en rasterweergaven, detailpaneel,
  gewichtsregistratie, containerkalibratie, digitale spoelen (TigerData) met
  atomaire chippromotie.
-- **Printers** — live integraties voor **6 merken** (telemetrie, filament per
+- **Printers** — live integraties voor **7 merken** en elke Klipper- of OctoPrint-printer (telemetrie, filament per
  slot, voortgang van de taak, camera’s, en voor sommige merken volledige bedieningspanelen). Zie
  [compatibiliteit](../compatibility/README.md).
 - **Racks** — fysieke opslag in kaart brengen met slepen en neerzetten.

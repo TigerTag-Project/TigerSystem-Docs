@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -193,7 +193,7 @@ bobines et l'encodage des puces.
 
 **Quelles imprimantes peut-elle piloter ?**
 Six marques en service : Anycubic, Bambu Lab, Creality, Elegoo, FlashForge,
-Snapmaker — voir la
+Snapmaker ; Prusa en bêta, et toute imprimante Klipper ou OctoPrint en bêta — voir la
 [matrice de compatibilité](../compatibility/README.md).
 
 ## Slicers et flux d'impression
@@ -219,8 +219,7 @@ Pas aujourd'hui. La puce porte les réglages recommandés du filament
 
 **J'ai des imprimantes de trois marques différentes. Un problème ?**
 Au contraire — c'est tout l'intérêt. Un seul tableau d'imprimantes pour tout le
-parc, avec des filtres marque / état / tag, quel que soit le mélange parmi les
-six marques prises en charge.
+parc, avec des filtres marque / état / tag, quel que soit le mélange des imprimantes prises en charge.
 
 ## TigerHub (le port d'attache web de l'écosystème)
 

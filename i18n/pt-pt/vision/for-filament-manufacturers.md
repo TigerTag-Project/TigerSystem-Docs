@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -105,7 +105,7 @@ Publicações públicas nos canais das próprias marcas — não é o nosso comu
 
 ## O que os seus clientes recebem no primeiro dia
 
-Uma bobina que se identifica a **qualquer telemóvel NFC**, um ecossistema de inventário completo (móvel, computador, web), integração em direto com seis marcas de impressoras, acompanhamento do peso, partilha — uma experiência **muito além do que qualquer ambiente fechado de um só fabricante oferece**, e que funciona com todas as impressoras que os seus clientes possuem, não apenas com as de uma marca.
+Uma bobina que se identifica a **qualquer telemóvel NFC**, um ecossistema de inventário completo (móvel, computador, web), integração em direto com sete marcas de impressoras mais Klipper e OctoPrint, acompanhamento do peso, partilha — uma experiência **muito além do que qualquer ambiente fechado de um só fabricante oferece**, e que funciona com todas as impressoras que os seus clientes possuem, não apenas com as de uma marca.
 
 ## Atualize os dados mesmo depois de saírem da sua fábrica
 

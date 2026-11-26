@@ -1,5 +1,5 @@
 ---
-sourceHash: 52c625d47f630ed8187a415d4e2480f3b5b2612184ad602a942c94567ce6bbaf
+sourceHash: cb54ec939dccad1647484e7edebc994ba24dab750c69edb865300622c09c870d
 sourcePath: docs/architecture/overview.md
 ---
 
@@ -35,7 +35,7 @@ flowchart TB
 | **Firebase** | 一个共享数据库——账号、库存、同步；沙盒的互操作点 | [库存与云同步](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | 生态系统的网站门户：展示、心愿单、好友、分享 | [产品页面](../products/tigerhub.md) |
 | **Tiger Studio** | 桌面工作台：库存、货架、传感器、打印机 | [产品页面](../products/tiger-studio.md) |
-| **打印机集成** | 与六个打印机品牌的实时局域网链路 | [兼容性](../compatibility/README.md) |
+| **打印机集成** | 与七个打印机品牌以及 Klipper 和 OctoPrint 的实时链路 | [兼容性](../compatibility/README.md) |
 | **第三方 API** | 面向所有人的 SDK 与已公开的 Firestore 接口 | [开发者](../developers/README.md) |
 
 ## 完整地图——每个元素及其连接

@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -177,7 +177,7 @@ Nein – die App funktioniert eigenständig. Ein ACR122U-Lesegerät (oder ein
 Codieren von Chips.
 
 **Welche Drucker kann sie ansteuern?**
-Sechs Marken live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker –
+Sechs Marken live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker; Prusa in der Beta, und jeder Klipper- oder OctoPrint-Drucker in der Beta –
 siehe die [Kompatibilitätsmatrix](../compatibility/README.md).
 
 ## Slicer & Druck-Workflow
@@ -201,8 +201,7 @@ Heute nicht. Der Chip trägt die empfohlenen Einstellungen des Filaments
 
 **Ich habe Drucker von drei verschiedenen Marken. Ein Problem?**
 Im Gegenteil – das ist der Punkt. Eine Druckertabelle für die ganze Flotte, mit
-Filtern nach Marke / Zustand / Tag, in welcher Mischung der sechs unterstützten
-Marken auch immer.
+Filtern nach Marke / Zustand / Tag, in welcher Mischung unterstützter Drucker auch immer.
 
 ## TigerHub (die Web-Heimat des Ökosystems)
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
+sourceHash: b059f1d3055ceb49617cdad9e853cbe813c2915aff34ca5c25c0d66af39b9108
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -31,14 +31,14 @@ flowchart LR
   TD["TD1S"] --> ST
   ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
   SCALE["TigerScale"] --> CLOUD
-  ST -- "filament to slots" --> PRN["6 printer brands"]
+  ST -- "filament to slots" --> PRN["7 printer brands + Klipper, OctoPrint"]
   PRN -- "telemetry · cameras" --> ST
 ```
 
 ## Funcionalidades (destaques)
 
 - **Inventário** — sincronização Firestore em tempo real, vistas em tabela/grelha, painel de detalhe, controlo do peso, calibração de contentores, bobinas digitais (TigerData) com promoção atómica a chip.
-- **Impressoras** — integrações em direto para **6 marcas** (telemetria, filamento por slot, progresso dos trabalhos, câmaras e, em algumas marcas, painéis de controlo completos). Veja a [compatibilidade](../compatibility/README.md).
+- **Impressoras** — integrações em direto para **7 marcas** e qualquer impressora Klipper ou OctoPrint (telemetria, filamento por slot, progresso dos trabalhos, câmaras e, em algumas marcas, painéis de controlo completos). Veja a [compatibilidade](../compatibility/README.md).
 - **Racks** — mapeamento do armazenamento físico por arrastar e largar.
 - **Amigos e partilha** — códigos de descoberta, inventários de amigos só de leitura.
 - **Dispositivos** — próprios: [TigerPOD](./tigerpod.md) e [TigerScale](./tigerscale.md); de terceiros: o leitor NFC ACR122U, os analisadores **AJAX-3D TD-1 e TD1s** (TD + cor diretamente para o perfil da bobina) e as **balanças USB HID** (DYMO série M e qualquer balança compatível) — lista completa: [hardware de terceiros compatível](../compatibility/third-party-hardware.md).

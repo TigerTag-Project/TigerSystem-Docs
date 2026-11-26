@@ -30,7 +30,7 @@ flowchart TB
 | **Firebase** | One shared database — accounts, inventory, sync; the interoperability point of the sandbox | [Inventory & cloud sync](../concepts/inventory-and-cloud-sync.md) |
 | **TigerHub** | The ecosystem's web home: showcase, wishlists, friends, sharing | [Product page](../products/tigerhub.md) |
 | **Tiger Studio** | Desktop workbench: inventory, racks, sensors, printers | [Product page](../products/tiger-studio.md) |
-| **Printer integrations** | Live LAN links to six printer brands | [Compatibility](../compatibility/README.md) |
+| **Printer integrations** | Live links to seven printer brands, plus Klipper and OctoPrint | [Compatibility](../compatibility/README.md) |
 | **Third-party APIs** | SDKs + documented Firestore surface for anyone | [Developers](../developers/README.md) |
 
 ## The full map — every element and its connections

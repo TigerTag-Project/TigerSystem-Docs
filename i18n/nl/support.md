@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -69,7 +69,7 @@ Niets hier kost geld, en sommige dingen zijn meer waard dan geld.
 ## Vraag het aan je filamentmerk
 
 Het nuttigste dat iemand ooit voor dit project heeft gedaan, is aan een
-filamentfabrikant vragen waarom zijn spoelen niet getagd zijn. Zes merken leveren TigerTag
+filamentfabrikant vragen waarom zijn spoelen niet getagd zijn. Tien merken leveren TigerTag
 vandaag vanaf de fabriek ([het register](./certified-partners.md)); elk van hen
 begon met klanten die ernaar vroegen.
 

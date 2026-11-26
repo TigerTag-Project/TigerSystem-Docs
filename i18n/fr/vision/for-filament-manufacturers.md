@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -172,7 +172,7 @@ commercialisé avec des puces TigerTag sur la bobine.*
 
 Une bobine qui s'identifie auprès de **n'importe quel téléphone NFC**, un
 écosystème d'inventaire complet (mobile, bureau, web), une intégration en
-direct avec six marques d'imprimantes, le suivi du poids, le partage — une
+direct avec sept marques d'imprimantes plus Klipper et OctoPrint, le suivi du poids, le partage — une
 expérience **bien au-delà de ce qu'offre le moindre environnement fermé
 mono-constructeur**, et qui fonctionne avec toutes les imprimantes que vos
 clients possèdent, pas seulement celles d'une marque.

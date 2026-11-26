@@ -158,7 +158,7 @@ with TigerTag chips on the spool.*
 ## What your customers get on day one
 
 A spool that identifies itself to **any NFC phone**, a full inventory
-ecosystem (mobile, desktop, web), live integration with six printer brands,
+ecosystem (mobile, desktop, web), live integration with seven printer brands plus Klipper and OctoPrint,
 weight tracking, sharing — an experience **far beyond what any closed
 single-vendor environment offers**, and it works with every printer your
 customers own, not just one brand's.

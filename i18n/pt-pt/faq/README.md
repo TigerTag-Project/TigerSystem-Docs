@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -84,7 +84,7 @@ Windows, macOS e Linux (Electron). Transferências na [página de versões](http
 Não — a aplicação funciona sozinha. Um leitor ACR122U (ou um suporte [TigerPOD](../products/tigerpod.md)) acrescenta identificação instantânea de bobinas e codificação de chips.
 
 **Que impressoras consegue controlar?**
-Seis marcas ativas: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker — ver a [matriz de compatibilidade](../compatibility/README.md).
+Seis marcas ativas: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker; Prusa em beta, e qualquer impressora Klipper ou OctoPrint em beta — ver a [matriz de compatibilidade](../compatibility/README.md).
 
 ## Slicers e o fluxo de impressão
 
@@ -98,7 +98,7 @@ Duas coisas. Primeiro, a informação de filamento do lado da máquina correspon
 Hoje não. O chip leva as definições recomendadas do filamento (temperaturas…); é você que as reproduz no perfil do seu slicer.
 
 **Tenho impressoras de três marcas diferentes. Problema?**
-O contrário — é esse o ponto. Uma única tabela de impressoras para toda a frota, com filtros por marca / estado / etiqueta, seja qual for a mistura das seis marcas suportadas.
+O contrário — é esse o ponto. Uma única tabela de impressoras para toda a frota, com filtros por marca / estado / etiqueta, seja qual for a mistura de impressoras suportadas.
 
 ## TigerHub (a casa web do ecossistema)
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -50,8 +50,7 @@ flowchart LR
 而不是反对它的理由：桥接从来不必等待它们。
 
 借助桥接，耗材数据通过
-[Tiger Studio 的打印机集成](../compatibility/README.md)（目前已有六个品牌
-上线）到达打印机——线轴向*系统*表明自己的身份，再由系统与
+[Tiger Studio 的打印机集成](../compatibility/README.md)（七个品牌，以及 Klipper 和 OctoPrint）到达打印机——线轴向*系统*表明自己的身份，再由系统与
 机器对话。
 
 用实例证明：**FlashForge 打印机根本没有 RFID 读卡器**——

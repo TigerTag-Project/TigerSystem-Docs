@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -53,8 +53,7 @@ Os dois continuam sendo exceções — o que é um argumento a favor da ponte, n
 contra ela: ela nunca precisou esperar por eles.
 
 Com a ponte, os dados do filamento chegam à impressora pelas
-[integrações de impressoras do Tiger Studio](../compatibility/README.md) (seis marcas
-ao vivo hoje) — a bobina se identifica para o *sistema*, e o sistema fala com
+[integrações de impressoras do Tiger Studio](../compatibility/README.md) (sete marcas, mais Klipper e OctoPrint) — a bobina se identifica para o *sistema*, e o sistema fala com
 a máquina.
 
 A prova pelo exemplo: **as impressoras FlashForge não têm nenhum leitor RFID** —

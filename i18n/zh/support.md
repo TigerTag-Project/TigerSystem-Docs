@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -61,7 +61,7 @@ TigerSystem 是一个个人开源项目；捐款归其维护者所有，无论�
 ## 去问你的耗材品牌
 
 任何人为这个项目做过的最有用的一件事，就是问耗材制造商为什么他们的线轴没有贴标签。
-如今有六个品牌在工厂里就出货带 TigerTag 的线轴（[登记册](./certified-partners.md)）；
+如今有十个品牌在工厂里就出货带 TigerTag 的线轴（[登记册](./certified-partners.md)）；
 每一个都是从客户的询问开始的。
 
 ---

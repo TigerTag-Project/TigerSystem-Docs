@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -52,8 +52,7 @@ przypadki pozostają wyjątkami — co jest argumentem za mostem, a nie przeciw
 niemu: nigdy nie musiał na nie czekać.
 
 Dzięki mostowi dane filamentu docierają do drukarki przez
-[integracje drukarek Tiger Studio](../compatibility/README.md) (dziś działa
-sześć marek) — szpula przedstawia się *systemowi*, a system rozmawia
+[integracje drukarek Tiger Studio](../compatibility/README.md) (siedem marek, a także Klipper i OctoPrint) — szpula przedstawia się *systemowi*, a system rozmawia
 z maszyną.
 
 Dowód na przykładzie: **drukarki FlashForge w ogóle nie mają czytnika RFID** —

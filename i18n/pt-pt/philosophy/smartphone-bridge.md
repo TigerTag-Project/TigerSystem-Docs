@@ -1,5 +1,5 @@
 ---
-sourceHash: 1281db0cc802e363a033ad02e696c6e1a040d45e849f843b3c2931d567e6adbc
+sourceHash: bf6954a771057e888f3642f65484515849fa75c4d885b2dab1e1dab3a04be06d
 sourcePath: docs/philosophy/smartphone-bridge.md
 ---
 
@@ -38,7 +38,7 @@ Algumas impressoras leem etiquetas de forma nativa — normalmente no seu própr
 
 A linha do meio não é nossa, e é recente. O firmware alargado da comunidade faz da [Snapmaker U1](../compatibility/snapmaker.md) a primeira impressora a ler um TigerTag na própria máquina; e o **BT-AMS-C**, um leitor de quatro slots que se monta num AMS da Bambu Lab, envia os dados TigerTag diretamente para a BMCU da impressora ([hardware de terceiros](../compatibility/third-party-hardware.md)). Ambos continuam a ser exceções — o que é um argumento a favor da ponte, não contra ela: nunca teve de esperar por eles.
 
-Com a ponte, os dados do filamento chegam à impressora através das [integrações de impressoras do Tiger Studio](../compatibility/README.md) (seis marcas disponíveis hoje) — a bobina identifica-se junto do *sistema*, e o sistema fala com a máquina.
+Com a ponte, os dados do filamento chegam à impressora através das [integrações de impressoras do Tiger Studio](../compatibility/README.md) (sete marcas, mais Klipper e OctoPrint) — a bobina identifica-se junto do *sistema*, e o sistema fala com a máquina.
 
 A prova pelo exemplo: **as impressoras FlashForge não têm qualquer leitor RFID** — e, através da ponte, funcionam agora na mesma com filamento identificado por NFC. Uma capacidade totalmente nova, acrescentada às máquinas de outros, **totalmente gratuita para o utilizador** ([o caso FlashForge](../compatibility/flashforge.md)).
 

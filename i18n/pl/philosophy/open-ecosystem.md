@@ -1,5 +1,5 @@
 ---
-sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
+sourceHash: e37ac13e1150410ab06ef8cd09503fe830a4669ee98661ac36a83fadafc41e5e
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -28,7 +28,7 @@ celem ostatecznym**.
 Każdy produkt — [Tiger Studio](../products/tiger-studio.md), aplikacja mobilna,
 [TigerScale](../products/tigerscale.md), [TigerPOD](../products/tigerpod.md) —
 jest działającą demonstracją tego, co umożliwia otwarta, udokumentowana technologia,
-gdy szpula potrafi się sama zidentyfikować: telemetria drukarek na żywo w sześciu markach,
+gdy szpula potrafi się sama zidentyfikować: telemetria drukarek na żywo w siedmiu markach oraz Klipperze i OctoPrint,
 fizyczne mapowanie regałów, czujniki, wspólne magazyny. Część z tego dojrzeje,
 część istnieje, by coś udowodnić, a wszystko można czytać, forkować i
 swobodnie kopiować. Każdy produkt — obecny i przyszły — jest **dowodem koncepcji**

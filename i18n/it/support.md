@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -68,7 +68,7 @@ Nulla di tutto questo costa denaro, e alcune di queste cose valgono più del den
 ## Chiedi alla tua marca di filamento
 
 La cosa più utile che chiunque abbia mai fatto per questo progetto è chiedere a un
-produttore di filamento perché le sue bobine non sono taggate. Sei marche spediscono oggi TigerTag
+produttore di filamento perché le sue bobine non sono taggate. Dieci marche spediscono oggi TigerTag
 dalla fabbrica ([il registro](./certified-partners.md)); ognuna è
 partita da clienti che lo chiedevano.
 

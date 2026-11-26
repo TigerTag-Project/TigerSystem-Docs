@@ -1,5 +1,5 @@
 ---
-sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
+sourceHash: e37ac13e1150410ab06ef8cd09503fe830a4669ee98661ac36a83fadafc41e5e
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -30,8 +30,7 @@ Chaque produit — [Tiger Studio](../products/tiger-studio.md), l'application
 mobile, [TigerScale](../products/tigerscale.md),
 [TigerPOD](../products/tigerpod.md) — est une démonstration fonctionnelle de ce
 qu'une technologie ouverte et documentée rend possible dès lors qu'une bobine
-peut s'identifier elle-même : télémétrie d'imprimante en direct sur six
-marques, cartographie physique des racks, capteurs, inventaires partagés.
+peut s'identifier elle-même : télémétrie d'imprimante en direct sur sept marques plus Klipper et OctoPrint, cartographie physique des racks, capteurs, inventaires partagés.
 Certaines briques mûriront, d'autres n'existent que pour prouver un point, et
 toutes sont lisibles, forkables et libres de copie. Chaque produit — actuel
 comme futur — est une **preuve de concept** d'un **protocole open source,

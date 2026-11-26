@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -139,7 +139,7 @@ Windows、macOS 和 Linux（Electron）。可在
 增加即时的线轴识别和芯片写入。
 
 **它能驱动哪些打印机？**
-六个品牌已上线：Anycubic、Bambu Lab、Creality、Elegoo、FlashForge、Snapmaker——
+六个品牌已上线：Anycubic、Bambu Lab、Creality、Elegoo、FlashForge、Snapmaker；Prusa 处于 beta 阶段，任何 Klipper 或 OctoPrint 打印机也处于 beta 阶段——
 参见[兼容性矩阵](../compatibility/README.md)。
 
 ## 切片软件与打印工作流
@@ -159,7 +159,7 @@ Windows、macOS 和 Linux（Electron）。可在
 
 **我有三个不同品牌的打印机。有问题吗？**
 恰恰相反——这正是重点。整个机群共用一张打印机表，带有品牌 / 状态 / 标签筛选，
-无论六个受支持品牌如何混搭。
+无论受支持的打印机如何混搭。
 
 ## TigerHub（生态系统的网站门户）
 

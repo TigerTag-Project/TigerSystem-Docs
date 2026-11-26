@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -175,8 +175,7 @@ No: la aplicación funciona por sí sola. Un lector ACR122U (o un soporte
 codificación de chips.
 
 **¿Qué impresoras puede controlar?**
-Seis marcas en vivo: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker;
-véase la [matriz de compatibilidad](../compatibility/README.md).
+Seis marcas en vivo: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker; Prusa en beta, y cualquier impresora Klipper u OctoPrint en beta; véase la [matriz de compatibilidad](../compatibility/README.md).
 
 ## Slicers y el flujo de impresión
 
@@ -199,8 +198,7 @@ reproduces tú mismo en el perfil de tu slicer.
 
 **Tengo impresoras de tres marcas distintas. ¿Problema?**
 Al contrario: ese es el sentido. Una sola tabla de impresoras para toda la flota,
-con filtros por marca / estado / etiqueta, sea cual sea la mezcla de las seis
-marcas compatibles.
+con filtros por marca / estado / etiqueta, sea cual sea la mezcla de impresoras compatibles.
 
 ## TigerHub (la casa web del ecosistema)
 

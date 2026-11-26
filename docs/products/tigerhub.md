@@ -22,7 +22,7 @@ flowchart TB
 ## Features — all live today
 
 - **Ecosystem showcase** — the home page tells the whole story: how it works,
- the six printer brands, the components, and the three tiers (TigerData —
+ the supported printers, the components, and the three tiers (TigerData —
  software-only tracking · TigerTag — the offline chip · TigerTag+ — verified
  authenticity).
 - **Your account on the web** (`/account`) — sign in to your TigerSystem

@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -124,7 +124,7 @@ sourcePath: docs/vision/for-filament-manufacturers.md
 
 ## 你的客户第一天就能得到什么
 
-一卷能向**任何 NFC 手机**自我识别的线轴，一套完整的库存生态系统（移动端、桌面端、网页端），与六个打印机品牌的实时集成，重量跟踪，分享——这种体验**远远超出任何封闭的单一厂商环境所能提供的**，而且它适用于客户拥有的每一台打印机，而不只是某一个品牌的。
+一卷能向**任何 NFC 手机**自我识别的线轴，一套完整的库存生态系统（移动端、桌面端、网页端），与七个打印机品牌以及 Klipper 和 OctoPrint 的实时集成，重量跟踪，分享——这种体验**远远超出任何封闭的单一厂商环境所能提供的**，而且它适用于客户拥有的每一台打印机，而不只是某一个品牌的。
 
 ## 即使离开了你的工厂，也能更新数据
 

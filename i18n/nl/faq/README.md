@@ -1,5 +1,5 @@
 ---
-sourceHash: 0978240fbb0b7bf7c722bf9bea2cee0fb173da80b682250abf425efa69551d41
+sourceHash: 1878efb65788407edead53aa5ba0976986f90824c557f1adcb2804356bff4f43
 sourcePath: docs/faq/README.md
 ---
 
@@ -172,8 +172,7 @@ Nee — de app werkt zelfstandig. Een ACR122U-lezer (of een
 en chipcodering toe.
 
 **Welke printers kan hij aansturen?**
-Zes merken live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker —
-zie de [compatibiliteitsmatrix](../compatibility/README.md).
+Zes merken live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker; Prusa in bèta, en elke Klipper- of OctoPrint-printer in bèta — zie de [compatibiliteitsmatrix](../compatibility/README.md).
 
 ## Slicers en de printworkflow
 
@@ -195,7 +194,7 @@ Vandaag niet. De chip bevat de aanbevolen instellingen van het filament
 
 **Ik heb printers van drie verschillende merken. Een probleem?**
 Juist niet — daar draait het om. Eén printertabel voor de hele vloot, met
-filters op merk / status / tag, welke mix van de zes ondersteunde merken je ook hebt.
+filters op merk / status / tag, welke mix van ondersteunde printers je ook hebt.
 
 ## TigerHub (het webhuis van het ecosysteem)
 

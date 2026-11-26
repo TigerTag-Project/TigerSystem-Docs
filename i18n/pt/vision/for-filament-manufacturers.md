@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -165,7 +165,7 @@ com chips TigerTag na bobina.*
 ## O que seus clientes recebem no primeiro dia
 
 Uma bobina que se identifica para **qualquer celular NFC**, um ecossistema completo de inventário
-(móvel, desktop, web), integração ao vivo com seis marcas de impressoras,
+(móvel, desktop, web), integração ao vivo com sete marcas de impressoras mais Klipper e OctoPrint,
 controle de peso, compartilhamento — uma experiência **muito além do que qualquer ambiente fechado
 de um único fabricante oferece**, e que funciona com todas as impressoras que seus
 clientes têm, não apenas com as de uma marca.

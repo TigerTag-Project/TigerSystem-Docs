@@ -1,5 +1,5 @@
 ---
-sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
+sourceHash: b059f1d3055ceb49617cdad9e853cbe813c2915aff34ca5c25c0d66af39b9108
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -37,7 +37,7 @@ flowchart LR
   TD["TD1S"] --> ST
   ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
   SCALE["TigerScale"] --> CLOUD
-  ST -- "filament to slots" --> PRN["6 printer brands"]
+  ST -- "filament to slots" --> PRN["7 printer brands + Klipper, OctoPrint"]
   PRN -- "telemetry · cameras" --> ST
 ```
 
@@ -46,7 +46,7 @@ flowchart LR
 - **Inventario** — sincronizzazione Firestore in tempo reale, viste a tabella/griglia, pannello di dettaglio,
  monitoraggio del peso, calibrazione dei contenitori, bobine digitali (TigerData) con
  promozione atomica a chip.
-- **Stampanti** — integrazioni in tempo reale per **6 marche** (telemetria, filamento per
+- **Stampanti** — integrazioni in tempo reale per **7 marche** e qualsiasi stampante Klipper o OctoPrint (telemetria, filamento per
  slot, avanzamento del lavoro, telecamere e, per alcune marche, pannelli di controllo completi). Vedi
  [compatibilità](../compatibility/README.md).
 - **Rack** — mappatura fisica dello stoccaggio con trascinamento.

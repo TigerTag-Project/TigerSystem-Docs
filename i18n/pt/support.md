@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -69,7 +69,7 @@ Nada aqui custa dinheiro, e parte disso vale mais do que dinheiro.
 ## Pergunte à sua marca de filamento
 
 A coisa mais útil que alguém já fez por este projeto é perguntar a um
-fabricante de filamento por que as bobinas dele não são etiquetadas. Seis marcas enviam TigerTag
+fabricante de filamento por que as bobinas dele não são etiquetadas. Dez marcas enviam TigerTag
 de fábrica hoje ([o registro](./certified-partners.md)); cada uma
 começou com clientes perguntando.
 

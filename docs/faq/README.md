@@ -167,7 +167,7 @@ No — the app works standalone. An ACR122U reader (or a
 and chip encoding.
 
 **Which printers can it drive?**
-Six brands live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker —
+Six brands live: Anycubic, Bambu Lab, Creality, Elegoo, FlashForge, Snapmaker; Prusa in beta, and any Klipper or OctoPrint printer in beta —
 see the [compatibility matrix](../compatibility/README.md).
 
 ## Slicers & the printing workflow
@@ -190,7 +190,7 @@ Not today. The chip carries the filament's recommended settings
 
 **I have printers from three different brands. Problem?**
 The opposite — that's the point. One printers table for the whole fleet, with
-brand / state / tag filters, whatever the mix of the six supported brands.
+brand / state / tag filters, whatever the mix of supported printers.
 
 ## TigerHub (the ecosystem's web home)
 

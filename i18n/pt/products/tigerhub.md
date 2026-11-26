@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -27,7 +27,7 @@ flowchart TB
 ## Recursos — todos ao vivo hoje
 
 - **Vitrine do ecossistema** — a página inicial conta toda a história: como funciona,
- as seis marcas de impressoras, os componentes e os três níveis (TigerData —
+ as impressoras compatíveis, os componentes e os três níveis (TigerData —
  controle só por software · TigerTag — o chip offline · TigerTag+ — autenticidade
  verificada).
 - **Sua conta na web** (`/account`) — entre na sua conta TigerSystem

@@ -1,5 +1,5 @@
 ---
-sourceHash: d0916e0c9a494ef3d8620767cdde6038765b5d5a3a137055136edfe232577136
+sourceHash: e37ac13e1150410ab06ef8cd09503fe830a4669ee98661ac36a83fadafc41e5e
 sourcePath: docs/philosophy/open-ecosystem.md
 ---
 
@@ -23,7 +23,7 @@ Todas as camadas do TigerSystem são publicadas — hardware, firmware, SDKs, ap
 
 ## Uma caixa de areia, não um jardim murado
 
-**Todo o ecossistema virado para o utilizador** é deliberadamente **um laboratório, não o destino**. Cada produto — o [Tiger Studio](../products/tiger-studio.md), a aplicação móvel, a [TigerScale](../products/tigerscale.md), o [TigerPOD](../products/tigerpod.md) — é uma demonstração funcional do que a tecnologia aberta e documentada torna possível a partir do momento em que uma bobina se consegue identificar: telemetria de impressoras em direto em seis marcas, mapeamento físico de racks, sensores, inventários partilhados. Algumas coisas vão amadurecer, outras existem para provar um ponto, e tudo é legível, bifurcável (fork) e livre de copiar. Cada produto — atual e futuro — é uma **prova de conceito** de um **protocolo de código aberto, padrão, agnóstico e multiplataforma**: a sua única função é mostrar o potencial, para que qualquer pessoa possa tomar o nosso trabalho de integração como inspiração e imaginar as funcionalidades de amanhã.
+**Todo o ecossistema virado para o utilizador** é deliberadamente **um laboratório, não o destino**. Cada produto — o [Tiger Studio](../products/tiger-studio.md), a aplicação móvel, a [TigerScale](../products/tigerscale.md), o [TigerPOD](../products/tigerpod.md) — é uma demonstração funcional do que a tecnologia aberta e documentada torna possível a partir do momento em que uma bobina se consegue identificar: telemetria de impressoras em direto em sete marcas mais Klipper e OctoPrint, mapeamento físico de racks, sensores, inventários partilhados. Algumas coisas vão amadurecer, outras existem para provar um ponto, e tudo é legível, bifurcável (fork) e livre de copiar. Cada produto — atual e futuro — é uma **prova de conceito** de um **protocolo de código aberto, padrão, agnóstico e multiplataforma**: a sua única função é mostrar o potencial, para que qualquer pessoa possa tomar o nosso trabalho de integração como inspiração e imaginar as funcionalidades de amanhã.
 
 ## Construa o seu
 

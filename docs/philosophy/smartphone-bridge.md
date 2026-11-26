@@ -49,8 +49,7 @@ Both stay exceptions — which is the argument for the bridge, not against it:
 it never had to wait for them.
 
 With the bridge, filament data reaches the printer through
-[Tiger Studio's printer integrations](../compatibility/README.md) (six brands
-live today) — the spool identifies itself to the *system*, and the system talks
+[Tiger Studio's printer integrations](../compatibility/README.md) (seven brands, plus Klipper and OctoPrint) — the spool identifies itself to the *system*, and the system talks
 to the machine.
 
 The proof by example: **FlashForge printers have no RFID reader at all** —

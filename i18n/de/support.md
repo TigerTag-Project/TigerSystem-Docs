@@ -1,5 +1,5 @@
 ---
-sourceHash: 6fa10ce94157695640d6a234808f0294b3a8f5e77f912e11b63526415fce7311
+sourceHash: 8ab8e1f2489d99ee78d08abb668ad62aab319d00ee135b368da89dd827f35635
 sourcePath: docs/support.md
 ---
 
@@ -68,7 +68,7 @@ Nichts davon kostet Geld, und manches ist mehr wert als Geld.
 ## Frag deine Filamentmarke
 
 Das Nützlichste, was je jemand für dieses Projekt getan hat, war, einen
-Filamenthersteller zu fragen, warum seine Spulen nicht getaggt sind. Sechs Marken liefern TigerTag
+Filamenthersteller zu fragen, warum seine Spulen nicht getaggt sind. Zehn Marken liefern TigerTag
 heute ab Werk aus ([das Register](./certified-partners.md)); jede einzelne
 begann damit, dass Kunden nachgefragt haben.
 

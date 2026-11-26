@@ -1,5 +1,5 @@
 ---
-sourceHash: a2eaea0bac43a2b3d5c7035705d74c817681b8bf87570cbcbfac58e9a0f32b11
+sourceHash: b059f1d3055ceb49617cdad9e853cbe813c2915aff34ca5c25c0d66af39b9108
 sourcePath: docs/products/tiger-studio.md
 ---
 
@@ -33,7 +33,7 @@ flowchart LR
   TD["TD1S"] --> ST
   ST <--> CLOUD[("Your TigerSystem account<br/>(Firebase)")]
   SCALE["TigerScale"] --> CLOUD
-  ST -- "filament to slots" --> PRN["6 printer brands"]
+  ST -- "filament to slots" --> PRN["7 printer brands + Klipper, OctoPrint"]
   PRN -- "telemetry · cameras" --> ST
 ```
 
@@ -42,7 +42,7 @@ flowchart LR
 - **库存**——实时 Firestore 同步、表格/网格视图、详情面板、
  重量跟踪、容器校准、数字线轴（TigerData）以及
  原子化的芯片升级。
-- **打印机**——**6 个品牌**的实时集成（遥测、每个槽位的耗材、任务进度、摄像头，部分品牌还有完整的控制面板）。见
+- **打印机**——**7 个品牌**及任何 Klipper 或 OctoPrint 打印机的实时集成（遥测、每个槽位的耗材、任务进度、摄像头，部分品牌还有完整的控制面板）。见
  [兼容性](../compatibility/README.md)。
 - **货架**——拖放式的实体存储映射。
 - **好友与分享**——发现代码、只读的好友库存。

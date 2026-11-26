@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -165,7 +165,7 @@ mit TigerTag-Chips auf der Spule ausgeliefert.*
 ## Was deine Kunden am ersten Tag bekommen
 
 Eine Spule, die sich bei **jedem NFC-Smartphone** selbst identifiziert, ein vollständiges
-Bestands-Ökosystem (mobil, Desktop, Web), Live-Integration mit sechs Druckermarken,
+Bestands-Ökosystem (mobil, Desktop, Web), Live-Integration mit sieben Druckermarken plus Klipper und OctoPrint,
 Gewichtserfassung, Teilen – ein Erlebnis **weit jenseits dessen, was eine geschlossene
 Umgebung eines einzelnen Herstellers bietet**, und es funktioniert mit jedem Drucker, den deine
 Kunden besitzen, nicht nur mit dem einer Marke.

@@ -1,5 +1,5 @@
 ---
-sourceHash: 9c98fd5384f5444c6722fbd2309144beb183db3f0272aa94525d24a5573bf36c
+sourceHash: ccc363f5fef0c38c424d9a5d1a08eb70d60e39ef67fe87a1cca757bcbaa1aed7
 sourcePath: docs/vision/for-filament-manufacturers.md
 ---
 
@@ -162,7 +162,7 @@ z chipami TigerTag.*
 ## Co twoi klienci dostają od pierwszego dnia
 
 Szpulę, która identyfikuje się dla **dowolnego telefonu z NFC**, pełny ekosystem
-magazynowy (mobilny, desktopowy, webowy), integrację na żywo z sześcioma markami drukarek,
+magazynowy (mobilny, desktopowy, webowy), integrację na żywo z siedmioma markami drukarek oraz Klipperem i OctoPrint,
 śledzenie masy, udostępnianie — doświadczenie **znacznie wykraczające poza to, co oferuje jakiekolwiek zamknięte
 środowisko jednego dostawcy**, które działa z każdą drukarką, jaką posiadają
 klienci, a nie tylko z jedną marką.

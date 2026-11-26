@@ -1,5 +1,5 @@
 ---
-sourceHash: 33ae3de925ff8dddc78c78974284f46ec7b73c212c3199a7cd4a98f7f08a2e3c
+sourceHash: f0d0516fb19fc35f710c762b639559911e3480921e8147573a730cd19ac77336
 sourcePath: docs/products/tigerhub.md
 ---
 
@@ -28,7 +28,7 @@ flowchart TB
 ## Fonctionnalités — toutes en service aujourd'hui
 
 - **Vitrine de l'écosystème** — la page d'accueil raconte toute l'histoire :
- comment cela fonctionne, les six marques d'imprimantes, les composants et les
+ comment cela fonctionne, les imprimantes prises en charge, les composants et les
  trois niveaux (TigerData — suivi purement logiciel · TigerTag — la puce hors
  ligne · TigerTag+ — authenticité vérifiée).
 - **Votre compte sur le web** (`/account`) — connectez-vous à votre compte
