@@ -6,8 +6,8 @@
  *
  * Counts commits, pull requests and issues across every non-archived
  * repository of the account, then rewrites what sits between the two
- * `contributors:start` / `contributors:end` markers. Project accounts are
- * excluded: this page honours the people who showed up from outside.
+ * `contributors:start` / `contributors:end` markers. The project's own
+ * organisation account is excluded; the founder is listed like everyone else.
  *
  * Needs the `gh` CLI, authenticated. Anonymous calls hit the 60/hour limit
  * long before the repositories are walked.
@@ -26,8 +26,8 @@ const run = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const OWNER = 'TigerTag-Project';
-/** The project's own accounts — the page is for everyone else. */
-const TEAM = new Set(['BenGlut', 'TigerTag-Project']);
+/** The project's own organisation account — every person is listed, the founder included. */
+const TEAM = new Set(['TigerTag-Project']);
 
 const START = '<!-- contributors:start -->';
 const END = '<!-- contributors:end -->';

@@ -14,22 +14,25 @@ contribution, not a complaint.
 
 | Who | Commits | Pull requests | Issues |
 |---|---|---|---|
-| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 116 | 83 | 4 |
+| **[@BenGlut](https://github.com/BenGlut)** | 1693 | 76 | 27 |
+| **[@Ptitlouis6012](https://github.com/Ptitlouis6012)** | 118 | 77 | 3 |
 | **[@saucissefarciehumaine-prog](https://github.com/saucissefarciehumaine-prog)** | 5 | 11 | 9 |
+| **[@juditech3D](https://github.com/juditech3D)** | — | 8 | — |
 | **[@suchmememanyskill](https://github.com/suchmememanyskill)** | 39 | — | — |
 | **[@RP3D-S](https://github.com/RP3D-S)** | 2 | 6 | 1 |
 | **[@ennisj](https://github.com/ennisj)** | 21 | — | — |
 | **[@ijord](https://github.com/ijord)** | — | 2 | — |
 | **[@BastiMila](https://github.com/BastiMila)** | — | 2 | — |
+| **[@AKurka](https://github.com/AKurka)** | — | 2 | — |
 | **[@storm8488](https://github.com/storm8488)** | 9 | — | — |
 | **[@physicsG](https://github.com/physicsG)** | 1 | — | 2 |
-| **[@ehran](https://github.com/ehran)** | — | — | 2 |
 | **[@dumdumbee](https://github.com/dumdumbee)** | — | — | 2 |
 | **[@sjordan0228](https://github.com/sjordan0228)** | — | — | 2 |
 | **[@craidos-beep](https://github.com/craidos-beep)** | — | 1 | — |
 | **[@mickadu57](https://github.com/mickadu57)** | — | 1 | — |
 | **[@clauzet-rgb](https://github.com/clauzet-rgb)** | — | 1 | — |
 | **[@sancho0410](https://github.com/sancho0410)** | — | 1 | — |
+| **[@ehran](https://github.com/ehran)** | — | — | 1 |
 | **[@hitman4274](https://github.com/hitman4274)** | — | — | 1 |
 | **[@neonlyte54-alt](https://github.com/neonlyte54-alt)** | — | — | 1 |
 | **[@paxx12](https://github.com/paxx12)** | 3 | — | — |
@@ -42,7 +45,6 @@ contribution, not a complaint.
 | **[@cindyoberle-jpg](https://github.com/cindyoberle-jpg)** | — | — | 1 |
 | **[@Exsilium122](https://github.com/Exsilium122)** | — | — | 1 |
 | **[@jbast1224](https://github.com/jbast1224)** | — | — | 1 |
-| **[@juditech3D](https://github.com/juditech3D)** | — | — | 1 |
 | **[@Atome3D](https://github.com/Atome3D)** | 2 | — | — |
 | **[@thekakester](https://github.com/thekakester)** | 1 | — | — |
 | **[@liberodark](https://github.com/liberodark)** | 1 | — | — |
