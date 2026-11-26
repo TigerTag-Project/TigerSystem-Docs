@@ -1,5 +1,5 @@
 ---
-sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
+sourceHash: a581b7504900fdbaa60b5f02b81447a4b0e07c77d262b6236434620b7378d87a
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -8,7 +8,7 @@ sourcePath: docs/compatibility/README.md
 Hoe TigerSystem met elk printerecosysteem werkt. Twee onafhankelijke assen:
 
 - **Printerkoppeling** — Tiger Studio praat via het LAN met de machine
- (telemetrie, filamentslots, opdracht, camera). **Zes merken zijn vandaag live.**
+ (telemetrie, filamentslots, opdracht, camera). **Zes merken zijn vandaag live, Prusa is in bèta, en elke Klipper- of OctoPrint-printer maakt in bèta verbinding: zo’n 380 modellen.**
 - **Native RFID** — de eigen spooltags van de fabrikant uitlezen. Per
  fabrikant gedocumenteerd. Rechtstreeks decoderen in de app is **nog niet geïntegreerd**
  (het juiste interoperabiliteitsmodel is nog een open vraag); het huidige werk richt zich op
@@ -23,11 +23,13 @@ Hoe TigerSystem met elk printerecosysteem werkt. Twee onafhankelijke assen:
 |---|---|---|---|---|
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **Live** — MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, sleutels afgeleid van de UID | Specificatie gedocumenteerd |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **Live** — WebSocket + CFS | Mifare Classic 1K | AES-128-ECB-sectorsleutel | Specificatie gedocumenteerd |
-| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas | Mifare Ultralight | Alleen magic bytes | Specificatie gedocumenteerd |
+| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas; Centauri Carbon 1 via SDCP in bèta | Mifare Ultralight | Alleen magic bytes | Specificatie gedocumenteerd |
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** — HTTP + IFS | — (machines hebben geen RFID-lezer) | — | TigerTag voegt er NFC aan toe, zonder extra kosten |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Live** — MQTTS LAN + cloud, ACE | Mifare Ultralight | Geen | Specificatie gedocumenteerd |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** — Moonraker-WebSocket + 4 slots | Mifare Classic 1K | HKDF + RSA-2048-handtekening | Specificatie gedocumenteerd |
+| Prusa | **Bèta** — PrusaLink HTTP + MMU | OpenPrintTag (NFC) | Geen — open formaat | Vergeleken in [Spoeltagformaten vergeleken](./tag-formats.md) |
 | [Klipper](./klipper.md) | **Live (bèta)** — Moonraker + Happy Hare / AFC | n.v.t. | n.v.t. | n.v.t. |
+| OctoPrint (Marlin) | **Live (bèta)** — OctoPrint REST | n.v.t. | n.v.t. | n.v.t. |
 | [OpenSpool](./openspool.md) | n.v.t. (tagstandaard, geen printer) | NFC Type 2, NDEF-JSON | Geen — open standaard | Specificatie gedocumenteerd |
 | Qidi | Niet geïntegreerd | Mifare Classic 1K | Standaardsleutel | [Specificatie gedocumenteerd](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -56,7 +58,7 @@ Spoellabels print je rechtstreeks vanaf de telefoon op
 
 Welke printer je ook hebt: plak een [TigerTag](../products/tigertag.md)-chip op de
 spoel en het hele ecosysteem werkt — identificatie, inventaris, gewicht,
-delen en filamentgegevens die naar elk van de zes geïntegreerde merken worden gestuurd.
+delen en filamentgegevens die naar elke geïntegreerde printer worden gestuurd.
 
 ---
 

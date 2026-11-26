@@ -1,5 +1,5 @@
 ---
-sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
+sourceHash: a581b7504900fdbaa60b5f02b81447a4b0e07c77d262b6236434620b7378d87a
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -8,7 +8,7 @@ sourcePath: docs/compatibility/README.md
 Cómo funciona TigerSystem con cada ecosistema de impresoras. Dos ejes independientes:
 
 - **Enlace con la impresora**: Tiger Studio habla con la máquina por la LAN
- (telemetría, ranuras de filamento, trabajo, cámara). **Hoy hay seis marcas en vivo.**
+ (telemetría, ranuras de filamento, trabajo, cámara). **Hoy hay seis marcas en vivo, Prusa está en beta y cualquier impresora Klipper u OctoPrint se conecta en beta: unos 380 modelos.**
 - **RFID nativo**: lectura de las etiquetas de bobina propias de cada fabricante.
  Documentado por fabricante. La decodificación directa en la aplicación **todavía
  no está integrada** (el modelo de interoperabilidad adecuado sigue siendo una
@@ -24,11 +24,13 @@ Cómo funciona TigerSystem con cada ecosistema de impresoras. Dos ejes independi
 |---|---|---|---|---|
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **En vivo**: MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, claves derivadas del UID | Especificación documentada |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **En vivo**: WebSocket + CFS | Mifare Classic 1K | Clave de sector AES-128-ECB | Especificación documentada |
-| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **En vivo**: MQTT + Canvas | Mifare Ultralight | Solo bytes mágicos | Especificación documentada |
+| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **En vivo**: MQTT + Canvas; Centauri Carbon 1 por SDCP en beta | Mifare Ultralight | Solo bytes mágicos | Especificación documentada |
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **En vivo**: HTTP + IFS | — (las máquinas no tienen lector RFID) | — | TigerTag le añade NFC, sin coste |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **En vivo**: MQTTS LAN + nube, ACE | Mifare Ultralight | Ninguno | Especificación documentada |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **En vivo**: WebSocket Moonraker + 4 ranuras | Mifare Classic 1K | HKDF + firma RSA-2048 | Especificación documentada |
+| Prusa | **Beta** — PrusaLink HTTP + MMU | OpenPrintTag (NFC) | Ninguno: formato abierto | Comparado en [Formatos de etiqueta de bobina comparados](./tag-formats.md) |
 | [Klipper](./klipper.md) | **En vivo (beta)** — Moonraker + Happy Hare / AFC | n/d | n/d | n/d |
+| OctoPrint (Marlin) | **En vivo (beta)** — OctoPrint REST | n/d | n/d | n/d |
 | [OpenSpool](./openspool.md) | n/d (estándar de etiqueta, no una impresora) | NFC Tipo 2, JSON NDEF | Ninguno: estándar abierto | Especificación documentada |
 | Qidi | No integrada | Mifare Classic 1K | Clave por defecto | [Especificación documentada](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -57,7 +59,7 @@ Las etiquetas de bobina se imprimen directamente desde el móvil en
 
 Sea cual sea la impresora: pega un chip [TigerTag](../products/tigertag.md) en la
 bobina y todo el ecosistema funciona: identificación, inventario, peso, uso
-compartido y datos de filamento enviados a cualquiera de las seis marcas integradas.
+compartido y datos de filamento enviados a cada impresora integrada.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
+sourceHash: a581b7504900fdbaa60b5f02b81447a4b0e07c77d262b6236434620b7378d87a
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -8,7 +8,7 @@ sourcePath: docs/compatibility/README.md
 Как TigerSystem работает с каждой экосистемой принтеров. Две независимые оси:
 
 - **Связь с принтером** — Tiger Studio общается с машиной по LAN
- (телеметрия, слоты филамента, задание, камера). **Сегодня работают шесть брендов.**
+ (телеметрия, слоты филамента, задание, камера). **Сегодня работают шесть брендов, Prusa — в бете, и любой принтер на Klipper или OctoPrint подключается в бете: около 380 моделей.**
 - **Нативный RFID** — чтение собственных меток катушек производителя. Описано по
  каждому производителю. Прямое декодирование в приложении **пока не интегрировано**
  (правильная модель взаимодействия остаётся открытым вопросом); текущая работа направлена на
@@ -23,11 +23,13 @@ sourcePath: docs/compatibility/README.md
 |---|---|---|---|---|
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **Live** — MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, ключи из UID | Спецификация описана |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **Live** — WebSocket + CFS | Mifare Classic 1K | Ключ сектора AES-128-ECB | Спецификация описана |
-| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas | Mifare Ultralight | Только магические байты | Спецификация описана |
+| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas; Centauri Carbon 1 через SDCP — в бете | Mifare Ultralight | Только магические байты | Спецификация описана |
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** — HTTP + IFS | — (в машинах нет RFID-считывателя) | — | TigerTag добавляет NFC, без затрат |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Live** — MQTTS LAN + облако, ACE | Mifare Ultralight | Нет | Спецификация описана |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** — Moonraker WebSocket + 4 слота | Mifare Classic 1K | HKDF + подпись RSA-2048 | Спецификация описана |
+| Prusa | **Бета** — PrusaLink HTTP + MMU | OpenPrintTag (NFC) | Нет — открытый формат | Сравнение — в [Сравнение форматов тегов катушек](./tag-formats.md) |
 | [Klipper](./klipper.md) | **Live (бета)** — Moonraker + Happy Hare / AFC | н/п | н/п | н/п |
+| OctoPrint (Marlin) | **Live (бета)** — OctoPrint REST | н/п | н/п | н/п |
 | [OpenSpool](./openspool.md) | н/п (стандарт меток, не принтер) | NFC Type 2, NDEF JSON | Нет — открытый стандарт | Спецификация описана |
 | Qidi | Не интегрирован | Mifare Classic 1K | Ключ по умолчанию | [Спецификация описана](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -56,7 +58,7 @@ TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab и Creality CFS — ци
 
 Какой бы ни был принтер: наклейте чип [TigerTag](../products/tigertag.md) на
 катушку, и вся экосистема работает — идентификация, инвентарь, вес,
-обмен и передача данных о филаменте в любой из шести интегрированных брендов.
+обмен и передача данных о филаменте на каждый интегрированный принтер.
 
 ---
 

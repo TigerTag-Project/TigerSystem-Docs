@@ -3,7 +3,7 @@
 How TigerSystem works with each printer ecosystem. Two independent axes:
 
 - **Printer link** — Tiger Studio talking to the machine over the LAN
- (telemetry, filament slots, job, camera). **Six brands are live today.**
+ (telemetry, filament slots, job, camera). **Six brands are live today, Prusa is in beta, and any Klipper or OctoPrint printer connects in beta: about 380 models.**
 - **Native RFID** — reading the vendor's own spool tags. Documented per
  vendor. Direct in-app decoding is **not integrated yet** (the right
  interoperability model is still an open question); the current work aims at
@@ -18,11 +18,13 @@ How TigerSystem works with each printer ecosystem. Two independent axes:
 |---|---|---|---|---|
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **Live** — MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, UID-derived keys | Spec documented |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **Live** — WebSocket + CFS | Mifare Classic 1K | AES-128-ECB sector key | Spec documented |
-| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas | Mifare Ultralight | Magic bytes only | Spec documented |
+| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** — MQTT + Canvas; Centauri Carbon 1 over SDCP in beta | Mifare Ultralight | Magic bytes only | Spec documented |
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** — HTTP + IFS | — (machines have no RFID reader) | — | TigerTag adds NFC to it, zero cost |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Live** — MQTTS LAN + cloud, ACE | Mifare Ultralight | None | Spec documented |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** — Moonraker WebSocket + 4 slots | Mifare Classic 1K | HKDF + RSA-2048 signature | Spec documented |
+| Prusa | **Beta** — PrusaLink HTTP + MMU | OpenPrintTag (NFC) | None — open format | Compared in [Spool tag formats](./tag-formats.md) |
 | [Klipper](./klipper.md) | **Live (beta)** — Moonraker + Happy Hare / AFC | n/a | n/a | n/a |
+| OctoPrint (Marlin) | **Live (beta)** — OctoPrint REST | n/a | n/a | n/a |
 | [OpenSpool](./openspool.md) | n/a (tag standard, not a printer) | NFC Type 2, NDEF JSON | None — open standard | Spec documented |
 | Qidi | Not integrated | Mifare Classic 1K | Default key | [Spec documented](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -51,7 +53,7 @@ Spool labels print straight from the phone on
 
 Whatever the printer: stick a [TigerTag](../products/tigertag.md) chip on the
 spool and the whole ecosystem works — identification, inventory, weight,
-sharing, and filament data pushed to any of the six integrated brands.
+sharing, and filament data pushed to every integrated printer.
 
 ---
 

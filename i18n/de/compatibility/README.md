@@ -1,5 +1,5 @@
 ---
-sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
+sourceHash: a581b7504900fdbaa60b5f02b81447a4b0e07c77d262b6236434620b7378d87a
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -9,7 +9,7 @@ Wie TigerSystem mit dem Ökosystem jedes Druckerherstellers zusammenarbeitet. Zw
 voneinander unabhängige Achsen:
 
 - **Drucker-Verbindung** – Tiger Studio spricht über das LAN mit der Maschine
- (Telemetrie, Filament-Slots, Auftrag, Kamera). **Sechs Marken sind heute live.**
+ (Telemetrie, Filament-Slots, Auftrag, Kamera). **Sechs Marken sind heute live, Prusa ist in der Beta, und jeder Klipper- oder OctoPrint-Drucker verbindet sich in der Beta: rund 380 Modelle.**
 - **Native RFID** – das Lesen der eigenen Spulen-Tags des Herstellers. Pro
  Hersteller dokumentiert. Das direkte Dekodieren in der App ist **noch nicht
  integriert** (das richtige Interoperabilitätsmodell ist noch eine offene Frage);
@@ -25,11 +25,13 @@ voneinander unabhängige Achsen:
 |---|---|---|---|---|
 | <img src="../assets/brands/bambulab.svg" width="14" alt="" /> [Bambu Lab](./bambu-lab.md) | **Live** – MQTTS + AMS | Mifare Classic 1K | HKDF-SHA256, UID-abgeleitete Schlüssel | Spezifikation dokumentiert |
 | <img src="../assets/brands/creality.svg" width="14" alt="" /> [Creality](./creality.md) | **Live** – WebSocket + CFS | Mifare Classic 1K | AES-128-ECB-Sektorschlüssel | Spezifikation dokumentiert |
-| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** – MQTT + Canvas | Mifare Ultralight | Nur Magic Bytes | Spezifikation dokumentiert |
+| <img src="../assets/brands/elegoo.svg" width="14" alt="" /> [Elegoo](./elegoo.md) | **Live** – MQTT + Canvas; Centauri Carbon 1 über SDCP in der Beta | Mifare Ultralight | Nur Magic Bytes | Spezifikation dokumentiert |
 | <img src="../assets/brands/flashforge.svg" width="14" alt="" /> [FlashForge](./flashforge.md) | **Live** – HTTP + IFS | – (die Maschinen haben kein RFID-Lesegerät) | – | TigerTag fügt NFC hinzu, ohne Zusatzkosten |
 | <img src="../assets/brands/anycubic.svg" width="14" alt="" /> [Anycubic](./anycubic.md) | **Live** – MQTTS-LAN + Cloud, ACE | Mifare Ultralight | Keine | Spezifikation dokumentiert |
 | <img src="../assets/brands/snapmaker.svg" width="14" alt="" /> [Snapmaker](./snapmaker.md) | **Live** – Moonraker-WebSocket + 4 Slots | Mifare Classic 1K | HKDF + RSA-2048-Signatur | Spezifikation dokumentiert |
+| Prusa | **Beta** — PrusaLink HTTP + MMU | OpenPrintTag (NFC) | Keine – offenes Format | Verglichen in [Spulen-Tag-Formate im Vergleich](./tag-formats.md) |
 | [Klipper](./klipper.md) | **Live (Beta)** – Moonraker + Happy Hare / AFC | n. z. | n. z. | n. z. |
+| OctoPrint (Marlin) | **Live (Beta)** — OctoPrint REST | n. z. | n. z. | n. z. |
 | [OpenSpool](./openspool.md) | n. z. (Tag-Standard, kein Drucker) | NFC Type 2, NDEF JSON | Keine – offener Standard | Spezifikation dokumentiert |
 | Qidi | Nicht integriert | Mifare Classic 1K | Standardschlüssel | [Spezifikation dokumentiert](https://github.com/TigerTag-Project/TigerTag-Studio-Manager/blob/main/docs/rfid-vendors/qidi.md) |
 
@@ -58,8 +60,7 @@ Spulenetiketten druckst du direkt vom Handy auf
 
 Egal welcher Drucker: Klebe einen [TigerTag](../products/tigertag.md)-Chip auf die
 Spule, und das ganze Ökosystem funktioniert – Identifikation, Bestand, Gewicht,
-Teilen und Filamentdaten, die an jede der sechs integrierten Marken gesendet
-werden.
+Teilen und Filamentdaten, die an jeden integrierten Drucker gesendet werden.
 
 ---
 
