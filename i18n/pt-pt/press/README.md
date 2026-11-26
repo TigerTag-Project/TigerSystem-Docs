@@ -1,5 +1,5 @@
 ---
-sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
+sourceHash: f85f37571228b4e84ab0b446a5ce7e1675c431747e7632539d2fadfc143d80ba
 sourcePath: docs/press/README.md
 ---
 
@@ -89,7 +89,7 @@ O leitor RFID de código aberto que envia o filamento de uma bobina para a ranhu
 |---|---|---|
 | <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch num BIGTREETECH Panda Touch, visita animada" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — todas as impressoras da conta, em lista" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — uma Snapmaker U1, em direto" /> |
 
-Firmware livre e gratuito para o BIGTREETECH Panda Touch e o K-Touch: todas as impressoras de uma conta TigerSystem num único ecrã tátil de 7″, sem computador. A primeira imagem é um WebP animado; ecrã inicial: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Página do produto: [Tiger Touch](../products/tigertouch.md).
+Firmware livre e gratuito para o BIGTREETECH Panda Touch e o K-Touch: todas as impressoras de uma conta TigerSystem num único ecrã tátil de 5″, sem computador. A primeira imagem é um WebP animado; ecrã inicial: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Página do produto: [Tiger Touch](../products/tigertouch.md).
 
 ## Etiquetas TigerQR
 

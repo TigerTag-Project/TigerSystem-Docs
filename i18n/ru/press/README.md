@@ -1,5 +1,5 @@
 ---
-sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
+sourceHash: f85f37571228b4e84ab0b446a5ce7e1675c431747e7632539d2fadfc143d80ba
 sourcePath: docs/press/README.md
 ---
 
@@ -115,7 +115,7 @@ ESP32-S3, NFC-считыватель, корпус, напечатанный н�
 | <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch на BIGTREETECH Panda Touch, анимированный обзор" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — все принтеры аккаунта списком" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — Snapmaker U1 в реальном времени" /> |
 
 Бесплатная прошивка с открытым кодом для BIGTREETECH Panda Touch и K-Touch: все принтеры
-аккаунта TigerSystem на одном 7″ сенсорном экране, без компьютера. Первое изображение — анимированный
+аккаунта TigerSystem на одном 5″ сенсорном экране, без компьютера. Первое изображение — анимированный
 WebP; стартовый экран: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Страница
 продукта: [Tiger Touch](../products/tigertouch.md).
 

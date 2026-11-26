@@ -1,5 +1,5 @@
 ---
-sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
+sourceHash: f85f37571228b4e84ab0b446a5ce7e1675c431747e7632539d2fadfc143d80ba
 sourcePath: docs/press/README.md
 ---
 
@@ -113,7 +113,7 @@ czytnik NFC, obudowa drukowana w 3D, MIT. Po skanie jego ekran pokazuje, gdzie w
 | <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch na BIGTREETECH Panda Touch, animowana prezentacja" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — wszystkie drukarki konta, jako lista" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — Snapmaker U1 na żywo" /> |
 
 Darmowy, otwartoźródłowy firmware dla BIGTREETECH Panda Touch i K-Touch: wszystkie drukarki
-konta TigerSystem na jednym ekranie dotykowym 7″, bez komputera. Pierwszy obraz to animowany WebP;
+konta TigerSystem na jednym ekranie dotykowym 5″, bez komputera. Pierwszy obraz to animowany WebP;
 ekran startowy: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Strona produktu:
 [Tiger Touch](../products/tigertouch.md).
 

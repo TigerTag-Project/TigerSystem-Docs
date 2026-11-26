@@ -110,7 +110,7 @@ reader, 3D-printed case, MIT. After a scan, its screen says where to load the sp
 | <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch on a BIGTREETECH Panda Touch, animated tour" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — every printer of the account, as a list" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — a Snapmaker U1, live" /> |
 
 Free, open-source firmware for the BIGTREETECH Panda Touch and K-Touch: every printer of a
-TigerSystem account on one 7″ touchscreen, no computer. The first image is an animated WebP;
+TigerSystem account on one 5″ touchscreen, no computer. The first image is an animated WebP;
 start screen: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Product page:
 [Tiger Touch](../products/tigertouch.md).
 

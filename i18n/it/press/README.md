@@ -1,5 +1,5 @@
 ---
-sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
+sourceHash: f85f37571228b4e84ab0b446a5ce7e1675c431747e7632539d2fadfc143d80ba
 sourcePath: docs/press/README.md
 ---
 
@@ -114,7 +114,7 @@ del prodotto: [TigerSpool](../products/tigerspool.md).
 | <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch su un BIGTREETECH Panda Touch, tour animato" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — tutte le stampanti dell'account, in elenco" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — una Snapmaker U1, in diretta" /> |
 
 Firmware libero e gratuito per BIGTREETECH Panda Touch e K-Touch: tutte le stampanti di un
-account TigerSystem su un unico touchscreen da 7″, senza computer. La prima immagine è un WebP
+account TigerSystem su un unico touchscreen da 5″, senza computer. La prima immagine è un WebP
 animato; schermata iniziale: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Pagina
 del prodotto: [Tiger Touch](../products/tigertouch.md).
 

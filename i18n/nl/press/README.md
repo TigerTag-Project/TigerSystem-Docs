@@ -1,5 +1,5 @@
 ---
-sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
+sourceHash: f85f37571228b4e84ab0b446a5ce7e1675c431747e7632539d2fadfc143d80ba
 sourcePath: docs/press/README.md
 ---
 
@@ -115,7 +115,7 @@ moet worden: [`tigerspool-screen-sent.webp`](../assets/tigerspool-screen-sent.we
 | <img src="../assets/tigertouch-tour.webp" alt="Tiger Touch op een BIGTREETECH Panda Touch, geanimeerde rondleiding" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch — alle printers van het account, als lijst" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch — een Snapmaker U1, live" /> |
 
 Gratis opensource-firmware voor de BIGTREETECH Panda Touch en K-Touch: alle printers van een
-TigerSystem-account op één 7″-touchscreen, zonder computer. De eerste afbeelding is een geanimeerde
+TigerSystem-account op één 5″-touchscreen, zonder computer. De eerste afbeelding is een geanimeerde
 WebP; startscherm: [`tigertouch-splash.webp`](../assets/tigertouch-splash.webp). Productpagina:
 [Tiger Touch](../products/tigertouch.md).
 

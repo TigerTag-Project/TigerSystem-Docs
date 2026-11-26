@@ -1,5 +1,5 @@
 ---
-sourceHash: f2a0c21d3bde5fc49d64abd4338fe042972d2e57ca31ade7d9237d7c0b977979
+sourceHash: f85f37571228b4e84ab0b446a5ce7e1675c431747e7632539d2fadfc143d80ba
 sourcePath: docs/press/README.md
 ---
 
@@ -93,7 +93,7 @@ ESP32-S3、3.5″ 彩色触摸屏、双 PN532 读卡器，因此[贴有孪生标
 |---|---|---|
 | <img src="../assets/tigertouch-tour.webp" alt="BIGTREETECH Panda Touch 上的 Tiger Touch，动画导览" /> | <img src="../assets/tigertouch-home-list.webp" alt="Tiger Touch——账号下的所有打印机，列表视图" /> | <img src="../assets/tigertouch-snapmaker-u1.webp" alt="Tiger Touch——一台 Snapmaker U1，实时状态" /> |
 
-适用于 BIGTREETECH Panda Touch 和 K-Touch 的免费开源固件：一块 7″ 触摸屏显示 TigerSystem 账号下的所有打印机，无需电脑。第一张图是动画 WebP；启动画面：[`tigertouch-splash.webp`](../assets/tigertouch-splash.webp)。产品页面：[Tiger Touch](../products/tigertouch.md)。
+适用于 BIGTREETECH Panda Touch 和 K-Touch 的免费开源固件：一块 5″ 触摸屏显示 TigerSystem 账号下的所有打印机，无需电脑。第一张图是动画 WebP；启动画面：[`tigertouch-splash.webp`](../assets/tigertouch-splash.webp)。产品页面：[Tiger Touch](../products/tigertouch.md)。
 
 ## TigerQR 标签
 
