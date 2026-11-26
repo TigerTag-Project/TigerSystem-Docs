@@ -1,5 +1,5 @@
 ---
-sourceHash: 7df403d9ec01cc589f8d8c155cd8d0cb8154cd2993e09860c8c2a54ec787ef9c
+sourceHash: baf8853c91eba373f562c8118ad09ebb9891975a68501e186c3fd8f9f6710c15
 sourcePath: docs/compatibility/bambu-lab.md
 ---
 
@@ -63,6 +63,8 @@ configuração única, feita na tela. Escolha o seu modelo abaixo para ver os pa
 <a href="../tutorials/bambu-lab-x1-h2-p2-series.md"><img src="../assets/bambu-lab-lan-mode/models/h2d.png" alt="H2D" /><span>H2D</span></a>
 <a href="../tutorials/bambu-lab-x1-h2-p2-series.md"><img src="../assets/bambu-lab-lan-mode/models/h2dpro.png" alt="H2D Pro" /><span>H2D Pro</span></a>
 <a href="../tutorials/bambu-lab-x1-h2-p2-series.md"><img src="../assets/bambu-lab-lan-mode/models/h2c.png" alt="H2C" /><span>H2C</span></a>
+<a href="../tutorials/bambu-lab-x1-h2-p2-series.md"><img src="../assets/bambu-lab-lan-mode/models/h3c.png" alt="H3C" /><span>H3C</span></a>
+<a href="../tutorials/bambu-lab-x1-h2-p2-series.md"><img src="../assets/bambu-lab-lan-mode/models/p3c.png" alt="P3C" /><span>P3C</span></a>
 </div>
 
 ## Limitações

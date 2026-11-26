@@ -1,11 +1,11 @@
 ---
-sourceHash: dc3146c76ac643ff9a46c6eba3c3abb465fe447e6873d678d5ab26f51ec0a113
+sourceHash: 28a00439f7420665498f77a06f3aed64609790cad083cfda774aaa9ac31b3b81
 sourcePath: docs/tutorials/bambu-lab-x1-h2-p2-series.md
 ---
 
-# Bambu Lab X1 / X1E / H2 / P2 系列：切换到局域网模式
+# Bambu Lab X1 / X1E / H2 / H3 / P2 / P3 系列：切换到局域网模式
 
-适用于 P2S、X1 Carbon、X1E、X2D、H2S、H2D、H2D Pro 和 H2C——在打印机上启用 **LAN Only 模式**和 **Developer
+适用于 P2S、X1 Carbon、X1E、X2D、H2S、H2D、H2D Pro、H2C、H3C 和 P3C——在打印机上启用 **LAN Only 模式**和 **Developer
 Mode**，然后在 Tiger Studio 中使用其 IP 地址、序列号和
 访问码添加。其他系列和云端选项请参见 [Bambu Lab 兼容性](../compatibility/bambu-lab.md)。
 

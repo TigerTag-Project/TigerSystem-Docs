@@ -1,11 +1,11 @@
 ---
-sourceHash: dc3146c76ac643ff9a46c6eba3c3abb465fe447e6873d678d5ab26f51ec0a113
+sourceHash: 28a00439f7420665498f77a06f3aed64609790cad083cfda774aaa9ac31b3b81
 sourcePath: docs/tutorials/bambu-lab-x1-h2-p2-series.md
 ---
 
-# Bambu Lab серии X1 / X1E / H2 / P2: переключение в режим LAN
+# Bambu Lab серии X1 / X1E / H2 / H3 / P2 / P3: переключение в режим LAN
 
-Для P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro и H2C — включите на самом принтере **режим LAN Only** и **Developer
+Для P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro, H2C, H3C и P3C — включите на самом принтере **режим LAN Only** и **Developer
 Mode**, затем добавьте его в Tiger Studio, указав IP-адрес, серийный номер и
 код доступа. О других сериях и облачном варианте читайте в разделе [Совместимость с Bambu Lab](../compatibility/bambu-lab.md).
 

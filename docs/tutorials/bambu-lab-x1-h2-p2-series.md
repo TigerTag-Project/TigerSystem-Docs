@@ -1,6 +1,6 @@
-# Bambu Lab X1 / X1E / H2 / P2 series: switch to LAN mode
+# Bambu Lab X1 / X1E / H2 / H3 / P2 / P3 series: switch to LAN mode
 
-For the P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro and H2C — enable **LAN Only mode** and **Developer
+For the P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro, H2C, H3C and P3C — enable **LAN Only mode** and **Developer
 Mode** on the printer itself, then add it in Tiger Studio with its IP address, serial number and
 access code. See [Bambu Lab compatibility](../compatibility/bambu-lab.md) for the other series and
 the cloud option.

@@ -1,11 +1,11 @@
 ---
-sourceHash: dc3146c76ac643ff9a46c6eba3c3abb465fe447e6873d678d5ab26f51ec0a113
+sourceHash: 28a00439f7420665498f77a06f3aed64609790cad083cfda774aaa9ac31b3b81
 sourcePath: docs/tutorials/bambu-lab-x1-h2-p2-series.md
 ---
 
-# Bambu Lab série X1 / X1E / H2 / P2: ative o modo LAN
+# Bambu Lab série X1 / X1E / H2 / H3 / P2 / P3: ative o modo LAN
 
-Para a P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro e H2C — ative o **modo LAN Only** e o **Developer
+Para a P2S, X1 Carbon, X1E, X2D, H2S, H2D, H2D Pro, H2C, H3C e P3C — ative o **modo LAN Only** e o **Developer
 Mode** na própria impressora e, em seguida, adicione-a no Tiger Studio com o endereço IP, o número de série e o
 código de acesso. Veja [Compatibilidade com Bambu Lab](../compatibility/bambu-lab.md) para as outras séries e
 a opção de nuvem.
