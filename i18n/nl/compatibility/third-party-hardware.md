@@ -1,5 +1,5 @@
 ---
-sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
+sourceHash: 5daaeca0d71307b6ce928d246c63c36ad772a3e52bbc18ee2d91a387102ad1c9
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -17,6 +17,7 @@ apparatuur aansluiten.
 | **TD1s** filamentanalyzer | [AJAX-3D](https://ajax-3d.com) | Dezelfde apparaatfamilie, kant-en-klaar gemonteerd en direct bruikbaar | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | **DYMO M-serie** USB-weegschalen (M5, M10, M25…) | DYMO | Standaard USB-“HID Scale”-apparaten — live gewicht in het profiel van de spoel ([protocoldetails](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Elke HID Scale-conforme USB-weegschaal** | elk | Hetzelfde standaardprotocol als de DYMO M-serie (HID-gebruikspagina `0x8D`) — het merk maakt niet uit | [Tiger Studio](../products/tiger-studio.md) |
+| **Bluetooth-labelprinters** | Niimbot, Marklife, Phomemo | Het TigerQR-label van een spoel rechtstreeks vanaf de telefoon printen — geteste modellen en onze keuze: [Bluetooth-labelprinters](./label-printers.md) | [Tiger NFC Connect](../products/tiger-nfc-connect.md) (volgende update) |
 | **Elke blanco NTAG213/215/216-chip** | elk | Het verbruiksartikel zelf — overal te koop, werkt identiek ([welke chip?](../../docs/faq/README.md)) | Alles |
 
 || | | |

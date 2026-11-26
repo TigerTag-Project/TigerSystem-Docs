@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -483,8 +483,9 @@ https://qr.tigertag.io/p/<id_product>
 
 - **PDF**, **PNG** (в разрешении принтера) и **SVG**, чтобы работал любой
   принтер — при необходимости через его собственное приложение;
-- прямая печать на принтерах этикеток (Brother QL, Niimbot, Phomemo) появится
-  позже, принтер за принтером, с теми же шаблонами.
+- прямая печать на Bluetooth-принтерах этикеток (Niimbot, Marklife, Phomemo)
+  появится в следующем обновлении Tiger NFC Connect, с теми же шаблонами:
+  [Bluetooth-принтеры этикеток](../compatibility/label-printers.md). Tiger Studio и Brother QL — позже.
 - чтобы их попробовать, [playground TigerQR](https://tigersystem.io/playground-tigerqr) делает этикетку TigerQR+ продукта из каталога в каждом шаблоне, в PNG (203 или 300 dpi) и SVG.
 
 ## Открытые вопросы

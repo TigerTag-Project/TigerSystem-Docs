@@ -1,5 +1,5 @@
 ---
-sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
+sourceHash: 5daaeca0d71307b6ce928d246c63c36ad772a3e52bbc18ee2d91a387102ad1c9
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -17,6 +17,7 @@ sourcePath: docs/compatibility/third-party-hardware.md
 | Анализатор филамента **TD1s** | [AJAX-3D](https://ajax-3d.com) | То же семейство устройств, собрано и готово к работе из коробки | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | USB-весы **серии DYMO M** (M5, M10, M25…) | DYMO | Стандартные USB-устройства «HID Scale» — живой вес попадает в профиль катушки ([подробности протокола](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Любые USB-весы, совместимые с HID Scale** | любой | Тот же стандартный протокол, что у DYMO серии M (страница использования HID `0x8D`) — бренд не важен | [Tiger Studio](../products/tiger-studio.md) |
+| **Bluetooth-принтеры этикеток** | Niimbot, Marklife, Phomemo | Печать этикетки TigerQR катушки прямо с телефона — проверенные модели и наш выбор: [Bluetooth-принтеры этикеток](./label-printers.md) | [Tiger NFC Connect](../products/tiger-nfc-connect.md) (следующее обновление) |
 | **Любой чистый чип NTAG213/215/216** | любой | Сам расходник — покупается где угодно, работает одинаково ([какой чип?](../../docs/faq/README.md)) | Всё |
 
 || | | |

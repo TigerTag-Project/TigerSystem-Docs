@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -490,8 +490,9 @@ bleibt. Die weißen Ränder des Etiketts sind seine Ruhezone. Bei 203 dpi hat ei
 
 - **PDF**, **PNG** (in der Auflösung des Druckers) und **SVG**, sodass jeder
   Drucker funktioniert, notfalls über seine eigene App;
-- direktes Drucken auf Etikettendrucker (Brother QL, Niimbot, Phomemo) kommt
-  später, Drucker für Drucker, mit denselben Vorlagen.
+- direktes Drucken auf Bluetooth-Etikettendrucker (Niimbot, Marklife, Phomemo)
+  kommt mit dem nächsten Update von Tiger NFC Connect, mit denselben Vorlagen:
+  [Bluetooth-Etikettendrucker](../compatibility/label-printers.md). Tiger Studio und Brother QL folgen später.
 - zum Ausprobieren erstellt der [TigerQR-Playground](https://tigersystem.io/playground-tigerqr) das TigerQR+-Etikett eines Katalogprodukts in jeder Vorlage, als PNG (203 oder 300 dpi) und SVG.
 
 ## Offene Punkte

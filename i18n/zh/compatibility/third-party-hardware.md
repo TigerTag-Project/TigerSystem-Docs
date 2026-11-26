@@ -1,5 +1,5 @@
 ---
-sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
+sourceHash: 5daaeca0d71307b6ce928d246c63c36ad772a3e52bbc18ee2d91a387102ad1c9
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -15,6 +15,7 @@ sourcePath: docs/compatibility/third-party-hardware.md
 | **TD1s** 耗材分析仪 | [AJAX-3D](https://ajax-3d.com) | 同一设备系列，预先组装，开箱即用 | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md)（USB-C） |
 | **DYMO M 系列** USB 秤（M5、M10、M25…） | DYMO | 标准 USB“HID Scale”设备——实时重量写入线轴资料（[协议详情](../products/tigerscale.md)） | [Tiger Studio](../products/tiger-studio.md) |
 | **任何符合 HID Scale 标准的 USB 秤** | 任意 | 与 DYMO M 系列相同的标准协议（HID 用途页 `0x8D`）——品牌无关紧要 | [Tiger Studio](../products/tiger-studio.md) |
+| **蓝牙标签打印机** | Niimbot、Marklife、Phomemo | 直接从手机打印线轴的 TigerQR 标签——实测型号与我们的推荐：[蓝牙标签打印机](./label-printers.md) | [Tiger NFC Connect](../products/tiger-nfc-connect.md)（下一次更新） |
 | **任何空白 NTAG213/215/216 芯片** | 任意 | 耗材本身——随处可买，效果完全相同（[选哪种芯片？](../../docs/faq/README.md)） | 所有 |
 
 || | | |

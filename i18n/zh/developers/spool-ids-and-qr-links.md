@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -356,7 +356,7 @@ https://qr.tigertag.io/p/<id_product>
 ### 输出
 
 - **PDF**、**PNG**（按打印机分辨率）和 **SVG**，因此任何打印机都能使用，必要时通过其自带的应用；
-- 直接打印到标签打印机（Brother QL、Niimbot、Phomemo）稍后推出，逐台适配，使用相同的模板。
+- 直接打印到蓝牙标签打印机（Niimbot、Marklife、Phomemo）将随 Tiger NFC Connect 的下一次更新推出，使用相同的模板：[蓝牙标签打印机](../compatibility/label-printers.md)。Tiger Studio 和 Brother QL 稍后推出。
 - 想试用这些模板，[TigerQR playground](https://tigersystem.io/playground-tigerqr) 可为产品库中的产品生成每个模板的 TigerQR+ 标签，提供 PNG（203 或 300 dpi）和 SVG。
 
 ## 待定事项

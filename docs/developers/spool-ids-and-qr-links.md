@@ -457,8 +457,9 @@ Classic (≈ 14.5 mm).
 
 - **PDF**, **PNG** (at the printer's resolution) and **SVG**, so any printer
   works, through its own app if need be;
-- direct printing to label printers (Brother QL, Niimbot, Phomemo) comes later,
-  printer by printer, with the same templates.
+- direct printing to Bluetooth label printers (Niimbot, Marklife, Phomemo)
+  comes with Tiger NFC Connect's next update, with the same templates:
+  [Bluetooth label printers](../compatibility/label-printers.md). Tiger Studio and Brother QL come later.
 - to try them, the [TigerQR playground](https://tigersystem.io/playground-tigerqr) makes a catalogue product's TigerQR+ label in every template, as PNG (203 or 300 dpi) and SVG.
 
 ## Open points

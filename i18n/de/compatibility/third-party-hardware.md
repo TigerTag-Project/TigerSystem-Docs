@@ -1,5 +1,5 @@
 ---
-sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
+sourceHash: 5daaeca0d71307b6ce928d246c63c36ad772a3e52bbc18ee2d91a387102ad1c9
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -17,6 +17,7 @@ die Entwicklung voranschreitet und immer mehr Maker ihr Equipment anbinden.
 | **TD1s**-Filament-Analysegerät | [AJAX-3D](https://ajax-3d.com) | Dieselbe Gerätefamilie, fertig montiert und sofort einsatzbereit | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | **DYMO-M-Serie**-USB-Waagen (M5, M10, M25 …) | DYMO | Standardmäßige USB-„HID-Waagen“ – Live-Gewicht direkt ins Profil der Spule ([Protokolldetails](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Jede HID-Scale-konforme USB-Waage** | beliebig | Dasselbe Standardprotokoll wie die DYMO-M-Serie (HID-Usage-Page `0x8D`) – die Marke spielt keine Rolle | [Tiger Studio](../products/tiger-studio.md) |
+| **Bluetooth-Etikettendrucker** | Niimbot, Marklife, Phomemo | Das TigerQR-Etikett einer Spule direkt vom Handy drucken — getestete Modelle und unsere Empfehlung: [Bluetooth-Etikettendrucker](./label-printers.md) | [Tiger NFC Connect](../products/tiger-nfc-connect.md) (nächstes Update) |
 | **Jeder leere NTAG213/215/216-Chip** | beliebig | Das Verbrauchsmaterial selbst – überall zu kaufen, funktioniert identisch ([welcher Chip?](../../docs/faq/README.md)) | Alles |
 
 || | | |

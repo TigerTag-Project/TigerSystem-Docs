@@ -1,5 +1,5 @@
 ---
-sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
+sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -47,6 +47,8 @@ TigerTag、OpenPrintTag、OpenTag3D、OpenSpool、Bambu Lab 和 Creality CFS，�
 **[兼容的第三方硬件](./third-party-hardware.md)**列表——NFC
 读卡器、耗材分析仪、USB 秤——以及
 **[基于 TigerTag 构建的软件](../developers/integrations.md)**。
+
+线轴标签可以直接从手机打印到**[蓝牙标签打印机](./label-printers.md)**上。
 
 ## 通用答案
 

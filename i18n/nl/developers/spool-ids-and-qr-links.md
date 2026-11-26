@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -483,8 +483,9 @@ code van 29 × 29 op de Classic 4 punten per module (≈ 14,5 mm).
 
 - **PDF**, **PNG** (op de resolutie van de printer) en **SVG**, zodat elke
   printer werkt, desnoods via zijn eigen app;
-- direct printen naar labelprinters (Brother QL, Niimbot, Phomemo) komt later,
-  printer voor printer, met dezelfde sjablonen.
+- direct printen naar Bluetooth-labelprinters (Niimbot, Marklife, Phomemo) komt
+  met de volgende update van Tiger NFC Connect, met dezelfde sjablonen:
+  [Bluetooth-labelprinters](../compatibility/label-printers.md). Tiger Studio en Brother QL volgen later.
 - om ze uit te proberen maakt de [TigerQR-playground](https://tigersystem.io/playground-tigerqr) het TigerQR+-label van een catalogusproduct in elk sjabloon, als PNG (203 of 300 dpi) en SVG.
 
 ## Open punten

@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -491,8 +491,10 @@ silencio. A 203 dpi, un código de 29 × 29 tiene 4 puntos por módulo en la Cla
 
 - **PDF**, **PNG** (a la resolución de la impresora) y **SVG**, para que funcione
   cualquier impresora, a través de su propia aplicación si hace falta;
-- la impresión directa en impresoras de etiquetas (Brother QL, Niimbot, Phomemo)
-  llegará más adelante, impresora por impresora, con las mismas plantillas.
+- la impresión directa en impresoras de etiquetas Bluetooth (Niimbot, Marklife,
+  Phomemo) llega con la próxima actualización de Tiger NFC Connect, con las
+  mismas plantillas: [impresoras de etiquetas Bluetooth](../compatibility/label-printers.md). Tiger Studio y
+  Brother QL llegarán más adelante.
 - para probarlas, el [playground de TigerQR](https://tigersystem.io/playground-tigerqr) genera la etiqueta TigerQR+ de un producto del catálogo en cada plantilla, en PNG (203 o 300 dpi) y SVG.
 
 ## Puntos abiertos

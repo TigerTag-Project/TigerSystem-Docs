@@ -1,5 +1,5 @@
 ---
-sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
+sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -49,6 +49,9 @@ Zgodność to nie tylko drukarki: zobacz rosnącą listę
 **[zgodnego sprzętu firm trzecich](./third-party-hardware.md)** — czytniki NFC,
 analizatory filamentu, wagi USB — oraz
 **[oprogramowanie zbudowane na TigerTag](../developers/integrations.md)**.
+
+Etykiety szpul drukuje się prosto z telefonu na
+**[drukarkach etykiet Bluetooth](./label-printers.md)**.
 
 ## Uniwersalna odpowiedź
 

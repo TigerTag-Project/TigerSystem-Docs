@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -492,8 +492,10 @@ riquadro. I margini bianchi dell'etichetta sono la sua zona di rispetto. A
 
 - **PDF**, **PNG** (alla risoluzione della stampante) e **SVG**, così funziona
   qualsiasi stampante, se necessario tramite la sua app;
-- la stampa diretta sulle stampanti per etichette (Brother QL, Niimbot, Phomemo)
-  arriverà più avanti, stampante per stampante, con gli stessi modelli.
+- la stampa diretta sulle stampanti di etichette Bluetooth (Niimbot, Marklife,
+  Phomemo) arriva con il prossimo aggiornamento di Tiger NFC Connect, con gli
+  stessi modelli: [stampanti di etichette Bluetooth](../compatibility/label-printers.md). Tiger Studio e
+  Brother QL arriveranno più avanti.
 - per provarli, il [playground TigerQR](https://tigersystem.io/playground-tigerqr) crea l'etichetta TigerQR+ di un prodotto del catalogo in ogni modello, in PNG (203 o 300 dpi) e SVG.
 
 ## Punti aperti

@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -484,8 +484,10 @@ punkty na moduł (≈ 14,5 mm).
 
 - **PDF**, **PNG** (w rozdzielczości drukarki) i **SVG**, aby działała każda
   drukarka, w razie potrzeby przez własną aplikację;
-- bezpośredni druk na drukarkach etykiet (Brother QL, Niimbot, Phomemo) pojawi
-  się później, drukarka po drukarce, z tymi samymi szablonami.
+- bezpośredni druk na drukarkach etykiet Bluetooth (Niimbot, Marklife, Phomemo)
+  pojawi się w następnej aktualizacji Tiger NFC Connect, z tymi samymi
+  szablonami: [drukarki etykiet Bluetooth](../compatibility/label-printers.md). Tiger Studio i Brother QL
+  pojawią się później.
 - aby je wypróbować, [playground TigerQR](https://tigersystem.io/playground-tigerqr) tworzy etykietę TigerQR+ produktu z katalogu w każdym szablonie, jako PNG (203 lub 300 dpi) i SVG.
 
 ## Punkty otwarte

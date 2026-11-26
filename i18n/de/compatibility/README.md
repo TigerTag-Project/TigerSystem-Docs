@@ -1,5 +1,5 @@
 ---
-sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
+sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -50,6 +50,9 @@ Kompatibilität betrifft nicht nur Drucker: Sieh dir die wachsende Liste
 **[kompatibler Hardware von Drittanbietern](./third-party-hardware.md)** an –
 NFC-Lesegeräte, Filament-Analysegeräte, USB-Waagen – und die
 **[Software, die auf TigerTag aufbaut](../developers/integrations.md)**.
+
+Spulenetiketten druckst du direkt vom Handy auf
+**[Bluetooth-Etikettendruckern](./label-printers.md)**.
 
 ## Die universelle Antwort
 

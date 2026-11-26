@@ -1,5 +1,5 @@
 ---
-sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
+sourceHash: 5daaeca0d71307b6ce928d246c63c36ad772a3e52bbc18ee2d91a387102ad1c9
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -17,6 +17,7 @@ seus equipamentos.
 | Analisador de filamento **TD1s** | [AJAX-3D](https://ajax-3d.com) | Mesma família de dispositivos, pré-montado e pronto para usar | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | Balanças USB **DYMO série M** (M5, M10, M25…) | DYMO | Dispositivos "HID Scale" USB padrão — peso ao vivo no perfil da bobina ([detalhes do protocolo](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Qualquer balança USB compatível com HID Scale** | qualquer | Mesmo protocolo padrão da DYMO série M (HID usage page `0x8D`) — a marca não importa | [Tiger Studio](../products/tiger-studio.md) |
+| **Impressoras de etiquetas Bluetooth** | Niimbot, Marklife, Phomemo | Imprimir a etiqueta TigerQR de uma bobina direto do celular — modelos testados e nossa escolha: [impressoras de etiquetas Bluetooth](./label-printers.md) | [Tiger NFC Connect](../products/tiger-nfc-connect.md) (próxima atualização) |
 | **Qualquer chip NTAG213/215/216 virgem** | qualquer | O próprio consumível — comprado em qualquer lugar, funciona do mesmo jeito ([qual chip?](../../docs/faq/README.md)) | Tudo |
 
 || | | |

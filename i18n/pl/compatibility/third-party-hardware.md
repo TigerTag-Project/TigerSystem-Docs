@@ -1,5 +1,5 @@
 ---
-sourceHash: 289ee078055b2b2f885bf2a1198bfe20056cc92250866bfd0d4543b9e5190384
+sourceHash: 5daaeca0d71307b6ce928d246c63c36ad772a3e52bbc18ee2d91a387102ad1c9
 sourcePath: docs/compatibility/third-party-hardware.md
 ---
 
@@ -17,6 +17,7 @@ podłączają swój sprzęt.
 | Analizator filamentu **TD1s** | [AJAX-3D](https://ajax-3d.com) | Ta sama rodzina urządzeń, wstępnie złożona i gotowa od razu po wyjęciu z pudełka | [Tiger Studio](../products/tiger-studio.md) · [Tiger NFC Connect](../products/tiger-nfc-connect.md) (USB-C) |
 | Wagi USB **DYMO serii M** (M5, M10, M25…) | DYMO | Standardowe urządzenia USB „HID Scale” — waga na żywo trafia do profilu szpuli ([szczegóły protokołu](../products/tigerscale.md)) | [Tiger Studio](../products/tiger-studio.md) |
 | **Dowolna waga USB zgodna z HID Scale** | dowolny | Ten sam standardowy protokół co DYMO serii M (strona użycia HID `0x8D`) — marka nie ma znaczenia | [Tiger Studio](../products/tiger-studio.md) |
+| **Drukarki etykiet Bluetooth** | Niimbot, Marklife, Phomemo | Druk etykiety TigerQR szpuli prosto z telefonu — przetestowane modele i nasz wybór: [drukarki etykiet Bluetooth](./label-printers.md) | [Tiger NFC Connect](../products/tiger-nfc-connect.md) (następna aktualizacja) |
 | **Dowolny czysty chip NTAG213/215/216** | dowolny | Sam materiał eksploatacyjny — kupiony gdziekolwiek, działa identycznie ([który chip?](../../docs/faq/README.md)) | Wszystko |
 
 || | | |

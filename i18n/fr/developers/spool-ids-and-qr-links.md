@@ -1,5 +1,5 @@
 ---
-sourceHash: 578b8a34f01dac2cb4f440a755b71c245716a9832039d21242de49e6eca23426
+sourceHash: 7b17a35c0a067c1b5f99137abdb2aacdb7591c507787238900d65dfba68a9494
 sourcePath: docs/developers/spool-ids-and-qr-links.md
 ---
 
@@ -500,8 +500,10 @@ Classique (≈ 14,5 mm).
 
 - **PDF**, **PNG** (à la résolution de l'imprimante) et **SVG**, pour que
   n'importe quelle imprimante fonctionne, au besoin par sa propre application ;
-- l'impression directe sur les imprimantes d'étiquettes (Brother QL, Niimbot,
-  Phomemo) vient ensuite, imprimante par imprimante, avec les mêmes gabarits.
+- l'impression directe sur les imprimantes d'étiquettes Bluetooth (Niimbot,
+  Marklife, Phomemo) arrive avec la prochaine mise à jour de Tiger NFC Connect,
+  avec les mêmes gabarits : [imprimantes d'étiquettes Bluetooth](../compatibility/label-printers.md).
+  Tiger Studio et Brother QL viennent ensuite.
 - pour les essayer, le [playground TigerQR](https://tigersystem.io/playground-tigerqr) fait l'étiquette TigerQR+ d'un produit du catalogue dans chaque gabarit, en PNG (203 ou 300 dpi) et en SVG.
 
 ## Points ouverts

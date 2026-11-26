@@ -1,5 +1,5 @@
 ---
-sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
+sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -48,6 +48,9 @@ TigerTag, OpenPrintTag, OpenTag3D, OpenSpool, Bambu Lab и Creality CFS — ци
 **[совместимого стороннего оборудования](./third-party-hardware.md)** — NFC-считыватели,
 анализаторы филамента, USB-весы — и
 **[программное обеспечение, построенное на TigerTag](../developers/integrations.md)**.
+
+Этикетки катушек печатаются прямо с телефона на
+**[Bluetooth-принтерах этикеток](./label-printers.md)**.
 
 ## Универсальный ответ
 

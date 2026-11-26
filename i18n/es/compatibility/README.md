@@ -1,5 +1,5 @@
 ---
-sourceHash: e7b7c04f1668fe717ad7b48ac2cc3860f2a28e40c1c8e39db72c30fde1f7810f
+sourceHash: 2d4a4c025034a5d034a61a3b05babbfd04e78c221d588f26f0a5b953ab307c61
 sourcePath: docs/compatibility/README.md
 ---
 
@@ -49,6 +49,9 @@ La compatibilidad no se limita a las impresoras: consulta la lista creciente de
 **[hardware de terceros compatible](./third-party-hardware.md)** (lectores NFC,
 analizadores de filamento, básculas USB) y el
 **[software construido sobre TigerTag](../developers/integrations.md)**.
+
+Las etiquetas de bobina se imprimen directamente desde el móvil en
+**[impresoras de etiquetas Bluetooth](./label-printers.md)**.
 
 ## La respuesta universal
 

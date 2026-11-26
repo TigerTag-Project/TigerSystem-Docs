@@ -44,6 +44,9 @@ Compatibility isn't only about printers: see the growing list of
 readers, filament analyzers, USB scales — and the
 **[software built on TigerTag](../developers/integrations.md)**.
 
+Spool labels print straight from the phone on
+**[Bluetooth label printers](./label-printers.md)**.
+
 ## The universal answer
 
 Whatever the printer: stick a [TigerTag](../products/tigertag.md) chip on the
